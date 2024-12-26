@@ -1,0 +1,55 @@
+/* Edit the workflowr drop downs */
+
+.btn-workflowr-report {
+  opacity: 0.2;
+  font-size: 0.8em;
+  padding: 2px 6px;
+}
+
+.btn-workflowr-fig {
+  opacity: 0.2;
+  font-size: 0.2em;
+  padding: 2px 6px;
+}
+
+/* Footer Container */
+.custom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-top: 1px solid grey;
+  font-size: 0.7em;
+}
+
+/* Left and Right Images */
+.footer-left img, .footer-right img {
+  width: 100%;
+  height: auto;
+}
+
+/* Center Text */
+.footer-center {
+  text-align: center;
+  color: #6c757d;
+  flex-grow: 1;
+}
+
+/* Links Styling */
+.footer-center a {
+  color: #007bff; /* Blue color for link */
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+e, end {
+  display: block;
+  margin: 1em 0; /* Adds space above and below */
+  border-top: 1px solid #ddd; /* Horizontal line */
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

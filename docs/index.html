@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>index.knit</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="adit/custom.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CVR-site</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="0_announcements.html">Announcements</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Workshops
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="workflow_sc.html">Single Cell</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="0_start.html">Getting Started in R</a>
+</li>
+<li>
+  <a href="0_resources.html">Extra Resources</a>
+</li>
+<li>
+  <a href="0_archive.html">Archive</a>
+</li>
+<li>
+  <a href="0_contacts.html">Contacts</a>
+</li>
+<li>
+  <a href="https://github.com/DrThomasOneil/analysis-user-group">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2024-12-26
+</p>
+<p>
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 1
+</p>
+<p>
+<strong>Knit directory:</strong> <code>analysis-user-group/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
+</p>
+<p>
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguncommittedchanges"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptreeb381b5b9e85e93aa6a7a18f57f678d2af0fce9dbtargetblankb381b5ba">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/b381b5b9e85e93aa6a7a18f57f678d2af0fce9db" target="_blank">b381b5b</a>
+</a>
+</p>
+</div>
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptreeb381b5b9e85e93aa6a7a18f57f678d2af0fce9dbtargetblankb381b5ba"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/b381b5b9e85e93aa6a7a18f57f678d2af0fce9db" target="_blank">b381b5b</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .DS_Store
+    Ignored:    analysis/.DS_Store
+
+Untracked files:
+    Untracked:  analysis/0_announcements.Rmd
+    Untracked:  analysis/0_license.Rmd
+    Untracked:  analysis/0_start.Rmd
+    Untracked:  analysis/adit/
+    Untracked:  workflow.R
+
+Unstaged changes:
+    Modified:   _workflowr.yml
+    Modified:   analysis/_site.yml
+    Deleted:    analysis/about.Rmd
+    Modified:   analysis/index.Rmd
+    Deleted:    analysis/license.Rmd
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML
+(<code>docs/index.html</code>) files. If you’ve configured a remote Git
+repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
+in the table below to view the files as they were in that past version.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/b381b5b9e85e93aa6a7a18f57f678d2af0fce9db/analysis/index.Rmd" target="_blank">b381b5b</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2024-12-26
+</td>
+<td>
+Start workflowr project.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div style="text-align: left;">
+<img src="assets/logo/logo.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
+<div style="overflow: hidden; padding-top: 10%;">
+
+<div id="cvr-analysis-user-group" class="section level2">
+<h2><strong>CVR Analysis User Group</strong></h2>
+<strong>Contributors:</strong> Thomas O’Neil, Harry Robertson
+<hr>
+</div>
+<p><br></p>
+</div>
+<div id="welcome" class="section level2">
+<h2>Welcome</h2>
+<p>Welcome to the official site for the CVR Analysis User Group! Whether
+you’re just starting out with R or looking to strengthen your skills,
+this site is designed to foster a digital community centred around
+biomedical research programmatic analysis.</p>
+<p>Here, you’ll find:</p>
+<ul>
+<li>Workshop schedules and announcements.</li>
+<li>Step-by-step instructions for workshop activities.</li>
+<li>Additional resources that might be of interest.</li>
+</ul>
+<p>Workshop material will aim to use publicly available data. Therefore,
+you will not need to rely on uploaded data from the creators. Rather,
+the workshop set-ups will include scripts for downloading</p>
+<p>A wetlab researcher equipped with the power of programmatic analysis
+is a powerful scientist. We aim to make R more accessible and practical
+for such biomedical researchers.</p>
+</div>
+<div id="using-this-site" class="section level2">
+<h2>Using this site</h2>
+<p>This site is organised into several sections to help you quickly find
+what you need:</p>
+<ul>
+<li><strong>Getting Started in R:</strong> A beginner-friendly guide to
+help you set up R and RStudio, along with key concepts and tips for
+coding.</li>
+<li><strong>Announcements:</strong> Updates on upcoming workshops,
+deadlines, and important notices.</li>
+<li><strong>Workshops:</strong> Detailed instructions, scripts, and
+examples for each workshop session.</li>
+<li><strong>Extra Resources:</strong> Links to helpful tutorials,
+datasets, and cheat sheets.</li>
+</ul>
+<p><em>Bookmark this site for quick access to scripts and updates as
+workshops progress.</em></p>
+<p>We are also always looking for feedback. Please reach out to <a
+href="thomas.oneil@sydney.edu.au">myself</a> or <a
+href="html/to/contacts/page">others</a>.</p>
+</div>
+<div id="schedule-2025" class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade">Schedule (2025)</h2>
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+</div>
+<div id="jan" class="section level3">
+<h3>Jan</h3>
+<ul>
+<li><em>No workshops planned</em>.</li>
+</ul>
+<p>If you are new analytic programming, please use this time to get
+familiar with R (<strong>See:</strong> <a href="link"><em>Getting
+Started in R</em></a>).</p>
+</div>
+<div id="feb" class="section level3">
+<h3>Feb</h3>
+</div>
+<div id="mar" class="section level3">
+<h3>Mar</h3>
+</div>
+<div id="apr" class="section level3">
+<h3>Apr</h3>
+</div>
+<div id="may" class="section level3">
+<h3>May</h3>
+</div>
+<div id="jun" class="section level3">
+<h3>Jun</h3>
+</div>
+<div id="jul" class="section level3">
+<h3>Jul</h3>
+</div>
+<div id="aug" class="section level3">
+<h3>Aug</h3>
+</div>
+<div id="sep" class="section level3">
+<h3>Sep</h3>
+</div>
+<div id="oct" class="section level3">
+<h3>Oct</h3>
+</div>
+<div id="nov" class="section level3">
+<h3>Nov</h3>
+</div>
+<div id="dec" class="section level3">
+<h3>Dec</h3>
+</div>
+</div>
+<div id="test" class="section level2">
+<h2>Test</h2>
+<p>Test</p>
+<p><e></p>
+<p>Test after</p>
+<div id="example-title" class="section level3">
+<h3>Example title</h3>
+</div>
+</div>
+<div id="thanks" class="section level2">
+<h2>Thanks</h2>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiIgpvdXRwdXQ6IHJtZGZvcm1hdHM6Om1hdGVyaWFsCmVkaXRvcl9vcHRpb25zOgogIGNodW5rX291dHB1dF90eXBlOiBjb25zb2xlCi0tLQogCjxkaXYgc3R5bGU9InRleHQtYWxpZ246IGxlZnQ7Ij4KICA8aW1nIHNyYz0iYXNzZXRzL2xvZ28vbG9nby5wbmciIGFsdD0iSW1hZ2UiIHN0eWxlPSJ3aWR0aDogMmluOyBmbG9hdDogbGVmdDsgbWFyZ2luLXJpZ2h0OiAxMHB4OyI+CiAgPGRpdiBzdHlsZT0ib3ZlcmZsb3c6IGhpZGRlbjsgcGFkZGluZy10b3A6IDEwJTsiPgoKIyMgKipDVlIgQW5hbHlzaXMgVXNlciBHcm91cCoqICAgIAoqKkNvbnRyaWJ1dG9yczoqKiBUaG9tYXMgTydOZWlsLCBIYXJyeSBSb2JlcnRzb24KPGhyPgogIDwvZGl2PiAKPGJyPgogCiMjIFdlbGNvbWUKCldlbGNvbWUgdG8gdGhlIG9mZmljaWFsIHNpdGUgZm9yIHRoZSBDVlIgQW5hbHlzaXMgVXNlciBHcm91cCEgV2hldGhlciB5b3UncmUganVzdCBzdGFydGluZyBvdXQgd2l0aCBSIG9yIGxvb2tpbmcgdG8gc3RyZW5ndGhlbiB5b3VyIHNraWxscywgdGhpcyBzaXRlIGlzIGRlc2lnbmVkIHRvIGZvc3RlciBhIGRpZ2l0YWwgY29tbXVuaXR5IGNlbnRyZWQgYXJvdW5kIGJpb21lZGljYWwgcmVzZWFyY2ggcHJvZ3JhbW1hdGljIGFuYWx5c2lzLiAKCkhlcmUsIHlvdSdsbCBmaW5kOgoKLSBXb3Jrc2hvcCBzY2hlZHVsZXMgYW5kIGFubm91bmNlbWVudHMuCi0gU3RlcC1ieS1zdGVwIGluc3RydWN0aW9ucyBmb3Igd29ya3Nob3AgYWN0aXZpdGllcy4KLSBBZGRpdGlvbmFsIHJlc291cmNlcyB0aGF0IG1pZ2h0IGJlIG9mIGludGVyZXN0LiAKCldvcmtzaG9wIG1hdGVyaWFsIHdpbGwgYWltIHRvIHVzZSBwdWJsaWNseSBhdmFpbGFibGUgZGF0YS4gVGhlcmVmb3JlLCB5b3Ugd2lsbCBub3QgbmVlZCB0byByZWx5IG9uIHVwbG9hZGVkIGRhdGEgZnJvbSB0aGUgY3JlYXRvcnMuIFJhdGhlciwgdGhlIHdvcmtzaG9wIHNldC11cHMgd2lsbCBpbmNsdWRlIHNjcmlwdHMgZm9yIGRvd25sb2FkaW5nIAoKQSB3ZXRsYWIgcmVzZWFyY2hlciBlcXVpcHBlZCB3aXRoIHRoZSBwb3dlciBvZiBwcm9ncmFtbWF0aWMgYW5hbHlzaXMgaXMgYSBwb3dlcmZ1bCBzY2llbnRpc3QuIFdlIGFpbSB0byBtYWtlIFIgbW9yZSBhY2Nlc3NpYmxlIGFuZCBwcmFjdGljYWwgZm9yIHN1Y2ggYmlvbWVkaWNhbCByZXNlYXJjaGVycy4KCiMjIFVzaW5nIHRoaXMgc2l0ZQoKVGhpcyBzaXRlIGlzIG9yZ2FuaXNlZCBpbnRvIHNldmVyYWwgc2VjdGlvbnMgdG8gaGVscCB5b3UgcXVpY2tseSBmaW5kIHdoYXQgeW91IG5lZWQ6CgotICoqR2V0dGluZyBTdGFydGVkIGluIFI6KiogQSBiZWdpbm5lci1mcmllbmRseSBndWlkZSB0byBoZWxwIHlvdSBzZXQgdXAgUiBhbmQgUlN0dWRpbywgYWxvbmcgd2l0aCBrZXkgY29uY2VwdHMgYW5kIHRpcHMgZm9yIGNvZGluZy4KLSAqKkFubm91bmNlbWVudHM6KiogVXBkYXRlcyBvbiB1cGNvbWluZyB3b3Jrc2hvcHMsIGRlYWRsaW5lcywgYW5kIGltcG9ydGFudCBub3RpY2VzLgotICoqV29ya3Nob3BzOioqIERldGFpbGVkIGluc3RydWN0aW9ucywgc2NyaXB0cywgYW5kIGV4YW1wbGVzIGZvciBlYWNoIHdvcmtzaG9wIHNlc3Npb24uCi0gKipFeHRyYSBSZXNvdXJjZXM6KiogTGlua3MgdG8gaGVscGZ1bCB0dXRvcmlhbHMsIGRhdGFzZXRzLCBhbmQgY2hlYXQgc2hlZXRzLiAKCipCb29rbWFyayB0aGlzIHNpdGUgZm9yIHF1aWNrIGFjY2VzcyB0byBzY3JpcHRzIGFuZCB1cGRhdGVzIGFzIHdvcmtzaG9wcyBwcm9ncmVzcy4qCgpXZSBhcmUgYWxzbyBhbHdheXMgbG9va2luZyBmb3IgZmVlZGJhY2suIFBsZWFzZSByZWFjaCBvdXQgdG8gW215c2VsZl0odGhvbWFzLm9uZWlsQHN5ZG5leS5lZHUuYXUpIG9yIFtvdGhlcnNdKGh0bWwvdG8vY29udGFjdHMvcGFnZSkuCgojIyBTY2hlZHVsZSAoMjAyNSl7LnRhYnNldCAudGFic2V0LWZhZGV9CgojIyMgU3VtbWFyeQoKIyMjIEphbgoKLSAqTm8gd29ya3Nob3BzIHBsYW5uZWQqLiAKCklmIHlvdSBhcmUgbmV3IGFuYWx5dGljIHByb2dyYW1taW5nLCBwbGVhc2UgdXNlIHRoaXMgdGltZSB0byBnZXQgZmFtaWxpYXIgd2l0aCBSICgqKlNlZToqKiBbKkdldHRpbmcgU3RhcnRlZCBpbiBSKiBdKGxpbmspKS4KCiMjIyBGZWIKCiMjIyBNYXIKCiMjIyBBcHIKCiMjIyBNYXkKCiMjIyBKdW4KCiMjIyBKdWwKCiMjIyBBdWcKCiMjIyBTZXAKCiMjIyBPY3QKCiMjIyBOb3YKCiMjIyBEZWMKCiMjIFRlc3QgCgpUZXN0Cgo8ZT4KClRlc3QgYWZ0ZXIgCgojIyMgRXhhbXBsZSB0aXRsZQoKIyMgVGhhbmtzCgoKCgoKCgoKCgoK</div>
+<div class="custom-footer">
+    <div class="footer-left" style="width: 30%; float: centre">
+      <img src="assets/footer/footer1.png" alt="wimr-logo">
+    </div>
+    <div class="footer-center">
+      <p><strong>Creators</strong><br>
+        Thomas O'Neil<br>
+        Harry Robertson<br>
+        <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
+      </p>
+    </div>
+    <div class="footer-right" style="width: 30%; float: centre">
+      <img src="assets/footer/footer2.png" alt="usyd-logo">
+    </div>
+  </div>
+<div style="font-size: 0.7em; text-align: center; line-height: 2pt;">
+    <p>This site was last updated</p>
+    <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
+</div>
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("index.Rmd");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

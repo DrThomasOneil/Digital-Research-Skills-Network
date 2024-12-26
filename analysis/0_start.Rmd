@@ -1,0 +1,159 @@
+---
+title: "Getting Started in R"
+author: "Thomas O'Neil"
+date: "2025"
+output: rmdformats::material
+editor_options:
+  chunk_output_type: console
+---
+
+# Workshop Overview
+This 10-session workshop series is designed to introduce participants to R programming with a focus on bioinformatics workflows and reproducibility. It emphasizes the mindset shift required to transition from manual tools like Excel to programmatic data analysis.
+
+## **Session 0: What Is Programming? Shifting Mindsets**
+**Goal:** Introduce programming concepts and the philosophy behind programmatic workflows.
+
+- What is programming and why use R?
+- Moving from manual Excel edits to reproducible code.
+- Working with directories and file paths.
+- Scripts vs manual edits – automating tasks.
+
+**Practice:**
+- Navigating directories (`getwd()`, `setwd()`).
+- Creating folders and listing files.
+
+---
+
+## **Session 1: Getting Started with R and RStudio**
+**Goal:** Set up R and RStudio, and get familiar with the interface.
+
+- Installing R and RStudio.
+- Exploring the interface – Console, Environment, Scripts.
+- Setting up a project.
+- Installing and loading packages.
+
+**Practice:**
+- Create and save an R script.
+- Install and load a package (e.g., `tidyverse`).
+
+---
+
+## **Session 2: Data Types and Structures**
+**Goal:** Learn about data types and structures in R.
+
+- Basic data types: numeric, character, logical.
+- Data structures: vectors, matrices, data frames, lists.
+- Importing data (Excel and CSV files).
+- Viewing and summarizing data.
+
+**Practice:**
+- Load flow cytometry data and explore structure.
+- Create and index vectors and data frames.
+
+---
+
+## **Session 3: Data Manipulation with `dplyr`**
+**Goal:** Introduce `dplyr` for filtering, mutating, and summarizing data.
+
+- Filtering rows (`filter()`), selecting columns (`select()`).
+- Adding new columns (`mutate()`).
+- Grouping and summarizing (`group_by()` + `summarize()`).
+
+**Practice:**
+- Calculate proportions for CD4/CD8 populations.
+- Add calculated columns for analysis.
+
+---
+
+## **Session 4: Basic Programming and Control Structures**
+**Goal:** Understand programming logic for automating tasks.
+
+- Variables and assignments.
+- Conditional statements (`if`, `else`).
+- Loops (`for`, `while`).
+- Writing functions.
+
+**Practice:**
+- Write functions to calculate percentages dynamically.
+- Automate filtering tasks.
+
+---
+
+## **Session 5: Visualization with `ggplot2` – Part 1**
+**Goal:** Create and customize visualizations.
+
+- Basics of `ggplot2` – scatter, bar, and boxplots.
+- Customizing labels, themes, and colors.
+
+**Practice:**
+- Visualize CD4 vs CD8 proportions.
+- Add colors and themes.
+
+---
+
+## **Session 6: Advanced Visualization with `ggplot2` – Part 2**
+**Goal:** Learn advanced visualization techniques.
+
+- Faceting and small multiples.
+- Combining plots (grid layouts).
+- Saving high-resolution plots.
+
+**Practice:**
+- Create faceted boxplots for subsets.
+- Export plots for reports.
+
+---
+
+## **Session 7: Statistical Analysis**
+**Goal:** Understand descriptive and inferential statistics.
+
+- Descriptive statistics: mean, median, mode.
+- Hypothesis testing (t-tests, ANOVA).
+- Correlation and regression.
+
+**Practice:**
+- Test differences in CD4 proportions.
+- Perform correlation analysis.
+
+---
+
+## **Session 8: Reproducible Reports with RMarkdown**
+**Goal:** Build dynamic and shareable reports.
+
+- Introduction to RMarkdown.
+- Combining text, code, and visuals.
+- Exporting to PDF and HTML.
+
+**Practice:**
+- Create a report summarizing flow cytometry data.
+- Embed visualizations and tables.
+
+---
+
+## **Session 9: Mini Project – Putting It All Together**
+**Goal:** Apply skills to a complete workflow.
+
+**Practice:**
+- Load and clean data.
+- Summarize and visualize trends.
+- Run tests and compile everything into a report.
+
+---
+
+## **Session 10: Troubleshooting and Workflow Design**
+**Goal:** Teach debugging strategies and workflow optimization.
+
+- Debugging errors and warnings.
+- Writing modular scripts (functions).
+- Organizing larger projects.
+- Brief intro to Git/GitHub for version control.
+
+**Practice:**
+- Debug a script with errors.
+- Restructure code for reusability.
+
+---
+
+# **Final Thoughts**
+This series is designed to equip participants with both conceptual and practical skills to confidently approach programming and data analysis. It emphasizes reproducibility, scalability, and structured workflows, preparing learners for real-world bioinformatics challenges.
+

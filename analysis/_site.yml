@@ -1,17 +1,35 @@
-name: "analysis-user-group"
+name: analysis-user-group
 output_dir: ../docs
 navbar:
-  title: "analysis-user-group"
+  title: CVR-site
   left:
   - text: Home
     href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+  - text: Announcements
+    href: 0_announcements.html
+  - text: Workshops
+    menu: 
+      - text: "Single Cell"
+        href: workflow_sc.html
+  right:
+  - text: Getting Started in R
+    href: 0_start.html
+  - text: Extra Resources
+    href: 0_resources.html  
+  - text: Archive
+    href: 0_archive.html  
+  - text: Contacts
+    href: 0_contacts.html
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/DrThomasOneil/analysis-user-group
 output:
   workflowr::wflow_html:
     toc: yes
     toc_float: yes
-    theme: cosmo
-    highlight: textmate
+    code_download: true
+    theme: paper
+    highlight: haddock
+    css: adit/custom.css
+    includes:
+      after_body: adit/footer.html

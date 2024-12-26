@@ -1,11 +1,98 @@
 ---
-title: "Home"
-site: workflowr::wflow_site
-output:
-  workflowr::wflow_html:
-    toc: false
+title: ""
+output: rmdformats::material
 editor_options:
   chunk_output_type: console
 ---
+ 
+<div style="text-align: left;">
+  <img src="assets/logo/logo.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
+  <div style="overflow: hidden; padding-top: 10%;">
 
-Welcome to my research website.
+## **CVR Analysis User Group**    
+**Contributors:** Thomas O'Neil, Harry Robertson
+<hr>
+  </div> 
+<br>
+ 
+## Welcome
+
+Welcome to the official site for the CVR Analysis User Group! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centred around biomedical research programmatic analysis. 
+
+Here, you'll find:
+
+- Workshop schedules and announcements.
+- Step-by-step instructions for workshop activities.
+- Additional resources that might be of interest. 
+
+Workshop material will aim to use publicly available data. Therefore, you will not need to rely on uploaded data from the creators. Rather, the workshop set-ups will include scripts for downloading 
+
+A wetlab researcher equipped with the power of programmatic analysis is a powerful scientist. We aim to make R more accessible and practical for such biomedical researchers.
+
+## Using this site
+
+This site is organised into several sections to help you quickly find what you need:
+
+- **Getting Started in R:** A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
+- **Announcements:** Updates on upcoming workshops, deadlines, and important notices.
+- **Workshops:** Detailed instructions, scripts, and examples for each workshop session.
+- **Extra Resources:** Links to helpful tutorials, datasets, and cheat sheets. 
+
+*Bookmark this site for quick access to scripts and updates as workshops progress.*
+
+We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](html/to/contacts/page).
+
+## Schedule (2025){.tabset .tabset-fade}
+
+### Summary
+
+### Jan
+
+- *No workshops planned*. 
+
+If you are new analytic programming, please use this time to get familiar with R (**See:** [*Getting Started in R* ](link)).
+
+### Feb
+
+### Mar
+
+### Apr
+
+### May
+
+### Jun
+
+### Jul
+
+### Aug
+
+### Sep
+
+### Oct
+
+### Nov
+
+### Dec
+
+## Test 
+
+Test
+
+<e>
+
+Test after 
+
+### Example title
+
+## Thanks
+
+
+
+
+
+
+
+
+
+
+
