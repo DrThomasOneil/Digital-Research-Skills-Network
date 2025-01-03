@@ -74,17 +74,15 @@ If you are new analytic programming, please use this time to get familiar with R
 
 ### Dec
 
-## Test 
+## Special Thanks
 
-Test
+There are a lot of extra people to thank for contributing, motivating and helping build this digital community and repository:
 
-<e>
-
-Test after 
-
-### Example title
-
-## Thanks
+- Oscar Dong
+- Elizabeth Dunn
+- Heeva Baharlou
+- Alex Qin
+- Farhan Ameen
 
 
 

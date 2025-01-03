@@ -1,16 +1,18 @@
-/* Edit the workflowr drop downs */
-
-.btn-workflowr-report {
-  opacity: 0.2;
-  font-size: 0.8em;
-  padding: 2px 6px;
+p.caption {
+  color: red;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
 }
 
-.btn-workflowr-fig {
-  opacity: 0.2;
-  font-size: 0.2em;
-  padding: 2px 6px;
-}
 
 /* Footer Container */
 .custom-footer {
@@ -22,30 +24,22 @@
   border-top: 1px solid grey;
   font-size: 0.7em;
 }
-
-/* Left and Right Images */
 .footer-left img, .footer-right img {
   width: 100%;
   height: auto;
 }
-
-/* Center Text */
 .footer-center {
   text-align: center;
   color: #6c757d;
   flex-grow: 1;
 }
-
-/* Links Styling */
 .footer-center a {
   color: #007bff; /* Blue color for link */
   text-decoration: none;
 }
-
 .footer-center a:hover {
   text-decoration: underline;
 }
-
 e {
   display: block;
   margin: 1em 0;
