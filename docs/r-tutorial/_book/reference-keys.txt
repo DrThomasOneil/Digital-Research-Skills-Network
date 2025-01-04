@@ -1,7 +1,2 @@
 welcome
-preview-book
-hello-bookdown
-a-section
-hello-bookdown-1
-a-section-1
-next-section
+introduction

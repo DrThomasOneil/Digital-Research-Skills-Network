@@ -2,15 +2,19 @@ bookdown::gitbook:
   css: style.css
   includes:
     after_body: adit/footer.html
-#  theme: paper
-  highlight: haddock
+  code_folding: show
   config:
-    theme: paper
     toc:
+      collapse: section
       before: |
         <li><a href="./">Introduction to R and analytic Programming</a></li>
       after: |
         <li><a href="https://drthomasoneil.github.io/analysis-user-group" target="blank"><i><strong>Return to the analysis page!</strong></i></a></li>
-        <li><a href="https://github.com/DrThomasOneil/analysis-user-group/docs/r-tutorial" target="blank">See The Source Code</a></li>
-    #edit: https://github.com/DrThomasOneil/analysis-user-group/docs/r-tutorial
+        <li><a href="https://github.com/DrThomasOneil/analysis-user-group/tree/main/docs/r-tutorial" target="blank">See The Source Code</a></li>
+
     download: ["pdf", "epub"]
+
+    fontsettings:
+      family: sans
+      size: 2
+    

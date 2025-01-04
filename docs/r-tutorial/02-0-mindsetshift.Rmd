@@ -1,0 +1,12 @@
+
+# Session 0: Mindset Shift - Manual > programming tools {-}
+
+**Session goals:**
+
+- Transition from manual tools (Excel) to programming-based workflows.
+
+- Understand the concept of treating data as code.
+
+- Learn to navigate directories and file paths programmatically.
+
+- Emphasize reproducibility and structured workflows.

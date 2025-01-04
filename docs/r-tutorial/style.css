@@ -40,10 +40,97 @@ pre code {
 .footer-center a:hover {
   text-decoration: underline;
 }
+
 e {
   display: block;
   margin: 1em 0;
   border-top: 1px solid #ddd;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+/* Info hint */
+.hint-info {
+  background-color: #e7f3fe;
+  border-left: 4px solid #2196F3;
+  padding: 10px 15px 0px; 
+  border-radius: 5px;
+  line-height: 2; 
+  display: flex; 
+  margin: 10px 0;
+
+}
+
+.hint-info::before {
+  content: "ℹ️ "; 
+  font-size: 1.5em; 
+  margin-right: 15px; 
+  padding: 0px 0px 10px;
+  align-items: center; 
+  line-height: 1; 
+  display: flex; 
+}
+
+/* Success hint */
+.hint-success {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4CAF50;
+  padding: 10px 15px 0px;
+  border-radius: 5px;
+  line-height: 2;
+  display: flex;
+  margin: 10px 0;
+
+}
+
+.hint-success::before {
+  content: "✔️ "; 
+  font-size: 1.5em;
+  margin-right: 15px;
+  padding: 0px 0px 10px;
+  align-items: center;
+  line-height: 1;
+  display: flex;
+}
+
+/* Warning hint */
+.hint-warning {
+  background-color: #fff3cd;
+  border-left: 4px solid #ff9800;
+  padding: 10px 15px 0px;
+  border-radius: 5px;
+  line-height: 2;
+  display: flex;
+  margin: 10px 0;
+
+}
+
+.hint-warning::before {
+  content: "⚠️ "; 
+  font-size: 1.5em;
+  margin-right: 15px;
+  padding: 0px 0px 10px;
+  align-items: center;
+  line-height: 1;
+  display: flex;
+}
+
+/* Danger hint */
+.hint-danger {
+  background-color: #f8d7da;
+  border-left: 4px solid #dc3545;
+  padding: 10px 15px 0px;
+  border-radius: 5px;
+  line-height: 2;
+  display: flex;
+  margin: 10px 0;
+}
+
+.hint-danger::before {
+  content: "❌ "; 
+  font-size: 1.5em;
+  margin-right: 15px;
+  padding: 0px 0px 10px;
+  align-items: center;
+  line-height: 1;
+  display: flex;
 }
