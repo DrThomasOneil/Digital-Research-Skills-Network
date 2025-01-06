@@ -1,0 +1,37 @@
+---
+title: "Announcements"
+output:
+  workflowr::wflow_html:
+    toc: no
+--- 
+
+***  
+
+<div style="text-align: left;">
+<img src="assets/headshot/headshot.jpg" alt="Tom" style="width: 1.5in; float: left; margin-right: 10px;">
+<div style="overflow: hidden;">
+
+## Dr. Thomas O'Neil
+
+**Postdoctoral Researcher**  
+
+Thomas has been with the Mucosal Immunity lab at WIMR since his honours in 2018. He completed his PhD in 2023 and is now a post-doc in the same lab. Initially, his study involved characterising anogenital T cells by flow cytometry, but having learned analytic programming during COVID, he now studies all aspects of human tissue immunology with a high parameter bioinformatic approach. Specifically, he's been involved in identifying rare immune cell subsets and their role in HIV infection. Recently, he's been developing and applying bioinformatic methods to investigate immune cells in inflamed and uninflamed human tissues using spatial technologies (IMC, Cosmx & Visium). He's particularly interested in describing lymphoid aggregates in colorectal tissues as early sanctuaries for pathogens during viral transmission.
+
+</div>
+</div>
+<hr><br>
+
+<div style="text-align: left;">
+<img src="https://github.com/Harry25R.png" alt="Harry" style="width: 1.5in; float: left; margin-right: 10px;">
+<div style="overflow: hidden;">
+
+## Harry Robertson
+
+**PhD Candidate**  
+Biography
+
+<wimr>
+
+</div>
+</div>
+

@@ -1,0 +1,27 @@
+---
+title: "Additional Resources"
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+<dev class="hint-info">
+Here I'll drop resources that I find that might be useful! 
+</dev>
+
+<e>
+
+### Stretchly
+
+[Stretchly](https://hovancik.net/stretchly/) is a really nice open-source app that prompts you at certain intervals to take a short (30 second) break or long (20 minutes). I have found it <strong><i>incredibly</i></strong> useful for ensuring I take breaks throughout my day. You can also customise the prompts! 
+
+### roadmap.sh
+
+[roadmap.sh](https://roadmap.sh) is another open-source site that compiles *roadmaps* for learning new programming skills. For example, the [Data Science and AI](https://roadmap.sh/ai-data-scientist) roadmap provides a guide and timeline for your learning, such as the math, stats and coding you should learn, and provides a list of paid and free resources to follow. As with all information I put here, this is just a suggestion, and if you find another resource that's better, please use that instead, and let me know so I can add it here. 
+
+
+
+
+
+
+

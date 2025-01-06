@@ -4,7 +4,14 @@ output: rmdformats::material
 editor_options:
   chunk_output_type: console
 ---
- 
+
+<!---
+To do:
+
+- add archive? 
+
+<--->
+
 <div style="text-align: left;">
   <img src="assets/logo/logo.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
   <div style="overflow: hidden; padding-top: 10%;">
@@ -12,7 +19,7 @@ editor_options:
 ## **CVR Analysis User Group**    
 **Contributors:** Thomas O'Neil, Harry Robertson
 <hr>
-  </div> 
+</div> 
 <br>
  
 ## Welcome
@@ -24,33 +31,58 @@ Here, you'll find:
 - Workshop schedules and announcements.
 - Step-by-step instructions for workshop activities.
 - Additional resources that might be of interest. 
+ 
+Workshop material will aim to use publicly available data or mock created data. Therefore, you will not need to rely on uploaded data from the demonstrators/creators. Instead, a pre-workshop set-ups will include instructions for where to download and prep relevant data. 
 
-Workshop material will aim to use publicly available data. Therefore, you will not need to rely on uploaded data from the creators. Rather, the workshop set-ups will include scripts for downloading 
+<hint-text style="text-size:1.2em">*Bookmark this site for quick access to scripts and updates as workshops progress.*</hint-text>
 
-A wetlab researcher equipped with the power of programmatic analysis is a powerful scientist. We aim to make R more accessible and practical for such biomedical researchers.
+<wimr> 
 
 ## Using this site
 
 This site is organised into several sections to help you quickly find what you need:
 
-- **Getting Started in R:** A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
-- **Announcements:** Updates on upcoming workshops, deadlines, and important notices.
-- **Workshops:** Detailed instructions, scripts, and examples for each workshop session.
-- **Extra Resources:** Links to helpful tutorials, datasets, and cheat sheets. 
+- [**Getting Started in R:**](https://drthomasoneil.github.io/analysis-user-group/0_start.html) A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
+- [**Announcements:**](https://drthomasoneil.github.io/analysis-user-group/0_announcements.html) Updates on upcoming workshops, deadlines, and important notices.
+- [**Workshops:**](https://drthomasoneil.github.io/analysis-user-group/0_workshops.html) Detailed instructions, scripts, and examples for each workshop session.
+- [**Extra Resources:**](https://drthomasoneil.github.io/analysis-user-group/0_cresources.html) Links to helpful tutorials, data sets, and cheat sheets. 
 
-*Bookmark this site for quick access to scripts and updates as workshops progress.*
+We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/analysis-user-group/0_contacts.html).
 
-We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](html/to/contacts/page).
+You'll also see graphics like this throughout that emphasis 
+
+<div class="hint-info">
+**Important information**
+</div>
+<div class="hint-success">
+**Success**
+</div>
+<div class="hint-warning">
+**Warnings**
+</div>
+<div class="hint-danger">
+**Dangers**
+</div>
+<div class="hint-goals">
+**Goals to achieve in a session or workshop**
+</div>
+<div class="hint-practice">
+**Practice you should try before moving on**
+</div>
+
+<wimr>
 
 ## Schedule (2025){.tabset .tabset-fade}
 
+<div class="tab-content">
+
 ### Summary
+
+If you are new analytic programming, please use this time to get familiar with R (**See:** [*Getting Started in R*](https://drthomasoneil.github.io/analysis-user-group/0_start.html)).
 
 ### Jan
 
 - *No workshops planned*. 
-
-If you are new analytic programming, please use this time to get familiar with R (**See:** [*Getting Started in R* ](link)).
 
 ### Feb
 
@@ -74,11 +106,16 @@ If you are new analytic programming, please use this time to get familiar with R
 
 ### Dec
 
+</div>
+
+<wimr>
+
 ## Special Thanks
 
 There are a lot of extra people to thank for contributing, motivating and helping build this digital community and repository:
 
 - Oscar Dong
+- Yuchen Li
 - Elizabeth Dunn
 - Heeva Baharlou
 - Alex Qin

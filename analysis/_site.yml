@@ -1,23 +1,19 @@
 name: analysis-user-group
 output_dir: ../docs
 navbar:
-  title: CVR-site
+  title: "<img src='assets/logo/logo.png' style='height:30px; vertical-align:middle; align-items:center; margin-right:10px;'>"
   left:
   - text: Home
     href: index.html
-  - text: Announcements
-    href: 0_announcements.html
-  - text: Workshops
-    menu: 
-      - text: "Single Cell"
-        href: workflow_sc.html
-  right:
   - text: Getting Started in R
     href: 0_start.html
+  - text: Announcements
+    href: 0_announcements.html
+  right:
   - text: Extra Resources
     href: 0_resources.html  
-  - text: Archive
-    href: 0_archive.html  
+#  - text: Archive
+#    href: 0_archive.html  
   - text: Contacts
     href: 0_contacts.html
   - icon: fab fa-github

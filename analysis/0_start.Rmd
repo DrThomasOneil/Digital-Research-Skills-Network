@@ -1,28 +1,35 @@
 ---
-title: "Getting Started in R"
+title: "Getting Started in R (2025)"
 author: "Thomas O'Neil"
-date: "2025"
-output: rmdformats::material
-editor_options:
-  chunk_output_type: console
+output:
+  workflowr::wflow_html:
+    toc: no
 ---
 
-# Workshop Overview
-This 10-session workshop series is designed to introduce participants to R programming with a focus on bioinformatics workflows and reproducibility. It emphasizes the mindset shift required to transition from manual tools like Excel to programmatic data analysis.
+This 10-session workshop series is designed to introduce users to R programming with a focus on bioinformatics workflows and reproducibility. It emphasizes the mindset shift required to transition from manual tools like Excel to programmatic data analysis.
+
+<wimr>
 
 ## **Session 0: What Is Programming? Shifting Mindsets**
-**Goal:** Introduce programming concepts and the philosophy behind programmatic workflows.
 
-- What is programming and why use R?
-- Moving from manual Excel edits to reproducible code.
-- Working with directories and file paths.
-- Scripts vs manual edits – automating tasks.
+<div class="hint-goals">
+**Goal:**  
+Introduce programming concepts and the mindset behind programmatic workflows.  
+- What is programming and why use R?  
+- Moving from manual Excel edits to reproducible code.  
+- Working with directories and file paths.  
+- Scripts vs manual edits – automating tasks.  
+</div>
 
-**Practice:**
-- Navigating directories (`getwd()`, `setwd()`).
-- Creating folders and listing files.
+<div class="hint-practice">
+**Practice:**  
+- Navigating directories (`getwd()`, `setwd()`).  
+- Creating folders and listing files.  
+</div>
 
----
+[Go to Session →]()
+
+<wimr>
 
 ## **Session 1: Getting Started with R and RStudio**
 **Goal:** Set up R and RStudio, and get familiar with the interface.
