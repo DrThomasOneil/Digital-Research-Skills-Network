@@ -6,7 +6,7 @@ output:
 ---
 
 <dev class="hint-info">
-Here I'll drop resources that I find that might be useful! 
+*Here I'll drop resources that I find that might be useful!*
 </dev>
 
 <e>

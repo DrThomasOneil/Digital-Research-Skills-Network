@@ -14,11 +14,11 @@ This 10-session workshop series is designed to introduce users to R programming 
 
 <div class="hint-goals">
 **Goal:**  
-Introduce programming concepts and the mindset behind programmatic workflows.  
-- What is programming and why use R?  
-- Moving from manual Excel edits to reproducible code.  
-- Working with directories and file paths.  
-- Scripts vs manual edits – automating tasks.  
+Introduce programming concepts and the mindset behind programmatic workflows.   
+- Transition from manual tools (e.g. Excel & Prism) to programming-based workflows.  
+- Understand the concept of handling data using code.  
+- Learn to navigate directories and file paths programmatically.  
+- Emphasize reproducibility and structured workflows.  
 </div>
 
 <div class="hint-practice">
@@ -27,7 +27,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Creating folders and listing files.  
 </div>
 
-[Go to Session →]()
+[Go to Session →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/introduction.html)
 
 <wimr>
 
@@ -43,7 +43,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Create and save an R script.
 - Install and load a package (e.g., `tidyverse`).
 
----
+<wimr>
 
 ## **Session 2: Data Types and Structures**
 **Goal:** Learn about data types and structures in R.
@@ -57,7 +57,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Load flow cytometry data and explore structure.
 - Create and index vectors and data frames.
 
----
+<wimr>
 
 ## **Session 3: Data Manipulation with `dplyr`**
 **Goal:** Introduce `dplyr` for filtering, mutating, and summarizing data.
@@ -70,7 +70,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Calculate proportions for CD4/CD8 populations.
 - Add calculated columns for analysis.
 
----
+<wimr>
 
 ## **Session 4: Basic Programming and Control Structures**
 **Goal:** Understand programming logic for automating tasks.
@@ -84,7 +84,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Write functions to calculate percentages dynamically.
 - Automate filtering tasks.
 
----
+<wimr>
 
 ## **Session 5: Visualization with `ggplot2` – Part 1**
 **Goal:** Create and customize visualizations.
@@ -96,7 +96,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Visualize CD4 vs CD8 proportions.
 - Add colors and themes.
 
----
+<wimr>
 
 ## **Session 6: Advanced Visualization with `ggplot2` – Part 2**
 **Goal:** Learn advanced visualization techniques.
@@ -109,7 +109,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Create faceted boxplots for subsets.
 - Export plots for reports.
 
----
+<wimr>
 
 ## **Session 7: Statistical Analysis**
 **Goal:** Understand descriptive and inferential statistics.
@@ -122,7 +122,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Test differences in CD4 proportions.
 - Perform correlation analysis.
 
----
+<wimr>
 
 ## **Session 8: Reproducible Reports with RMarkdown**
 **Goal:** Build dynamic and shareable reports.
@@ -135,7 +135,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Create a report summarizing flow cytometry data.
 - Embed visualizations and tables.
 
----
+<wimr>
 
 ## **Session 9: Mini Project – Putting It All Together**
 **Goal:** Apply skills to a complete workflow.
@@ -145,7 +145,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Summarize and visualize trends.
 - Run tests and compile everything into a report.
 
----
+<wimr>
 
 ## **Session 10: Troubleshooting and Workflow Design**
 **Goal:** Teach debugging strategies and workflow optimization.
@@ -159,8 +159,6 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 - Debug a script with errors.
 - Restructure code for reusability.
 
----
+<wimr>
 
-# **Final Thoughts**
-This series is designed to equip participants with both conceptual and practical skills to confidently approach programming and data analysis. It emphasizes reproducibility, scalability, and structured workflows, preparing learners for real-world bioinformatics challenges.
 
