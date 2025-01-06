@@ -1,69 +1,21 @@
-```{r eval=F, include=T}
-<script>
-  // Set the valid password
-  const validPassword = "pw"; 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.display = "none"; 
 
-    function validatePassword() {
-      let authenticated = false;
+# Introduction
 
-      while (!authenticated) {
-        const password = prompt("Enter password:");
+<h2>Manual to programming tools</h2>
 
-        if (password === validPassword) {
-          document.body.style.display = "block"; 
-          authenticated = true; // Exit the loop
-        } else {
-          alert("Incorrect password. Please try again.");
-        }
-      }
-    }
-
-    // Call the password validation function
-    validatePassword();
-  });
-</script>
-
-<script src="../adit/quotes.js"></script>
-<script>
-  const noteSymbol = "&#9834;";
-  function showRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const quoteObj = quotes[randomIndex];
-    const quoteElement = document.getElementById("quote-box");
-
-    const formattedQuote = `
-      ${noteSymbol} ${quoteObj.quote} ${noteSymbol}<br>
-      <em>${quoteObj.song}</em><br>
-      <strong>${quoteObj.artist}</strong>
-    `;
-
-    quoteElement.innerHTML = formattedQuote;
-  }
-
-  document.addEventListener("DOMContentLoaded", showRandomQuote);
-</script>
-``` 
-
-# Introduction: Manual to programming tools
-
-**Session goals:**
-
-- Transition from manual tools (e.g. Excel & Prism) to programming-based workflows.
-
-- Understand the concept of handling data using code.
-
-- Learn to navigate directories and file paths programmatically.
-
-- Emphasize reproducibility and structured workflows.
+<div class="hint-goals">  
+**Goals:**  
+Introduce programming concepts and the mindset behind programmatic workflows.    
+- Transition from manual tools (e.g. Excel & Prism) to programming-based workflows.  
+- Understand the concept of handling data using code.  
+- Learn to navigate directories and file paths programmatically.  
+- Emphasize reproducibility and structured workflows.  
+</div>
 
 This first session will not get you to start writing code, but to start with reframing the way you think about and might approach analytic programming. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.
 
-Here I will bring up some common themes 
-
-<read-time><i>**Read time**: 15 Minutes</i></read-time><e>
+<read-time><i>**Read time**: 15 Minutes</i></read-time><wimr>
 
 ## Transitioning from manual tools (e.g. Excel & Prism) to programming-based workflows in R.
 
@@ -83,7 +35,7 @@ In the same analogy, a good way to learn a new language is to actually actively 
 
 I recall buying a few courses on *Udemy* for R programming, because I never got it. The example data I was given was *basketball 3-point statistics* and *compounding savings* finance data. It was impossible for me to You may have already read that I've generated a mock dataset that might mimic some flow cytometry data you've possibly already started to collect. This is to hopefully fill that gap that I felt while learning - *how on earth do I apply this to my own work?*.
 
-<e>
+<wimr>
 
 ## Handling your data
 
@@ -104,11 +56,11 @@ Before I was using R, I was still copy and pasting a *tonne* to get my data in t
 </div>  
 I hope as you navigate through these lessons, and try to amend your own spreadsheets, that you start to draw up your new data in R-friendly formats. 
 
-<e>
+<wimr>
 
 ## Directories
 
-<div class="hint-warning">
+<div class="hint-danger">
 **Forget double clicking in File explorer & Finder!**
 </div> 
 
@@ -124,11 +76,13 @@ However! If you have not pointed R to the right folder, you will:
 
 <e> 
 
-<div class="hint-info">
-Directories are the most common errors! For both beginner and experienced users! 
+<div class="hint-warning">
+**Directories** are the most common errors! For both beginner and experienced users! 
 </div>
 
-#### Here are some helpful tips to remember...
+<wimr> 
+
+## Helpful tips
 
 **What a directory looks like**
 
@@ -151,9 +105,11 @@ getwd()
 ```
 `[1] "~/Desktop/analysis_user_group"`
 
-**Other useful tips...**
+<e>
 
-You can also use `list.files()` to output the files and folders in that directory. Sometimes its just easier than typing out the whole file name! 
+**Quickly checking the files you're looking for are in your directory**
+
+You can use `list.files()` to output the files and folders in that directory. Sometimes its just easier than typing out the whole file name! 
 
 You need to know that `.` means **this** to the computer. For example `list.files()` is the same as `list.files(".")`. This is a bad example, but please remember what "." means! It took me a long time to learn how to use it. 
 
@@ -162,11 +118,10 @@ For example, when you get into using `dplyr` which will drastically improve your
 Also `list.files("..")`... What do you think this means? Try it when you get the chance! I've used it **A LOT** in making this website!  
 
 <div class="hint-success">
-Phrases to remember:\n
-</div>
+Phrases to remember:  
 - **working directory**: The folder that you are operating in  
-- `setwd()`, `getwd()` & `list.files()`: Orientate yourself to where you're looking! 
-- `.`: *this*
-
+- `setwd()`, `getwd()` & `list.files()`: Orientate yourself to where you're looking!  
+- `.`: "*I'm here*"  
+</div>
 <e>
 <div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>

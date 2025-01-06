@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction: Manual to programming tools | Introduction to R and analytic Programming</title>
-  <meta name="description" content="Introduction: Manual to programming tools | Introduction to R and analytic Programming" />
+  <title>Introduction | Introduction to R and analytic Programming</title>
+  <meta name="description" content="Introduction | Introduction to R and analytic Programming" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction: Manual to programming tools | Introduction to R and analytic Programming" />
+  <meta property="og:title" content="Introduction | Introduction to R and analytic Programming" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="DrThomasOneil/analysis-user-group" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction: Manual to programming tools | Introduction to R and analytic Programming" />
+  <meta name="twitter:title" content="Introduction | Introduction to R and analytic Programming" />
   
   
   
@@ -139,11 +139,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html"><i class="fa fa-check"></i>Introduction: Manual to programming tools</a>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r."><i class="fa fa-check"></i>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.</a></li>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html#handling-your-data"><i class="fa fa-check"></i>Handling your data</a></li>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html#directories"><i class="fa fa-check"></i>Directories</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r."><i class="fa fa-check"></i>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#handling-your-data"><i class="fa fa-check"></i>Handling your data</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#directories"><i class="fa fa-check"></i>Directories</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#helpful-tips"><i class="fa fa-check"></i>Helpful tips</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://drthomasoneil.github.io/analysis-user-group" target="blank"><i><strong>Return to the analysis page!</strong></i></a></li>
@@ -166,37 +167,40 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-manual-to-programming-tools" class="section level1 hasAnchor">
-<h1>Introduction: Manual to programming tools<a href="introduction-manual-to-programming-tools.html#introduction-manual-to-programming-tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Session goals:</strong></p>
-<ul>
-<li><p>Transition from manual tools (e.g. Excel &amp; Prism) to programming-based workflows.</p></li>
-<li><p>Understand the concept of handling data using code.</p></li>
-<li><p>Learn to navigate directories and file paths programmatically.</p></li>
-<li><p>Emphasize reproducibility and structured workflows.</p></li>
-</ul>
+<div id="introduction" class="section level1 hasAnchor">
+<h1>Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h2>
+Manual to programming tools
+</h2>
+<div class="hint-goals">
+<p><strong>Goals:</strong><br />
+Introduce programming concepts and the mindset behind programmatic workflows.<br />
+- Transition from manual tools (e.g. Excel &amp; Prism) to programming-based workflows.<br />
+- Understand the concept of handling data using code.<br />
+- Learn to navigate directories and file paths programmatically.<br />
+- Emphasize reproducibility and structured workflows.</p>
+</div>
 <p>This first session will not get you to start writing code, but to start with reframing the way you think about and might approach analytic programming. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.</p>
-<p>Here I will bring up some common themes</p>
-<p><span style="color: #808080; font-size: 1.1em; line-height:0.5; "><i><strong>Read time</strong>: 15 Minutes</i></span><e></p>
+<p><read-time><i><strong>Read time</strong>: 15 Minutes</i></read-time><wimr></p>
 <div id="transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r." class="section level2 hasAnchor">
-<h2>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.<a href="introduction-manual-to-programming-tools.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.<a href="introduction.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are a lot of resources online that introduce programming to beginners. Here, I will approach the concepts from a certain perspective: to convert a wet-lab researcher, who has a goal in mind that provides the context as to why they’re learning this skill, and who probably chronically uses a range of different apps and software for notetaking, calculations, stats, graphing and data management. Therefore, I aim to incorporate <strong>more</strong> than just <strong><em><span style="color: red;">how to do a t.test in R</span></em></strong> or <strong><em><span style="color: red;">how to analysis single cell RNA data</span></em></strong>, including such things like <strong><em><span style="color: blue;">creating a lab notebook in R</span></em></strong> or <strong><em><span style="color: blue;">sharing data with your PI or a collaborator</span></em></strong>.</p>
 <div class="hint-info">
 <p><strong>Note</strong>: If you still do not <em>get it</em>, don’t worry. It took me years to feel comfortable. I was fortunate enough to have a supervisor who gave me time to learn this. Keep up with it, find more resources and stick with a <strong>good community of users</strong> :)</p>
 </div>
 <div id="consistency" class="section level4 hasAnchor">
-<h4><em>Consistency</em><a href="introduction-manual-to-programming-tools.html#consistency" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4><em>Consistency</em><a href="introduction.html#consistency" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>It’s important to know that <strong>consistency is key</strong>. You <u>will not</u> get better or more efficient at this unless you dedicate time, energy and brain power to learning it like another language. There are times that I’m doing one type of analysis that I can rewrite whole workflows automatically, and other times when I’m away at a conference, where I sit down at my desk and have to look up reference material to get going again. There is no easy way around it. I think that there will be some users who are in for a quick click-and-play script, and this is fine for performing one monotonous task like loading pre-processed single cell RNA data just to visualise. To be honest, if that is your intention, don’t waste your time here - there are better resources such as <a href="https://satijalab.org/seurat/">this</a> and <a href="https://nbisweden.github.io/workshop-scRNAseq/">this</a>.</p>
 </div>
 <div id="active-learning" class="section level4 hasAnchor">
-<h4><em>Active Learning</em><a href="introduction-manual-to-programming-tools.html#active-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4><em>Active Learning</em><a href="introduction.html#active-learning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In the same analogy, a good way to learn a new language is to actually actively apply your learning. For example, reading a physical textbook and trying to learn what the code does is not productive. Fortunately, we don’t have to embarrass ourselves when we try the wrong combination of words in programming (the only people who will know your silliness is you <subscript>and ChatGPT</subscript>).</p>
 <p>I recall buying a few courses on <em>Udemy</em> for R programming, because I never got it. The example data I was given was <em>basketball 3-point statistics</em> and <em>compounding savings</em> finance data. It was impossible for me to You may have already read that I’ve generated a mock dataset that might mimic some flow cytometry data you’ve possibly already started to collect. This is to hopefully fill that gap that I felt while learning - <em>how on earth do I apply this to my own work?</em>.</p>
-<p><e></p>
+<p><wimr></p>
 </div>
 </div>
 <div id="handling-your-data" class="section level2 hasAnchor">
-<h2>Handling your data<a href="introduction-manual-to-programming-tools.html#handling-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Handling your data<a href="introduction.html#handling-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You need to very quickly forget about double clicking and nice user-interfaces. Programming languages do not care about user interfaces - that’s why there’s one <em>Excel</em>. So you need to start learning that you can’t click on the 3rd column and 5th row and change that value manually. <em>You’ll need to…</em></p>
 <pre class="shell"><code>my_data[5,3] &lt;- new_value</code></pre>
 <p>… and so, you need to learn to be very specific and particular.</p>
@@ -207,11 +211,11 @@ While important for how you use R when you’re here, knowing how you use R is v
 Before I was using R, I was still copy and pasting a <em>tonne</em> to get my data in the right format for <em>prism</em>! Hopefully you’ve had the same experience and want to prevent <span style="color=red;"><strong>carpal tunnel</strong></span>!</p>
 </div>
 <p>I hope as you navigate through these lessons, and try to amend your own spreadsheets, that you start to draw up your new data in R-friendly formats.</p>
-<p><e></p>
+<p><wimr></p>
 </div>
 <div id="directories" class="section level2 hasAnchor">
-<h2>Directories<a href="introduction-manual-to-programming-tools.html#directories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="hint-warning">
+<h2>Directories<a href="introduction.html#directories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="hint-danger">
 <p><strong>Forget double clicking in File explorer &amp; Finder!</strong></p>
 </div>
 <p>You really need to remember that every time you open <strong>RStudio</strong>, you <em>basically</em> are looking at a text editor. You edit your code in a fancy-dancy text editor that colours words and numbers and run it in a word/number processor</p>
@@ -223,36 +227,36 @@ Before I was using R, I was still copy and pasting a <em>tonne</em> to get my da
 </ul>
 <p><em>Could you imagine thinking that you’re editing row 5 and column 3 of your tissue log, and not realising that you’re editing the raw data!</em></p>
 <p><e></p>
-<div class="hint-info">
-<p>Directories are the most common errors! For both beginner and experienced users!</p>
+<div class="hint-warning">
+<p><strong>Directories</strong> are the most common errors! For both beginner and experienced users!</p>
 </div>
-<div id="here-are-some-helpful-tips-to-remember" class="section level5 hasAnchor">
-<h5>Here are some helpful tips to remember…<a href="introduction-manual-to-programming-tools.html#here-are-some-helpful-tips-to-remember" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><wimr></p>
+</div>
+<div id="helpful-tips" class="section level2 hasAnchor">
+<h2>Helpful tips<a href="introduction.html#helpful-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>What a directory looks like</strong></p>
 <ul>
 <li><p>On a Mac: <code>/Users/thomasoneil/Desktop/</code></p></li>
 <li><p>On a PC: <code>C:/</code></p></li>
 </ul>
 <p><strong>Set your directory at the beginning of each script/session</strong></p>
-<p>For these sessions, I’ve created a folder on my desktop (mac) called <code>analysis_user_group</code>. We want to</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="introduction-manual-to-programming-tools.html#cb4-1" tabindex="-1"></a><span class="ex">setwd</span><span class="er">(</span><span class="st">&quot;~/Desktop/analysis_user_group&quot;</span><span class="kw">)</span></span></code></pre></div>
+<p>For these sessions, I’ve created a folder on my desktop (mac) called <code>analysis_user_group</code>. We want to tell R where to look for files/folders and where to save our data/plots.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="introduction.html#cb3-1" tabindex="-1"></a><span class="ex">setwd</span><span class="er">(</span><span class="st">&quot;~/Desktop/analysis_user_group&quot;</span><span class="kw">)</span></span></code></pre></div>
 <p>I can check my working directory using</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="introduction-manual-to-programming-tools.html#cb5-1" tabindex="-1"></a><span class="fu">getwd()</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="introduction.html#cb4-1" tabindex="-1"></a><span class="fu">getwd()</span></span></code></pre></div>
 <p><code>[1] "~/Desktop/analysis_user_group"</code></p>
-<p><strong>Other useful tips…</strong></p>
-<p>You can also use <code>list.files()</code> to output the files and folders in that directory. Sometimes its just easier than typing out the whole file name!</p>
+<p><e></p>
+<p><strong>Quickly checking the files you’re looking for are in your directory</strong></p>
+<p>You can use <code>list.files()</code> to output the files and folders in that directory. Sometimes its just easier than typing out the whole file name!</p>
 <p>You need to know that <code>.</code> means <strong>this</strong> to the computer. For example <code>list.files()</code> is the same as <code>list.files(".")</code>. This is a bad example, but please remember what “.” means! It took me a long time to learn how to use it.</p>
 <p>For example, when you get into using <code>dplyr</code> which will drastically improve your programming life, knowing that <code>.</code> means “use this data” will change your life!</p>
 <p>Also <code>list.files("..")</code>… What do you think this means? Try it when you get the chance! I’ve used it <strong>A LOT</strong> in making this website!</p>
 <div class="hint-success">
-<p>Phrases to remember:</p>
+<p>Phrases to remember:<br />
+- <strong>working directory</strong>: The folder that you are operating in<br />
+- <code>setwd()</code>, <code>getwd()</code> &amp; <code>list.files()</code>: Orientate yourself to where you’re looking!<br />
+- <code>.</code>: “<em>I’m here</em>”</p>
 </div>
-<ul>
-<li><strong>working directory</strong>: The folder that you are operating in<br />
-</li>
-<li><code>setwd()</code>, <code>getwd()</code> &amp; <code>list.files()</code>: Orientate yourself to where you’re looking!</li>
-<li><code>.</code>: <em>this</em></li>
-</ul>
 <e>
 <div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;">
 
@@ -260,25 +264,24 @@ Before I was using R, I was still copy and pasting a <em>tonne</em> to get my da
 
 </div>
 </div>
-</div>
 <div class="custom-footer">
-    <div class="footer-left" style="width: 30%; float: centre">
-      <img src="../assets/footer/footer1.png" alt="wimr-logo">
-    </div>
-    <div class="footer-center">
-      <p><strong>Creators</strong><br>
-        Thomas O'Neil<br>
-        Harry Robertson<br>
-        <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
-      </p>
-    </div>
-    <div class="footer-right" style="width: 30%; float: centre">
-      <img src="../assets/footer/footer2.png" alt="usyd-logo">
-    </div>
+  <div class="footer-left" style="width: 30%; float: centre">
+    <img src="assets/footer/footer1.png" alt="wimr-logo">
   </div>
-<div style="font-size: 0.7em; text-align: center; line-height: 2pt;">
-    <p>This site was last updated</p>
-    <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
+  <div class="footer-center">
+    <p><strong>Creators</strong><br>
+      Thomas O'Neil<br>
+      Harry Robertson<br>
+      <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
+    </p>
+  </div>
+  <div class="footer-right" style="width: 30%; float: centre">
+    <img src="assets/footer/footer2.png" alt="usyd-logo">
+  </div>
+</div>
+<div class="footer-updated">
+  <p>This site was last updated</p>
+  <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
 </div>
             </section>
 

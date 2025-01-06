@@ -9,6 +9,57 @@ link-citations: yes
 github-repo: DrThomasOneil/analysis-user-group
 ---
 
+```html
+<head>
+  <script>
+    // Set the valid password
+    const validPassword = "pw"; 
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.display = "none"; 
+  
+      function validatePassword() {
+        let authenticated = false;
+  
+        while (!authenticated) {
+          const password = prompt("Enter password:");
+  
+          if (password === validPassword) {
+            document.body.style.display = "block"; 
+            authenticated = true; // Exit the loop
+          } else {
+            alert("Incorrect password. Please try again.");
+          }
+        }
+      }
+  
+      // Call the password validation function
+      validatePassword();
+    });
+  </script>
+  
+  <script src="../adit/quotes.js"></script>
+  <script>
+    const noteSymbol = "&#9834;";
+    function showRandomQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const quoteObj = quotes[randomIndex];
+      const quoteElement = document.getElementById("quote-box");
+  
+      const formattedQuote = `
+        ${noteSymbol} ${quoteObj.quote} ${noteSymbol}<br>
+        <em>${quoteObj.song}</em><br>
+        <strong>${quoteObj.artist}</strong>
+      `;
+  
+      quoteElement.innerHTML = formattedQuote;
+    }
+  
+    document.addEventListener("DOMContentLoaded", showRandomQuote);
+  </script>
+</head>
+``` 
+
 # Welcome!
  
 This is the sub-repository containing the tutorials and workshop notes for the introduction to R and analytic programming. 
@@ -38,7 +89,7 @@ In this book, you'll find 11 sessions:
 # </div>
 ```
  
-```{r, eval=FALSE}
+```{r, eval=FALSE, include=F}
 bookdown::render_book() 
 ```
 

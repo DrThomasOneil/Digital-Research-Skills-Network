@@ -29,7 +29,7 @@
   
   
 
-<link rel="next" href="introduction-manual-to-programming-tools.html"/>
+<link rel="next" href="introduction.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -139,11 +139,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html"><i class="fa fa-check"></i>Introduction: Manual to programming tools</a>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r."><i class="fa fa-check"></i>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.</a></li>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html#handling-your-data"><i class="fa fa-check"></i>Handling your data</a></li>
-<li class="chapter" data-level="" data-path="introduction-manual-to-programming-tools.html"><a href="introduction-manual-to-programming-tools.html#directories"><i class="fa fa-check"></i>Directories</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r."><i class="fa fa-check"></i>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#handling-your-data"><i class="fa fa-check"></i>Handling your data</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#directories"><i class="fa fa-check"></i>Directories</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#helpful-tips"><i class="fa fa-check"></i>Helpful tips</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://drthomasoneil.github.io/analysis-user-group" target="blank"><i><strong>Return to the analysis page!</strong></i></a></li>
@@ -168,7 +169,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">Introduction to R and analytic Programming</h1>
-<p class="date"><em>2024-12-23 (Last update: 2025-01-04)</em></p>
+<p class="date"><em>2024-12-23 (Last update: 2025-01-06)</em></p>
 </div>
 <div id="welcome" class="section level1 hasAnchor">
 <h1>Welcome!<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -178,78 +179,27 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Manual to programming tools: Transitioning from manual analysis to programming</li>
 </ul>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
-</details>
 <p><e></p>
 
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a><span class="sc">&lt;</span>script<span class="sc">&gt;</span></span>
-<span id="cb2-2"><a href="index.html#cb2-2" tabindex="-1"></a>  <span class="er">//</span> Set the valid password</span>
-<span id="cb2-3"><a href="index.html#cb2-3" tabindex="-1"></a>  const validPassword <span class="ot">=</span> <span class="st">&quot;pw&quot;</span>; </span>
-<span id="cb2-4"><a href="index.html#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="index.html#cb2-5" tabindex="-1"></a>  <span class="fu">document.addEventListener</span>(<span class="st">&quot;DOMContentLoaded&quot;</span>, () <span class="sc">=&gt;</span> {</span>
-<span id="cb2-6"><a href="index.html#cb2-6" tabindex="-1"></a>    document.body.style.display <span class="ot">=</span> <span class="st">&quot;none&quot;</span>; </span>
-<span id="cb2-7"><a href="index.html#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="index.html#cb2-8" tabindex="-1"></a>    <span class="cf">function</span> <span class="fu">validatePassword</span>() {</span>
-<span id="cb2-9"><a href="index.html#cb2-9" tabindex="-1"></a>      let authenticated <span class="ot">=</span> false;</span>
-<span id="cb2-10"><a href="index.html#cb2-10" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="index.html#cb2-11" tabindex="-1"></a>      <span class="cf">while</span> (<span class="sc">!</span>authenticated) {</span>
-<span id="cb2-12"><a href="index.html#cb2-12" tabindex="-1"></a>        const password <span class="ot">=</span> <span class="fu">prompt</span>(<span class="st">&quot;Enter password:&quot;</span>);</span>
-<span id="cb2-13"><a href="index.html#cb2-13" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="index.html#cb2-14" tabindex="-1"></a>        <span class="cf">if</span> (password <span class="sc">==</span><span class="er">=</span> validPassword) {</span>
-<span id="cb2-15"><a href="index.html#cb2-15" tabindex="-1"></a>          document.body.style.display <span class="ot">=</span> <span class="st">&quot;block&quot;</span>; </span>
-<span id="cb2-16"><a href="index.html#cb2-16" tabindex="-1"></a>          authenticated <span class="ot">=</span> true; <span class="sc">/</span><span class="er">/</span> Exit the loop</span>
-<span id="cb2-17"><a href="index.html#cb2-17" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
-<span id="cb2-18"><a href="index.html#cb2-18" tabindex="-1"></a>          <span class="fu">alert</span>(<span class="st">&quot;Incorrect password. Please try again.&quot;</span>);</span>
-<span id="cb2-19"><a href="index.html#cb2-19" tabindex="-1"></a>        }</span>
-<span id="cb2-20"><a href="index.html#cb2-20" tabindex="-1"></a>      }</span>
-<span id="cb2-21"><a href="index.html#cb2-21" tabindex="-1"></a>    }</span>
-<span id="cb2-22"><a href="index.html#cb2-22" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="index.html#cb2-23" tabindex="-1"></a>    <span class="sc">/</span><span class="er">/</span> Call the password validation <span class="cf">function</span></span>
-<span id="cb2-24"><a href="index.html#cb2-24" tabindex="-1"></a>    <span class="fu">validatePassword</span>();</span>
-<span id="cb2-25"><a href="index.html#cb2-25" tabindex="-1"></a>  });</span>
-<span id="cb2-26"><a href="index.html#cb2-26" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span>
-<span id="cb2-27"><a href="index.html#cb2-27" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="index.html#cb2-28" tabindex="-1"></a><span class="er">&lt;</span>script src<span class="ot">=</span><span class="st">&quot;../adit/quotes.js&quot;</span><span class="sc">&gt;</span><span class="er">&lt;/</span>script<span class="sc">&gt;</span></span>
-<span id="cb2-29"><a href="index.html#cb2-29" tabindex="-1"></a><span class="er">&lt;</span>script<span class="sc">&gt;</span></span>
-<span id="cb2-30"><a href="index.html#cb2-30" tabindex="-1"></a>  const noteSymbol <span class="ot">=</span> <span class="st">&quot;&amp;#9834;&quot;</span>;</span>
-<span id="cb2-31"><a href="index.html#cb2-31" tabindex="-1"></a>  <span class="cf">function</span> <span class="fu">showRandomQuote</span>() {</span>
-<span id="cb2-32"><a href="index.html#cb2-32" tabindex="-1"></a>    const randomIndex <span class="ot">=</span> <span class="fu">Math.floor</span>(<span class="fu">Math.random</span>() <span class="sc">*</span> quotes.length);</span>
-<span id="cb2-33"><a href="index.html#cb2-33" tabindex="-1"></a>    const quoteObj <span class="ot">=</span> quotes[randomIndex];</span>
-<span id="cb2-34"><a href="index.html#cb2-34" tabindex="-1"></a>    const quoteElement <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">&quot;quote-box&quot;</span>);</span>
-<span id="cb2-35"><a href="index.html#cb2-35" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="index.html#cb2-36" tabindex="-1"></a>    const formattedQuote <span class="ot">=</span> <span class="st">`</span></span>
-<span id="cb2-37"><a href="index.html#cb2-37" tabindex="-1"></a><span class="at">      ${noteSymbol} ${quoteObj.quote} ${noteSymbol}&lt;br&gt;</span></span>
-<span id="cb2-38"><a href="index.html#cb2-38" tabindex="-1"></a><span class="at">      &lt;em&gt;${quoteObj.song}&lt;/em&gt;&lt;br&gt;</span></span>
-<span id="cb2-39"><a href="index.html#cb2-39" tabindex="-1"></a><span class="at">      &lt;strong&gt;${quoteObj.artist}&lt;/strong&gt;</span></span>
-<span id="cb2-40"><a href="index.html#cb2-40" tabindex="-1"></a><span class="at">    </span><span class="st">`</span>;</span>
-<span id="cb2-41"><a href="index.html#cb2-41" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="index.html#cb2-42" tabindex="-1"></a>    quoteElement.innerHTML <span class="ot">=</span> formattedQuote;</span>
-<span id="cb2-43"><a href="index.html#cb2-43" tabindex="-1"></a>  }</span>
-<span id="cb2-44"><a href="index.html#cb2-44" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="index.html#cb2-45" tabindex="-1"></a>  <span class="fu">document.addEventListener</span>(<span class="st">&quot;DOMContentLoaded&quot;</span>, showRandomQuote);</span>
-<span id="cb2-46"><a href="index.html#cb2-46" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span></code></pre></div>
-</details>
 </div>
 <div class="custom-footer">
-    <div class="footer-left" style="width: 30%; float: centre">
-      <img src="../assets/footer/footer1.png" alt="wimr-logo">
-    </div>
-    <div class="footer-center">
-      <p><strong>Creators</strong><br>
-        Thomas O'Neil<br>
-        Harry Robertson<br>
-        <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
-      </p>
-    </div>
-    <div class="footer-right" style="width: 30%; float: centre">
-      <img src="../assets/footer/footer2.png" alt="usyd-logo">
-    </div>
+  <div class="footer-left" style="width: 30%; float: centre">
+    <img src="assets/footer/footer1.png" alt="wimr-logo">
   </div>
-<div style="font-size: 0.7em; text-align: center; line-height: 2pt;">
-    <p>This site was last updated</p>
-    <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
+  <div class="footer-center">
+    <p><strong>Creators</strong><br>
+      Thomas O'Neil<br>
+      Harry Robertson<br>
+      <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
+    </p>
+  </div>
+  <div class="footer-right" style="width: 30%; float: centre">
+    <img src="assets/footer/footer2.png" alt="usyd-logo">
+  </div>
+</div>
+<div class="footer-updated">
+  <p>This site was last updated</p>
+  <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
 </div>
             </section>
 
@@ -257,7 +207,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="introduction-manual-to-programming-tools.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
