@@ -13,6 +13,9 @@ pre code {
   white-space: inherit;
 }
 
+body {
+  text-align: justify
+}
 
 /* Footer Container */
 .custom-footer {
@@ -43,10 +46,10 @@ pre code {
 
 e {
   display: block;
-  margin: 1em 0;
+  margin: .5em 0;
   border-top: 1px solid #ddd;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: .5em;
+  padding-bottom: .2em;
 }
 /* Info hint */
 .hint-info {

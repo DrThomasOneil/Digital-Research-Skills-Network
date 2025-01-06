@@ -12,6 +12,19 @@ pre {
 pre code {
   white-space: inherit;
 }
+body {
+  text-align: justify
+}
+hint-text { 
+  color: #AAAAAA; 
+  font-size: 0.8em; 
+  line-height:0.5; 
+}
+read-time { 
+  color: #C1C1C1; 
+  font-size: 1.1em; 
+  line-height:0.5; 
+}
 
 
 /* Footer Container */
@@ -21,8 +34,17 @@ pre code {
   align-items: center;
   padding: 10px 20px;
   background-color: white;
-  border-top: 1px solid grey;
   font-size: 0.7em;
+  position: relative; 
+}
+.custom-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Thickness of the 'border' */
+  background: linear-gradient(to right, #8B0000, #CC5500, #FFA500, #FFD700);
 }
 .footer-left img, .footer-right img {
   width: 100%;
@@ -41,35 +63,52 @@ pre code {
   text-decoration: underline;
 }
 
+/*********************
+
+Custom lines: Similar to WIMR and one that mimics <br><hr><br>
+
+**********************/
+
+wimr  {
+  display: block;
+  height: 10px;
+  background: linear-gradient(to right, #8B0000, #CC5500, #FFA500, #FFD700);
+  margin: 20px 0;
+  border: none;
+}
 e {
   display: block;
-  margin: 1em 0;
+  margin: .5em 0;
   border-top: 1px solid #ddd;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: .5em;
+  padding-bottom: .2em;
 }
+
+/*********************
+
+Custom CSS containers for information.
+
+**********************/
+
 /* Info hint */
 .hint-info {
   background-color: #e7f3fe;
   border-left: 4px solid #2196F3;
-  padding: 10px 15px 0px; 
+  padding: 10px 15px 0px;
   border-radius: 5px;
-  line-height: 2; 
-  display: flex; 
+  line-height: 2;
+  display: flex;
   margin: 10px 0;
-
 }
-
 .hint-info::before {
-  content: "ℹ️ "; 
-  font-size: 1.5em; 
-  margin-right: 15px; 
+  content: "ℹ️ ";
+  font-size: 1.5em;
+  margin-right: 15px;
   padding: 0px 0px 10px;
-  align-items: center; 
-  line-height: 1; 
-  display: flex; 
+  align-items: center;
+  line-height: 1;
+  display: flex;
 }
-
 /* Success hint */
 .hint-success {
   background-color: #e8f5e9;
@@ -79,11 +118,9 @@ e {
   line-height: 2;
   display: flex;
   margin: 10px 0;
-
 }
-
 .hint-success::before {
-  content: "✔️ "; 
+  content: "✔️ ";
   font-size: 1.5em;
   margin-right: 15px;
   padding: 0px 0px 10px;
@@ -91,7 +128,6 @@ e {
   line-height: 1;
   display: flex;
 }
-
 /* Warning hint */
 .hint-warning {
   background-color: #fff3cd;
@@ -101,11 +137,9 @@ e {
   line-height: 2;
   display: flex;
   margin: 10px 0;
-
 }
-
 .hint-warning::before {
-  content: "⚠️ "; 
+  content: "⚠️ ";
   font-size: 1.5em;
   margin-right: 15px;
   padding: 0px 0px 10px;
@@ -113,7 +147,6 @@ e {
   line-height: 1;
   display: flex;
 }
-
 /* Danger hint */
 .hint-danger {
   background-color: #f8d7da;
@@ -124,9 +157,46 @@ e {
   display: flex;
   margin: 10px 0;
 }
-
 .hint-danger::before {
-  content: "❌ "; 
+  content: "❌ ";
+  font-size: 1.5em;
+  margin-right: 15px;
+  padding: 0px 0px 10px;
+  align-items: center;
+  line-height: 1;
+  display: flex;
+}
+/* Goal hint */
+.hint-goals {
+  background-color: #FFE6FF; /* Light pink */
+  border-left: 4px solid #FF40FF; /* Bright pink */
+  padding: 10px 15px 0px;
+  border-radius: 5px;
+  line-height: 2;
+  display: flex;
+  margin: 10px 0;
+}
+.hint-goals::before {
+  content: "🎯 ";
+  font-size: 1.5em;
+  margin-right: 15px;
+  padding: 0px 0px 10px;
+  align-items: center;
+  line-height: 1;
+  display: flex;
+}
+/* Practice hint */
+.hint-practice {
+  background-color: #E6F4D7; /* Light green */
+  border-left: 4px solid #4E8F00; /* Dark green */
+  padding: 10px 15px 0px;
+  border-radius: 5px;
+  line-height: 2;
+  display: flex;
+  margin: 10px 0;
+}
+.hint-practice::before {
+  content: "🧪 ";
   font-size: 1.5em;
   margin-right: 15px;
   padding: 0px 0px 10px;

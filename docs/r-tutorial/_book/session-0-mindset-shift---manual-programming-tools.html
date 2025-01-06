@@ -5,25 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Session 0: Mindset Shift - Manual &gt; programming tools | Introduction to R and analytic Programming</title>
-  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  <meta name="description" content="Session 0: Mindset Shift - Manual &gt; programming tools | Introduction to R and analytic Programming" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Session 0: Mindset Shift - Manual &gt; programming tools | Introduction to R and analytic Programming" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  
   <meta name="github-repo" content="DrThomasOneil/analysis-user-group" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Session 0: Mindset Shift - Manual &gt; programming tools | Introduction to R and analytic Programming" />
   
-  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  
   
 
 
@@ -34,7 +28,7 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
+<link rel="prev" href="index.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -145,9 +139,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Introduction to R and analytic Programming</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!</a></li>
-<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="" data-path="session-0-mindset-shift---manual-programming-tools.html"><a href="session-0-mindset-shift---manual-programming-tools.html"><i class="fa fa-check"></i>Session 0: Mindset Shift - Manual &gt; programming tools</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
+<li class="chapter" data-level="" data-path="session-0-mindset-shift---manual-programming-tools.html"><a href="session-0-mindset-shift---manual-programming-tools.html"><i class="fa fa-check"></i>Session 0: Mindset Shift - Manual &gt; programming tools</a>
+<ul>
+<li class="chapter" data-level="" data-path="session-0-mindset-shift---manual-programming-tools.html"><a href="session-0-mindset-shift---manual-programming-tools.html#introduction-transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r."><i class="fa fa-check"></i>Introduction: Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://drthomasoneil.github.io/analysis-user-group" target="blank"><i><strong>Return to the analysis page!</strong></i></a></li>
 <li><a href="https://github.com/DrThomasOneil/analysis-user-group/tree/main/docs/r-tutorial" target="blank">See The Source Code</a></li>
@@ -173,12 +169,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Session 0: Mindset Shift - Manual &gt; programming tools<a href="session-0-mindset-shift---manual-programming-tools.html#session-0-mindset-shift---manual-programming-tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Session goals:</strong></p>
 <ul>
-<li><p>Transition from manual tools (Excel) to programming-based workflows.</p></li>
-<li><p>Understand the concept of treating data as code.</p></li>
+<li><p>Transition from manual tools (e.g. Excel &amp; Prism) to programming-based workflows.</p></li>
+<li><p>Understand the concept of handling date using code.</p></li>
 <li><p>Learn to navigate directories and file paths programmatically.</p></li>
 <li><p>Emphasize reproducibility and structured workflows.</p></li>
 </ul>
+<div id="introduction-transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r." class="section level2 hasAnchor">
+<h2>Introduction: Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.<a href="session-0-mindset-shift---manual-programming-tools.html#introduction-transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This first session will not get you to start writing code, but to start with reframing the way you think and might approach analytic programming. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.</p>
+<p>There are a lot of resources online that introduce programming to beginners. Here, I will approach the concepts from a certain perspective: to convert a wet-lab researcher, who has a goal in mind that provides the context as to why they’re learning this skill, and who probably chronically uses a range of different apps and software for notetaking, calculations, stats, graphing and data management. Therefore, I aim to incorporate <strong>more</strong> than just <strong><em><span style="color: red;">how to do a t.test in R</span></em></strong> or <strong><em><span style="color: red;">how to analysis single cell RNA data</span></em></strong>, including such things like <strong><em><span style="color: blue;">creating a lab notebook in R</span></em></strong> or <strong><em><span style="color: blue;">sharing data with your PI or a collaborator</span></em></strong></p>
+<p>It’s important to know that <strong>consistency is key</strong>. You <u>will not</u> get better or more efficient at this unless you dedicate time, energy and brain power to learning it like another language. There are times that I’m doing one type of analysis that I can rewrite whole workflows automatically, and other times when I’m away at a conference, where I sit down at my desk and have to look up reference material to get going again. There is no easy way around it. I think that there will be some users who are in for a quick click-and-play script, and this is fine for performing one monotonous task like loading pre-processed single cell RNA data just to visualise. To be honest, if that is your intention, don’t waste your time here - there are better resources such as <a href="https://satijalab.org/seurat/">this</a> and <a href="https://nbisweden.github.io/workshop-scRNAseq/">this</a>.</p>
+<p>In the same analogy, a good way to learn a new language is to actually actively apply your learning. For example, reading a phyical textbook and trying to learn what the code does is not productive. Fortunately, we don’t have to embarrass ourselves when we try the wrong combination of words in programming (the only people who will know your silliness is you <subscript>and ChatGPT</subscript>).</p>
 
+</div>
 </div>
 <div class="custom-footer">
     <div class="footer-left" style="width: 30%; float: centre">
@@ -204,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

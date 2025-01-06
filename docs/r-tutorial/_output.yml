@@ -1,5 +1,7 @@
 bookdown::gitbook:
   css: style.css
+  number_sections: FALSE
+  highlight: tango
   includes:
     after_body: adit/footer.html
   code_folding: show

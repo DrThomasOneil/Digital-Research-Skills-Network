@@ -1,0 +1,172 @@
+```{r eval=F, include=T}
+<script>
+  // Set the valid password
+  const validPassword = "pw"; 
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.display = "none"; 
+
+    function validatePassword() {
+      let authenticated = false;
+
+      while (!authenticated) {
+        const password = prompt("Enter password:");
+
+        if (password === validPassword) {
+          document.body.style.display = "block"; 
+          authenticated = true; // Exit the loop
+        } else {
+          alert("Incorrect password. Please try again.");
+        }
+      }
+    }
+
+    // Call the password validation function
+    validatePassword();
+  });
+</script>
+
+<script src="../adit/quotes.js"></script>
+<script>
+  const noteSymbol = "&#9834;";
+  function showRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quoteObj = quotes[randomIndex];
+    const quoteElement = document.getElementById("quote-box");
+
+    const formattedQuote = `
+      ${noteSymbol} ${quoteObj.quote} ${noteSymbol}<br>
+      <em>${quoteObj.song}</em><br>
+      <strong>${quoteObj.artist}</strong>
+    `;
+
+    quoteElement.innerHTML = formattedQuote;
+  }
+
+  document.addEventListener("DOMContentLoaded", showRandomQuote);
+</script>
+``` 
+
+# Introduction: Manual to programming tools
+
+**Session goals:**
+
+- Transition from manual tools (e.g. Excel & Prism) to programming-based workflows.
+
+- Understand the concept of handling data using code.
+
+- Learn to navigate directories and file paths programmatically.
+
+- Emphasize reproducibility and structured workflows.
+
+This first session will not get you to start writing code, but to start with reframing the way you think about and might approach analytic programming. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.
+
+Here I will bring up some common themes 
+
+<read-time><i>**Read time**: 15 Minutes</i></read-time><e>
+
+## Transitioning from manual tools (e.g. Excel & Prism) to programming-based workflows in R.
+
+There are a lot of resources online that introduce programming to beginners. Here, I will approach the concepts from a certain perspective: to convert a wet-lab researcher, who has a goal in mind that provides the context as to why they're learning this skill, and who probably chronically uses a range of different apps and software for notetaking, calculations, stats, graphing and data management. Therefore, I aim to incorporate **more** than just <strong>*<span style="color: red;">how to do a t.test in R</span>*</strong> or <strong>*<span style="color: red;">how to analysis single cell RNA data</span>*</strong>, including such things like <strong>*<span style="color: blue;">creating a lab notebook in R</span>*</strong> or <strong>*<span style="color: blue;">sharing data with your PI or a collaborator</span>*</strong>.
+
+<div class="hint-info">
+**Note**: If you still do not *get it*, don't worry. It took me years to feel comfortable. I was fortunate enough to have a supervisor who gave me time to learn this. Keep up with it, find more resources and stick with a **good community of users** :) 
+</div>
+
+#### *Consistency*
+
+It's important to know that **consistency is key**. You <u>will not</u> get better or more efficient at this unless you dedicate time, energy and brain power to learning it like another language. There are times that I'm doing one type of analysis that I can rewrite whole workflows automatically, and other times when I'm away at a conference, where I sit down at my desk and have to look up reference material to get going again. There is no easy way around it. I think that there will be some users who are in for a quick click-and-play script, and this is fine for performing one monotonous task like loading pre-processed single cell RNA data just to visualise. To be honest, if that is your intention, don't waste your time here - there are better resources such as [this](https://satijalab.org/seurat/) and [this](https://nbisweden.github.io/workshop-scRNAseq/).
+
+#### *Active Learning*
+
+In the same analogy, a good way to learn a new language is to actually actively apply your learning. For example, reading a physical textbook and trying to learn what the code does is not productive. Fortunately, we don't have to embarrass ourselves when we try the wrong combination of words in programming (the only people who will know your silliness is you <subscript>and ChatGPT</subscript>). 
+
+I recall buying a few courses on *Udemy* for R programming, because I never got it. The example data I was given was *basketball 3-point statistics* and *compounding savings* finance data. It was impossible for me to You may have already read that I've generated a mock dataset that might mimic some flow cytometry data you've possibly already started to collect. This is to hopefully fill that gap that I felt while learning - *how on earth do I apply this to my own work?*.
+
+<e>
+
+## Handling your data
+
+You need to very quickly forget about double clicking and nice user-interfaces. Programming languages do not care about user interfaces - that's why there's one *Excel*. So you need to start learning that you can't click on the 3rd column and 5th row and change that value manually. *You'll need to...*
+
+```shell
+my_data[5,3] <- new_value
+```
+
+... and so, you need to learn to be very specific and particular. 
+
+At the same time, as you get more comfortable, you can generalise a lot of your work. Instead of having to know that `row 5` is the row you're interested in, you can learn to query (in text) `which column name contains the phrase "CD45RA" and which row name contains the phrase "CD4"`
+
+While important for how you use R when you're here, knowing how you use R is vital to setting up your excel spreadsheets. For example, choosing to orient your data in columns, adding extra columns to help filter or organise, or evening knowing that `CD4` and `CD4+` and `CD4p` can make your experience in R so much easier! 
+<div class="hint-warning">
+**To be fair...**  
+Before I was using R, I was still copy and pasting a *tonne* to get my data in the right format for *prism*! Hopefully you've had the same experience and want to prevent <span style="color=red;">**carpal tunnel**</span>!
+</div>  
+I hope as you navigate through these lessons, and try to amend your own spreadsheets, that you start to draw up your new data in R-friendly formats. 
+
+<e>
+
+## Directories
+
+<div class="hint-warning">
+**Forget double clicking in File explorer & Finder!**
+</div> 
+
+You really need to remember that every time you open **RStudio**, you *basically* are looking at a text editor. You edit your code in a fancy-dancy text editor that colours words and numbers and run it in a word/number processor
+
+However! If you have not pointed R to the right folder, you will:
+
+- open the wrong data file and if you're not careful, change that file, or more likely,
+- you'll immediately get the error  
+`cannot open compressed file 'data.csv', probable reason 'No such file or directory'`
+
+*Could you imagine thinking that you're editing row 5 and column 3 of your tissue log, and not realising that you're editing the raw data!*
+
+<e> 
+
+<div class="hint-info">
+Directories are the most common errors! For both beginner and experienced users! 
+</div>
+
+#### Here are some helpful tips to remember...
+
+**What a directory looks like**
+
+- On a Mac: `/Users/thomasoneil/Desktop/`
+
+- On a PC: `C:/`
+
+**Set your directory at the beginning of each script/session**
+
+For these sessions, I've created a folder on my desktop (mac) called `analysis_user_group`. We want to tell R where to look for files/folders and where to save our data/plots. 
+
+```sh
+setwd("~/Desktop/analysis_user_group")
+```
+
+I can check my working directory using
+
+```sh
+getwd()
+```
+`[1] "~/Desktop/analysis_user_group"`
+
+**Other useful tips...**
+
+You can also use `list.files()` to output the files and folders in that directory. Sometimes its just easier than typing out the whole file name! 
+
+You need to know that `.` means **this** to the computer. For example `list.files()` is the same as `list.files(".")`. This is a bad example, but please remember what "." means! It took me a long time to learn how to use it. 
+
+For example, when you get into using `dplyr` which will drastically improve your programming life, knowing that `.` means "use this data" will change your life! 
+
+Also `list.files("..")`... What do you think this means? Try it when you get the chance! I've used it **A LOT** in making this website!  
+
+<div class="hint-success">
+Phrases to remember:\n
+</div>
+- **working directory**: The folder that you are operating in  
+- `setwd()`, `getwd()` & `list.files()`: Orientate yourself to where you're looking! 
+- `.`: *this*
+
+<e>
+<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>

@@ -4,42 +4,42 @@ date: "2024-12-23 (Last update: `r Sys.Date()`)"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+description: 
 link-citations: yes
 github-repo: DrThomasOneil/analysis-user-group
-output: tufte_html_book
-  
 ---
- 
-# Welcome! 
+
+# Welcome!
  
 This is the sub-repository containing the tutorials and workshop notes for the introduction to R and analytic programming. 
 
-A mock dataset will be provided, which is an example of summarised flow cytometry data, containing mock batches, patients, samples and measurements like percentage of subsets/MFIs.
+A mock dataset will be provided, which is an example of summarised flow cytometry data, containing mock batches, patients, samples and measurements like percentage of subsets/MFIs. I generated this by randomising around the general trends that I've observed in my actual real flow cytometry data, and wanted to do this in order to provide actual data you might find yourself using along the way. 
 
-This tutorials provided are contained within a  
+In this book, you'll find 11 sessions:
 
-<div class="hint-info">
-<strong>Info:</strong> This is to accentuate important points.  
-</div>
+- Manual to programming tools: Transitioning from manual analysis to programming
 
-<div class="hint-success">
-<strong>Success:</strong> This is good for showing positive actions or achievements.  
-</div>  
 
-<div class="hint-warning">
-<strong>Warning:</strong> This is important information or non-critical warnings.  
-</div>
-
-<div class="hint-danger">
-<strong>Danger:</strong> This highlights destructive actions or critical information.
-</div>
+```{r include=F}
+# <div class="hint-info">
+# <strong>Info:</strong> This is to accentuate important points.  
+# </div>
+# 
+# <div class="hint-success">
+# <strong>Success:</strong> This is good for showing positive actions or achievements.  
+# </div>  
+# 
+# <div class="hint-warning">
+# <strong>Warning:</strong> This is important information or non-critical warnings.  
+# </div>
+# 
+# <div class="hint-danger">
+# <strong>Danger:</strong> This highlights destructive actions or critical information.
+# </div>
+```
  
 ```{r, eval=FALSE}
-bookdown::render_book()
+bookdown::render_book() 
 ```
 
 ```{r, echo=F, eval=FALSE}
@@ -53,5 +53,5 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
-
+ 
 <e>
