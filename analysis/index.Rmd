@@ -68,7 +68,9 @@ You'll also see graphics like this throughout that emphasis
 <div class="hint-practice">
 **Practice you should try before moving on**
 </div>
-
+<div class="hint-terminology">
+**Important Termimology**
+</div>
 <wimr>
 
 ## Schedule (2025){.tabset .tabset-fade}

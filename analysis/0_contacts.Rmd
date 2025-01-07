@@ -1,5 +1,5 @@
 ---
-title: "Announcements"
+title: "Contacts"
 output:
   workflowr::wflow_html:
     toc: no
@@ -13,7 +13,7 @@ output:
 
 ## Dr. Thomas O'Neil
 
-**Postdoctoral Researcher**  
+**Postdoctoral Researcher** [✉](thomas.oneil@sydney.edu.au)  
 
 I have been with the Mucosal Immunity lab at WIMR since my honours year in 2018. I completed my [PhD](https://ses.library.usyd.edu.au/handle/2123/31626) in 2023 and am now a post-doc in the same lab. Initially, my studies involved characterising anogenital T cells by flow cytometry, but having learned analytic programming during COVID, I now study all aspects of human tissue immunology with via a high-parameter proteomic and transcriptomic bioinformatic approach. Specifically, I've been involved in identifying rare immune cell subsets and defining their roles in initial HIV infection. Recently, I've been developing and applying bioinformatic methods to investigate immune cells in inflamed and uninflamed human tissues using spatial technologies (IMC, Xenium & Visium).
 
