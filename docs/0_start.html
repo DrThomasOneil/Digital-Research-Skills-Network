@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Thomas O’Neil" />
+<meta name="author" content="Thomas R. O’Neil" />
 
 
 <title>Getting Started in R (2025)</title>
@@ -57,6 +57,103 @@ div.section {
 
 
 
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 <style type="text/css">
@@ -295,7 +392,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Getting Started in R (2025)</h1>
-<h4 class="author">Thomas O’Neil</h4>
+<h4 class="author">Thomas R. O’Neil</h4>
 
 </div>
 
@@ -324,11 +421,11 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-01-06
+<strong>Last updated:</strong> 2025-01-07
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 0
 </p>
@@ -371,15 +468,99 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree8eec2ce67ba154d8f821b41d5866e08d7b604fa2targetblank8eec2cea">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1337code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(1337)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed1337code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(1337)</code> was run prior to running the
+code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree0ecb65db4dcc3d8d9fb118a5c804d87f5b34ba32targetblank0ecb65da">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/8eec2ce67ba154d8f821b41d5866e08d7b604fa2" target="_blank">8eec2ce</a>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/0ecb65db4dcc3d8d9fb118a5c804d87f5b34ba32" target="_blank">0ecb65d</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree8eec2ce67ba154d8f821b41d5866e08d7b604fa2targetblank8eec2cea"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree0ecb65db4dcc3d8d9fb118a5c804d87f5b34ba32targetblank0ecb65da"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -389,7 +570,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/8eec2ce67ba154d8f821b41d5866e08d7b604fa2" target="_blank">8eec2ce</a>.
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/0ecb65db4dcc3d8d9fb118a5c804d87f5b34ba32" target="_blank">0ecb65d</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -406,6 +587,9 @@ were generated:
 Ignored files:
     Ignored:    .DS_Store
     Ignored:    analysis/.DS_Store
+
+Unstaged changes:
+    Modified:   workflow.R
 
 </code></pre>
 <p>
@@ -451,6 +635,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/0ecb65db4dcc3d8d9fb118a5c804d87f5b34ba32/analysis/0_start.Rmd" target="_blank">0ecb65d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-01-07
+</td>
+<td>
+Updated Getting Started in R. Chapter 1 completed
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/c893d7029e8fdb2269c9296a084632b496c113d9/docs/0_start.html" target="_blank">c893d70</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-01-06
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -547,35 +765,32 @@ first draft
 programming with a focus on bioinformatics workflows and
 reproducibility. It emphasizes the mindset shift required to transition
 from manual tools like Excel to programmatic data analysis.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/index.html">Start
+Tutorial →</a></p>
 <p><wimr></p>
 <div id="session-0-what-is-programming-shifting-mindsets"
 class="section level2">
 <h2><strong>Session 0: What Is Programming? Shifting
 Mindsets</strong></h2>
 <div class="hint-goals">
-<p><strong>Goal:</strong><br />
+<p><strong>Goals:</strong><br />
 Introduce programming concepts and the mindset behind programmatic
 workflows.<br />
-- Transition from manual tools (e.g. Excel &amp; Prism) to
+  • Transition from manual tools (e.g. Excel &amp; Prism) to
 programming-based workflows.<br />
-- Understand the concept of handling data using code.<br />
-- Learn to navigate directories and file paths programmatically.<br />
-- Emphasize reproducibility and structured workflows.</p>
-</div>
-<div class="hint-practice">
-<p><strong>Practice:</strong><br />
-- Navigating directories (<code>getwd()</code>,
-<code>setwd()</code>).<br />
-- Creating folders and listing files.</p>
+  • Understand the concept of handling data using code.<br />
+  • Learn to navigate directories and file paths programmatically.<br />
+  • Emphasize reproducibility and structured workflows.</p>
 </div>
 <p><a
 href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/introduction.html">Go
-to Session →</a></p>
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-1-getting-started-with-r-and-rstudio"
+<div id="chapter-1-getting-started-with-r-and-rstudio"
 class="section level2">
-<h2><strong>Session 1: Getting Started with R and RStudio</strong></h2>
+<h2><strong>Chapter 1: Getting Started with R and RStudio</strong></h2>
 <p><strong>Goal:</strong> Set up R and RStudio, and get familiar with
 the interface.</p>
 <ul>
@@ -586,10 +801,13 @@ the interface.</p>
 </ul>
 <p><strong>Practice:</strong> - Create and save an R script. - Install
 and load a package (e.g., <code>tidyverse</code>).</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-R-and-RStudio.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-2-data-types-and-structures" class="section level2">
-<h2><strong>Session 2: Data Types and Structures</strong></h2>
+<div id="chapter-2-data-types-and-structures" class="section level2">
+<h2><strong>Chapter 2: Data Types and Structures</strong></h2>
 <p><strong>Goal:</strong> Learn about data types and structures in
 R.</p>
 <ul>
@@ -600,10 +818,32 @@ R.</p>
 </ul>
 <p><strong>Practice:</strong> - Load flow cytometry data and explore
 structure. - Create and index vectors and data frames.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-2-data-types-and-structures.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-3-data-manipulation-with-dplyr" class="section level2">
-<h2><strong>Session 3: Data Manipulation with
+<div id="chapter-3-basic-programming-and-control-structures"
+class="section level2">
+<h2><strong>Chapter 3: Basic Programming and Control
+Structures</strong></h2>
+<p><strong>Goal:</strong> Understand programming logic for automating
+tasks.</p>
+<ul>
+<li>Variables and assignments.</li>
+<li>Conditional statements (<code>if</code>, <code>else</code>).</li>
+<li>Loops (<code>for</code>, <code>while</code>).</li>
+<li>Writing functions.</li>
+</ul>
+<p><strong>Practice:</strong> - Write functions to calculate percentages
+dynamically. - Automate filtering tasks.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-3-basic-programming.html">Go
+to Chapter →</a></p>
+<p><wimr></p>
+</div>
+<div id="chapter-4-data-manipulation-with-dplyr" class="section level2">
+<h2><strong>Chapter 4: Data Manipulation with
 <code>dplyr</code></strong></h2>
 <p><strong>Goal:</strong> Introduce <code>dplyr</code> for filtering,
 mutating, and summarizing data.</p>
@@ -616,27 +856,14 @@ mutating, and summarizing data.</p>
 </ul>
 <p><strong>Practice:</strong> - Calculate proportions for CD4/CD8
 populations. - Add calculated columns for analysis.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-dplyr.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-4-basic-programming-and-control-structures"
+<div id="chapter-5-visualization-with-ggplot2-part-1"
 class="section level2">
-<h2><strong>Session 4: Basic Programming and Control
-Structures</strong></h2>
-<p><strong>Goal:</strong> Understand programming logic for automating
-tasks.</p>
-<ul>
-<li>Variables and assignments.</li>
-<li>Conditional statements (<code>if</code>, <code>else</code>).</li>
-<li>Loops (<code>for</code>, <code>while</code>).</li>
-<li>Writing functions.</li>
-</ul>
-<p><strong>Practice:</strong> - Write functions to calculate percentages
-dynamically. - Automate filtering tasks.</p>
-<p><wimr></p>
-</div>
-<div id="session-5-visualization-with-ggplot2-part-1"
-class="section level2">
-<h2><strong>Session 5: Visualization with <code>ggplot2</code> – Part
+<h2><strong>Chapter 5: Visualization with <code>ggplot2</code> – Part
 1</strong></h2>
 <p><strong>Goal:</strong> Create and customize visualizations.</p>
 <ul>
@@ -645,11 +872,14 @@ class="section level2">
 </ul>
 <p><strong>Practice:</strong> - Visualize CD4 vs CD8 proportions. - Add
 colors and themes.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-5-data-visualisation-with-ggplot2.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-6-advanced-visualization-with-ggplot2-part-2"
+<div id="chapter-6-advanced-visualization-with-ggplot2-part-2"
 class="section level2">
-<h2><strong>Session 6: Advanced Visualization with <code>ggplot2</code>
+<h2><strong>Chapter 6: Advanced Visualization with <code>ggplot2</code>
 – Part 2</strong></h2>
 <p><strong>Goal:</strong> Learn advanced visualization techniques.</p>
 <ul>
@@ -659,10 +889,13 @@ class="section level2">
 </ul>
 <p><strong>Practice:</strong> - Create faceted boxplots for subsets. -
 Export plots for reports.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-6-advanced-data-visualisation-with-ggplot2.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-7-statistical-analysis" class="section level2">
-<h2><strong>Session 7: Statistical Analysis</strong></h2>
+<div id="chapter-7-statistical-analysis" class="section level2">
+<h2><strong>Chapter 7: Statistical Analysis</strong></h2>
 <p><strong>Goal:</strong> Understand descriptive and inferential
 statistics.</p>
 <ul>
@@ -672,11 +905,14 @@ statistics.</p>
 </ul>
 <p><strong>Practice:</strong> - Test differences in CD4 proportions. -
 Perform correlation analysis.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-7-statistical-analysis.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-8-reproducible-reports-with-rmarkdown"
+<div id="chapter-8-reproducible-reports-with-rmarkdown"
 class="section level2">
-<h2><strong>Session 8: Reproducible Reports with RMarkdown</strong></h2>
+<h2><strong>Chapter 8: Reproducible Reports with RMarkdown</strong></h2>
 <p><strong>Goal:</strong> Build dynamic and shareable reports.</p>
 <ul>
 <li>Introduction to RMarkdown.</li>
@@ -685,20 +921,26 @@ class="section level2">
 </ul>
 <p><strong>Practice:</strong> - Create a report summarizing flow
 cytometry data. - Embed visualizations and tables.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-8-reproducible-reports-with-rmarkdown.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-9-mini-project-putting-it-all-together"
+<div id="chapter-9-mini-project-putting-it-all-together"
 class="section level2">
-<h2><strong>Session 9: Mini Project – Putting It All
+<h2><strong>Chapter 9: Mini Project – Putting It All
 Together</strong></h2>
 <p><strong>Goal:</strong> Apply skills to a complete workflow.</p>
 <p><strong>Practice:</strong> - Load and clean data. - Summarize and
 visualize trends. - Run tests and compile everything into a report.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-9-mini-project-putting-it-all-together.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
 </div>
-<div id="session-10-troubleshooting-and-workflow-design"
+<div id="chapter-10-troubleshooting-and-workflow-design"
 class="section level2">
-<h2><strong>Session 10: Troubleshooting and Workflow
+<h2><strong>Chapter 10: Troubleshooting and Workflow
 Design</strong></h2>
 <p><strong>Goal:</strong> Teach debugging strategies and workflow
 optimization.</p>
@@ -710,10 +952,55 @@ optimization.</p>
 </ul>
 <p><strong>Practice:</strong> - Debug a script with errors. -
 Restructure code for reusability.</p>
+<p><a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-10-troubleshooting-and-workflow-design.html">Go
+to Chapter →</a></p>
 <p><wimr></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Australia/Sydney
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] workflowr_1.7.1
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.3         knitr_1.49       
+ [5] rlang_1.1.4       xfun_0.49         stringi_1.8.4     processx_3.8.4   
+ [9] promises_1.3.2    jsonlite_1.8.9    glue_1.8.0        rprojroot_2.0.4  
+[13] git2r_0.35.0      htmltools_0.5.8.1 httpuv_1.6.15     ps_1.8.1         
+[17] sass_0.4.9        fansi_1.0.6       rmarkdown_2.29    tibble_3.2.1     
+[21] jquerylib_0.1.4   evaluate_1.0.1    fastmap_1.2.0     yaml_2.3.10      
+[25] lifecycle_1.0.4   whisker_0.4.1     stringr_1.5.1     compiler_4.4.0   
+[29] fs_1.6.5          pkgconfig_2.0.3   Rcpp_1.0.13-1     rstudioapi_0.17.1
+[33] later_1.4.1       digest_0.6.37     R6_2.5.1          utf8_1.2.4       
+[37] pillar_1.9.0      callr_3.7.6       magrittr_2.0.3    bslib_0.8.0      
+[41] tools_4.4.0       cachem_1.1.0      getPass_0.2-4    </code></pre>
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiR2V0dGluZyBTdGFydGVkIGluIFIgKDIwMjUpIgphdXRob3I6ICJUaG9tYXMgTydOZWlsIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwotLS0KClRoaXMgMTAtc2Vzc2lvbiB3b3Jrc2hvcCBzZXJpZXMgaXMgZGVzaWduZWQgdG8gaW50cm9kdWNlIHVzZXJzIHRvIFIgcHJvZ3JhbW1pbmcgd2l0aCBhIGZvY3VzIG9uIGJpb2luZm9ybWF0aWNzIHdvcmtmbG93cyBhbmQgcmVwcm9kdWNpYmlsaXR5LiBJdCBlbXBoYXNpemVzIHRoZSBtaW5kc2V0IHNoaWZ0IHJlcXVpcmVkIHRvIHRyYW5zaXRpb24gZnJvbSBtYW51YWwgdG9vbHMgbGlrZSBFeGNlbCB0byBwcm9ncmFtbWF0aWMgZGF0YSBhbmFseXNpcy4KCjx3aW1yPgoKIyMgKipTZXNzaW9uIDA6IFdoYXQgSXMgUHJvZ3JhbW1pbmc/IFNoaWZ0aW5nIE1pbmRzZXRzKioKCjxkaXYgY2xhc3M9ImhpbnQtZ29hbHMiPgoqKkdvYWw6KiogIApJbnRyb2R1Y2UgcHJvZ3JhbW1pbmcgY29uY2VwdHMgYW5kIHRoZSBtaW5kc2V0IGJlaGluZCBwcm9ncmFtbWF0aWMgd29ya2Zsb3dzLiAgIAotIFRyYW5zaXRpb24gZnJvbSBtYW51YWwgdG9vbHMgKGUuZy4gRXhjZWwgJiBQcmlzbSkgdG8gcHJvZ3JhbW1pbmctYmFzZWQgd29ya2Zsb3dzLiAgCi0gVW5kZXJzdGFuZCB0aGUgY29uY2VwdCBvZiBoYW5kbGluZyBkYXRhIHVzaW5nIGNvZGUuICAKLSBMZWFybiB0byBuYXZpZ2F0ZSBkaXJlY3RvcmllcyBhbmQgZmlsZSBwYXRocyBwcm9ncmFtbWF0aWNhbGx5LiAgCi0gRW1waGFzaXplIHJlcHJvZHVjaWJpbGl0eSBhbmQgc3RydWN0dXJlZCB3b3JrZmxvd3MuICAKPC9kaXY+Cgo8ZGl2IGNsYXNzPSJoaW50LXByYWN0aWNlIj4KKipQcmFjdGljZToqKiAgCi0gTmF2aWdhdGluZyBkaXJlY3RvcmllcyAoYGdldHdkKClgLCBgc2V0d2QoKWApLiAgCi0gQ3JlYXRpbmcgZm9sZGVycyBhbmQgbGlzdGluZyBmaWxlcy4gIAo8L2Rpdj4KCltHbyB0byBTZXNzaW9uIOKGkl0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svaW50cm9kdWN0aW9uLmh0bWwpCgo8d2ltcj4KCiMjICoqU2Vzc2lvbiAxOiBHZXR0aW5nIFN0YXJ0ZWQgd2l0aCBSIGFuZCBSU3R1ZGlvKioKKipHb2FsOioqIFNldCB1cCBSIGFuZCBSU3R1ZGlvLCBhbmQgZ2V0IGZhbWlsaWFyIHdpdGggdGhlIGludGVyZmFjZS4KCi0gSW5zdGFsbGluZyBSIGFuZCBSU3R1ZGlvLgotIEV4cGxvcmluZyB0aGUgaW50ZXJmYWNlIOKAkyBDb25zb2xlLCBFbnZpcm9ubWVudCwgU2NyaXB0cy4KLSBTZXR0aW5nIHVwIGEgcHJvamVjdC4KLSBJbnN0YWxsaW5nIGFuZCBsb2FkaW5nIHBhY2thZ2VzLgoKKipQcmFjdGljZToqKgotIENyZWF0ZSBhbmQgc2F2ZSBhbiBSIHNjcmlwdC4KLSBJbnN0YWxsIGFuZCBsb2FkIGEgcGFja2FnZSAoZS5nLiwgYHRpZHl2ZXJzZWApLgoKPHdpbXI+CgojIyAqKlNlc3Npb24gMjogRGF0YSBUeXBlcyBhbmQgU3RydWN0dXJlcyoqCioqR29hbDoqKiBMZWFybiBhYm91dCBkYXRhIHR5cGVzIGFuZCBzdHJ1Y3R1cmVzIGluIFIuCgotIEJhc2ljIGRhdGEgdHlwZXM6IG51bWVyaWMsIGNoYXJhY3RlciwgbG9naWNhbC4KLSBEYXRhIHN0cnVjdHVyZXM6IHZlY3RvcnMsIG1hdHJpY2VzLCBkYXRhIGZyYW1lcywgbGlzdHMuCi0gSW1wb3J0aW5nIGRhdGEgKEV4Y2VsIGFuZCBDU1YgZmlsZXMpLgotIFZpZXdpbmcgYW5kIHN1bW1hcml6aW5nIGRhdGEuCgoqKlByYWN0aWNlOioqCi0gTG9hZCBmbG93IGN5dG9tZXRyeSBkYXRhIGFuZCBleHBsb3JlIHN0cnVjdHVyZS4KLSBDcmVhdGUgYW5kIGluZGV4IHZlY3RvcnMgYW5kIGRhdGEgZnJhbWVzLgoKPHdpbXI+CgojIyAqKlNlc3Npb24gMzogRGF0YSBNYW5pcHVsYXRpb24gd2l0aCBgZHBseXJgKioKKipHb2FsOioqIEludHJvZHVjZSBgZHBseXJgIGZvciBmaWx0ZXJpbmcsIG11dGF0aW5nLCBhbmQgc3VtbWFyaXppbmcgZGF0YS4KCi0gRmlsdGVyaW5nIHJvd3MgKGBmaWx0ZXIoKWApLCBzZWxlY3RpbmcgY29sdW1ucyAoYHNlbGVjdCgpYCkuCi0gQWRkaW5nIG5ldyBjb2x1bW5zIChgbXV0YXRlKClgKS4KLSBHcm91cGluZyBhbmQgc3VtbWFyaXppbmcgKGBncm91cF9ieSgpYCArIGBzdW1tYXJpemUoKWApLgoKKipQcmFjdGljZToqKgotIENhbGN1bGF0ZSBwcm9wb3J0aW9ucyBmb3IgQ0Q0L0NEOCBwb3B1bGF0aW9ucy4KLSBBZGQgY2FsY3VsYXRlZCBjb2x1bW5zIGZvciBhbmFseXNpcy4KCjx3aW1yPgoKIyMgKipTZXNzaW9uIDQ6IEJhc2ljIFByb2dyYW1taW5nIGFuZCBDb250cm9sIFN0cnVjdHVyZXMqKgoqKkdvYWw6KiogVW5kZXJzdGFuZCBwcm9ncmFtbWluZyBsb2dpYyBmb3IgYXV0b21hdGluZyB0YXNrcy4KCi0gVmFyaWFibGVzIGFuZCBhc3NpZ25tZW50cy4KLSBDb25kaXRpb25hbCBzdGF0ZW1lbnRzIChgaWZgLCBgZWxzZWApLgotIExvb3BzIChgZm9yYCwgYHdoaWxlYCkuCi0gV3JpdGluZyBmdW5jdGlvbnMuCgoqKlByYWN0aWNlOioqCi0gV3JpdGUgZnVuY3Rpb25zIHRvIGNhbGN1bGF0ZSBwZXJjZW50YWdlcyBkeW5hbWljYWxseS4KLSBBdXRvbWF0ZSBmaWx0ZXJpbmcgdGFza3MuCgo8d2ltcj4KCiMjICoqU2Vzc2lvbiA1OiBWaXN1YWxpemF0aW9uIHdpdGggYGdncGxvdDJgIOKAkyBQYXJ0IDEqKgoqKkdvYWw6KiogQ3JlYXRlIGFuZCBjdXN0b21pemUgdmlzdWFsaXphdGlvbnMuCgotIEJhc2ljcyBvZiBgZ2dwbG90MmAg4oCTIHNjYXR0ZXIsIGJhciwgYW5kIGJveHBsb3RzLgotIEN1c3RvbWl6aW5nIGxhYmVscywgdGhlbWVzLCBhbmQgY29sb3JzLgoKKipQcmFjdGljZToqKgotIFZpc3VhbGl6ZSBDRDQgdnMgQ0Q4IHByb3BvcnRpb25zLgotIEFkZCBjb2xvcnMgYW5kIHRoZW1lcy4KCjx3aW1yPgoKIyMgKipTZXNzaW9uIDY6IEFkdmFuY2VkIFZpc3VhbGl6YXRpb24gd2l0aCBgZ2dwbG90MmAg4oCTIFBhcnQgMioqCioqR29hbDoqKiBMZWFybiBhZHZhbmNlZCB2aXN1YWxpemF0aW9uIHRlY2huaXF1ZXMuCgotIEZhY2V0aW5nIGFuZCBzbWFsbCBtdWx0aXBsZXMuCi0gQ29tYmluaW5nIHBsb3RzIChncmlkIGxheW91dHMpLgotIFNhdmluZyBoaWdoLXJlc29sdXRpb24gcGxvdHMuCgoqKlByYWN0aWNlOioqCi0gQ3JlYXRlIGZhY2V0ZWQgYm94cGxvdHMgZm9yIHN1YnNldHMuCi0gRXhwb3J0IHBsb3RzIGZvciByZXBvcnRzLgoKPHdpbXI+CgojIyAqKlNlc3Npb24gNzogU3RhdGlzdGljYWwgQW5hbHlzaXMqKgoqKkdvYWw6KiogVW5kZXJzdGFuZCBkZXNjcmlwdGl2ZSBhbmQgaW5mZXJlbnRpYWwgc3RhdGlzdGljcy4KCi0gRGVzY3JpcHRpdmUgc3RhdGlzdGljczogbWVhbiwgbWVkaWFuLCBtb2RlLgotIEh5cG90aGVzaXMgdGVzdGluZyAodC10ZXN0cywgQU5PVkEpLgotIENvcnJlbGF0aW9uIGFuZCByZWdyZXNzaW9uLgoKKipQcmFjdGljZToqKgotIFRlc3QgZGlmZmVyZW5jZXMgaW4gQ0Q0IHByb3BvcnRpb25zLgotIFBlcmZvcm0gY29ycmVsYXRpb24gYW5hbHlzaXMuCgo8d2ltcj4KCiMjICoqU2Vzc2lvbiA4OiBSZXByb2R1Y2libGUgUmVwb3J0cyB3aXRoIFJNYXJrZG93bioqCioqR29hbDoqKiBCdWlsZCBkeW5hbWljIGFuZCBzaGFyZWFibGUgcmVwb3J0cy4KCi0gSW50cm9kdWN0aW9uIHRvIFJNYXJrZG93bi4KLSBDb21iaW5pbmcgdGV4dCwgY29kZSwgYW5kIHZpc3VhbHMuCi0gRXhwb3J0aW5nIHRvIFBERiBhbmQgSFRNTC4KCioqUHJhY3RpY2U6KioKLSBDcmVhdGUgYSByZXBvcnQgc3VtbWFyaXppbmcgZmxvdyBjeXRvbWV0cnkgZGF0YS4KLSBFbWJlZCB2aXN1YWxpemF0aW9ucyBhbmQgdGFibGVzLgoKPHdpbXI+CgojIyAqKlNlc3Npb24gOTogTWluaSBQcm9qZWN0IOKAkyBQdXR0aW5nIEl0IEFsbCBUb2dldGhlcioqCioqR29hbDoqKiBBcHBseSBza2lsbHMgdG8gYSBjb21wbGV0ZSB3b3JrZmxvdy4KCioqUHJhY3RpY2U6KioKLSBMb2FkIGFuZCBjbGVhbiBkYXRhLgotIFN1bW1hcml6ZSBhbmQgdmlzdWFsaXplIHRyZW5kcy4KLSBSdW4gdGVzdHMgYW5kIGNvbXBpbGUgZXZlcnl0aGluZyBpbnRvIGEgcmVwb3J0LgoKPHdpbXI+CgojIyAqKlNlc3Npb24gMTA6IFRyb3VibGVzaG9vdGluZyBhbmQgV29ya2Zsb3cgRGVzaWduKioKKipHb2FsOioqIFRlYWNoIGRlYnVnZ2luZyBzdHJhdGVnaWVzIGFuZCB3b3JrZmxvdyBvcHRpbWl6YXRpb24uCgotIERlYnVnZ2luZyBlcnJvcnMgYW5kIHdhcm5pbmdzLgotIFdyaXRpbmcgbW9kdWxhciBzY3JpcHRzIChmdW5jdGlvbnMpLgotIE9yZ2FuaXppbmcgbGFyZ2VyIHByb2plY3RzLgotIEJyaWVmIGludHJvIHRvIEdpdC9HaXRIdWIgZm9yIHZlcnNpb24gY29udHJvbC4KCioqUHJhY3RpY2U6KioKLSBEZWJ1ZyBhIHNjcmlwdCB3aXRoIGVycm9ycy4KLSBSZXN0cnVjdHVyZSBjb2RlIGZvciByZXVzYWJpbGl0eS4KCjx3aW1yPgoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiR2V0dGluZyBTdGFydGVkIGluIFIgKDIwMjUpIgphdXRob3I6ICJUaG9tYXMgUi4gTydOZWlsIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwotLS0KCmBgYHtodG1sLCBpbmNsdWRlPUZ9CjxzY3JpcHQ+CmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbiAoKSB7CiAgY29uc3QgY2hlY2tib3hlcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2lucHV0W3R5cGU9ImNoZWNrYm94Il0nKTsKICBjaGVja2JveGVzLmZvckVhY2goKGNoZWNrYm94KSA9PiB7CiAgICBjaGVja2JveC5jaGVja2VkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oY2hlY2tib3guaWQpID09PSAndHJ1ZSc7CiAgICBjaGVja2JveC5hZGRFdmVudExpc3RlbmVyKCdjaGFuZ2UnLCAoKSA9PiB7CiAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKGNoZWNrYm94LmlkLCBjaGVja2JveC5jaGVja2VkKTsKICAgIH0pOwogIH0pOwp9KTsKPC9zY3JpcHQ+CmBgYAoKVGhpcyAxMC1zZXNzaW9uIHdvcmtzaG9wIHNlcmllcyBpcyBkZXNpZ25lZCB0byBpbnRyb2R1Y2UgdXNlcnMgdG8gUiBwcm9ncmFtbWluZyB3aXRoIGEgZm9jdXMgb24gYmlvaW5mb3JtYXRpY3Mgd29ya2Zsb3dzIGFuZCByZXByb2R1Y2liaWxpdHkuIEl0IGVtcGhhc2l6ZXMgdGhlIG1pbmRzZXQgc2hpZnQgcmVxdWlyZWQgdG8gdHJhbnNpdGlvbiBmcm9tIG1hbnVhbCB0b29scyBsaWtlIEV4Y2VsIHRvIHByb2dyYW1tYXRpYyBkYXRhIGFuYWx5c2lzLgoKW1N0YXJ0IFR1dG9yaWFsIOKGkl0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svaW5kZXguaHRtbCkKCjx3aW1yPgoKIyMgKipTZXNzaW9uIDA6IFdoYXQgSXMgUHJvZ3JhbW1pbmc/IFNoaWZ0aW5nIE1pbmRzZXRzKioKCjxkaXYgY2xhc3M9ImhpbnQtZ29hbHMiPiAgICAKKipHb2FsczoqKiAgICAKSW50cm9kdWNlIHByb2dyYW1taW5nIGNvbmNlcHRzIGFuZCB0aGUgbWluZHNldCBiZWhpbmQgcHJvZ3JhbW1hdGljIHdvcmtmbG93cy4gICAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBUcmFuc2l0aW9uIGZyb20gbWFudWFsIHRvb2xzIChlLmcuIEV4Y2VsICYgUHJpc20pIHRvIHByb2dyYW1taW5nLWJhc2VkIHdvcmtmbG93cy4gIAombmJzcDsmbmJzcDsmIzgyMjY7IFVuZGVyc3RhbmQgdGhlIGNvbmNlcHQgb2YgaGFuZGxpbmcgZGF0YSB1c2luZyBjb2RlLiAgCiZuYnNwOyZuYnNwOyYjODIyNjsgTGVhcm4gdG8gbmF2aWdhdGUgZGlyZWN0b3JpZXMgYW5kIGZpbGUgcGF0aHMgcHJvZ3JhbW1hdGljYWxseS4gIAombmJzcDsmbmJzcDsmIzgyMjY7IEVtcGhhc2l6ZSByZXByb2R1Y2liaWxpdHkgYW5kIHN0cnVjdHVyZWQgd29ya2Zsb3dzLiAgICAKPC9kaXY+CgpbR28gdG8gQ2hhcHRlciDihpJdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2ludHJvZHVjdGlvbi5odG1sKQoKPHdpbXI+CgojIyAqKkNoYXB0ZXIgMTogR2V0dGluZyBTdGFydGVkIHdpdGggUiBhbmQgUlN0dWRpbyoqCioqR29hbDoqKiBTZXQgdXAgUiBhbmQgUlN0dWRpbywgYW5kIGdldCBmYW1pbGlhciB3aXRoIHRoZSBpbnRlcmZhY2UuCgotIEluc3RhbGxpbmcgUiBhbmQgUlN0dWRpby4KLSBFeHBsb3JpbmcgdGhlIGludGVyZmFjZSDigJMgQ29uc29sZSwgRW52aXJvbm1lbnQsIFNjcmlwdHMuCi0gU2V0dGluZyB1cCBhIHByb2plY3QuCi0gSW5zdGFsbGluZyBhbmQgbG9hZGluZyBwYWNrYWdlcy4KCioqUHJhY3RpY2U6KioKLSBDcmVhdGUgYW5kIHNhdmUgYW4gUiBzY3JpcHQuCi0gSW5zdGFsbCBhbmQgbG9hZCBhIHBhY2thZ2UgKGUuZy4sIGB0aWR5dmVyc2VgKS4KCltHbyB0byBDaGFwdGVyIOKGkl0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svY2hhcHRlci0xLWdldHRpbmctc3RhcnRlZC1pbi1SLWFuZC1SU3R1ZGlvLmh0bWwpCgo8d2ltcj4KCiMjICoqQ2hhcHRlciAyOiBEYXRhIFR5cGVzIGFuZCBTdHJ1Y3R1cmVzKioKKipHb2FsOioqIExlYXJuIGFib3V0IGRhdGEgdHlwZXMgYW5kIHN0cnVjdHVyZXMgaW4gUi4KCi0gQmFzaWMgZGF0YSB0eXBlczogbnVtZXJpYywgY2hhcmFjdGVyLCBsb2dpY2FsLgotIERhdGEgc3RydWN0dXJlczogdmVjdG9ycywgbWF0cmljZXMsIGRhdGEgZnJhbWVzLCBsaXN0cy4KLSBJbXBvcnRpbmcgZGF0YSAoRXhjZWwgYW5kIENTViBmaWxlcykuCi0gVmlld2luZyBhbmQgc3VtbWFyaXppbmcgZGF0YS4KCioqUHJhY3RpY2U6KioKLSBMb2FkIGZsb3cgY3l0b21ldHJ5IGRhdGEgYW5kIGV4cGxvcmUgc3RydWN0dXJlLgotIENyZWF0ZSBhbmQgaW5kZXggdmVjdG9ycyBhbmQgZGF0YSBmcmFtZXMuCgpbR28gdG8gQ2hhcHRlciDihpJdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2NoYXB0ZXItMi1kYXRhLXR5cGVzLWFuZC1zdHJ1Y3R1cmVzLmh0bWwpCgo8d2ltcj4KCiMjICoqQ2hhcHRlciAzOiBCYXNpYyBQcm9ncmFtbWluZyBhbmQgQ29udHJvbCBTdHJ1Y3R1cmVzKioKKipHb2FsOioqIFVuZGVyc3RhbmQgcHJvZ3JhbW1pbmcgbG9naWMgZm9yIGF1dG9tYXRpbmcgdGFza3MuCgotIFZhcmlhYmxlcyBhbmQgYXNzaWdubWVudHMuCi0gQ29uZGl0aW9uYWwgc3RhdGVtZW50cyAoYGlmYCwgYGVsc2VgKS4KLSBMb29wcyAoYGZvcmAsIGB3aGlsZWApLgotIFdyaXRpbmcgZnVuY3Rpb25zLgoKKipQcmFjdGljZToqKgotIFdyaXRlIGZ1bmN0aW9ucyB0byBjYWxjdWxhdGUgcGVyY2VudGFnZXMgZHluYW1pY2FsbHkuCi0gQXV0b21hdGUgZmlsdGVyaW5nIHRhc2tzLgoKW0dvIHRvIENoYXB0ZXIg4oaSXShodHRwczovL2RydGhvbWFzb25laWwuZ2l0aHViLmlvL2FuYWx5c2lzLXVzZXItZ3JvdXAvci10dXRvcmlhbC9fYm9vay9jaGFwdGVyLTMtYmFzaWMtcHJvZ3JhbW1pbmcuaHRtbCkKCjx3aW1yPgoKIyMgKipDaGFwdGVyIDQ6IERhdGEgTWFuaXB1bGF0aW9uIHdpdGggYGRwbHlyYCoqCioqR29hbDoqKiBJbnRyb2R1Y2UgYGRwbHlyYCBmb3IgZmlsdGVyaW5nLCBtdXRhdGluZywgYW5kIHN1bW1hcml6aW5nIGRhdGEuCgotIEZpbHRlcmluZyByb3dzIChgZmlsdGVyKClgKSwgc2VsZWN0aW5nIGNvbHVtbnMgKGBzZWxlY3QoKWApLgotIEFkZGluZyBuZXcgY29sdW1ucyAoYG11dGF0ZSgpYCkuCi0gR3JvdXBpbmcgYW5kIHN1bW1hcml6aW5nIChgZ3JvdXBfYnkoKWAgKyBgc3VtbWFyaXplKClgKS4KCioqUHJhY3RpY2U6KioKLSBDYWxjdWxhdGUgcHJvcG9ydGlvbnMgZm9yIENENC9DRDggcG9wdWxhdGlvbnMuCi0gQWRkIGNhbGN1bGF0ZWQgY29sdW1ucyBmb3IgYW5hbHlzaXMuCgpbR28gdG8gQ2hhcHRlciDihpJdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2NoYXB0ZXItNC1kYXRhLW1hbmlwdWxhdGlvbi13aXRoLWRwbHlyLmh0bWwpCgo8d2ltcj4KCiMjICoqQ2hhcHRlciA1OiBWaXN1YWxpemF0aW9uIHdpdGggYGdncGxvdDJgIOKAkyBQYXJ0IDEqKgoqKkdvYWw6KiogQ3JlYXRlIGFuZCBjdXN0b21pemUgdmlzdWFsaXphdGlvbnMuCgotIEJhc2ljcyBvZiBgZ2dwbG90MmAg4oCTIHNjYXR0ZXIsIGJhciwgYW5kIGJveHBsb3RzLgotIEN1c3RvbWl6aW5nIGxhYmVscywgdGhlbWVzLCBhbmQgY29sb3JzLgoKKipQcmFjdGljZToqKgotIFZpc3VhbGl6ZSBDRDQgdnMgQ0Q4IHByb3BvcnRpb25zLgotIEFkZCBjb2xvcnMgYW5kIHRoZW1lcy4KCltHbyB0byBDaGFwdGVyIOKGkl0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svY2hhcHRlci01LWRhdGEtdmlzdWFsaXNhdGlvbi13aXRoLWdncGxvdDIuaHRtbCkKCjx3aW1yPgoKIyMgKipDaGFwdGVyIDY6IEFkdmFuY2VkIFZpc3VhbGl6YXRpb24gd2l0aCBgZ2dwbG90MmAg4oCTIFBhcnQgMioqCioqR29hbDoqKiBMZWFybiBhZHZhbmNlZCB2aXN1YWxpemF0aW9uIHRlY2huaXF1ZXMuCgotIEZhY2V0aW5nIGFuZCBzbWFsbCBtdWx0aXBsZXMuCi0gQ29tYmluaW5nIHBsb3RzIChncmlkIGxheW91dHMpLgotIFNhdmluZyBoaWdoLXJlc29sdXRpb24gcGxvdHMuCgoqKlByYWN0aWNlOioqCi0gQ3JlYXRlIGZhY2V0ZWQgYm94cGxvdHMgZm9yIHN1YnNldHMuCi0gRXhwb3J0IHBsb3RzIGZvciByZXBvcnRzLgoKW0dvIHRvIENoYXB0ZXIg4oaSXShodHRwczovL2RydGhvbWFzb25laWwuZ2l0aHViLmlvL2FuYWx5c2lzLXVzZXItZ3JvdXAvci10dXRvcmlhbC9fYm9vay9jaGFwdGVyLTYtYWR2YW5jZWQtZGF0YS12aXN1YWxpc2F0aW9uLXdpdGgtZ2dwbG90Mi5odG1sKQoKPHdpbXI+CgojIyAqKkNoYXB0ZXIgNzogU3RhdGlzdGljYWwgQW5hbHlzaXMqKgoqKkdvYWw6KiogVW5kZXJzdGFuZCBkZXNjcmlwdGl2ZSBhbmQgaW5mZXJlbnRpYWwgc3RhdGlzdGljcy4KCi0gRGVzY3JpcHRpdmUgc3RhdGlzdGljczogbWVhbiwgbWVkaWFuLCBtb2RlLgotIEh5cG90aGVzaXMgdGVzdGluZyAodC10ZXN0cywgQU5PVkEpLgotIENvcnJlbGF0aW9uIGFuZCByZWdyZXNzaW9uLgoKKipQcmFjdGljZToqKgotIFRlc3QgZGlmZmVyZW5jZXMgaW4gQ0Q0IHByb3BvcnRpb25zLgotIFBlcmZvcm0gY29ycmVsYXRpb24gYW5hbHlzaXMuCgpbR28gdG8gQ2hhcHRlciDihpJdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2NoYXB0ZXItNy1zdGF0aXN0aWNhbC1hbmFseXNpcy5odG1sKQoKPHdpbXI+CgojIyAqKkNoYXB0ZXIgODogUmVwcm9kdWNpYmxlIFJlcG9ydHMgd2l0aCBSTWFya2Rvd24qKgoqKkdvYWw6KiogQnVpbGQgZHluYW1pYyBhbmQgc2hhcmVhYmxlIHJlcG9ydHMuCgotIEludHJvZHVjdGlvbiB0byBSTWFya2Rvd24uCi0gQ29tYmluaW5nIHRleHQsIGNvZGUsIGFuZCB2aXN1YWxzLgotIEV4cG9ydGluZyB0byBQREYgYW5kIEhUTUwuCgoqKlByYWN0aWNlOioqCi0gQ3JlYXRlIGEgcmVwb3J0IHN1bW1hcml6aW5nIGZsb3cgY3l0b21ldHJ5IGRhdGEuCi0gRW1iZWQgdmlzdWFsaXphdGlvbnMgYW5kIHRhYmxlcy4KCltHbyB0byBDaGFwdGVyIOKGkl0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svY2hhcHRlci04LXJlcHJvZHVjaWJsZS1yZXBvcnRzLXdpdGgtcm1hcmtkb3duLmh0bWwpCgo8d2ltcj4KCiMjICoqQ2hhcHRlciA5OiBNaW5pIFByb2plY3Qg4oCTIFB1dHRpbmcgSXQgQWxsIFRvZ2V0aGVyKioKKipHb2FsOioqIEFwcGx5IHNraWxscyB0byBhIGNvbXBsZXRlIHdvcmtmbG93LgoKKipQcmFjdGljZToqKgotIExvYWQgYW5kIGNsZWFuIGRhdGEuCi0gU3VtbWFyaXplIGFuZCB2aXN1YWxpemUgdHJlbmRzLgotIFJ1biB0ZXN0cyBhbmQgY29tcGlsZSBldmVyeXRoaW5nIGludG8gYSByZXBvcnQuCgpbR28gdG8gQ2hhcHRlciDihpJdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2NoYXB0ZXItOS1taW5pLXByb2plY3QtcHV0dGluZy1pdC1hbGwtdG9nZXRoZXIuaHRtbCkKCjx3aW1yPgoKIyMgKipDaGFwdGVyIDEwOiBUcm91Ymxlc2hvb3RpbmcgYW5kIFdvcmtmbG93IERlc2lnbioqCioqR29hbDoqKiBUZWFjaCBkZWJ1Z2dpbmcgc3RyYXRlZ2llcyBhbmQgd29ya2Zsb3cgb3B0aW1pemF0aW9uLgoKLSBEZWJ1Z2dpbmcgZXJyb3JzIGFuZCB3YXJuaW5ncy4KLSBXcml0aW5nIG1vZHVsYXIgc2NyaXB0cyAoZnVuY3Rpb25zKS4KLSBPcmdhbml6aW5nIGxhcmdlciBwcm9qZWN0cy4KLSBCcmllZiBpbnRybyB0byBHaXQvR2l0SHViIGZvciB2ZXJzaW9uIGNvbnRyb2wuCgoqKlByYWN0aWNlOioqCi0gRGVidWcgYSBzY3JpcHQgd2l0aCBlcnJvcnMuCi0gUmVzdHJ1Y3R1cmUgY29kZSBmb3IgcmV1c2FiaWxpdHkuCgpbR28gdG8gQ2hhcHRlciDihpJdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2NoYXB0ZXItMTAtdHJvdWJsZXNob290aW5nLWFuZC13b3JrZmxvdy1kZXNpZ24uaHRtbCkKCjx3aW1yPgoKCg==</div>
 <div class="custom-footer">
     <div class="footer-left" style="width: 30%; float: centre">
       <img src="assets/footer/footer1.png" alt="wimr-logo">
