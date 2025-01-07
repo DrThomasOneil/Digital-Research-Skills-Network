@@ -1,60 +1,66 @@
-
-
 # Introduction
 
-<h2>Manual to programming tools</h2>
+<h2>Leaving behind manual analysis tools</h2>
 
-<div class="hint-goals">  
-**Goals:**  
-Introduce programming concepts and the mindset behind programmatic workflows.    
-- Transition from manual tools (e.g. Excel & Prism) to programming-based workflows.  
-- Understand the concept of handling data using code.  
-- Learn to navigate directories and file paths programmatically.  
-- Emphasize reproducibility and structured workflows.  
+<div class="hint-goals">    
+**Goals:**    
+Introduce programming concepts and the mindset behind programmatic workflows.   
+&nbsp;&nbsp;&#8226; Transition from manual tools (e.g. Excel & Prism) to programming-based workflows.  
+&nbsp;&nbsp;&#8226; Understand the concept of handling data using code.  
+&nbsp;&nbsp;&#8226; Learn to navigate directories and file paths programmatically.  
+&nbsp;&nbsp;&#8226; Emphasize reproducibility and structured workflows.    
 </div>
 
-This first session will not get you to start writing code, but to start with reframing the way you think about and might approach analytic programming. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.
+You will not be writing code in this introduction. Here we start with trying to re-frame the way you think about and might approach **analytic programming**. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.
 
 <read-time><i>**Read time**: 15 Minutes</i></read-time><wimr>
 
 ## Transitioning from manual tools (e.g. Excel & Prism) to programming-based workflows in R.
 
-There are a lot of resources online that introduce programming to beginners. Here, I will approach the concepts from a certain perspective: to convert a wet-lab researcher, who has a goal in mind that provides the context as to why they're learning this skill, and who probably chronically uses a range of different apps and software for notetaking, calculations, stats, graphing and data management. Therefore, I aim to incorporate **more** than just <strong>*<span style="color: red;">how to do a t.test in R</span>*</strong> or <strong>*<span style="color: red;">how to analysis single cell RNA data</span>*</strong>, including such things like <strong>*<span style="color: blue;">creating a lab notebook in R</span>*</strong> or <strong>*<span style="color: blue;">sharing data with your PI or a collaborator</span>*</strong>.
+There are a lot of resources online that introduce programming to beginners. Here, instead, I will approach the concepts from a certain perspective: to introduce a wet-lab researcher, with a particular interest in applying wrangling visualisations of biomedical data, and who probably chronically uses a range of different apps and software for notetaking, calculations, stats, graphing and data management. Therefore, I aim to incorporate **more** than just <strong>*<span style="color: red;">how to do a t.test in R</span>*</strong> or <strong>*<span style="color: red;">how to analysis single cell RNA data</span>*</strong>, and include things like <strong>*<span style="color: blue;">creating a lab notebook in R</span>*</strong> or <strong>*<span style="color: blue;">sharing data with your PI or a collaborator</span>*</strong>.
 
 <div class="hint-info">
-**Note**: If you still do not *get it*, don't worry. It took me years to feel comfortable. I was fortunate enough to have a supervisor who gave me time to learn this. Keep up with it, find more resources and stick with a **good community of users** :) 
+**Note**: If you still do not *get it*, don't worry. It took me years to feel comfortable. I was fortunate enough to have a supervisor who gave me time to learn this. Keep up with it, find more resources and stick with a **good community of users** :)  
 </div>
 
 #### *Consistency*
 
-It's important to know that **consistency is key**. You <u>will not</u> get better or more efficient at this unless you dedicate time, energy and brain power to learning it like another language. There are times that I'm doing one type of analysis that I can rewrite whole workflows automatically, and other times when I'm away at a conference, where I sit down at my desk and have to look up reference material to get going again. There is no easy way around it. I think that there will be some users who are in for a quick click-and-play script, and this is fine for performing one monotonous task like loading pre-processed single cell RNA data just to visualise. To be honest, if that is your intention, don't waste your time here - there are better resources such as [this](https://satijalab.org/seurat/) and [this](https://nbisweden.github.io/workshop-scRNAseq/).
+It's important to know that **consistency is key**. You <u>will not</u> get better or more efficient at this unless you dedicate time, energy and brain power to learning it like any other language. There are times when I am using so much of one type of analysis, to the point that I can then rewrite the whole workflow automatically, and other times when I'm away for some time and cannot remember a single thing about that workflow. **There is no easy way around it.** 
+
+I think that there will be some users who are in for a quick *click-and-play* script, and this is fine for performing one monotonous and unchanging task, like loading pre-processed single-cell RNAseq data just for purpose of visualisation. And honestly, if that is your intention, don't waste your time here - there are better resources such as [this](https://satijalab.org/seurat/) and [that](https://nbisweden.github.io/workshop-scRNAseq/).
 
 #### *Active Learning*
 
-In the same analogy, a good way to learn a new language is to actually actively apply your learning. For example, reading a physical textbook and trying to learn what the code does is not productive. Fortunately, we don't have to embarrass ourselves when we try the wrong combination of words in programming (the only people who will know your silliness is you <subscript>and ChatGPT</subscript>). 
+Using the same analogy, (anecdotal) a good way to learn a new language is to actively apply your learning. For example, reading *Spanish for Dummies* and practicing the words in your head or in front of a mirror is not the same as reading a passage in Spanish and translating as you go, or practicing by talking to a friend. Reading a `Coding for Dummies` and trying to learn what the code does on paper is not productive and does not give you the same experience as writing and applying the code in RStudio. Fortunately, we don't have to embarrass ourselves when we try the wrong combination of words in programming (the only people who will know your silliness is you <subscript>and ChatGPT</subscript>). 
 
-I recall buying a few courses on *Udemy* for R programming, because I never got it. The example data I was given was *basketball 3-point statistics* and *compounding savings* finance data. It was impossible for me to You may have already read that I've generated a mock dataset that might mimic some flow cytometry data you've possibly already started to collect. This is to hopefully fill that gap that I felt while learning - *how on earth do I apply this to my own work?*.
+#### *Appropriate Learning*
+
+**Don't get stuck in tutorial hell**. It easy to get caught up in tutorials and never actually build anything. I recall buying a few courses on **Udemy** for R programming, because it just wasn't clicking. The example data that was provided were *basketball statistics* sports data, and *compounding savings* finance data. It was impossible for me to translate those tutorials into what I was trying to achieve. 
+
+You may have already read that I've generated a mock dataset that might mimic some Flow Cytometry data you've possibly already started to collect. Hopefully this will provide you with the context for how we'll use R to analyse biomedical research data. 
 
 <wimr>
 
-## Handling your data
+## Handling data - be specific!
 
-You need to very quickly forget about double clicking and nice user-interfaces. Programming languages do not care about user interfaces - that's why there's one *Excel*. So you need to start learning that you can't click on the 3rd column and 5th row and change that value manually. *You'll need to...*
+You need to very quickly forget about double-clicking and nice user-interfaces. Programming languages do not care about fancy interfaces; they are a toolbox that allow you to handle the data effectively and efficiently in ways that manual analysis fall short. 
+
+So you need to start learning that you can't click on the 3rd column and 5th row and change that value manually. *You'll need to...*
 
 ```shell
 my_data[5,3] <- new_value
 ```
 
-... and so, you need to learn to be very specific and particular. 
+... and so you'll need to learn quickly to be specific.
 
-At the same time, as you get more comfortable, you can generalise a lot of your work. Instead of having to know that `row 5` is the row you're interested in, you can learn to query (in text) `which column name contains the phrase "CD45RA" and which row name contains the phrase "CD4"`
+However, as you get more comfortable, you will learn to generalise and automate a lot of your work. Instead of having to know that `row 5` is the row you're interested in, you can learn to query (spelled out in text) `which column name contains the phrase "CD45RA" and which row name contains the phrase "CD4"`
 
-While important for how you use R when you're here, knowing how you use R is vital to setting up your excel spreadsheets. For example, choosing to orient your data in columns, adding extra columns to help filter or organise, or evening knowing that `CD4` and `CD4+` and `CD4p` can make your experience in R so much easier! 
-<div class="hint-warning">
-**To be fair...**  
-Before I was using R, I was still copy and pasting a *tonne* to get my data in the right format for *prism*! Hopefully you've had the same experience and want to prevent <span style="color=red;">**carpal tunnel**</span>!
+You will also quickly learn that you need to format your data in a particular way <strong>*before*</strong> it gets to R. This is a long and tedious journey if you don't actively learn from your formatting mistakes. For example, adding a space in a column name: `Sample Number`. When you export and reimport the data, the column name changes to `Sample.Number`, effectively ruining any previously written scripts that look for the `Sample Number` column.
+
+<div class="hint-goals">
+*Before I was using R*, I was copy and pasting a *tonne* to get my data in the right format for **Prism**! Hopefully you've had the same experience and want to prevent <span style="color=red;">**carpal tunnel**</span>!<br><br>You will learn how to set up your spreadsheets for R, and **forget Prism**! 
 </div>  
-I hope as you navigate through these lessons, and try to amend your own spreadsheets, that you start to draw up your new data in R-friendly formats. 
+I hope that as you navigate through these lessons, you try to amend your own spreadsheets so that your data becomes an R-friendly format. 
 
 <wimr>
 
@@ -64,25 +70,24 @@ I hope as you navigate through these lessons, and try to amend your own spreadsh
 **Forget double clicking in File explorer & Finder!**
 </div> 
 
-You really need to remember that every time you open **RStudio**, you *basically* are looking at a text editor. You edit your code in a fancy-dancy text editor that colours words and numbers and run it in a word/number processor
+You really need to remember that every time you open **RStudio**, you *basically* are looking at a text editor. You edit your code in a fancy-dancy text editor that colours words and numbers and run it in a number cruncher.
 
 However! If you have not pointed R to the right folder, you will:
 
-- open the wrong data file and if you're not careful, change that file, or more likely,
+- open the **wrong** data file 
 - you'll immediately get the error  
+
 `cannot open compressed file 'data.csv', probable reason 'No such file or directory'`
 
-*Could you imagine thinking that you're editing row 5 and column 3 of your tissue log, and not realising that you're editing the raw data!*
+<div class="hint-warning">
+If you're not careful, you could change or delete a file you didn't intend on touching. 
+</div> 
 
-<e> 
+*Could you imagine thinking that you're editing row 5 and column 3 of your raw data, and not realising that you're editing the <strong>tissue log</strong>!*
 
 <div class="hint-warning">
 **Directories** are the most common errors! For both beginner and experienced users! 
 </div>
-
-<wimr> 
-
-## Helpful tips
 
 **What a directory looks like**
 
@@ -98,7 +103,7 @@ For these sessions, I've created a folder on my desktop (mac) called `analysis_u
 setwd("~/Desktop/analysis_user_group")
 ```
 
-I can check my working directory using
+**I can check my working directory using**
 
 ```sh
 getwd()
@@ -107,21 +112,37 @@ getwd()
 
 <e>
 
-**Quickly checking the files you're looking for are in your directory**
+**Checking the files in your directory**
 
 You can use `list.files()` to output the files and folders in that directory. Sometimes its just easier than typing out the whole file name! 
 
-You need to know that `.` means **this** to the computer. For example `list.files()` is the same as `list.files(".")`. This is a bad example, but please remember what "." means! It took me a long time to learn how to use it. 
+<details><summary>*What `.` means*</summary>
+You may need to know that `.` means **this** to the computer. For example `list.files()` is the same as `list.files(".")`. This is a bad example, but please remember what "." means! It took me a long time to learn how to use it. 
 
 For example, when you get into using `dplyr` which will drastically improve your programming life, knowing that `.` means "use this data" will change your life! 
 
 Also `list.files("..")`... What do you think this means? Try it when you get the chance! I've used it **A LOT** in making this website!  
 
-<div class="hint-success">
-Phrases to remember:  
-- **working directory**: The folder that you are operating in  
-- `setwd()`, `getwd()` & `list.files()`: Orientate yourself to where you're looking!  
-- `.`: "*I'm here*"  
-</div>
+</details><wimr>
+
+## Reproducibility and automation
+
+Now I don't know about you, but I always struggled or felt anxious about detailing my analysis process. For example, how do I keep a log of changes I've made to a spreadsheet, such as changing or removing a column or data point, and have I changed the corresponding prism file? 
+
+The amount of times I simply recreated a prism file just because I'd rearranged rows or columns or reanalysed one experiment in FlowJo, and the tediousness to figure out which column or row corresponded to the changes in all of my Prism tabs was not worth the hassle - just start again. 
+
+**You very rarely have to worry about this when you use R**. In fact, if you have things set up nicely and precisely, its as simple as clicking one button and waiting for the output report. And this was something that appealed to me a lot when trying to motivate myself to migrate my analysis into R completely - every line of code is a specific instruction, and I know exactly what I had to do to the data in order to get the final result. I could then save that script with a date and if something changed, I could edit the script and save a new version with a new date. 
+
+**Furthermore!** I could automate my experiment summaries. I could copy and paste that script, change the directory to a different acquisition and generate a new report with new data. You could then compile those experiment summaries into a markdown *book* similar to the one you are reading from now! 
+
+This as an advantage of programming > manual analysis would be enough on its own for me. It has undoubtedly made me more efficient in more than just the lab. I am much more detail-oriented and am able to communicate and share my data and processes more effectively using these skills. 
+
+## Summary
+
+
+
 <e>
-<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>
+
+[Next Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-R-and-RStudio.html)
+
+<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px; "></div>

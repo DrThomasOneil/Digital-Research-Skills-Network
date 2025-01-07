@@ -223,4 +223,22 @@ Custom CSS containers for information.
   line-height: 1;
   display: flex;
 }
-
+/* Terminology hint */
+.hint-terminology {
+  background-color: #FFF4E6; /* Light orange */
+  border-left: 4px solid #FF8C00; /* Orange */
+  padding: 10px 15px 0px;
+  border-radius: 5px;
+  line-height: 2;
+  display: flex;
+  margin: 10px 0;
+}
+.hint-terminology::before {
+  content: "🏷 "; /* Replace with any suggested symbol above */
+  font-size: 1.5em;
+  margin-right: 15px;
+  padding: 0px 0px 10px;
+  align-items: center;
+  line-height: 1;
+  display: flex;
+}

@@ -1,0 +1,452 @@
+
+
+# Chapter 1: Getting Started in R and RStudio
+
+```{html, include=F}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(checkbox.id, checkbox.checked);
+    });
+  });
+});
+</script>
+```
+
+<h2>*Your first steps...*</h2>
+
+<div class="hint-goals">  
+**Goals:**  
+Set up R and RStudio, and get familiar with the interface.    
+&nbsp;&nbsp;&#8226; Understand what a programming language *is*.    
+&nbsp;&nbsp;&#8226; Know the difference between R, RStudio and python.     
+&nbsp;&nbsp;&#8226; Install R and RStudio.   
+&nbsp;&nbsp;&#8226; Exploring the interface – Console, Environment, Scripts.    
+&nbsp;&nbsp;&#8226; Installing and loading packages.    
+&nbsp;&nbsp;&#8226; Start your first project.   
+</div>
+
+By the end of this chapter, you'll have installed R and RStudio, know how to navigate the RStudio UI and will know how to get started on a new project. 
+
+<h4>*To start with...*</h4>
+
+Create a folder that you'll work out of for this tutorial. For example, I have a folder `analysis-user-group` on my Desktop. 
+
+<e>
+
+<read-time><i>**Read time**: 30 Minutes</i></read-time><wimr>
+
+## R as a programming language
+
+<div class="hint-info">  
+Simply: **A programming language** is a way to communicate with a computer.
+</div>
+
+There are many languages, each with their own advantages and limitations. Some, such as **SQL** are used in database management, and others like **R** and **python** are used for analytic programming. **R** is designed specifically for statistical computing, data analysis and visualisation, and is considered one of the more user-friendly languages. **Python** is more of a general-purpose language used in data science, but also for web development, machine learning, and more.
+
+The language itself needs an interface for you to communicate with the computer. You can run **R** in *Terminal* (Mac) or *Command Prompt* (Windows) if you wanted to. You could store your scripts in Word and then copy and paste the lines into the commandline window. 
+
+By now, you've heard of and seen **RStudio**. RStudio is what's called an *Integrated Development Environment (IDE)* and makes working with R easier by organizing scripts, plots, and files. 
+
+<wimr>
+
+## Installing R and RStudio
+
+Install R first. Go to [CRAN](https://cran.csiro.au/), download the latest version of R and follow the prompts to install on your computer.
+<div class="hint-info">  
+**You don't need to do anything else with the R application!**
+</div>
+
+Next install RStudio. Go to the [download page](https://posit.co/download/rstudio-desktop/) and follow the prompts to install on your computer. Once installed, open RStudio—it should automatically connect to your R installation.
+
+<wimr>
+
+## Navigating RStudio
+
+When you first open RStudio, you’ll see four main panels:  
+
+- **Console** (Bottom Left): This is essentially **R**. This is where you run the code.    
+
+- **Environment** (Top Right): Keeps track of your variables and data.     
+
+- **Files/Plots/Packages** (Bottom Right): Displays file directories, plots, help pages, and packages.    
+
+- **Script Editor** (Top Left): This is simply a text editor. This is where you would write and save your code.
+
+<div class="hint-success">  
+**We will now start using R**. You will be able to copy and paste code either directly into the console or into a new script, which you can save for later!
+</div>
+
+<wimr>
+
+## Projects 
+
+Projects in RStudio help organize your files and workflows.
+
+**Create a Project:**
+
+- Go to File > New Project.
+
+- Select New Directory or link to an Existing Directory.
+
+- Name your project and choose a folder location.
+
+- Click Create Project.
+
+This sets up a workspace, saving all files and settings in one place.
+
+<div class="hint-info">  
+Use projects to keep analyses organized and reproducible.
+</div>
+
+<wimr>
+
+## Functions and Packages
+
+<div class="hint-warning">  
+It might feel like we're moving too quickly through some of this. **Don't worry!** The next two chapters will go into variables, data structures, functions and so on in more details using mock data.
+</div>
+
+
+<div class="hint-terminology">  
+**chunk**: I'll refer to the blocks of code you see throughout these lessons as a chunk.    
+**function**: A function is a set of statements that are run at the same time.   
+**argument**: An argument is a value/variable used in a function.    
+**package**: A package is simply a collection of functions.  
+</div>
+<br>
+R as a programming language is a set of basic functions. Some of these include:
+
+<details><summary>**Arithmetic**</summary>
+
+```{r}
+# sums
+1+1
+# subtraction
+3-1
+# multiplication
+2*2
+# division
+40/pi
+# exponents
+2^2
+
+```
+
+</details><e>
+
+<details><summary>**Print and Paste**</summary>
+
+```{r}
+# print a sentence
+print("This is a sentence.")
+
+# print two things 'pasted' together
+print(paste("This is pi:", pi))
+
+```
+ 
+</details><e>
+
+`print()` and `paste()` are examples of base R **functions**. `DoHeatmap()` and `NormalizeData()` are examples of functions that are derived from the **Seurat** package, used for scRNA seq analysis
+
+<e>
+
+We might combine a series of these *base R* functions to create unique and specific output. For example, lets say I was constantly calculating cell percentages based off of cell numbers, and want to output a sentence summary. I might write it like this *each time*:
+
+```{r}
+num_cd45 = 45000 # number of CD45+ cells
+num_cd3 = 22000 # number of CD3+ cells
+per_cd3 = num_cd3/num_cd45 # calculate the fraction
+per_cd3 = per_cd3*100 # multiply by 100 to get a percentage
+per_cd3 = round(per_cd3, digits=2) # round the data off - here is an example of an argument - I can specify how many digits I want to include
+paste("There are ", num_cd45, " CD45+ cells and ", num_cd3, " CD3+ cells (", per_cd3, "%)", sep = "") # output the statement
+```
+
+I would have several samples to calculate these for, and I don't want to repeat these lines of code *n* times! We could write this into our own function (I will demonstrate how to do this in a future lesson) or hopefully someone has already done this.
+
+Lets pretend someone has already solved this issue. They've written the functions that we want and published them as **package** called `simple_math`. We can install this package and have access to the functions.
+
+```{r, eval=F}
+# install the package
+install.packages("simple_math")
+```
+
+<div class="hint-warning">  
+A package only needs to installed <strong>*once*</strong>! 
+</div>
+<div class="hint-info">  
+You can manually search for your packages in RStudio in the **Packages** tab on the right. Or simply try to load it using...
+</div>
+
+```{r, eval=F}
+# load the package
+library(simple_math)
+```
+
+Now that `simple_math` is loaded into our session, we can use the functions. This is what the function might look like:
+
+<div class="hint-info">  
+You will need to load packages into your R sessions everytime you restart R
+</div>
+
+
+```{r, include=F}
+calculate_percent <- function(parent,
+  parent_num,
+  subset, 
+  subset_num,
+  digits) {
+  num_cd45 = 45000 # number of CD45+ cells
+  num_cd3 = 22000 # number of CD3+ cells
+  per_cd3 = num_cd3/num_cd45 # calculate the fraction
+  per_cd3 = per_cd3*100 # multiply by 100 to get a percentage
+  per_cd3 = round(per_cd3, digits=1) # round the data off - here is an example of an argument - I can specify how many digits I want to include
+  paste("There are ", num_cd45, " CD45+ cells and ", num_cd3, " CD3+ cells (", per_cd3, "%)", sep = "") # output the statement
+}
+
+```
+
+```{r, eval=T}
+calculate_percent(
+  parent = "CD45",
+  parent_num = 45000,
+  subset = "CD3", 
+  subset_num = 22000,
+  digits = 1
+)
+```
+
+<div class="hint-warning">
+<strong>*This is a super reductionist explanation of functions and packages*</strong>.
+</div>   
+Not only do functions and packages use base R functions, they themselves require functions from <strong>*other*</strong> packages. E.g. the **Seurat** package uses **ggplot** functions to generate graphs. As you perform more and more complex analyses, you will be installing and loading more and more packages necessary. 
+
+There are some very common packages that you'll likely use <strong>*a lot*</strong> such as:
+
+- **ggplot2** for visualisation
+
+- **dplyr** for data manipulation
+
+- **Seurat** for single cell analysis
+
+- **BiocManager** for installing additonal bioinformatic packages
+
+... etc, etc
+
+<e><details><summary>**Commenting code:**</summary>
+
+You might have noticed that within the R chunks. Comments are ways of adding details and descriptions to your otherwise dry code. They are prefaced by a `#`
+
+The can be used in two ways:    
+
+**On their own line**   
+&nbsp;&nbsp;&nbsp;&nbsp;`# this is a comment               `    
+&nbsp;&nbsp;&nbsp;&nbsp;`1+1                               `    
+&nbsp;&nbsp;&nbsp;&nbsp;`[1] 2                             `    
+<br>
+**After code**      
+&nbsp;&nbsp;&nbsp;&nbsp;`1+1 # this will add 1 to 1        `    
+&nbsp;&nbsp;&nbsp;&nbsp;`[1] 2                             `    
+<br>
+
+It is incredibly useful to comment your code. Some examples may be:   
+
+- You've written a script or custom function and want to remember what each line does.    
+
+- You've written a script or custom function and want to inform others what each line does.   
+
+- You've changed a script, but want to keep a copy of the older version - you could *comment out* each line.   
+
+- etc etc
+
+</details><e>
+
+<wimr>
+
+## Hello World
+
+It's customary that your first script is helloworld.R. So! Open a new script and save it in your analysis-user-group folder as `helloworld.R`. In this script add the line:
+
+```{r, eval=F}
+print("Hello World")
+```
+
+Click on this line in your script editor and press:
+
+- **Mac**: Command-Enter
+
+- **Windows**: Control-Enter
+
+This sends the line you're on to the console and runs it. You'll get the output
+
+```text
+[1] "Hello World"
+```
+<br><br>
+Congratulations. <sup>You wrote your first program.<sup>You're a genius.<sup>Well done.<sup>You're on your way to becoming a superstar programmer.</sup></sup></sup></sup>
+
+<wimr>
+
+## Exercise: Write your <strike>first</strike> second script
+
+<div class="hint-practice">  
+**Practice:**  
+<input type="checkbox"> &nbsp;&nbsp;Create an R script.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Send a line to the console. (See **Hello World** above)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Set your directory.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Install the `ggplot2` package.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Load in sthe `ggplot2` packages.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Download the dataset used for these tutorials into my directory.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Load in the dataset.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Inspect the data.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Create a simple plot of the data.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;Save the plot in your directory.<br>
+</div><e>
+
+**The data**: In this exercise, and throughout these tutorials, we'll be using flow cytometry data I synthesised representing mock cell frequencies and expressions of T cells dervied from human tissues (n=60). The data dictionary below provides a description for each column
+
+<details><summary>**Data Dictionary:**</summary>
+
+| Column  | Description |   
+|:-------|:----------|    
+| date | Date of acquisition |
+| experiment | Experiment number |
+| donor | Donor Number |
+| age | Age of patient |
+| tissue | Tissue type: abdomen, labia, vagina |
+| layer | Tissue layer: epithelium, underlying mucosa |
+| group | Summarised sample group (e.g. A_E = abdomen epithelium) |
+| CD3 | CD3<sup>+</sup> cells |
+| CD8 | CD8<sup>+</sup> cells |
+| CD4 | CD4<sup>+</sup> cells |
+| HLADR | CD4<sup>+</sup>HLADR<sup>+</sup> cells |
+| CCR5 | CD4<sup>+</sup>CCR5<sup>+</sup> cells |
+| HLADR_MFI | gMFI of HLADR on CD4<sup>+</sup> cells |
+| CCR5_MFI | gMFI of CCR5 on CD4<sup>+</sup> cells |
+| CD28 | CD4<sup>+</sup>CD28<sup>+</sup> cells |
+
+<span style="font-size:0.8em">**gMFI**:geometric mean fluorescent intensity.</span>
+
+</details>
+<e>
+
+**Exercise**: Write a script using the following instructions (run the lines as you write to see if its working for you)
+
+- Open a new R script and save it to a folder of your choice.
+
+- At the top of each of your scripts, you might want to add some comments about what the script is for. 
+
+- Set your working directory using `setwd()`. One way to quickly find the directory is to copy the folder and paste it into the script itself. 
+
+- Install **ggplot2**
+
+- Load the **ggplot2** package
+
+- Download the example data using:
+
+```{r eval=F}
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", destfile="synthetic_data.csv")
+```
+
+<details><summary>Don't see the file?</summary>
+<div class="hint-warning">  
+If you have set your directory properly, you will see a new file in your folder called `synthetic_data.csv`.
+</div></details><e>
+
+- Load the data into R using `data <- read.csv("synthetic_data,csv")`
+
+- Inspect the data
+
+  - `colnames()` will show you what columns are present
+
+  - `dim(data)` will show you the dimensions of the data as `rows` x `columns`.
+
+  - `head(data)` will show you the first 6 rows of the data. Conversely, you could use `tail()`.
+
+  - `summary(data)` will give you detailed output of the data.
+  
+- Assign to a variable `plot` a graph of **% CD4+ T cells in each group** using the `ggplot()` function.
+
+<details><summary>*Here you can copy and paste my code, as we don't cover ggplot until Chapter 5*</summary>
+<div class="hint-goals">  
+In **Chapter 5 & 6**, we will learn how to use ggplot and how to make publication-worthy graphs
+</div>
+
+```{r, eval=F}
+plot = ggplot(data, aes(x=group, y=100*(CD4/CD3), color=tissue))+geom_boxplot()
+```
+
+</details><e>
+
+- Output the plot by writing `plot` in the console.
+
+- Save the plot to your directory using `ggsave()`. 
+
+<div class="hint-info">  
+Use `?ggsave` in the console to bring up the **help** menu for this function! Here you will find descriptions of the function, the **arguments** you can use and examples of it's use.
+</div>
+
+<br>
+<details><summary>**Solution**</summary>
+
+Here is *one* possible solution. 
+
+<sub>*Did you comment your code?*</sub>
+
+```{r, eval=F}
+#* This is my first script
+#* I will set my directory, install my first package, load it in,  and save a variable to my directory
+#* 20250107
+
+# set your directory
+setwd("~/Desktop/analysis-user-group") #THIS WONT WORK FOR YOU - YOU'LL NEED TO SET YOUR OWN DIRECTORY
+
+# uncomment and install the package once
+# install.packages("ggplot2")
+
+# load the package
+library(ggplot2)
+
+# download the example data
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", destfile = "synthetic_data.csv")
+
+# read in synthetic data
+data <- read.csv("synthetic_data.csv")
+
+# inspect the data
+colnames(data)
+dim(data)
+head(data)
+summary(data)
+
+# create a simple plot of percentage of CD4+ cells per group
+plot <- ggplot(data, aes(x=group, y=100*(CD4/CD3), color=tissue))+geom_boxplot()
+
+# output the plot
+plot
+
+# save plot
+ggsave("myfirstplot.png",plot = plot)
+```
+
+<div class="hint-info">  
+You may have seen me use `=` and `<-` interchangeably. That's because they are.
+</div>
+
+</details>
+
+<wimr>
+
+## Next Chapter
+
+Congratulations! You've completed **Chapter 1**. You now have R and RStudio installed, have installed a package and started to write scripts. 
+
+In the next two chapters, I will use this data to explain more about the fundamentals of R.
+
+[Next Chapeer →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-2-data-types-and-structures.html)
+
+<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>

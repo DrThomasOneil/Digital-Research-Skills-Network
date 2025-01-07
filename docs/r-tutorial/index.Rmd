@@ -89,12 +89,12 @@ In this book, you'll find 11 sessions:
 # </div>
 ```
  
-```{r, eval=FALSE, include=F}
+```{r, eval=FALSE, include=F, message=F}
 bookdown::render_book() 
 ```
 
 ```{r, echo=F, eval=FALSE}
-servr::daemon_stop(1:7)
+servr::daemon_stop(1)
 bookdown::serve_book() 
 ```
 
