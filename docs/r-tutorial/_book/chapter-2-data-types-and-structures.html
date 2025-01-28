@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2: Data Types and Structures | Introduction to R and analytic Programming</title>
+  <meta name="description" content="Chapter 2: Data Types and Structures | Introduction to R and analytic Programming" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2: Data Types and Structures | Introduction to R and analytic Programming" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="DrThomasOneil/analysis-user-group" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2: Data Types and Structures | Introduction to R and analytic Programming" />
+  
+  
+  
+
+<meta name="author" content="Yuchen Li &amp; Thomas O’Neil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chapter-1-getting-started-in-r-and-rstudio.html"/>
+<link rel="next" href="chapter-3-basic-programming.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R and analytic Programming</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#transitioning-from-manual-tools-e.g.-excel-prism-to-programming-based-workflows-in-r."><i class="fa fa-check"></i>Transitioning from manual tools (e.g. Excel &amp; Prism) to programming-based workflows in R.</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#handling-data---be-specific"><i class="fa fa-check"></i>Handling data - be specific!</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#directories"><i class="fa fa-check"></i>Directories</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#reproducibility-and-automation"><i class="fa fa-check"></i>Reproducibility and automation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html"><i class="fa fa-check"></i>Chapter 1: Getting Started in R and RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#r-as-a-programming-language"><i class="fa fa-check"></i>R as a programming language</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#installing-r-and-rstudio"><i class="fa fa-check"></i>Installing R and RStudio</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#navigating-rstudio"><i class="fa fa-check"></i>Navigating RStudio</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#projects"><i class="fa fa-check"></i>Projects</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#using-r"><i class="fa fa-check"></i>Using R</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#hello-world"><i class="fa fa-check"></i>Hello World</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#exercise-write-your-first-second-script"><i class="fa fa-check"></i>Exercise: Write your <strike>first</strike> second script</a></li>
+<li class="chapter" data-level="" data-path="chapter-1-getting-started-in-r-and-rstudio.html"><a href="chapter-1-getting-started-in-r-and-rstudio.html#next-chapter"><i class="fa fa-check"></i>Next Chapter</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-2-data-types-and-structures.html"><a href="chapter-2-data-types-and-structures.html"><i class="fa fa-check"></i>Chapter 2: Data Types and Structures</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-2-data-types-and-structures.html"><a href="chapter-2-data-types-and-structures.html#data-types"><i class="fa fa-check"></i>Data Types</a></li>
+<li class="chapter" data-level="" data-path="chapter-2-data-types-and-structures.html"><a href="chapter-2-data-types-and-structures.html#data-structures"><i class="fa fa-check"></i>Data Structures</a></li>
+<li class="chapter" data-level="" data-path="chapter-2-data-types-and-structures.html"><a href="chapter-2-data-types-and-structures.html#importing-and-saving-files-in-r"><i class="fa fa-check"></i>Importing and saving files in R</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-3-basic-programming.html"><a href="chapter-3-basic-programming.html"><i class="fa fa-check"></i>Chapter 3: Basic Programming</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-3-basic-programming.html"><a href="chapter-3-basic-programming.html#assigning-variables"><i class="fa fa-check"></i>Assigning variables</a></li>
+<li class="chapter" data-level="" data-path="chapter-3-basic-programming.html"><a href="chapter-3-basic-programming.html#conditional-statements"><i class="fa fa-check"></i>Conditional statements</a></li>
+<li class="chapter" data-level="" data-path="chapter-3-basic-programming.html"><a href="chapter-3-basic-programming.html#loops"><i class="fa fa-check"></i>Loops</a></li>
+<li class="chapter" data-level="" data-path="chapter-3-basic-programming.html"><a href="chapter-3-basic-programming.html#writing-a-function"><i class="fa fa-check"></i>Writing a function</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html"><i class="fa fa-check"></i>Chapter 4: Data Manipulation with <code>tidyverse</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html#why-use-tidyverse"><i class="fa fa-check"></i>Why use tidyverse</a></li>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html#filtering-rows-and-columns"><i class="fa fa-check"></i>Filtering rows and columns</a></li>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html#adding-a-column-using-mutate"><i class="fa fa-check"></i>Adding a column using <code>mutate()</code></a></li>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html#group_by-and-summarize"><i class="fa fa-check"></i><code>group_by()</code> and <code>summarize()</code></a></li>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html#pivot"><i class="fa fa-check"></i>Pivot</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-4-data-manipulation-with-tidyverse.html"><a href="chapter-4-data-manipulation-with-tidyverse.html#hopefully-it-is-clear-why-tidyverse-is-a-useful-tool."><i class="fa fa-check"></i>Hopefully it is clear why <code>tidyverse</code> is a useful tool.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-5-data-visualisation-with-ggplot2.html"><a href="chapter-5-data-visualisation-with-ggplot2.html"><i class="fa fa-check"></i>Chapter 5: Data Visualisation with <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-5-data-visualisation-with-ggplot2.html"><a href="chapter-5-data-visualisation-with-ggplot2.html#basics-of-ggplot2"><i class="fa fa-check"></i>Basics of ggplot2</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-5-data-visualisation-with-ggplot2.html"><a href="chapter-5-data-visualisation-with-ggplot2.html#scatterplot"><i class="fa fa-check"></i>Scatterplot</a></li>
+<li class="chapter" data-level="" data-path="chapter-5-data-visualisation-with-ggplot2.html"><a href="chapter-5-data-visualisation-with-ggplot2.html#boxplot"><i class="fa fa-check"></i>Boxplot</a></li>
+<li class="chapter" data-level="" data-path="chapter-5-data-visualisation-with-ggplot2.html"><a href="chapter-5-data-visualisation-with-ggplot2.html#columnbar-graph"><i class="fa fa-check"></i>Column/bar graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-5-data-visualisation-with-ggplot2.html"><a href="chapter-5-data-visualisation-with-ggplot2.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-6-data-visualisation-with-ggplot2-2.html"><a href="chapter-6-data-visualisation-with-ggplot2-2.html"><i class="fa fa-check"></i>Chapter 6: Data Visualisation with <code>ggplot2</code> 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-6-data-visualisation-with-ggplot2-2.html"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#adjusting-theme-elements"><i class="fa fa-check"></i>Adjusting theme elements</a></li>
+<li class="chapter" data-level="" data-path="chapter-6-data-visualisation-with-ggplot2-2.html"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#annotating-the-plot"><i class="fa fa-check"></i>Annotating the plot</a></li>
+<li class="chapter" data-level="" data-path="chapter-6-data-visualisation-with-ggplot2-2.html"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#facet_wrap-and-group"><i class="fa fa-check"></i>facet_wrap() and Group</a></li>
+<li class="chapter" data-level="" data-path="chapter-6-data-visualisation-with-ggplot2-2.html"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#saving-plots"><i class="fa fa-check"></i>Saving plots</a></li>
+<li class="chapter" data-level="" data-path="chapter-6-data-visualisation-with-ggplot2-2.html"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#some-final-hints"><i class="fa fa-check"></i>Some final hints</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-7-statistical-analysis.html"><a href="chapter-7-statistical-analysis.html"><i class="fa fa-check"></i>Chapter 7: Statistical Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="chapter-7-statistical-analysis.html"><a href="chapter-7-statistical-analysis.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chapter-8-reproducible-reports-with-rmarkdown.html"><a href="chapter-8-reproducible-reports-with-rmarkdown.html"><i class="fa fa-check"></i>Chapter 8: Reproducible Reports with RMarkdown</a></li>
+<li class="chapter" data-level="" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i>Conclusions</a></li>
+<li class="divider"></li>
+<li><a href="https://drthomasoneil.github.io/analysis-user-group" target="blank"><i><strong>Return to the analysis page!</strong></i></a></li>
+<li><a href="https://github.com/DrThomasOneil/analysis-user-group/tree/main/docs/r-tutorial" target="blank">See The Source Code</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R and analytic Programming</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter-2-data-types-and-structures" class="section level1 hasAnchor">
+<h1>Chapter 2: Data Types and Structures<a href="chapter-2-data-types-and-structures.html#chapter-2-data-types-and-structures" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="hint-goals">
+<p><strong>Goals:</strong><br />
+Learn about data types and structures in R.<br />
+  • Basic data types: numeric, character, logical.<br />
+  • Data structures: vectors, matrices, data frames, lists.<br />
+  • Assessing and querying data types and structures.<br />
+  • Importing data (RDS, Excel, CSV files).</p>
+</div>
+<p><read-time><i><strong>Read time</strong>: 15 Minutes</i></read-time></p>
+<div id="data-types" class="section level2 hasAnchor">
+<h2>Data Types<a href="chapter-2-data-types-and-structures.html#data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are a few data types you should know:</p>
+<ul>
+<li><p><strong>character</strong>: In R, characters or strings are letters, words, sentences, numbers, symbols… They’re defined using quotation marks.</p></li>
+<li><p><strong>numeric</strong>: Data can be stored as a number. R recognises numbers without the quotation marks</p></li>
+<li><p><strong>logical</strong>: TRUE / FALSE / T / F / 1 / 0. Logicals are an important data type that you’ll notice along the way.</p></li>
+</ul>
+<p>Some functions or operations require data to the correct data type. For example, math can’t be performed on a character</p>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="chapter-2-data-types-and-structures.html#cb2-1" tabindex="-1"></a><span class="co"># character</span></span>
+<span id="cb2-2"><a href="chapter-2-data-types-and-structures.html#cb2-2" tabindex="-1"></a>char <span class="ot">=</span> <span class="st">&quot;Hello World&quot;</span></span>
+<span id="cb2-3"><a href="chapter-2-data-types-and-structures.html#cb2-3" tabindex="-1"></a><span class="fu">typeof</span>(char)</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="chapter-2-data-types-and-structures.html#cb4-1" tabindex="-1"></a><span class="co"># numeric</span></span>
+<span id="cb4-2"><a href="chapter-2-data-types-and-structures.html#cb4-2" tabindex="-1"></a>num <span class="ot">=</span> <span class="st">&quot;1&quot;</span></span>
+<span id="cb4-3"><a href="chapter-2-data-types-and-structures.html#cb4-3" tabindex="-1"></a><span class="fu">typeof</span>(num) <span class="co"># 1 is in quotes - so classified as a char</span></span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="chapter-2-data-types-and-structures.html#cb6-1" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb6-2"><a href="chapter-2-data-types-and-structures.html#cb6-2" tabindex="-1"></a><span class="fu">typeof</span>(num) <span class="co"># without the quotes</span></span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="chapter-2-data-types-and-structures.html#cb8-1" tabindex="-1"></a><span class="co"># logical </span></span>
+<span id="cb8-2"><a href="chapter-2-data-types-and-structures.html#cb8-2" tabindex="-1"></a>log <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb8-3"><a href="chapter-2-data-types-and-structures.html#cb8-3" tabindex="-1"></a><span class="fu">typeof</span>(log)</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p>To demonstrate a logical, a good example of their use is to check a condition and run a script. I’ll use <code>if</code> here, which we cover in the next chapter.</p>
+<details>
+<summary>
+<strong>Examples:</strong>
+</summary>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="chapter-2-data-types-and-structures.html#cb10-1" tabindex="-1"></a><span class="co"># TRUE</span></span>
+<span id="cb10-2"><a href="chapter-2-data-types-and-structures.html#cb10-2" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb10-3"><a href="chapter-2-data-types-and-structures.html#cb10-3" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb10-4"><a href="chapter-2-data-types-and-structures.html#cb10-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb10-5"><a href="chapter-2-data-types-and-structures.html#cb10-5" tabindex="-1"></a>}</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;run_script is TRUE&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="chapter-2-data-types-and-structures.html#cb12-1" tabindex="-1"></a>run_script <span class="ot">=</span> T</span>
+<span id="cb12-2"><a href="chapter-2-data-types-and-structures.html#cb12-2" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb12-3"><a href="chapter-2-data-types-and-structures.html#cb12-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb12-4"><a href="chapter-2-data-types-and-structures.html#cb12-4" tabindex="-1"></a>}</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;run_script is TRUE&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="chapter-2-data-types-and-structures.html#cb14-1" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb14-2"><a href="chapter-2-data-types-and-structures.html#cb14-2" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb14-3"><a href="chapter-2-data-types-and-structures.html#cb14-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb14-4"><a href="chapter-2-data-types-and-structures.html#cb14-4" tabindex="-1"></a>}</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;run_script is 1&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="chapter-2-data-types-and-structures.html#cb16-1" tabindex="-1"></a><span class="co"># FALSE</span></span>
+<span id="cb16-2"><a href="chapter-2-data-types-and-structures.html#cb16-2" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="cn">FALSE</span></span>
+<span id="cb16-3"><a href="chapter-2-data-types-and-structures.html#cb16-3" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb16-4"><a href="chapter-2-data-types-and-structures.html#cb16-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb16-5"><a href="chapter-2-data-types-and-structures.html#cb16-5" tabindex="-1"></a>}</span>
+<span id="cb16-6"><a href="chapter-2-data-types-and-structures.html#cb16-6" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="chapter-2-data-types-and-structures.html#cb16-7" tabindex="-1"></a>run_script <span class="ot">=</span> F</span>
+<span id="cb16-8"><a href="chapter-2-data-types-and-structures.html#cb16-8" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb16-9"><a href="chapter-2-data-types-and-structures.html#cb16-9" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb16-10"><a href="chapter-2-data-types-and-structures.html#cb16-10" tabindex="-1"></a>}</span>
+<span id="cb16-11"><a href="chapter-2-data-types-and-structures.html#cb16-11" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="chapter-2-data-types-and-structures.html#cb16-12" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb16-13"><a href="chapter-2-data-types-and-structures.html#cb16-13" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb16-14"><a href="chapter-2-data-types-and-structures.html#cb16-14" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb16-15"><a href="chapter-2-data-types-and-structures.html#cb16-15" tabindex="-1"></a>}</span></code></pre></div>
+</details>
+<p>Above, we set the variables deliberately to demonstrate how they can be used. However, they don’t need to be deliberately set to be useful.</p>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="chapter-2-data-types-and-structures.html#cb17-1" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb17-2"><a href="chapter-2-data-types-and-structures.html#cb17-2" tabindex="-1"></a><span class="fu">typeof</span>(a)</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="chapter-2-data-types-and-structures.html#cb19-1" tabindex="-1"></a><span class="fu">is.numeric</span>(a)</span></code></pre></div>
+</details>
+<pre><code>## [1] TRUE</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="chapter-2-data-types-and-structures.html#cb21-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">is.numeric</span>(a))</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="chapter-2-data-types-and-structures.html#cb23-1" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">is.numeric</span>(a)){</span>
+<span id="cb23-2"><a href="chapter-2-data-types-and-structures.html#cb23-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is numeric.&quot;</span>))</span>
+<span id="cb23-3"><a href="chapter-2-data-types-and-structures.html#cb23-3" tabindex="-1"></a>}</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;The variable a (3) is numeric.&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="chapter-2-data-types-and-structures.html#cb25-1" tabindex="-1"></a>a<span class="ot">=</span><span class="st">&quot;3&quot;</span></span>
+<span id="cb25-2"><a href="chapter-2-data-types-and-structures.html#cb25-2" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">is.numeric</span>(a)){</span>
+<span id="cb25-3"><a href="chapter-2-data-types-and-structures.html#cb25-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is numeric. Continuing the analysis.&quot;</span>))</span>
+<span id="cb25-4"><a href="chapter-2-data-types-and-structures.html#cb25-4" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb25-5"><a href="chapter-2-data-types-and-structures.html#cb25-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is &quot;</span>, <span class="fu">typeof</span>(a), <span class="st">&quot;. Not continuing the analysis.&quot;</span>))</span>
+<span id="cb25-6"><a href="chapter-2-data-types-and-structures.html#cb25-6" tabindex="-1"></a>}</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;The variable a (3) is character. Not continuing the analysis.&quot;</code></pre>
+</details>
+<p><wimr></p>
+</div>
+<div id="data-structures" class="section level2 hasAnchor">
+<h2>Data Structures<a href="chapter-2-data-types-and-structures.html#data-structures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data types can be organised into structures. These are:</p>
+<ul>
+<li><p><strong>vectors</strong>: A vector is a collection of data, such as c(1990, 1990, 1991, 1989) or c(“Rou”, “Chris”, “Rory”, “Rob”)</p></li>
+<li><p><strong>matrix</strong>: A matrix is data organised into rows and columns. Data in a matrix is only of one data type.</p></li>
+<li><p><strong>data frames</strong>: A data frame is similar to a matrix, but can contain different data types.</p></li>
+<li><p><strong>lists</strong>: A list is dynamic and can hold all different types of data structures and data types.</p></li>
+</ul>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="chapter-2-data-types-and-structures.html#cb27-1" tabindex="-1"></a>yr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1990</span>, <span class="dv">1990</span>, <span class="dv">1991</span>, <span class="dv">1989</span>)</span>
+<span id="cb27-2"><a href="chapter-2-data-types-and-structures.html#cb27-2" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Rou&quot;</span>, <span class="st">&quot;Chris&quot;</span>, <span class="st">&quot;Rory&quot;</span>, <span class="st">&quot;Rob&quot;</span>)</span>
+<span id="cb27-3"><a href="chapter-2-data-types-and-structures.html#cb27-3" tabindex="-1"></a>rating <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb27-4"><a href="chapter-2-data-types-and-structures.html#cb27-4" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="chapter-2-data-types-and-structures.html#cb27-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">year =</span> yr, </span>
+<span id="cb27-6"><a href="chapter-2-data-types-and-structures.html#cb27-6" tabindex="-1"></a>                 <span class="at">names =</span> name, </span>
+<span id="cb27-7"><a href="chapter-2-data-types-and-structures.html#cb27-7" tabindex="-1"></a>                 <span class="at">ratings =</span> rating)</span>
+<span id="cb27-8"><a href="chapter-2-data-types-and-structures.html#cb27-8" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="chapter-2-data-types-and-structures.html#cb27-9" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="chapter-2-data-types-and-structures.html#cb27-10" tabindex="-1"></a>df</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings
+## 1 1990   Rou       4
+## 2 1990 Chris       4
+## 3 1991  Rory       4
+## 4 1989   Rob       5</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="chapter-2-data-types-and-structures.html#cb29-1" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code></pre></div>
+</details>
+<pre><code>## [1] 4 3</code></pre>
+<p>We can see this dataframe is 4 rows tall and 3 columns wide.</p>
+<div class="hint-info">
+<p>We can access information in a dataframe using: <code>df[row, col]</code></p>
+</div>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="chapter-2-data-types-and-structures.html#cb31-1" tabindex="-1"></a>df[<span class="dv">1</span>,<span class="dv">1</span>]</span></code></pre></div>
+</details>
+<pre><code>## [1] 1990</code></pre>
+<div class="hint-info">
+<p>With data frames, we can also use <code>$</code> to query a specific column.</p>
+</div>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="chapter-2-data-types-and-structures.html#cb33-1" tabindex="-1"></a>df<span class="sc">$</span>names</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;</code></pre>
+<details>
+<summary>
+<strong>More examples:</strong>
+</summary>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="chapter-2-data-types-and-structures.html#cb35-1" tabindex="-1"></a><span class="co"># show all rows in certain columns</span></span>
+<span id="cb35-2"><a href="chapter-2-data-types-and-structures.html#cb35-2" tabindex="-1"></a>df[,<span class="dv">1</span>]</span></code></pre></div>
+</details>
+<pre><code>## [1] 1990 1990 1991 1989</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="chapter-2-data-types-and-structures.html#cb37-1" tabindex="-1"></a>df[,<span class="st">&quot;names&quot;</span>]</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="chapter-2-data-types-and-structures.html#cb39-1" tabindex="-1"></a><span class="co"># show all columns in one row</span></span>
+<span id="cb39-2"><a href="chapter-2-data-types-and-structures.html#cb39-2" tabindex="-1"></a>df[<span class="dv">1</span>,]</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings
+## 1 1990   Rou       4</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="chapter-2-data-types-and-structures.html#cb41-1" tabindex="-1"></a><span class="co"># show select columns by providing a vector of specific indices</span></span>
+<span id="cb41-2"><a href="chapter-2-data-types-and-structures.html#cb41-2" tabindex="-1"></a>df[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
+</details>
+<pre><code>##   year ratings
+## 1 1990       4
+## 2 1990       4
+## 3 1991       4
+## 4 1989       5</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="chapter-2-data-types-and-structures.html#cb43-1" tabindex="-1"></a><span class="co"># provide a range of indices quickly using colon between numbers. e.g. 1 to 2</span></span>
+<span id="cb43-2"><a href="chapter-2-data-types-and-structures.html#cb43-2" tabindex="-1"></a>df[,<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)] </span></code></pre></div>
+</details>
+<pre><code>##   year names
+## 1 1990   Rou
+## 2 1990 Chris
+## 3 1991  Rory
+## 4 1989   Rob</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="chapter-2-data-types-and-structures.html#cb45-1" tabindex="-1"></a><span class="co"># instead of using indices to pull information, we can use logic</span></span>
+<span id="cb45-2"><a href="chapter-2-data-types-and-structures.html#cb45-2" tabindex="-1"></a>df[<span class="fu">c</span>(T,T,F,T),]</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings
+## 1 1990   Rou       4
+## 2 1990 Chris       4
+## 4 1989   Rob       5</code></pre>
+</details>
+<p>We can do a lot with a data frame if we combine everything we know about data types and structures</p>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="chapter-2-data-types-and-structures.html#cb47-1" tabindex="-1"></a><span class="co"># store a row or column as a new object</span></span>
+<span id="cb47-2"><a href="chapter-2-data-types-and-structures.html#cb47-2" tabindex="-1"></a>patient_1 <span class="ot">=</span> df[<span class="dv">1</span>,]</span>
+<span id="cb47-3"><a href="chapter-2-data-types-and-structures.html#cb47-3" tabindex="-1"></a>patient_1</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings
+## 1 1990   Rou       4</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="chapter-2-data-types-and-structures.html#cb49-1" tabindex="-1"></a><span class="co"># return a logical vector based on a query</span></span>
+<span id="cb49-2"><a href="chapter-2-data-types-and-structures.html#cb49-2" tabindex="-1"></a>df<span class="sc">$</span>names <span class="sc">==</span> <span class="st">&quot;Rou&quot;</span></span></code></pre></div>
+</details>
+<pre><code>## [1]  TRUE FALSE FALSE FALSE</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="chapter-2-data-types-and-structures.html#cb51-1" tabindex="-1"></a><span class="co"># and add this to a new column</span></span>
+<span id="cb51-2"><a href="chapter-2-data-types-and-structures.html#cb51-2" tabindex="-1"></a>df<span class="sc">$</span>is_rou <span class="ot">&lt;-</span> df<span class="sc">$</span>names <span class="sc">==</span> <span class="st">&quot;Rou&quot;</span></span>
+<span id="cb51-3"><a href="chapter-2-data-types-and-structures.html#cb51-3" tabindex="-1"></a>df</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings is_rou
+## 1 1990   Rou       4   TRUE
+## 2 1990 Chris       4  FALSE
+## 3 1991  Rory       4  FALSE
+## 4 1989   Rob       5  FALSE</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="chapter-2-data-types-and-structures.html#cb53-1" tabindex="-1"></a><span class="co"># With a large dataframe, we might not know the specific indices we want to see or store, </span></span>
+<span id="cb53-2"><a href="chapter-2-data-types-and-structures.html#cb53-2" tabindex="-1"></a><span class="co">#  so we could cut a dataframe or pull information based on certain logic</span></span>
+<span id="cb53-3"><a href="chapter-2-data-types-and-structures.html#cb53-3" tabindex="-1"></a>df[df<span class="sc">$</span>names<span class="sc">==</span><span class="st">&quot;Rou&quot;</span>,]</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings is_rou
+## 1 1990   Rou       4   TRUE</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="chapter-2-data-types-and-structures.html#cb55-1" tabindex="-1"></a>df[df<span class="sc">$</span>ratings<span class="sc">&lt;</span><span class="dv">5</span>,]</span></code></pre></div>
+</details>
+<pre><code>##   year names ratings is_rou
+## 1 1990   Rou       4   TRUE
+## 2 1990 Chris       4  FALSE
+## 3 1991  Rory       4  FALSE</code></pre>
+<p>When working with enormous data structures, like single cell sequencing or proteomics data, knowing how to query your data frame or matrix will be very useful!</p>
+<p>Finally, we can make a list out of all of these different data types and structures,</p>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="chapter-2-data-types-and-structures.html#cb57-1" tabindex="-1"></a>list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;number&quot;</span> <span class="ot">=</span> <span class="dv">1</span>, </span>
+<span id="cb57-2"><a href="chapter-2-data-types-and-structures.html#cb57-2" tabindex="-1"></a>             <span class="st">&quot;string&quot;</span> <span class="ot">=</span> <span class="st">&quot;string&quot;</span>,</span>
+<span id="cb57-3"><a href="chapter-2-data-types-and-structures.html#cb57-3" tabindex="-1"></a>             <span class="st">&quot;logical&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>,</span>
+<span id="cb57-4"><a href="chapter-2-data-types-and-structures.html#cb57-4" tabindex="-1"></a>             <span class="st">&quot;vector&quot;</span> <span class="ot">=</span> name, </span>
+<span id="cb57-5"><a href="chapter-2-data-types-and-structures.html#cb57-5" tabindex="-1"></a>             <span class="st">&quot;dataframe&quot;</span> <span class="ot">=</span> df)</span>
+<span id="cb57-6"><a href="chapter-2-data-types-and-structures.html#cb57-6" tabindex="-1"></a>list</span></code></pre></div>
+</details>
+<pre><code>## $number
+## [1] 1
+## 
+## $string
+## [1] &quot;string&quot;
+## 
+## $logical
+## [1] TRUE
+## 
+## $vector
+## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;  
+## 
+## $dataframe
+##   year names ratings is_rou
+## 1 1990   Rou       4   TRUE
+## 2 1990 Chris       4  FALSE
+## 3 1991  Rory       4  FALSE
+## 4 1989   Rob       5  FALSE</code></pre>
+<details>
+<summary>
+<strong>Ways to query your list</strong>
+</summary>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="chapter-2-data-types-and-structures.html#cb59-1" tabindex="-1"></a>list[[<span class="dv">1</span>]]</span></code></pre></div>
+</details>
+<pre><code>## [1] 1</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="chapter-2-data-types-and-structures.html#cb61-1" tabindex="-1"></a>list[[<span class="st">&quot;vector&quot;</span>]]</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="chapter-2-data-types-and-structures.html#cb63-1" tabindex="-1"></a>list<span class="sc">$</span>string</span></code></pre></div>
+</details>
+<pre><code>## [1] &quot;string&quot;</code></pre>
+<e>
+</details>
+<p><wimr></p>
+</div>
+<div id="importing-and-saving-files-in-r" class="section level2 hasAnchor">
+<h2>Importing and saving files in R<a href="chapter-2-data-types-and-structures.html#importing-and-saving-files-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most file types can be read into R. If you’re not working with xlsx or csv, you might be working with tsv, txt, h5ad, or xml. Some are easier than others, and you’ll learn them as you go.</p>
+<p>Another file type is <strong>RDS</strong> which is R Data Serialization which is the easiest and most efficient way to read and write data once you’ve got it in R.</p>
+<div class="hint-info">
+<p><strong>RDS</strong> is more efficient than <em>csv</em> because saving and writing a csv is not as standard as you think. For example, a column name might change, rownames don’t stick unless directly specified when reading it back in. <br><br>
+On the other hand, <strong>saveRDS()</strong> &amp; <strong>readRDS()</strong> requires no extra information. Your data will be identical when read back in.</p>
+</div>
+<p>Most commonly, you’ll use <code>data &lt;- read.csv()</code> or <code>data &lt;- readRDS()</code>.</p>
+<p>To read in excel files, you’ll need to install a package (try the packages <code>xlsx</code> for <code>read.xlsx()</code>, or <code>readxl</code> for <code>read_excel()</code> - I can’t recall why, but sometimes one of these won’t work).</p>
+<p>Throughout these tutorials, you’ll use <code>read.csv()</code> to read in the example data we downloaded in Chapter 1. We’ll then finish each tutorial with <code>saveRDS()</code> and begin the next tutorial with <code>readRDS()</code>. This is a nice and organised way that you may use yourself when analysing data. This is effectively having stop and start points.</p>
+<p><wimr></p>
+<p><a href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-3-basic-programming.html">Next chapter →</a></p>
+<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;">
+
+</div>
+
+</div>
+</div>
+<div class="custom-footer">
+  <div class="footer-left" style="width: 30%; float: centre">
+    <img src="assets/footer/footer1.png" alt="wimr-logo">
+  </div>
+  <div class="footer-center">
+    <p><strong>Site Creators</strong><br>
+      Thomas O'Neil<br>
+      Harry Robertson<br>
+      <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
+    </p>
+  </div>
+  <div class="footer-right" style="width: 30%; float: centre">
+    <img src="assets/footer/footer2.png" alt="usyd-logo">
+  </div>
+</div>
+<div class="footer-updated">
+  <p>This site was last updated</p>
+  <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter-1-getting-started-in-r-and-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter-3-basic-programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

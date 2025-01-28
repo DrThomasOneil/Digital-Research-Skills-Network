@@ -55,14 +55,14 @@ By now, you've heard of and seen **RStudio**. RStudio is what's called an *Integ
 
 ## Installing R and RStudio
 
-Install R first. Go to [CRAN](https://cran.csiro.au/), download the latest version of R and follow the prompts to install on your computer.
+**Install R first.** Go to [CRAN](https://cran.csiro.au/), download the latest version of R and follow the prompts to install on your computer.
 <div class="hint-info">  
 **You don't need to do anything else with the R application!**
 </div>
 
-Next install RStudio. Go to the [download page](https://posit.co/download/rstudio-desktop/) and follow the prompts to install on your computer. Once installed, open RStudio—it should automatically connect to your R installation.
+**Next install RStudio.** Go to the [download page](https://posit.co/download/rstudio-desktop/) and follow the prompts to install on your computer. Once installed, open RStudio—it should automatically connect to your R installation.
 
-<wimr>
+<br><wimr>
 
 ## Navigating RStudio
 
@@ -104,10 +104,10 @@ Use projects to keep analyses organized and reproducible.
 
 <wimr>
 
-## Functions and Packages
+## Using R
 
 <div class="hint-warning">  
-It might feel like we're moving too quickly through some of this. **Don't worry!** The next two chapters will go into variables, data structures, functions and so on in more details using mock data.
+It might feel like we're moving too quickly through some of this. **Don't worry!** The next few chapters will go into variables, data structures, functions and so on in more details using mock data.
 </div>
 
 
@@ -168,7 +168,11 @@ paste("There are ", num_cd45, " CD45+ cells and ", num_cd3, " CD3+ cells (", per
 
 I would have several samples to calculate these for, and I don't want to repeat these lines of code *n* times! We could write this into our own function (I will demonstrate how to do this in a future lesson) or hopefully someone has already done this.
 
-Lets pretend someone has already solved this issue. They've written the functions that we want and published them as **package** called `simple_math`. We can install this package and have access to the functions.
+<div class="hint-warning">  
+**Lets pretend...**
+</div>
+
+...someone has already solved this issue. They've written the functions that we want and published them as **package** called `simple_math`. We would install this package and have access to the functions.
 
 ```{r, eval=F}
 # install the package
@@ -187,12 +191,11 @@ You can manually search for your packages in RStudio in the **Packages** tab on 
 library(simple_math)
 ```
 
-Now that `simple_math` is loaded into our session, we can use the functions. This is what the function might look like:
-
 <div class="hint-info">  
-You will need to load packages into your R sessions everytime you restart R
+You will need to load packages into your R sessions every time you restart R
 </div>
 
+Now that `simple_math` is loaded into our session, we could use the functions within the package. This is what the function might look like:
 
 ```{r, include=F}
 calculate_percent <- function(parent,
@@ -447,6 +450,6 @@ Congratulations! You've completed **Chapter 1**. You now have R and RStudio inst
 
 In the next two chapters, I will use this data to explain more about the fundamentals of R.
 
-[Next Chapeer →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-2-data-types-and-structures.html)
+[Next Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-2-data-types-and-structures.html)
 
 <div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>

@@ -1,6 +1,6 @@
 
 
-# Reproducible Reports with RMarkdown
+# Chapter 8: Reproducible Reports with RMarkdown
 
 <hint-text><strong>*Content coming soon!*</strong></hint-text>
 

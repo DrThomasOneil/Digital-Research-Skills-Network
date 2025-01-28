@@ -1,6 +1,7 @@
 ---
 title: "Introduction to R and analytic Programming"
 date: "2024-12-23 (Last update: `r Sys.Date()`)"
+author: "Yuchen Li & Thomas O'Neil"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -64,11 +65,7 @@ github-repo: DrThomasOneil/analysis-user-group
  
 This is the sub-repository containing the tutorials and workshop notes for the introduction to R and analytic programming. 
 
-A mock dataset will be provided, which is an example of summarised flow cytometry data, containing mock batches, patients, samples and measurements like percentage of subsets/MFIs. I generated this by randomising around the general trends that I've observed in my actual real flow cytometry data, and wanted to do this in order to provide actual data you might find yourself using along the way. 
-
-In this book, you'll find 11 sessions:
-
-- Manual to programming tools: Transitioning from manual analysis to programming
+[Get started →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/introduction.html)
 
 
 ```{r include=F}
@@ -93,8 +90,8 @@ In this book, you'll find 11 sessions:
 bookdown::render_book() 
 ```
 
-```{r, echo=F, eval=FALSE}
-servr::daemon_stop(1)
+```{r, echo=F, eval=FALSE, include=F}
+servr::daemon_stop(3)
 bookdown::serve_book() 
 ```
 

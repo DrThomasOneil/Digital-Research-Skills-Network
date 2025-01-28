@@ -1,7 +1,0 @@
-
-
-# Mini Project - Putting it all together!
-
-<hint-text><strong>*Content coming soon!*</strong></hint-text>
-
-<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>

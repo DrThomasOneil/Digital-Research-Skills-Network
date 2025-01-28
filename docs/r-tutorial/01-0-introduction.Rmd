@@ -13,7 +13,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 
 You will not be writing code in this introduction. Here we start with trying to re-frame the way you think about and might approach **analytic programming**. I will try to speak through my own experiences and the anecdotal experiences of others who have successfully or failed to adopt programming as a skill.
 
-<read-time><i>**Read time**: 15 Minutes</i></read-time><wimr>
+<read-time><i>**Read time**: 10 Minutes</i></read-time><wimr>
 
 ## Transitioning from manual tools (e.g. Excel & Prism) to programming-based workflows in R.
 
@@ -136,9 +136,6 @@ The amount of times I simply recreated a prism file just because I'd rearranged 
 **Furthermore!** I could automate my experiment summaries. I could copy and paste that script, change the directory to a different acquisition and generate a new report with new data. You could then compile those experiment summaries into a markdown *book* similar to the one you are reading from now! 
 
 This as an advantage of programming > manual analysis would be enough on its own for me. It has undoubtedly made me more efficient in more than just the lab. I am much more detail-oriented and am able to communicate and share my data and processes more effectively using these skills. 
-
-## Summary
-
 
 
 <e>
