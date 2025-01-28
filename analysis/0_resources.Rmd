@@ -6,10 +6,9 @@ output:
 ---
 
 <dev class="hint-info">
-*Here I'll drop resources that I find that might be useful!*
+** I'll drop resources that I find that might be useful!**
 </dev>
 
-<e>
 
 ### Stretchly
 

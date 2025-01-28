@@ -23,7 +23,7 @@ To do:
  
 ## Welcome
 
-Welcome to the official site for the CVR Analysis User Group! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centred around biomedical research programmatic analysis. 
+Welcome to the current site for the CVR Analysis User Group! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
 
 Here, you'll find:
 
@@ -44,7 +44,8 @@ This site is organised into several sections to help you quickly find what you n
 - [**Getting Started in R:**](https://drthomasoneil.github.io/analysis-user-group/0_start.html) A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
 - [**Announcements:**](https://drthomasoneil.github.io/analysis-user-group/0_announcements.html) Updates on upcoming workshops, deadlines, and important notices.
 - [**Workshops:**](https://drthomasoneil.github.io/analysis-user-group/0_workshops.html) Detailed instructions, scripts, and examples for each workshop session.
-- [**Extra Resources:**](https://drthomasoneil.github.io/analysis-user-group/0_cresources.html) Links to helpful tutorials, data sets, and cheat sheets. 
+- [**Extra Resources:**](https://drthomasoneil.github.io/analysis-user-group/0_resources.html) Links to helpful tutorials, data sets, and cheat sheets. 
+- [**Contacts:**](https://drthomasoneil.github.io/analysis-user-group/0_contacts.html) Acknowledge who contributed to these workshops! :) 
 
 We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/analysis-user-group/0_contacts.html).
 
@@ -68,44 +69,114 @@ You'll also see graphics like this throughout that emphasis
 <div class="hint-practice">
 **Practice you should try before moving on**
 </div>
-<div class="hint-terminology">
-**Important Termimology**
-</div>
+
 <wimr>
 
-## Schedule (2025){.tabset .tabset-fade}
+## Schedule (2025)
+
+### **Planned workshops:**
+
+**Transcriptomics**
+
+- Single cell RNA sequencing: Introduction (*TBD*)
+
+- Single cell RNA sequencing: Intermediate (*TBD*)
+
+- Spatial RNA sequencing: Visium (*TBD*)
+
+- Spatial RNA sequencing: Xenium (*TBD*)
+
+- Bulk RNA sequencing analysis (*TBD*)
+
+**Imaging**
+
+- Imaging Mass Cytometry analysis using IMComplete (*March*)
+
+- Automating imaging analysis using custom macros (*TBD*)
+
+**Flow Cytometry**
+
+- Spectre R package for flow analysis
+
+- Spectre R package: Integration
+
+- Analysing Summarised flow cytometry data in R
+
+**Other**
+
+- Machine Learning in R (*TBD*)
+
+### **Planned Presentations:**
+
+- IMComplete: Imaging Mass Cytometry workflow (*March*)
+
+- Qupath vs ImageJ (*February*)
+
+### **Planned How-To tutorials:**
+
+- **Using bookdown**: Create a workflow or lab book
+
+- **Using Github**: Host your data/analysis online
+
+- **Create a github.io site**: Like this! A personal CV website to showcase your analysis.
+
+- **RShiny**: Create interactive apps for data analysis/input
+
+- **Enhancing your R skills**: Creating functions and packages to improve workflows and/or share your techniques
+
+
 
 <div class="tab-content">
-
-### Summary
-
-If you are new analytic programming, please use this time to get familiar with R (**See:** [*Getting Started in R*](https://drthomasoneil.github.io/analysis-user-group/0_start.html)).
 
 ### Jan
 
 - *No workshops planned*. 
 
+- If you are new analytic programming, please use this time to get familiar with R (**See:** [*Getting Started in R*](https://drthomasoneil.github.io/analysis-user-group/0_start.html)).
+
 ### Feb
+
+- **Presentation**: Qupath vs ImageJ
 
 ### Mar
 
+- *TBD*
+
 ### Apr
+
+- *TBD*
 
 ### May
 
+- *TBD*
+
 ### Jun
+
+- *TBD*
 
 ### Jul
 
+- *TBD*
+
 ### Aug
+
+- *TBD*
 
 ### Sep
 
+- *TBD*
+
 ### Oct
+
+- *TBD*
 
 ### Nov
 
+- *TBD*
+
 ### Dec
+
+- *TBD*
 
 </div>
 
@@ -118,9 +189,9 @@ There are a lot of extra people to thank for contributing, motivating and helpin
 - Oscar Dong
 - Yuchen Li
 - Elizabeth Dunn
+- Erin Coll
 - Heeva Baharlou
-- Alex Qin
-- Farhan Ameen
+- Farhan Ameen 🌟
 
 
 

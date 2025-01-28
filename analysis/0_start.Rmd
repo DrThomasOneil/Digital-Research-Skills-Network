@@ -20,13 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 ```
 
-This 10-session workshop series is designed to introduce users to R programming with a focus on bioinformatics workflows and reproducibility. It emphasizes the mindset shift required to transition from manual tools like Excel to programmatic data analysis.
+This 10-chapter workshop series is designed to introduce users to R programming with a focus on bioinformatics workflows and reproducibility. It emphasizes the mindset shift required to transition from manual tools like Excel to programmatic data analysis.
 
-[Start Tutorial →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/index.html)
+<read-time><i>**Estimated time**: 1.5 hours</i></read-time><wimr>
+
+[Start the Tutorial →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/index.html)
 
 <wimr>
 
-## **Session 0: What Is Programming? Shifting Mindsets**
+## **Introduction: Shifting mindsets to programming**
 
 <div class="hint-goals">    
 **Goals:**    
@@ -42,153 +44,133 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 <wimr>
 
 ## **Chapter 1: Getting Started with R and RStudio**
-**Goal:** Set up R and RStudio, and get familiar with the interface.
 
-- Installing R and RStudio.
-- Exploring the interface – Console, Environment, Scripts.
-- Setting up a project.
-- Installing and loading packages.
+<div class="hint-goals">  
+**Goals:**  
+Set up R and RStudio, and get familiar with the interface.    
+&nbsp;&nbsp;&#8226; Understand what a programming language *is*.    
+&nbsp;&nbsp;&#8226; Know the difference between R, RStudio and python.     
+&nbsp;&nbsp;&#8226; Install R and RStudio.   
+&nbsp;&nbsp;&#8226; Exploring the interface – Console, Environment, Scripts.    
+&nbsp;&nbsp;&#8226; Installing and loading packages.    
+&nbsp;&nbsp;&#8226; Start your first project.   
+</div>
 
-**Practice:**
-- Create and save an R script.
-- Install and load a package (e.g., `tidyverse`).
-
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-R-and-RStudio.html)
+[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-r-and-rstudio.html)
 
 <wimr>
 
 ## **Chapter 2: Data Types and Structures**
-**Goal:** Learn about data types and structures in R.
 
-- Basic data types: numeric, character, logical.
-- Data structures: vectors, matrices, data frames, lists.
-- Importing data (Excel and CSV files).
-- Viewing and summarizing data.
-
-**Practice:**
-- Load flow cytometry data and explore structure.
-- Create and index vectors and data frames.
+<div class="hint-goals">  
+**Goals:**  
+Learn about data types and structures in R.   
+&nbsp;&nbsp;&#8226; Basic data types: numeric, character, logical.      
+&nbsp;&nbsp;&#8226; Data structures: vectors, matrices, data frames, lists.   
+&nbsp;&nbsp;&#8226; Assessing and querying data types and structures.   
+&nbsp;&nbsp;&#8226; Importing data (RDS, Excel, CSV files).  
+</div>
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-2-data-types-and-structures.html)
 
 <wimr>
 
-## **Chapter 3: Basic Programming and Control Structures**
-**Goal:** Understand programming logic for automating tasks.
+## **Chapter 3: Basic Programming**
 
-- Variables and assignments.
-- Conditional statements (`if`, `else`).
-- Loops (`for`, `while`).
-- Writing functions.
-
-**Practice:**
-- Write functions to calculate percentages dynamically.
-- Automate filtering tasks.
+<div class="hint-goals">      
+**Goals:**     
+Understand programming logic for automating tasks.   
+&nbsp;&nbsp;&#8226; Variables and assignments.    
+&nbsp;&nbsp;&#8226; Conditional statements (`if`, `else`).    
+&nbsp;&nbsp;&#8226; Loops (`for`, `while`).   
+&nbsp;&nbsp;&#8226; Writing functions.    
+</div>
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-3-basic-programming.html)
 
 <wimr>
 
-## **Chapter 4: Data Manipulation with `dplyr`**
-**Goal:** Introduce `dplyr` for filtering, mutating, and summarizing data.
+## **Chapter 4: Data Manipulation with `tidyverse`**
 
-- Filtering rows (`filter()`), selecting columns (`select()`).
-- Adding new columns (`mutate()`).
-- Grouping and summarizing (`group_by()` + `summarize()`).
+<div class="hint-goals">      
+**Goals:**     
+Introduce `tidyverse` for filtering, mutating, summarizing and pivoting data.    
+&nbsp;&nbsp;&#8226; Filtering rows (`filter()`), selecting columns (`select()`). 
+&nbsp;&nbsp;&#8226; Adding new columns (`mutate()`).
+&nbsp;&nbsp;&#8226; Grouping and summarizing (`group_by()` + `summarize()`).
+&nbsp;&nbsp;&#8226; Pivot longer and Pivot wider   
+</div>
 
-**Practice:**
-- Calculate proportions for CD4/CD8 populations.
-- Add calculated columns for analysis.
-
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-dplyr.html)
+[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-tidyverse.html)
 
 <wimr>
 
 ## **Chapter 5: Visualization with `ggplot2` – Part 1**
-**Goal:** Create and customize visualizations.
 
-- Basics of `ggplot2` – scatter, bar, and boxplots.
-- Customizing labels, themes, and colors.
-
-**Practice:**
-- Visualize CD4 vs CD8 proportions.
-- Add colors and themes.
+<div class="hint-goals">      
+**Goals:**     
+Create and customize visualizations using `ggplot2`.    
+&nbsp;&nbsp;&#8226; Basics of `ggplot2`   
+&nbsp;&nbsp;&#8226; Make a scatterplot, boxplot and column graph    
+&nbsp;&nbsp;&#8226; Customise labels, themes, and colors.   
+</div>
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-5-data-visualisation-with-ggplot2.html)
 
 <wimr>
 
 ## **Chapter 6: Advanced Visualization with `ggplot2` – Part 2**
-**Goal:** Learn advanced visualization techniques.
 
-- Faceting and small multiples.
-- Combining plots (grid layouts).
-- Saving high-resolution plots.
+<div class="hint-goals">      
+**Goals:**     
+Learn additional visualisation techniques.    
+&nbsp;&nbsp;&#8226; Adjusting theme elements    
+&nbsp;&nbsp;&#8226; Annotating the plots     
+&nbsp;&nbsp;&#8226; facet_wrap() and grid_plot()    
+&nbsp;&nbsp;&#8226; Savings plots   
+</div>
 
-**Practice:**
-- Create faceted boxplots for subsets.
-- Export plots for reports.
-
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-6-advanced-data-visualisation-with-ggplot2.html)
+[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-6-data-visualisation-with-ggplot2_2.html)
 
 <wimr>
 
 ## **Chapter 7: Statistical Analysis**
-**Goal:** Understand descriptive and inferential statistics.
 
-- Descriptive statistics: mean, median, mode.
-- Hypothesis testing (t-tests, ANOVA).
-- Correlation and regression.
-
-**Practice:**
-- Test differences in CD4 proportions.
-- Perform correlation analysis.
+<div class="hint-goals">      
+**Goals:**     
+Apply simple statistic to the synthetic data.    
+&nbsp;&nbsp;&#8226; Descriptive statistics: mean, median, mode.     
+&nbsp;&nbsp;&#8226; Hypothesis testing (t-tests, ANOVA).    
+&nbsp;&nbsp;&#8226; Correlation and regression.       
+</div>
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-7-statistical-analysis.html)
 
 <wimr>
 
 ## **Chapter 8: Reproducible Reports with RMarkdown**
-**Goal:** Build dynamic and shareable reports.
 
-- Introduction to RMarkdown.
-- Combining text, code, and visuals.
-- Exporting to PDF and HTML.
+<hint-text><strong>*Content coming soon!*</strong></hint-text>
 
-**Practice:**
-- Create a report summarizing flow cytometry data.
-- Embed visualizations and tables.
+<div class="hint-goals">      
+**Goals:**     
+Build a dynamic and shareable report of your analysis.    
+&nbsp;&nbsp;&#8226; Introduction to RMarkdown.   
+&nbsp;&nbsp;&#8226; Combining text, code, and visuals.    
+&nbsp;&nbsp;&#8226; Generate tables with knitr.       
+&nbsp;&nbsp;&#8226; Editing the yaml for additional customisations.       
+&nbsp;&nbsp;&#8226; Exporting to PDF and HTML.    
+</div>
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-8-reproducible-reports-with-rmarkdown.html)
 
 <wimr>
 
-## **Chapter 9: Mini Project – Putting It All Together**
-**Goal:** Apply skills to a complete workflow.
+## **Conclusions**
 
-**Practice:**
-- Load and clean data.
-- Summarize and visualize trends.
-- Run tests and compile everything into a report.
+[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/conclusions.html)
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-9-mini-project-putting-it-all-together.html)
 
-<wimr>
-
-## **Chapter 10: Troubleshooting and Workflow Design**
-**Goal:** Teach debugging strategies and workflow optimization.
-
-- Debugging errors and warnings.
-- Writing modular scripts (functions).
-- Organizing larger projects.
-- Brief intro to Git/GitHub for version control.
-
-**Practice:**
-- Debug a script with errors.
-- Restructure code for reusability.
-
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-10-troubleshooting-and-workflow-design.html)
-
-<wimr>
+<e>
 
 
