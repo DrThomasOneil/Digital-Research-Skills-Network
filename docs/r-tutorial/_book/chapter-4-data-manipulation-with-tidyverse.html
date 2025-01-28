@@ -243,18 +243,18 @@ Introduce <code>tidyverse</code> for filtering, mutating, summarizing and pivoti
 <h2>Why use tidyverse<a href="chapter-4-data-manipulation-with-tidyverse.html#why-use-tidyverse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you wanted to just analyse a portion of your data, you could just subset the data frame.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb65-1" tabindex="-1"></a>abdo <span class="ot">&lt;-</span> data[data<span class="sc">$</span>tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>,] <span class="co"># select only the rows where tissue contains Abdomen</span></span>
-<span id="cb65-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb65-2" tabindex="-1"></a><span class="fu">mean</span>(abdo<span class="sc">$</span>CCR5_MFI)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-1" tabindex="-1"></a>abdo <span class="ot">&lt;-</span> data[data<span class="sc">$</span>tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>,] <span class="co"># select only the rows where tissue contains Abdomen</span></span>
+<span id="cb87-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-2" tabindex="-1"></a><span class="fu">mean</span>(abdo<span class="sc">$</span>CCR5_MFI)</span></code></pre></div>
 </details>
 <pre><code>## [1] 4729.088</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb67-1" tabindex="-1"></a>abdo_epi <span class="ot">&lt;-</span> abdo[abdo<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>,]</span>
-<span id="cb67-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb67-2" tabindex="-1"></a>abdo_um <span class="ot">&lt;-</span> abdo[abdo<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Underlying&quot;</span>,]</span>
-<span id="cb67-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb67-3" tabindex="-1"></a><span class="fu">mean</span>(abdo_epi<span class="sc">$</span>CCR5_MFI)</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb89-1" tabindex="-1"></a>abdo_epi <span class="ot">&lt;-</span> abdo[abdo<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>,]</span>
+<span id="cb89-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb89-2" tabindex="-1"></a>abdo_um <span class="ot">&lt;-</span> abdo[abdo<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Underlying&quot;</span>,]</span>
+<span id="cb89-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb89-3" tabindex="-1"></a><span class="fu">mean</span>(abdo_epi<span class="sc">$</span>CCR5_MFI)</span></code></pre></div>
 </details>
 <pre><code>## [1] 5462.761</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb69-1" tabindex="-1"></a><span class="fu">mean</span>(abdo_um<span class="sc">$</span>CCR5_MFI)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb91-1" tabindex="-1"></a><span class="fu">mean</span>(abdo_um<span class="sc">$</span>CCR5_MFI)</span></code></pre></div>
 </details>
 <pre><code>## [1] 3995.416</code></pre>
 <div class="hint-warn">
@@ -264,11 +264,11 @@ Introduce <code>tidyverse</code> for filtering, mutating, summarizing and pivoti
 <p>We can remove things from the environment using <code>rm(abdo, abdo_epi, abdo_um)</code>.</p>
 <p>We could instead write long conditionals within the square brackets.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb71-1" tabindex="-1"></a><span class="fu">mean</span>(data[data<span class="sc">$</span>tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span> <span class="sc">&amp;</span> data<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>, <span class="st">&quot;CCR5_MFI&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb93-1" tabindex="-1"></a><span class="fu">mean</span>(data[data<span class="sc">$</span>tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span> <span class="sc">&amp;</span> data<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>, <span class="st">&quot;CCR5_MFI&quot;</span>])</span></code></pre></div>
 </details>
 <pre><code>## [1] 5462.761</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb73-1" tabindex="-1"></a><span class="fu">mean</span>(data[data<span class="sc">$</span>tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span> <span class="sc">&amp;</span> data<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Underlying&quot;</span>, <span class="st">&quot;CCR5_MFI&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb95-1" tabindex="-1"></a><span class="fu">mean</span>(data[data<span class="sc">$</span>tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span> <span class="sc">&amp;</span> data<span class="sc">$</span>layer <span class="sc">==</span> <span class="st">&quot;Underlying&quot;</span>, <span class="st">&quot;CCR5_MFI&quot;</span>])</span></code></pre></div>
 </details>
 <pre><code>## [1] 3995.416</code></pre>
 <p>However, you’ll find that this gets very long and confusing and annoying as you incorporate these into other functions, like ggplot.</p>
@@ -281,12 +281,12 @@ Introduce <code>tidyverse</code> for filtering, mutating, summarizing and pivoti
 <p><strong>Pipes</strong> (<code>%&gt;%</code>) are an important concept and effectively stand for “<em>using this</em>”.</p>
 <p>From the example above, we could use <code>dplyr</code> instead, without assigning any new vairables, in a nice and tidy and follwable layout. When spoken, it might read like…</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb75-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="co"># using this object, I want to...</span></span>
-<span id="cb75-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb75-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># then &quot;using this&quot; new filtered object</span></span>
-<span id="cb75-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb75-3" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb75-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb75-4" tabindex="-1"></a>  <span class="fu">select</span>(CCR5_MFI) <span class="sc">%&gt;%</span> <span class="co"># using this object, select CCR5_MFI column</span></span>
-<span id="cb75-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb75-5" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> <span class="co"># unlist to make it a vector</span></span>
-<span id="cb75-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb75-6" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="co"># and get the mean</span></span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb97-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="co"># using this object, I want to...</span></span>
+<span id="cb97-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb97-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># then &quot;using this&quot; new filtered object</span></span>
+<span id="cb97-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb97-3" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb97-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb97-4" tabindex="-1"></a>  <span class="fu">select</span>(CCR5_MFI) <span class="sc">%&gt;%</span> <span class="co"># using this object, select CCR5_MFI column</span></span>
+<span id="cb97-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb97-5" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> <span class="co"># unlist to make it a vector</span></span>
+<span id="cb97-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb97-6" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="co"># and get the mean</span></span></code></pre></div>
 </details>
 <pre><code>## [1] 5462.761</code></pre>
 <p>Now, this seems like a lot for determining one value, but we’ll see what <code>group_by()</code> and <code>summarize()</code> do shortly, which demonstrate why you might want to learn dplyr asap.</p>
@@ -296,28 +296,28 @@ Introduce <code>tidyverse</code> for filtering, mutating, summarizing and pivoti
 <h2>Adding a column using <code>mutate()</code><a href="chapter-4-data-manipulation-with-tidyverse.html#adding-a-column-using-mutate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Similarly, in previous chapters, we have added columns to the data for ease of use. For example:</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-1" tabindex="-1"></a><span class="co"># assign a new column</span></span>
-<span id="cb77-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-2" tabindex="-1"></a>data<span class="sc">$</span>percent_CD4 <span class="ot">&lt;-</span> <span class="dv">100</span><span class="sc">*</span>data<span class="sc">$</span>CD4<span class="sc">/</span>data<span class="sc">$</span>CD3</span>
-<span id="cb77-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-3" tabindex="-1"></a><span class="co"># then use dplyr to determine the mean value of Abdomen Epithelium</span></span>
-<span id="cb77-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-4" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb77-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-5" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb77-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-6" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb77-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-7" tabindex="-1"></a>  <span class="fu">select</span>(percent_CD4) <span class="sc">%&gt;%</span> </span>
-<span id="cb77-8"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-8" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb77-9"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb77-9" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-1" tabindex="-1"></a><span class="co"># assign a new column</span></span>
+<span id="cb99-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-2" tabindex="-1"></a>data<span class="sc">$</span>percent_CD4 <span class="ot">&lt;-</span> <span class="dv">100</span><span class="sc">*</span>data<span class="sc">$</span>CD4<span class="sc">/</span>data<span class="sc">$</span>CD3</span>
+<span id="cb99-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-3" tabindex="-1"></a><span class="co"># then use dplyr to determine the mean value of Abdomen Epithelium</span></span>
+<span id="cb99-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-4" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb99-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-5" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb99-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-6" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb99-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-7" tabindex="-1"></a>  <span class="fu">select</span>(percent_CD4) <span class="sc">%&gt;%</span> </span>
+<span id="cb99-8"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-8" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb99-9"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb99-9" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code></pre></div>
 </details>
 <pre><code>## [1] 43.09003</code></pre>
 <p>However, there might be hundreds of extra columns I want to make. And that means making 100 unique and descriptive column names, that then just gets more and more confusing as you add to the data.</p>
 <p>So, we can use <code>mutate()</code> instead, so that we don’t have to alter our original data.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="cb79-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3)<span class="sc">%&gt;%</span> <span class="co"># Add a new column</span></span>
-<span id="cb79-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-3" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb79-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-4" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb79-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-5" tabindex="-1"></a>  <span class="fu">select</span>(percent_CD4) <span class="sc">%&gt;%</span> </span>
-<span id="cb79-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-6" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb79-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-7" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb79-8"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb79-8" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb101-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3)<span class="sc">%&gt;%</span> <span class="co"># Add a new column</span></span>
+<span id="cb101-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-3" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">==</span> <span class="st">&quot;Abdomen&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb101-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-4" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb101-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-5" tabindex="-1"></a>  <span class="fu">select</span>(percent_CD4) <span class="sc">%&gt;%</span> </span>
+<span id="cb101-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-6" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb101-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-7" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb101-8"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb101-8" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span></code></pre></div>
 </details>
 <pre><code>## [1] 43.09</code></pre>
 <p><wimr></p>
@@ -326,22 +326,12 @@ Introduce <code>tidyverse</code> for filtering, mutating, summarizing and pivoti
 <h2><code>group_by()</code> and <code>summarize()</code><a href="chapter-4-data-manipulation-with-tidyverse.html#group_by-and-summarize" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here we’ve been writing 8 lines of code to get the mean values of one tissue type, which is useful if you wanted to do something with that exact single value. Alternatively, we can also use group_by() or summarize() to get values across multiple variables.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb81-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb81-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb81-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="cb81-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb81-3" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue, layer) <span class="sc">%&gt;%</span> <span class="co"># almost like &#39;treat the data like n-data frames per combinations of tissue and layer</span></span>
-<span id="cb81-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb81-4" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_percent_CD4 =</span> <span class="fu">mean</span>(percent_CD4)) <span class="co"># summarise in a new table</span></span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb103-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb103-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb103-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="cb103-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb103-3" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue, layer) <span class="sc">%&gt;%</span> <span class="co"># almost like &#39;treat the data like n-data frames per combinations of tissue and layer</span></span>
+<span id="cb103-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb103-4" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_percent_CD4 =</span> <span class="fu">mean</span>(percent_CD4)) <span class="co"># summarise in a new table</span></span></code></pre></div>
 </details>
 <pre><code>## `summarise()` has grouped output by &#39;tissue&#39;. You can override using the `.groups` argument.</code></pre>
-<pre><code>## # A tibble: 6 × 3
-## # Groups:   tissue [3]
-##   tissue  layer      mean_percent_CD4
-##   &lt;chr&gt;   &lt;chr&gt;                 &lt;dbl&gt;
-## 1 Abdomen Epithelium             43.1
-## 2 Abdomen Underlying             36.5
-## 3 Labia   Epithelium             28.8
-## 4 Labia   Underlying             65.9
-## 5 Vagina  Epithelium             26.0
-## 6 Vagina  Underlying             52.5</code></pre>
 <p><wimr></p>
 </div>
 <div id="pivot" class="section level2 hasAnchor">
@@ -349,58 +339,44 @@ Introduce <code>tidyverse</code> for filtering, mutating, summarizing and pivoti
 <p>Packages and functions, e.g. ggplot, will sometimes require that data is organised in the correct way. <code>pivot_longer()</code> and <code>pivot_wider()</code> can be effective tools for rearranging your data to suit.</p>
 <p>Here we’ll just use a short subset of the data to easily visualise what is happening.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb84-1" tabindex="-1"></a>data2 <span class="ot">&lt;-</span>data[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="dv">25</span><span class="sc">:</span><span class="dv">34</span>, <span class="dv">41</span><span class="sc">:</span><span class="dv">50</span>),<span class="fu">colnames</span>(data) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;donor&quot;</span>, <span class="st">&quot;tissue&quot;</span>, <span class="st">&quot;layer&quot;</span>, <span class="st">&#39;group&#39;</span>, <span class="st">&quot;CD3&quot;</span>, <span class="st">&quot;CD4&quot;</span>, <span class="st">&quot;CD8&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb105-1" tabindex="-1"></a>data2 <span class="ot">&lt;-</span>data[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="dv">25</span><span class="sc">:</span><span class="dv">34</span>, <span class="dv">41</span><span class="sc">:</span><span class="dv">50</span>),<span class="fu">colnames</span>(data) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;donor&quot;</span>, <span class="st">&quot;tissue&quot;</span>, <span class="st">&quot;layer&quot;</span>, <span class="st">&#39;group&#39;</span>, <span class="st">&quot;CD3&quot;</span>, <span class="st">&quot;CD4&quot;</span>, <span class="st">&quot;CD8&quot;</span>)]</span></code></pre></div>
 </details>
 <p>Currently, the data is in what we might consider <strong>wide</strong> format. We have one row per tissue layer and columns for our CD3, CD4, CD8 cell counts. We’ll start by mutating extra columns to get the CD4 and Cd8 percentages and then making it <strong>long</strong>, so that we get one column called “percent” with CD4 and CD8 in a different single column called “subset”. This is a format then compatible with ggplot.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb85-1" tabindex="-1"></a>data2 <span class="sc">%&gt;%</span> </span>
-<span id="cb85-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb85-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, <span class="at">percent_CD8 =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="cb85-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb85-3" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(percent_CD4, percent_CD8), <span class="co">#which columns to choose for elongating</span></span>
-<span id="cb85-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb85-4" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, <span class="co"># name of new column containing names</span></span>
-<span id="cb85-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb85-5" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># name of new column containing values</span></span>
-<span id="cb85-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb85-6" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb106-1" tabindex="-1"></a>data2 <span class="sc">%&gt;%</span> </span>
+<span id="cb106-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb106-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, <span class="at">percent_CD8 =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="cb106-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb106-3" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(percent_CD4, percent_CD8), <span class="co">#which columns to choose for elongating</span></span>
+<span id="cb106-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb106-4" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, <span class="co"># name of new column containing names</span></span>
+<span id="cb106-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb106-5" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># name of new column containing values</span></span>
+<span id="cb106-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb106-6" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
 </details>
-<pre><code>## # A tibble: 60 × 9
-##    donor  tissue  layer      group    CD3   CD8   CD4 subset      percent
-##    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
-##  1 Donor1 Abdomen Epithelium A_E     4460  2205  2184 percent_CD4    49.0
-##  2 Donor1 Abdomen Epithelium A_E     4460  2205  2184 percent_CD8    49.4
-##  3 Donor1 Abdomen Underlying A_UM   15295  7960  5529 percent_CD4    36.1
-##  4 Donor1 Abdomen Underlying A_UM   15295  7960  5529 percent_CD8    52.0
-##  5 Donor2 Abdomen Epithelium A_E    49774 25149 25251 percent_CD4    50.7
-##  6 Donor2 Abdomen Epithelium A_E    49774 25149 25251 percent_CD8    50.5
-##  7 Donor2 Abdomen Underlying A_UM   68879 47729 33616 percent_CD4    48.8
-##  8 Donor2 Abdomen Underlying A_UM   68879 47729 33616 percent_CD8    69.3
-##  9 Donor3 Abdomen Epithelium A_E   208665 92410 84610 percent_CD4    40.5
-## 10 Donor3 Abdomen Epithelium A_E   208665 92410 84610 percent_CD8    44.3
-## # ℹ 50 more rows</code></pre>
 <p>You’ll notice we have duplicate entries for CD3, CD8 and CD4, but our column subset has alternating percent_CD4/CD8 and the value for that donor is in the percent column. This can now be used in a boxlpot in ggplot.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-1" tabindex="-1"></a>data2 <span class="sc">%&gt;%</span> </span>
-<span id="cb87-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, <span class="at">percent_CD8 =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="cb87-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-3" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(percent_CD4, percent_CD8), </span>
-<span id="cb87-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-4" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
-<span id="cb87-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-5" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb87-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>percent, <span class="at">fill=</span>subset)) <span class="sc">+</span> </span>
-<span id="cb87-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb87-7" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outliers=</span>F)<span class="sc">+</span><span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-1" tabindex="-1"></a>data2 <span class="sc">%&gt;%</span> </span>
+<span id="cb107-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, <span class="at">percent_CD8 =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="cb107-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-3" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(percent_CD4, percent_CD8), </span>
+<span id="cb107-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-4" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
+<span id="cb107-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-5" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb107-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>percent, <span class="at">fill=</span>subset)) <span class="sc">+</span> </span>
+<span id="cb107-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb107-7" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outliers=</span>F)<span class="sc">+</span><span class="fu">theme_classic</span>()</span></code></pre></div>
 </details>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
 <div class="hint-info">
 <p>Imaging having a dataframe tens of thousands long, and you were to pivot longer and then store this data. You can imagine how inefficient your analysis workflow would become in such circumstances.</p>
 </div>
 <p>Ok. Lets say that we wanted to see if there was a correlation between the percent of CD4+ T cells in epithelium versus underlying mucosa. To do this, we calculate the percent of CD4, but we need an x and y vector to give to ggplot. Currently, the <code>data</code> object looks like a long version of what we want. So we can pivot wider to make our graph.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-1" tabindex="-1"></a>data2 <span class="sc">%&gt;%</span> </span>
-<span id="cb88-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="cb88-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-3" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(group, CD3,CD4,CD8))<span class="sc">%&gt;%</span> <span class="co"># using a - with select lets use remove, instead of select a given column. </span></span>
-<span id="cb88-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-4" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue)<span class="sc">%&gt;%</span></span>
-<span id="cb88-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> layer, <span class="at">values_from =</span> percent_CD4) <span class="sc">%&gt;%</span></span>
-<span id="cb88-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Epithelium, <span class="at">y=</span>Underlying, <span class="at">color=</span>tissue))<span class="sc">+</span></span>
-<span id="cb88-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-7" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
-<span id="cb88-8"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-8" tabindex="-1"></a>  <span class="fu">stat_ellipse</span>()<span class="sc">+</span></span>
-<span id="cb88-9"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb88-9" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-1" tabindex="-1"></a>data2 <span class="sc">%&gt;%</span> </span>
+<span id="cb108-2"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="cb108-3"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-3" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(group, CD3,CD4,CD8))<span class="sc">%&gt;%</span> <span class="co"># using a - with select lets use remove, instead of select a given column. </span></span>
+<span id="cb108-4"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-4" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue)<span class="sc">%&gt;%</span></span>
+<span id="cb108-5"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> layer, <span class="at">values_from =</span> percent_CD4) <span class="sc">%&gt;%</span></span>
+<span id="cb108-6"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Epithelium, <span class="at">y=</span>Underlying, <span class="at">color=</span>tissue))<span class="sc">+</span></span>
+<span id="cb108-7"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-7" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
+<span id="cb108-8"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-8" tabindex="-1"></a>  <span class="fu">stat_ellipse</span>()<span class="sc">+</span></span>
+<span id="cb108-9"><a href="chapter-4-data-manipulation-with-tidyverse.html#cb108-9" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
 </details>
-<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
 <p><wimr></p>
 <div id="hopefully-it-is-clear-why-tidyverse-is-a-useful-tool." class="section level3 hasAnchor">
 <h3>Hopefully it is clear why <code>tidyverse</code> is a useful tool.<a href="chapter-4-data-manipulation-with-tidyverse.html#hopefully-it-is-clear-why-tidyverse-is-a-useful-tool." class="anchor-section" aria-label="Anchor link to header"></a></h3>

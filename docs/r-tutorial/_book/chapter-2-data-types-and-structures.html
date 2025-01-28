@@ -248,26 +248,26 @@ Learn about data types and structures in R.<br />
 </ul>
 <p>Some functions or operations require data to the correct data type. For example, math can’t be performed on a character</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="chapter-2-data-types-and-structures.html#cb2-1" tabindex="-1"></a><span class="co"># character</span></span>
-<span id="cb2-2"><a href="chapter-2-data-types-and-structures.html#cb2-2" tabindex="-1"></a>char <span class="ot">=</span> <span class="st">&quot;Hello World&quot;</span></span>
-<span id="cb2-3"><a href="chapter-2-data-types-and-structures.html#cb2-3" tabindex="-1"></a><span class="fu">typeof</span>(char)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="chapter-2-data-types-and-structures.html#cb30-1" tabindex="-1"></a><span class="co"># character</span></span>
+<span id="cb30-2"><a href="chapter-2-data-types-and-structures.html#cb30-2" tabindex="-1"></a>char <span class="ot">=</span> <span class="st">&quot;Hello World&quot;</span></span>
+<span id="cb30-3"><a href="chapter-2-data-types-and-structures.html#cb30-3" tabindex="-1"></a><span class="fu">typeof</span>(char)</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="chapter-2-data-types-and-structures.html#cb4-1" tabindex="-1"></a><span class="co"># numeric</span></span>
-<span id="cb4-2"><a href="chapter-2-data-types-and-structures.html#cb4-2" tabindex="-1"></a>num <span class="ot">=</span> <span class="st">&quot;1&quot;</span></span>
-<span id="cb4-3"><a href="chapter-2-data-types-and-structures.html#cb4-3" tabindex="-1"></a><span class="fu">typeof</span>(num) <span class="co"># 1 is in quotes - so classified as a char</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="chapter-2-data-types-and-structures.html#cb32-1" tabindex="-1"></a><span class="co"># numeric</span></span>
+<span id="cb32-2"><a href="chapter-2-data-types-and-structures.html#cb32-2" tabindex="-1"></a>num <span class="ot">=</span> <span class="st">&quot;1&quot;</span></span>
+<span id="cb32-3"><a href="chapter-2-data-types-and-structures.html#cb32-3" tabindex="-1"></a><span class="fu">typeof</span>(num) <span class="co"># 1 is in quotes - so classified as a char</span></span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="chapter-2-data-types-and-structures.html#cb6-1" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb6-2"><a href="chapter-2-data-types-and-structures.html#cb6-2" tabindex="-1"></a><span class="fu">typeof</span>(num) <span class="co"># without the quotes</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="chapter-2-data-types-and-structures.html#cb34-1" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb34-2"><a href="chapter-2-data-types-and-structures.html#cb34-2" tabindex="-1"></a><span class="fu">typeof</span>(num) <span class="co"># without the quotes</span></span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;double&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="chapter-2-data-types-and-structures.html#cb8-1" tabindex="-1"></a><span class="co"># logical </span></span>
-<span id="cb8-2"><a href="chapter-2-data-types-and-structures.html#cb8-2" tabindex="-1"></a>log <span class="ot">=</span> <span class="cn">TRUE</span></span>
-<span id="cb8-3"><a href="chapter-2-data-types-and-structures.html#cb8-3" tabindex="-1"></a><span class="fu">typeof</span>(log)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="chapter-2-data-types-and-structures.html#cb36-1" tabindex="-1"></a><span class="co"># logical </span></span>
+<span id="cb36-2"><a href="chapter-2-data-types-and-structures.html#cb36-2" tabindex="-1"></a>log <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb36-3"><a href="chapter-2-data-types-and-structures.html#cb36-3" tabindex="-1"></a><span class="fu">typeof</span>(log)</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
 <p>To demonstrate a logical, a good example of their use is to check a condition and run a script. I’ll use <code>if</code> here, which we cover in the next chapter.</p>
@@ -276,71 +276,71 @@ Learn about data types and structures in R.<br />
 <strong>Examples:</strong>
 </summary>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="chapter-2-data-types-and-structures.html#cb10-1" tabindex="-1"></a><span class="co"># TRUE</span></span>
-<span id="cb10-2"><a href="chapter-2-data-types-and-structures.html#cb10-2" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="cn">TRUE</span></span>
-<span id="cb10-3"><a href="chapter-2-data-types-and-structures.html#cb10-3" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
-<span id="cb10-4"><a href="chapter-2-data-types-and-structures.html#cb10-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
-<span id="cb10-5"><a href="chapter-2-data-types-and-structures.html#cb10-5" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="chapter-2-data-types-and-structures.html#cb38-1" tabindex="-1"></a><span class="co"># TRUE</span></span>
+<span id="cb38-2"><a href="chapter-2-data-types-and-structures.html#cb38-2" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb38-3"><a href="chapter-2-data-types-and-structures.html#cb38-3" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb38-4"><a href="chapter-2-data-types-and-structures.html#cb38-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb38-5"><a href="chapter-2-data-types-and-structures.html#cb38-5" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;run_script is TRUE&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="chapter-2-data-types-and-structures.html#cb12-1" tabindex="-1"></a>run_script <span class="ot">=</span> T</span>
-<span id="cb12-2"><a href="chapter-2-data-types-and-structures.html#cb12-2" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
-<span id="cb12-3"><a href="chapter-2-data-types-and-structures.html#cb12-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
-<span id="cb12-4"><a href="chapter-2-data-types-and-structures.html#cb12-4" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="chapter-2-data-types-and-structures.html#cb40-1" tabindex="-1"></a>run_script <span class="ot">=</span> T</span>
+<span id="cb40-2"><a href="chapter-2-data-types-and-structures.html#cb40-2" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb40-3"><a href="chapter-2-data-types-and-structures.html#cb40-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb40-4"><a href="chapter-2-data-types-and-structures.html#cb40-4" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;run_script is TRUE&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="chapter-2-data-types-and-structures.html#cb14-1" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb14-2"><a href="chapter-2-data-types-and-structures.html#cb14-2" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
-<span id="cb14-3"><a href="chapter-2-data-types-and-structures.html#cb14-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
-<span id="cb14-4"><a href="chapter-2-data-types-and-structures.html#cb14-4" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="chapter-2-data-types-and-structures.html#cb42-1" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb42-2"><a href="chapter-2-data-types-and-structures.html#cb42-2" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb42-3"><a href="chapter-2-data-types-and-structures.html#cb42-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb42-4"><a href="chapter-2-data-types-and-structures.html#cb42-4" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;run_script is 1&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="chapter-2-data-types-and-structures.html#cb16-1" tabindex="-1"></a><span class="co"># FALSE</span></span>
-<span id="cb16-2"><a href="chapter-2-data-types-and-structures.html#cb16-2" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="cn">FALSE</span></span>
-<span id="cb16-3"><a href="chapter-2-data-types-and-structures.html#cb16-3" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
-<span id="cb16-4"><a href="chapter-2-data-types-and-structures.html#cb16-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
-<span id="cb16-5"><a href="chapter-2-data-types-and-structures.html#cb16-5" tabindex="-1"></a>}</span>
-<span id="cb16-6"><a href="chapter-2-data-types-and-structures.html#cb16-6" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="chapter-2-data-types-and-structures.html#cb16-7" tabindex="-1"></a>run_script <span class="ot">=</span> F</span>
-<span id="cb16-8"><a href="chapter-2-data-types-and-structures.html#cb16-8" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
-<span id="cb16-9"><a href="chapter-2-data-types-and-structures.html#cb16-9" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
-<span id="cb16-10"><a href="chapter-2-data-types-and-structures.html#cb16-10" tabindex="-1"></a>}</span>
-<span id="cb16-11"><a href="chapter-2-data-types-and-structures.html#cb16-11" tabindex="-1"></a></span>
-<span id="cb16-12"><a href="chapter-2-data-types-and-structures.html#cb16-12" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb16-13"><a href="chapter-2-data-types-and-structures.html#cb16-13" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
-<span id="cb16-14"><a href="chapter-2-data-types-and-structures.html#cb16-14" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
-<span id="cb16-15"><a href="chapter-2-data-types-and-structures.html#cb16-15" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="chapter-2-data-types-and-structures.html#cb44-1" tabindex="-1"></a><span class="co"># FALSE</span></span>
+<span id="cb44-2"><a href="chapter-2-data-types-and-structures.html#cb44-2" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="cn">FALSE</span></span>
+<span id="cb44-3"><a href="chapter-2-data-types-and-structures.html#cb44-3" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb44-4"><a href="chapter-2-data-types-and-structures.html#cb44-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb44-5"><a href="chapter-2-data-types-and-structures.html#cb44-5" tabindex="-1"></a>}</span>
+<span id="cb44-6"><a href="chapter-2-data-types-and-structures.html#cb44-6" tabindex="-1"></a></span>
+<span id="cb44-7"><a href="chapter-2-data-types-and-structures.html#cb44-7" tabindex="-1"></a>run_script <span class="ot">=</span> F</span>
+<span id="cb44-8"><a href="chapter-2-data-types-and-structures.html#cb44-8" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb44-9"><a href="chapter-2-data-types-and-structures.html#cb44-9" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb44-10"><a href="chapter-2-data-types-and-structures.html#cb44-10" tabindex="-1"></a>}</span>
+<span id="cb44-11"><a href="chapter-2-data-types-and-structures.html#cb44-11" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="chapter-2-data-types-and-structures.html#cb44-12" tabindex="-1"></a>run_script <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb44-13"><a href="chapter-2-data-types-and-structures.html#cb44-13" tabindex="-1"></a><span class="cf">if</span>(run_script) {</span>
+<span id="cb44-14"><a href="chapter-2-data-types-and-structures.html#cb44-14" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;run_script is &quot;</span>, run_script))</span>
+<span id="cb44-15"><a href="chapter-2-data-types-and-structures.html#cb44-15" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <p>Above, we set the variables deliberately to demonstrate how they can be used. However, they don’t need to be deliberately set to be useful.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="chapter-2-data-types-and-structures.html#cb17-1" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb17-2"><a href="chapter-2-data-types-and-structures.html#cb17-2" tabindex="-1"></a><span class="fu">typeof</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="chapter-2-data-types-and-structures.html#cb45-1" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb45-2"><a href="chapter-2-data-types-and-structures.html#cb45-2" tabindex="-1"></a><span class="fu">typeof</span>(a)</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;double&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="chapter-2-data-types-and-structures.html#cb19-1" tabindex="-1"></a><span class="fu">is.numeric</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="chapter-2-data-types-and-structures.html#cb47-1" tabindex="-1"></a><span class="fu">is.numeric</span>(a)</span></code></pre></div>
 </details>
 <pre><code>## [1] TRUE</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="chapter-2-data-types-and-structures.html#cb21-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">is.numeric</span>(a))</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="chapter-2-data-types-and-structures.html#cb49-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">is.numeric</span>(a))</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="chapter-2-data-types-and-structures.html#cb23-1" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">is.numeric</span>(a)){</span>
-<span id="cb23-2"><a href="chapter-2-data-types-and-structures.html#cb23-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is numeric.&quot;</span>))</span>
-<span id="cb23-3"><a href="chapter-2-data-types-and-structures.html#cb23-3" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="chapter-2-data-types-and-structures.html#cb51-1" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">is.numeric</span>(a)){</span>
+<span id="cb51-2"><a href="chapter-2-data-types-and-structures.html#cb51-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is numeric.&quot;</span>))</span>
+<span id="cb51-3"><a href="chapter-2-data-types-and-structures.html#cb51-3" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;The variable a (3) is numeric.&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="chapter-2-data-types-and-structures.html#cb25-1" tabindex="-1"></a>a<span class="ot">=</span><span class="st">&quot;3&quot;</span></span>
-<span id="cb25-2"><a href="chapter-2-data-types-and-structures.html#cb25-2" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">is.numeric</span>(a)){</span>
-<span id="cb25-3"><a href="chapter-2-data-types-and-structures.html#cb25-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is numeric. Continuing the analysis.&quot;</span>))</span>
-<span id="cb25-4"><a href="chapter-2-data-types-and-structures.html#cb25-4" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb25-5"><a href="chapter-2-data-types-and-structures.html#cb25-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is &quot;</span>, <span class="fu">typeof</span>(a), <span class="st">&quot;. Not continuing the analysis.&quot;</span>))</span>
-<span id="cb25-6"><a href="chapter-2-data-types-and-structures.html#cb25-6" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="chapter-2-data-types-and-structures.html#cb53-1" tabindex="-1"></a>a<span class="ot">=</span><span class="st">&quot;3&quot;</span></span>
+<span id="cb53-2"><a href="chapter-2-data-types-and-structures.html#cb53-2" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">is.numeric</span>(a)){</span>
+<span id="cb53-3"><a href="chapter-2-data-types-and-structures.html#cb53-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is numeric. Continuing the analysis.&quot;</span>))</span>
+<span id="cb53-4"><a href="chapter-2-data-types-and-structures.html#cb53-4" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb53-5"><a href="chapter-2-data-types-and-structures.html#cb53-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">&quot;The variable a (&quot;</span>, a,<span class="st">&quot;) is &quot;</span>, <span class="fu">typeof</span>(a), <span class="st">&quot;. Not continuing the analysis.&quot;</span>))</span>
+<span id="cb53-6"><a href="chapter-2-data-types-and-structures.html#cb53-6" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;The variable a (3) is character. Not continuing the analysis.&quot;</code></pre>
 </details>
@@ -356,24 +356,19 @@ Learn about data types and structures in R.<br />
 <li><p><strong>lists</strong>: A list is dynamic and can hold all different types of data structures and data types.</p></li>
 </ul>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="chapter-2-data-types-and-structures.html#cb27-1" tabindex="-1"></a>yr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1990</span>, <span class="dv">1990</span>, <span class="dv">1991</span>, <span class="dv">1989</span>)</span>
-<span id="cb27-2"><a href="chapter-2-data-types-and-structures.html#cb27-2" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Rou&quot;</span>, <span class="st">&quot;Chris&quot;</span>, <span class="st">&quot;Rory&quot;</span>, <span class="st">&quot;Rob&quot;</span>)</span>
-<span id="cb27-3"><a href="chapter-2-data-types-and-structures.html#cb27-3" tabindex="-1"></a>rating <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb27-4"><a href="chapter-2-data-types-and-structures.html#cb27-4" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="chapter-2-data-types-and-structures.html#cb27-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">year =</span> yr, </span>
-<span id="cb27-6"><a href="chapter-2-data-types-and-structures.html#cb27-6" tabindex="-1"></a>                 <span class="at">names =</span> name, </span>
-<span id="cb27-7"><a href="chapter-2-data-types-and-structures.html#cb27-7" tabindex="-1"></a>                 <span class="at">ratings =</span> rating)</span>
-<span id="cb27-8"><a href="chapter-2-data-types-and-structures.html#cb27-8" tabindex="-1"></a></span>
-<span id="cb27-9"><a href="chapter-2-data-types-and-structures.html#cb27-9" tabindex="-1"></a></span>
-<span id="cb27-10"><a href="chapter-2-data-types-and-structures.html#cb27-10" tabindex="-1"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="chapter-2-data-types-and-structures.html#cb55-1" tabindex="-1"></a>yr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1990</span>, <span class="dv">1990</span>, <span class="dv">1991</span>, <span class="dv">1989</span>)</span>
+<span id="cb55-2"><a href="chapter-2-data-types-and-structures.html#cb55-2" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Rou&quot;</span>, <span class="st">&quot;Chris&quot;</span>, <span class="st">&quot;Rory&quot;</span>, <span class="st">&quot;Rob&quot;</span>)</span>
+<span id="cb55-3"><a href="chapter-2-data-types-and-structures.html#cb55-3" tabindex="-1"></a>rating <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb55-4"><a href="chapter-2-data-types-and-structures.html#cb55-4" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="chapter-2-data-types-and-structures.html#cb55-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">year =</span> yr, </span>
+<span id="cb55-6"><a href="chapter-2-data-types-and-structures.html#cb55-6" tabindex="-1"></a>                 <span class="at">names =</span> name, </span>
+<span id="cb55-7"><a href="chapter-2-data-types-and-structures.html#cb55-7" tabindex="-1"></a>                 <span class="at">ratings =</span> rating)</span>
+<span id="cb55-8"><a href="chapter-2-data-types-and-structures.html#cb55-8" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="chapter-2-data-types-and-structures.html#cb55-9" tabindex="-1"></a></span>
+<span id="cb55-10"><a href="chapter-2-data-types-and-structures.html#cb55-10" tabindex="-1"></a>df</span></code></pre></div>
 </details>
-<pre><code>##   year names ratings
-## 1 1990   Rou       4
-## 2 1990 Chris       4
-## 3 1991  Rory       4
-## 4 1989   Rob       5</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="chapter-2-data-types-and-structures.html#cb29-1" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="chapter-2-data-types-and-structures.html#cb56-1" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code></pre></div>
 </details>
 <pre><code>## [1] 4 3</code></pre>
 <p>We can see this dataframe is 4 rows tall and 3 columns wide.</p>
@@ -381,14 +376,14 @@ Learn about data types and structures in R.<br />
 <p>We can access information in a dataframe using: <code>df[row, col]</code></p>
 </div>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="chapter-2-data-types-and-structures.html#cb31-1" tabindex="-1"></a>df[<span class="dv">1</span>,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="chapter-2-data-types-and-structures.html#cb58-1" tabindex="-1"></a>df[<span class="dv">1</span>,<span class="dv">1</span>]</span></code></pre></div>
 </details>
 <pre><code>## [1] 1990</code></pre>
 <div class="hint-info">
 <p>With data frames, we can also use <code>$</code> to query a specific column.</p>
 </div>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="chapter-2-data-types-and-structures.html#cb33-1" tabindex="-1"></a>df<span class="sc">$</span>names</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="chapter-2-data-types-and-structures.html#cb60-1" tabindex="-1"></a>df<span class="sc">$</span>names</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;</code></pre>
 <details>
@@ -396,93 +391,57 @@ Learn about data types and structures in R.<br />
 <strong>More examples:</strong>
 </summary>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="chapter-2-data-types-and-structures.html#cb35-1" tabindex="-1"></a><span class="co"># show all rows in certain columns</span></span>
-<span id="cb35-2"><a href="chapter-2-data-types-and-structures.html#cb35-2" tabindex="-1"></a>df[,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="chapter-2-data-types-and-structures.html#cb62-1" tabindex="-1"></a><span class="co"># show all rows in certain columns</span></span>
+<span id="cb62-2"><a href="chapter-2-data-types-and-structures.html#cb62-2" tabindex="-1"></a>df[,<span class="dv">1</span>]</span></code></pre></div>
 </details>
 <pre><code>## [1] 1990 1990 1991 1989</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="chapter-2-data-types-and-structures.html#cb37-1" tabindex="-1"></a>df[,<span class="st">&quot;names&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="chapter-2-data-types-and-structures.html#cb64-1" tabindex="-1"></a>df[,<span class="st">&quot;names&quot;</span>]</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="chapter-2-data-types-and-structures.html#cb39-1" tabindex="-1"></a><span class="co"># show all columns in one row</span></span>
-<span id="cb39-2"><a href="chapter-2-data-types-and-structures.html#cb39-2" tabindex="-1"></a>df[<span class="dv">1</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="chapter-2-data-types-and-structures.html#cb66-1" tabindex="-1"></a><span class="co"># show all columns in one row</span></span>
+<span id="cb66-2"><a href="chapter-2-data-types-and-structures.html#cb66-2" tabindex="-1"></a>df[<span class="dv">1</span>,]</span>
+<span id="cb66-3"><a href="chapter-2-data-types-and-structures.html#cb66-3" tabindex="-1"></a></span>
+<span id="cb66-4"><a href="chapter-2-data-types-and-structures.html#cb66-4" tabindex="-1"></a><span class="co"># show select columns by providing a vector of specific indices</span></span>
+<span id="cb66-5"><a href="chapter-2-data-types-and-structures.html#cb66-5" tabindex="-1"></a>df[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
+<span id="cb66-6"><a href="chapter-2-data-types-and-structures.html#cb66-6" tabindex="-1"></a></span>
+<span id="cb66-7"><a href="chapter-2-data-types-and-structures.html#cb66-7" tabindex="-1"></a><span class="co"># provide a range of indices quickly using colon between numbers. e.g. 1 to 2</span></span>
+<span id="cb66-8"><a href="chapter-2-data-types-and-structures.html#cb66-8" tabindex="-1"></a>df[,<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)] </span>
+<span id="cb66-9"><a href="chapter-2-data-types-and-structures.html#cb66-9" tabindex="-1"></a></span>
+<span id="cb66-10"><a href="chapter-2-data-types-and-structures.html#cb66-10" tabindex="-1"></a><span class="co"># instead of using indices to pull information, we can use logic</span></span>
+<span id="cb66-11"><a href="chapter-2-data-types-and-structures.html#cb66-11" tabindex="-1"></a>df[<span class="fu">c</span>(T,T,F,T),]</span></code></pre></div>
 </details>
-<pre><code>##   year names ratings
-## 1 1990   Rou       4</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="chapter-2-data-types-and-structures.html#cb41-1" tabindex="-1"></a><span class="co"># show select columns by providing a vector of specific indices</span></span>
-<span id="cb41-2"><a href="chapter-2-data-types-and-structures.html#cb41-2" tabindex="-1"></a>df[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
-</details>
-<pre><code>##   year ratings
-## 1 1990       4
-## 2 1990       4
-## 3 1991       4
-## 4 1989       5</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="chapter-2-data-types-and-structures.html#cb43-1" tabindex="-1"></a><span class="co"># provide a range of indices quickly using colon between numbers. e.g. 1 to 2</span></span>
-<span id="cb43-2"><a href="chapter-2-data-types-and-structures.html#cb43-2" tabindex="-1"></a>df[,<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)] </span></code></pre></div>
-</details>
-<pre><code>##   year names
-## 1 1990   Rou
-## 2 1990 Chris
-## 3 1991  Rory
-## 4 1989   Rob</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="chapter-2-data-types-and-structures.html#cb45-1" tabindex="-1"></a><span class="co"># instead of using indices to pull information, we can use logic</span></span>
-<span id="cb45-2"><a href="chapter-2-data-types-and-structures.html#cb45-2" tabindex="-1"></a>df[<span class="fu">c</span>(T,T,F,T),]</span></code></pre></div>
-</details>
-<pre><code>##   year names ratings
-## 1 1990   Rou       4
-## 2 1990 Chris       4
-## 4 1989   Rob       5</code></pre>
 </details>
 <p>We can do a lot with a data frame if we combine everything we know about data types and structures</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="chapter-2-data-types-and-structures.html#cb47-1" tabindex="-1"></a><span class="co"># store a row or column as a new object</span></span>
-<span id="cb47-2"><a href="chapter-2-data-types-and-structures.html#cb47-2" tabindex="-1"></a>patient_1 <span class="ot">=</span> df[<span class="dv">1</span>,]</span>
-<span id="cb47-3"><a href="chapter-2-data-types-and-structures.html#cb47-3" tabindex="-1"></a>patient_1</span></code></pre></div>
-</details>
-<pre><code>##   year names ratings
-## 1 1990   Rou       4</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="chapter-2-data-types-and-structures.html#cb49-1" tabindex="-1"></a><span class="co"># return a logical vector based on a query</span></span>
-<span id="cb49-2"><a href="chapter-2-data-types-and-structures.html#cb49-2" tabindex="-1"></a>df<span class="sc">$</span>names <span class="sc">==</span> <span class="st">&quot;Rou&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="chapter-2-data-types-and-structures.html#cb67-1" tabindex="-1"></a><span class="co"># store a row or column as a new object</span></span>
+<span id="cb67-2"><a href="chapter-2-data-types-and-structures.html#cb67-2" tabindex="-1"></a>patient_1 <span class="ot">=</span> df[<span class="dv">1</span>,]</span>
+<span id="cb67-3"><a href="chapter-2-data-types-and-structures.html#cb67-3" tabindex="-1"></a>patient_1</span>
+<span id="cb67-4"><a href="chapter-2-data-types-and-structures.html#cb67-4" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="chapter-2-data-types-and-structures.html#cb67-5" tabindex="-1"></a><span class="co"># return a logical vector based on a query</span></span>
+<span id="cb67-6"><a href="chapter-2-data-types-and-structures.html#cb67-6" tabindex="-1"></a>df<span class="sc">$</span>names <span class="sc">==</span> <span class="st">&quot;Rou&quot;</span></span></code></pre></div>
 </details>
 <pre><code>## [1]  TRUE FALSE FALSE FALSE</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="chapter-2-data-types-and-structures.html#cb51-1" tabindex="-1"></a><span class="co"># and add this to a new column</span></span>
-<span id="cb51-2"><a href="chapter-2-data-types-and-structures.html#cb51-2" tabindex="-1"></a>df<span class="sc">$</span>is_rou <span class="ot">&lt;-</span> df<span class="sc">$</span>names <span class="sc">==</span> <span class="st">&quot;Rou&quot;</span></span>
-<span id="cb51-3"><a href="chapter-2-data-types-and-structures.html#cb51-3" tabindex="-1"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="chapter-2-data-types-and-structures.html#cb69-1" tabindex="-1"></a><span class="co"># and add this to a new column</span></span>
+<span id="cb69-2"><a href="chapter-2-data-types-and-structures.html#cb69-2" tabindex="-1"></a>df<span class="sc">$</span>is_rou <span class="ot">&lt;-</span> df<span class="sc">$</span>names <span class="sc">==</span> <span class="st">&quot;Rou&quot;</span></span>
+<span id="cb69-3"><a href="chapter-2-data-types-and-structures.html#cb69-3" tabindex="-1"></a>df</span>
+<span id="cb69-4"><a href="chapter-2-data-types-and-structures.html#cb69-4" tabindex="-1"></a><span class="co"># With a large dataframe, we might not know the specific indices we want to see or store, </span></span>
+<span id="cb69-5"><a href="chapter-2-data-types-and-structures.html#cb69-5" tabindex="-1"></a><span class="co">#  so we could cut a dataframe or pull information based on certain logic</span></span>
+<span id="cb69-6"><a href="chapter-2-data-types-and-structures.html#cb69-6" tabindex="-1"></a>df[df<span class="sc">$</span>names<span class="sc">==</span><span class="st">&quot;Rou&quot;</span>,]</span>
+<span id="cb69-7"><a href="chapter-2-data-types-and-structures.html#cb69-7" tabindex="-1"></a></span>
+<span id="cb69-8"><a href="chapter-2-data-types-and-structures.html#cb69-8" tabindex="-1"></a>df[df<span class="sc">$</span>ratings<span class="sc">&lt;</span><span class="dv">5</span>,]</span></code></pre></div>
 </details>
-<pre><code>##   year names ratings is_rou
-## 1 1990   Rou       4   TRUE
-## 2 1990 Chris       4  FALSE
-## 3 1991  Rory       4  FALSE
-## 4 1989   Rob       5  FALSE</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="chapter-2-data-types-and-structures.html#cb53-1" tabindex="-1"></a><span class="co"># With a large dataframe, we might not know the specific indices we want to see or store, </span></span>
-<span id="cb53-2"><a href="chapter-2-data-types-and-structures.html#cb53-2" tabindex="-1"></a><span class="co">#  so we could cut a dataframe or pull information based on certain logic</span></span>
-<span id="cb53-3"><a href="chapter-2-data-types-and-structures.html#cb53-3" tabindex="-1"></a>df[df<span class="sc">$</span>names<span class="sc">==</span><span class="st">&quot;Rou&quot;</span>,]</span></code></pre></div>
-</details>
-<pre><code>##   year names ratings is_rou
-## 1 1990   Rou       4   TRUE</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="chapter-2-data-types-and-structures.html#cb55-1" tabindex="-1"></a>df[df<span class="sc">$</span>ratings<span class="sc">&lt;</span><span class="dv">5</span>,]</span></code></pre></div>
-</details>
-<pre><code>##   year names ratings is_rou
-## 1 1990   Rou       4   TRUE
-## 2 1990 Chris       4  FALSE
-## 3 1991  Rory       4  FALSE</code></pre>
 <p>When working with enormous data structures, like single cell sequencing or proteomics data, knowing how to query your data frame or matrix will be very useful!</p>
 <p>Finally, we can make a list out of all of these different data types and structures,</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="chapter-2-data-types-and-structures.html#cb57-1" tabindex="-1"></a>list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;number&quot;</span> <span class="ot">=</span> <span class="dv">1</span>, </span>
-<span id="cb57-2"><a href="chapter-2-data-types-and-structures.html#cb57-2" tabindex="-1"></a>             <span class="st">&quot;string&quot;</span> <span class="ot">=</span> <span class="st">&quot;string&quot;</span>,</span>
-<span id="cb57-3"><a href="chapter-2-data-types-and-structures.html#cb57-3" tabindex="-1"></a>             <span class="st">&quot;logical&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>,</span>
-<span id="cb57-4"><a href="chapter-2-data-types-and-structures.html#cb57-4" tabindex="-1"></a>             <span class="st">&quot;vector&quot;</span> <span class="ot">=</span> name, </span>
-<span id="cb57-5"><a href="chapter-2-data-types-and-structures.html#cb57-5" tabindex="-1"></a>             <span class="st">&quot;dataframe&quot;</span> <span class="ot">=</span> df)</span>
-<span id="cb57-6"><a href="chapter-2-data-types-and-structures.html#cb57-6" tabindex="-1"></a>list</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="chapter-2-data-types-and-structures.html#cb70-1" tabindex="-1"></a>list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;number&quot;</span> <span class="ot">=</span> <span class="dv">1</span>, </span>
+<span id="cb70-2"><a href="chapter-2-data-types-and-structures.html#cb70-2" tabindex="-1"></a>             <span class="st">&quot;string&quot;</span> <span class="ot">=</span> <span class="st">&quot;string&quot;</span>,</span>
+<span id="cb70-3"><a href="chapter-2-data-types-and-structures.html#cb70-3" tabindex="-1"></a>             <span class="st">&quot;logical&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>,</span>
+<span id="cb70-4"><a href="chapter-2-data-types-and-structures.html#cb70-4" tabindex="-1"></a>             <span class="st">&quot;vector&quot;</span> <span class="ot">=</span> name, </span>
+<span id="cb70-5"><a href="chapter-2-data-types-and-structures.html#cb70-5" tabindex="-1"></a>             <span class="st">&quot;dataframe&quot;</span> <span class="ot">=</span> df)</span>
+<span id="cb70-6"><a href="chapter-2-data-types-and-structures.html#cb70-6" tabindex="-1"></a>list</span></code></pre></div>
 </details>
 <pre><code>## $number
 ## [1] 1
@@ -507,15 +466,15 @@ Learn about data types and structures in R.<br />
 <strong>Ways to query your list</strong>
 </summary>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="chapter-2-data-types-and-structures.html#cb59-1" tabindex="-1"></a>list[[<span class="dv">1</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="chapter-2-data-types-and-structures.html#cb72-1" tabindex="-1"></a>list[[<span class="dv">1</span>]]</span></code></pre></div>
 </details>
 <pre><code>## [1] 1</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="chapter-2-data-types-and-structures.html#cb61-1" tabindex="-1"></a>list[[<span class="st">&quot;vector&quot;</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="chapter-2-data-types-and-structures.html#cb74-1" tabindex="-1"></a>list[[<span class="st">&quot;vector&quot;</span>]]</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;Rou&quot;   &quot;Chris&quot; &quot;Rory&quot;  &quot;Rob&quot;</code></pre>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="chapter-2-data-types-and-structures.html#cb63-1" tabindex="-1"></a>list<span class="sc">$</span>string</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="chapter-2-data-types-and-structures.html#cb76-1" tabindex="-1"></a>list<span class="sc">$</span>string</span></code></pre></div>
 </details>
 <pre><code>## [1] &quot;string&quot;</code></pre>
 <e>

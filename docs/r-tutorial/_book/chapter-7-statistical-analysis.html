@@ -242,37 +242,26 @@ Apply simple statistic to the synthetic data.<br />
 <h2>Descriptive statistics<a href="chapter-7-statistical-analysis.html#descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As the name suggests, in descriptive stats you can observe and describe the features of the exact data that you collected. You can quickly check some stats like mean, standard deviation (SD) and standard error (SE), median and 1st and 3rd quartile.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="chapter-7-statistical-analysis.html#cb127-1" tabindex="-1"></a>SE <span class="ot">&lt;-</span> <span class="cf">function</span>(x){<span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(x))}</span>
-<span id="cb127-2"><a href="chapter-7-statistical-analysis.html#cb127-2" tabindex="-1"></a></span>
-<span id="cb127-3"><a href="chapter-7-statistical-analysis.html#cb127-3" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb127-4"><a href="chapter-7-statistical-analysis.html#cb127-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3)<span class="sc">%&gt;%</span></span>
-<span id="cb127-5"><a href="chapter-7-statistical-analysis.html#cb127-5" tabindex="-1"></a>  <span class="fu">group_by</span>(group) <span class="sc">%&gt;%</span></span>
-<span id="cb127-6"><a href="chapter-7-statistical-analysis.html#cb127-6" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(percent_CD4), </span>
-<span id="cb127-7"><a href="chapter-7-statistical-analysis.html#cb127-7" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(percent_CD4), </span>
-<span id="cb127-8"><a href="chapter-7-statistical-analysis.html#cb127-8" tabindex="-1"></a>            <span class="at">se =</span> <span class="fu">SE</span>(percent_CD4), </span>
-<span id="cb127-9"><a href="chapter-7-statistical-analysis.html#cb127-9" tabindex="-1"></a>            <span class="at">min =</span> <span class="fu">min</span>(percent_CD4), </span>
-<span id="cb127-10"><a href="chapter-7-statistical-analysis.html#cb127-10" tabindex="-1"></a>            <span class="at">quantile_25 =</span>  <span class="fu">quantile</span>(percent_CD4, <span class="at">probs =</span> <span class="fl">0.25</span>),</span>
-<span id="cb127-11"><a href="chapter-7-statistical-analysis.html#cb127-11" tabindex="-1"></a>            <span class="at">median =</span> <span class="fu">median</span>(percent_CD4), </span>
-<span id="cb127-12"><a href="chapter-7-statistical-analysis.html#cb127-12" tabindex="-1"></a>            <span class="at">quantile_75 =</span> <span class="fu">quantile</span>(percent_CD4, <span class="at">probs =</span> <span class="fl">0.75</span>),</span>
-<span id="cb127-13"><a href="chapter-7-statistical-analysis.html#cb127-13" tabindex="-1"></a>            <span class="at">max =</span> <span class="fu">max</span>(percent_CD4)) <span class="sc">%&gt;%</span></span>
-<span id="cb127-14"><a href="chapter-7-statistical-analysis.html#cb127-14" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="chapter-7-statistical-analysis.html#cb147-1" tabindex="-1"></a>SE <span class="ot">&lt;-</span> <span class="cf">function</span>(x){<span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(x))}</span>
+<span id="cb147-2"><a href="chapter-7-statistical-analysis.html#cb147-2" tabindex="-1"></a></span>
+<span id="cb147-3"><a href="chapter-7-statistical-analysis.html#cb147-3" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb147-4"><a href="chapter-7-statistical-analysis.html#cb147-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3)<span class="sc">%&gt;%</span></span>
+<span id="cb147-5"><a href="chapter-7-statistical-analysis.html#cb147-5" tabindex="-1"></a>  <span class="fu">group_by</span>(group) <span class="sc">%&gt;%</span></span>
+<span id="cb147-6"><a href="chapter-7-statistical-analysis.html#cb147-6" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(percent_CD4), </span>
+<span id="cb147-7"><a href="chapter-7-statistical-analysis.html#cb147-7" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(percent_CD4), </span>
+<span id="cb147-8"><a href="chapter-7-statistical-analysis.html#cb147-8" tabindex="-1"></a>            <span class="at">se =</span> <span class="fu">SE</span>(percent_CD4), </span>
+<span id="cb147-9"><a href="chapter-7-statistical-analysis.html#cb147-9" tabindex="-1"></a>            <span class="at">min =</span> <span class="fu">min</span>(percent_CD4), </span>
+<span id="cb147-10"><a href="chapter-7-statistical-analysis.html#cb147-10" tabindex="-1"></a>            <span class="at">quantile_25 =</span>  <span class="fu">quantile</span>(percent_CD4, <span class="at">probs =</span> <span class="fl">0.25</span>),</span>
+<span id="cb147-11"><a href="chapter-7-statistical-analysis.html#cb147-11" tabindex="-1"></a>            <span class="at">median =</span> <span class="fu">median</span>(percent_CD4), </span>
+<span id="cb147-12"><a href="chapter-7-statistical-analysis.html#cb147-12" tabindex="-1"></a>            <span class="at">quantile_75 =</span> <span class="fu">quantile</span>(percent_CD4, <span class="at">probs =</span> <span class="fl">0.75</span>),</span>
+<span id="cb147-13"><a href="chapter-7-statistical-analysis.html#cb147-13" tabindex="-1"></a>            <span class="at">max =</span> <span class="fu">max</span>(percent_CD4)) <span class="sc">%&gt;%</span></span>
+<span id="cb147-14"><a href="chapter-7-statistical-analysis.html#cb147-14" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="cb147-15"><a href="chapter-7-statistical-analysis.html#cb147-15" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb147-16"><a href="chapter-7-statistical-analysis.html#cb147-16" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3)<span class="sc">%&gt;%</span></span>
+<span id="cb147-17"><a href="chapter-7-statistical-analysis.html#cb147-17" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(group, percent_CD4))<span class="sc">+</span><span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb147-18"><a href="chapter-7-statistical-analysis.html#cb147-18" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
 </details>
-<pre><code>## # A tibble: 6 × 9
-##   group  mean    sd    se   min quantile_25 median quantile_75   max
-##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
-## 1 A_E    43.1  6.03  1.23  35.1        37.8   43.4        47.8  51.4
-## 2 A_UM   36.5 10.6   2.17  21.3        29.6   35.2        48.8  48.8
-## 3 L_E    28.8  5.75  1.29  21.4        24.7   28.1        31.3  41.8
-## 4 L_UM   65.9  5.09  1.14  54.1        63.2   66.3        70.1  72.3
-## 5 V_E    26.0  7.84  1.96  13.0        21.6   23.6        30.8  40.4
-## 6 V_UM   52.5 11.3   2.82  36.6        44.8   53.5        59.5  72.1</code></pre>
-<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="chapter-7-statistical-analysis.html#cb129-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb129-2"><a href="chapter-7-statistical-analysis.html#cb129-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3)<span class="sc">%&gt;%</span></span>
-<span id="cb129-3"><a href="chapter-7-statistical-analysis.html#cb129-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(group, percent_CD4))<span class="sc">+</span><span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
-<span id="cb129-4"><a href="chapter-7-statistical-analysis.html#cb129-4" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-</details>
-<p><img src="_main_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
 <p><hint-text><strong><em>More content coming soon!</em></strong></hint-text></p>
 <div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;">
 
