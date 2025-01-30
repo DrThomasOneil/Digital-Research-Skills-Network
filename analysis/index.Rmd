@@ -67,8 +67,12 @@ You'll also see graphics like this throughout that emphasis
 **Goals to achieve in a session or workshop**
 </div>
 <div class="hint-practice">
-**Practice you should try before moving on**
+**Practice before moving on**
 </div>
+<div class="hint-terminology">
+**Important Terminology**
+</div>
+
 
 <wimr>
 

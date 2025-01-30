@@ -9,6 +9,16 @@ navbar:
     href: 0_start.html
   - text: Announcements
     href: 0_announcements.html
+  - text: Introduction Series
+    menu: 
+      - text: Intro to R
+        href: 202502_intror.html
+      - text: Collaborative Coding
+        href: 202502_collab.html
+      - text: Intro to Stats
+        href: 202503_stats.html
+      - text: Python vs R
+        href: 202503_python.html        
   right:
   - text: Extra Resources
     href: 0_resources.html  

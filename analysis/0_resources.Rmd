@@ -6,7 +6,7 @@ output:
 ---
 
 <dev class="hint-info">
-** I'll drop resources that I find that might be useful!**
+**I'll drop resources that I find that might be useful to others.**
 </dev>
 
 
@@ -16,9 +16,7 @@ output:
 
 ### roadmap.sh
 
-[roadmap.sh](https://roadmap.sh) is another open-source site that compiles *roadmaps* for learning new programming skills. For example, the [Data Science and AI](https://roadmap.sh/ai-data-scientist) roadmap provides a guide and timeline for your learning, such as the math, stats and coding you should learn, and provides a list of paid and free resources to follow. As with all information I put here, this is just a suggestion, and if you find another resource that's better, please use that instead, and let me know so I can add it here. 
-
-
+[roadmap.sh](https://roadmap.sh) is another open-source site that compiles *roadmaps* for learning new programming skills. For example, the [Data Science and AI](https://roadmap.sh/ai-data-scientist) roadmap provides a guide and timeline for your learning, such as the math, stats and coding you should learn, with a list of paid and free resources. As with all information I put here, this is just a suggestion, and if you find another resource that's better, please use that instead, and let me know so I can add it here. 
 
 
 
