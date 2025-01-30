@@ -653,6 +653,10 @@ Learn additional visualisation techniques.<br />
 <span id="cb142-18"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb142-18" tabindex="-1"></a>           <span class="at">hjust =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>)<span class="sc">+</span></span>
 <span id="cb142-19"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb142-19" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code></pre></div>
 </details>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
 <img src="_main_files/figure-html/unnamed-chunk-66-1.png" width="672" />
 <e>
 </details>
@@ -666,12 +670,12 @@ Learn additional visualisation techniques.<br />
 <strong>Facet_wrap():</strong>
 </summary>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb143-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">percent_HLADR =</span> <span class="dv">100</span><span class="sc">*</span>HLADR<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
-<span id="cb143-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb143-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>CD28, <span class="at">y=</span>age, <span class="at">color =</span> percent_HLADR)) <span class="sc">+</span></span>
-<span id="cb143-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb143-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape=</span>layer))<span class="sc">+</span></span>
-<span id="cb143-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb143-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
-<span id="cb143-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb143-5" tabindex="-1"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">high =</span> <span class="st">&quot;#FF0000&quot;</span>, <span class="at">low =</span> <span class="st">&quot;#0000FF&quot;</span>)<span class="sc">+</span></span>
-<span id="cb143-6"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb143-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>tissue)</span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">percent_HLADR =</span> <span class="dv">100</span><span class="sc">*</span>HLADR<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
+<span id="cb144-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>CD28, <span class="at">y=</span>age, <span class="at">color =</span> percent_HLADR)) <span class="sc">+</span></span>
+<span id="cb144-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape=</span>layer))<span class="sc">+</span></span>
+<span id="cb144-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb144-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-5" tabindex="-1"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">high =</span> <span class="st">&quot;#FF0000&quot;</span>, <span class="at">low =</span> <span class="st">&quot;#0000FF&quot;</span>)<span class="sc">+</span></span>
+<span id="cb144-6"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>tissue)</span></code></pre></div>
 </details>
 <img src="_main_files/figure-html/unnamed-chunk-67-1.png" width="672" />
 <e>
@@ -681,31 +685,37 @@ Learn additional visualisation techniques.<br />
 <strong>plot_grid():</strong>
 </summary>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-1" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
-<span id="cb144-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-2" tabindex="-1"></a></span>
-<span id="cb144-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-3" tabindex="-1"></a>plot1 <span class="ot">=</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb144-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CCR5 =</span> <span class="dv">100</span><span class="sc">*</span>CCR5<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
-<span id="cb144-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
-<span id="cb144-6"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-6" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
-<span id="cb144-7"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-7" tabindex="-1"></a>    <span class="at">y =</span> percent_CCR5</span>
-<span id="cb144-8"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-8" tabindex="-1"></a>  ))<span class="sc">+</span></span>
-<span id="cb144-9"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-9" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb144-10"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-10" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
-<span id="cb144-11"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-11" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;CCR5 %&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;Percent CCR5&quot;</span>)<span class="sc">+</span></span>
-<span id="cb144-12"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-12" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb144-13"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-13" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
-<span id="cb144-14"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-14" tabindex="-1"></a>plot2 <span class="ot">=</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb144-15"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-15" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
-<span id="cb144-16"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-16" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
-<span id="cb144-17"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-17" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">log</span>(CCR5_MFI)</span>
-<span id="cb144-18"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-18" tabindex="-1"></a>  ))<span class="sc">+</span></span>
-<span id="cb144-19"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-19" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb144-20"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-20" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
-<span id="cb144-21"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-21" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;log(CCR5 MFI)&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;CCR5 MFI&quot;</span>)<span class="sc">+</span></span>
-<span id="cb144-22"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-22" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb144-23"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-23" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
-<span id="cb144-24"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-24" tabindex="-1"></a></span>
-<span id="cb144-25"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb144-25" tabindex="-1"></a><span class="fu">plot_grid</span>(plot1,plot2, <span class="at">nrow=</span><span class="dv">2</span>) <span class="co">#or change the rows. Add 50 plots if you want to adn specify how you arrange them by rows and/or columns</span></span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-1" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span></code></pre></div>
+</details>
+<pre><code>## 
+## Attaching package: &#39;cowplot&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:lubridate&#39;:
+## 
+##     stamp</code></pre>
+<details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-1" tabindex="-1"></a>plot1 <span class="ot">=</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb148-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CCR5 =</span> <span class="dv">100</span><span class="sc">*</span>CCR5<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
+<span id="cb148-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb148-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-4" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
+<span id="cb148-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-5" tabindex="-1"></a>    <span class="at">y =</span> percent_CCR5</span>
+<span id="cb148-6"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-6" tabindex="-1"></a>  ))<span class="sc">+</span></span>
+<span id="cb148-7"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-7" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb148-8"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-8" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
+<span id="cb148-9"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-9" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;CCR5 %&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;Percent CCR5&quot;</span>)<span class="sc">+</span></span>
+<span id="cb148-10"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-10" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb148-11"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-11" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb148-12"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-12" tabindex="-1"></a>plot2 <span class="ot">=</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb148-13"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-13" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb148-14"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-14" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
+<span id="cb148-15"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-15" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">log</span>(CCR5_MFI)</span>
+<span id="cb148-16"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-16" tabindex="-1"></a>  ))<span class="sc">+</span></span>
+<span id="cb148-17"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-17" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb148-18"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-18" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
+<span id="cb148-19"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-19" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;log(CCR5 MFI)&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;CCR5 MFI&quot;</span>)<span class="sc">+</span></span>
+<span id="cb148-20"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-20" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb148-21"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-21" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb148-22"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-22" tabindex="-1"></a></span>
+<span id="cb148-23"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb148-23" tabindex="-1"></a><span class="fu">plot_grid</span>(plot1,plot2, <span class="at">nrow=</span><span class="dv">2</span>) <span class="co">#or change the rows. Add 50 plots if you want to adn specify how you arrange them by rows and/or columns</span></span></code></pre></div>
 </details>
 <img src="_main_files/figure-html/unnamed-chunk-68-1.png" width="672" />
 <e>
@@ -722,32 +732,32 @@ Learn additional visualisation techniques.<br />
 <p>Use <code>?png</code> to get the specific options, but here is a simple example of generating a multipage pdf.</p>
 <p>You call the function to “open” the pdf, plot your figures, and then close the pdf using <code>dev.off()</code></p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-1" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;CCR5_results.pdf&quot;</span>, <span class="at">widht =</span> <span class="dv">7</span>, <span class="at">height=</span><span class="dv">7</span>) </span>
-<span id="cb145-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-2" tabindex="-1"></a></span>
-<span id="cb145-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-3" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="cb145-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CCR5 =</span> <span class="dv">100</span><span class="sc">*</span>CCR5<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
-<span id="cb145-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
-<span id="cb145-6"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-6" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
-<span id="cb145-7"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-7" tabindex="-1"></a>    <span class="at">y =</span> percent_CCR5</span>
-<span id="cb145-8"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-8" tabindex="-1"></a>  ))<span class="sc">+</span></span>
-<span id="cb145-9"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-9" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb145-10"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-10" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
-<span id="cb145-11"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-11" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;CCR5 %&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;Percent CCR5&quot;</span>)<span class="sc">+</span></span>
-<span id="cb145-12"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-12" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb145-13"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-13" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
-<span id="cb145-14"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-14" tabindex="-1"></a></span>
-<span id="cb145-15"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-15" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="cb145-16"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-16" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
-<span id="cb145-17"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-17" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
-<span id="cb145-18"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-18" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">log</span>(CCR5_MFI)</span>
-<span id="cb145-19"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-19" tabindex="-1"></a>  ))<span class="sc">+</span></span>
-<span id="cb145-20"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-20" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb145-21"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-21" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
-<span id="cb145-22"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-22" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;log(CCR5 MFI)&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;CCR5 MFI&quot;</span>)<span class="sc">+</span></span>
-<span id="cb145-23"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-23" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb145-24"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-24" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
-<span id="cb145-25"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-25" tabindex="-1"></a></span>
-<span id="cb145-26"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb145-26" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-1" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;CCR5_results.pdf&quot;</span>, <span class="at">widht =</span> <span class="dv">7</span>, <span class="at">height=</span><span class="dv">7</span>) </span>
+<span id="cb149-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-2" tabindex="-1"></a></span>
+<span id="cb149-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-3" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb149-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CCR5 =</span> <span class="dv">100</span><span class="sc">*</span>CCR5<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
+<span id="cb149-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb149-6"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-6" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
+<span id="cb149-7"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-7" tabindex="-1"></a>    <span class="at">y =</span> percent_CCR5</span>
+<span id="cb149-8"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-8" tabindex="-1"></a>  ))<span class="sc">+</span></span>
+<span id="cb149-9"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-9" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb149-10"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-10" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
+<span id="cb149-11"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-11" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;CCR5 %&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;Percent CCR5&quot;</span>)<span class="sc">+</span></span>
+<span id="cb149-12"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-12" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb149-13"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-13" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb149-14"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-14" tabindex="-1"></a></span>
+<span id="cb149-15"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-15" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb149-16"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-16" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb149-17"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-17" tabindex="-1"></a>    <span class="at">x =</span> group, </span>
+<span id="cb149-18"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-18" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">log</span>(CCR5_MFI)</span>
+<span id="cb149-19"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-19" tabindex="-1"></a>  ))<span class="sc">+</span></span>
+<span id="cb149-20"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-20" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb149-21"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-21" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width=</span><span class="fl">0.1</span>, <span class="at">alpha=</span><span class="fl">0.2</span>)<span class="sc">+</span></span>
+<span id="cb149-22"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-22" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">y=</span> <span class="st">&quot;log(CCR5 MFI)&quot;</span>, <span class="at">x=</span> <span class="st">&quot;Tissue x Layer&quot;</span>, <span class="at">title=</span><span class="st">&quot;CCR5 MFI&quot;</span>)<span class="sc">+</span></span>
+<span id="cb149-23"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-23" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)<span class="sc">+</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb149-24"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-24" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb149-25"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-25" tabindex="-1"></a></span>
+<span id="cb149-26"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb149-26" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 </details>
 <e>
 </details>
@@ -757,11 +767,11 @@ Learn additional visualisation techniques.<br />
 </summary>
 <p>ggsave is quite simple and allows you to very easily control resolutions and size.</p>
 <details class=chunk-details open><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb146-1" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;CCR5_percent.png&quot;</span>, </span>
-<span id="cb146-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb146-2" tabindex="-1"></a>       plot1, </span>
-<span id="cb146-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb146-3" tabindex="-1"></a>       <span class="at">path =</span> <span class="st">&quot;C:/1_Yc/r-analysis-user-group/plots&quot;</span>, </span>
-<span id="cb146-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb146-4" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">5</span>, <span class="at">units =</span> <span class="fu">c</span>(<span class="st">&#39;cm&#39;</span>), </span>
-<span id="cb146-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb146-5" tabindex="-1"></a>       <span class="at">dpi=</span><span class="dv">300</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb150-1" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;CCR5_percent.png&quot;</span>, </span>
+<span id="cb150-2"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb150-2" tabindex="-1"></a>       plot1, </span>
+<span id="cb150-3"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb150-3" tabindex="-1"></a>       <span class="at">path =</span> <span class="st">&quot;C:/1_Yc/r-analysis-user-group/plots&quot;</span>, </span>
+<span id="cb150-4"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb150-4" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">5</span>, <span class="at">units =</span> <span class="fu">c</span>(<span class="st">&#39;cm&#39;</span>), </span>
+<span id="cb150-5"><a href="chapter-6-data-visualisation-with-ggplot2-2.html#cb150-5" tabindex="-1"></a>       <span class="at">dpi=</span><span class="dv">300</span>)</span></code></pre></div>
 </details>
 <e>
 </details>

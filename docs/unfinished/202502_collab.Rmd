@@ -1,7 +1,6 @@
 ---
-title: "Template Title"
-author: "Author"
-date: "2025-02" 
+title: "Collaborative Coding: Markdown, Shiny, and GitHub"
+author: "Thomas O'Neil"
 output:
   workflowr::wflow_html:
     toc: false
