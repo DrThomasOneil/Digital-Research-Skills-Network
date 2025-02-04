@@ -37,16 +37,16 @@ Harry envisions a future where healthcare decisions are informed by comprehensiv
 </div>
 <hr><br>
 
-<div style="text-align: left;">
-<img src="assets/headshot/headshot.jpg" alt="Tom" style="width: 1.5in; float: left; margin-right: 10px;">
-<div style="overflow: hidden;">
+<!-- <div style="text-align: left;"> -->
+<!-- <img src="assets/headshot/headshot.jpg" alt="Tom" style="width: 1.5in; float: left; margin-right: 10px;"> -->
+<!-- <div style="overflow: hidden;"> -->
 
-## [Name]
+<!-- ## [Name] -->
 
-**Title** ✉: email@sydney.edu.au
+<!-- **Title** ✉: email@sydney.edu.au -->
 
-Biography
+<!-- Biography -->
 
-</div>
-</div>
-<hr><br>
+<!-- </div> -->
+<!-- </div> -->
+<!-- <hr><br> -->
