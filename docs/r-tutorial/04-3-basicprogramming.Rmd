@@ -17,9 +17,9 @@ Understand programming logic for automating tasks.
 
 ## Assigning variables
 
-We've already demonstrated variables and assignment. What we mean by this is `a <- 3`, where we assign the variable `3` to `a`. We've also already assigned dataframes and lists to `objects` too.
+We've already introduced variable assignment, where a value is stored in a named object. For example, `a <- 3` assigns the value `3` to `a`. We've also already assigned dataframes and lists to `objects` too.
 
-In short, we do this to store and use information a lot more efficiently. You can store anything you might want to use later, but remember that you will continuously take up more and more space with every object and variable you save.
+This allows us to store and reuse information efficiently, reducing redundancy in our code. You can store anything you might want to use later, but remember that you will continuously take up more and more space with every object and variable you save.
 
 ```{r, include=F}
 setwd("~/Desktop/analysis-user-group")
@@ -33,16 +33,19 @@ setwd("directory")
 data <- read.csv("~/Desktop/analysis-user-group/synthetic_data.csv")
 ```
 
+<div class="hint-warning">        
+**Keep an eye on your environment**. It will inflate quickly. You can use `rm(object1, object2, objectn)` to remove objects from your environment.    
+</div>
 
 <wimr>
 
 ## Conditional statements
 
-Conditional statements let you break up and execute your code based on different conditions, such as `if` and `else`. 
+Conditional statements allow you to control the flow of your code by executing different actions based on specific conditions.
 
 ```{r}
-data$predominant_subset <- ifelse(
-  data$CD8>data$CD4, #Condition
+data$predominant_subset <- ifelse( # Unlike an if statement that evaluates a single condition, ifelse() is vectorized and applies the condition across an entire column.
+  data$CD8 > data$CD4, #Condition
   "CD8", # if condition is met, this is the outcome
   "CD4" # ELSE this is the outcome. 
 )
@@ -55,12 +58,12 @@ You can see that there are several variations of the **Abdomen** tissue type, li
 
 ## Loops
 
-With loops, we can iterate functions over a dataset, such as number of rows and number of columns, or number of samples in a folder. There are two types:
-
-- `for` which will iterate a specified number of times. 
-  - E.g. *for indexes in 1 through 100, print which index you're up to* written as `for(index in 1:100){print(index)}`
-  
-- `while` which will iterate indefinitely until a condition is not met. E.g. *while the index is less than or equal to 100, print the index* written as 
+There are two main types of loops in R:   
+- For loops: Used when the number of iterations is known. E.g. *for indexes in 1 through 100, print which index you're up to* written as     
+```script
+for(index in 1:100){print(index)}
+```   
+- While loops: Used when iterations depend on a condition. E.g. *while the index is less than or equal to 100, print the index* written as: 
 
 ```r
 index=1
@@ -70,7 +73,8 @@ while(index <=100){
 }
 ```
 
-Here is an example of using a loop and a check which indexes are coming up with differences. 
+Here's an example of a loop checking for inconsistent tissue labels.
+
 ```{r}
 n_vagina = 0
 n_labia = 0
@@ -96,7 +100,7 @@ We know that there are 120 samples, but here it's printing 117, because there ar
 
 ## Writing a function
 
-Functions can be quite simple to write and easy to implement for simple repetitive tasks. For example, with single cell RNA analysis with Seurat, if you're testing different variables, having the workflow summarized in one function will make your workflow tidier. 
+Functions help modularize your code, reducing repetition and improving readability. Instead of rewriting similar blocks of code, you can define a function and call it whenever needed. For example, with single cell RNA analysis with Seurat, if you're testing different variables, having the workflow summarized in one function will make your workflow tidier. 
 
 Here we're just going to write the checker above into a function with some extra user-input functionality. 
 

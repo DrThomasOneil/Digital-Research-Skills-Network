@@ -1,17 +1,149 @@
 ---
-title: "Introduction to Python"
-author: "Harry Robertson"
+title: "Template Title"
+author: "Author"
+date: "2025-02" 
 output:
   workflowr::wflow_html:
     toc: false
 ---
 
+<!---
+Notes:
+  Can add your own notes here.
+  ...
+  
+<--->
+
+<read-time><i>**Content Coming Soon**</i></read-time><wimr>
+
+<!--- CSS Tools for Content Creators --->
+<div class="hint-info">
+**Important information**
+</div>
+<div class="hint-success">
+**Success**
+</div>
+<div class="hint-warning">
+**Warnings**
+</div>
+<div class="hint-danger">
+**Dangers**
+</div>
+<div class="hint-practice">
+**Practice before moving on**
+</div>
+<div class="hint-terminology">
+**Practice you should try before moving on**
+</div>
+
+<!--- CSS Custom lines --->
+<wimr> <!--- This is a good one to separate  --->
+<e>
+
+<!--- Add this html chunk and use the CSS formatting below to add a checkbox practice list --->
+
+```{html, include=F}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(checkbox.id, checkbox.checked);
+    });
+  });
+});
+</script>
+```
+
+<div class="hint-practice">  
+**Practice:**  
+<input type="checkbox"> &nbsp;&nbsp;*General Practice Title*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;*TASK 1* <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> &nbsp;&nbsp;*TASK 2* <br>
+</div><e>
+
+<!--- Start here --->
+
+# Introduction
+
+Notes on the tutorial
+
+<!--- Add this html chunk and use the CSS formatting below to add a checkbox practice list --->
+
+<div class="hint-goals">
+**Goals:**    
+General Goal<br>
+&nbsp;&nbsp;&#8226; Goal 1<br> 
+&nbsp;&nbsp;&#8226; Goal 2<br> 
+
+</div>
+
+<read-time><i>**Estimated time**: X hours</i></read-time><wimr>
+
+
+# Set up{.tabset .tabset-fade}
+
+<!--- Include here any information about the set up and what users might expect --->
+
+<!--- You might also include any terminology or complicated context the user might want to research prior to the workshop --->
+
+Set up should specify the packages required, any instructions for irregular packages or setup, data prep and download instructions. 
+
+Folder structure, for simplicity should just follow:
+```text
+Name_of_group/
+├── YYYYMM_YourWorkshopName_Initials
+│     └── raw (for downloading and loading in raw data files)
+│     └── data (for saving rds as you go)
+│     └── plots (for saving rds as you go)
+├── YourWorkshopName
+```
+
+## Create a new project
+
+Users should just have to press play here.
+
+```{r, include=F}
+workshop_title = "YYYYMM_Workshop_Name"
+```
+
+```{r, eval=F}
+setwd("~/Desktop/analysis-user-group")
+dir.create(paste0(workshop_title, "/plots"))
+dir.create(paste0(workshop_title, "/raw"))
+dir.create(paste0(workshop_title, "/data"))
+```
+
+## Download the data
+
+Users should just have to press play here.
+
+```{r, eval=F}
+# e.g. if its just a csv
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", 
+              destfile = paste0(workshop_title, "/raw/data.csv"))
+
+# If not. You'll need to make it very clear how to download from r, and have a backup incase it doesn't work. 
+
+```
+
+
+## Final notes
+
+<!--- Not Necessary! --->
 
 
 
+<wimr>
 
+# Your Content
 
+# Conclusions
 
+# Acknowledgements
+
+<e>
 
 
 

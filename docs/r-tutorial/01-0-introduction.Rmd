@@ -107,6 +107,6 @@ This alone makes programming worthwhile: reproducibility is seamless, and the cl
 
 <e>
 
-[Next Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-R-and-RStudio.html)
+[Next Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-r-and-rstudio.html)
 
 <div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px; "></div>

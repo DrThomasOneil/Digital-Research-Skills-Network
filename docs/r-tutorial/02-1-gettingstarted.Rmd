@@ -294,7 +294,7 @@ Congratulations. <sup>You wrote your first program.<sup>You're a genius.<sup>Wel
 
 <wimr>
 
-## Exercise: Write your <strike>first</strike> second script
+## Optional Exercise: Write your <strike>first</strike> second script
 
 <div class="hint-practice">  
 **Practice:**  

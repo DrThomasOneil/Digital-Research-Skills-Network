@@ -35,9 +35,13 @@ There are a few data types you should know:
 
 - **numeric**: Data can be stored as a number. R recognises numbers without the quotation marks
 
-- **logical**: TRUE / FALSE / T / F / 1 / 0. Logicals are an important data type that you'll notice along the way.
+- **logical**: TRUE / FALSE / T / F / 1 / 0. Logicals are an important data type that you'll notice along the way. 
 
-Some functions or operations require data to the correct data type. For example, math can't be performed on a character
+<div class="hint-goals">    
+R treats 1 as TRUE and 0 as FALSE   
+</div>
+
+Some functions or operations require data to be of the correct type. For example, mathematical operations can't be performed on a character.
 
 ```{r}
 # character
@@ -46,7 +50,7 @@ typeof(char)
 
 # numeric
 num = "1"
-typeof(num) # 1 is in quotes - so classified as a char
+typeof(num) # "1" is enclosed in quotes, so it is a character string.
 
 num = 1
 typeof(num) # without the quotes
@@ -56,7 +60,7 @@ log = TRUE
 typeof(log)
 ```
 
-To demonstrate a logical, a good example of their use is to check a condition and run a script. I'll use `if` here, which we cover in the next chapter.
+A good example of using logicals is to check a condition and execute a script. I'll use `if` here, which we cover in the next chapter.
 
 <details><summary>**Examples:**</summary>
 
@@ -230,6 +234,13 @@ list[[1]]
 list[["vector"]]
 list$string
 ```
+
+Its also worth noting that lists can contain other lists.
+
+```{r}
+list$nested_list <- list(a = 1, b = c(2, 3, 4))
+```
+
 <e></details>
 
 <wimr>
@@ -245,8 +256,11 @@ Another file type is **RDS** which is R Data Serialization which is the easiest 
 On the other hand, **saveRDS()** & **readRDS()** requires no extra information. Your data will be identical when read back in.   
 </div>
 
-Most commonly, you'll use `data <- read.csv()` or `data <- readRDS()`. 
-
+Most commonly, you'll use either
+```script
+data <- read.csv()  # For CSV files
+data <- readRDS()   # For RDS files
+```
 To read in excel files, you'll need to install a package (try the packages `xlsx` for `read.xlsx()`, or `readxl` for `read_excel()` - I can't recall why, but sometimes one of these won't work). 
 
 Throughout these tutorials, you'll use `read.csv()` to read in the example data we downloaded in Chapter 1. We'll then finish each tutorial with `saveRDS()` and begin the next tutorial with `readRDS()`. This is a nice and organised way that you may use yourself when analysing data. This is effectively having stop and start points.
