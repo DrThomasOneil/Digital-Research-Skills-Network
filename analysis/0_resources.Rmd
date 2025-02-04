@@ -1,5 +1,5 @@
 ---
-title: "Additional Resources"
+title: "Extra Resources"
 output:
   workflowr::wflow_html:
     toc: no
@@ -9,16 +9,18 @@ output:
 **I'll drop resources that I find that might be useful to others.**
 </dev>
 
-
 ### Stretchly
 
-[Stretchly](https://hovancik.net/stretchly/) is a really nice open-source app that prompts you at certain intervals to take a short (30 second) break or long (20 minutes). I have found it <strong><i>incredibly</i></strong> useful for ensuring I take breaks throughout my day. You can also customise the prompts! 
+[Stretchly](https://hovancik.net/stretchly/) is an open-source app designed to encourage healthy work habits by prompting regular short (30-second) and long (20-minute) breaks. I’ve found it invaluable for maintaining focus and preventing burnout. It’s highly customizable, allowing you to tailor prompts to your needs.
 
 ### roadmap.sh
 
-[roadmap.sh](https://roadmap.sh) is another open-source site that compiles *roadmaps* for learning new programming skills. For example, the [Data Science and AI](https://roadmap.sh/ai-data-scientist) roadmap provides a guide and timeline for your learning, such as the math, stats and coding you should learn, with a list of paid and free resources. As with all information I put here, this is just a suggestion, and if you find another resource that's better, please use that instead, and let me know so I can add it here. 
+[roadmap.sh](https://roadmap.sh) provides structured learning pathways for various tech-related skills, from Data Science to DevOps. The Data Science and AI roadmap outlines essential topics such as mathematics, statistics, and coding, along with curated free and paid learning resources. These roadmaps are community-driven and frequently updated, making them a great guide for self-paced learning.
 
+### LinkedIn Learning
 
+[LinkedIn Learning](https://www.linkedin.com/learning/) offers a vast library of online courses covering data analysis, programming (including R and Python), statistics, research skills, and professional development. There is a short [R for Data Science](https://www.linkedin.com/learning-login/share?account=2196204&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fr-for-data-science-analysis-and-visualization%3Ftrk%3Dshare_ent_url%26shareId%3DgVEBrY1NSqeJQqBaQvzOLQ%253D%253D) course that is quite nice. 
 
+You should have access to LinkedIn Learning through your University email. Otherwise, WIMR staff can apply for a license through WIMR. 
 
 

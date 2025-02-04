@@ -90,6 +90,8 @@ Understand programming logic for automating tasks.
 
 <wimr>
 
+<details><summary>**Coming Soon**</summary>
+
 ## **Chapter 4: Data Manipulation with `tidyverse`**
 
 <div class="hint-goals">      
@@ -170,6 +172,7 @@ Build a dynamic and shareable report of your analysis.
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/conclusions.html)
 
+</details>
 
 <e>
 
