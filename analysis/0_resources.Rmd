@@ -24,3 +24,9 @@ output:
 You should have access to LinkedIn Learning through your University email. Otherwise, WIMR staff can apply for a license through WIMR. 
 
 
+<!---
+To add:
+
+- rstudio.github.io/learnr
+
+<--->

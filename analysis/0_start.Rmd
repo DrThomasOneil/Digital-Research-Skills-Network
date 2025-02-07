@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 This 10-chapter workshop series is designed to introduce users to R programming with a focus on bioinformatics workflows and reproducibility. It emphasizes the mindset shift required to transition from manual tools like Excel to programmatic data analysis.
 
-<read-time><i>**Estimated time**: 1.5 hours</i></read-time><wimr>
+<read-time><i>**Estimated time**: 1.5 hours</i></read-time>
 
 [Start the Tutorial →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/index.html)
 
@@ -92,7 +92,7 @@ Understand programming logic for automating tasks.
 
 <details><summary>**Coming Soon**</summary>
 
-## **Chapter 4: Data Manipulation with `tidyverse`**
+### **Chapter 4: Data Manipulation with `tidyverse`**
 
 <div class="hint-goals">      
 **Goals:**     
@@ -107,7 +107,7 @@ Introduce `tidyverse` for filtering, mutating, summarizing and pivoting data.
 
 <wimr>
 
-## **Chapter 5: Visualization with `ggplot2` – Part 1**
+### **Chapter 5: Visualization with `ggplot2` – Part 1**
 
 <div class="hint-goals">      
 **Goals:**     
@@ -121,7 +121,7 @@ Create and customize visualizations using `ggplot2`.
 
 <wimr>
 
-## **Chapter 6: Advanced Visualization with `ggplot2` – Part 2**
+### **Chapter 6: Advanced Visualization with `ggplot2` – Part 2**
 
 <div class="hint-goals">      
 **Goals:**     
@@ -136,7 +136,7 @@ Learn additional visualisation techniques.
 
 <wimr>
 
-## **Chapter 7: Statistical Analysis**
+### **Chapter 7: Statistical Analysis**
 
 <div class="hint-goals">      
 **Goals:**     
@@ -150,7 +150,7 @@ Apply simple statistic to the synthetic data.
 
 <wimr>
 
-## **Chapter 8: Reproducible Reports with RMarkdown**
+### **Chapter 8: Reproducible Reports with RMarkdown**
 
 <hint-text><strong>*Content coming soon!*</strong></hint-text>
 
@@ -168,7 +168,7 @@ Build a dynamic and shareable report of your analysis.
 
 <wimr>
 
-## **Conclusions**
+### **Conclusions**
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/conclusions.html)
 
