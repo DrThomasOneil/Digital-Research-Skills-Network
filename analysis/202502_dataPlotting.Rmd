@@ -69,10 +69,32 @@ dir.create("20250210_Tidyverse")
 ```{r, eval=F}
 knitr::opts_knit$set(root.dir = "/Users/thomasoneil/Desktop/analysis-user-group/20250210_Tidyverse")
 #Download files
-download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.rds", "data.csv")
-download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.csv", "data.rds")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.rds", "data.rds")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.csv", "data.csv")
 download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.tsv", "data.tsv")
 download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.xlsx", "data.xlsx")
+```
+
+If these downloads dont work, run this in your console:
+
+```{r}
+set.seed(123) 
+
+data <- data.frame(
+  patient_id = 1:1000,
+  age = sample(18:90, 1000, replace = TRUE),
+  sex = sample(c("Male", "Female"), 1000, replace = TRUE),
+  height = rnorm(1000, mean = 170, sd = 10)
+)
+
+data$weight <- 0.3 * data$height + rnorm(1000, mean = 19, sd = 5)
+data$bmi <- data$weight / (data$height / 100)^2
+
+data$disease_status <- rbinom(1000, 1, prob = plogis(0.05 * (data$age - 50) + 0.1 * (data$bmi - 25)))
+
+data$biomarker <- rnorm(1000, mean = 5, sd = 1) + 2 * data$disease_status
+
+data$on_medication <- rbinom(1000, 1, prob = ifelse(data$disease_status == 1, 0.7, 0.1))
 ```
 
 
