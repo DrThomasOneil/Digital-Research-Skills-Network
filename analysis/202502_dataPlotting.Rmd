@@ -1,0 +1,499 @@
+---
+title: "Data manuipulation and plotting"
+author: "Harry Robertson"
+date: "2025-02-10"
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    embed-resources: true
+    css:  
+      - https://use.fontawesome.com/releases/v5.0.6/css/all.css
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=T)
+```
+
+## Data manipulation and plotting
+
+Data manipulation and plotting are two of the most important tasks in
+data analysis. In this tutorial, we will learn how to manipulate data
+and create plots using the `dplyr` and `ggplot2` packages in R. But
+first, let's learn how to load data into R.
+
+<wimr> 
+
+## Setup{.tabset .tabset-fade}
+
+### Packages
+
+Below is the list of packages that we will be using in this tutorial.
+Remember, packages need to be installed only once, but they need to be
+loaded every time you start a new R session.
+
+```{r, warning=FALSE, message=FALSE}
+# Uncomment the following line to install the package if you haven't already! 
+# install.packages(c("dplyr", "ggplot2", "readxl"))
+
+# Load the packages
+library(dplyr)
+library(ggplot2)
+library(readxl)
+```
+<wimr>
+
+### Create a new project
+
+Set the directory to a common folder you'll continue to use for these workshops. 
+From here, you'll be able to create subfolders **in R** for all new workshops. 
+
+```{r, eval=F}
+# Set your working directory
+knitr::opts_knit$set(root.dir = "/Users/thomasoneil/Desktop/analysis-user-group")
+
+# Create a new folder for todays workshop
+dir.create("20250210_Tidyverse")
+```
+<wimr>
+
+### Download the relevant data
+
+```{r, eval=F}
+knitr::opts_knit$set(root.dir = "/Users/thomasoneil/Desktop/analysis-user-group/20250210_Tidyverse")
+#Download files
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.rds", "data.csv")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.csv", "data.rds")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.tsv", "data.tsv")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.xlsx", "data.xlsx")
+```
+
+
+<wimr>
+
+## Loading data into R {.tabset}
+
+There are several ways to load data into R. This will largely depend on
+the format of the data you are working with. Some of the most common
+ways to load data into R are:
+
+-   Loading comma-seperated files (.csv)
+
+-   Loading tab-delimited files (.tsv)
+
+-   Loading Excel files (.xslx)
+
+-   Loading RDS files (R's native file format)
+
+
+### Loading comma-seperated files (.csv)
+
+One common way is to use the `read.csv()` function to read a CSV file.
+For example, to read a file named `data.csv`, you can use the following
+code:
+
+```{r, eval = FALSE}
+data <- read.csv("data.csv")
+head(data)
+```
+<wimr>
+
+### Loading tab-delimited files (.tsv)
+
+Another way to load data into R is to use the `read.table()` function.
+This function can be used to read tab-delimited files, as well as files
+with other delimiters. For example, to read a tab-delimited file named
+`data.txt`, you can use the following code.
+
+```{r, eval = FALSE}
+data <- read.table("data.txt", sep = "\t", header = TRUE) 
+# sep = "\t" specifies that the file is tab-delimited. 
+# header = TRUE specifies that the first row contains column names. 
+head(data)
+```
+
+<wimr>
+
+### Loading Excel files (.xslx)
+
+Finally, a lot of collaborators will often give us data in the form of
+an Excel file. To read an Excel file into R, you can use the `readxl`
+package. First, you need to install the package using the following
+code:
+
+```{r, eval = FALSE}
+# Uncomment the following line to install the package if you haven't already! 
+# install.packages("readxl")
+library(readxl)
+data <- readxl::read_excel("data.xlsx")
+head(data)
+```
+
+<wimr>
+
+### Loading RDS files
+
+RDS files are R's native file format. You can save an R object to an RDS
+file using the `saveRDS()` function, and then load it back into R using
+the `readRDS()` function. For example, to save an object named `data` to
+a file named `data.rds`, you can use the following code:
+
+```{r, eval = FALSE}
+# Let's first save the data as an RDS file. 
+saveRDS(data, "data.rds") 
+
+data <- readRDS("data.rds") # To load the data back into R
+head(data)
+```
+
+<wimr>
+
+## Simulating data in R
+
+For todays tutorial, we will be simulating our own patient cohort data.
+We will create a data frame with 1000 rows and 5 columns. The columns
+will be named `patient_id`, `age`, `sex`, `weight`, and `height`.
+
+We will make use of two functions to generate the data: `sample()` and
+`rnorm()`.
+
+-   The `sample()` function is used to generate random samples from a
+    vector.
+
+-   The `rnorm()` function is used to generate random numbers from a
+    normal distribution.
+
+```{r simulating data}
+set.seed(123) 
+
+# Simulating dataset
+data <- data.frame(
+  patient_id = 1:1000,
+  age = sample(18:90, 1000, replace = TRUE),
+  sex = sample(c("Male", "Female"), 1000, replace = TRUE),
+  height = rnorm(1000, mean = 170, sd = 10)
+)
+
+# Simulating weight and BMI
+data$weight <- 0.3 * data$height + rnorm(1000, mean = 19, sd = 5)
+data$bmi <- data$weight / (data$height / 100)^2
+
+# Disease status: More likely in older individuals and those with higher BMI
+data$disease_status <- rbinom(1000, 1, prob = plogis(0.05 * (data$age - 50) + 0.1 * (data$bmi - 25)))
+
+# Biomarker: Higher levels in those with disease
+data$biomarker <- rnorm(1000, mean = 5, sd = 1) + 2 * data$disease_status
+
+# Medication usage: More common in those with disease
+data$on_medication <- rbinom(1000, 1, prob = ifelse(data$disease_status == 1, 0.7, 0.1))
+
+# View first rows
+head(data)
+```
+
+
+<wimr>
+
+## Data manipulation with dplyr {.tabset}
+
+The `dplyr` package is a powerful tool for data manipulation in R. It
+provides a set of functions that make it easy to filter, arrange, group,
+and summarize data. Some of the most commonly used functions in `dplyr`
+are: - `filter()`: to filter rows based on a condition - `arrange()`: to
+reorder rows - `select()`: to select columns - `mutate()`: to create new
+columns.
+
+```{r}
+data %>%
+  head()
+```
+
+### Filtering data
+
+The `filter()` function is used to filter rows based on a condition. For
+example, to filter rows where the `age` column is greater than 60, you
+can use the following code:
+
+```{r}
+older_age_data = data %>%
+  filter(age > 60)
+head(older_age_data, n = 10)
+```
+
+<wimr>
+
+### Arranging data
+
+The `arrange()` function is used to reorder rows based on a variable. For example, to arrange the data by increasing age, you can use the following code:
+
+```{r}
+age_increasing_data = data %>%
+  arrange(age) 
+head(age_increasing_data, n = 10)
+```
+<wimr>
+
+### Selecting variables
+
+The `select()` function is used to select columns from a data frame. For example, to select only the `sex` and `disease_status` columns, you can use the following code:
+
+```{r}
+selected_data <- data %>%
+  select(sex, disease_status)
+head(selected_data)
+```
+
+This is useful if you want to go on to analyze a smaller subset of data.
+
+```{r}
+table(selected_data)
+```
+<wimr>
+
+### Adding variables
+
+The `mutate()` function is used to create new columns based on existing columns. For example, you might want to create a new variable that categorizes patients based on their biomarker level.
+
+```{r}
+biomarker_data <- data %>%
+  mutate(biomarker_category = ifelse(biomarker > 5, "High", "Low"))
+```
+
+<wimr>
+
+### Advanced - Transmute
+
+The `transmute()` function works like `mutate()` but returns only the newly created columns. For example, you might want to create a dataset with only the patient ID and a risk score calculated from age and BMI.
+
+```{r}
+risk_data <- data %>%
+  transmute(
+    patient_id,
+    risk_score = 0.05 * age + 0.1 * bmi
+  )
+head(risk_data)
+```
+<wimr>
+
+### Advanced - case_when
+
+The `case_when()` function is a more flexible version of `ifelse()`. It allows you to specify multiple conditions and corresponding values. For example, you might want to create a new variable that categorizes patients based on their BMI.
+
+```{r}
+data <- data %>%
+  mutate(bmi_category = case_when(
+    bmi < 18.5 ~ "Underweight",
+    bmi >= 18.5 & bmi < 25 ~ "Normal",
+    bmi >= 25 & bmi < 30 ~ "Overweight",
+    bmi >= 30 ~ "Obese"
+  ))
+head(data, n = 10)
+```
+
+<wimr>
+
+## Plotting with ggplot2 {.tabset}
+
+The `ggplot2` package is a powerful tool for creating plots in R. It
+provides a flexible and intuitive syntax for creating a wide variety of
+plots, including scatter plots, bar plots, line plots, and more.
+ 
+The basic idea of `ggplot2` is to create a plot in layers. You start by creating a new plot using the `ggplot()` function, and then add layers to the plot using functions like `geom_point()`, `geom_line()`, `geom_bar()`, and so on.
+
+Below we will initiate our first plot!
+
+```{r}
+library(ggplot2)
+ggplot(data, aes(x = weight, y = height))
+```
+
+Obviously this isn't useful yet, but we will now add layers on top of our canvas to create a plot!
+
+### Scatter plots
+
+The `ggplot()` function is used to create a new plot, and the `geom_point()` function is used to add points to the plot. 
+```{r}
+ggplot(data, aes(x = weight, y = height)) + geom_point()
+```
+
+We can also customize the plot by changing the color and transparency of the points within the `geom_point()` function!
+
+```{r}
+ggplot(data, aes(x = weight, y = height)) + geom_point(color = "green4", alpha = 0.5)
+```
+
+We can also add titles and labels to the plot using the `labs()` function.
+
+```{r}
+ggplot(data, aes(x = weight, y = height)) + geom_point(color = "green4", alpha = 0.5) +
+  labs(title = "Scatter Plot of Weight vs Height",
+       x = "Weight (kg)",
+       y = "Height (cm)")
+```
+
+We can also change the theme of the plot using the `theme_bw()` function! 
+
+```{r}
+ggplot(data, aes(x = weight, y = height)) + geom_point(color = "green4", alpha = 0.5) +
+  labs(title = "Scatter Plot of Weight vs Height",
+       x = "Weight (kg)",
+       y = "Height (cm)") +
+  theme_bw()
+```
+
+<wimr>
+
+### Box plots
+
+```{r}
+ggplot(data, aes(x = factor(disease_status), y = bmi, fill = factor(disease_status))) + geom_boxplot()
+```
+
+The current set up of using 0 and 1 to represent disease status is not very informative. Let's change the labels to "No Disease" and "Disease" using the `factor()` function. We will make use of `mutate()` to create a new column with the new labels.
+
+```{r}
+box_plot_data <- data %>%
+  select(disease_status, bmi) %>%
+  mutate(disease_status = factor(disease_status, levels = c(0, 1), labels = c("No Disease", "Disease")))
+ggplot(box_plot_data, aes(x = disease_status, y = bmi, fill = disease_status)) + geom_boxplot() 
+```
+
+<wimr>
+
+### Line plots
+
+For illustrative purposes, you can simulate a trend over age by summarizing the average biomarker level per age group. Here we use two new functions `group_by()` and `summarize()` from the `dplyr` package to calculate the average biomarker level per age group.   
+Simply, the `group_by()` function is used to group the data by a variable, and the `summarize()` function is used to calculate summary statistics for each group.
+
+```{r}
+age_trend <- data %>%
+  group_by(age) %>%
+  summarize(avg_biomarker = mean(biomarker))
+
+ggplot(age_trend, aes(x = age, y = avg_biomarker)) +
+  geom_line(color = "purple", size = 1) +
+  labs(title = "Average Biomarker Level by Age",
+       x = "Age",
+       y = "Average Biomarker Level") +
+  theme_bw()
+```
+
+<wimr>
+
+### Bar plots
+
+```{r}
+data %>%
+  mutate(bmi_category = case_when(
+    bmi < 18.5 ~ "Underweight",
+    bmi >= 18.5 & bmi < 25 ~ "Normal",
+    bmi >= 25 & bmi < 30 ~ "Overweight",
+    bmi >= 30 ~ "Obese"
+  )) %>%
+ggplot(aes(x = bmi_category, fill = factor(on_medication))) +
+  geom_bar(position = "fill") +
+  scale_fill_manual(values = c("lightgrey", "dodgerblue"),
+                    labels = c("Not on Medication", "On Medication")) +
+  labs(title = "Proportion of Medication Use by BMI Category",
+       x = "\nBMI Category",
+       y = "Proportion",
+       fill = "Medication") +
+  theme_minimal()
+```
+
+<wimr>
+
+### Histograms
+
+```{r}
+ggplot(data, aes(x = biomarker)) +
+  geom_histogram(binwidth = 0.5, fill = "cornflowerblue", color = "black") +
+  labs(title = "Histogram of Biomarker Levels",
+       x = "Biomarker Level",
+       y = "Frequency") +
+  theme_minimal()
+```
+
+<wimr>
+
+## Advanced plotting {.tabset}
+
+`ggplot2` has a lot of advanced features that allow you to create more complex and customized plots. 
+
+### Plotting multiple layers
+
+You can plot multiple datasets on the same plot by adding multiple `geom_` layers. For example, let’s plot the average biomarker level by age group and overlay the individual biomarker levels. (This doesn't make a ton of sense but just shows you how to overlay multiple layers!)
+
+```{r}
+ggplot(age_trend, aes(x = age, y = avg_biomarker)) +
+  geom_line(color = "purple", size = 1) +
+  geom_point(data = data, aes(x = age, y = biomarker), color = "steelblue", alpha = 0.5) +
+  labs(title = "Average Biomarker Level by Age with Individual Data Points",
+       x = "Age",
+       y = "Biomarker Level") +
+  theme_bw()
+```
+
+<wimr>
+
+### Plotting with facets
+
+Faceting is a powerful technique for creating multiple plots based on the levels of a categorical variable. For instance, we can compare biomarker distributions between patient sexes.
+
+```{r}
+ggplot(data, aes(x = biomarker, fill = factor(disease_status))) +
+  geom_histogram(binwidth = 0.5, color = "black", alpha = 0.7) +
+  facet_wrap(.~ sex) +
+  scale_fill_manual(values = c("lightblue", "tomato"),
+                    labels = c("No Disease", "Disease")) +
+  labs(title = "Biomarker Distribution by Disease Status and Sex",
+       x = "Biomarker Level",
+       y = "Count",
+       fill = "Disease Status") +
+  theme_bw()
+```
+
+<wimr>
+
+### Plotting with statistics
+
+You can overlay statistical summaries (such as regression lines) using `geom_smooth()`. For example, let’s add a regression line to the scatter plot of weight versus height.
+
+```{r}
+ggplot(data, aes(x = weight, y = height)) +
+  geom_point(color = "steelblue", alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE, color = "darkred") +
+  labs(title = "Scatter Plot of Weight vs Height with Regression Line",
+       x = "Weight (kg)",
+       y = "Height (cm)") +
+  theme_minimal()
+```
+
+We can also perform basic statistical tests between groups. For example, we can compare the average BMI between patients with and without disease using the `stat_compare_means()` function from the `ggpubr` package.
+
+```{r}
+# Uncomment the following line to install the package if you haven't already!
+# install.packages("ggpubr")
+library(ggpubr)
+box_plot_data <- data %>%
+  select(disease_status, bmi) %>%
+  mutate(disease_status = factor(disease_status, levels = c(0, 1), labels = c("No Disease", "Disease")))
+ggplot(box_plot_data, aes(x = disease_status, y = bmi, fill = disease_status)) + geom_boxplot() + theme_bw() + stat_compare_means(method = "t.test")
+```
+
+<wimr>
+
+## Conclusion
+
+In this tutorial, we learned how to load data into R, manipulate data
+using the `dplyr` package, and create plots using the `ggplot2` package.
+We also learned how to customize plots and create more advanced plots.
+These skills are essential for any data analyst or scientist working
+with R.
