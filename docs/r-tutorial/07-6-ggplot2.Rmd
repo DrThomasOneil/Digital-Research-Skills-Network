@@ -1,0 +1,233 @@
+
+
+# Chapter 6: Data Visualisation with `ggplot2` 2
+
+
+<div class="hint-goals">      
+**Goals:**     
+Learn additional visualisation techniques.    
+&nbsp;&nbsp;&#8226; Adjusting theme elements    
+&nbsp;&nbsp;&#8226; Annotating the plots     
+&nbsp;&nbsp;&#8226; facet_wrap() and grid_plot()    
+&nbsp;&nbsp;&#8226; Savings plots   
+</div>
+
+<read-time><i>**Read time**: 15 Minutes</i></read-time>
+
+<wimr>
+
+## Adjusting theme elements
+
+Everything in ggplot can be adjusted. Lets just go through a few of them to show you how its done, and you can explore them as you go. 
+
+
+<details><summary>**Theme elements:**</summary>
+
+```{r}
+data %>%
+  ggplot(aes(CD28, age, color = log(CCR5_MFI))) +
+  geom_point()+
+  theme_classic()+
+  theme(axis.text = element_text(size=10),
+        axis.title = element_text(size=12), 
+        legend.position = "inside", legend.justification = c(.99,.99))
+```
+<e></details>
+
+
+<details><summary>**Changing the scale:**</summary>
+
+```{r}
+data %>%
+  ggplot(aes(CD28, age)) +
+  geom_point()+
+  theme_bw()+
+  ylim(0,100)
+```
+<e></details>
+
+<details><summary>**Changing the colours manually:**</summary>
+
+```{r}
+data %>%
+  mutate(percent_CCR5 = 100*CCR5/CD4) %>%
+  ggplot(aes(
+    x = group, 
+    y = percent_CCR5, 
+    fill = group
+  ))+
+  geom_boxplot(width=0.5) + 
+  geom_jitter(width=0.1, alpha=0.2)+
+  labs( y= "CCR5 %", x= "Tissue x Layer")+
+  scale_fill_manual(values = c("blue", "blue4", "red", "red4", "green", "green4"))
+  theme_classic()
+data %>% mutate(percent_HLADR = HLADR/CD4) %>%
+  ggplot(aes(x=CD28, y=age, color = percent_HLADR)) +
+  geom_point()+
+  theme_bw()+
+  scale_color_gradient(high = "#FF0000", low = "#0000FF") # you can search hex numbers, or match colours to a powerpoint presentation. You can use digital colour meter on Mac
+data %>% mutate(percent_HLADR = HLADR/CD4) %>%
+  ggplot(aes(x=CD28, y=age, color = percent_HLADR)) +
+  geom_point()+
+  theme_bw()+
+  scale_color_viridis_c() # you can search through the options for these, as well as other scale_color and scale_fill options.
+```
+<e></details>
+
+<wimr> 
+
+## Annotating the plot
+
+<details><summary>**Horizontal and Vertical lines:**</summary>
+
+I've added vertical lines (vlines), where you can specify the xintercepts to draw lines through. 
+
+I also added "annotate" layers where you can specify "text" or "segment" layers, with x, y and label arguments for 
+
+```{r}
+data %>%
+  mutate(percent_CCR5 = 100*CCR5/CD4) %>%
+  ggplot(aes(
+    x = group, 
+    y = percent_CCR5
+  ))+
+  geom_boxplot(width=0.5) + 
+  geom_jitter(width=0.1, alpha=0.2)+
+  labs( y= "CCR5 %", x= "Tissue x Layer")+
+  geom_vline(xintercept = c(2,4)+.5)+
+  annotate("segment", 
+           x=c(1:6)-.25, xend = c(1:6)+.25, 
+           y=data%>% mutate(percent_CCR5 = 100*CCR5/CD4) %>% group_by(group) %>% summarise(mean = mean(percent_CCR5)) %>% select(mean) %>% unlist(), color="red", size=2)+
+  annotate("text", 
+           x=1:6, 
+           y=data%>% mutate(percent_CCR5 = 100*CCR5/CD4) %>% group_by(group) %>% summarise(mean = mean(percent_CCR5)) %>% select(mean) %>% unlist(),
+           label = data%>% mutate(percent_CCR5 = 100*CCR5/CD4)%>%group_by(group)%>%summarise(mean=mean(percent_CCR5)) %>% select(mean) %>% unlist() %>%round(),
+           hjust = -2, color="red")+
+    theme_classic()
+```
+<e></details>
+
+<wimr> 
+
+## facet_wrap() and Group
+
+Facet wrap lets you split your points by a categorical value
+
+<details><summary>**Facet_wrap():**</summary>
+
+```{r}
+data %>% mutate(percent_HLADR = 100*HLADR/CD4) %>%
+  ggplot(aes(x=CD28, y=age, color = percent_HLADR)) +
+  geom_point(aes(shape=layer))+
+  theme_bw()+
+  scale_color_gradient(high = "#FF0000", low = "#0000FF")+
+  facet_wrap(~tissue)
+```
+<e></details>
+
+<details><summary>**plot_grid():**</summary>
+
+```{r}
+library(cowplot)
+
+plot1 = data %>%
+  mutate(percent_CCR5 = 100*CCR5/CD4) %>%
+  ggplot(aes(
+    x = group, 
+    y = percent_CCR5
+  ))+
+  geom_boxplot(width=0.5) + 
+  geom_jitter(width=0.1, alpha=0.2)+
+  labs( y= "CCR5 %", x= "Tissue x Layer", title="Percent CCR5")+
+  geom_vline(xintercept = c(2,4)+.5)+
+  theme_classic()
+plot2 = data %>%
+  ggplot(aes(
+    x = group, 
+    y = log(CCR5_MFI)
+  ))+
+  geom_boxplot(width=0.5) + 
+  geom_jitter(width=0.1, alpha=0.2)+
+  labs( y= "log(CCR5 MFI)", x= "Tissue x Layer", title="CCR5 MFI")+
+  geom_vline(xintercept = c(2,4)+.5)+
+  theme_classic()
+
+plot_grid(plot1,plot2, nrow=2) #or change the rows. Add 50 plots if you want to adn specify how you arrange them by rows and/or columns
+
+```
+<e></details>
+
+<wimr> 
+
+## Saving plots
+
+You can save plots in a few ways.
+
+<details><summary>**pdf/png/tiff/jpeg():**</summary>
+
+Use `?png` to get the specific options, but here is a simple example of generating a multipage pdf. 
+
+You call the function to "open" the pdf, plot your figures, and then close the pdf using `dev.off()`
+
+```{r, eval=F}
+pdf(file="CCR5_results.pdf", widht = 7, height=7) 
+
+data %>%
+  mutate(percent_CCR5 = 100*CCR5/CD4) %>%
+  ggplot(aes(
+    x = group, 
+    y = percent_CCR5
+  ))+
+  geom_boxplot(width=0.5) + 
+  geom_jitter(width=0.1, alpha=0.2)+
+  labs( y= "CCR5 %", x= "Tissue x Layer", title="Percent CCR5")+
+  geom_vline(xintercept = c(2,4)+.5)+
+  theme_classic()
+
+data %>%
+  ggplot(aes(
+    x = group, 
+    y = log(CCR5_MFI)
+  ))+
+  geom_boxplot(width=0.5) + 
+  geom_jitter(width=0.1, alpha=0.2)+
+  labs( y= "log(CCR5 MFI)", x= "Tissue x Layer", title="CCR5 MFI")+
+  geom_vline(xintercept = c(2,4)+.5)+
+  theme_classic()
+
+dev.off()
+```
+
+<e></details>
+
+<details><summary>**ggsave:**</summary>
+
+ggsave is quite simple and allows you to very easily control resolutions and size. 
+
+```{r, eval=F}
+
+ggsave("CCR5_percent.png", 
+       plot1, 
+       path = "C:/1_Yc/r-analysis-user-group/plots", 
+       width = 7, height = 5, units = c('cm'), 
+       dpi=300)
+
+```
+
+<e></details>
+
+<wimr> 
+
+## Some final hints
+
+<div class="hint-info">      
+&nbsp;&nbsp;&#8226; You can use show.legend=F inside geom layers to remove the legends    
+&nbsp;&nbsp;&#8226; You can store your initial plots as `plot = ggplot(...)+geom_...`     
+&nbsp;&nbsp;&nbsp;&nbsp;and then append layers onto this.     
+
+</div>
+
+[Next Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-7-statistical-analysis.html)
+
+
+<div id="quote-box" style="text-align:center; font-style:italic; margin-top:20px; margin-bottom:20px;"></div>

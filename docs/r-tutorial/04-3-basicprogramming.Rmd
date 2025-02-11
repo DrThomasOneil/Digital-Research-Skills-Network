@@ -23,6 +23,7 @@ This allows us to store and reuse information efficiently, reducing redundancy i
 
 ```{r, include=F}
 setwd("~/Desktop/analysis-user-group")
+data<-read.csv("~/Desktop/analysis-user-group/synthetic_data.csv")
 ```
 
 ```{r, eval=F}

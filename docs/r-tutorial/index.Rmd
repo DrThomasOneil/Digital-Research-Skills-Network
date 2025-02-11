@@ -86,6 +86,10 @@ This is the sub-repository containing the tutorials and workshop notes for the i
 # </div>
 ```
  
+```{r}
+getwd()
+```
+ 
 ```{r, eval=FALSE, include=F, message=F}
 bookdown::render_book() 
 ```
