@@ -69,10 +69,10 @@ dir.create("20250210_Tidyverse")
 ```{r, eval=F}
 knitr::opts_knit$set(root.dir = "/Users/thomasoneil/Desktop/analysis-user-group/20250210_Tidyverse")
 #Download files
-download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.rds", "data.rds")
-download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.csv", "data.csv")
-download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.tsv", "data.tsv")
-download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.xlsx", "data.xlsx")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.rds", "data.rds", method = "curl")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.csv", "data.csv", method = "curl")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.tsv", "data.tsv", method = "curl")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/assets/202502_introSeries/data.xlsx", "data.xlsx", method = "curl")
 ```
 
 If these downloads dont work, run this in your console:
