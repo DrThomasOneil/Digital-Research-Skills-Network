@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Thomas O’Neil" />
+
+
+<title>Tidyverse 2: Data Manipulation</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="adit/custom.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#section-TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#section-TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="section-TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src='assets/logo/logo.png' style='height:30px; vertical-align:middle; align-items:center; margin-right:10px;'></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="0_start.html">Getting Started in R</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Introduction Series
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="202502_tidyverse1.html">Tidyverse 1: Intro to Plotting</a>
+    </li>
+    <li>
+      <a href="202502_tidyverse2.html">Tidyverse 2: Intro to Manipulation</a>
+    </li>
+    <li>
+      <a href="202503_tidyverse3.html">Tidyverse 3: Intro to Manipulation</a>
+    </li>
+    <li>
+      <a href="202503_python.html">Python vs R</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="0_resources.html">Extra Resources</a>
+</li>
+<li>
+  <a href="0_contacts.html">Contacts</a>
+</li>
+<li>
+  <a href="https://github.com/DrThomasOneil/analysis-user-group">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="section-header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Tidyverse 2: Data Manipulation</h1>
+<h4 class="author">Thomas O’Neil</h4>
+<h4 class="date">2025-02</h4>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2025-02-20
+</p>
+<p>
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>analysis-user-group/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
+</p>
+<p>
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="section-workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
+</p>
+</div>
+<div id="section-strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="section-strongEnvironmentstrongempty"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1337code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(1337)</code> </a>
+</p>
+</div>
+<div id="section-strongSeedstrongcodesetseed1337code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(1337)</code> was run prior to running the
+code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="section-strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="section-strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="section-strongFilepathsstrongrelative"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree477062c98f2270023f89bf44908c43cf6bd3d446targetblank477062ca">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/477062c98f2270023f89bf44908c43cf6bd3d446" target="_blank">477062c</a>
+</a>
+</p>
+</div>
+<div
+id="section-strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree477062c98f2270023f89bf44908c43cf6bd3d446targetblank477062ca"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/477062c98f2270023f89bf44908c43cf6bd3d446" target="_blank">477062c</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .DS_Store
+    Ignored:    analysis/.DS_Store
+    Ignored:    analysis/data/
+    Ignored:    analysis/figure/
+
+Unstaged changes:
+    Modified:   .gitignore
+    Modified:   workflow.R
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/202502_tidyverse2.Rmd</code>) and
+HTML (<code>docs/202502_tidyverse2.html</code>) files. If you’ve
+configured a remote Git repository (see <code>?wflow_git_remote</code>),
+click on the hyperlinks in the table below to view the files as they
+were in that past version.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/477062c98f2270023f89bf44908c43cf6bd3d446/analysis/202502_tidyverse2.Rmd" target="_blank">477062c</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+<td>
+wflow_publish(c("analysis/*.Rmd"))
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/a48de9d79d048625c7f7b54ca4bd4e57605ca16a/analysis/202502_tidyverse2.Rmd" target="_blank">a48de9d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+<td>
+new data
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<!---
+Notes:
+  Introduction
+  Data Import/Set up
+  Data Wrangling with dplyr 
+  - Filtering, selecting, and mutating data.
+  - Grouping and Summarising
+  - Joining Data Frames
+  Reshaping Data with tidyr
+<--->
+<div id="section-introduction"
+class="section level1 tabset tabset-fade">
+<h1 class="tabset tabset-fade">Introduction</h1>
+<p>In this tutorial, we explore the functionalities of the Tidyverse by
+working with two datasets:</p>
+<ul>
+<li><code>data.csv</code> contains fabricated summary flow cytometry
+data, such as cell numbers and MFI</li>
+<li><code>meta.csv</code> contains information regarding each donor,
+such as age and sex.</li>
+</ul>
+<p>The Tidyverse is a collection of R packages that share an underlying
+design philosophy and grammar, making data analysis more intuitive and
+coherent. Here are some key benefits:</p>
+<p><strong>dplyr</strong>: Provides a suite of verbs
+(e.g. <code>filter()</code>, <code>mutate()</code>,
+<code>select(</code>), and <code>left_join()</code>) that simplify data
+manipulation. For example, <code>left_join()</code> easily combines
+experimental data with metadata based on a common key. See the <a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-tidyverse.html">Introduction
+to R: Chapter 4</a> for more content on dplyr.</p>
+<p><strong>Pipes (%&gt;%)</strong>: Enhance code readability by allowing
+you to chain multiple operations in a sequential, natural-language
+style. This means you can finalise complex data transformations in a
+single, clear pipeline without the need for numerous intermediate
+variables.</p>
+<p><strong>tidyr</strong>: Focuses on tidying data, ensuring that each
+observation occupies a single row and each variable a single column.
+Functions like <code>pivot_longer()</code> and pivot_wider() help
+reshape data into a standard format, which is essential for further
+analysis.</p>
+<p><strong>ggplot2</strong>: Offers a powerful and flexible grammar for
+data visualisation. With ggplot2, you can create customised plots that
+effectively communicate insights from your data, building on the clean,
+tidy data produced by the other Tidyverse packages. See the <a
+href="https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-5-data-visualisation-with-ggplot2.html">Introduction
+to R: Chapter 5-6</a> and the <a
+href="https://drthomasoneil.github.io/analysis-user-group/202502_tidyverse1.html">previous
+workshop</a> by Harry for extra information on ggplot.</p>
+<div class="hint-goals">
+<p><strong>Goals:</strong> Learn data manipulation with Tidyverse<br>
+  • Tidy Data<br>   • Select and Mutate data<br>   • Group and summarise
+data<br>   • Join two data frames<br>   • Pivot data with
+<code>tidyr</code><br></p>
+</div>
+<p>Whether you are combining datasets, reshaping data, or creating
+compelling graphics, the Tidyverse offers a consistent and powerful set
+of tools to support your analysis.</p>
+<p><read-time><i><strong>Estimated length</strong>: 1
+Hour</i></read-time><wimr></p>
+</div>
+<div id="section-set-up" class="section level1">
+<h1>Set up</h1>
+<details>
+<summary>
+<strong>Follow these instructions to get started:</strong>
+</summary>
+<p><br><br> 1. Save this script in a folder called
+<strong>“202502_Tidyverse2”</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Install and load the relevant packages and functions</li>
+</ol>
+<div class="sourceCode" id="section-cb1"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb1-1"><a href="#section-cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="section-cb1-2"><a href="#section-cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;shiny&quot;</span>)</span>
+<span id="section-cb1-3"><a href="#section-cb1-3" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;readr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="section-cb2"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb2-1"><a href="#section-cb2-1" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="section-cb2-2"><a href="#section-cb2-2" tabindex="-1"></a>Warning<span class="sc">:</span> package <span class="st">&#39;shiny&#39;</span> was built under R version <span class="dv">4</span>.<span class="fl">4.1</span></span>
+<span id="section-cb2-3"><a href="#section-cb2-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="section-cb2-4"><a href="#section-cb2-4" tabindex="-1"></a>Warning<span class="sc">:</span> package <span class="st">&#39;purrr&#39;</span> was built under R version <span class="dv">4</span>.<span class="fl">4.1</span></span>
+<span id="section-cb2-5"><a href="#section-cb2-5" tabindex="-1"></a>Warning<span class="sc">:</span> package <span class="st">&#39;lubridate&#39;</span> was built under R version <span class="dv">4</span>.<span class="fl">4.1</span></span>
+<span id="section-cb2-6"><a href="#section-cb2-6" tabindex="-1"></a>── Attaching core tidyverse packages ──────────────────────── tidyverse <span class="dv">2</span>.<span class="fl">0.0</span> ──</span>
+<span id="section-cb2-7"><a href="#section-cb2-7" tabindex="-1"></a>✔ dplyr     <span class="dv">1</span>.<span class="fl">1.4</span>     ✔ readr     <span class="dv">2</span>.<span class="fl">1.5</span></span>
+<span id="section-cb2-8"><a href="#section-cb2-8" tabindex="-1"></a>✔ forcats   <span class="dv">1</span>.<span class="fl">0.0</span>     ✔ stringr   <span class="dv">1</span>.<span class="fl">5.1</span></span>
+<span id="section-cb2-9"><a href="#section-cb2-9" tabindex="-1"></a>✔ ggplot2   <span class="dv">3</span>.<span class="fl">5.1</span>     ✔ tibble    <span class="dv">3</span>.<span class="fl">2.1</span></span>
+<span id="section-cb2-10"><a href="#section-cb2-10" tabindex="-1"></a>✔ lubridate <span class="dv">1</span>.<span class="fl">9.4</span>     ✔ tidyr     <span class="dv">1</span>.<span class="fl">3.1</span></span>
+<span id="section-cb2-11"><a href="#section-cb2-11" tabindex="-1"></a>✔ purrr     <span class="dv">1</span>.<span class="fl">0.4</span>     </span>
+<span id="section-cb2-12"><a href="#section-cb2-12" tabindex="-1"></a>── Conflicts ────────────────────────────────────────── <span class="fu">tidyverse_conflicts</span>() ──</span>
+<span id="section-cb2-13"><a href="#section-cb2-13" tabindex="-1"></a>✖ dplyr<span class="sc">::</span><span class="fu">filter</span>() masks stats<span class="sc">::</span><span class="fu">filter</span>()</span>
+<span id="section-cb2-14"><a href="#section-cb2-14" tabindex="-1"></a>✖ dplyr<span class="sc">::</span><span class="fu">lag</span>()    masks stats<span class="sc">::</span><span class="fu">lag</span>()</span>
+<span id="section-cb2-15"><a href="#section-cb2-15" tabindex="-1"></a>ℹ Use the conflicted <span class="fu">package</span> (<span class="sc">&lt;</span>http<span class="sc">:</span><span class="er">//</span>conflicted.r<span class="sc">-</span>lib.org<span class="sc">/</span><span class="er">&gt;</span>) to force all conflicts to become errors</span>
+<span id="section-cb2-16"><a href="#section-cb2-16" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="section-cb2-17"><a href="#section-cb2-17" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_classic</span>())</span>
+<span id="section-cb2-18"><a href="#section-cb2-18" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R&quot;</span>)) </span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Create new folders in your directory.</li>
+</ol>
+<div class="sourceCode" id="section-cb3"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb3-1"><a href="#section-cb3-1" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;plots&quot;</span>)</span>
+<span id="section-cb3-2"><a href="#section-cb3-2" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;data&quot;</span>)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Download the data.</li>
+</ol>
+<div class="sourceCode" id="section-cb4"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb4-1"><a href="#section-cb4-1" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv&quot;</span>, </span>
+<span id="section-cb4-2"><a href="#section-cb4-2" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;data/data.csv&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>, <span class="at">mode=</span><span class="st">&#39;wb&#39;</span>)</span>
+<span id="section-cb4-3"><a href="#section-cb4-3" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/meta.csv&quot;</span>, </span>
+<span id="section-cb4-4"><a href="#section-cb4-4" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;data/meta.csv&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>, <span class="at">mode=</span><span class="st">&#39;wb&#39;</span>)</span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Load data into R</li>
+</ol>
+<div class="sourceCode" id="section-cb5"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb5-1"><a href="#section-cb5-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/analysis-user-group/20250210_Tidyverse/data/data.csv&quot;</span>)</span>
+<span id="section-cb5-2"><a href="#section-cb5-2" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/analysis-user-group/20250210_Tidyverse/data/meta.csv&quot;</span>)</span></code></pre></div>
+</details>
+<p><wimr></p>
+<div id="section-data-wrangling-with-dplyr"
+class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade">Data Wrangling with dplyr</h2>
+<p>First, we can quickly explore the data.</p>
+<div class="sourceCode" id="section-cb6"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb6-1"><a href="#section-cb6-1" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div>
+<p>We have 5 categorical columns and 8 numeric values.</p>
+<ul>
+<li>CD3, CD8, CD4, HLADR and CCR5 appear to be cell counts.<br />
+</li>
+<li>CD28 appears to be as a percentage already.</li>
+</ul>
+<div class="sourceCode" id="section-cb7"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb7-1"><a href="#section-cb7-1" tabindex="-1"></a><span class="fu">View</span>(data)</span></code></pre></div>
+<details>
+<summary>
+Dropdown for interactive session
+</summary>
+<p>You can only use this in your personal sessions.</p>
+<div class="sourceCode" id="section-cb8"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb8-1"><a href="#section-cb8-1" tabindex="-1"></a><span class="fu">userCode</span>(<span class="at">title=</span><span class="st">&quot;Explore the Data yourself&quot;</span>, </span>
+<span id="section-cb8-2"><a href="#section-cb8-2" tabindex="-1"></a>        <span class="at">qvalue=</span><span class="st">&quot;table(data$tissue, data$layer)&quot;</span>, </span>
+<span id="section-cb8-3"><a href="#section-cb8-3" tabindex="-1"></a>        <span class="at">nrows=</span><span class="dv">1</span>, <span class="at">out_height=</span><span class="dv">350</span>)</span></code></pre></div>
+<iframe data-deferred-src="app62e8471be101963d62a76654ab4c06d4/?w=&amp;__subapp__=1" width="100%" height="350" class="shiny-frame shiny-frame-deferred"></iframe>
+</details>
+<br>
+<hr>
+<p>This immediately reveals some issues where our data needs tidying,
+but we’ll cover these in the next workshop.</p>
+<p><wimr></p>
+<div id="section-filtering-selecting-and-mutating-data-dplyr."
+class="section level3">
+<h3>Filtering, Selecting, and Mutating data: <code>dplyr()</code>.</h3>
+<p>The <code>dplyr</code> package is a powerful tool for data
+manipulation in R. It provides a set of functions that make it easy to
+filter, arrange, group, and summarize data. Some of the most commonly
+used functions in <code>dplyr</code> are:</p>
+<div class="sourceCode" id="section-cb9"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb9-1"><a href="#section-cb9-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="co"># this is the pipe. I like to think of pipes as &quot;using this&quot;</span></span>
+<span id="section-cb9-2"><a href="#section-cb9-2" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb9-3"><a href="#section-cb9-3" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb9-4"><a href="#section-cb9-4" tabindex="-1"></a>  experiment  donor  tissue      layer group   CD3   CD8   CD4 HLADR  CCR5</span>
+<span id="section-cb9-5"><a href="#section-cb9-5" tabindex="-1"></a><span class="dv">1</span>       Exp1 Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span>  <span class="dv">2205</span>  <span class="dv">2184</span>   <span class="dv">882</span>  <span class="dv">1932</span></span>
+<span id="section-cb9-6"><a href="#section-cb9-6" tabindex="-1"></a><span class="dv">2</span>       Exp1 Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span>  <span class="dv">7960</span>  <span class="dv">5529</span>   <span class="dv">808</span>  <span class="dv">3916</span></span>
+<span id="section-cb9-7"><a href="#section-cb9-7" tabindex="-1"></a><span class="dv">3</span>       Exp2 Donor2 Abdomen Epithelium   A_E <span class="dv">49774</span> <span class="dv">25149</span> <span class="dv">25251</span> <span class="dv">10671</span> <span class="dv">22763</span></span>
+<span id="section-cb9-8"><a href="#section-cb9-8" tabindex="-1"></a><span class="dv">4</span>       Exp2 Donor2 Abdomen Underlying  A_UM <span class="dv">68879</span> <span class="dv">47729</span> <span class="dv">33616</span>  <span class="dv">5662</span> <span class="dv">27725</span></span>
+<span id="section-cb9-9"><a href="#section-cb9-9" tabindex="-1"></a>  HLADR_MFI CCR5_MFI CD28</span>
+<span id="section-cb9-10"><a href="#section-cb9-10" tabindex="-1"></a><span class="dv">1</span>  <span class="fl">652.0000</span> <span class="fl">4455.553</span> <span class="fl">29.6</span></span>
+<span id="section-cb9-11"><a href="#section-cb9-11" tabindex="-1"></a><span class="dv">2</span>  <span class="fl">471.4750</span> <span class="fl">7121.196</span> <span class="fl">59.8</span></span>
+<span id="section-cb9-12"><a href="#section-cb9-12" tabindex="-1"></a><span class="dv">3</span>  <span class="fl">652.0000</span> <span class="fl">3666.176</span> <span class="fl">72.8</span></span>
+<span id="section-cb9-13"><a href="#section-cb9-13" tabindex="-1"></a><span class="dv">4</span>  <span class="fl">206.1183</span> <span class="fl">2025.143</span> <span class="fl">89.2</span></span></code></pre></div>
+<ul>
+<li><code>filter()</code>: to filter rows based on a condition</li>
+</ul>
+<div class="sourceCode" id="section-cb10"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb10-1"><a href="#section-cb10-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb10-2"><a href="#section-cb10-2" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithlium&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="section-cb10-3"><a href="#section-cb10-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb10-4"><a href="#section-cb10-4" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb10-5"><a href="#section-cb10-5" tabindex="-1"></a> [<span class="dv">1</span>] experiment donor      tissue     layer      group      CD3       </span>
+<span id="section-cb10-6"><a href="#section-cb10-6" tabindex="-1"></a> [<span class="dv">7</span>] CD8        CD4        HLADR      CCR5       HLADR_MFI  CCR5_MFI  </span>
+<span id="section-cb10-7"><a href="#section-cb10-7" tabindex="-1"></a>[<span class="dv">13</span>] CD28      </span>
+<span id="section-cb10-8"><a href="#section-cb10-8" tabindex="-1"></a><span class="sc">&lt;</span><span class="dv">0</span> rows<span class="sc">&gt;</span> (or <span class="dv">0</span><span class="sc">-</span>length row.names)</span></code></pre></div>
+<ul>
+<li><code>arrange()</code>: to reorder rows</li>
+</ul>
+<div class="sourceCode" id="section-cb11"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb11-1"><a href="#section-cb11-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb11-2"><a href="#section-cb11-2" tabindex="-1"></a>  <span class="fu">arrange</span>(experiment) <span class="sc">%&gt;%</span></span>
+<span id="section-cb11-3"><a href="#section-cb11-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb11-4"><a href="#section-cb11-4" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb11-5"><a href="#section-cb11-5" tabindex="-1"></a>  experiment   donor  tissue      layer group   CD3   CD8   CD4 HLADR  CCR5</span>
+<span id="section-cb11-6"><a href="#section-cb11-6" tabindex="-1"></a><span class="dv">1</span>       Exp1  Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span>  <span class="dv">2205</span>  <span class="dv">2184</span>   <span class="dv">882</span>  <span class="dv">1932</span></span>
+<span id="section-cb11-7"><a href="#section-cb11-7" tabindex="-1"></a><span class="dv">2</span>       Exp1  Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span>  <span class="dv">7960</span>  <span class="dv">5529</span>   <span class="dv">808</span>  <span class="dv">3916</span></span>
+<span id="section-cb11-8"><a href="#section-cb11-8" tabindex="-1"></a><span class="dv">3</span>       Exp1 Donor16  Vagina Epithelium   V_E <span class="dv">30109</span> <span class="dv">17011</span>  <span class="dv">6596</span>   <span class="dv">263</span>  <span class="dv">6264</span></span>
+<span id="section-cb11-9"><a href="#section-cb11-9" tabindex="-1"></a><span class="dv">4</span>       Exp1 Donor16  Vagina Underlying  V_UM <span class="dv">30774</span> <span class="dv">16713</span> <span class="dv">22180</span>  <span class="dv">3245</span> <span class="dv">18958</span></span>
+<span id="section-cb11-10"><a href="#section-cb11-10" tabindex="-1"></a>  HLADR_MFI CCR5_MFI CD28</span>
+<span id="section-cb11-11"><a href="#section-cb11-11" tabindex="-1"></a><span class="dv">1</span>  <span class="fl">652.0000</span> <span class="fl">4455.553</span> <span class="fl">29.6</span></span>
+<span id="section-cb11-12"><a href="#section-cb11-12" tabindex="-1"></a><span class="dv">2</span>  <span class="fl">471.4750</span> <span class="fl">7121.196</span> <span class="fl">59.8</span></span>
+<span id="section-cb11-13"><a href="#section-cb11-13" tabindex="-1"></a><span class="dv">3</span>   <span class="fl">62.1126</span> <span class="fl">3078.970</span> <span class="fl">52.6</span></span>
+<span id="section-cb11-14"><a href="#section-cb11-14" tabindex="-1"></a><span class="dv">4</span>  <span class="fl">192.5019</span> <span class="fl">3534.601</span>  <span class="fl">0.0</span></span></code></pre></div>
+<ul>
+<li><code>select()</code>: to select columns</li>
+</ul>
+<div class="sourceCode" id="section-cb12"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb12-1"><a href="#section-cb12-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb12-2"><a href="#section-cb12-2" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb12-3"><a href="#section-cb12-3" tabindex="-1"></a>  <span class="fu">arrange</span>(CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb12-4"><a href="#section-cb12-4" tabindex="-1"></a>  <span class="fu">select</span>(CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb12-5"><a href="#section-cb12-5" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb12-6"><a href="#section-cb12-6" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb12-7"><a href="#section-cb12-7" tabindex="-1"></a>  CD4</span>
+<span id="section-cb12-8"><a href="#section-cb12-8" tabindex="-1"></a><span class="dv">1</span> <span class="dv">262</span></span>
+<span id="section-cb12-9"><a href="#section-cb12-9" tabindex="-1"></a><span class="dv">2</span> <span class="dv">472</span></span>
+<span id="section-cb12-10"><a href="#section-cb12-10" tabindex="-1"></a><span class="dv">3</span> <span class="dv">596</span></span>
+<span id="section-cb12-11"><a href="#section-cb12-11" tabindex="-1"></a><span class="dv">4</span> <span class="dv">596</span></span></code></pre></div>
+<ul>
+<li><code>mutate()</code>: to create new columns.</li>
+</ul>
+<div class="sourceCode" id="section-cb13"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb13-1"><a href="#section-cb13-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb13-2"><a href="#section-cb13-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4_percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span> </span>
+<span id="section-cb13-3"><a href="#section-cb13-3" tabindex="-1"></a>  <span class="fu">select</span>(CD4_percent, CD3, CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb13-4"><a href="#section-cb13-4" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb13-5"><a href="#section-cb13-5" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb13-6"><a href="#section-cb13-6" tabindex="-1"></a>  CD4_percent   CD3   CD4</span>
+<span id="section-cb13-7"><a href="#section-cb13-7" tabindex="-1"></a><span class="dv">1</span>    <span class="fl">48.96861</span>  <span class="dv">4460</span>  <span class="dv">2184</span></span>
+<span id="section-cb13-8"><a href="#section-cb13-8" tabindex="-1"></a><span class="dv">2</span>    <span class="fl">36.14907</span> <span class="dv">15295</span>  <span class="dv">5529</span></span>
+<span id="section-cb13-9"><a href="#section-cb13-9" tabindex="-1"></a><span class="dv">3</span>    <span class="fl">50.73131</span> <span class="dv">49774</span> <span class="dv">25251</span></span>
+<span id="section-cb13-10"><a href="#section-cb13-10" tabindex="-1"></a><span class="dv">4</span>    <span class="fl">48.80443</span> <span class="dv">68879</span> <span class="dv">33616</span></span></code></pre></div>
+<p><wimr></p>
+</div>
+<div id="section-grouping-and-summarising" class="section level3">
+<h3>Grouping and Summarising</h3>
+<p>Grouping and summarising in the Tidyverse allows you to split your
+data into subsets using <code>group_by()</code> and then compute
+aggregate statistics for each subgroup with <code>summarise()</code>.
+This approach enables quick, clear insights into trends and differences
+within your data by reducing complex datasets to meaningful
+summaries.</p>
+<div class="sourceCode" id="section-cb14"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb14-1"><a href="#section-cb14-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb14-2"><a href="#section-cb14-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb14-3"><a href="#section-cb14-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(tissue, percent_CD4, <span class="at">fill=</span>layer))<span class="sc">+</span><span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="section-cb15"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb15-1"><a href="#section-cb15-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb15-2"><a href="#section-cb15-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb15-3"><a href="#section-cb15-3" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue, layer) <span class="sc">%&gt;%</span></span>
+<span id="section-cb15-4"><a href="#section-cb15-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_CD4 =</span> <span class="fu">mean</span>(percent_CD4), </span>
+<span id="section-cb15-5"><a href="#section-cb15-5" tabindex="-1"></a>            <span class="at">median_CD4 =</span> <span class="fu">median</span>(percent_CD4)) <span class="sc">%&gt;%</span></span>
+<span id="section-cb15-6"><a href="#section-cb15-6" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb15-7"><a href="#section-cb15-7" tabindex="-1"></a><span class="st">`</span><span class="at">summarise()</span><span class="st">`</span> has grouped output by <span class="st">&#39;tissue&#39;</span>. You can override using the</span>
+<span id="section-cb15-8"><a href="#section-cb15-8" tabindex="-1"></a><span class="st">`</span><span class="at">.groups</span><span class="st">`</span> argument.</span>
+<span id="section-cb15-9"><a href="#section-cb15-9" tabindex="-1"></a><span class="co"># A tibble: 9 × 4</span></span>
+<span id="section-cb15-10"><a href="#section-cb15-10" tabindex="-1"></a><span class="co"># Groups:   tissue [5]</span></span>
+<span id="section-cb15-11"><a href="#section-cb15-11" tabindex="-1"></a>  tissue  layer      mean_CD4 median_CD4</span>
+<span id="section-cb15-12"><a href="#section-cb15-12" tabindex="-1"></a>  <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>         <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>      <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
+<span id="section-cb15-13"><a href="#section-cb15-13" tabindex="-1"></a><span class="dv">1</span> Abdo    Epithelium     <span class="fl">37.7</span>       <span class="fl">37.7</span></span>
+<span id="section-cb15-14"><a href="#section-cb15-14" tabindex="-1"></a><span class="dv">2</span> Abdo    Underlying     <span class="fl">35.5</span>       <span class="fl">35.5</span></span>
+<span id="section-cb15-15"><a href="#section-cb15-15" tabindex="-1"></a><span class="dv">3</span> Abdomen Epithelium     <span class="fl">43.3</span>       <span class="fl">44.0</span></span>
+<span id="section-cb15-16"><a href="#section-cb15-16" tabindex="-1"></a><span class="dv">4</span> Abdomen Underlying     <span class="fl">37.2</span>       <span class="fl">35.5</span></span>
+<span id="section-cb15-17"><a href="#section-cb15-17" tabindex="-1"></a><span class="dv">5</span> Labia   Epithelium     <span class="fl">28.8</span>       <span class="fl">28.1</span></span>
+<span id="section-cb15-18"><a href="#section-cb15-18" tabindex="-1"></a><span class="dv">6</span> Labia   Underlying     <span class="fl">65.9</span>       <span class="fl">66.3</span></span>
+<span id="section-cb15-19"><a href="#section-cb15-19" tabindex="-1"></a><span class="dv">7</span> Vagina  Epithelium     <span class="fl">26.0</span>       <span class="fl">23.6</span></span>
+<span id="section-cb15-20"><a href="#section-cb15-20" tabindex="-1"></a><span class="dv">8</span> Vagina  Underlying     <span class="fl">52.5</span>       <span class="fl">53.5</span></span>
+<span id="section-cb15-21"><a href="#section-cb15-21" tabindex="-1"></a><span class="dv">9</span> abdomen Underlying     <span class="fl">21.3</span>       <span class="fl">21.3</span></span></code></pre></div>
+<p><wimr></p>
+</div>
+<div id="section-joining-data-frames" class="section level3">
+<h3>Joining Data Frames</h3>
+<p>Combining data from multiple sources is often necessary, even when
+the datasets don’t align perfectly. For instance, your long-format data
+might include multiple entries per donor for tissues like epithelium and
+mucosa, while the metadata contains donor-specific details that you
+prefer not to duplicate.</p>
+<p><read-time><i>This scenario is common in public single cell RNA
+sequencing data, where you’ll integrate diverse layers of information
+using shared keys.</read-time></p>
+<div class="sourceCode" id="section-cb16"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb16-1"><a href="#section-cb16-1" tabindex="-1"></a><span class="co"># View data values of Donor1</span></span>
+<span id="section-cb16-2"><a href="#section-cb16-2" tabindex="-1"></a>data[data<span class="sc">$</span>donor<span class="sc">==</span><span class="st">&quot;Donor1&quot;</span>,]</span>
+<span id="section-cb16-3"><a href="#section-cb16-3" tabindex="-1"></a>  experiment  donor  tissue      layer group   CD3  CD8  CD4 HLADR CCR5</span>
+<span id="section-cb16-4"><a href="#section-cb16-4" tabindex="-1"></a><span class="dv">1</span>       Exp1 Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span> <span class="dv">2205</span> <span class="dv">2184</span>   <span class="dv">882</span> <span class="dv">1932</span></span>
+<span id="section-cb16-5"><a href="#section-cb16-5" tabindex="-1"></a><span class="dv">2</span>       Exp1 Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span> <span class="dv">7960</span> <span class="dv">5529</span>   <span class="dv">808</span> <span class="dv">3916</span></span>
+<span id="section-cb16-6"><a href="#section-cb16-6" tabindex="-1"></a>  HLADR_MFI CCR5_MFI CD28</span>
+<span id="section-cb16-7"><a href="#section-cb16-7" tabindex="-1"></a><span class="dv">1</span>   <span class="fl">652.000</span> <span class="fl">4455.553</span> <span class="fl">29.6</span></span>
+<span id="section-cb16-8"><a href="#section-cb16-8" tabindex="-1"></a><span class="dv">2</span>   <span class="fl">471.475</span> <span class="fl">7121.196</span> <span class="fl">59.8</span></span>
+<span id="section-cb16-9"><a href="#section-cb16-9" tabindex="-1"></a></span>
+<span id="section-cb16-10"><a href="#section-cb16-10" tabindex="-1"></a><span class="co"># View data values of Donor1</span></span>
+<span id="section-cb16-11"><a href="#section-cb16-11" tabindex="-1"></a>meta[meta<span class="sc">$</span>donor<span class="sc">==</span><span class="st">&quot;Donor1&quot;</span>,]</span>
+<span id="section-cb16-12"><a href="#section-cb16-12" tabindex="-1"></a>   donor experiment      date sex age clinical</span>
+<span id="section-cb16-13"><a href="#section-cb16-13" tabindex="-1"></a><span class="dv">1</span> Donor1       Exp1 <span class="dv">19</span><span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2024</span>   F  <span class="dv">35</span>  Healthy</span></code></pre></div>
+<p>So we expect Donor 1 to be a <em>female</em>, aged <em>35</em> and
+classified <em>Healthy</em></p>
+<div class="sourceCode" id="section-cb17"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb17-1"><a href="#section-cb17-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-2"><a href="#section-cb17-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>experiment)<span class="sc">%&gt;%</span> <span class="co"># we can remove columns using select(-...)</span></span>
+<span id="section-cb17-3"><a href="#section-cb17-3" tabindex="-1"></a>  <span class="fu">right_join</span>(meta, <span class="at">by=</span><span class="st">&quot;donor&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-4"><a href="#section-cb17-4" tabindex="-1"></a>  <span class="fu">filter</span>(donor <span class="sc">==</span> <span class="st">&quot;Donor1&quot;</span>)</span>
+<span id="section-cb17-5"><a href="#section-cb17-5" tabindex="-1"></a>   donor  tissue      layer group   CD3  CD8  CD4 HLADR CCR5 HLADR_MFI CCR5_MFI</span>
+<span id="section-cb17-6"><a href="#section-cb17-6" tabindex="-1"></a><span class="dv">1</span> Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span> <span class="dv">2205</span> <span class="dv">2184</span>   <span class="dv">882</span> <span class="dv">1932</span>   <span class="fl">652.000</span> <span class="fl">4455.553</span></span>
+<span id="section-cb17-7"><a href="#section-cb17-7" tabindex="-1"></a><span class="dv">2</span> Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span> <span class="dv">7960</span> <span class="dv">5529</span>   <span class="dv">808</span> <span class="dv">3916</span>   <span class="fl">471.475</span> <span class="fl">7121.196</span></span>
+<span id="section-cb17-8"><a href="#section-cb17-8" tabindex="-1"></a>  CD28 experiment      date sex age clinical</span>
+<span id="section-cb17-9"><a href="#section-cb17-9" tabindex="-1"></a><span class="dv">1</span> <span class="fl">29.6</span>       Exp1 <span class="dv">19</span><span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2024</span>   F  <span class="dv">35</span>  Healthy</span>
+<span id="section-cb17-10"><a href="#section-cb17-10" tabindex="-1"></a><span class="dv">2</span> <span class="fl">59.8</span>       Exp1 <span class="dv">19</span><span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2024</span>   F  <span class="dv">35</span>  Healthy</span></code></pre></div>
+<p>With this, we wouldn’t need to save a combined dataframe to
+analyse.</p>
+<div class="sourceCode" id="section-cb18"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb18-1"><a href="#section-cb18-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb18-2"><a href="#section-cb18-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>experiment)<span class="sc">%&gt;%</span></span>
+<span id="section-cb18-3"><a href="#section-cb18-3" tabindex="-1"></a>  <span class="fu">right_join</span>(meta, <span class="at">by=</span><span class="st">&quot;donor&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb18-4"><a href="#section-cb18-4" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb18-5"><a href="#section-cb18-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb18-6"><a href="#section-cb18-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(clinical, percent, <span class="at">fill=</span>tissue))<span class="sc">+</span></span>
+<span id="section-cb18-7"><a href="#section-cb18-7" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outliers=</span>F)</span></code></pre></div>
+<p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><wimr></p>
+</div>
+</div>
+<div id="section-reshaping-data-with-tidyr" class="section level2">
+<h2>Reshaping Data with tidyr</h2>
+<p><code>tidyr</code> provides essential tools like
+<code>pivot_longer()</code> and <code>pivot_wider()</code> to transform
+your dataset between long and wide formats. This reshaping makes it
+easier to align variables and observations for analysis, ensuring that
+each variable forms a column and each observation a row. Such
+flexibility is crucial when preparing complex experimental or single
+cell RNA sequencing data for further analysis and visualisation.</p>
+<p><strong>long format</strong><br />
+In long format, each observation is represented by a single row, with
+one column holding the categorical variable (e.g. the type of
+measurement) and another column holding the corresponding values. This
+format is particularly useful for generating boxplots or other
+visualisations that compare distributions across groups.</p>
+<p>For example, if you want to compare the percentages of CD4 and CD8
+cells on the same plot, you can pivot the data longer:</p>
+<div class="sourceCode" id="section-cb19"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb19-1"><a href="#section-cb19-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb19-2"><a href="#section-cb19-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb19-3"><a href="#section-cb19-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, </span>
+<span id="section-cb19-4"><a href="#section-cb19-4" tabindex="-1"></a>         <span class="at">CD8percent =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb19-5"><a href="#section-cb19-5" tabindex="-1"></a>  <span class="co"># pivot longer - select the columns, and the name of the columns for the names and values</span></span>
+<span id="section-cb19-6"><a href="#section-cb19-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(CD4percent, CD8percent), </span>
+<span id="section-cb19-7"><a href="#section-cb19-7" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
+<span id="section-cb19-8"><a href="#section-cb19-8" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb19-9"><a href="#section-cb19-9" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(experiment,group,CCR5_MFI,HLADR_MFI,CD3,CD8,CD4,HLADR,CCR5,CD28))<span class="sc">%&gt;%</span></span>
+<span id="section-cb19-10"><a href="#section-cb19-10" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb19-11"><a href="#section-cb19-11" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="section-cb19-12"><a href="#section-cb19-12" tabindex="-1"></a><span class="co"># A tibble: 8 × 5</span></span>
+<span id="section-cb19-13"><a href="#section-cb19-13" tabindex="-1"></a>  donor  tissue  layer      subset     percent</span>
+<span id="section-cb19-14"><a href="#section-cb19-14" tabindex="-1"></a>  <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>      <span class="er">&lt;</span>chr<span class="sc">&gt;</span>        <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
+<span id="section-cb19-15"><a href="#section-cb19-15" tabindex="-1"></a><span class="dv">1</span> Donor1 Abdomen Epithelium CD4percent    <span class="fl">49.0</span></span>
+<span id="section-cb19-16"><a href="#section-cb19-16" tabindex="-1"></a><span class="dv">2</span> Donor1 Abdomen Epithelium CD8percent    <span class="fl">49.4</span></span>
+<span id="section-cb19-17"><a href="#section-cb19-17" tabindex="-1"></a><span class="dv">3</span> Donor1 Abdomen Underlying CD4percent    <span class="fl">36.1</span></span>
+<span id="section-cb19-18"><a href="#section-cb19-18" tabindex="-1"></a><span class="dv">4</span> Donor1 Abdomen Underlying CD8percent    <span class="fl">52.0</span></span>
+<span id="section-cb19-19"><a href="#section-cb19-19" tabindex="-1"></a><span class="dv">5</span> Donor2 Abdomen Epithelium CD4percent    <span class="fl">50.7</span></span>
+<span id="section-cb19-20"><a href="#section-cb19-20" tabindex="-1"></a><span class="dv">6</span> Donor2 Abdomen Epithelium CD8percent    <span class="fl">50.5</span></span>
+<span id="section-cb19-21"><a href="#section-cb19-21" tabindex="-1"></a><span class="dv">7</span> Donor2 Abdomen Underlying CD4percent    <span class="fl">48.8</span></span>
+<span id="section-cb19-22"><a href="#section-cb19-22" tabindex="-1"></a><span class="dv">8</span> Donor2 Abdomen Underlying CD8percent    <span class="fl">69.3</span></span></code></pre></div>
+<p>This code creates a new column <code>subset</code> that indicates
+whether the value corresponds to <code>%CD4</code> or <code>%CD8</code>,
+and a column <code>percent</code> for the computed values. The data is
+now structured with one column for the measurement type and another for
+the percentage, making it straightforward to plot:</p>
+<div class="sourceCode" id="section-cb20"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb20-1"><a href="#section-cb20-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb20-2"><a href="#section-cb20-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb20-3"><a href="#section-cb20-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, </span>
+<span id="section-cb20-4"><a href="#section-cb20-4" tabindex="-1"></a>         <span class="at">CD8percent =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb20-5"><a href="#section-cb20-5" tabindex="-1"></a>  <span class="co"># pivot longer - select the columns, and the name of the columns for the names and values</span></span>
+<span id="section-cb20-6"><a href="#section-cb20-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(CD4percent, CD8percent), </span>
+<span id="section-cb20-7"><a href="#section-cb20-7" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
+<span id="section-cb20-8"><a href="#section-cb20-8" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb20-9"><a href="#section-cb20-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(layer,percent, <span class="at">fill=</span>subset))<span class="sc">+</span></span>
+<span id="section-cb20-10"><a href="#section-cb20-10" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>wide format</strong><br />
+Sometimes you want to examine relationships between measurements
+directly—for example, to see if there’s a relationship between values
+from different layers (e.g. Epithelium and Underlying mucosa). In wide
+format, each type of measurement occupies its own column. This structure
+is ideal for scatterplots or correlation analyses.</p>
+<p>Consider this example where we pivot the data to have separate
+columns for each layer:</p>
+<div class="sourceCode" id="section-cb21"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb21-1"><a href="#section-cb21-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb21-2"><a href="#section-cb21-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb21-3"><a href="#section-cb21-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="dv">100</span><span class="sc">*</span>HLADR<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb21-4"><a href="#section-cb21-4" tabindex="-1"></a>  <span class="fu">select</span>(donor,tissue,layer,percent) <span class="sc">%&gt;%</span></span>
+<span id="section-cb21-5"><a href="#section-cb21-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> layer, <span class="at">values_from =</span> percent) <span class="sc">%&gt;%</span></span>
+<span id="section-cb21-6"><a href="#section-cb21-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Epithelium, <span class="at">y=</span>Underlying, <span class="at">color=</span>tissue))<span class="sc">+</span></span>
+<span id="section-cb21-7"><a href="#section-cb21-7" tabindex="-1"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
+<span id="section-cb21-8"><a href="#section-cb21-8" tabindex="-1"></a>    <span class="fu">stat_ellipse</span>()</span>
+<span id="section-cb21-9"><a href="#section-cb21-9" tabindex="-1"></a>Warning<span class="sc">:</span> Removed <span class="dv">1</span> row containing non<span class="sc">-</span>finite outside the scale range</span>
+<span id="section-cb21-10"><a href="#section-cb21-10" tabindex="-1"></a>(<span class="st">`</span><span class="at">stat_ellipse()</span><span class="st">`</span>).</span>
+<span id="section-cb21-11"><a href="#section-cb21-11" tabindex="-1"></a>Warning<span class="sc">:</span> Removed <span class="dv">1</span> row containing missing values or values outside the scale range</span>
+<span id="section-cb21-12"><a href="#section-cb21-12" tabindex="-1"></a>(<span class="st">`</span><span class="at">geom_point()</span><span class="st">`</span>).</span></code></pre></div>
+<p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Here, the pivot_wider() function converts the long data into a wide
+format where separate columns for Epithelium and Underlying values are
+created. This allows you to directly plot and explore relationships
+between these layers using scatterplots, with
+<code>stat_ellipse()</code> adding confidence ellipses to highlight
+group trends.</p>
+<p>Both long and wide formats serve specific purposes in data analysis
+and visualisation. Long format is flexible for creating grouped
+comparisons, while wide format facilitates direct relationship analysis
+between variables.</p>
+<p><wimr></p>
+</div>
+<div id="section-conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>In conclusion, this tutorial has demonstrated how the
+<strong>Tidyverse</strong> streamlines data analysis by providing a
+coherent set of tools that simplify data manipulation, reshaping, and
+visualisation. Using <code>dplyr</code>, we efficiently filtered,
+mutated, grouped, summarised, and joined our experimental and metadata,
+while the use of pipes (<code>%&gt;%</code>) allowed us to finalise
+complex workflows in a readable and intuitive manner.</p>
+<p>Additionally, <code>tidyr</code> enabled us to transform our data
+between long and wide formats, ensuring that it is in the optimal
+structure for analysis. With ggplot2, these tidy datasets were then
+translated into compelling graphics that highlight key patterns and
+relationships. Together, these tools empower analysts to create
+reproducible and insightful workflows, ultimately enhancing the rigour
+and clarity of data-driven research.</p>
+<p><e></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="section-workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="section-cb22"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb22-1"><a href="#section-cb22-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="section-cb22-2"><a href="#section-cb22-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.0</span> (<span class="dv">2024-04-24</span>)</span>
+<span id="section-cb22-3"><a href="#section-cb22-3" tabindex="-1"></a>Platform<span class="sc">:</span> aarch64<span class="sc">-</span>apple<span class="sc">-</span>darwin20</span>
+<span id="section-cb22-4"><a href="#section-cb22-4" tabindex="-1"></a>Running under<span class="sc">:</span> macOS Sonoma <span class="fl">14.3</span></span>
+<span id="section-cb22-5"><a href="#section-cb22-5" tabindex="-1"></a></span>
+<span id="section-cb22-6"><a href="#section-cb22-6" tabindex="-1"></a>Matrix products<span class="sc">:</span> default</span>
+<span id="section-cb22-7"><a href="#section-cb22-7" tabindex="-1"></a>BLAS<span class="sc">:</span>   <span class="er">/</span>Library<span class="sc">/</span>Frameworks<span class="sc">/</span>R.framework<span class="sc">/</span>Versions<span class="sc">/</span><span class="fl">4.4</span><span class="sc">-</span>arm64<span class="sc">/</span>Resources<span class="sc">/</span>lib<span class="sc">/</span>libRblas.<span class="fl">0.</span>dylib </span>
+<span id="section-cb22-8"><a href="#section-cb22-8" tabindex="-1"></a>LAPACK<span class="sc">:</span> <span class="er">/</span>Library<span class="sc">/</span>Frameworks<span class="sc">/</span>R.framework<span class="sc">/</span>Versions<span class="sc">/</span><span class="fl">4.4</span><span class="sc">-</span>arm64<span class="sc">/</span>Resources<span class="sc">/</span>lib<span class="sc">/</span>libRlapack.dylib;  LAPACK version <span class="dv">3</span>.<span class="fl">12.0</span></span>
+<span id="section-cb22-9"><a href="#section-cb22-9" tabindex="-1"></a></span>
+<span id="section-cb22-10"><a href="#section-cb22-10" tabindex="-1"></a>locale<span class="sc">:</span></span>
+<span id="section-cb22-11"><a href="#section-cb22-11" tabindex="-1"></a>[<span class="dv">1</span>] en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>C<span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span></span>
+<span id="section-cb22-12"><a href="#section-cb22-12" tabindex="-1"></a></span>
+<span id="section-cb22-13"><a href="#section-cb22-13" tabindex="-1"></a>time zone<span class="sc">:</span> Australia<span class="sc">/</span>Sydney</span>
+<span id="section-cb22-14"><a href="#section-cb22-14" tabindex="-1"></a>tzcode source<span class="sc">:</span> internal</span>
+<span id="section-cb22-15"><a href="#section-cb22-15" tabindex="-1"></a></span>
+<span id="section-cb22-16"><a href="#section-cb22-16" tabindex="-1"></a>attached base packages<span class="sc">:</span></span>
+<span id="section-cb22-17"><a href="#section-cb22-17" tabindex="-1"></a>[<span class="dv">1</span>] stats     graphics  grDevices utils     datasets  methods   base     </span>
+<span id="section-cb22-18"><a href="#section-cb22-18" tabindex="-1"></a></span>
+<span id="section-cb22-19"><a href="#section-cb22-19" tabindex="-1"></a>other attached packages<span class="sc">:</span></span>
+<span id="section-cb22-20"><a href="#section-cb22-20" tabindex="-1"></a> [<span class="dv">1</span>] lubridate_1.<span class="fl">9.4</span> forcats_1.<span class="fl">0.0</span>   stringr_1.<span class="fl">5.1</span>   dplyr_1.<span class="fl">1.4</span>    </span>
+<span id="section-cb22-21"><a href="#section-cb22-21" tabindex="-1"></a> [<span class="dv">5</span>] purrr_1.<span class="fl">0.4</span>     readr_2.<span class="fl">1.5</span>     tidyr_1.<span class="fl">3.1</span>     tibble_3.<span class="fl">2.1</span>   </span>
+<span id="section-cb22-22"><a href="#section-cb22-22" tabindex="-1"></a> [<span class="dv">9</span>] ggplot2_3.<span class="fl">5.1</span>   tidyverse_2.<span class="fl">0.0</span> shiny_1.<span class="fl">10.0</span>    workflowr_1.<span class="fl">7.1</span></span>
+<span id="section-cb22-23"><a href="#section-cb22-23" tabindex="-1"></a></span>
+<span id="section-cb22-24"><a href="#section-cb22-24" tabindex="-1"></a>loaded via a <span class="fu">namespace</span> (and not attached)<span class="sc">:</span></span>
+<span id="section-cb22-25"><a href="#section-cb22-25" tabindex="-1"></a> [<span class="dv">1</span>] utf8_1.<span class="fl">2.4</span>        sass_0.<span class="fl">4.9</span>        generics_0.<span class="fl">1.3</span>    stringi_1.<span class="fl">8.4</span>    </span>
+<span id="section-cb22-26"><a href="#section-cb22-26" tabindex="-1"></a> [<span class="dv">5</span>] hms_1.<span class="fl">1.3</span>         digest_0.<span class="fl">6.37</span>     magrittr_2.<span class="fl">0.3</span>    timechange_0.<span class="fl">3.0</span> </span>
+<span id="section-cb22-27"><a href="#section-cb22-27" tabindex="-1"></a> [<span class="dv">9</span>] evaluate_1.<span class="fl">0.3</span>    grid_4.<span class="fl">4.0</span>        fastmap_1.<span class="fl">2.0</span>     rprojroot_2.<span class="fl">0.4</span>  </span>
+<span id="section-cb22-28"><a href="#section-cb22-28" tabindex="-1"></a>[<span class="dv">13</span>] jsonlite_1.<span class="fl">8.9</span>    processx_3.<span class="fl">8.4</span>    whisker_0.<span class="fl">4.1</span>     ps_1.<span class="fl">8.1</span>         </span>
+<span id="section-cb22-29"><a href="#section-cb22-29" tabindex="-1"></a>[<span class="dv">17</span>] promises_1.<span class="fl">3.2</span>    httr_1.<span class="fl">4.7</span>        scales_1.<span class="fl">3.0</span>      jquerylib_0.<span class="fl">1.4</span>  </span>
+<span id="section-cb22-30"><a href="#section-cb22-30" tabindex="-1"></a>[<span class="dv">21</span>] cli_3.<span class="fl">6.3</span>         rlang_1.<span class="fl">1.5</span>       munsell_0.<span class="fl">5.1</span>     withr_3.<span class="fl">0.2</span>      </span>
+<span id="section-cb22-31"><a href="#section-cb22-31" tabindex="-1"></a>[<span class="dv">25</span>] cachem_1.<span class="fl">1.0</span>      yaml_2.<span class="fl">3.10</span>       tools_4.<span class="fl">4.0</span>       tzdb_0.<span class="fl">4.0</span>       </span>
+<span id="section-cb22-32"><a href="#section-cb22-32" tabindex="-1"></a>[<span class="dv">29</span>] colorspace_2<span class="fl">.1</span><span class="dv">-1</span>  httpuv_1.<span class="fl">6.15</span>     vctrs_0.<span class="fl">6.5</span>       R6_2.<span class="fl">5.1</span>         </span>
+<span id="section-cb22-33"><a href="#section-cb22-33" tabindex="-1"></a>[<span class="dv">33</span>] mime_0<span class="fl">.12</span>         lifecycle_1.<span class="fl">0.4</span>   git2r_0.<span class="fl">35.0</span>      fs_1.<span class="fl">6.5</span>         </span>
+<span id="section-cb22-34"><a href="#section-cb22-34" tabindex="-1"></a>[<span class="dv">37</span>] MASS_7<span class="fl">.3</span><span class="dv">-61</span>       pkgconfig_2.<span class="fl">0.3</span>   callr_3.<span class="fl">7.6</span>       pillar_1.<span class="fl">10.1</span>    </span>
+<span id="section-cb22-35"><a href="#section-cb22-35" tabindex="-1"></a>[<span class="dv">41</span>] bslib_0.<span class="fl">9.0</span>       later_1.<span class="fl">4.1</span>       gtable_0.<span class="fl">3.6</span>      glue_1.<span class="fl">8.0</span>       </span>
+<span id="section-cb22-36"><a href="#section-cb22-36" tabindex="-1"></a>[<span class="dv">45</span>] Rcpp_1.<span class="fl">0.14</span>       xfun_0<span class="fl">.50</span>         tidyselect_1.<span class="fl">2.1</span>  rstudioapi_0.<span class="fl">17.1</span></span>
+<span id="section-cb22-37"><a href="#section-cb22-37" tabindex="-1"></a>[<span class="dv">49</span>] knitr_1<span class="fl">.49</span>        farver_2.<span class="fl">1.2</span>      xtable_1<span class="fl">.8</span><span class="dv">-4</span>      htmltools_0.<span class="dv">5</span>.<span class="fl">8.1</span></span>
+<span id="section-cb22-38"><a href="#section-cb22-38" tabindex="-1"></a>[<span class="dv">53</span>] labeling_0.<span class="fl">4.3</span>    rmarkdown_2<span class="fl">.29</span>    compiler_4.<span class="fl">4.0</span>    getPass_0<span class="fl">.2</span><span class="dv">-4</span>    </span></code></pre></div>
+</div>
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeXZlcnNlIDI6IERhdGEgTWFuaXB1bGF0aW9uIgphdXRob3I6ICJUaG9tYXMgTydOZWlsIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93CmVkaXRvcl9vcHRpb25zOiAKICBtYXJrZG93bjogCiAgICB3cmFwOiA3MgpydW50aW1lOiBzaGlueQotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIGNvbGxhcHNlPVRSVUUsIHJvb3QuZGlyID0gIGdldHdkKCkpCmBgYAoKPCEtLS0KTm90ZXM6CiAgSW50cm9kdWN0aW9uCiAgRGF0YSBJbXBvcnQvU2V0IHVwCiAgRGF0YSBXcmFuZ2xpbmcgd2l0aCBkcGx5ciAKICAtIEZpbHRlcmluZywgc2VsZWN0aW5nLCBhbmQgbXV0YXRpbmcgZGF0YS4KICAtIEdyb3VwaW5nIGFuZCBTdW1tYXJpc2luZwogIC0gSm9pbmluZyBEYXRhIEZyYW1lcwogIFJlc2hhcGluZyBEYXRhIHdpdGggdGlkeXIKPC0tLT4KCiMgSW50cm9kdWN0aW9uey50YWJzZXQgLnRhYnNldC1mYWRlfQoKSW4gdGhpcyB0dXRvcmlhbCwgd2UgZXhwbG9yZSB0aGUgZnVuY3Rpb25hbGl0aWVzIG9mIHRoZSBUaWR5dmVyc2UgYnkgd29ya2luZyB3aXRoIHR3byBkYXRhc2V0czoKCi0gYGRhdGEuY3N2YCBjb250YWlucyBmYWJyaWNhdGVkIHN1bW1hcnkgZmxvdyBjeXRvbWV0cnkgZGF0YSwgc3VjaCBhcyBjZWxsIG51bWJlcnMgYW5kIE1GSQotIGBtZXRhLmNzdmAgY29udGFpbnMgaW5mb3JtYXRpb24gcmVnYXJkaW5nIGVhY2ggZG9ub3IsIHN1Y2ggYXMgYWdlIGFuZCBzZXguIAoKVGhlIFRpZHl2ZXJzZSBpcyBhIGNvbGxlY3Rpb24gb2YgUiBwYWNrYWdlcyB0aGF0IHNoYXJlIGFuIHVuZGVybHlpbmcgZGVzaWduIHBoaWxvc29waHkgYW5kIGdyYW1tYXIsIG1ha2luZyBkYXRhIGFuYWx5c2lzIG1vcmUgaW50dWl0aXZlIGFuZCBjb2hlcmVudC4gSGVyZSBhcmUgc29tZSBrZXkgYmVuZWZpdHM6CgoqKmRwbHlyKio6ClByb3ZpZGVzIGEgc3VpdGUgb2YgdmVyYnMgKGUuZy4gYGZpbHRlcigpYCwgYG11dGF0ZSgpYCwgYHNlbGVjdChgKSwgYW5kIGBsZWZ0X2pvaW4oKWApIHRoYXQgc2ltcGxpZnkgZGF0YSBtYW5pcHVsYXRpb24uIEZvciBleGFtcGxlLCBgbGVmdF9qb2luKClgIGVhc2lseSBjb21iaW5lcyBleHBlcmltZW50YWwgZGF0YSB3aXRoIG1ldGFkYXRhIGJhc2VkIG9uIGEgY29tbW9uIGtleS4gU2VlIHRoZSBbSW50cm9kdWN0aW9uIHRvIFI6IENoYXB0ZXIgNF0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svY2hhcHRlci00LWRhdGEtbWFuaXB1bGF0aW9uLXdpdGgtdGlkeXZlcnNlLmh0bWwpIGZvciBtb3JlIGNvbnRlbnQgb24gZHBseXIuIAoKKipQaXBlcyAoJT4lKSoqOgpFbmhhbmNlIGNvZGUgcmVhZGFiaWxpdHkgYnkgYWxsb3dpbmcgeW91IHRvIGNoYWluIG11bHRpcGxlIG9wZXJhdGlvbnMgaW4gYSBzZXF1ZW50aWFsLCBuYXR1cmFsLWxhbmd1YWdlIHN0eWxlLiBUaGlzIG1lYW5zIHlvdSBjYW4gZmluYWxpc2UgY29tcGxleCBkYXRhIHRyYW5zZm9ybWF0aW9ucyBpbiBhIHNpbmdsZSwgY2xlYXIgcGlwZWxpbmUgd2l0aG91dCB0aGUgbmVlZCBmb3IgbnVtZXJvdXMgaW50ZXJtZWRpYXRlIHZhcmlhYmxlcy4KCioqdGlkeXIqKjoKRm9jdXNlcyBvbiB0aWR5aW5nIGRhdGEsIGVuc3VyaW5nIHRoYXQgZWFjaCBvYnNlcnZhdGlvbiBvY2N1cGllcyBhIHNpbmdsZSByb3cgYW5kIGVhY2ggdmFyaWFibGUgYSBzaW5nbGUgY29sdW1uLiBGdW5jdGlvbnMgbGlrZSBgcGl2b3RfbG9uZ2VyKClgIGFuZCBwaXZvdF93aWRlcigpIGhlbHAgcmVzaGFwZSBkYXRhIGludG8gYSBzdGFuZGFyZCBmb3JtYXQsIHdoaWNoIGlzIGVzc2VudGlhbCBmb3IgZnVydGhlciBhbmFseXNpcy4KCioqZ2dwbG90MioqOgpPZmZlcnMgYSBwb3dlcmZ1bCBhbmQgZmxleGlibGUgZ3JhbW1hciBmb3IgZGF0YSB2aXN1YWxpc2F0aW9uLiBXaXRoIGdncGxvdDIsIHlvdSBjYW4gY3JlYXRlIGN1c3RvbWlzZWQgcGxvdHMgdGhhdCBlZmZlY3RpdmVseSBjb21tdW5pY2F0ZSBpbnNpZ2h0cyBmcm9tIHlvdXIgZGF0YSwgYnVpbGRpbmcgb24gdGhlIGNsZWFuLCB0aWR5IGRhdGEgcHJvZHVjZWQgYnkgdGhlIG90aGVyIFRpZHl2ZXJzZSBwYWNrYWdlcy4gU2VlIHRoZSBbSW50cm9kdWN0aW9uIHRvIFI6IENoYXB0ZXIgNS02XShodHRwczovL2RydGhvbWFzb25laWwuZ2l0aHViLmlvL2FuYWx5c2lzLXVzZXItZ3JvdXAvci10dXRvcmlhbC9fYm9vay9jaGFwdGVyLTUtZGF0YS12aXN1YWxpc2F0aW9uLXdpdGgtZ2dwbG90Mi5odG1sKSBhbmQgdGhlIFtwcmV2aW91cyB3b3Jrc2hvcF0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwLzIwMjUwMl90aWR5dmVyc2UxLmh0bWwpIGJ5IEhhcnJ5IGZvciBleHRyYSBpbmZvcm1hdGlvbiBvbiBnZ3Bsb3QuIAoKPGRpdiBjbGFzcz0iaGludC1nb2FscyI+CioqR29hbHM6KiogTGVhcm4gZGF0YSBtYW5pcHVsYXRpb24gd2l0aCBUaWR5dmVyc2U8YnI+CiZuYnNwOyZuYnNwOyYjODIyNjsgVGlkeSBEYXRhPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBTZWxlY3QgYW5kIE11dGF0ZSBkYXRhPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBHcm91cCBhbmQgc3VtbWFyaXNlIGRhdGE8YnI+IAombmJzcDsmbmJzcDsmIzgyMjY7IEpvaW4gdHdvIGRhdGEgZnJhbWVzPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBQaXZvdCBkYXRhIHdpdGggYHRpZHlyYDxicj4gCgo8L2Rpdj4KCldoZXRoZXIgeW91IGFyZSBjb21iaW5pbmcgZGF0YXNldHMsIHJlc2hhcGluZyBkYXRhLCBvciBjcmVhdGluZyBjb21wZWxsaW5nIGdyYXBoaWNzLCB0aGUgVGlkeXZlcnNlIG9mZmVycyBhIGNvbnNpc3RlbnQgYW5kIHBvd2VyZnVsIHNldCBvZiB0b29scyB0byBzdXBwb3J0IHlvdXIgYW5hbHlzaXMuCgo8cmVhZC10aW1lPjxpPioqRXN0aW1hdGVkIGxlbmd0aCoqOiAxIEhvdXI8L2k+PC9yZWFkLXRpbWU+PHdpbXI+CgojIFNldCB1cAoKPGRldGFpbHM+PHN1bW1hcnk+KipGb2xsb3cgdGhlc2UgaW5zdHJ1Y3Rpb25zIHRvIGdldCBzdGFydGVkOioqPC9zdW1tYXJ5Pgo8YnI+PGJyPgoxLiBTYXZlIHRoaXMgc2NyaXB0IGluIGEgZm9sZGVyIGNhbGxlZCAqKiIyMDI1MDJfVGlkeXZlcnNlMiIqKgoKMi4gSW5zdGFsbCBhbmQgbG9hZCB0aGUgcmVsZXZhbnQgcGFja2FnZXMgYW5kIGZ1bmN0aW9ucwoKYGBge3IsIGV2YWw9Rn0KaW5zdGFsbC5wYWNrYWdlcygidGlkeXZlcnNlIikKaW5zdGFsbC5wYWNrYWdlcygic2hpbnkiKQppbnN0YWxsLnBhY2thZ2VzKCJyZWFkciIpCmBgYAoKYGBge3J9CmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHJlYWRyKQp0aGVtZV9zZXQodGhlbWVfY2xhc3NpYygpKQpzb3VyY2UodXJsKCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vRHJUaG9tYXNPbmVpbC9Ta2lsbFRyZWVzL3JlZnMvaGVhZHMvbWFpbi9hc3NldHMvLmZ1bmN0aW9ucy5SIikpIApgYGAKCjIuIENyZWF0ZSBuZXcgZm9sZGVycyBpbiB5b3VyIGRpcmVjdG9yeS4KCmBgYHtyLCBldmFsPUZ9CmRpci5jcmVhdGUoInBsb3RzIikKZGlyLmNyZWF0ZSgiZGF0YSIpCmBgYAoKMy4gRG93bmxvYWQgdGhlIGRhdGEuCgpgYGB7ciwgZXZhbD1GfQpkb3dubG9hZC5maWxlKHVybD0iaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RyVGhvbWFzT25laWwvYW5hbHlzaXMtdXNlci1ncm91cC9yZWZzL2hlYWRzL21haW4vZG9jcy9yLXR1dG9yaWFsL2Fzc2V0cy9zeW50aGV0aWNfZGF0YS5jc3YiLCAKICAgICAgICAgICAgICBkZXN0ZmlsZSA9ICJkYXRhL2RhdGEuY3N2IiwgbWV0aG9kPSdjdXJsJywgbW9kZT0nd2InKQpkb3dubG9hZC5maWxlKHVybD0iaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RyVGhvbWFzT25laWwvYW5hbHlzaXMtdXNlci1ncm91cC9yZWZzL2hlYWRzL21haW4vZG9jcy9yLXR1dG9yaWFsL2Fzc2V0cy9tZXRhLmNzdiIsIAogICAgICAgICAgICAgIGRlc3RmaWxlID0gImRhdGEvbWV0YS5jc3YiLCBtZXRob2Q9J2N1cmwnLCBtb2RlPSd3YicpCmBgYAoKNC4gTG9hZCBkYXRhIGludG8gUgoKYGBge3J9CmRhdGEgPC0gcmVhZC5jc3YoIn4vRGVza3RvcC9hbmFseXNpcy11c2VyLWdyb3VwLzIwMjUwMjEwX1RpZHl2ZXJzZS9kYXRhL2RhdGEuY3N2IikKbWV0YSA8LSByZWFkLmNzdigifi9EZXNrdG9wL2FuYWx5c2lzLXVzZXItZ3JvdXAvMjAyNTAyMTBfVGlkeXZlcnNlL2RhdGEvbWV0YS5jc3YiKQpgYGAKCjwvZGV0YWlscz4KCjx3aW1yPgoKIyMgRGF0YSBXcmFuZ2xpbmcgd2l0aCBkcGx5cnsudGFic2V0IC50YWJzZXQtZmFkZX0KCkZpcnN0LCB3ZSBjYW4gcXVpY2tseSBleHBsb3JlIHRoZSBkYXRhLiAKCmBgYHtyLCBldmFsPUZ9CnN1bW1hcnkoZGF0YSkKYGBgCgpXZSBoYXZlIDUgY2F0ZWdvcmljYWwgY29sdW1ucyBhbmQgOCBudW1lcmljIHZhbHVlcy4gCgotIENEMywgQ0Q4LCBDRDQsIEhMQURSIGFuZCBDQ1I1IGFwcGVhciB0byBiZSBjZWxsIGNvdW50cy4gICAKLSBDRDI4IGFwcGVhcnMgdG8gYmUgYXMgYSBwZXJjZW50YWdlIGFscmVhZHkuCgpgYGB7ciwgZXZhbD1GfQpWaWV3KGRhdGEpCmBgYAoKPGRldGFpbHM+PHN1bW1hcnk+RHJvcGRvd24gZm9yIGludGVyYWN0aXZlIHNlc3Npb248L3N1bW1hcnk+CgpZb3UgY2FuIG9ubHkgdXNlIHRoaXMgaW4geW91ciBwZXJzb25hbCBzZXNzaW9ucy4KYGBge3IsIGV2YWw9VH0KdXNlckNvZGUodGl0bGU9IkV4cGxvcmUgdGhlIERhdGEgeW91cnNlbGYiLCAKICAgICAgICBxdmFsdWU9InRhYmxlKGRhdGEkdGlzc3VlLCBkYXRhJGxheWVyKSIsIAogICAgICAgIG5yb3dzPTEsIG91dF9oZWlnaHQ9MzUwKQpgYGAKCjwvZGV0YWlscz48YnI+PGhyPgoKVGhpcyBpbW1lZGlhdGVseSByZXZlYWxzIHNvbWUgaXNzdWVzIHdoZXJlIG91ciBkYXRhIG5lZWRzIHRpZHlpbmcsIGJ1dCB3ZSdsbCBjb3ZlciB0aGVzZSBpbiB0aGUgbmV4dCB3b3Jrc2hvcC4gCgo8d2ltcj4KCiMjIyBGaWx0ZXJpbmcsIFNlbGVjdGluZywgYW5kIE11dGF0aW5nIGRhdGE6IGBkcGx5cigpYC4KClRoZSBgZHBseXJgIHBhY2thZ2UgaXMgYSBwb3dlcmZ1bCB0b29sIGZvciBkYXRhIG1hbmlwdWxhdGlvbiBpbiBSLiBJdApwcm92aWRlcyBhIHNldCBvZiBmdW5jdGlvbnMgdGhhdCBtYWtlIGl0IGVhc3kgdG8gZmlsdGVyLCBhcnJhbmdlLCBncm91cCwKYW5kIHN1bW1hcml6ZSBkYXRhLiBTb21lIG9mIHRoZSBtb3N0IGNvbW1vbmx5IHVzZWQgZnVuY3Rpb25zIGluIGBkcGx5cmAKYXJlOiAgICAKCmBgYHtyfQpkYXRhICU+JSAjIHRoaXMgaXMgdGhlIHBpcGUuIEkgbGlrZSB0byB0aGluayBvZiBwaXBlcyBhcyAidXNpbmcgdGhpcyIKICBoZWFkKDQpICU+JQogIHByaW50KCkKYGBgCgotIGBmaWx0ZXIoKWA6IHRvIGZpbHRlciByb3dzIGJhc2VkIG9uIGEgY29uZGl0aW9uICAgCgpgYGB7cn0KZGF0YSAlPiUKICBmaWx0ZXIobGF5ZXIgPT0gIkVwaXRobGl1bSIpJT4lCiAgaGVhZCg0KSAlPiUKICBwcmludCgpCmBgYAoKLSBgYXJyYW5nZSgpYDogdG8gcmVvcmRlciByb3dzICAgIAoKYGBge3J9CmRhdGEgJT4lIAogIGFycmFuZ2UoZXhwZXJpbWVudCkgJT4lCiAgaGVhZCg0KSAlPiUKICBwcmludCgpCmBgYAoKLSBgc2VsZWN0KClgOiB0byBzZWxlY3QgY29sdW1ucyAgIAoKYGBge3J9CmRhdGEgJT4lCiAgZmlsdGVyKGxheWVyID09ICJFcGl0aGVsaXVtIikgJT4lCiAgYXJyYW5nZShDRDQpICU+JQogIHNlbGVjdChDRDQpICU+JQogIGhlYWQoNCkgJT4lCiAgcHJpbnQoKQpgYGAKCi0gYG11dGF0ZSgpYDogdG8gY3JlYXRlIG5ldyBjb2x1bW5zLgoKYGBge3J9CmRhdGEgJT4lCiAgbXV0YXRlKENENF9wZXJjZW50ID0gMTAwKkNENC9DRDMpICU+JSAKICBzZWxlY3QoQ0Q0X3BlcmNlbnQsIENEMywgQ0Q0KSAlPiUKICBoZWFkKDQpICU+JQogIHByaW50KCkKYGBgCgo8d2ltcj4KCiMjIyBHcm91cGluZyBhbmQgU3VtbWFyaXNpbmcKCkdyb3VwaW5nIGFuZCBzdW1tYXJpc2luZyBpbiB0aGUgVGlkeXZlcnNlIGFsbG93cyB5b3UgdG8gc3BsaXQgeW91ciBkYXRhIGludG8gc3Vic2V0cyB1c2luZyBgZ3JvdXBfYnkoKWAgYW5kIHRoZW4gY29tcHV0ZSBhZ2dyZWdhdGUgc3RhdGlzdGljcyBmb3IgZWFjaCBzdWJncm91cCB3aXRoIGBzdW1tYXJpc2UoKWAuIFRoaXMgYXBwcm9hY2ggZW5hYmxlcyBxdWljaywgY2xlYXIgaW5zaWdodHMgaW50byB0cmVuZHMgYW5kIGRpZmZlcmVuY2VzIHdpdGhpbiB5b3VyIGRhdGEgYnkgcmVkdWNpbmcgY29tcGxleCBkYXRhc2V0cyB0byBtZWFuaW5nZnVsIHN1bW1hcmllcy4KCmBgYHtyfQpkYXRhICU+JQogIG11dGF0ZShwZXJjZW50X0NENCA9IDEwMCpDRDQvQ0QzKSAlPiUKICBnZ3Bsb3QoYWVzKHRpc3N1ZSwgcGVyY2VudF9DRDQsIGZpbGw9bGF5ZXIpKStnZW9tX2JveHBsb3QoKQpgYGAKCmBgYHtyfQpkYXRhICU+JQogIG11dGF0ZShwZXJjZW50X0NENCA9IDEwMCpDRDQvQ0QzKSAlPiUKICBncm91cF9ieSh0aXNzdWUsIGxheWVyKSAlPiUKICBzdW1tYXJpc2UobWVhbl9DRDQgPSBtZWFuKHBlcmNlbnRfQ0Q0KSwgCiAgICAgICAgICAgIG1lZGlhbl9DRDQgPSBtZWRpYW4ocGVyY2VudF9DRDQpKSAlPiUKICBwcmludCgpCmBgYAoKPHdpbXI+CgojIyMgSm9pbmluZyBEYXRhIEZyYW1lcwoKQ29tYmluaW5nIGRhdGEgZnJvbSBtdWx0aXBsZSBzb3VyY2VzIGlzIG9mdGVuIG5lY2Vzc2FyeSwgZXZlbiB3aGVuIHRoZSBkYXRhc2V0cyBkb27igJl0IGFsaWduIHBlcmZlY3RseS4gRm9yIGluc3RhbmNlLCB5b3VyIGxvbmctZm9ybWF0IGRhdGEgbWlnaHQgaW5jbHVkZSBtdWx0aXBsZSBlbnRyaWVzIHBlciBkb25vciBmb3IgdGlzc3VlcyBsaWtlIGVwaXRoZWxpdW0gYW5kIG11Y29zYSwgd2hpbGUgdGhlIG1ldGFkYXRhIGNvbnRhaW5zIGRvbm9yLXNwZWNpZmljIGRldGFpbHMgdGhhdCB5b3UgcHJlZmVyIG5vdCB0byBkdXBsaWNhdGUuIAoKPHJlYWQtdGltZT48aT5UaGlzIHNjZW5hcmlvIGlzIGNvbW1vbiBpbiBwdWJsaWMgc2luZ2xlIGNlbGwgUk5BIHNlcXVlbmNpbmcgZGF0YSwgd2hlcmUgeW91J2xsIGludGVncmF0ZSBkaXZlcnNlIGxheWVycyBvZiBpbmZvcm1hdGlvbiB1c2luZyBzaGFyZWQga2V5cy48L3JlYWQtdGltZT4KCmBgYHtyfQojIFZpZXcgZGF0YSB2YWx1ZXMgb2YgRG9ub3IxCmRhdGFbZGF0YSRkb25vcj09IkRvbm9yMSIsXQoKIyBWaWV3IGRhdGEgdmFsdWVzIG9mIERvbm9yMQptZXRhW21ldGEkZG9ub3I9PSJEb25vcjEiLF0KYGBgCgpTbyB3ZSBleHBlY3QgRG9ub3IgMSB0byBiZSBhICpmZW1hbGUqLCBhZ2VkICozNSogYW5kIGNsYXNzaWZpZWQgKkhlYWx0aHkqCgpgYGB7cn0KZGF0YSAlPiUKICBzZWxlY3QoLWV4cGVyaW1lbnQpJT4lICMgd2UgY2FuIHJlbW92ZSBjb2x1bW5zIHVzaW5nIHNlbGVjdCgtLi4uKQogIHJpZ2h0X2pvaW4obWV0YSwgYnk9ImRvbm9yIikgJT4lCiAgZmlsdGVyKGRvbm9yID09ICJEb25vcjEiKQpgYGAKCldpdGggdGhpcywgd2Ugd291bGRuJ3QgbmVlZCB0byBzYXZlIGEgY29tYmluZWQgZGF0YWZyYW1lIHRvIGFuYWx5c2UuIAoKYGBge3J9CmRhdGEgJT4lCiAgc2VsZWN0KC1leHBlcmltZW50KSU+JQogIHJpZ2h0X2pvaW4obWV0YSwgYnk9ImRvbm9yIikgJT4lCiAgZmlsdGVyKHRpc3N1ZSAhPSAiQWJkbyIgJiB0aXNzdWUgIT0gJ2FiZG9tZW4nKSAlPiUgIyByZW1vdmUgZXJyb3JzCiAgbXV0YXRlKHBlcmNlbnQgPSAxMDAqQ0Q0L0NEMykgJT4lCiAgZ2dwbG90KGFlcyhjbGluaWNhbCwgcGVyY2VudCwgZmlsbD10aXNzdWUpKSsKICBnZW9tX2JveHBsb3Qob3V0bGllcnM9RikKYGBgCgo8d2ltcj4KCiMjIFJlc2hhcGluZyBEYXRhIHdpdGggdGlkeXIKCmB0aWR5cmAgcHJvdmlkZXMgZXNzZW50aWFsIHRvb2xzIGxpa2UgYHBpdm90X2xvbmdlcigpYCBhbmQgYHBpdm90X3dpZGVyKClgIHRvIHRyYW5zZm9ybSB5b3VyIGRhdGFzZXQgYmV0d2VlbiBsb25nIGFuZCB3aWRlIGZvcm1hdHMuIFRoaXMgcmVzaGFwaW5nIG1ha2VzIGl0IGVhc2llciB0byBhbGlnbiB2YXJpYWJsZXMgYW5kIG9ic2VydmF0aW9ucyBmb3IgYW5hbHlzaXMsIGVuc3VyaW5nIHRoYXQgZWFjaCB2YXJpYWJsZSBmb3JtcyBhIGNvbHVtbiBhbmQgZWFjaCBvYnNlcnZhdGlvbiBhIHJvdy4gU3VjaCBmbGV4aWJpbGl0eSBpcyBjcnVjaWFsIHdoZW4gcHJlcGFyaW5nIGNvbXBsZXggZXhwZXJpbWVudGFsIG9yIHNpbmdsZSBjZWxsIFJOQSBzZXF1ZW5jaW5nIGRhdGEgZm9yIGZ1cnRoZXIgYW5hbHlzaXMgYW5kIHZpc3VhbGlzYXRpb24uIAoKKipsb25nIGZvcm1hdCoqICAgCkluIGxvbmcgZm9ybWF0LCBlYWNoIG9ic2VydmF0aW9uIGlzIHJlcHJlc2VudGVkIGJ5IGEgc2luZ2xlIHJvdywgd2l0aCBvbmUgY29sdW1uIGhvbGRpbmcgdGhlIGNhdGVnb3JpY2FsIHZhcmlhYmxlIChlLmcuIHRoZSB0eXBlIG9mIG1lYXN1cmVtZW50KSBhbmQgYW5vdGhlciBjb2x1bW4gaG9sZGluZyB0aGUgY29ycmVzcG9uZGluZyB2YWx1ZXMuIFRoaXMgZm9ybWF0IGlzIHBhcnRpY3VsYXJseSB1c2VmdWwgZm9yIGdlbmVyYXRpbmcgYm94cGxvdHMgb3Igb3RoZXIgdmlzdWFsaXNhdGlvbnMgdGhhdCBjb21wYXJlIGRpc3RyaWJ1dGlvbnMgYWNyb3NzIGdyb3Vwcy4KCkZvciBleGFtcGxlLCBpZiB5b3Ugd2FudCB0byBjb21wYXJlIHRoZSBwZXJjZW50YWdlcyBvZiBDRDQgYW5kIENEOCBjZWxscyBvbiB0aGUgc2FtZSBwbG90LCB5b3UgY2FuIHBpdm90IHRoZSBkYXRhIGxvbmdlcjoKCmBgYHtyfQpkYXRhICU+JSAKICBmaWx0ZXIodGlzc3VlICE9ICJBYmRvIiAmIHRpc3N1ZSAhPSAnYWJkb21lbicpICU+JSAjIHJlbW92ZSBlcnJvcnMKICBtdXRhdGUoQ0Q0cGVyY2VudCA9IDEwMCpDRDQvQ0QzLCAKICAgICAgICAgQ0Q4cGVyY2VudCA9IDEwMCpDRDgvQ0QzKSAlPiUKICAjIHBpdm90IGxvbmdlciAtIHNlbGVjdCB0aGUgY29sdW1ucywgYW5kIHRoZSBuYW1lIG9mIHRoZSBjb2x1bW5zIGZvciB0aGUgbmFtZXMgYW5kIHZhbHVlcwogIHBpdm90X2xvbmdlcihjb2xzID0gYyhDRDRwZXJjZW50LCBDRDhwZXJjZW50KSwgCiAgICAgICAgICAgICAgIG5hbWVzX3RvID0gInN1YnNldCIsIAogICAgICAgICAgICAgICB2YWx1ZXNfdG8gPSAicGVyY2VudCIpICU+JQogIHNlbGVjdCgtYyhleHBlcmltZW50LGdyb3VwLENDUjVfTUZJLEhMQURSX01GSSxDRDMsQ0Q4LENENCxITEFEUixDQ1I1LENEMjgpKSU+JQogIGhlYWQoOCkgJT4lCiAgcHJpbnQoKQpgYGAKClRoaXMgY29kZSBjcmVhdGVzIGEgbmV3IGNvbHVtbiBgc3Vic2V0YCB0aGF0IGluZGljYXRlcyB3aGV0aGVyIHRoZSB2YWx1ZSBjb3JyZXNwb25kcyB0byBgJUNENGAgb3IgYCVDRDhgLCBhbmQgYSBjb2x1bW4gYHBlcmNlbnRgIGZvciB0aGUgY29tcHV0ZWQgdmFsdWVzLiBUaGUgZGF0YSBpcyBub3cgc3RydWN0dXJlZCB3aXRoIG9uZSBjb2x1bW4gZm9yIHRoZSBtZWFzdXJlbWVudCB0eXBlIGFuZCBhbm90aGVyIGZvciB0aGUgcGVyY2VudGFnZSwgbWFraW5nIGl0IHN0cmFpZ2h0Zm9yd2FyZCB0byBwbG90OgoKYGBge3J9CmRhdGEgJT4lIAogIGZpbHRlcih0aXNzdWUgIT0gIkFiZG8iICYgdGlzc3VlICE9ICdhYmRvbWVuJykgJT4lICMgcmVtb3ZlIGVycm9ycwogIG11dGF0ZShDRDRwZXJjZW50ID0gMTAwKkNENC9DRDMsIAogICAgICAgICBDRDhwZXJjZW50ID0gMTAwKkNEOC9DRDMpICU+JQogICMgcGl2b3QgbG9uZ2VyIC0gc2VsZWN0IHRoZSBjb2x1bW5zLCBhbmQgdGhlIG5hbWUgb2YgdGhlIGNvbHVtbnMgZm9yIHRoZSBuYW1lcyBhbmQgdmFsdWVzCiAgcGl2b3RfbG9uZ2VyKGNvbHMgPSBjKENENHBlcmNlbnQsIENEOHBlcmNlbnQpLCAKICAgICAgICAgICAgICAgbmFtZXNfdG8gPSAic3Vic2V0IiwgCiAgICAgICAgICAgICAgIHZhbHVlc190byA9ICJwZXJjZW50IikgJT4lCiAgZ2dwbG90KGFlcyhsYXllcixwZXJjZW50LCBmaWxsPXN1YnNldCkpKwogIGdlb21fYm94cGxvdCgpCmBgYAoKKip3aWRlIGZvcm1hdCoqICAgClNvbWV0aW1lcyB5b3Ugd2FudCB0byBleGFtaW5lIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiBtZWFzdXJlbWVudHMgZGlyZWN0bHnigJRmb3IgZXhhbXBsZSwgdG8gc2VlIGlmIHRoZXJlJ3MgYSByZWxhdGlvbnNoaXAgYmV0d2VlbiB2YWx1ZXMgZnJvbSBkaWZmZXJlbnQgbGF5ZXJzIChlLmcuIEVwaXRoZWxpdW0gYW5kIFVuZGVybHlpbmcgbXVjb3NhKS4gSW4gd2lkZSBmb3JtYXQsIGVhY2ggdHlwZSBvZiBtZWFzdXJlbWVudCBvY2N1cGllcyBpdHMgb3duIGNvbHVtbi4gVGhpcyBzdHJ1Y3R1cmUgaXMgaWRlYWwgZm9yIHNjYXR0ZXJwbG90cyBvciBjb3JyZWxhdGlvbiBhbmFseXNlcy4KCkNvbnNpZGVyIHRoaXMgZXhhbXBsZSB3aGVyZSB3ZSBwaXZvdCB0aGUgZGF0YSB0byBoYXZlIHNlcGFyYXRlIGNvbHVtbnMgZm9yIGVhY2ggbGF5ZXI6CgpgYGB7cn0KZGF0YSAlPiUgCiAgZmlsdGVyKHRpc3N1ZSAhPSAiQWJkbyIgJiB0aXNzdWUgIT0gJ2FiZG9tZW4nKSAlPiUgIyByZW1vdmUgZXJyb3JzCiAgbXV0YXRlKHBlcmNlbnQgPSAxMDAqSExBRFIvQ0Q0KSAlPiUKICBzZWxlY3QoZG9ub3IsdGlzc3VlLGxheWVyLHBlcmNlbnQpICU+JQogIHBpdm90X3dpZGVyKG5hbWVzX2Zyb20gPSBsYXllciwgdmFsdWVzX2Zyb20gPSBwZXJjZW50KSAlPiUKICBnZ3Bsb3QoYWVzKHg9RXBpdGhlbGl1bSwgeT1VbmRlcmx5aW5nLCBjb2xvcj10aXNzdWUpKSsKICAgIGdlb21fcG9pbnQoKSsgCiAgICBzdGF0X2VsbGlwc2UoKQoKYGBgCgpIZXJlLCB0aGUgcGl2b3Rfd2lkZXIoKSBmdW5jdGlvbiBjb252ZXJ0cyB0aGUgbG9uZyBkYXRhIGludG8gYSB3aWRlIGZvcm1hdCB3aGVyZSBzZXBhcmF0ZSBjb2x1bW5zIGZvciBFcGl0aGVsaXVtIGFuZCBVbmRlcmx5aW5nIHZhbHVlcyBhcmUgY3JlYXRlZC4gVGhpcyBhbGxvd3MgeW91IHRvIGRpcmVjdGx5IHBsb3QgYW5kIGV4cGxvcmUgcmVsYXRpb25zaGlwcyBiZXR3ZWVuIHRoZXNlIGxheWVycyB1c2luZyBzY2F0dGVycGxvdHMsIHdpdGggYHN0YXRfZWxsaXBzZSgpYCBhZGRpbmcgY29uZmlkZW5jZSBlbGxpcHNlcyB0byBoaWdobGlnaHQgZ3JvdXAgdHJlbmRzLgoKQm90aCBsb25nIGFuZCB3aWRlIGZvcm1hdHMgc2VydmUgc3BlY2lmaWMgcHVycG9zZXMgaW4gZGF0YSBhbmFseXNpcyBhbmQgdmlzdWFsaXNhdGlvbi4gTG9uZyBmb3JtYXQgaXMgZmxleGlibGUgZm9yIGNyZWF0aW5nIGdyb3VwZWQgY29tcGFyaXNvbnMsIHdoaWxlIHdpZGUgZm9ybWF0IGZhY2lsaXRhdGVzIGRpcmVjdCByZWxhdGlvbnNoaXAgYW5hbHlzaXMgYmV0d2VlbiB2YXJpYWJsZXMuCgo8d2ltcj4KCiMjIENvbmNsdXNpb25zCgpJbiBjb25jbHVzaW9uLCB0aGlzIHR1dG9yaWFsIGhhcyBkZW1vbnN0cmF0ZWQgaG93IHRoZSAqKlRpZHl2ZXJzZSoqIHN0cmVhbWxpbmVzIGRhdGEgYW5hbHlzaXMgYnkgcHJvdmlkaW5nIGEgY29oZXJlbnQgc2V0IG9mIHRvb2xzIHRoYXQgc2ltcGxpZnkgZGF0YSBtYW5pcHVsYXRpb24sIHJlc2hhcGluZywgYW5kIHZpc3VhbGlzYXRpb24uIFVzaW5nIGBkcGx5cmAsIHdlIGVmZmljaWVudGx5IGZpbHRlcmVkLCBtdXRhdGVkLCBncm91cGVkLCBzdW1tYXJpc2VkLCBhbmQgam9pbmVkIG91ciBleHBlcmltZW50YWwgYW5kIG1ldGFkYXRhLCB3aGlsZSB0aGUgdXNlIG9mIHBpcGVzIChgJT4lYCkgYWxsb3dlZCB1cyB0byBmaW5hbGlzZSBjb21wbGV4IHdvcmtmbG93cyBpbiBhIHJlYWRhYmxlIGFuZCBpbnR1aXRpdmUgbWFubmVyLgoKQWRkaXRpb25hbGx5LCBgdGlkeXJgIGVuYWJsZWQgdXMgdG8gdHJhbnNmb3JtIG91ciBkYXRhIGJldHdlZW4gbG9uZyBhbmQgd2lkZSBmb3JtYXRzLCBlbnN1cmluZyB0aGF0IGl0IGlzIGluIHRoZSBvcHRpbWFsIHN0cnVjdHVyZSBmb3IgYW5hbHlzaXMuIFdpdGggZ2dwbG90MiwgdGhlc2UgdGlkeSBkYXRhc2V0cyB3ZXJlIHRoZW4gdHJhbnNsYXRlZCBpbnRvIGNvbXBlbGxpbmcgZ3JhcGhpY3MgdGhhdCBoaWdobGlnaHQga2V5IHBhdHRlcm5zIGFuZCByZWxhdGlvbnNoaXBzLiBUb2dldGhlciwgdGhlc2UgdG9vbHMgZW1wb3dlciBhbmFseXN0cyB0byBjcmVhdGUgcmVwcm9kdWNpYmxlIGFuZCBpbnNpZ2h0ZnVsIHdvcmtmbG93cywgdWx0aW1hdGVseSBlbmhhbmNpbmcgdGhlIHJpZ291ciBhbmQgY2xhcml0eSBvZiBkYXRhLWRyaXZlbiByZXNlYXJjaC4KCjxlPgoKCgoK</div>
+<div class="custom-footer">
+    <div class="footer-left" style="width: 30%; float: centre">
+      <img src="assets/footer/footer1.png" alt="wimr-logo">
+    </div>
+    <div class="footer-center">
+      <p><strong>Creators</strong><br>
+        Thomas O'Neil<br>
+        Harry Robertson<br>
+        <a href="mailto:thomas.oneil@sydney.edu.au"><strong>Contact us</strong></a>
+      </p>
+    </div>
+    <div class="footer-right" style="width: 30%; float: centre">
+      <img src="assets/footer/footer2.png" alt="usyd-logo">
+    </div>
+  </div>
+  <div class="footer-updated">
+    <p>This site was last updated</p>
+    <p><script>document.write(new Date().toISOString().slice(0, 10));</script></p>
+</div>
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("section-TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("202502_tidyverse2.Rmd");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#section-TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
