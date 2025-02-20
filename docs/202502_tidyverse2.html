@@ -649,15 +649,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree477062c98f2270023f89bf44908c43cf6bd3d446targetblank477062ca">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree756ebac1ac832b5f0324d8c87dc329b641b2a7b0targetblank756ebaca">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/477062c98f2270023f89bf44908c43cf6bd3d446" target="_blank">477062c</a>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/756ebac1ac832b5f0324d8c87dc329b641b2a7b0" target="_blank">756ebac</a>
 </a>
 </p>
 </div>
 <div
-id="section-strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree477062c98f2270023f89bf44908c43cf6bd3d446targetblank477062ca"
+id="section-strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree756ebac1ac832b5f0324d8c87dc329b641b2a7b0targetblank756ebaca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -667,7 +667,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/477062c98f2270023f89bf44908c43cf6bd3d446" target="_blank">477062c</a>.
+<a href="https://github.com/DrThomasOneil/analysis-user-group/tree/756ebac1ac832b5f0324d8c87dc329b641b2a7b0" target="_blank">756ebac</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -735,6 +735,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/756ebac1ac832b5f0324d8c87dc329b641b2a7b0/analysis/202502_tidyverse2.Rmd" target="_blank">756ebac</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+<td>
+wflow_publish(c("analysis/*.Rmd"))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/5fe30de6735f75be6fe53a89cb092266f13ed73e/docs/202502_tidyverse2.html" target="_blank">5fe30de</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -853,70 +887,67 @@ class="sourceCode r"><code class="sourceCode r"><span id="section-cb1-1"><a href
 <span id="section-cb1-2"><a href="#section-cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;shiny&quot;</span>)</span>
 <span id="section-cb1-3"><a href="#section-cb1-3" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;readr&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="section-cb2"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb2-1"><a href="#section-cb2-1" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
-<span id="section-cb2-2"><a href="#section-cb2-2" tabindex="-1"></a>Warning<span class="sc">:</span> package <span class="st">&#39;shiny&#39;</span> was built under R version <span class="dv">4</span>.<span class="fl">4.1</span></span>
-<span id="section-cb2-3"><a href="#section-cb2-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="section-cb2-4"><a href="#section-cb2-4" tabindex="-1"></a>Warning<span class="sc">:</span> package <span class="st">&#39;purrr&#39;</span> was built under R version <span class="dv">4</span>.<span class="fl">4.1</span></span>
-<span id="section-cb2-5"><a href="#section-cb2-5" tabindex="-1"></a>Warning<span class="sc">:</span> package <span class="st">&#39;lubridate&#39;</span> was built under R version <span class="dv">4</span>.<span class="fl">4.1</span></span>
-<span id="section-cb2-6"><a href="#section-cb2-6" tabindex="-1"></a>── Attaching core tidyverse packages ──────────────────────── tidyverse <span class="dv">2</span>.<span class="fl">0.0</span> ──</span>
-<span id="section-cb2-7"><a href="#section-cb2-7" tabindex="-1"></a>✔ dplyr     <span class="dv">1</span>.<span class="fl">1.4</span>     ✔ readr     <span class="dv">2</span>.<span class="fl">1.5</span></span>
-<span id="section-cb2-8"><a href="#section-cb2-8" tabindex="-1"></a>✔ forcats   <span class="dv">1</span>.<span class="fl">0.0</span>     ✔ stringr   <span class="dv">1</span>.<span class="fl">5.1</span></span>
-<span id="section-cb2-9"><a href="#section-cb2-9" tabindex="-1"></a>✔ ggplot2   <span class="dv">3</span>.<span class="fl">5.1</span>     ✔ tibble    <span class="dv">3</span>.<span class="fl">2.1</span></span>
-<span id="section-cb2-10"><a href="#section-cb2-10" tabindex="-1"></a>✔ lubridate <span class="dv">1</span>.<span class="fl">9.4</span>     ✔ tidyr     <span class="dv">1</span>.<span class="fl">3.1</span></span>
-<span id="section-cb2-11"><a href="#section-cb2-11" tabindex="-1"></a>✔ purrr     <span class="dv">1</span>.<span class="fl">0.4</span>     </span>
-<span id="section-cb2-12"><a href="#section-cb2-12" tabindex="-1"></a>── Conflicts ────────────────────────────────────────── <span class="fu">tidyverse_conflicts</span>() ──</span>
-<span id="section-cb2-13"><a href="#section-cb2-13" tabindex="-1"></a>✖ dplyr<span class="sc">::</span><span class="fu">filter</span>() masks stats<span class="sc">::</span><span class="fu">filter</span>()</span>
-<span id="section-cb2-14"><a href="#section-cb2-14" tabindex="-1"></a>✖ dplyr<span class="sc">::</span><span class="fu">lag</span>()    masks stats<span class="sc">::</span><span class="fu">lag</span>()</span>
-<span id="section-cb2-15"><a href="#section-cb2-15" tabindex="-1"></a>ℹ Use the conflicted <span class="fu">package</span> (<span class="sc">&lt;</span>http<span class="sc">:</span><span class="er">//</span>conflicted.r<span class="sc">-</span>lib.org<span class="sc">/</span><span class="er">&gt;</span>) to force all conflicts to become errors</span>
-<span id="section-cb2-16"><a href="#section-cb2-16" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="section-cb2-17"><a href="#section-cb2-17" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_classic</span>())</span>
-<span id="section-cb2-18"><a href="#section-cb2-18" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R&quot;</span>)) </span></code></pre></div>
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb2-1"><a href="#section-cb2-1" tabindex="-1"></a><span class="fu">suppressWarnings</span>(<span class="fu">library</span>(shiny))</span>
+<span id="section-cb2-2"><a href="#section-cb2-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div class="sourceCode" id="section-cb4"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb4-1"><a href="#section-cb4-1" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_classic</span>())</span>
+<span id="section-cb4-2"><a href="#section-cb4-2" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R&quot;</span>)) </span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Create new folders in your directory.</li>
 </ol>
-<div class="sourceCode" id="section-cb3"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb3-1"><a href="#section-cb3-1" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;plots&quot;</span>)</span>
-<span id="section-cb3-2"><a href="#section-cb3-2" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;data&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="section-cb5"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb5-1"><a href="#section-cb5-1" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;plots&quot;</span>)</span>
+<span id="section-cb5-2"><a href="#section-cb5-2" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;data&quot;</span>)</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Download the data.</li>
 </ol>
-<div class="sourceCode" id="section-cb4"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb4-1"><a href="#section-cb4-1" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv&quot;</span>, </span>
-<span id="section-cb4-2"><a href="#section-cb4-2" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;data/data.csv&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>, <span class="at">mode=</span><span class="st">&#39;wb&#39;</span>)</span>
-<span id="section-cb4-3"><a href="#section-cb4-3" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/meta.csv&quot;</span>, </span>
-<span id="section-cb4-4"><a href="#section-cb4-4" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;data/meta.csv&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>, <span class="at">mode=</span><span class="st">&#39;wb&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="section-cb6"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb6-1"><a href="#section-cb6-1" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv&quot;</span>, </span>
+<span id="section-cb6-2"><a href="#section-cb6-2" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;data/data.csv&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>, <span class="at">mode=</span><span class="st">&#39;wb&#39;</span>)</span>
+<span id="section-cb6-3"><a href="#section-cb6-3" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/meta.csv&quot;</span>, </span>
+<span id="section-cb6-4"><a href="#section-cb6-4" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;data/meta.csv&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>, <span class="at">mode=</span><span class="st">&#39;wb&#39;</span>)</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Load data into R</li>
 </ol>
-<div class="sourceCode" id="section-cb5"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb5-1"><a href="#section-cb5-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/analysis-user-group/20250210_Tidyverse/data/data.csv&quot;</span>)</span>
-<span id="section-cb5-2"><a href="#section-cb5-2" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/analysis-user-group/20250210_Tidyverse/data/meta.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="section-cb7"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb7-1"><a href="#section-cb7-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/analysis-user-group/20250210_Tidyverse/data/data.csv&quot;</span>)</span>
+<span id="section-cb7-2"><a href="#section-cb7-2" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/analysis-user-group/20250210_Tidyverse/data/meta.csv&quot;</span>)</span></code></pre></div>
 </details>
 <p><wimr></p>
 <div id="section-data-wrangling-with-dplyr"
 class="section level2 tabset tabset-fade">
 <h2 class="tabset tabset-fade">Data Wrangling with dplyr</h2>
 <p>First, we can quickly explore the data.</p>
-<div class="sourceCode" id="section-cb6"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb6-1"><a href="#section-cb6-1" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="section-cb8"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb8-1"><a href="#section-cb8-1" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div>
 <p>We have 5 categorical columns and 8 numeric values.</p>
 <ul>
 <li>CD3, CD8, CD4, HLADR and CCR5 appear to be cell counts.<br />
 </li>
 <li>CD28 appears to be as a percentage already.</li>
 </ul>
-<div class="sourceCode" id="section-cb7"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb7-1"><a href="#section-cb7-1" tabindex="-1"></a><span class="fu">View</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="section-cb9"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb9-1"><a href="#section-cb9-1" tabindex="-1"></a><span class="fu">View</span>(data)</span></code></pre></div>
 <details>
 <summary>
 Dropdown for interactive session
 </summary>
 <p>You can only use this in your personal sessions.</p>
-<div class="sourceCode" id="section-cb8"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb8-1"><a href="#section-cb8-1" tabindex="-1"></a><span class="fu">userCode</span>(<span class="at">title=</span><span class="st">&quot;Explore the Data yourself&quot;</span>, </span>
-<span id="section-cb8-2"><a href="#section-cb8-2" tabindex="-1"></a>        <span class="at">qvalue=</span><span class="st">&quot;table(data$tissue, data$layer)&quot;</span>, </span>
-<span id="section-cb8-3"><a href="#section-cb8-3" tabindex="-1"></a>        <span class="at">nrows=</span><span class="dv">1</span>, <span class="at">out_height=</span><span class="dv">350</span>)</span></code></pre></div>
-<iframe data-deferred-src="app62e8471be101963d62a76654ab4c06d4/?w=&amp;__subapp__=1" width="100%" height="350" class="shiny-frame shiny-frame-deferred"></iframe>
+<div class="sourceCode" id="section-cb10"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb10-1"><a href="#section-cb10-1" tabindex="-1"></a><span class="fu">userCode</span>(<span class="at">title=</span><span class="st">&quot;Explore the Data yourself&quot;</span>, </span>
+<span id="section-cb10-2"><a href="#section-cb10-2" tabindex="-1"></a>        <span class="at">qvalue=</span><span class="st">&quot;table(data$tissue, data$layer)&quot;</span>, </span>
+<span id="section-cb10-3"><a href="#section-cb10-3" tabindex="-1"></a>        <span class="at">nrows=</span><span class="dv">1</span>, <span class="at">out_height=</span><span class="dv">350</span>)</span></code></pre></div>
+<iframe data-deferred-src="appa67706fb1f02ccd1beac079c8b63c755/?w=&amp;__subapp__=1" width="100%" height="350" class="shiny-frame shiny-frame-deferred"></iframe>
 </details>
 <br>
 <hr>
@@ -930,79 +961,79 @@ class="section level3">
 manipulation in R. It provides a set of functions that make it easy to
 filter, arrange, group, and summarize data. Some of the most commonly
 used functions in <code>dplyr</code> are:</p>
-<div class="sourceCode" id="section-cb9"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb9-1"><a href="#section-cb9-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="co"># this is the pipe. I like to think of pipes as &quot;using this&quot;</span></span>
-<span id="section-cb9-2"><a href="#section-cb9-2" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb9-3"><a href="#section-cb9-3" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb9-4"><a href="#section-cb9-4" tabindex="-1"></a>  experiment  donor  tissue      layer group   CD3   CD8   CD4 HLADR  CCR5</span>
-<span id="section-cb9-5"><a href="#section-cb9-5" tabindex="-1"></a><span class="dv">1</span>       Exp1 Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span>  <span class="dv">2205</span>  <span class="dv">2184</span>   <span class="dv">882</span>  <span class="dv">1932</span></span>
-<span id="section-cb9-6"><a href="#section-cb9-6" tabindex="-1"></a><span class="dv">2</span>       Exp1 Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span>  <span class="dv">7960</span>  <span class="dv">5529</span>   <span class="dv">808</span>  <span class="dv">3916</span></span>
-<span id="section-cb9-7"><a href="#section-cb9-7" tabindex="-1"></a><span class="dv">3</span>       Exp2 Donor2 Abdomen Epithelium   A_E <span class="dv">49774</span> <span class="dv">25149</span> <span class="dv">25251</span> <span class="dv">10671</span> <span class="dv">22763</span></span>
-<span id="section-cb9-8"><a href="#section-cb9-8" tabindex="-1"></a><span class="dv">4</span>       Exp2 Donor2 Abdomen Underlying  A_UM <span class="dv">68879</span> <span class="dv">47729</span> <span class="dv">33616</span>  <span class="dv">5662</span> <span class="dv">27725</span></span>
-<span id="section-cb9-9"><a href="#section-cb9-9" tabindex="-1"></a>  HLADR_MFI CCR5_MFI CD28</span>
-<span id="section-cb9-10"><a href="#section-cb9-10" tabindex="-1"></a><span class="dv">1</span>  <span class="fl">652.0000</span> <span class="fl">4455.553</span> <span class="fl">29.6</span></span>
-<span id="section-cb9-11"><a href="#section-cb9-11" tabindex="-1"></a><span class="dv">2</span>  <span class="fl">471.4750</span> <span class="fl">7121.196</span> <span class="fl">59.8</span></span>
-<span id="section-cb9-12"><a href="#section-cb9-12" tabindex="-1"></a><span class="dv">3</span>  <span class="fl">652.0000</span> <span class="fl">3666.176</span> <span class="fl">72.8</span></span>
-<span id="section-cb9-13"><a href="#section-cb9-13" tabindex="-1"></a><span class="dv">4</span>  <span class="fl">206.1183</span> <span class="fl">2025.143</span> <span class="fl">89.2</span></span></code></pre></div>
+<div class="sourceCode" id="section-cb11"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb11-1"><a href="#section-cb11-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="co"># this is the pipe. I like to think of pipes as &quot;using this&quot;</span></span>
+<span id="section-cb11-2"><a href="#section-cb11-2" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb11-3"><a href="#section-cb11-3" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code>  experiment  donor  tissue      layer group   CD3   CD8   CD4 HLADR  CCR5
+1       Exp1 Donor1 Abdomen Epithelium   A_E  4460  2205  2184   882  1932
+2       Exp1 Donor1 Abdomen Underlying  A_UM 15295  7960  5529   808  3916
+3       Exp2 Donor2 Abdomen Epithelium   A_E 49774 25149 25251 10671 22763
+4       Exp2 Donor2 Abdomen Underlying  A_UM 68879 47729 33616  5662 27725
+  HLADR_MFI CCR5_MFI CD28
+1  652.0000 4455.553 29.6
+2  471.4750 7121.196 59.8
+3  652.0000 3666.176 72.8
+4  206.1183 2025.143 89.2</code></pre>
 <ul>
 <li><code>filter()</code>: to filter rows based on a condition</li>
 </ul>
-<div class="sourceCode" id="section-cb10"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb10-1"><a href="#section-cb10-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb10-2"><a href="#section-cb10-2" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithlium&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="section-cb10-3"><a href="#section-cb10-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb10-4"><a href="#section-cb10-4" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb10-5"><a href="#section-cb10-5" tabindex="-1"></a> [<span class="dv">1</span>] experiment donor      tissue     layer      group      CD3       </span>
-<span id="section-cb10-6"><a href="#section-cb10-6" tabindex="-1"></a> [<span class="dv">7</span>] CD8        CD4        HLADR      CCR5       HLADR_MFI  CCR5_MFI  </span>
-<span id="section-cb10-7"><a href="#section-cb10-7" tabindex="-1"></a>[<span class="dv">13</span>] CD28      </span>
-<span id="section-cb10-8"><a href="#section-cb10-8" tabindex="-1"></a><span class="sc">&lt;</span><span class="dv">0</span> rows<span class="sc">&gt;</span> (or <span class="dv">0</span><span class="sc">-</span>length row.names)</span></code></pre></div>
+<div class="sourceCode" id="section-cb13"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb13-1"><a href="#section-cb13-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb13-2"><a href="#section-cb13-2" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithlium&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="section-cb13-3"><a href="#section-cb13-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb13-4"><a href="#section-cb13-4" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code> [1] experiment donor      tissue     layer      group      CD3       
+ [7] CD8        CD4        HLADR      CCR5       HLADR_MFI  CCR5_MFI  
+[13] CD28      
+&lt;0 rows&gt; (or 0-length row.names)</code></pre>
 <ul>
 <li><code>arrange()</code>: to reorder rows</li>
 </ul>
-<div class="sourceCode" id="section-cb11"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb11-1"><a href="#section-cb11-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="section-cb11-2"><a href="#section-cb11-2" tabindex="-1"></a>  <span class="fu">arrange</span>(experiment) <span class="sc">%&gt;%</span></span>
-<span id="section-cb11-3"><a href="#section-cb11-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb11-4"><a href="#section-cb11-4" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb11-5"><a href="#section-cb11-5" tabindex="-1"></a>  experiment   donor  tissue      layer group   CD3   CD8   CD4 HLADR  CCR5</span>
-<span id="section-cb11-6"><a href="#section-cb11-6" tabindex="-1"></a><span class="dv">1</span>       Exp1  Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span>  <span class="dv">2205</span>  <span class="dv">2184</span>   <span class="dv">882</span>  <span class="dv">1932</span></span>
-<span id="section-cb11-7"><a href="#section-cb11-7" tabindex="-1"></a><span class="dv">2</span>       Exp1  Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span>  <span class="dv">7960</span>  <span class="dv">5529</span>   <span class="dv">808</span>  <span class="dv">3916</span></span>
-<span id="section-cb11-8"><a href="#section-cb11-8" tabindex="-1"></a><span class="dv">3</span>       Exp1 Donor16  Vagina Epithelium   V_E <span class="dv">30109</span> <span class="dv">17011</span>  <span class="dv">6596</span>   <span class="dv">263</span>  <span class="dv">6264</span></span>
-<span id="section-cb11-9"><a href="#section-cb11-9" tabindex="-1"></a><span class="dv">4</span>       Exp1 Donor16  Vagina Underlying  V_UM <span class="dv">30774</span> <span class="dv">16713</span> <span class="dv">22180</span>  <span class="dv">3245</span> <span class="dv">18958</span></span>
-<span id="section-cb11-10"><a href="#section-cb11-10" tabindex="-1"></a>  HLADR_MFI CCR5_MFI CD28</span>
-<span id="section-cb11-11"><a href="#section-cb11-11" tabindex="-1"></a><span class="dv">1</span>  <span class="fl">652.0000</span> <span class="fl">4455.553</span> <span class="fl">29.6</span></span>
-<span id="section-cb11-12"><a href="#section-cb11-12" tabindex="-1"></a><span class="dv">2</span>  <span class="fl">471.4750</span> <span class="fl">7121.196</span> <span class="fl">59.8</span></span>
-<span id="section-cb11-13"><a href="#section-cb11-13" tabindex="-1"></a><span class="dv">3</span>   <span class="fl">62.1126</span> <span class="fl">3078.970</span> <span class="fl">52.6</span></span>
-<span id="section-cb11-14"><a href="#section-cb11-14" tabindex="-1"></a><span class="dv">4</span>  <span class="fl">192.5019</span> <span class="fl">3534.601</span>  <span class="fl">0.0</span></span></code></pre></div>
+<div class="sourceCode" id="section-cb15"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb15-1"><a href="#section-cb15-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb15-2"><a href="#section-cb15-2" tabindex="-1"></a>  <span class="fu">arrange</span>(experiment) <span class="sc">%&gt;%</span></span>
+<span id="section-cb15-3"><a href="#section-cb15-3" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb15-4"><a href="#section-cb15-4" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code>  experiment   donor  tissue      layer group   CD3   CD8   CD4 HLADR  CCR5
+1       Exp1  Donor1 Abdomen Epithelium   A_E  4460  2205  2184   882  1932
+2       Exp1  Donor1 Abdomen Underlying  A_UM 15295  7960  5529   808  3916
+3       Exp1 Donor16  Vagina Epithelium   V_E 30109 17011  6596   263  6264
+4       Exp1 Donor16  Vagina Underlying  V_UM 30774 16713 22180  3245 18958
+  HLADR_MFI CCR5_MFI CD28
+1  652.0000 4455.553 29.6
+2  471.4750 7121.196 59.8
+3   62.1126 3078.970 52.6
+4  192.5019 3534.601  0.0</code></pre>
 <ul>
 <li><code>select()</code>: to select columns</li>
 </ul>
-<div class="sourceCode" id="section-cb12"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb12-1"><a href="#section-cb12-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb12-2"><a href="#section-cb12-2" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb12-3"><a href="#section-cb12-3" tabindex="-1"></a>  <span class="fu">arrange</span>(CD4) <span class="sc">%&gt;%</span></span>
-<span id="section-cb12-4"><a href="#section-cb12-4" tabindex="-1"></a>  <span class="fu">select</span>(CD4) <span class="sc">%&gt;%</span></span>
-<span id="section-cb12-5"><a href="#section-cb12-5" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb12-6"><a href="#section-cb12-6" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb12-7"><a href="#section-cb12-7" tabindex="-1"></a>  CD4</span>
-<span id="section-cb12-8"><a href="#section-cb12-8" tabindex="-1"></a><span class="dv">1</span> <span class="dv">262</span></span>
-<span id="section-cb12-9"><a href="#section-cb12-9" tabindex="-1"></a><span class="dv">2</span> <span class="dv">472</span></span>
-<span id="section-cb12-10"><a href="#section-cb12-10" tabindex="-1"></a><span class="dv">3</span> <span class="dv">596</span></span>
-<span id="section-cb12-11"><a href="#section-cb12-11" tabindex="-1"></a><span class="dv">4</span> <span class="dv">596</span></span></code></pre></div>
+<div class="sourceCode" id="section-cb17"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb17-1"><a href="#section-cb17-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-2"><a href="#section-cb17-2" tabindex="-1"></a>  <span class="fu">filter</span>(layer <span class="sc">==</span> <span class="st">&quot;Epithelium&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-3"><a href="#section-cb17-3" tabindex="-1"></a>  <span class="fu">arrange</span>(CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-4"><a href="#section-cb17-4" tabindex="-1"></a>  <span class="fu">select</span>(CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-5"><a href="#section-cb17-5" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb17-6"><a href="#section-cb17-6" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code>  CD4
+1 262
+2 472
+3 596
+4 596</code></pre>
 <ul>
 <li><code>mutate()</code>: to create new columns.</li>
 </ul>
-<div class="sourceCode" id="section-cb13"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb13-1"><a href="#section-cb13-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb13-2"><a href="#section-cb13-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4_percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span> </span>
-<span id="section-cb13-3"><a href="#section-cb13-3" tabindex="-1"></a>  <span class="fu">select</span>(CD4_percent, CD3, CD4) <span class="sc">%&gt;%</span></span>
-<span id="section-cb13-4"><a href="#section-cb13-4" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb13-5"><a href="#section-cb13-5" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb13-6"><a href="#section-cb13-6" tabindex="-1"></a>  CD4_percent   CD3   CD4</span>
-<span id="section-cb13-7"><a href="#section-cb13-7" tabindex="-1"></a><span class="dv">1</span>    <span class="fl">48.96861</span>  <span class="dv">4460</span>  <span class="dv">2184</span></span>
-<span id="section-cb13-8"><a href="#section-cb13-8" tabindex="-1"></a><span class="dv">2</span>    <span class="fl">36.14907</span> <span class="dv">15295</span>  <span class="dv">5529</span></span>
-<span id="section-cb13-9"><a href="#section-cb13-9" tabindex="-1"></a><span class="dv">3</span>    <span class="fl">50.73131</span> <span class="dv">49774</span> <span class="dv">25251</span></span>
-<span id="section-cb13-10"><a href="#section-cb13-10" tabindex="-1"></a><span class="dv">4</span>    <span class="fl">48.80443</span> <span class="dv">68879</span> <span class="dv">33616</span></span></code></pre></div>
+<div class="sourceCode" id="section-cb19"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb19-1"><a href="#section-cb19-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb19-2"><a href="#section-cb19-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4_percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span> </span>
+<span id="section-cb19-3"><a href="#section-cb19-3" tabindex="-1"></a>  <span class="fu">select</span>(CD4_percent, CD3, CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb19-4"><a href="#section-cb19-4" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb19-5"><a href="#section-cb19-5" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code>  CD4_percent   CD3   CD4
+1    48.96861  4460  2184
+2    36.14907 15295  5529
+3    50.73131 49774 25251
+4    48.80443 68879 33616</code></pre>
 <p><wimr></p>
 </div>
 <div id="section-grouping-and-summarising" class="section level3">
@@ -1013,33 +1044,70 @@ aggregate statistics for each subgroup with <code>summarise()</code>.
 This approach enables quick, clear insights into trends and differences
 within your data by reducing complex datasets to meaningful
 summaries.</p>
-<div class="sourceCode" id="section-cb14"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb14-1"><a href="#section-cb14-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb14-2"><a href="#section-cb14-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="section-cb14-3"><a href="#section-cb14-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(tissue, percent_CD4, <span class="at">fill=</span>layer))<span class="sc">+</span><span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="section-cb21"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb21-1"><a href="#section-cb21-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb21-2"><a href="#section-cb21-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb21-3"><a href="#section-cb21-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(tissue, percent_CD4, <span class="at">fill=</span>layer))<span class="sc">+</span><span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="section-cb15"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb15-1"><a href="#section-cb15-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb15-2"><a href="#section-cb15-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="section-cb15-3"><a href="#section-cb15-3" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue, layer) <span class="sc">%&gt;%</span></span>
-<span id="section-cb15-4"><a href="#section-cb15-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_CD4 =</span> <span class="fu">mean</span>(percent_CD4), </span>
-<span id="section-cb15-5"><a href="#section-cb15-5" tabindex="-1"></a>            <span class="at">median_CD4 =</span> <span class="fu">median</span>(percent_CD4)) <span class="sc">%&gt;%</span></span>
-<span id="section-cb15-6"><a href="#section-cb15-6" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb15-7"><a href="#section-cb15-7" tabindex="-1"></a><span class="st">`</span><span class="at">summarise()</span><span class="st">`</span> has grouped output by <span class="st">&#39;tissue&#39;</span>. You can override using the</span>
-<span id="section-cb15-8"><a href="#section-cb15-8" tabindex="-1"></a><span class="st">`</span><span class="at">.groups</span><span class="st">`</span> argument.</span>
-<span id="section-cb15-9"><a href="#section-cb15-9" tabindex="-1"></a><span class="co"># A tibble: 9 × 4</span></span>
-<span id="section-cb15-10"><a href="#section-cb15-10" tabindex="-1"></a><span class="co"># Groups:   tissue [5]</span></span>
-<span id="section-cb15-11"><a href="#section-cb15-11" tabindex="-1"></a>  tissue  layer      mean_CD4 median_CD4</span>
-<span id="section-cb15-12"><a href="#section-cb15-12" tabindex="-1"></a>  <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>         <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>      <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="section-cb15-13"><a href="#section-cb15-13" tabindex="-1"></a><span class="dv">1</span> Abdo    Epithelium     <span class="fl">37.7</span>       <span class="fl">37.7</span></span>
-<span id="section-cb15-14"><a href="#section-cb15-14" tabindex="-1"></a><span class="dv">2</span> Abdo    Underlying     <span class="fl">35.5</span>       <span class="fl">35.5</span></span>
-<span id="section-cb15-15"><a href="#section-cb15-15" tabindex="-1"></a><span class="dv">3</span> Abdomen Epithelium     <span class="fl">43.3</span>       <span class="fl">44.0</span></span>
-<span id="section-cb15-16"><a href="#section-cb15-16" tabindex="-1"></a><span class="dv">4</span> Abdomen Underlying     <span class="fl">37.2</span>       <span class="fl">35.5</span></span>
-<span id="section-cb15-17"><a href="#section-cb15-17" tabindex="-1"></a><span class="dv">5</span> Labia   Epithelium     <span class="fl">28.8</span>       <span class="fl">28.1</span></span>
-<span id="section-cb15-18"><a href="#section-cb15-18" tabindex="-1"></a><span class="dv">6</span> Labia   Underlying     <span class="fl">65.9</span>       <span class="fl">66.3</span></span>
-<span id="section-cb15-19"><a href="#section-cb15-19" tabindex="-1"></a><span class="dv">7</span> Vagina  Epithelium     <span class="fl">26.0</span>       <span class="fl">23.6</span></span>
-<span id="section-cb15-20"><a href="#section-cb15-20" tabindex="-1"></a><span class="dv">8</span> Vagina  Underlying     <span class="fl">52.5</span>       <span class="fl">53.5</span></span>
-<span id="section-cb15-21"><a href="#section-cb15-21" tabindex="-1"></a><span class="dv">9</span> abdomen Underlying     <span class="fl">21.3</span>       <span class="fl">21.3</span></span></code></pre></div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-14-1">
+Past versions of unnamed-chunk-14-1.png
+</button>
+</p>
+<div id="section-fig-unnamed-chunk-14-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/5fe30de6735f75be6fe53a89cb092266f13ed73e/docs/figure/202502_tidyverse2.Rmd/unnamed-chunk-14-1.png" target="_blank">5fe30de</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode" id="section-cb22"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb22-1"><a href="#section-cb22-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb22-2"><a href="#section-cb22-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_CD4 =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb22-3"><a href="#section-cb22-3" tabindex="-1"></a>  <span class="fu">group_by</span>(tissue, layer) <span class="sc">%&gt;%</span></span>
+<span id="section-cb22-4"><a href="#section-cb22-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_CD4 =</span> <span class="fu">mean</span>(percent_CD4), </span>
+<span id="section-cb22-5"><a href="#section-cb22-5" tabindex="-1"></a>            <span class="at">median_CD4 =</span> <span class="fu">median</span>(percent_CD4)) <span class="sc">%&gt;%</span></span>
+<span id="section-cb22-6"><a href="#section-cb22-6" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code>`summarise()` has grouped output by &#39;tissue&#39;. You can override using the
+`.groups` argument.</code></pre>
+<pre><code># A tibble: 9 × 4
+# Groups:   tissue [5]
+  tissue  layer      mean_CD4 median_CD4
+  &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;
+1 Abdo    Epithelium     37.7       37.7
+2 Abdo    Underlying     35.5       35.5
+3 Abdomen Epithelium     43.3       44.0
+4 Abdomen Underlying     37.2       35.5
+5 Labia   Epithelium     28.8       28.1
+6 Labia   Underlying     65.9       66.3
+7 Vagina  Epithelium     26.0       23.6
+8 Vagina  Underlying     52.5       53.5
+9 abdomen Underlying     21.3       21.3</code></pre>
 <p><wimr></p>
 </div>
 <div id="section-joining-data-frames" class="section level3">
@@ -1052,44 +1120,81 @@ prefer not to duplicate.</p>
 <p><read-time><i>This scenario is common in public single cell RNA
 sequencing data, where you’ll integrate diverse layers of information
 using shared keys.</read-time></p>
-<div class="sourceCode" id="section-cb16"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb16-1"><a href="#section-cb16-1" tabindex="-1"></a><span class="co"># View data values of Donor1</span></span>
-<span id="section-cb16-2"><a href="#section-cb16-2" tabindex="-1"></a>data[data<span class="sc">$</span>donor<span class="sc">==</span><span class="st">&quot;Donor1&quot;</span>,]</span>
-<span id="section-cb16-3"><a href="#section-cb16-3" tabindex="-1"></a>  experiment  donor  tissue      layer group   CD3  CD8  CD4 HLADR CCR5</span>
-<span id="section-cb16-4"><a href="#section-cb16-4" tabindex="-1"></a><span class="dv">1</span>       Exp1 Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span> <span class="dv">2205</span> <span class="dv">2184</span>   <span class="dv">882</span> <span class="dv">1932</span></span>
-<span id="section-cb16-5"><a href="#section-cb16-5" tabindex="-1"></a><span class="dv">2</span>       Exp1 Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span> <span class="dv">7960</span> <span class="dv">5529</span>   <span class="dv">808</span> <span class="dv">3916</span></span>
-<span id="section-cb16-6"><a href="#section-cb16-6" tabindex="-1"></a>  HLADR_MFI CCR5_MFI CD28</span>
-<span id="section-cb16-7"><a href="#section-cb16-7" tabindex="-1"></a><span class="dv">1</span>   <span class="fl">652.000</span> <span class="fl">4455.553</span> <span class="fl">29.6</span></span>
-<span id="section-cb16-8"><a href="#section-cb16-8" tabindex="-1"></a><span class="dv">2</span>   <span class="fl">471.475</span> <span class="fl">7121.196</span> <span class="fl">59.8</span></span>
-<span id="section-cb16-9"><a href="#section-cb16-9" tabindex="-1"></a></span>
-<span id="section-cb16-10"><a href="#section-cb16-10" tabindex="-1"></a><span class="co"># View data values of Donor1</span></span>
-<span id="section-cb16-11"><a href="#section-cb16-11" tabindex="-1"></a>meta[meta<span class="sc">$</span>donor<span class="sc">==</span><span class="st">&quot;Donor1&quot;</span>,]</span>
-<span id="section-cb16-12"><a href="#section-cb16-12" tabindex="-1"></a>   donor experiment      date sex age clinical</span>
-<span id="section-cb16-13"><a href="#section-cb16-13" tabindex="-1"></a><span class="dv">1</span> Donor1       Exp1 <span class="dv">19</span><span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2024</span>   F  <span class="dv">35</span>  Healthy</span></code></pre></div>
+<div class="sourceCode" id="section-cb25"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb25-1"><a href="#section-cb25-1" tabindex="-1"></a><span class="co"># View data values of Donor1</span></span>
+<span id="section-cb25-2"><a href="#section-cb25-2" tabindex="-1"></a>data[data<span class="sc">$</span>donor<span class="sc">==</span><span class="st">&quot;Donor1&quot;</span>,]</span></code></pre></div>
+<pre><code>  experiment  donor  tissue      layer group   CD3  CD8  CD4 HLADR CCR5
+1       Exp1 Donor1 Abdomen Epithelium   A_E  4460 2205 2184   882 1932
+2       Exp1 Donor1 Abdomen Underlying  A_UM 15295 7960 5529   808 3916
+  HLADR_MFI CCR5_MFI CD28
+1   652.000 4455.553 29.6
+2   471.475 7121.196 59.8</code></pre>
+<div class="sourceCode" id="section-cb27"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb27-1"><a href="#section-cb27-1" tabindex="-1"></a><span class="co"># View data values of Donor1</span></span>
+<span id="section-cb27-2"><a href="#section-cb27-2" tabindex="-1"></a>meta[meta<span class="sc">$</span>donor<span class="sc">==</span><span class="st">&quot;Donor1&quot;</span>,]</span></code></pre></div>
+<pre><code>   donor experiment      date sex age clinical
+1 Donor1       Exp1 19/2/2024   F  35  Healthy</code></pre>
 <p>So we expect Donor 1 to be a <em>female</em>, aged <em>35</em> and
 classified <em>Healthy</em></p>
-<div class="sourceCode" id="section-cb17"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb17-1"><a href="#section-cb17-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb17-2"><a href="#section-cb17-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>experiment)<span class="sc">%&gt;%</span> <span class="co"># we can remove columns using select(-...)</span></span>
-<span id="section-cb17-3"><a href="#section-cb17-3" tabindex="-1"></a>  <span class="fu">right_join</span>(meta, <span class="at">by=</span><span class="st">&quot;donor&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb17-4"><a href="#section-cb17-4" tabindex="-1"></a>  <span class="fu">filter</span>(donor <span class="sc">==</span> <span class="st">&quot;Donor1&quot;</span>)</span>
-<span id="section-cb17-5"><a href="#section-cb17-5" tabindex="-1"></a>   donor  tissue      layer group   CD3  CD8  CD4 HLADR CCR5 HLADR_MFI CCR5_MFI</span>
-<span id="section-cb17-6"><a href="#section-cb17-6" tabindex="-1"></a><span class="dv">1</span> Donor1 Abdomen Epithelium   A_E  <span class="dv">4460</span> <span class="dv">2205</span> <span class="dv">2184</span>   <span class="dv">882</span> <span class="dv">1932</span>   <span class="fl">652.000</span> <span class="fl">4455.553</span></span>
-<span id="section-cb17-7"><a href="#section-cb17-7" tabindex="-1"></a><span class="dv">2</span> Donor1 Abdomen Underlying  A_UM <span class="dv">15295</span> <span class="dv">7960</span> <span class="dv">5529</span>   <span class="dv">808</span> <span class="dv">3916</span>   <span class="fl">471.475</span> <span class="fl">7121.196</span></span>
-<span id="section-cb17-8"><a href="#section-cb17-8" tabindex="-1"></a>  CD28 experiment      date sex age clinical</span>
-<span id="section-cb17-9"><a href="#section-cb17-9" tabindex="-1"></a><span class="dv">1</span> <span class="fl">29.6</span>       Exp1 <span class="dv">19</span><span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2024</span>   F  <span class="dv">35</span>  Healthy</span>
-<span id="section-cb17-10"><a href="#section-cb17-10" tabindex="-1"></a><span class="dv">2</span> <span class="fl">59.8</span>       Exp1 <span class="dv">19</span><span class="sc">/</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2024</span>   F  <span class="dv">35</span>  Healthy</span></code></pre></div>
+<div class="sourceCode" id="section-cb29"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb29-1"><a href="#section-cb29-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb29-2"><a href="#section-cb29-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>experiment)<span class="sc">%&gt;%</span> <span class="co"># we can remove columns using select(-...)</span></span>
+<span id="section-cb29-3"><a href="#section-cb29-3" tabindex="-1"></a>  <span class="fu">right_join</span>(meta, <span class="at">by=</span><span class="st">&quot;donor&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb29-4"><a href="#section-cb29-4" tabindex="-1"></a>  <span class="fu">filter</span>(donor <span class="sc">==</span> <span class="st">&quot;Donor1&quot;</span>)</span></code></pre></div>
+<pre><code>   donor  tissue      layer group   CD3  CD8  CD4 HLADR CCR5 HLADR_MFI CCR5_MFI
+1 Donor1 Abdomen Epithelium   A_E  4460 2205 2184   882 1932   652.000 4455.553
+2 Donor1 Abdomen Underlying  A_UM 15295 7960 5529   808 3916   471.475 7121.196
+  CD28 experiment      date sex age clinical
+1 29.6       Exp1 19/2/2024   F  35  Healthy
+2 59.8       Exp1 19/2/2024   F  35  Healthy</code></pre>
 <p>With this, we wouldn’t need to save a combined dataframe to
 analyse.</p>
-<div class="sourceCode" id="section-cb18"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb18-1"><a href="#section-cb18-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="section-cb18-2"><a href="#section-cb18-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>experiment)<span class="sc">%&gt;%</span></span>
-<span id="section-cb18-3"><a href="#section-cb18-3" tabindex="-1"></a>  <span class="fu">right_join</span>(meta, <span class="at">by=</span><span class="st">&quot;donor&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb18-4"><a href="#section-cb18-4" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
-<span id="section-cb18-5"><a href="#section-cb18-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="section-cb18-6"><a href="#section-cb18-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(clinical, percent, <span class="at">fill=</span>tissue))<span class="sc">+</span></span>
-<span id="section-cb18-7"><a href="#section-cb18-7" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outliers=</span>F)</span></code></pre></div>
+<div class="sourceCode" id="section-cb31"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb31-1"><a href="#section-cb31-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="section-cb31-2"><a href="#section-cb31-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>experiment)<span class="sc">%&gt;%</span></span>
+<span id="section-cb31-3"><a href="#section-cb31-3" tabindex="-1"></a>  <span class="fu">right_join</span>(meta, <span class="at">by=</span><span class="st">&quot;donor&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb31-4"><a href="#section-cb31-4" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb31-5"><a href="#section-cb31-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb31-6"><a href="#section-cb31-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(clinical, percent, <span class="at">fill=</span>tissue))<span class="sc">+</span></span>
+<span id="section-cb31-7"><a href="#section-cb31-7" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outliers=</span>F)</span></code></pre></div>
 <p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-18-1">
+Past versions of unnamed-chunk-18-1.png
+</button>
+</p>
+<div id="section-fig-unnamed-chunk-18-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/5fe30de6735f75be6fe53a89cb092266f13ed73e/docs/figure/202502_tidyverse2.Rmd/unnamed-chunk-18-1.png" target="_blank">5fe30de</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><wimr></p>
 </div>
 </div>
@@ -1110,46 +1215,83 @@ format is particularly useful for generating boxplots or other
 visualisations that compare distributions across groups.</p>
 <p>For example, if you want to compare the percentages of CD4 and CD8
 cells on the same plot, you can pivot the data longer:</p>
-<div class="sourceCode" id="section-cb19"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb19-1"><a href="#section-cb19-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="section-cb19-2"><a href="#section-cb19-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
-<span id="section-cb19-3"><a href="#section-cb19-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, </span>
-<span id="section-cb19-4"><a href="#section-cb19-4" tabindex="-1"></a>         <span class="at">CD8percent =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="section-cb19-5"><a href="#section-cb19-5" tabindex="-1"></a>  <span class="co"># pivot longer - select the columns, and the name of the columns for the names and values</span></span>
-<span id="section-cb19-6"><a href="#section-cb19-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(CD4percent, CD8percent), </span>
-<span id="section-cb19-7"><a href="#section-cb19-7" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
-<span id="section-cb19-8"><a href="#section-cb19-8" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb19-9"><a href="#section-cb19-9" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(experiment,group,CCR5_MFI,HLADR_MFI,CD3,CD8,CD4,HLADR,CCR5,CD28))<span class="sc">%&gt;%</span></span>
-<span id="section-cb19-10"><a href="#section-cb19-10" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb19-11"><a href="#section-cb19-11" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="section-cb19-12"><a href="#section-cb19-12" tabindex="-1"></a><span class="co"># A tibble: 8 × 5</span></span>
-<span id="section-cb19-13"><a href="#section-cb19-13" tabindex="-1"></a>  donor  tissue  layer      subset     percent</span>
-<span id="section-cb19-14"><a href="#section-cb19-14" tabindex="-1"></a>  <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>      <span class="er">&lt;</span>chr<span class="sc">&gt;</span>        <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="section-cb19-15"><a href="#section-cb19-15" tabindex="-1"></a><span class="dv">1</span> Donor1 Abdomen Epithelium CD4percent    <span class="fl">49.0</span></span>
-<span id="section-cb19-16"><a href="#section-cb19-16" tabindex="-1"></a><span class="dv">2</span> Donor1 Abdomen Epithelium CD8percent    <span class="fl">49.4</span></span>
-<span id="section-cb19-17"><a href="#section-cb19-17" tabindex="-1"></a><span class="dv">3</span> Donor1 Abdomen Underlying CD4percent    <span class="fl">36.1</span></span>
-<span id="section-cb19-18"><a href="#section-cb19-18" tabindex="-1"></a><span class="dv">4</span> Donor1 Abdomen Underlying CD8percent    <span class="fl">52.0</span></span>
-<span id="section-cb19-19"><a href="#section-cb19-19" tabindex="-1"></a><span class="dv">5</span> Donor2 Abdomen Epithelium CD4percent    <span class="fl">50.7</span></span>
-<span id="section-cb19-20"><a href="#section-cb19-20" tabindex="-1"></a><span class="dv">6</span> Donor2 Abdomen Epithelium CD8percent    <span class="fl">50.5</span></span>
-<span id="section-cb19-21"><a href="#section-cb19-21" tabindex="-1"></a><span class="dv">7</span> Donor2 Abdomen Underlying CD4percent    <span class="fl">48.8</span></span>
-<span id="section-cb19-22"><a href="#section-cb19-22" tabindex="-1"></a><span class="dv">8</span> Donor2 Abdomen Underlying CD8percent    <span class="fl">69.3</span></span></code></pre></div>
+<div class="sourceCode" id="section-cb32"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb32-1"><a href="#section-cb32-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb32-2"><a href="#section-cb32-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb32-3"><a href="#section-cb32-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, </span>
+<span id="section-cb32-4"><a href="#section-cb32-4" tabindex="-1"></a>         <span class="at">CD8percent =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb32-5"><a href="#section-cb32-5" tabindex="-1"></a>  <span class="co"># pivot longer - select the columns, and the name of the columns for the names and values</span></span>
+<span id="section-cb32-6"><a href="#section-cb32-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(CD4percent, CD8percent), </span>
+<span id="section-cb32-7"><a href="#section-cb32-7" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
+<span id="section-cb32-8"><a href="#section-cb32-8" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb32-9"><a href="#section-cb32-9" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(experiment,group,CCR5_MFI,HLADR_MFI,CD3,CD8,CD4,HLADR,CCR5,CD28))<span class="sc">%&gt;%</span></span>
+<span id="section-cb32-10"><a href="#section-cb32-10" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb32-11"><a href="#section-cb32-11" tabindex="-1"></a>  <span class="fu">print</span>()</span></code></pre></div>
+<pre><code># A tibble: 8 × 5
+  donor  tissue  layer      subset     percent
+  &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;
+1 Donor1 Abdomen Epithelium CD4percent    49.0
+2 Donor1 Abdomen Epithelium CD8percent    49.4
+3 Donor1 Abdomen Underlying CD4percent    36.1
+4 Donor1 Abdomen Underlying CD8percent    52.0
+5 Donor2 Abdomen Epithelium CD4percent    50.7
+6 Donor2 Abdomen Epithelium CD8percent    50.5
+7 Donor2 Abdomen Underlying CD4percent    48.8
+8 Donor2 Abdomen Underlying CD8percent    69.3</code></pre>
 <p>This code creates a new column <code>subset</code> that indicates
 whether the value corresponds to <code>%CD4</code> or <code>%CD8</code>,
 and a column <code>percent</code> for the computed values. The data is
 now structured with one column for the measurement type and another for
 the percentage, making it straightforward to plot:</p>
-<div class="sourceCode" id="section-cb20"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb20-1"><a href="#section-cb20-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="section-cb20-2"><a href="#section-cb20-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
-<span id="section-cb20-3"><a href="#section-cb20-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, </span>
-<span id="section-cb20-4"><a href="#section-cb20-4" tabindex="-1"></a>         <span class="at">CD8percent =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
-<span id="section-cb20-5"><a href="#section-cb20-5" tabindex="-1"></a>  <span class="co"># pivot longer - select the columns, and the name of the columns for the names and values</span></span>
-<span id="section-cb20-6"><a href="#section-cb20-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(CD4percent, CD8percent), </span>
-<span id="section-cb20-7"><a href="#section-cb20-7" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
-<span id="section-cb20-8"><a href="#section-cb20-8" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="section-cb20-9"><a href="#section-cb20-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(layer,percent, <span class="at">fill=</span>subset))<span class="sc">+</span></span>
-<span id="section-cb20-10"><a href="#section-cb20-10" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="section-cb34"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb34-1"><a href="#section-cb34-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb34-2"><a href="#section-cb34-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb34-3"><a href="#section-cb34-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">CD4percent =</span> <span class="dv">100</span><span class="sc">*</span>CD4<span class="sc">/</span>CD3, </span>
+<span id="section-cb34-4"><a href="#section-cb34-4" tabindex="-1"></a>         <span class="at">CD8percent =</span> <span class="dv">100</span><span class="sc">*</span>CD8<span class="sc">/</span>CD3) <span class="sc">%&gt;%</span></span>
+<span id="section-cb34-5"><a href="#section-cb34-5" tabindex="-1"></a>  <span class="co"># pivot longer - select the columns, and the name of the columns for the names and values</span></span>
+<span id="section-cb34-6"><a href="#section-cb34-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(CD4percent, CD8percent), </span>
+<span id="section-cb34-7"><a href="#section-cb34-7" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;subset&quot;</span>, </span>
+<span id="section-cb34-8"><a href="#section-cb34-8" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;percent&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="section-cb34-9"><a href="#section-cb34-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(layer,percent, <span class="at">fill=</span>subset))<span class="sc">+</span></span>
+<span id="section-cb34-10"><a href="#section-cb34-10" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-20-1">
+Past versions of unnamed-chunk-20-1.png
+</button>
+</p>
+<div id="section-fig-unnamed-chunk-20-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/5fe30de6735f75be6fe53a89cb092266f13ed73e/docs/figure/202502_tidyverse2.Rmd/unnamed-chunk-20-1.png" target="_blank">5fe30de</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><strong>wide format</strong><br />
 Sometimes you want to examine relationships between measurements
 directly—for example, to see if there’s a relationship between values
@@ -1158,20 +1300,53 @@ format, each type of measurement occupies its own column. This structure
 is ideal for scatterplots or correlation analyses.</p>
 <p>Consider this example where we pivot the data to have separate
 columns for each layer:</p>
-<div class="sourceCode" id="section-cb21"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb21-1"><a href="#section-cb21-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="section-cb21-2"><a href="#section-cb21-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
-<span id="section-cb21-3"><a href="#section-cb21-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="dv">100</span><span class="sc">*</span>HLADR<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
-<span id="section-cb21-4"><a href="#section-cb21-4" tabindex="-1"></a>  <span class="fu">select</span>(donor,tissue,layer,percent) <span class="sc">%&gt;%</span></span>
-<span id="section-cb21-5"><a href="#section-cb21-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> layer, <span class="at">values_from =</span> percent) <span class="sc">%&gt;%</span></span>
-<span id="section-cb21-6"><a href="#section-cb21-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Epithelium, <span class="at">y=</span>Underlying, <span class="at">color=</span>tissue))<span class="sc">+</span></span>
-<span id="section-cb21-7"><a href="#section-cb21-7" tabindex="-1"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
-<span id="section-cb21-8"><a href="#section-cb21-8" tabindex="-1"></a>    <span class="fu">stat_ellipse</span>()</span>
-<span id="section-cb21-9"><a href="#section-cb21-9" tabindex="-1"></a>Warning<span class="sc">:</span> Removed <span class="dv">1</span> row containing non<span class="sc">-</span>finite outside the scale range</span>
-<span id="section-cb21-10"><a href="#section-cb21-10" tabindex="-1"></a>(<span class="st">`</span><span class="at">stat_ellipse()</span><span class="st">`</span>).</span>
-<span id="section-cb21-11"><a href="#section-cb21-11" tabindex="-1"></a>Warning<span class="sc">:</span> Removed <span class="dv">1</span> row containing missing values or values outside the scale range</span>
-<span id="section-cb21-12"><a href="#section-cb21-12" tabindex="-1"></a>(<span class="st">`</span><span class="at">geom_point()</span><span class="st">`</span>).</span></code></pre></div>
+<div class="sourceCode" id="section-cb35"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb35-1"><a href="#section-cb35-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="section-cb35-2"><a href="#section-cb35-2" tabindex="-1"></a>  <span class="fu">filter</span>(tissue <span class="sc">!=</span> <span class="st">&quot;Abdo&quot;</span> <span class="sc">&amp;</span> tissue <span class="sc">!=</span> <span class="st">&#39;abdomen&#39;</span>) <span class="sc">%&gt;%</span> <span class="co"># remove errors</span></span>
+<span id="section-cb35-3"><a href="#section-cb35-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="dv">100</span><span class="sc">*</span>HLADR<span class="sc">/</span>CD4) <span class="sc">%&gt;%</span></span>
+<span id="section-cb35-4"><a href="#section-cb35-4" tabindex="-1"></a>  <span class="fu">select</span>(donor,tissue,layer,percent) <span class="sc">%&gt;%</span></span>
+<span id="section-cb35-5"><a href="#section-cb35-5" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> layer, <span class="at">values_from =</span> percent) <span class="sc">%&gt;%</span></span>
+<span id="section-cb35-6"><a href="#section-cb35-6" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Epithelium, <span class="at">y=</span>Underlying, <span class="at">color=</span>tissue))<span class="sc">+</span></span>
+<span id="section-cb35-7"><a href="#section-cb35-7" tabindex="-1"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span> </span>
+<span id="section-cb35-8"><a href="#section-cb35-8" tabindex="-1"></a>    <span class="fu">stat_ellipse</span>()</span></code></pre></div>
 <p><img src="figure/202502_tidyverse2.Rmd/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-21-1">
+Past versions of unnamed-chunk-21-1.png
+</button>
+</p>
+<div id="section-fig-unnamed-chunk-21-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/5fe30de6735f75be6fe53a89cb092266f13ed73e/docs/figure/202502_tidyverse2.Rmd/unnamed-chunk-21-1.png" target="_blank">5fe30de</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-02-20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Here, the pivot_wider() function converts the long data into a wide
 format where separate columns for Epithelium and Underlying values are
 created. This allows you to directly plot and explore relationships
@@ -1209,50 +1384,50 @@ Session information
 </button>
 </p>
 <div id="section-workflowr-sessioninfo" class="collapse">
-<div class="sourceCode" id="section-cb22"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="section-cb22-1"><a href="#section-cb22-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
-<span id="section-cb22-2"><a href="#section-cb22-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.0</span> (<span class="dv">2024-04-24</span>)</span>
-<span id="section-cb22-3"><a href="#section-cb22-3" tabindex="-1"></a>Platform<span class="sc">:</span> aarch64<span class="sc">-</span>apple<span class="sc">-</span>darwin20</span>
-<span id="section-cb22-4"><a href="#section-cb22-4" tabindex="-1"></a>Running under<span class="sc">:</span> macOS Sonoma <span class="fl">14.3</span></span>
-<span id="section-cb22-5"><a href="#section-cb22-5" tabindex="-1"></a></span>
-<span id="section-cb22-6"><a href="#section-cb22-6" tabindex="-1"></a>Matrix products<span class="sc">:</span> default</span>
-<span id="section-cb22-7"><a href="#section-cb22-7" tabindex="-1"></a>BLAS<span class="sc">:</span>   <span class="er">/</span>Library<span class="sc">/</span>Frameworks<span class="sc">/</span>R.framework<span class="sc">/</span>Versions<span class="sc">/</span><span class="fl">4.4</span><span class="sc">-</span>arm64<span class="sc">/</span>Resources<span class="sc">/</span>lib<span class="sc">/</span>libRblas.<span class="fl">0.</span>dylib </span>
-<span id="section-cb22-8"><a href="#section-cb22-8" tabindex="-1"></a>LAPACK<span class="sc">:</span> <span class="er">/</span>Library<span class="sc">/</span>Frameworks<span class="sc">/</span>R.framework<span class="sc">/</span>Versions<span class="sc">/</span><span class="fl">4.4</span><span class="sc">-</span>arm64<span class="sc">/</span>Resources<span class="sc">/</span>lib<span class="sc">/</span>libRlapack.dylib;  LAPACK version <span class="dv">3</span>.<span class="fl">12.0</span></span>
-<span id="section-cb22-9"><a href="#section-cb22-9" tabindex="-1"></a></span>
-<span id="section-cb22-10"><a href="#section-cb22-10" tabindex="-1"></a>locale<span class="sc">:</span></span>
-<span id="section-cb22-11"><a href="#section-cb22-11" tabindex="-1"></a>[<span class="dv">1</span>] en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>C<span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span></span>
-<span id="section-cb22-12"><a href="#section-cb22-12" tabindex="-1"></a></span>
-<span id="section-cb22-13"><a href="#section-cb22-13" tabindex="-1"></a>time zone<span class="sc">:</span> Australia<span class="sc">/</span>Sydney</span>
-<span id="section-cb22-14"><a href="#section-cb22-14" tabindex="-1"></a>tzcode source<span class="sc">:</span> internal</span>
-<span id="section-cb22-15"><a href="#section-cb22-15" tabindex="-1"></a></span>
-<span id="section-cb22-16"><a href="#section-cb22-16" tabindex="-1"></a>attached base packages<span class="sc">:</span></span>
-<span id="section-cb22-17"><a href="#section-cb22-17" tabindex="-1"></a>[<span class="dv">1</span>] stats     graphics  grDevices utils     datasets  methods   base     </span>
-<span id="section-cb22-18"><a href="#section-cb22-18" tabindex="-1"></a></span>
-<span id="section-cb22-19"><a href="#section-cb22-19" tabindex="-1"></a>other attached packages<span class="sc">:</span></span>
-<span id="section-cb22-20"><a href="#section-cb22-20" tabindex="-1"></a> [<span class="dv">1</span>] lubridate_1.<span class="fl">9.4</span> forcats_1.<span class="fl">0.0</span>   stringr_1.<span class="fl">5.1</span>   dplyr_1.<span class="fl">1.4</span>    </span>
-<span id="section-cb22-21"><a href="#section-cb22-21" tabindex="-1"></a> [<span class="dv">5</span>] purrr_1.<span class="fl">0.4</span>     readr_2.<span class="fl">1.5</span>     tidyr_1.<span class="fl">3.1</span>     tibble_3.<span class="fl">2.1</span>   </span>
-<span id="section-cb22-22"><a href="#section-cb22-22" tabindex="-1"></a> [<span class="dv">9</span>] ggplot2_3.<span class="fl">5.1</span>   tidyverse_2.<span class="fl">0.0</span> shiny_1.<span class="fl">10.0</span>    workflowr_1.<span class="fl">7.1</span></span>
-<span id="section-cb22-23"><a href="#section-cb22-23" tabindex="-1"></a></span>
-<span id="section-cb22-24"><a href="#section-cb22-24" tabindex="-1"></a>loaded via a <span class="fu">namespace</span> (and not attached)<span class="sc">:</span></span>
-<span id="section-cb22-25"><a href="#section-cb22-25" tabindex="-1"></a> [<span class="dv">1</span>] utf8_1.<span class="fl">2.4</span>        sass_0.<span class="fl">4.9</span>        generics_0.<span class="fl">1.3</span>    stringi_1.<span class="fl">8.4</span>    </span>
-<span id="section-cb22-26"><a href="#section-cb22-26" tabindex="-1"></a> [<span class="dv">5</span>] hms_1.<span class="fl">1.3</span>         digest_0.<span class="fl">6.37</span>     magrittr_2.<span class="fl">0.3</span>    timechange_0.<span class="fl">3.0</span> </span>
-<span id="section-cb22-27"><a href="#section-cb22-27" tabindex="-1"></a> [<span class="dv">9</span>] evaluate_1.<span class="fl">0.3</span>    grid_4.<span class="fl">4.0</span>        fastmap_1.<span class="fl">2.0</span>     rprojroot_2.<span class="fl">0.4</span>  </span>
-<span id="section-cb22-28"><a href="#section-cb22-28" tabindex="-1"></a>[<span class="dv">13</span>] jsonlite_1.<span class="fl">8.9</span>    processx_3.<span class="fl">8.4</span>    whisker_0.<span class="fl">4.1</span>     ps_1.<span class="fl">8.1</span>         </span>
-<span id="section-cb22-29"><a href="#section-cb22-29" tabindex="-1"></a>[<span class="dv">17</span>] promises_1.<span class="fl">3.2</span>    httr_1.<span class="fl">4.7</span>        scales_1.<span class="fl">3.0</span>      jquerylib_0.<span class="fl">1.4</span>  </span>
-<span id="section-cb22-30"><a href="#section-cb22-30" tabindex="-1"></a>[<span class="dv">21</span>] cli_3.<span class="fl">6.3</span>         rlang_1.<span class="fl">1.5</span>       munsell_0.<span class="fl">5.1</span>     withr_3.<span class="fl">0.2</span>      </span>
-<span id="section-cb22-31"><a href="#section-cb22-31" tabindex="-1"></a>[<span class="dv">25</span>] cachem_1.<span class="fl">1.0</span>      yaml_2.<span class="fl">3.10</span>       tools_4.<span class="fl">4.0</span>       tzdb_0.<span class="fl">4.0</span>       </span>
-<span id="section-cb22-32"><a href="#section-cb22-32" tabindex="-1"></a>[<span class="dv">29</span>] colorspace_2<span class="fl">.1</span><span class="dv">-1</span>  httpuv_1.<span class="fl">6.15</span>     vctrs_0.<span class="fl">6.5</span>       R6_2.<span class="fl">5.1</span>         </span>
-<span id="section-cb22-33"><a href="#section-cb22-33" tabindex="-1"></a>[<span class="dv">33</span>] mime_0<span class="fl">.12</span>         lifecycle_1.<span class="fl">0.4</span>   git2r_0.<span class="fl">35.0</span>      fs_1.<span class="fl">6.5</span>         </span>
-<span id="section-cb22-34"><a href="#section-cb22-34" tabindex="-1"></a>[<span class="dv">37</span>] MASS_7<span class="fl">.3</span><span class="dv">-61</span>       pkgconfig_2.<span class="fl">0.3</span>   callr_3.<span class="fl">7.6</span>       pillar_1.<span class="fl">10.1</span>    </span>
-<span id="section-cb22-35"><a href="#section-cb22-35" tabindex="-1"></a>[<span class="dv">41</span>] bslib_0.<span class="fl">9.0</span>       later_1.<span class="fl">4.1</span>       gtable_0.<span class="fl">3.6</span>      glue_1.<span class="fl">8.0</span>       </span>
-<span id="section-cb22-36"><a href="#section-cb22-36" tabindex="-1"></a>[<span class="dv">45</span>] Rcpp_1.<span class="fl">0.14</span>       xfun_0<span class="fl">.50</span>         tidyselect_1.<span class="fl">2.1</span>  rstudioapi_0.<span class="fl">17.1</span></span>
-<span id="section-cb22-37"><a href="#section-cb22-37" tabindex="-1"></a>[<span class="dv">49</span>] knitr_1<span class="fl">.49</span>        farver_2.<span class="fl">1.2</span>      xtable_1<span class="fl">.8</span><span class="dv">-4</span>      htmltools_0.<span class="dv">5</span>.<span class="fl">8.1</span></span>
-<span id="section-cb22-38"><a href="#section-cb22-38" tabindex="-1"></a>[<span class="dv">53</span>] labeling_0.<span class="fl">4.3</span>    rmarkdown_2<span class="fl">.29</span>    compiler_4.<span class="fl">4.0</span>    getPass_0<span class="fl">.2</span><span class="dv">-4</span>    </span></code></pre></div>
+<div class="sourceCode" id="section-cb36"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb36-1"><a href="#section-cb36-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Australia/Sydney
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] lubridate_1.9.4 forcats_1.0.0   stringr_1.5.1   dplyr_1.1.4    
+ [5] purrr_1.0.4     readr_2.1.5     tidyr_1.3.1     tibble_3.2.1   
+ [9] ggplot2_3.5.1   tidyverse_2.0.0 shiny_1.10.0    workflowr_1.7.1
+
+loaded via a namespace (and not attached):
+ [1] utf8_1.2.4        sass_0.4.9        generics_0.1.3    stringi_1.8.4    
+ [5] hms_1.1.3         digest_0.6.37     magrittr_2.0.3    timechange_0.3.0 
+ [9] evaluate_1.0.3    grid_4.4.0        fastmap_1.2.0     rprojroot_2.0.4  
+[13] jsonlite_1.8.9    processx_3.8.4    whisker_0.4.1     ps_1.8.1         
+[17] promises_1.3.2    httr_1.4.7        scales_1.3.0      jquerylib_0.1.4  
+[21] cli_3.6.3         rlang_1.1.5       munsell_0.5.1     withr_3.0.2      
+[25] cachem_1.1.0      yaml_2.3.10       tools_4.4.0       tzdb_0.4.0       
+[29] colorspace_2.1-1  httpuv_1.6.15     vctrs_0.6.5       R6_2.5.1         
+[33] mime_0.12         lifecycle_1.0.4   git2r_0.35.0      fs_1.6.5         
+[37] MASS_7.3-61       pkgconfig_2.0.3   callr_3.7.6       pillar_1.10.1    
+[41] bslib_0.9.0       later_1.4.1       gtable_0.3.6      glue_1.8.0       
+[45] Rcpp_1.0.14       xfun_0.50         tidyselect_1.2.1  rstudioapi_0.17.1
+[49] knitr_1.49        farver_2.1.2      xtable_1.8-4      htmltools_0.5.8.1
+[53] labeling_0.4.3    rmarkdown_2.29    compiler_4.4.0    getPass_0.2-4    </code></pre>
 </div>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeXZlcnNlIDI6IERhdGEgTWFuaXB1bGF0aW9uIgphdXRob3I6ICJUaG9tYXMgTydOZWlsIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93CmVkaXRvcl9vcHRpb25zOiAKICBtYXJrZG93bjogCiAgICB3cmFwOiA3MgpydW50aW1lOiBzaGlueQotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIGNvbGxhcHNlPVRSVUUsIHJvb3QuZGlyID0gIGdldHdkKCkpCmBgYAoKPCEtLS0KTm90ZXM6CiAgSW50cm9kdWN0aW9uCiAgRGF0YSBJbXBvcnQvU2V0IHVwCiAgRGF0YSBXcmFuZ2xpbmcgd2l0aCBkcGx5ciAKICAtIEZpbHRlcmluZywgc2VsZWN0aW5nLCBhbmQgbXV0YXRpbmcgZGF0YS4KICAtIEdyb3VwaW5nIGFuZCBTdW1tYXJpc2luZwogIC0gSm9pbmluZyBEYXRhIEZyYW1lcwogIFJlc2hhcGluZyBEYXRhIHdpdGggdGlkeXIKPC0tLT4KCiMgSW50cm9kdWN0aW9uey50YWJzZXQgLnRhYnNldC1mYWRlfQoKSW4gdGhpcyB0dXRvcmlhbCwgd2UgZXhwbG9yZSB0aGUgZnVuY3Rpb25hbGl0aWVzIG9mIHRoZSBUaWR5dmVyc2UgYnkgd29ya2luZyB3aXRoIHR3byBkYXRhc2V0czoKCi0gYGRhdGEuY3N2YCBjb250YWlucyBmYWJyaWNhdGVkIHN1bW1hcnkgZmxvdyBjeXRvbWV0cnkgZGF0YSwgc3VjaCBhcyBjZWxsIG51bWJlcnMgYW5kIE1GSQotIGBtZXRhLmNzdmAgY29udGFpbnMgaW5mb3JtYXRpb24gcmVnYXJkaW5nIGVhY2ggZG9ub3IsIHN1Y2ggYXMgYWdlIGFuZCBzZXguIAoKVGhlIFRpZHl2ZXJzZSBpcyBhIGNvbGxlY3Rpb24gb2YgUiBwYWNrYWdlcyB0aGF0IHNoYXJlIGFuIHVuZGVybHlpbmcgZGVzaWduIHBoaWxvc29waHkgYW5kIGdyYW1tYXIsIG1ha2luZyBkYXRhIGFuYWx5c2lzIG1vcmUgaW50dWl0aXZlIGFuZCBjb2hlcmVudC4gSGVyZSBhcmUgc29tZSBrZXkgYmVuZWZpdHM6CgoqKmRwbHlyKio6ClByb3ZpZGVzIGEgc3VpdGUgb2YgdmVyYnMgKGUuZy4gYGZpbHRlcigpYCwgYG11dGF0ZSgpYCwgYHNlbGVjdChgKSwgYW5kIGBsZWZ0X2pvaW4oKWApIHRoYXQgc2ltcGxpZnkgZGF0YSBtYW5pcHVsYXRpb24uIEZvciBleGFtcGxlLCBgbGVmdF9qb2luKClgIGVhc2lseSBjb21iaW5lcyBleHBlcmltZW50YWwgZGF0YSB3aXRoIG1ldGFkYXRhIGJhc2VkIG9uIGEgY29tbW9uIGtleS4gU2VlIHRoZSBbSW50cm9kdWN0aW9uIHRvIFI6IENoYXB0ZXIgNF0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svY2hhcHRlci00LWRhdGEtbWFuaXB1bGF0aW9uLXdpdGgtdGlkeXZlcnNlLmh0bWwpIGZvciBtb3JlIGNvbnRlbnQgb24gZHBseXIuIAoKKipQaXBlcyAoJT4lKSoqOgpFbmhhbmNlIGNvZGUgcmVhZGFiaWxpdHkgYnkgYWxsb3dpbmcgeW91IHRvIGNoYWluIG11bHRpcGxlIG9wZXJhdGlvbnMgaW4gYSBzZXF1ZW50aWFsLCBuYXR1cmFsLWxhbmd1YWdlIHN0eWxlLiBUaGlzIG1lYW5zIHlvdSBjYW4gZmluYWxpc2UgY29tcGxleCBkYXRhIHRyYW5zZm9ybWF0aW9ucyBpbiBhIHNpbmdsZSwgY2xlYXIgcGlwZWxpbmUgd2l0aG91dCB0aGUgbmVlZCBmb3IgbnVtZXJvdXMgaW50ZXJtZWRpYXRlIHZhcmlhYmxlcy4KCioqdGlkeXIqKjoKRm9jdXNlcyBvbiB0aWR5aW5nIGRhdGEsIGVuc3VyaW5nIHRoYXQgZWFjaCBvYnNlcnZhdGlvbiBvY2N1cGllcyBhIHNpbmdsZSByb3cgYW5kIGVhY2ggdmFyaWFibGUgYSBzaW5nbGUgY29sdW1uLiBGdW5jdGlvbnMgbGlrZSBgcGl2b3RfbG9uZ2VyKClgIGFuZCBwaXZvdF93aWRlcigpIGhlbHAgcmVzaGFwZSBkYXRhIGludG8gYSBzdGFuZGFyZCBmb3JtYXQsIHdoaWNoIGlzIGVzc2VudGlhbCBmb3IgZnVydGhlciBhbmFseXNpcy4KCioqZ2dwbG90MioqOgpPZmZlcnMgYSBwb3dlcmZ1bCBhbmQgZmxleGlibGUgZ3JhbW1hciBmb3IgZGF0YSB2aXN1YWxpc2F0aW9uLiBXaXRoIGdncGxvdDIsIHlvdSBjYW4gY3JlYXRlIGN1c3RvbWlzZWQgcGxvdHMgdGhhdCBlZmZlY3RpdmVseSBjb21tdW5pY2F0ZSBpbnNpZ2h0cyBmcm9tIHlvdXIgZGF0YSwgYnVpbGRpbmcgb24gdGhlIGNsZWFuLCB0aWR5IGRhdGEgcHJvZHVjZWQgYnkgdGhlIG90aGVyIFRpZHl2ZXJzZSBwYWNrYWdlcy4gU2VlIHRoZSBbSW50cm9kdWN0aW9uIHRvIFI6IENoYXB0ZXIgNS02XShodHRwczovL2RydGhvbWFzb25laWwuZ2l0aHViLmlvL2FuYWx5c2lzLXVzZXItZ3JvdXAvci10dXRvcmlhbC9fYm9vay9jaGFwdGVyLTUtZGF0YS12aXN1YWxpc2F0aW9uLXdpdGgtZ2dwbG90Mi5odG1sKSBhbmQgdGhlIFtwcmV2aW91cyB3b3Jrc2hvcF0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwLzIwMjUwMl90aWR5dmVyc2UxLmh0bWwpIGJ5IEhhcnJ5IGZvciBleHRyYSBpbmZvcm1hdGlvbiBvbiBnZ3Bsb3QuIAoKPGRpdiBjbGFzcz0iaGludC1nb2FscyI+CioqR29hbHM6KiogTGVhcm4gZGF0YSBtYW5pcHVsYXRpb24gd2l0aCBUaWR5dmVyc2U8YnI+CiZuYnNwOyZuYnNwOyYjODIyNjsgVGlkeSBEYXRhPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBTZWxlY3QgYW5kIE11dGF0ZSBkYXRhPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBHcm91cCBhbmQgc3VtbWFyaXNlIGRhdGE8YnI+IAombmJzcDsmbmJzcDsmIzgyMjY7IEpvaW4gdHdvIGRhdGEgZnJhbWVzPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBQaXZvdCBkYXRhIHdpdGggYHRpZHlyYDxicj4gCgo8L2Rpdj4KCldoZXRoZXIgeW91IGFyZSBjb21iaW5pbmcgZGF0YXNldHMsIHJlc2hhcGluZyBkYXRhLCBvciBjcmVhdGluZyBjb21wZWxsaW5nIGdyYXBoaWNzLCB0aGUgVGlkeXZlcnNlIG9mZmVycyBhIGNvbnNpc3RlbnQgYW5kIHBvd2VyZnVsIHNldCBvZiB0b29scyB0byBzdXBwb3J0IHlvdXIgYW5hbHlzaXMuCgo8cmVhZC10aW1lPjxpPioqRXN0aW1hdGVkIGxlbmd0aCoqOiAxIEhvdXI8L2k+PC9yZWFkLXRpbWU+PHdpbXI+CgojIFNldCB1cAoKPGRldGFpbHM+PHN1bW1hcnk+KipGb2xsb3cgdGhlc2UgaW5zdHJ1Y3Rpb25zIHRvIGdldCBzdGFydGVkOioqPC9zdW1tYXJ5Pgo8YnI+PGJyPgoxLiBTYXZlIHRoaXMgc2NyaXB0IGluIGEgZm9sZGVyIGNhbGxlZCAqKiIyMDI1MDJfVGlkeXZlcnNlMiIqKgoKMi4gSW5zdGFsbCBhbmQgbG9hZCB0aGUgcmVsZXZhbnQgcGFja2FnZXMgYW5kIGZ1bmN0aW9ucwoKYGBge3IsIGV2YWw9Rn0KaW5zdGFsbC5wYWNrYWdlcygidGlkeXZlcnNlIikKaW5zdGFsbC5wYWNrYWdlcygic2hpbnkiKQppbnN0YWxsLnBhY2thZ2VzKCJyZWFkciIpCmBgYAoKYGBge3J9CmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHJlYWRyKQp0aGVtZV9zZXQodGhlbWVfY2xhc3NpYygpKQpzb3VyY2UodXJsKCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vRHJUaG9tYXNPbmVpbC9Ta2lsbFRyZWVzL3JlZnMvaGVhZHMvbWFpbi9hc3NldHMvLmZ1bmN0aW9ucy5SIikpIApgYGAKCjIuIENyZWF0ZSBuZXcgZm9sZGVycyBpbiB5b3VyIGRpcmVjdG9yeS4KCmBgYHtyLCBldmFsPUZ9CmRpci5jcmVhdGUoInBsb3RzIikKZGlyLmNyZWF0ZSgiZGF0YSIpCmBgYAoKMy4gRG93bmxvYWQgdGhlIGRhdGEuCgpgYGB7ciwgZXZhbD1GfQpkb3dubG9hZC5maWxlKHVybD0iaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RyVGhvbWFzT25laWwvYW5hbHlzaXMtdXNlci1ncm91cC9yZWZzL2hlYWRzL21haW4vZG9jcy9yLXR1dG9yaWFsL2Fzc2V0cy9zeW50aGV0aWNfZGF0YS5jc3YiLCAKICAgICAgICAgICAgICBkZXN0ZmlsZSA9ICJkYXRhL2RhdGEuY3N2IiwgbWV0aG9kPSdjdXJsJywgbW9kZT0nd2InKQpkb3dubG9hZC5maWxlKHVybD0iaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RyVGhvbWFzT25laWwvYW5hbHlzaXMtdXNlci1ncm91cC9yZWZzL2hlYWRzL21haW4vZG9jcy9yLXR1dG9yaWFsL2Fzc2V0cy9tZXRhLmNzdiIsIAogICAgICAgICAgICAgIGRlc3RmaWxlID0gImRhdGEvbWV0YS5jc3YiLCBtZXRob2Q9J2N1cmwnLCBtb2RlPSd3YicpCmBgYAoKNC4gTG9hZCBkYXRhIGludG8gUgoKYGBge3J9CmRhdGEgPC0gcmVhZC5jc3YoIn4vRGVza3RvcC9hbmFseXNpcy11c2VyLWdyb3VwLzIwMjUwMjEwX1RpZHl2ZXJzZS9kYXRhL2RhdGEuY3N2IikKbWV0YSA8LSByZWFkLmNzdigifi9EZXNrdG9wL2FuYWx5c2lzLXVzZXItZ3JvdXAvMjAyNTAyMTBfVGlkeXZlcnNlL2RhdGEvbWV0YS5jc3YiKQpgYGAKCjwvZGV0YWlscz4KCjx3aW1yPgoKIyMgRGF0YSBXcmFuZ2xpbmcgd2l0aCBkcGx5cnsudGFic2V0IC50YWJzZXQtZmFkZX0KCkZpcnN0LCB3ZSBjYW4gcXVpY2tseSBleHBsb3JlIHRoZSBkYXRhLiAKCmBgYHtyLCBldmFsPUZ9CnN1bW1hcnkoZGF0YSkKYGBgCgpXZSBoYXZlIDUgY2F0ZWdvcmljYWwgY29sdW1ucyBhbmQgOCBudW1lcmljIHZhbHVlcy4gCgotIENEMywgQ0Q4LCBDRDQsIEhMQURSIGFuZCBDQ1I1IGFwcGVhciB0byBiZSBjZWxsIGNvdW50cy4gICAKLSBDRDI4IGFwcGVhcnMgdG8gYmUgYXMgYSBwZXJjZW50YWdlIGFscmVhZHkuCgpgYGB7ciwgZXZhbD1GfQpWaWV3KGRhdGEpCmBgYAoKPGRldGFpbHM+PHN1bW1hcnk+RHJvcGRvd24gZm9yIGludGVyYWN0aXZlIHNlc3Npb248L3N1bW1hcnk+CgpZb3UgY2FuIG9ubHkgdXNlIHRoaXMgaW4geW91ciBwZXJzb25hbCBzZXNzaW9ucy4KYGBge3IsIGV2YWw9VH0KdXNlckNvZGUodGl0bGU9IkV4cGxvcmUgdGhlIERhdGEgeW91cnNlbGYiLCAKICAgICAgICBxdmFsdWU9InRhYmxlKGRhdGEkdGlzc3VlLCBkYXRhJGxheWVyKSIsIAogICAgICAgIG5yb3dzPTEsIG91dF9oZWlnaHQ9MzUwKQpgYGAKCjwvZGV0YWlscz48YnI+PGhyPgoKVGhpcyBpbW1lZGlhdGVseSByZXZlYWxzIHNvbWUgaXNzdWVzIHdoZXJlIG91ciBkYXRhIG5lZWRzIHRpZHlpbmcsIGJ1dCB3ZSdsbCBjb3ZlciB0aGVzZSBpbiB0aGUgbmV4dCB3b3Jrc2hvcC4gCgo8d2ltcj4KCiMjIyBGaWx0ZXJpbmcsIFNlbGVjdGluZywgYW5kIE11dGF0aW5nIGRhdGE6IGBkcGx5cigpYC4KClRoZSBgZHBseXJgIHBhY2thZ2UgaXMgYSBwb3dlcmZ1bCB0b29sIGZvciBkYXRhIG1hbmlwdWxhdGlvbiBpbiBSLiBJdApwcm92aWRlcyBhIHNldCBvZiBmdW5jdGlvbnMgdGhhdCBtYWtlIGl0IGVhc3kgdG8gZmlsdGVyLCBhcnJhbmdlLCBncm91cCwKYW5kIHN1bW1hcml6ZSBkYXRhLiBTb21lIG9mIHRoZSBtb3N0IGNvbW1vbmx5IHVzZWQgZnVuY3Rpb25zIGluIGBkcGx5cmAKYXJlOiAgICAKCmBgYHtyfQpkYXRhICU+JSAjIHRoaXMgaXMgdGhlIHBpcGUuIEkgbGlrZSB0byB0aGluayBvZiBwaXBlcyBhcyAidXNpbmcgdGhpcyIKICBoZWFkKDQpICU+JQogIHByaW50KCkKYGBgCgotIGBmaWx0ZXIoKWA6IHRvIGZpbHRlciByb3dzIGJhc2VkIG9uIGEgY29uZGl0aW9uICAgCgpgYGB7cn0KZGF0YSAlPiUKICBmaWx0ZXIobGF5ZXIgPT0gIkVwaXRobGl1bSIpJT4lCiAgaGVhZCg0KSAlPiUKICBwcmludCgpCmBgYAoKLSBgYXJyYW5nZSgpYDogdG8gcmVvcmRlciByb3dzICAgIAoKYGBge3J9CmRhdGEgJT4lIAogIGFycmFuZ2UoZXhwZXJpbWVudCkgJT4lCiAgaGVhZCg0KSAlPiUKICBwcmludCgpCmBgYAoKLSBgc2VsZWN0KClgOiB0byBzZWxlY3QgY29sdW1ucyAgIAoKYGBge3J9CmRhdGEgJT4lCiAgZmlsdGVyKGxheWVyID09ICJFcGl0aGVsaXVtIikgJT4lCiAgYXJyYW5nZShDRDQpICU+JQogIHNlbGVjdChDRDQpICU+JQogIGhlYWQoNCkgJT4lCiAgcHJpbnQoKQpgYGAKCi0gYG11dGF0ZSgpYDogdG8gY3JlYXRlIG5ldyBjb2x1bW5zLgoKYGBge3J9CmRhdGEgJT4lCiAgbXV0YXRlKENENF9wZXJjZW50ID0gMTAwKkNENC9DRDMpICU+JSAKICBzZWxlY3QoQ0Q0X3BlcmNlbnQsIENEMywgQ0Q0KSAlPiUKICBoZWFkKDQpICU+JQogIHByaW50KCkKYGBgCgo8d2ltcj4KCiMjIyBHcm91cGluZyBhbmQgU3VtbWFyaXNpbmcKCkdyb3VwaW5nIGFuZCBzdW1tYXJpc2luZyBpbiB0aGUgVGlkeXZlcnNlIGFsbG93cyB5b3UgdG8gc3BsaXQgeW91ciBkYXRhIGludG8gc3Vic2V0cyB1c2luZyBgZ3JvdXBfYnkoKWAgYW5kIHRoZW4gY29tcHV0ZSBhZ2dyZWdhdGUgc3RhdGlzdGljcyBmb3IgZWFjaCBzdWJncm91cCB3aXRoIGBzdW1tYXJpc2UoKWAuIFRoaXMgYXBwcm9hY2ggZW5hYmxlcyBxdWljaywgY2xlYXIgaW5zaWdodHMgaW50byB0cmVuZHMgYW5kIGRpZmZlcmVuY2VzIHdpdGhpbiB5b3VyIGRhdGEgYnkgcmVkdWNpbmcgY29tcGxleCBkYXRhc2V0cyB0byBtZWFuaW5nZnVsIHN1bW1hcmllcy4KCmBgYHtyfQpkYXRhICU+JQogIG11dGF0ZShwZXJjZW50X0NENCA9IDEwMCpDRDQvQ0QzKSAlPiUKICBnZ3Bsb3QoYWVzKHRpc3N1ZSwgcGVyY2VudF9DRDQsIGZpbGw9bGF5ZXIpKStnZW9tX2JveHBsb3QoKQpgYGAKCmBgYHtyfQpkYXRhICU+JQogIG11dGF0ZShwZXJjZW50X0NENCA9IDEwMCpDRDQvQ0QzKSAlPiUKICBncm91cF9ieSh0aXNzdWUsIGxheWVyKSAlPiUKICBzdW1tYXJpc2UobWVhbl9DRDQgPSBtZWFuKHBlcmNlbnRfQ0Q0KSwgCiAgICAgICAgICAgIG1lZGlhbl9DRDQgPSBtZWRpYW4ocGVyY2VudF9DRDQpKSAlPiUKICBwcmludCgpCmBgYAoKPHdpbXI+CgojIyMgSm9pbmluZyBEYXRhIEZyYW1lcwoKQ29tYmluaW5nIGRhdGEgZnJvbSBtdWx0aXBsZSBzb3VyY2VzIGlzIG9mdGVuIG5lY2Vzc2FyeSwgZXZlbiB3aGVuIHRoZSBkYXRhc2V0cyBkb27igJl0IGFsaWduIHBlcmZlY3RseS4gRm9yIGluc3RhbmNlLCB5b3VyIGxvbmctZm9ybWF0IGRhdGEgbWlnaHQgaW5jbHVkZSBtdWx0aXBsZSBlbnRyaWVzIHBlciBkb25vciBmb3IgdGlzc3VlcyBsaWtlIGVwaXRoZWxpdW0gYW5kIG11Y29zYSwgd2hpbGUgdGhlIG1ldGFkYXRhIGNvbnRhaW5zIGRvbm9yLXNwZWNpZmljIGRldGFpbHMgdGhhdCB5b3UgcHJlZmVyIG5vdCB0byBkdXBsaWNhdGUuIAoKPHJlYWQtdGltZT48aT5UaGlzIHNjZW5hcmlvIGlzIGNvbW1vbiBpbiBwdWJsaWMgc2luZ2xlIGNlbGwgUk5BIHNlcXVlbmNpbmcgZGF0YSwgd2hlcmUgeW91J2xsIGludGVncmF0ZSBkaXZlcnNlIGxheWVycyBvZiBpbmZvcm1hdGlvbiB1c2luZyBzaGFyZWQga2V5cy48L3JlYWQtdGltZT4KCmBgYHtyfQojIFZpZXcgZGF0YSB2YWx1ZXMgb2YgRG9ub3IxCmRhdGFbZGF0YSRkb25vcj09IkRvbm9yMSIsXQoKIyBWaWV3IGRhdGEgdmFsdWVzIG9mIERvbm9yMQptZXRhW21ldGEkZG9ub3I9PSJEb25vcjEiLF0KYGBgCgpTbyB3ZSBleHBlY3QgRG9ub3IgMSB0byBiZSBhICpmZW1hbGUqLCBhZ2VkICozNSogYW5kIGNsYXNzaWZpZWQgKkhlYWx0aHkqCgpgYGB7cn0KZGF0YSAlPiUKICBzZWxlY3QoLWV4cGVyaW1lbnQpJT4lICMgd2UgY2FuIHJlbW92ZSBjb2x1bW5zIHVzaW5nIHNlbGVjdCgtLi4uKQogIHJpZ2h0X2pvaW4obWV0YSwgYnk9ImRvbm9yIikgJT4lCiAgZmlsdGVyKGRvbm9yID09ICJEb25vcjEiKQpgYGAKCldpdGggdGhpcywgd2Ugd291bGRuJ3QgbmVlZCB0byBzYXZlIGEgY29tYmluZWQgZGF0YWZyYW1lIHRvIGFuYWx5c2UuIAoKYGBge3J9CmRhdGEgJT4lCiAgc2VsZWN0KC1leHBlcmltZW50KSU+JQogIHJpZ2h0X2pvaW4obWV0YSwgYnk9ImRvbm9yIikgJT4lCiAgZmlsdGVyKHRpc3N1ZSAhPSAiQWJkbyIgJiB0aXNzdWUgIT0gJ2FiZG9tZW4nKSAlPiUgIyByZW1vdmUgZXJyb3JzCiAgbXV0YXRlKHBlcmNlbnQgPSAxMDAqQ0Q0L0NEMykgJT4lCiAgZ2dwbG90KGFlcyhjbGluaWNhbCwgcGVyY2VudCwgZmlsbD10aXNzdWUpKSsKICBnZW9tX2JveHBsb3Qob3V0bGllcnM9RikKYGBgCgo8d2ltcj4KCiMjIFJlc2hhcGluZyBEYXRhIHdpdGggdGlkeXIKCmB0aWR5cmAgcHJvdmlkZXMgZXNzZW50aWFsIHRvb2xzIGxpa2UgYHBpdm90X2xvbmdlcigpYCBhbmQgYHBpdm90X3dpZGVyKClgIHRvIHRyYW5zZm9ybSB5b3VyIGRhdGFzZXQgYmV0d2VlbiBsb25nIGFuZCB3aWRlIGZvcm1hdHMuIFRoaXMgcmVzaGFwaW5nIG1ha2VzIGl0IGVhc2llciB0byBhbGlnbiB2YXJpYWJsZXMgYW5kIG9ic2VydmF0aW9ucyBmb3IgYW5hbHlzaXMsIGVuc3VyaW5nIHRoYXQgZWFjaCB2YXJpYWJsZSBmb3JtcyBhIGNvbHVtbiBhbmQgZWFjaCBvYnNlcnZhdGlvbiBhIHJvdy4gU3VjaCBmbGV4aWJpbGl0eSBpcyBjcnVjaWFsIHdoZW4gcHJlcGFyaW5nIGNvbXBsZXggZXhwZXJpbWVudGFsIG9yIHNpbmdsZSBjZWxsIFJOQSBzZXF1ZW5jaW5nIGRhdGEgZm9yIGZ1cnRoZXIgYW5hbHlzaXMgYW5kIHZpc3VhbGlzYXRpb24uIAoKKipsb25nIGZvcm1hdCoqICAgCkluIGxvbmcgZm9ybWF0LCBlYWNoIG9ic2VydmF0aW9uIGlzIHJlcHJlc2VudGVkIGJ5IGEgc2luZ2xlIHJvdywgd2l0aCBvbmUgY29sdW1uIGhvbGRpbmcgdGhlIGNhdGVnb3JpY2FsIHZhcmlhYmxlIChlLmcuIHRoZSB0eXBlIG9mIG1lYXN1cmVtZW50KSBhbmQgYW5vdGhlciBjb2x1bW4gaG9sZGluZyB0aGUgY29ycmVzcG9uZGluZyB2YWx1ZXMuIFRoaXMgZm9ybWF0IGlzIHBhcnRpY3VsYXJseSB1c2VmdWwgZm9yIGdlbmVyYXRpbmcgYm94cGxvdHMgb3Igb3RoZXIgdmlzdWFsaXNhdGlvbnMgdGhhdCBjb21wYXJlIGRpc3RyaWJ1dGlvbnMgYWNyb3NzIGdyb3Vwcy4KCkZvciBleGFtcGxlLCBpZiB5b3Ugd2FudCB0byBjb21wYXJlIHRoZSBwZXJjZW50YWdlcyBvZiBDRDQgYW5kIENEOCBjZWxscyBvbiB0aGUgc2FtZSBwbG90LCB5b3UgY2FuIHBpdm90IHRoZSBkYXRhIGxvbmdlcjoKCmBgYHtyfQpkYXRhICU+JSAKICBmaWx0ZXIodGlzc3VlICE9ICJBYmRvIiAmIHRpc3N1ZSAhPSAnYWJkb21lbicpICU+JSAjIHJlbW92ZSBlcnJvcnMKICBtdXRhdGUoQ0Q0cGVyY2VudCA9IDEwMCpDRDQvQ0QzLCAKICAgICAgICAgQ0Q4cGVyY2VudCA9IDEwMCpDRDgvQ0QzKSAlPiUKICAjIHBpdm90IGxvbmdlciAtIHNlbGVjdCB0aGUgY29sdW1ucywgYW5kIHRoZSBuYW1lIG9mIHRoZSBjb2x1bW5zIGZvciB0aGUgbmFtZXMgYW5kIHZhbHVlcwogIHBpdm90X2xvbmdlcihjb2xzID0gYyhDRDRwZXJjZW50LCBDRDhwZXJjZW50KSwgCiAgICAgICAgICAgICAgIG5hbWVzX3RvID0gInN1YnNldCIsIAogICAgICAgICAgICAgICB2YWx1ZXNfdG8gPSAicGVyY2VudCIpICU+JQogIHNlbGVjdCgtYyhleHBlcmltZW50LGdyb3VwLENDUjVfTUZJLEhMQURSX01GSSxDRDMsQ0Q4LENENCxITEFEUixDQ1I1LENEMjgpKSU+JQogIGhlYWQoOCkgJT4lCiAgcHJpbnQoKQpgYGAKClRoaXMgY29kZSBjcmVhdGVzIGEgbmV3IGNvbHVtbiBgc3Vic2V0YCB0aGF0IGluZGljYXRlcyB3aGV0aGVyIHRoZSB2YWx1ZSBjb3JyZXNwb25kcyB0byBgJUNENGAgb3IgYCVDRDhgLCBhbmQgYSBjb2x1bW4gYHBlcmNlbnRgIGZvciB0aGUgY29tcHV0ZWQgdmFsdWVzLiBUaGUgZGF0YSBpcyBub3cgc3RydWN0dXJlZCB3aXRoIG9uZSBjb2x1bW4gZm9yIHRoZSBtZWFzdXJlbWVudCB0eXBlIGFuZCBhbm90aGVyIGZvciB0aGUgcGVyY2VudGFnZSwgbWFraW5nIGl0IHN0cmFpZ2h0Zm9yd2FyZCB0byBwbG90OgoKYGBge3J9CmRhdGEgJT4lIAogIGZpbHRlcih0aXNzdWUgIT0gIkFiZG8iICYgdGlzc3VlICE9ICdhYmRvbWVuJykgJT4lICMgcmVtb3ZlIGVycm9ycwogIG11dGF0ZShDRDRwZXJjZW50ID0gMTAwKkNENC9DRDMsIAogICAgICAgICBDRDhwZXJjZW50ID0gMTAwKkNEOC9DRDMpICU+JQogICMgcGl2b3QgbG9uZ2VyIC0gc2VsZWN0IHRoZSBjb2x1bW5zLCBhbmQgdGhlIG5hbWUgb2YgdGhlIGNvbHVtbnMgZm9yIHRoZSBuYW1lcyBhbmQgdmFsdWVzCiAgcGl2b3RfbG9uZ2VyKGNvbHMgPSBjKENENHBlcmNlbnQsIENEOHBlcmNlbnQpLCAKICAgICAgICAgICAgICAgbmFtZXNfdG8gPSAic3Vic2V0IiwgCiAgICAgICAgICAgICAgIHZhbHVlc190byA9ICJwZXJjZW50IikgJT4lCiAgZ2dwbG90KGFlcyhsYXllcixwZXJjZW50LCBmaWxsPXN1YnNldCkpKwogIGdlb21fYm94cGxvdCgpCmBgYAoKKip3aWRlIGZvcm1hdCoqICAgClNvbWV0aW1lcyB5b3Ugd2FudCB0byBleGFtaW5lIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiBtZWFzdXJlbWVudHMgZGlyZWN0bHnigJRmb3IgZXhhbXBsZSwgdG8gc2VlIGlmIHRoZXJlJ3MgYSByZWxhdGlvbnNoaXAgYmV0d2VlbiB2YWx1ZXMgZnJvbSBkaWZmZXJlbnQgbGF5ZXJzIChlLmcuIEVwaXRoZWxpdW0gYW5kIFVuZGVybHlpbmcgbXVjb3NhKS4gSW4gd2lkZSBmb3JtYXQsIGVhY2ggdHlwZSBvZiBtZWFzdXJlbWVudCBvY2N1cGllcyBpdHMgb3duIGNvbHVtbi4gVGhpcyBzdHJ1Y3R1cmUgaXMgaWRlYWwgZm9yIHNjYXR0ZXJwbG90cyBvciBjb3JyZWxhdGlvbiBhbmFseXNlcy4KCkNvbnNpZGVyIHRoaXMgZXhhbXBsZSB3aGVyZSB3ZSBwaXZvdCB0aGUgZGF0YSB0byBoYXZlIHNlcGFyYXRlIGNvbHVtbnMgZm9yIGVhY2ggbGF5ZXI6CgpgYGB7cn0KZGF0YSAlPiUgCiAgZmlsdGVyKHRpc3N1ZSAhPSAiQWJkbyIgJiB0aXNzdWUgIT0gJ2FiZG9tZW4nKSAlPiUgIyByZW1vdmUgZXJyb3JzCiAgbXV0YXRlKHBlcmNlbnQgPSAxMDAqSExBRFIvQ0Q0KSAlPiUKICBzZWxlY3QoZG9ub3IsdGlzc3VlLGxheWVyLHBlcmNlbnQpICU+JQogIHBpdm90X3dpZGVyKG5hbWVzX2Zyb20gPSBsYXllciwgdmFsdWVzX2Zyb20gPSBwZXJjZW50KSAlPiUKICBnZ3Bsb3QoYWVzKHg9RXBpdGhlbGl1bSwgeT1VbmRlcmx5aW5nLCBjb2xvcj10aXNzdWUpKSsKICAgIGdlb21fcG9pbnQoKSsgCiAgICBzdGF0X2VsbGlwc2UoKQoKYGBgCgpIZXJlLCB0aGUgcGl2b3Rfd2lkZXIoKSBmdW5jdGlvbiBjb252ZXJ0cyB0aGUgbG9uZyBkYXRhIGludG8gYSB3aWRlIGZvcm1hdCB3aGVyZSBzZXBhcmF0ZSBjb2x1bW5zIGZvciBFcGl0aGVsaXVtIGFuZCBVbmRlcmx5aW5nIHZhbHVlcyBhcmUgY3JlYXRlZC4gVGhpcyBhbGxvd3MgeW91IHRvIGRpcmVjdGx5IHBsb3QgYW5kIGV4cGxvcmUgcmVsYXRpb25zaGlwcyBiZXR3ZWVuIHRoZXNlIGxheWVycyB1c2luZyBzY2F0dGVycGxvdHMsIHdpdGggYHN0YXRfZWxsaXBzZSgpYCBhZGRpbmcgY29uZmlkZW5jZSBlbGxpcHNlcyB0byBoaWdobGlnaHQgZ3JvdXAgdHJlbmRzLgoKQm90aCBsb25nIGFuZCB3aWRlIGZvcm1hdHMgc2VydmUgc3BlY2lmaWMgcHVycG9zZXMgaW4gZGF0YSBhbmFseXNpcyBhbmQgdmlzdWFsaXNhdGlvbi4gTG9uZyBmb3JtYXQgaXMgZmxleGlibGUgZm9yIGNyZWF0aW5nIGdyb3VwZWQgY29tcGFyaXNvbnMsIHdoaWxlIHdpZGUgZm9ybWF0IGZhY2lsaXRhdGVzIGRpcmVjdCByZWxhdGlvbnNoaXAgYW5hbHlzaXMgYmV0d2VlbiB2YXJpYWJsZXMuCgo8d2ltcj4KCiMjIENvbmNsdXNpb25zCgpJbiBjb25jbHVzaW9uLCB0aGlzIHR1dG9yaWFsIGhhcyBkZW1vbnN0cmF0ZWQgaG93IHRoZSAqKlRpZHl2ZXJzZSoqIHN0cmVhbWxpbmVzIGRhdGEgYW5hbHlzaXMgYnkgcHJvdmlkaW5nIGEgY29oZXJlbnQgc2V0IG9mIHRvb2xzIHRoYXQgc2ltcGxpZnkgZGF0YSBtYW5pcHVsYXRpb24sIHJlc2hhcGluZywgYW5kIHZpc3VhbGlzYXRpb24uIFVzaW5nIGBkcGx5cmAsIHdlIGVmZmljaWVudGx5IGZpbHRlcmVkLCBtdXRhdGVkLCBncm91cGVkLCBzdW1tYXJpc2VkLCBhbmQgam9pbmVkIG91ciBleHBlcmltZW50YWwgYW5kIG1ldGFkYXRhLCB3aGlsZSB0aGUgdXNlIG9mIHBpcGVzIChgJT4lYCkgYWxsb3dlZCB1cyB0byBmaW5hbGlzZSBjb21wbGV4IHdvcmtmbG93cyBpbiBhIHJlYWRhYmxlIGFuZCBpbnR1aXRpdmUgbWFubmVyLgoKQWRkaXRpb25hbGx5LCBgdGlkeXJgIGVuYWJsZWQgdXMgdG8gdHJhbnNmb3JtIG91ciBkYXRhIGJldHdlZW4gbG9uZyBhbmQgd2lkZSBmb3JtYXRzLCBlbnN1cmluZyB0aGF0IGl0IGlzIGluIHRoZSBvcHRpbWFsIHN0cnVjdHVyZSBmb3IgYW5hbHlzaXMuIFdpdGggZ2dwbG90MiwgdGhlc2UgdGlkeSBkYXRhc2V0cyB3ZXJlIHRoZW4gdHJhbnNsYXRlZCBpbnRvIGNvbXBlbGxpbmcgZ3JhcGhpY3MgdGhhdCBoaWdobGlnaHQga2V5IHBhdHRlcm5zIGFuZCByZWxhdGlvbnNoaXBzLiBUb2dldGhlciwgdGhlc2UgdG9vbHMgZW1wb3dlciBhbmFseXN0cyB0byBjcmVhdGUgcmVwcm9kdWNpYmxlIGFuZCBpbnNpZ2h0ZnVsIHdvcmtmbG93cywgdWx0aW1hdGVseSBlbmhhbmNpbmcgdGhlIHJpZ291ciBhbmQgY2xhcml0eSBvZiBkYXRhLWRyaXZlbiByZXNlYXJjaC4KCjxlPgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeXZlcnNlIDI6IERhdGEgTWFuaXB1bGF0aW9uIgphdXRob3I6ICJUaG9tYXMgTydOZWlsIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93CmVkaXRvcl9vcHRpb25zOiAKICBtYXJrZG93bjogCiAgICB3cmFwOiA3MgpydW50aW1lOiBzaGlueQotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIGNvbGxhcHNlPUYsIHdhcm5pbmcgPSBGLCBlcnJvcj1GLCByb290LmRpciA9ICBnZXR3ZCgpKQpgYGAKCjwhLS0tCk5vdGVzOgogIEludHJvZHVjdGlvbgogIERhdGEgSW1wb3J0L1NldCB1cAogIERhdGEgV3JhbmdsaW5nIHdpdGggZHBseXIgCiAgLSBGaWx0ZXJpbmcsIHNlbGVjdGluZywgYW5kIG11dGF0aW5nIGRhdGEuCiAgLSBHcm91cGluZyBhbmQgU3VtbWFyaXNpbmcKICAtIEpvaW5pbmcgRGF0YSBGcmFtZXMKICBSZXNoYXBpbmcgRGF0YSB3aXRoIHRpZHlyCjwtLS0+CgojIEludHJvZHVjdGlvbnsudGFic2V0IC50YWJzZXQtZmFkZX0KCkluIHRoaXMgdHV0b3JpYWwsIHdlIGV4cGxvcmUgdGhlIGZ1bmN0aW9uYWxpdGllcyBvZiB0aGUgVGlkeXZlcnNlIGJ5IHdvcmtpbmcgd2l0aCB0d28gZGF0YXNldHM6CgotIGBkYXRhLmNzdmAgY29udGFpbnMgZmFicmljYXRlZCBzdW1tYXJ5IGZsb3cgY3l0b21ldHJ5IGRhdGEsIHN1Y2ggYXMgY2VsbCBudW1iZXJzIGFuZCBNRkkKLSBgbWV0YS5jc3ZgIGNvbnRhaW5zIGluZm9ybWF0aW9uIHJlZ2FyZGluZyBlYWNoIGRvbm9yLCBzdWNoIGFzIGFnZSBhbmQgc2V4LiAKClRoZSBUaWR5dmVyc2UgaXMgYSBjb2xsZWN0aW9uIG9mIFIgcGFja2FnZXMgdGhhdCBzaGFyZSBhbiB1bmRlcmx5aW5nIGRlc2lnbiBwaGlsb3NvcGh5IGFuZCBncmFtbWFyLCBtYWtpbmcgZGF0YSBhbmFseXNpcyBtb3JlIGludHVpdGl2ZSBhbmQgY29oZXJlbnQuIEhlcmUgYXJlIHNvbWUga2V5IGJlbmVmaXRzOgoKKipkcGx5cioqOgpQcm92aWRlcyBhIHN1aXRlIG9mIHZlcmJzIChlLmcuIGBmaWx0ZXIoKWAsIGBtdXRhdGUoKWAsIGBzZWxlY3QoYCksIGFuZCBgbGVmdF9qb2luKClgKSB0aGF0IHNpbXBsaWZ5IGRhdGEgbWFuaXB1bGF0aW9uLiBGb3IgZXhhbXBsZSwgYGxlZnRfam9pbigpYCBlYXNpbHkgY29tYmluZXMgZXhwZXJpbWVudGFsIGRhdGEgd2l0aCBtZXRhZGF0YSBiYXNlZCBvbiBhIGNvbW1vbiBrZXkuIFNlZSB0aGUgW0ludHJvZHVjdGlvbiB0byBSOiBDaGFwdGVyIDRdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC9yLXR1dG9yaWFsL19ib29rL2NoYXB0ZXItNC1kYXRhLW1hbmlwdWxhdGlvbi13aXRoLXRpZHl2ZXJzZS5odG1sKSBmb3IgbW9yZSBjb250ZW50IG9uIGRwbHlyLiAKCioqUGlwZXMgKCU+JSkqKjoKRW5oYW5jZSBjb2RlIHJlYWRhYmlsaXR5IGJ5IGFsbG93aW5nIHlvdSB0byBjaGFpbiBtdWx0aXBsZSBvcGVyYXRpb25zIGluIGEgc2VxdWVudGlhbCwgbmF0dXJhbC1sYW5ndWFnZSBzdHlsZS4gVGhpcyBtZWFucyB5b3UgY2FuIGZpbmFsaXNlIGNvbXBsZXggZGF0YSB0cmFuc2Zvcm1hdGlvbnMgaW4gYSBzaW5nbGUsIGNsZWFyIHBpcGVsaW5lIHdpdGhvdXQgdGhlIG5lZWQgZm9yIG51bWVyb3VzIGludGVybWVkaWF0ZSB2YXJpYWJsZXMuCgoqKnRpZHlyKio6CkZvY3VzZXMgb24gdGlkeWluZyBkYXRhLCBlbnN1cmluZyB0aGF0IGVhY2ggb2JzZXJ2YXRpb24gb2NjdXBpZXMgYSBzaW5nbGUgcm93IGFuZCBlYWNoIHZhcmlhYmxlIGEgc2luZ2xlIGNvbHVtbi4gRnVuY3Rpb25zIGxpa2UgYHBpdm90X2xvbmdlcigpYCBhbmQgcGl2b3Rfd2lkZXIoKSBoZWxwIHJlc2hhcGUgZGF0YSBpbnRvIGEgc3RhbmRhcmQgZm9ybWF0LCB3aGljaCBpcyBlc3NlbnRpYWwgZm9yIGZ1cnRoZXIgYW5hbHlzaXMuCgoqKmdncGxvdDIqKjoKT2ZmZXJzIGEgcG93ZXJmdWwgYW5kIGZsZXhpYmxlIGdyYW1tYXIgZm9yIGRhdGEgdmlzdWFsaXNhdGlvbi4gV2l0aCBnZ3Bsb3QyLCB5b3UgY2FuIGNyZWF0ZSBjdXN0b21pc2VkIHBsb3RzIHRoYXQgZWZmZWN0aXZlbHkgY29tbXVuaWNhdGUgaW5zaWdodHMgZnJvbSB5b3VyIGRhdGEsIGJ1aWxkaW5nIG9uIHRoZSBjbGVhbiwgdGlkeSBkYXRhIHByb2R1Y2VkIGJ5IHRoZSBvdGhlciBUaWR5dmVyc2UgcGFja2FnZXMuIFNlZSB0aGUgW0ludHJvZHVjdGlvbiB0byBSOiBDaGFwdGVyIDUtNl0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9hbmFseXNpcy11c2VyLWdyb3VwL3ItdHV0b3JpYWwvX2Jvb2svY2hhcHRlci01LWRhdGEtdmlzdWFsaXNhdGlvbi13aXRoLWdncGxvdDIuaHRtbCkgYW5kIHRoZSBbcHJldmlvdXMgd29ya3Nob3BdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vYW5hbHlzaXMtdXNlci1ncm91cC8yMDI1MDJfdGlkeXZlcnNlMS5odG1sKSBieSBIYXJyeSBmb3IgZXh0cmEgaW5mb3JtYXRpb24gb24gZ2dwbG90LiAKCjxkaXYgY2xhc3M9ImhpbnQtZ29hbHMiPgoqKkdvYWxzOioqIExlYXJuIGRhdGEgbWFuaXB1bGF0aW9uIHdpdGggVGlkeXZlcnNlPGJyPgombmJzcDsmbmJzcDsmIzgyMjY7IFRpZHkgRGF0YTxicj4gCiZuYnNwOyZuYnNwOyYjODIyNjsgU2VsZWN0IGFuZCBNdXRhdGUgZGF0YTxicj4gCiZuYnNwOyZuYnNwOyYjODIyNjsgR3JvdXAgYW5kIHN1bW1hcmlzZSBkYXRhPGJyPiAKJm5ic3A7Jm5ic3A7JiM4MjI2OyBKb2luIHR3byBkYXRhIGZyYW1lczxicj4gCiZuYnNwOyZuYnNwOyYjODIyNjsgUGl2b3QgZGF0YSB3aXRoIGB0aWR5cmA8YnI+IAoKPC9kaXY+CgpXaGV0aGVyIHlvdSBhcmUgY29tYmluaW5nIGRhdGFzZXRzLCByZXNoYXBpbmcgZGF0YSwgb3IgY3JlYXRpbmcgY29tcGVsbGluZyBncmFwaGljcywgdGhlIFRpZHl2ZXJzZSBvZmZlcnMgYSBjb25zaXN0ZW50IGFuZCBwb3dlcmZ1bCBzZXQgb2YgdG9vbHMgdG8gc3VwcG9ydCB5b3VyIGFuYWx5c2lzLgoKPHJlYWQtdGltZT48aT4qKkVzdGltYXRlZCBsZW5ndGgqKjogMSBIb3VyPC9pPjwvcmVhZC10aW1lPjx3aW1yPgoKIyBTZXQgdXAKCjxkZXRhaWxzPjxzdW1tYXJ5PioqRm9sbG93IHRoZXNlIGluc3RydWN0aW9ucyB0byBnZXQgc3RhcnRlZDoqKjwvc3VtbWFyeT4KPGJyPjxicj4KMS4gU2F2ZSB0aGlzIHNjcmlwdCBpbiBhIGZvbGRlciBjYWxsZWQgKioiMjAyNTAyX1RpZHl2ZXJzZTIiKioKCjIuIEluc3RhbGwgYW5kIGxvYWQgdGhlIHJlbGV2YW50IHBhY2thZ2VzIGFuZCBmdW5jdGlvbnMKCmBgYHtyLCBldmFsPUZ9Cmluc3RhbGwucGFja2FnZXMoInRpZHl2ZXJzZSIpCmluc3RhbGwucGFja2FnZXMoInNoaW55IikKaW5zdGFsbC5wYWNrYWdlcygicmVhZHIiKQpgYGAKCmBgYHtyfQpzdXBwcmVzc1dhcm5pbmdzKGxpYnJhcnkoc2hpbnkpKQpsaWJyYXJ5KHRpZHl2ZXJzZSkKdGhlbWVfc2V0KHRoZW1lX2NsYXNzaWMoKSkKc291cmNlKHVybCgiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RyVGhvbWFzT25laWwvU2tpbGxUcmVlcy9yZWZzL2hlYWRzL21haW4vYXNzZXRzLy5mdW5jdGlvbnMuUiIpKSAKYGBgCgoyLiBDcmVhdGUgbmV3IGZvbGRlcnMgaW4geW91ciBkaXJlY3RvcnkuCgpgYGB7ciwgZXZhbD1GfQpkaXIuY3JlYXRlKCJwbG90cyIpCmRpci5jcmVhdGUoImRhdGEiKQpgYGAKCjMuIERvd25sb2FkIHRoZSBkYXRhLgoKYGBge3IsIGV2YWw9Rn0KZG93bmxvYWQuZmlsZSh1cmw9Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9EclRob21hc09uZWlsL2FuYWx5c2lzLXVzZXItZ3JvdXAvcmVmcy9oZWFkcy9tYWluL2RvY3Mvci10dXRvcmlhbC9hc3NldHMvc3ludGhldGljX2RhdGEuY3N2IiwgCiAgICAgICAgICAgICAgZGVzdGZpbGUgPSAiZGF0YS9kYXRhLmNzdiIsIG1ldGhvZD0nY3VybCcsIG1vZGU9J3diJykKZG93bmxvYWQuZmlsZSh1cmw9Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9EclRob21hc09uZWlsL2FuYWx5c2lzLXVzZXItZ3JvdXAvcmVmcy9oZWFkcy9tYWluL2RvY3Mvci10dXRvcmlhbC9hc3NldHMvbWV0YS5jc3YiLCAKICAgICAgICAgICAgICBkZXN0ZmlsZSA9ICJkYXRhL21ldGEuY3N2IiwgbWV0aG9kPSdjdXJsJywgbW9kZT0nd2InKQpgYGAKCjQuIExvYWQgZGF0YSBpbnRvIFIKCmBgYHtyfQpkYXRhIDwtIHJlYWQuY3N2KCJ+L0Rlc2t0b3AvYW5hbHlzaXMtdXNlci1ncm91cC8yMDI1MDIxMF9UaWR5dmVyc2UvZGF0YS9kYXRhLmNzdiIpCm1ldGEgPC0gcmVhZC5jc3YoIn4vRGVza3RvcC9hbmFseXNpcy11c2VyLWdyb3VwLzIwMjUwMjEwX1RpZHl2ZXJzZS9kYXRhL21ldGEuY3N2IikKYGBgCgo8L2RldGFpbHM+Cgo8d2ltcj4KCiMjIERhdGEgV3JhbmdsaW5nIHdpdGggZHBseXJ7LnRhYnNldCAudGFic2V0LWZhZGV9CgpGaXJzdCwgd2UgY2FuIHF1aWNrbHkgZXhwbG9yZSB0aGUgZGF0YS4gCgpgYGB7ciwgZXZhbD1GfQpzdW1tYXJ5KGRhdGEpCmBgYAoKV2UgaGF2ZSA1IGNhdGVnb3JpY2FsIGNvbHVtbnMgYW5kIDggbnVtZXJpYyB2YWx1ZXMuIAoKLSBDRDMsIENEOCwgQ0Q0LCBITEFEUiBhbmQgQ0NSNSBhcHBlYXIgdG8gYmUgY2VsbCBjb3VudHMuICAgCi0gQ0QyOCBhcHBlYXJzIHRvIGJlIGFzIGEgcGVyY2VudGFnZSBhbHJlYWR5LgoKYGBge3IsIGV2YWw9Rn0KVmlldyhkYXRhKQpgYGAKCjxkZXRhaWxzPjxzdW1tYXJ5PkRyb3Bkb3duIGZvciBpbnRlcmFjdGl2ZSBzZXNzaW9uPC9zdW1tYXJ5PgoKWW91IGNhbiBvbmx5IHVzZSB0aGlzIGluIHlvdXIgcGVyc29uYWwgc2Vzc2lvbnMuCmBgYHtyLCBldmFsPVR9CnVzZXJDb2RlKHRpdGxlPSJFeHBsb3JlIHRoZSBEYXRhIHlvdXJzZWxmIiwgCiAgICAgICAgcXZhbHVlPSJ0YWJsZShkYXRhJHRpc3N1ZSwgZGF0YSRsYXllcikiLCAKICAgICAgICBucm93cz0xLCBvdXRfaGVpZ2h0PTM1MCkKYGBgCgo8L2RldGFpbHM+PGJyPjxocj4KClRoaXMgaW1tZWRpYXRlbHkgcmV2ZWFscyBzb21lIGlzc3VlcyB3aGVyZSBvdXIgZGF0YSBuZWVkcyB0aWR5aW5nLCBidXQgd2UnbGwgY292ZXIgdGhlc2UgaW4gdGhlIG5leHQgd29ya3Nob3AuIAoKPHdpbXI+CgojIyMgRmlsdGVyaW5nLCBTZWxlY3RpbmcsIGFuZCBNdXRhdGluZyBkYXRhOiBgZHBseXIoKWAuCgpUaGUgYGRwbHlyYCBwYWNrYWdlIGlzIGEgcG93ZXJmdWwgdG9vbCBmb3IgZGF0YSBtYW5pcHVsYXRpb24gaW4gUi4gSXQKcHJvdmlkZXMgYSBzZXQgb2YgZnVuY3Rpb25zIHRoYXQgbWFrZSBpdCBlYXN5IHRvIGZpbHRlciwgYXJyYW5nZSwgZ3JvdXAsCmFuZCBzdW1tYXJpemUgZGF0YS4gU29tZSBvZiB0aGUgbW9zdCBjb21tb25seSB1c2VkIGZ1bmN0aW9ucyBpbiBgZHBseXJgCmFyZTogICAgCgpgYGB7cn0KZGF0YSAlPiUgIyB0aGlzIGlzIHRoZSBwaXBlLiBJIGxpa2UgdG8gdGhpbmsgb2YgcGlwZXMgYXMgInVzaW5nIHRoaXMiCiAgaGVhZCg0KSAlPiUKICBwcmludCgpCmBgYAoKLSBgZmlsdGVyKClgOiB0byBmaWx0ZXIgcm93cyBiYXNlZCBvbiBhIGNvbmRpdGlvbiAgIAoKYGBge3J9CmRhdGEgJT4lCiAgZmlsdGVyKGxheWVyID09ICJFcGl0aGxpdW0iKSU+JQogIGhlYWQoNCkgJT4lCiAgcHJpbnQoKQpgYGAKCi0gYGFycmFuZ2UoKWA6IHRvIHJlb3JkZXIgcm93cyAgICAKCmBgYHtyfQpkYXRhICU+JSAKICBhcnJhbmdlKGV4cGVyaW1lbnQpICU+JQogIGhlYWQoNCkgJT4lCiAgcHJpbnQoKQpgYGAKCi0gYHNlbGVjdCgpYDogdG8gc2VsZWN0IGNvbHVtbnMgICAKCmBgYHtyfQpkYXRhICU+JQogIGZpbHRlcihsYXllciA9PSAiRXBpdGhlbGl1bSIpICU+JQogIGFycmFuZ2UoQ0Q0KSAlPiUKICBzZWxlY3QoQ0Q0KSAlPiUKICBoZWFkKDQpICU+JQogIHByaW50KCkKYGBgCgotIGBtdXRhdGUoKWA6IHRvIGNyZWF0ZSBuZXcgY29sdW1ucy4KCmBgYHtyfQpkYXRhICU+JQogIG11dGF0ZShDRDRfcGVyY2VudCA9IDEwMCpDRDQvQ0QzKSAlPiUgCiAgc2VsZWN0KENENF9wZXJjZW50LCBDRDMsIENENCkgJT4lCiAgaGVhZCg0KSAlPiUKICBwcmludCgpCmBgYAoKPHdpbXI+CgojIyMgR3JvdXBpbmcgYW5kIFN1bW1hcmlzaW5nCgpHcm91cGluZyBhbmQgc3VtbWFyaXNpbmcgaW4gdGhlIFRpZHl2ZXJzZSBhbGxvd3MgeW91IHRvIHNwbGl0IHlvdXIgZGF0YSBpbnRvIHN1YnNldHMgdXNpbmcgYGdyb3VwX2J5KClgIGFuZCB0aGVuIGNvbXB1dGUgYWdncmVnYXRlIHN0YXRpc3RpY3MgZm9yIGVhY2ggc3ViZ3JvdXAgd2l0aCBgc3VtbWFyaXNlKClgLiBUaGlzIGFwcHJvYWNoIGVuYWJsZXMgcXVpY2ssIGNsZWFyIGluc2lnaHRzIGludG8gdHJlbmRzIGFuZCBkaWZmZXJlbmNlcyB3aXRoaW4geW91ciBkYXRhIGJ5IHJlZHVjaW5nIGNvbXBsZXggZGF0YXNldHMgdG8gbWVhbmluZ2Z1bCBzdW1tYXJpZXMuCgpgYGB7cn0KZGF0YSAlPiUKICBtdXRhdGUocGVyY2VudF9DRDQgPSAxMDAqQ0Q0L0NEMykgJT4lCiAgZ2dwbG90KGFlcyh0aXNzdWUsIHBlcmNlbnRfQ0Q0LCBmaWxsPWxheWVyKSkrZ2VvbV9ib3hwbG90KCkKYGBgCgpgYGB7cn0KZGF0YSAlPiUKICBtdXRhdGUocGVyY2VudF9DRDQgPSAxMDAqQ0Q0L0NEMykgJT4lCiAgZ3JvdXBfYnkodGlzc3VlLCBsYXllcikgJT4lCiAgc3VtbWFyaXNlKG1lYW5fQ0Q0ID0gbWVhbihwZXJjZW50X0NENCksIAogICAgICAgICAgICBtZWRpYW5fQ0Q0ID0gbWVkaWFuKHBlcmNlbnRfQ0Q0KSkgJT4lCiAgcHJpbnQoKQpgYGAKCjx3aW1yPgoKIyMjIEpvaW5pbmcgRGF0YSBGcmFtZXMKCkNvbWJpbmluZyBkYXRhIGZyb20gbXVsdGlwbGUgc291cmNlcyBpcyBvZnRlbiBuZWNlc3NhcnksIGV2ZW4gd2hlbiB0aGUgZGF0YXNldHMgZG9u4oCZdCBhbGlnbiBwZXJmZWN0bHkuIEZvciBpbnN0YW5jZSwgeW91ciBsb25nLWZvcm1hdCBkYXRhIG1pZ2h0IGluY2x1ZGUgbXVsdGlwbGUgZW50cmllcyBwZXIgZG9ub3IgZm9yIHRpc3N1ZXMgbGlrZSBlcGl0aGVsaXVtIGFuZCBtdWNvc2EsIHdoaWxlIHRoZSBtZXRhZGF0YSBjb250YWlucyBkb25vci1zcGVjaWZpYyBkZXRhaWxzIHRoYXQgeW91IHByZWZlciBub3QgdG8gZHVwbGljYXRlLiAKCjxyZWFkLXRpbWU+PGk+VGhpcyBzY2VuYXJpbyBpcyBjb21tb24gaW4gcHVibGljIHNpbmdsZSBjZWxsIFJOQSBzZXF1ZW5jaW5nIGRhdGEsIHdoZXJlIHlvdSdsbCBpbnRlZ3JhdGUgZGl2ZXJzZSBsYXllcnMgb2YgaW5mb3JtYXRpb24gdXNpbmcgc2hhcmVkIGtleXMuPC9yZWFkLXRpbWU+CgpgYGB7cn0KIyBWaWV3IGRhdGEgdmFsdWVzIG9mIERvbm9yMQpkYXRhW2RhdGEkZG9ub3I9PSJEb25vcjEiLF0KCiMgVmlldyBkYXRhIHZhbHVlcyBvZiBEb25vcjEKbWV0YVttZXRhJGRvbm9yPT0iRG9ub3IxIixdCmBgYAoKU28gd2UgZXhwZWN0IERvbm9yIDEgdG8gYmUgYSAqZmVtYWxlKiwgYWdlZCAqMzUqIGFuZCBjbGFzc2lmaWVkICpIZWFsdGh5KgoKYGBge3J9CmRhdGEgJT4lCiAgc2VsZWN0KC1leHBlcmltZW50KSU+JSAjIHdlIGNhbiByZW1vdmUgY29sdW1ucyB1c2luZyBzZWxlY3QoLS4uLikKICByaWdodF9qb2luKG1ldGEsIGJ5PSJkb25vciIpICU+JQogIGZpbHRlcihkb25vciA9PSAiRG9ub3IxIikKYGBgCgpXaXRoIHRoaXMsIHdlIHdvdWxkbid0IG5lZWQgdG8gc2F2ZSBhIGNvbWJpbmVkIGRhdGFmcmFtZSB0byBhbmFseXNlLiAKCmBgYHtyfQpkYXRhICU+JQogIHNlbGVjdCgtZXhwZXJpbWVudCklPiUKICByaWdodF9qb2luKG1ldGEsIGJ5PSJkb25vciIpICU+JQogIGZpbHRlcih0aXNzdWUgIT0gIkFiZG8iICYgdGlzc3VlICE9ICdhYmRvbWVuJykgJT4lICMgcmVtb3ZlIGVycm9ycwogIG11dGF0ZShwZXJjZW50ID0gMTAwKkNENC9DRDMpICU+JQogIGdncGxvdChhZXMoY2xpbmljYWwsIHBlcmNlbnQsIGZpbGw9dGlzc3VlKSkrCiAgZ2VvbV9ib3hwbG90KG91dGxpZXJzPUYpCmBgYAoKPHdpbXI+CgojIyBSZXNoYXBpbmcgRGF0YSB3aXRoIHRpZHlyCgpgdGlkeXJgIHByb3ZpZGVzIGVzc2VudGlhbCB0b29scyBsaWtlIGBwaXZvdF9sb25nZXIoKWAgYW5kIGBwaXZvdF93aWRlcigpYCB0byB0cmFuc2Zvcm0geW91ciBkYXRhc2V0IGJldHdlZW4gbG9uZyBhbmQgd2lkZSBmb3JtYXRzLiBUaGlzIHJlc2hhcGluZyBtYWtlcyBpdCBlYXNpZXIgdG8gYWxpZ24gdmFyaWFibGVzIGFuZCBvYnNlcnZhdGlvbnMgZm9yIGFuYWx5c2lzLCBlbnN1cmluZyB0aGF0IGVhY2ggdmFyaWFibGUgZm9ybXMgYSBjb2x1bW4gYW5kIGVhY2ggb2JzZXJ2YXRpb24gYSByb3cuIFN1Y2ggZmxleGliaWxpdHkgaXMgY3J1Y2lhbCB3aGVuIHByZXBhcmluZyBjb21wbGV4IGV4cGVyaW1lbnRhbCBvciBzaW5nbGUgY2VsbCBSTkEgc2VxdWVuY2luZyBkYXRhIGZvciBmdXJ0aGVyIGFuYWx5c2lzIGFuZCB2aXN1YWxpc2F0aW9uLiAKCioqbG9uZyBmb3JtYXQqKiAgIApJbiBsb25nIGZvcm1hdCwgZWFjaCBvYnNlcnZhdGlvbiBpcyByZXByZXNlbnRlZCBieSBhIHNpbmdsZSByb3csIHdpdGggb25lIGNvbHVtbiBob2xkaW5nIHRoZSBjYXRlZ29yaWNhbCB2YXJpYWJsZSAoZS5nLiB0aGUgdHlwZSBvZiBtZWFzdXJlbWVudCkgYW5kIGFub3RoZXIgY29sdW1uIGhvbGRpbmcgdGhlIGNvcnJlc3BvbmRpbmcgdmFsdWVzLiBUaGlzIGZvcm1hdCBpcyBwYXJ0aWN1bGFybHkgdXNlZnVsIGZvciBnZW5lcmF0aW5nIGJveHBsb3RzIG9yIG90aGVyIHZpc3VhbGlzYXRpb25zIHRoYXQgY29tcGFyZSBkaXN0cmlidXRpb25zIGFjcm9zcyBncm91cHMuCgpGb3IgZXhhbXBsZSwgaWYgeW91IHdhbnQgdG8gY29tcGFyZSB0aGUgcGVyY2VudGFnZXMgb2YgQ0Q0IGFuZCBDRDggY2VsbHMgb24gdGhlIHNhbWUgcGxvdCwgeW91IGNhbiBwaXZvdCB0aGUgZGF0YSBsb25nZXI6CgpgYGB7cn0KZGF0YSAlPiUgCiAgZmlsdGVyKHRpc3N1ZSAhPSAiQWJkbyIgJiB0aXNzdWUgIT0gJ2FiZG9tZW4nKSAlPiUgIyByZW1vdmUgZXJyb3JzCiAgbXV0YXRlKENENHBlcmNlbnQgPSAxMDAqQ0Q0L0NEMywgCiAgICAgICAgIENEOHBlcmNlbnQgPSAxMDAqQ0Q4L0NEMykgJT4lCiAgIyBwaXZvdCBsb25nZXIgLSBzZWxlY3QgdGhlIGNvbHVtbnMsIGFuZCB0aGUgbmFtZSBvZiB0aGUgY29sdW1ucyBmb3IgdGhlIG5hbWVzIGFuZCB2YWx1ZXMKICBwaXZvdF9sb25nZXIoY29scyA9IGMoQ0Q0cGVyY2VudCwgQ0Q4cGVyY2VudCksIAogICAgICAgICAgICAgICBuYW1lc190byA9ICJzdWJzZXQiLCAKICAgICAgICAgICAgICAgdmFsdWVzX3RvID0gInBlcmNlbnQiKSAlPiUKICBzZWxlY3QoLWMoZXhwZXJpbWVudCxncm91cCxDQ1I1X01GSSxITEFEUl9NRkksQ0QzLENEOCxDRDQsSExBRFIsQ0NSNSxDRDI4KSklPiUKICBoZWFkKDgpICU+JQogIHByaW50KCkKYGBgCgpUaGlzIGNvZGUgY3JlYXRlcyBhIG5ldyBjb2x1bW4gYHN1YnNldGAgdGhhdCBpbmRpY2F0ZXMgd2hldGhlciB0aGUgdmFsdWUgY29ycmVzcG9uZHMgdG8gYCVDRDRgIG9yIGAlQ0Q4YCwgYW5kIGEgY29sdW1uIGBwZXJjZW50YCBmb3IgdGhlIGNvbXB1dGVkIHZhbHVlcy4gVGhlIGRhdGEgaXMgbm93IHN0cnVjdHVyZWQgd2l0aCBvbmUgY29sdW1uIGZvciB0aGUgbWVhc3VyZW1lbnQgdHlwZSBhbmQgYW5vdGhlciBmb3IgdGhlIHBlcmNlbnRhZ2UsIG1ha2luZyBpdCBzdHJhaWdodGZvcndhcmQgdG8gcGxvdDoKCmBgYHtyfQpkYXRhICU+JSAKICBmaWx0ZXIodGlzc3VlICE9ICJBYmRvIiAmIHRpc3N1ZSAhPSAnYWJkb21lbicpICU+JSAjIHJlbW92ZSBlcnJvcnMKICBtdXRhdGUoQ0Q0cGVyY2VudCA9IDEwMCpDRDQvQ0QzLCAKICAgICAgICAgQ0Q4cGVyY2VudCA9IDEwMCpDRDgvQ0QzKSAlPiUKICAjIHBpdm90IGxvbmdlciAtIHNlbGVjdCB0aGUgY29sdW1ucywgYW5kIHRoZSBuYW1lIG9mIHRoZSBjb2x1bW5zIGZvciB0aGUgbmFtZXMgYW5kIHZhbHVlcwogIHBpdm90X2xvbmdlcihjb2xzID0gYyhDRDRwZXJjZW50LCBDRDhwZXJjZW50KSwgCiAgICAgICAgICAgICAgIG5hbWVzX3RvID0gInN1YnNldCIsIAogICAgICAgICAgICAgICB2YWx1ZXNfdG8gPSAicGVyY2VudCIpICU+JQogIGdncGxvdChhZXMobGF5ZXIscGVyY2VudCwgZmlsbD1zdWJzZXQpKSsKICBnZW9tX2JveHBsb3QoKQpgYGAKCioqd2lkZSBmb3JtYXQqKiAgIApTb21ldGltZXMgeW91IHdhbnQgdG8gZXhhbWluZSByZWxhdGlvbnNoaXBzIGJldHdlZW4gbWVhc3VyZW1lbnRzIGRpcmVjdGx54oCUZm9yIGV4YW1wbGUsIHRvIHNlZSBpZiB0aGVyZSdzIGEgcmVsYXRpb25zaGlwIGJldHdlZW4gdmFsdWVzIGZyb20gZGlmZmVyZW50IGxheWVycyAoZS5nLiBFcGl0aGVsaXVtIGFuZCBVbmRlcmx5aW5nIG11Y29zYSkuIEluIHdpZGUgZm9ybWF0LCBlYWNoIHR5cGUgb2YgbWVhc3VyZW1lbnQgb2NjdXBpZXMgaXRzIG93biBjb2x1bW4uIFRoaXMgc3RydWN0dXJlIGlzIGlkZWFsIGZvciBzY2F0dGVycGxvdHMgb3IgY29ycmVsYXRpb24gYW5hbHlzZXMuCgpDb25zaWRlciB0aGlzIGV4YW1wbGUgd2hlcmUgd2UgcGl2b3QgdGhlIGRhdGEgdG8gaGF2ZSBzZXBhcmF0ZSBjb2x1bW5zIGZvciBlYWNoIGxheWVyOgoKYGBge3J9CmRhdGEgJT4lIAogIGZpbHRlcih0aXNzdWUgIT0gIkFiZG8iICYgdGlzc3VlICE9ICdhYmRvbWVuJykgJT4lICMgcmVtb3ZlIGVycm9ycwogIG11dGF0ZShwZXJjZW50ID0gMTAwKkhMQURSL0NENCkgJT4lCiAgc2VsZWN0KGRvbm9yLHRpc3N1ZSxsYXllcixwZXJjZW50KSAlPiUKICBwaXZvdF93aWRlcihuYW1lc19mcm9tID0gbGF5ZXIsIHZhbHVlc19mcm9tID0gcGVyY2VudCkgJT4lCiAgZ2dwbG90KGFlcyh4PUVwaXRoZWxpdW0sIHk9VW5kZXJseWluZywgY29sb3I9dGlzc3VlKSkrCiAgICBnZW9tX3BvaW50KCkrIAogICAgc3RhdF9lbGxpcHNlKCkKCmBgYAoKSGVyZSwgdGhlIHBpdm90X3dpZGVyKCkgZnVuY3Rpb24gY29udmVydHMgdGhlIGxvbmcgZGF0YSBpbnRvIGEgd2lkZSBmb3JtYXQgd2hlcmUgc2VwYXJhdGUgY29sdW1ucyBmb3IgRXBpdGhlbGl1bSBhbmQgVW5kZXJseWluZyB2YWx1ZXMgYXJlIGNyZWF0ZWQuIFRoaXMgYWxsb3dzIHlvdSB0byBkaXJlY3RseSBwbG90IGFuZCBleHBsb3JlIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB0aGVzZSBsYXllcnMgdXNpbmcgc2NhdHRlcnBsb3RzLCB3aXRoIGBzdGF0X2VsbGlwc2UoKWAgYWRkaW5nIGNvbmZpZGVuY2UgZWxsaXBzZXMgdG8gaGlnaGxpZ2h0IGdyb3VwIHRyZW5kcy4KCkJvdGggbG9uZyBhbmQgd2lkZSBmb3JtYXRzIHNlcnZlIHNwZWNpZmljIHB1cnBvc2VzIGluIGRhdGEgYW5hbHlzaXMgYW5kIHZpc3VhbGlzYXRpb24uIExvbmcgZm9ybWF0IGlzIGZsZXhpYmxlIGZvciBjcmVhdGluZyBncm91cGVkIGNvbXBhcmlzb25zLCB3aGlsZSB3aWRlIGZvcm1hdCBmYWNpbGl0YXRlcyBkaXJlY3QgcmVsYXRpb25zaGlwIGFuYWx5c2lzIGJldHdlZW4gdmFyaWFibGVzLgoKPHdpbXI+CgojIyBDb25jbHVzaW9ucwoKSW4gY29uY2x1c2lvbiwgdGhpcyB0dXRvcmlhbCBoYXMgZGVtb25zdHJhdGVkIGhvdyB0aGUgKipUaWR5dmVyc2UqKiBzdHJlYW1saW5lcyBkYXRhIGFuYWx5c2lzIGJ5IHByb3ZpZGluZyBhIGNvaGVyZW50IHNldCBvZiB0b29scyB0aGF0IHNpbXBsaWZ5IGRhdGEgbWFuaXB1bGF0aW9uLCByZXNoYXBpbmcsIGFuZCB2aXN1YWxpc2F0aW9uLiBVc2luZyBgZHBseXJgLCB3ZSBlZmZpY2llbnRseSBmaWx0ZXJlZCwgbXV0YXRlZCwgZ3JvdXBlZCwgc3VtbWFyaXNlZCwgYW5kIGpvaW5lZCBvdXIgZXhwZXJpbWVudGFsIGFuZCBtZXRhZGF0YSwgd2hpbGUgdGhlIHVzZSBvZiBwaXBlcyAoYCU+JWApIGFsbG93ZWQgdXMgdG8gZmluYWxpc2UgY29tcGxleCB3b3JrZmxvd3MgaW4gYSByZWFkYWJsZSBhbmQgaW50dWl0aXZlIG1hbm5lci4KCkFkZGl0aW9uYWxseSwgYHRpZHlyYCBlbmFibGVkIHVzIHRvIHRyYW5zZm9ybSBvdXIgZGF0YSBiZXR3ZWVuIGxvbmcgYW5kIHdpZGUgZm9ybWF0cywgZW5zdXJpbmcgdGhhdCBpdCBpcyBpbiB0aGUgb3B0aW1hbCBzdHJ1Y3R1cmUgZm9yIGFuYWx5c2lzLiBXaXRoIGdncGxvdDIsIHRoZXNlIHRpZHkgZGF0YXNldHMgd2VyZSB0aGVuIHRyYW5zbGF0ZWQgaW50byBjb21wZWxsaW5nIGdyYXBoaWNzIHRoYXQgaGlnaGxpZ2h0IGtleSBwYXR0ZXJucyBhbmQgcmVsYXRpb25zaGlwcy4gVG9nZXRoZXIsIHRoZXNlIHRvb2xzIGVtcG93ZXIgYW5hbHlzdHMgdG8gY3JlYXRlIHJlcHJvZHVjaWJsZSBhbmQgaW5zaWdodGZ1bCB3b3JrZmxvd3MsIHVsdGltYXRlbHkgZW5oYW5jaW5nIHRoZSByaWdvdXIgYW5kIGNsYXJpdHkgb2YgZGF0YS1kcml2ZW4gcmVzZWFyY2guCgo8ZT4KCgoKCg==</div>
 <div class="custom-footer">
     <div class="footer-left" style="width: 30%; float: centre">
       <img src="assets/footer/footer1.png" alt="wimr-logo">
