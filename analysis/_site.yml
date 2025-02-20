@@ -7,16 +7,16 @@ navbar:
     href: index.html
   - text: Getting Started in R
     href: 0_start.html
-  - text: Announcements
-    href: 0_announcements.html
+#  - text: Announcements
+#    href: 0_announcements.html
   - text: Introduction Series
     menu: 
-      - text: Intro to Plotting
-        href: 202502_dataPlotting.html
-      - text: Collaborative Coding
-        href: 202502_collab.html
-      - text: Intro to Stats
-        href: 202503_stats.html
+      - text: "Tidyverse 1: Intro to Plotting"
+        href: 202502_tidyverse1.html
+      - text: "Tidyverse 2: Intro to Manipulation"
+        href: 202502_tidyverse2.html
+      - text: "Tidyverse 3: Intro to Manipulation"
+        href: 202503_tidyverse3.html
       - text: Python vs R
         href: 202503_python.html        
   right:

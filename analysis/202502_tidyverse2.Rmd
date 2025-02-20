@@ -1,0 +1,85 @@
+---
+title: "Tidyverse 2: Data Manipulation"
+author: "Thomas O'Neil"
+date: "2025-02" 
+output:
+  html_document:
+  #workflowr::wflow_html:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+source(url("https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R")) 
+knitr::opts_chunk$set(echo = TRUE, collapse=TRUE, root.dir = dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+
+<!---
+Notes:
+  Introduction
+  Data Import/Set up
+  Data Wrangling with dplyr 
+  - Filtering, selecting, and mutating data.
+  - Grouping and Summarising
+  - Joining Data Frames
+  Reshaping Data with tidyr
+<--->
+
+# Introduction
+
+Notes on the tutorial
+
+<div class="hint-goals">
+**Goals:** Learn data manipulation with Tidyverse<br>
+&nbsp;&nbsp;&#8226; Tidy Data<br> 
+&nbsp;&nbsp;&#8226; Select and Mutate data<br> 
+&nbsp;&nbsp;&#8226; Group and summarise data<br> 
+&nbsp;&nbsp;&#8226; Join two data frames<br> 
+&nbsp;&nbsp;&#8226; Pivot data with `tidyr`<br> 
+
+</div>
+
+<read-time><i>**Estimated length**: 1 Hour</i></read-time><wimr>
+
+# Set up{.tabset .tabset-fade}
+
+1. Save this script in a folder called **"202502_Tidyverse2"**
+
+2. Create new folders in your directory.
+
+```{r, eval=F}
+dir.create("/plots")
+dir.create(paste0(workshop_title, "/data"))
+```
+
+3. Download the data.
+
+```{r, eval=F}
+# e.g. if its just a csv
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", 
+              destfile = "data/data.csv", method='auto', mode='wb')
+
+```
+
+4. 
+<wimr>
+
+# Data Wrangling with dplyr{.tabset .tabset-fade}
+
+## Filtering, selecting, and mutating data.
+
+## Grouping and Summarising
+
+## Joining Data Frames
+
+# Reshaping Data with tidyr
+
+# Conclusions
+
+# Acknowledgements
+
+<e>
+
+
+
+
