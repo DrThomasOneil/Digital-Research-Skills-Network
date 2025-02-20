@@ -4,15 +4,16 @@ author: "Thomas O'Neil"
 date: "2025-02" 
 output:
   html_document:
-  #workflowr::wflow_html:
-    toc: false
+    code_folding: show
+editor_options: 
+  markdown: 
+    wrap: 72
+runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
-source(url("https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R")) 
-knitr::opts_chunk$set(echo = TRUE, collapse=TRUE, root.dir = dirname(rstudioapi::getActiveDocumentContext()$path))
+knitr::opts_chunk$set(echo = TRUE, collapse=TRUE, root.dir =  getwd())
 ```
-
 
 <!---
 Notes:
@@ -25,9 +26,26 @@ Notes:
   Reshaping Data with tidyr
 <--->
 
-# Introduction
+# Introduction{.tabset .tabset-fade}
 
-Notes on the tutorial
+In this tutorial, we explore the functionalities of the Tidyverse by working with two datasets:
+
+- `data.csv` contains fabricated summary flow cytometry data, such as cell numbers and MFI
+- `meta.csv` contains information regarding each donor, such as age and sex. 
+
+The Tidyverse is a collection of R packages that share an underlying design philosophy and grammar, making data analysis more intuitive and coherent. Here are some key benefits:
+
+**dplyr**:
+Provides a suite of verbs (e.g. `filter()`, `mutate()`, `select(`), and `left_join()`) that simplify data manipulation. For example, `left_join()` easily combines experimental data with metadata based on a common key. See the [Introduction to R: Chapter 4](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-tidyverse.html) for more content on dplyr. 
+
+**Pipes (%>%)**:
+Enhance code readability by allowing you to chain multiple operations in a sequential, natural-language style. This means you can finalise complex data transformations in a single, clear pipeline without the need for numerous intermediate variables.
+
+**tidyr**:
+Focuses on tidying data, ensuring that each observation occupies a single row and each variable a single column. Functions like `pivot_longer()` and pivot_wider() help reshape data into a standard format, which is essential for further analysis.
+
+**ggplot2**:
+Offers a powerful and flexible grammar for data visualisation. With ggplot2, you can create customised plots that effectively communicate insights from your data, building on the clean, tidy data produced by the other Tidyverse packages. See the [Introduction to R: Chapter 5-6](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-5-data-visualisation-with-ggplot2.html) and the [previous workshop](https://drthomasoneil.github.io/analysis-user-group/202502_tidyverse1.html) by Harry for extra information on ggplot. 
 
 <div class="hint-goals">
 **Goals:** Learn data manipulation with Tidyverse<br>
@@ -39,44 +57,269 @@ Notes on the tutorial
 
 </div>
 
+Whether you are combining datasets, reshaping data, or creating compelling graphics, the Tidyverse offers a consistent and powerful set of tools to support your analysis.
+
 <read-time><i>**Estimated length**: 1 Hour</i></read-time><wimr>
 
-# Set up{.tabset .tabset-fade}
+# Set up
 
+<details><summary>**Follow these instructions to get started:**</summary>
+<br><br>
 1. Save this script in a folder called **"202502_Tidyverse2"**
+
+2. Install and load the relevant packages and functions
+
+```{r, eval=F}
+install.packages("tidyverse")
+install.packages("shiny")
+install.packages("readr")
+```
+
+```{r}
+library(shiny)
+library(tidyverse)
+library(readr)
+theme_set(theme_classic())
+source(url("https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R")) 
+```
 
 2. Create new folders in your directory.
 
 ```{r, eval=F}
-dir.create("/plots")
-dir.create(paste0(workshop_title, "/data"))
+dir.create("plots")
+dir.create("data")
 ```
 
 3. Download the data.
 
 ```{r, eval=F}
-# e.g. if its just a csv
 download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", 
-              destfile = "data/data.csv", method='auto', mode='wb')
+              destfile = "data/data.csv", method='curl', mode='wb')
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/meta.csv", 
+              destfile = "data/meta.csv", method='curl', mode='wb')
+```
+
+4. Load data into R
+
+```{r}
+data <- read.csv("~/Desktop/analysis-user-group/20250210_Tidyverse/data/data.csv")
+meta <- read.csv("~/Desktop/analysis-user-group/20250210_Tidyverse/data/meta.csv")
+```
+
+</details>
+
+<wimr>
+
+## Data Wrangling with dplyr{.tabset .tabset-fade}
+
+First, we can quickly explore the data. 
+
+```{r, eval=F}
+summary(data)
+```
+
+We have 5 categorical columns and 8 numeric values. 
+
+- CD3, CD8, CD4, HLADR and CCR5 appear to be cell counts.   
+- CD28 appears to be as a percentage already.
+
+```{r, eval=F}
+View(data)
+```
+
+<details><summary>Dropdown for interactive session</summary>
+
+You can only use this in your personal sessions.
+```{r, eval=T}
+userCode(title="Explore the Data yourself", 
+        qvalue="table(data$tissue, data$layer)", 
+        nrows=1, out_height=350)
+```
+
+</details><br><hr>
+
+This immediately reveals some issues where our data needs tidying, but we'll cover these in the next workshop. 
+
+<wimr>
+
+### Filtering, Selecting, and Mutating data: `dplyr()`.
+
+The `dplyr` package is a powerful tool for data manipulation in R. It
+provides a set of functions that make it easy to filter, arrange, group,
+and summarize data. Some of the most commonly used functions in `dplyr`
+are:    
+
+```{r}
+data %>% # this is the pipe. I like to think of pipes as "using this"
+  head(4) %>%
+  print()
+```
+
+- `filter()`: to filter rows based on a condition   
+
+```{r}
+data %>%
+  filter(layer == "Epithlium")%>%
+  head(4) %>%
+  print()
+```
+
+- `arrange()`: to reorder rows    
+
+```{r}
+data %>% 
+  arrange(experiment) %>%
+  head(4) %>%
+  print()
+```
+
+- `select()`: to select columns   
+
+```{r}
+data %>%
+  filter(layer == "Epithelium") %>%
+  arrange(CD4) %>%
+  select(CD4) %>%
+  head(4) %>%
+  print()
+```
+
+- `mutate()`: to create new columns.
+
+```{r}
+data %>%
+  mutate(CD4_percent = 100*CD4/CD3) %>% 
+  select(CD4_percent, CD3, CD4) %>%
+  head(4) %>%
+  print()
+```
+
+<wimr>
+
+### Grouping and Summarising
+
+Grouping and summarising in the Tidyverse allows you to split your data into subsets using `group_by()` and then compute aggregate statistics for each subgroup with `summarise()`. This approach enables quick, clear insights into trends and differences within your data by reducing complex datasets to meaningful summaries.
+
+```{r}
+data %>%
+  mutate(percent_CD4 = 100*CD4/CD3) %>%
+  ggplot(aes(tissue, percent_CD4, fill=layer))+geom_boxplot()
+```
+
+```{r}
+data %>%
+  mutate(percent_CD4 = 100*CD4/CD3) %>%
+  group_by(tissue, layer) %>%
+  summarise(mean_CD4 = mean(percent_CD4), 
+            median_CD4 = median(percent_CD4)) %>%
+  print()
+```
+
+<wimr>
+
+### Joining Data Frames
+
+Combining data from multiple sources is often necessary, even when the datasets don’t align perfectly. For instance, your long-format data might include multiple entries per donor for tissues like epithelium and mucosa, while the metadata contains donor-specific details that you prefer not to duplicate. 
+
+<read-time><i>This scenario is common in public single cell RNA sequencing data, where you'll integrate diverse layers of information using shared keys.</read-time>
+
+```{r}
+# View data values of Donor1
+data[data$donor=="Donor1",]
+
+# View data values of Donor1
+meta[meta$donor=="Donor1",]
+```
+
+So we expect Donor 1 to be a *female*, aged *35* and classified *Healthy*
+
+```{r}
+data %>%
+  select(-experiment)%>% # we can remove columns using select(-...)
+  right_join(meta, by="donor") %>%
+  filter(donor == "Donor1")
+```
+
+With this, we wouldn't need to save a combined dataframe to analyse. 
+
+```{r}
+data %>%
+  select(-experiment)%>%
+  right_join(meta, by="donor") %>%
+  filter(tissue != "Abdo" & tissue != 'abdomen') %>% # remove errors
+  mutate(percent = 100*CD4/CD3) %>%
+  ggplot(aes(clinical, percent, fill=tissue))+
+  geom_boxplot(outliers=F)
+```
+
+<wimr>
+
+## Reshaping Data with tidyr
+
+`tidyr` provides essential tools like `pivot_longer()` and `pivot_wider()` to transform your dataset between long and wide formats. This reshaping makes it easier to align variables and observations for analysis, ensuring that each variable forms a column and each observation a row. Such flexibility is crucial when preparing complex experimental or single cell RNA sequencing data for further analysis and visualisation. 
+
+**long format**   
+In long format, each observation is represented by a single row, with one column holding the categorical variable (e.g. the type of measurement) and another column holding the corresponding values. This format is particularly useful for generating boxplots or other visualisations that compare distributions across groups.
+
+For example, if you want to compare the percentages of CD4 and CD8 cells on the same plot, you can pivot the data longer:
+
+```{r}
+data %>% 
+  filter(tissue != "Abdo" & tissue != 'abdomen') %>% # remove errors
+  mutate(CD4percent = 100*CD4/CD3, 
+         CD8percent = 100*CD8/CD3) %>%
+  # pivot longer - select the columns, and the name of the columns for the names and values
+  pivot_longer(cols = c(CD4percent, CD8percent), 
+               names_to = "subset", 
+               values_to = "percent") %>%
+  select(-c(experiment,group,CCR5_MFI,HLADR_MFI,CD3,CD8,CD4,HLADR,CCR5,CD28))%>%
+  head(8) %>%
+  print()
+```
+
+This code creates a new column `subset` that indicates whether the value corresponds to `%CD4` or `%CD8`, and a column `percent` for the computed values. The data is now structured with one column for the measurement type and another for the percentage, making it straightforward to plot:
+
+```{r}
+data %>% 
+  filter(tissue != "Abdo" & tissue != 'abdomen') %>% # remove errors
+  mutate(CD4percent = 100*CD4/CD3, 
+         CD8percent = 100*CD8/CD3) %>%
+  # pivot longer - select the columns, and the name of the columns for the names and values
+  pivot_longer(cols = c(CD4percent, CD8percent), 
+               names_to = "subset", 
+               values_to = "percent") %>%
+  ggplot(aes(layer,percent, fill=subset))+
+  geom_boxplot()
+```
+
+**wide format**   
+Sometimes you want to examine relationships between measurements directly—for example, to see if there's a relationship between values from different layers (e.g. Epithelium and Underlying mucosa). In wide format, each type of measurement occupies its own column. This structure is ideal for scatterplots or correlation analyses.
+
+Consider this example where we pivot the data to have separate columns for each layer:
+
+```{r}
+data %>% 
+  filter(tissue != "Abdo" & tissue != 'abdomen') %>% # remove errors
+  mutate(percent = 100*HLADR/CD4) %>%
+  select(donor,tissue,layer,percent) %>%
+  pivot_wider(names_from = layer, values_from = percent) %>%
+  ggplot(aes(x=Epithelium, y=Underlying, color=tissue))+
+    geom_point()+ 
+    stat_ellipse()
 
 ```
 
-4. 
+Here, the pivot_wider() function converts the long data into a wide format where separate columns for Epithelium and Underlying values are created. This allows you to directly plot and explore relationships between these layers using scatterplots, with `stat_ellipse()` adding confidence ellipses to highlight group trends.
+
+Both long and wide formats serve specific purposes in data analysis and visualisation. Long format is flexible for creating grouped comparisons, while wide format facilitates direct relationship analysis between variables.
+
 <wimr>
 
-# Data Wrangling with dplyr{.tabset .tabset-fade}
+## Conclusions
 
-## Filtering, selecting, and mutating data.
+In conclusion, this tutorial has demonstrated how the **Tidyverse** streamlines data analysis by providing a coherent set of tools that simplify data manipulation, reshaping, and visualisation. Using `dplyr`, we efficiently filtered, mutated, grouped, summarised, and joined our experimental and metadata, while the use of pipes (`%>%`) allowed us to finalise complex workflows in a readable and intuitive manner.
 
-## Grouping and Summarising
-
-## Joining Data Frames
-
-# Reshaping Data with tidyr
-
-# Conclusions
-
-# Acknowledgements
+Additionally, `tidyr` enabled us to transform our data between long and wide formats, ensuring that it is in the optimal structure for analysis. With ggplot2, these tidy datasets were then translated into compelling graphics that highlight key patterns and relationships. Together, these tools empower analysts to create reproducible and insightful workflows, ultimately enhancing the rigour and clarity of data-driven research.
 
 <e>
 

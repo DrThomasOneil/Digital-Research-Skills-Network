@@ -1,5 +1,5 @@
 ---
-title: "Data manuipulation and plotting"
+title: "Tidyverse 1: Data Plotting"
 author: "Harry Robertson"
 date: "2025-02-10"
 output:
