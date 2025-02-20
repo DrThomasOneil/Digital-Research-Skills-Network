@@ -12,7 +12,7 @@ runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, collapse=TRUE, root.dir =  getwd())
+knitr::opts_chunk$set(echo = TRUE, collapse=F, warning = F, error=F, root.dir =  getwd())
 ```
 
 <!---
@@ -76,9 +76,8 @@ install.packages("readr")
 ```
 
 ```{r}
-library(shiny)
+suppressWarnings(library(shiny))
 library(tidyverse)
-library(readr)
 theme_set(theme_classic())
 source(url("https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R")) 
 ```
