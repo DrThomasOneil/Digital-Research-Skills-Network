@@ -12,6 +12,10 @@ analysis/site_libs
 analysis/unfinished/*.Rmd
 docs/unfinished/*.Rmd
 docs/r-tutorial/on-hold/*.Rmd
+
 workflow.R
 *.Rproj
+analysis/data/
+
+analysis-user-group.Rproj
 data/
