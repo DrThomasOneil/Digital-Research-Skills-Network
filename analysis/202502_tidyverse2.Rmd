@@ -5,6 +5,8 @@ date: "2025-02"
 output:
   html_document:
     code_folding: show
+    css: https://drthomasoneil.github.io/CVR-site/assets/.style.css
+
 editor_options: 
   markdown: 
     wrap: 72
@@ -64,9 +66,9 @@ install.packages("shiny")
 install.packages("readr")
 ```
 
-```{r}
-suppressWarnings(library(shiny))
-suppressWarnings(suppressMessages(library(tidyverse)))
+```{r, warning=F, message=F}
+library(shiny)
+library(tidyverse)
 theme_set(theme_classic())
 source(url("https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R")) 
 ```
