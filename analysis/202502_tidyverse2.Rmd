@@ -6,7 +6,6 @@ output:
   html_document:
     code_folding: show
     css: https://drthomasoneil.github.io/CVR-site/assets/.style.css
-
 editor_options: 
   markdown: 
     wrap: 72
@@ -70,7 +69,6 @@ install.packages("readr")
 library(shiny)
 library(tidyverse)
 theme_set(theme_classic())
-source(url("https://raw.githubusercontent.com/DrThomasOneil/SkillTrees/refs/heads/main/assets/.functions.R")) 
 ```
 
 2. Create new folders in your directory.
@@ -92,8 +90,8 @@ download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user
 4. Load data into R
 
 ```{r}
-data <- read.csv("~/Desktop/analysis-user-group/20250210_Tidyverse/data/data.csv")
-meta <- read.csv("~/Desktop/analysis-user-group/20250210_Tidyverse/data/meta.csv")
+data <- read.csv("data/data.csv")
+meta <- read.csv("data/meta.csv")
 ```
 
 </details>
@@ -116,19 +114,6 @@ We have 5 categorical columns and 8 numeric values.
 ```{r, eval=F}
 View(data)
 ```
-
-<details><summary>Dropdown for interactive session</summary>
-
-You can only use this in your personal sessions.
-```{r, eval=T}
-userCode(title="Explore the Data yourself", 
-        qvalue="table(data$tissue, data$layer)", 
-        nrows=1, out_height=350)
-```
-
-</details><br><hr>
-
-This immediately reveals some issues where our data needs tidying, but we'll cover these in the next workshop. 
 
 <wimr>
 
