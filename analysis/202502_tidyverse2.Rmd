@@ -15,17 +15,6 @@ runtime: shiny
 knitr::opts_chunk$set(echo = TRUE, collapse=F, warning = F, error=F, root.dir =  getwd())
 ```
 
-<!---
-Notes:
-  Introduction
-  Data Import/Set up
-  Data Wrangling with dplyr 
-  - Filtering, selecting, and mutating data.
-  - Grouping and Summarising
-  - Joining Data Frames
-  Reshaping Data with tidyr
-<--->
-
 # Introduction{.tabset .tabset-fade}
 
 In this tutorial, we explore the functionalities of the Tidyverse by working with two datasets:
@@ -158,7 +147,7 @@ data %>% # this is the pipe. I like to think of pipes as "using this"
 
 ```{r}
 data %>%
-  filter(layer == "Epithlium")%>%
+  filter(layer == "Epithelium")%>%
   head(4) %>%
   print()
 ```
