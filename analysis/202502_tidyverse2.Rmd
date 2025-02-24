@@ -64,7 +64,6 @@ install.packages("tidyverse")
 ```
 
 ```{r, warning=F, message=F}
-library(shiny)
 library(tidyverse)
 theme_set(theme_classic())
 ```
