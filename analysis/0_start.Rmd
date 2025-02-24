@@ -90,17 +90,15 @@ Understand programming logic for automating tasks.
 
 <wimr>
 
-<details><summary>**Coming Soon**</summary>
-
 ### **Chapter 4: Data Manipulation with `tidyverse`**
 
 <div class="hint-goals">      
 **Goals:**     
 Introduce `tidyverse` for filtering, mutating, summarizing and pivoting data.    
-&nbsp;&nbsp;&#8226; Filtering rows (`filter()`), selecting columns (`select()`). 
-&nbsp;&nbsp;&#8226; Adding new columns (`mutate()`).
-&nbsp;&nbsp;&#8226; Grouping and summarizing (`group_by()` + `summarize()`).
-&nbsp;&nbsp;&#8226; Pivot longer and Pivot wider   
+&nbsp;&nbsp;&#8226; Filtering rows (`filter()`), selecting columns (`select()`).    
+&nbsp;&nbsp;&#8226; Adding new columns (`mutate()`).    
+&nbsp;&nbsp;&#8226; Grouping and summarizing (`group_by()` + `summarize()`).    
+&nbsp;&nbsp;&#8226; Pivot longer and Pivot wider      
 </div>
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-tidyverse.html)
@@ -172,7 +170,6 @@ Build a dynamic and shareable report of your analysis.
 
 [Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/conclusions.html)
 
-</details>
 
 <e>
 

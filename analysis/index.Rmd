@@ -15,8 +15,8 @@ To do:
   <img src="assets/logo/logo.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
   <div style="overflow: hidden; padding-top: 10%;">
 
-## **WIMR Analysis User Group**    
-**Contributors:** Thomas O'Neil, Harry Robertson
+## **Digital Research Skills Network**    
+<br>
 <hr>
 </div> 
 <br>
