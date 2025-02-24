@@ -61,8 +61,6 @@ Whether you are combining datasets, reshaping data, or creating compelling graph
 
 ```{r, eval=F}
 install.packages("tidyverse")
-install.packages("shiny")
-install.packages("readr")
 ```
 
 ```{r, warning=F, message=F}
