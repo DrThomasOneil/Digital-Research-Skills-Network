@@ -7,18 +7,40 @@ navbar:
     href: index.html
   - text: Getting Started in R
     href: 0_start.html
-#  - text: Announcements
-#    href: 0_announcements.html
   - text: Introduction Series
     menu: 
       - text: "Tidyverse 1: Intro to Plotting"
         href: 202502_tidyverse1.html
       - text: "Tidyverse 2: Intro to Manipulation"
         href: 202502_tidyverse2.html
-      - text: "Tidyverse 3: Intro to Manipulation"
+      - text: "Tidyverse 3: Creating a reproducible report"
         href: 202503_tidyverse3.html
       - text: Python vs R
         href: 202503_python.html        
+  - text: Workshops
+    menu: 
+      - text: "April: "
+        href: 202504.html
+      - text: "May: "
+        href: 202505.html
+      - text: "June: "
+        href: 202506.html
+      - text: "July: "
+        href: 202507.html
+      - text: "August: "
+        href: 202508.html
+      - text: "September: "
+        href: 202509.html
+      - text: "October: "
+        href: 202510.html
+      - text: "November: "
+        href: 202511.html
+      - text: "December: "
+        href: 202512.html
+      - text: "February: "
+        href: 202602.html
+      - text: "March: "
+        href: 202603.html
   right:
   - text: Extra Resources
     href: 0_resources.html  
