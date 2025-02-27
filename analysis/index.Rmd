@@ -23,7 +23,7 @@ To do:
  
 ## Welcome
 
-Welcome to the current site for the Analysis User Group! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
+Welcome to the Workshop site for the Digital Research Skills Network! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
 
 Here, you'll find:
 

@@ -9,6 +9,10 @@ output:
 **I'll drop resources that I find that might be useful to others.**
 </dev>
 
+### Computational Genomics with R
+
+[Computational Genomics with R](https://compgenomr.github.io/book/) is an exceptionally comprehensive resource for biomedical bioinformatics. It covers a broad range of topics—statistics, machine learning, sequencing data processing, and more—while providing both code examples and clear explanations. Although it may not be the most accessible starting point for wet-lab researchers, it serves as an invaluable reference for deeper explorations of bioinformatic analyses.
+
 ### Stretchly
 
 [Stretchly](https://hovancik.net/stretchly/) is an open-source app designed to encourage healthy work habits by prompting regular short (30-second) and long (20-minute) breaks. I’ve found it invaluable for maintaining focus and preventing burnout. It’s highly customizable, allowing you to tailor prompts to your needs.
