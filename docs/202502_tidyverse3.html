@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Thomas O’Neil" />
 
 
-<title>Announcements</title>
+<title>Tidyverse 2: Data Manipulation</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <script src="site_libs/navigation-1.1/sourceembed.js"></script>
@@ -56,6 +60,103 @@ div.section {
 
 
 
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 <style type="text/css">
@@ -230,6 +331,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#section-TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#section-TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -237,6 +401,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="section-TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -342,7 +516,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div id="header">
+<div id="section-header">
 
 <div class="btn-group pull-right float-right">
 <button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
@@ -353,7 +527,9 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Announcements</h1>
+<h1 class="title toc-ignore">Tidyverse 2: Data Manipulation</h1>
+<h4 class="author">Thomas O’Neil</h4>
+<h4 class="date">2025-02</h4>
 
 </div>
 
@@ -386,7 +562,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 0
 </p>
@@ -407,7 +583,7 @@ versions</em> tab lists the development history.
 <hr>
 </div>
 <div id="checks" class="tab-pane fade">
-<div id="workflowr-checks" class="panel-group">
+<div id="section-workflowr-checks" class="panel-group">
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
@@ -417,12 +593,98 @@ aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
 </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="section-strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>Great! Since the R Markdown file has been committed to the Git
 repository, you know the exact version of the code that produced these
 results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="section-strongEnvironmentstrongempty"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1337code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(1337)</code> </a>
+</p>
+</div>
+<div id="section-strongSeedstrongcodesetseed1337code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(1337)</code> was run prior to running the
+code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="section-strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="section-strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="section-strongFilepathsstrongrelative"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
@@ -437,7 +699,7 @@ aria-hidden="true"></span> <strong>Repository version:</strong>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree0c2bf34f67af31b60bc8790f3367e0b2ae8eaff8targetblank0c2bf34a"
+id="section-strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilanalysisusergrouptree0c2bf34f67af31b60bc8790f3367e0b2ae8eaff8targetblank0c2bf34a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -487,8 +749,8 @@ have uncommitted changes.
 
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/0_announcements.Rmd</code>) and
-HTML (<code>docs/0_announcements.html</code>) files. If you’ve
+made to the R Markdown (<code>analysis/202502_tidyverse3.Rmd</code>) and
+HTML (<code>docs/202502_tidyverse3.html</code>) files. If you’ve
 configured a remote Git repository (see <code>?wflow_git_remote</code>),
 click on the hyperlinks in the table below to view the files as they
 were in that past version.
@@ -517,410 +779,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/71646a578dfde9561c902b5d5fe898f09478e0d8/docs/0_announcements.html" target="_blank">71646a5</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-27
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/c7f5738319b889415c215719f09489bc02d7d078/docs/0_announcements.html" target="_blank">c7f5738</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-24
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/79d09b1a8563fe139d17ab466a42e50bb1a86dcf/docs/0_announcements.html" target="_blank">79d09b1</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-24
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/a5c9f2c1b2cd6954794b6cd1a1ef06364ea58776/docs/0_announcements.html" target="_blank">a5c9f2c</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-24
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/ca2c086f94a3eb2f7effe9f47869ea65c44e674a/docs/0_announcements.html" target="_blank">ca2c086</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-24
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/fca050342b36cc1956f263dfd4241b6cd9ffbf84/docs/0_announcements.html" target="_blank">fca0503</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-24
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/af42fbabcad839511c5c14ed3847c04df3f6d9a4/docs/0_announcements.html" target="_blank">af42fba</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-24
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/1aeefc7a88b9f306f0a61389e72811dcf369b9d7/docs/0_announcements.html" target="_blank">1aeefc7</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/5fe30de6735f75be6fe53a89cb092266f13ed73e/docs/0_announcements.html" target="_blank">5fe30de</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-20
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/5ef4f12ae53477166c59f699b89994243b1ffb59/docs/0_announcements.html" target="_blank">5ef4f12</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/f48f4f053967214352aed9163ad26fb3688f8060/docs/0_announcements.html" target="_blank">f48f4f0</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/3bfe8471d086818a6d4a981b9c8c33c0bd685bc4/docs/0_announcements.html" target="_blank">3bfe847</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/b14f3b54dcc021dd28334a164be8f2d5a6b25e9f/docs/0_announcements.html" target="_blank">b14f3b5</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/bfba3e0171f5cc7db77ecab1196fc08f0e60c938/docs/0_announcements.html" target="_blank">bfba3e0</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-07
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/f3d6f8748a486e0956f21c43fbe2602d97fe4e9a/docs/0_announcements.html" target="_blank">f3d6f87</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-04
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/f654b8dd3953413c19be449195ee63ec95bc1f4b/docs/0_announcements.html" target="_blank">f654b8d</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-02-04
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/496892526db7f0838e189e68aef96aeda5ca7292/docs/0_announcements.html" target="_blank">4968925</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-01-30
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/299ff3d963935ef5ca1d90abf8d609cc83cc1b6f/docs/0_announcements.html" target="_blank">299ff3d</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-01-28
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/023005dfda1bb3a56b895f01d3af2f9286a249e3/docs/0_announcements.html" target="_blank">023005d</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-01-07
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/c893d7029e8fdb2269c9296a084632b496c113d9/docs/0_announcements.html" target="_blank">c893d70</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-01-06
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/660b0f876d88db012afc58678979fdcaec9140d1/docs/0_announcements.html" target="_blank">660b0f8</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-01-06
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/analysis-user-group/2e79a1df7b6f21ef9c151a966acf401d135e7178/docs/0_announcements.html" target="_blank">2e79a1d</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-01-06
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/451a21f2f40fee55e6ca6d85ee997834544e471d/analysis/0_announcements.Rmd" target="_blank">451a21f</a>
+<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/0c2bf34f67af31b60bc8790f3367e0b2ae8eaff8/analysis/202502_tidyverse3.Rmd" target="_blank">0c2bf34</a>
 </td>
 <td>
 DrThomasOneil
 </td>
 <td>
-2025-01-06
+2025-03-03
 </td>
 <td>
-Initial Deployment
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/DrThomasOneil/analysis-user-group/blob/2eeb8dc05b4d44b705ca7fef6d0ebce18b81026f/analysis/0_announcements.Rmd" target="_blank">2eeb8dc</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2024-12-26
-</td>
-<td>
-first draft
+wflow_publish(c("analysis/*.Rmd"))
 </td>
 </tr>
 </tbody>
@@ -930,8 +801,61 @@ first draft
 </div>
 </div>
 </div>
+<div id="section-download-links" class="section level2">
+<h2>Download Links</h2>
+<ul>
+<li><p>Download the script I used as a <strong>template</strong>: <a
+href="https://github.com/DrThomasOneil/analysis-user-group/raw/refs/heads/main/docs/assets/downloads/template_script.Rmd"><code>download</code></a></p></li>
+<li><p>Download the script I generated <strong>in the meeting</strong>:
+<a
+href="https://github.com/DrThomasOneil/analysis-user-group/raw/refs/heads/main/docs/assets/downloads/meeting_script.Rmd"><code>download</code></a></p></li>
+</ul>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="section-workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="section-cb1"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="section-cb1-1"><a href="#section-cb1-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.3
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQW5ub3VuY2VtZW50cyIKb3V0cHV0OgogIHdvcmtmbG93cjo6d2Zsb3dfaHRtbDoKICAgIHRvYzogbm8KLS0tIAoKCgoK</div>
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Australia/Sydney
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] workflowr_1.7.1
+
+loaded via a namespace (and not attached):
+ [1] jsonlite_1.8.9    compiler_4.4.0    promises_1.3.2    Rcpp_1.0.14      
+ [5] stringr_1.5.1     git2r_0.35.0      callr_3.7.6       later_1.4.1      
+ [9] jquerylib_0.1.4   yaml_2.3.10       fastmap_1.2.0     mime_0.12        
+[13] R6_2.5.1          knitr_1.49        tibble_3.2.1      rprojroot_2.0.4  
+[17] shiny_1.10.0      bslib_0.9.0       pillar_1.10.1     rlang_1.1.5      
+[21] cachem_1.1.0      stringi_1.8.4     httpuv_1.6.15     xfun_0.50        
+[25] getPass_0.2-4     fs_1.6.5          sass_0.4.9        cli_3.6.3        
+[29] magrittr_2.0.3    ps_1.8.1          digest_0.6.37     processx_3.8.4   
+[33] rstudioapi_0.17.1 xtable_1.8-4      lifecycle_1.0.4   vctrs_0.6.5      
+[37] evaluate_1.0.3    glue_1.8.0        whisker_0.4.1     rmarkdown_2.29   
+[41] httr_1.4.7        tools_4.4.0       pkgconfig_2.0.3   htmltools_0.5.8.1</code></pre>
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeXZlcnNlIDI6IERhdGEgTWFuaXB1bGF0aW9uIgphdXRob3I6ICJUaG9tYXMgTydOZWlsIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93CiAgICBjc3M6IGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vQ1ZSLXNpdGUvYXNzZXRzLy5zdHlsZS5jc3MKZWRpdG9yX29wdGlvbnM6IAogIG1hcmtkb3duOiAKICAgIHdyYXA6IDcyCnJ1bnRpbWU6IHNoaW55Ci0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwgY29sbGFwc2U9Riwgd2FybmluZyA9IEYsIGVycm9yPUYsIHJvb3QuZGlyID0gIGdldHdkKCkpCmBgYAoKCiMjIERvd25sb2FkIExpbmtzCgotIERvd25sb2FkIHRoZSBzY3JpcHQgSSB1c2VkIGFzIGEgKip0ZW1wbGF0ZSoqOiBbYGRvd25sb2FkYF0oaHR0cHM6Ly9naXRodWIuY29tL0RyVGhvbWFzT25laWwvYW5hbHlzaXMtdXNlci1ncm91cC9yYXcvcmVmcy9oZWFkcy9tYWluL2RvY3MvYXNzZXRzL2Rvd25sb2Fkcy90ZW1wbGF0ZV9zY3JpcHQuUm1kKQoKLSBEb3dubG9hZCB0aGUgc2NyaXB0IEkgZ2VuZXJhdGVkICoqaW4gdGhlIG1lZXRpbmcqKjogW2Bkb3dubG9hZGBdKGh0dHBzOi8vZ2l0aHViLmNvbS9EclRob21hc09uZWlsL2FuYWx5c2lzLXVzZXItZ3JvdXAvcmF3L3JlZnMvaGVhZHMvbWFpbi9kb2NzL2Fzc2V0cy9kb3dubG9hZHMvbWVldGluZ19zY3JpcHQuUm1kKQoKCgoKCg==</div>
 <div class="custom-footer">
     <div class="footer-left" style="width: 30%; float: centre">
       <img src="assets/footer/footer1.png" alt="wimr-logo">
@@ -967,6 +891,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -987,7 +913,7 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function () {
-  window.buildTabsets("TOC");
+  window.buildTabsets("section-TOC");
 });
 
 $(document).ready(function () {
@@ -1000,10 +926,39 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("0_announcements.Rmd");
+  window.initializeSourceEmbed("202502_tidyverse3.Rmd");
 });
 </script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#section-TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
