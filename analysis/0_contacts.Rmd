@@ -35,7 +35,7 @@ library(dplyr)
 library(readr)
 
 # Read CSV
-contacts <- suppressMessages(read_csv("docs/assets/contacts.csv"))
+contacts <- suppressMessages(read_csv("docs/adit/contacts.csv"))
 
 n_cols <- 3
 n_rows <- ceiling(nrow(contacts) / n_cols)  # Enough rows for everyone

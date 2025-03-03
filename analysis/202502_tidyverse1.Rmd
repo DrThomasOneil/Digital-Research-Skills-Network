@@ -6,7 +6,6 @@ output:
   html_document:
     fig_caption: yes
     number_sections: yes
-    embed-resources: true
     css:  
       - https://use.fontawesome.com/releases/v5.0.6/css/all.css
     toc: true
