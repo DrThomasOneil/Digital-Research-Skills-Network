@@ -1,0 +1,269 @@
+---
+title: "Tidyverse3"
+author: "Thomas R O'Neil"
+date: "2025-03 (Updated: `r Sys.Date()`)"
+output: 
+  html_document:
+    code_folding: hide
+    theme: flatly
+    css: https://drthomasoneil.github.io/CVR-site/assets/.style.css
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, message=F, warning=F, error=F}
+library(tidyverse)
+library(knitr)
+library(ggpubr)
+
+theme_set(theme_classic())
+
+set.seed(1337)
+```
+
+# Introduction
+
+Add notes on the experiment... 
+
+# Methods
+
+```{r, include=F}
+samples = 3
+stains = 6
+```
+
+Across `r samples` samples, I had to create a master mix for `r stains` stains.
+
+```{r, eval=F}
+dir.create("raw")
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", 
+              destfile = "raw/data.csv", method='curl', mode='wb')
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/meta.csv", 
+              destfile = "raw/meta.csv", method='curl', mode='wb')
+```
+
+```{r}
+data <- read.csv("raw/data.csv")
+meta <- read.csv("raw/meta.csv")
+```
+
+<details><summary>Panel</summary>
+
+```{r}
+knitr::kable(table(meta$clinical), align = 'cc')
+```
+
+</details>
+
+# Analysis{.tabset .tabset-fade}
+
+## Summary of Analysis
+
+- QC
+
+- Visualise data
+
+- Statistics
+
+- Conclusions
+
+## QC and tidy up
+
+```{r QC, eval=F}
+table(data$experiment)
+table(data$donor)
+table(data$tissue) # issue found
+table(data$layer) 
+table(data$group) # issue found
+```
+
+```{r QC2}
+data$tissue[grepl("abdo", data$tissue)] <- "Abdomen"
+data$tissue[grepl("Abdo$", data$tissue)] <- "Abdomen"
+```
+
+
+## Visualisations{.tabset .tabset-fade}
+
+
+### CD4:CD8 ratio
+
+CD4 ratio to CD8 in Epithelium and Underlying mucosa of different tissues.
+
+```{r CD4CD8ratio, fig.width=5, fig.height=4}
+data %>%
+  mutate(ratio = CD4/CD8) %>%
+  ggplot(aes(tissue, y=ratio, fill=layer))+
+  geom_boxplot(show.legend = F)+
+  labs(title="Ratio of CD4:CD8", y="CD4:CD8", x="")+
+  theme(axis.text.x = element_text(size=12))
+```
+
+### Percent CCR5 of CD4
+
+sfghdfg
+
+```{r CCR5%, fig.width=5, fig.height=4, eval=F}
+data %>%
+  mutate(percent = 100*CCR5/CD4) %>%
+  ggplot(aes(tissue, y=percent, fill=layer))+
+  geom_boxplot(show.legend = F)+
+  labs(title="CCR5% of CD4", y="CCR5%", x="")+
+  theme(axis.text.x = element_text(size=12))
+
+```
+
+## Statistics
+
+Compare CCR5 % in epithelium of labia and vagina
+
+```{r}
+vagina <- data %>%
+  mutate(CCR5_per = 100*CCR5/CD4) %>%
+  filter(tissue == "Vagina" & layer == "Epithelium") %>% 
+  select(CCR5_per) %>% 
+  unlist()
+
+labia <- data %>%
+  mutate(CCR5_per = 100*CCR5/CD4) %>%
+  filter(tissue == "Labia" & layer == "Epithelium") %>% 
+  select(CCR5_per) %>% 
+  unlist()
+
+results = t.test(vagina, labia)
+
+print(paste0("The p value for CCR5% of Vagina and labia epithelium is ", results$p.value))
+```
+
+```{r}
+p0 = data %>% 
+    mutate(percent = 100*CD4/CD3) %>% 
+  filter(tissue %in% c("Labia", "Vagina") & layer == "Epithelium") %>% 
+  ggplot(aes(tissue, percent))+geom_boxplot()+geom_jitter()+
+  stat_compare_means(
+    method="t.test", 
+    comparisons = list(c("Labia", "Vagina")),
+    label = "p.signif"
+  )+theme(axis.text.x = element_text(size=15, angle=45, hjust=1), 
+        axis.text.y = element_text(size=20), 
+        )+
+  labs(title="A)", y="Percent CD4", x="")
+
+p1 = data %>% 
+    mutate(percent = CD4/CD8) %>% 
+  filter(tissue %in% c("Labia", "Vagina") & layer == "Epithelium") %>% 
+  ggplot(aes(tissue, percent))+geom_boxplot()+geom_jitter()+
+  stat_compare_means(
+    method="t.test", 
+    comparisons = list(c("Labia", "Vagina")),
+    label = "p.signif"
+  )+theme(axis.text.x = element_text(size=15, angle=45, hjust=1), 
+        axis.text.y = element_text(size=20), 
+        )+
+  labs(title="B)", y="Ratio", x="")
+
+p2 = data %>% 
+    mutate(percent = 100*CCR5/CD4) %>% 
+  filter(tissue %in% c("Labia", "Vagina") & layer == "Epithelium") %>% 
+  ggplot(aes(tissue, percent))+geom_boxplot()+geom_jitter()+
+  stat_compare_means(
+    method="t.test", 
+    comparisons = list(c("Labia", "Vagina")),
+    label = "p.signif"
+  )+theme(axis.text.x = element_text(size=15, angle=45, hjust=1), 
+        axis.text.y = element_text(size=20), 
+        )+
+  labs(title="C)", y="Percent CCR5", x="")
+
+p3 = data %>% 
+    mutate(percent = 100*HLADR/CD4) %>% 
+  filter(tissue %in% c("Labia", "Vagina") & layer == "Epithelium") %>% 
+  ggplot(aes(tissue, percent))+geom_boxplot()+geom_jitter()+
+  stat_compare_means(
+    method="t.test", 
+    comparisons = list(c("Labia", "Vagina")),
+    label = "p.signif"
+  )+theme(axis.text.x = element_text(size=15, angle=45, hjust=1), 
+        axis.text.y = element_text(size=20), 
+        )+
+  labs(title="D)", y="Percent HLADR", x="")
+
+grid <- cowplot::plot_grid(p0,p1,p2,p3, ncol=2)
+
+ggsave("plots/CCR5per.png",
+       plot=grid, 
+       height=6,
+       width=6, 
+       units="in", 
+       dpi=600)
+```
+
+
+# Conclusions
+
+### Things to remember:
+
+**markdown**    
+
+- `yaml`: code folding, css, theme, etc   
+
+- additional functions:   
+
+  - `<br>` = break    
+  
+  - `<hr>` = horizontal rule
+  
+  - If you're using my css, `<wimr>` generates the nice wimr lines. 
+  
+  - You can isolate parts of your markdown using `<div>...</div>` tags. These create 'containers' and are useful from an aesthetic point of view.
+  
+  - `{.tabset .tabset-fade}` on the end of a heading allows you wrap subheadings into tabs.
+
+**R** 
+ 
+- `chunks`
+
+  - on Macs - `cmd+opt+i` creates a new chunk
+  
+  - `include` = to show the code chunk in the knitted file
+  
+  - `eval` = to evaluate the code chunk
+  
+  - `collapse` = to collapse the output into the code chunk, and not have two separate boxes
+  
+  - `echo` = whether to display output
+  
+  - **DO NOT** remove the set up chunk
+  
+  - Code chunks can be named for organisational uses. 
+  
+  - R can be called inline by adding something like 'r 1+1' inside back ticks
+  
+- **packages**
+
+  - `tidyverse`: contains a lot of different essential packages such as tidyr, ggplot, dplyr,  and stringr
+  
+  - `knitr`: makes neat and tidy knitable tables
+  
+  - `ggpubr`: is useful for tidy ggplot images and adding statistics to figures. 
+
+
+Additional Resources:
+
+- [tidyverse](https://tidyverse.tidyverse.org/)
+
+- [R Markdown Cheatsheet](https://rstudio.github.io/cheatsheets/rmarkdown.pdf)
+
+- [ggplot](https://ggplot2-book.org/introduction)
+
+
+
+
+ 
+
+
+

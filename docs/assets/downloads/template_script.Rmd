@@ -1,0 +1,286 @@
+---
+title: "Flow Cytometry Analysis"
+author: "Thomas R O'Neil"
+date: "2025-02 <br>(Last updated: `r Sys.Date()`)"
+output: 
+  html_document:
+    code_folding: hide
+    theme: paper
+    css: https://drthomasoneil.github.io/CVR-site/assets/.style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=F, warning=F)
+```
+
+```{r libraries, message=F, warning=F, }
+library(tidyverse)
+library(knitr)
+library(ggpubr)
+theme_set(theme_classic())
+```
+
+<wimr>
+
+# Analysis{.tabset .tabset-fade}
+
+<div>
+
+## Plans 
+
+- Download data and load the data in ✅ 
+
+- QC and data cleaning
+
+- Data Exploration
+
+- Visualisations
+
+- Statistics
+
+## Download and load data
+
+Set up folders and download data. Set eval=F to make sure this doesn't run every time. 
+
+```{r, eval=F}
+dir.create("raw")
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/synthetic_data.csv", 
+              destfile = "raw/data.csv", method='curl', mode='wb')
+download.file(url="https://raw.githubusercontent.com/DrThomasOneil/analysis-user-group/refs/heads/main/docs/r-tutorial/assets/meta.csv", 
+              destfile = "raw/meta.csv", method='curl', mode='wb')
+```
+
+Read data in:
+
+```{r}
+data <- read.csv("raw/data.csv")
+meta <- read.csv("raw/meta.csv")
+```
+
+## QC and data cleaning
+
+Checking each column of the data - issues founds with tissue and group and corrected below.
+
+```{r, eval=F}
+table(data$experiment)
+table(data$donor)
+table(data$tissue) # issue found
+table(data$layer) 
+table(data$group) # issue found
+```
+
+### Fixing Abdo and abdomen issues
+
+```{r, include=F}
+data[ grepl("Abdo$", data$tissue),"tissue"]
+```
+
+```{r}
+data[data$tissue == "abdomen","tissue"] <- "Abdomen"
+data[data$tissue == "Abdo","tissue"] <- "Abdomen"
+```
+
+### Adjusting group column
+
+Take the first letter of tissue and Epi = "E" and mucosa = "UM"
+```{r}
+data <- data %>%
+  mutate(group = paste0(str_sub(data$tissue, 1,1), "_", ifelse(data$layer == "Epithelium", "E", "UM"))) 
+```
+
+### Checking that values aren't greater than their parents
+
+```{r}
+data %>%
+  mutate(CD4CD8leftover = (100*(CD4+CD8-CD3)/CD3)) %>%
+  ggplot(aes(CD4CD8leftover)) + geom_density()+geom_vline(xintercept = 10)
+
+```
+
+Need to check some gates and values. 
+
+</div><wimr>
+
+# Results{.tabset .tabset-fade}
+
+<div>
+
+## **Questions:**
+
+- CD4 ratio to CD8 in E and UM of different tissues
+
+- Ditto CD4%
+
+- Ditto CCR5% and HLADR% and CD28% of CD4 T cells.
+
+- Ditto CCR5 and HLADR MFI
+
+- Should I be concerned about cell numbers - compare these metrics to CD3 count.
+
+## CD4:CD8 and CD4 %
+
+```{r, fig.width=8, fig.height=5}
+data %>%
+  mutate(ratio = CD4/CD8) %>%
+  mutate(enrich = ifelse(ratio > 1, "CD4", "CD8"))%>%
+  ggplot(aes(
+    x=layer, 
+    y=log(ratio),
+    fill=layer)
+    )+
+  geom_boxplot(outliers=F, show.legend = F)+
+  geom_jitter(aes(color= enrich), size=0.75, width=0.2)+
+  geom_hline(yintercept = 0)+
+  facet_wrap(~tissue)+
+  scale_fill_manual(values=c("pink2", "blue2"))+
+  scale_color_manual(values=c("red", "black"))+
+  labs(x="", y="Log CD4/CD8", title="Ratio of CD4 to CD8 across tissues and layers", color = "Enriched in:")+
+  theme(axis.text.x = element_text(angle=45, hjust=1, size=10), 
+        axis.text.y = element_text(size=12))
+```
+
+Make notes...
+
+```{r}
+data %>%
+  mutate(percent = 100*CD4/CD3) %>%
+  ggplot(aes(
+    x=layer, 
+    y=percent,
+    fill=layer)
+    )+
+  geom_boxplot(outliers=F, show.legend = F)+
+  geom_jitter( size=0.75, width=0.2, show.legend = F)+
+  geom_hline(yintercept = 50)+
+  facet_wrap(~tissue)+
+  scale_fill_manual(values=c("pink2", "blue2"))+
+  labs(x="", y="% CD4", title="% CD4 across cell types")+
+  theme(axis.text.x = element_text(angle=45, hjust=1, size=10), 
+        axis.text.y = element_text(size=12))
+```
+
+## Percent vs total cells
+```{r}
+data %>%
+  mutate(percent = 100*CCR5/CD4) %>%
+  ggplot(aes(
+    x=layer, 
+    y=percent,
+    fill=layer)
+    )+
+  geom_boxplot(outliers=F, show.legend = F)+
+  geom_jitter( size=0.75, width=0.2, show.legend = F)+
+  facet_wrap(~tissue)+
+  scale_fill_manual(values=c("pink2", "blue2"))+
+  labs(x="", y="% CCR5", title="% CCR5 of CD4+ T cells")+
+  theme(axis.text.x = element_text(angle=45, hjust=1, size=10), 
+        axis.text.y = element_text(size=12))+
+  ylim(0,100)
+
+data %>%
+  mutate(percent = 100*CCR5/CD4) %>%
+  ggplot(aes(
+    x=CD4, 
+    y=percent)
+    )+
+  geom_smooth(outliers=F, show.legend = F) + facet_wrap(~layer)
+```
+</div><wimr>
+
+# Statistics
+
+Compare CCR5% in epithelium of labia and vagina
+
+```{r}
+vagina <- data  %>% 
+  mutate(percent = 100*CCR5/CD4) %>% 
+  filter(tissue %in% c("Vagina") & layer == "Epithelium") %>% 
+  select(percent) %>% 
+  unlist()
+labia <- data  %>% 
+  mutate(percent = 100*CCR5/CD4) %>% 
+  filter(tissue %in% c("Labia") & layer == "Epithelium") %>% 
+  select(percent) %>% 
+  unlist()
+t.test(vagina, labia)
+data %>% 
+    mutate(percent = 100*CCR5/CD4) %>% 
+  filter(tissue %in% c("Labia", "Vagina") & layer == "Epithelium") %>% 
+  ggplot(aes(tissue, percent))+geom_boxplot()+
+  stat_compare_means(
+    method = "t.test", 
+    label = "p.signif", 
+    label.y = 100,
+    tip.length = 0.05,       
+    bracket.size = 0.5, 
+    comparisons = list(c("Labia", "Vagina")))
+
+```
+
+
+<br><wimr><br>
+
+<br><br><br>...
+
+### Things to remember:
+
+**markdown**    
+
+- `yaml`: code folding, css, theme, etc   
+
+- additional functions:   
+
+  - `<br>` = break    
+  
+  - `<hr>` = horizontal rule
+  
+  - If you're using my css, `<wimr>` generates the nice wimr lines. 
+  
+  - You can isolate parts of your markdown using `<div>...</div>` tags. These create 'containers' and are useful from an aesthetic point of view.
+  
+  - `{.tabset .tabset-fade}` on the end of a heading allows you wrap subheadings into tabs.
+
+**R** 
+ 
+- `chunks`
+
+  - on Macs - `cmd+opt+i` creates a new chunk
+  
+  - `include` = to show the code chunk in the knitted file
+  
+  - `eval` = to evaluate the code chunk
+  
+  - `collapse` = to collapse the output into the code chunk, and not have two separate boxes
+  
+  - `echo` = whether to display output
+  
+  - **DO NOT** remove the set up chunk
+  
+  - Code chunks can be named for organisational uses. 
+  
+  - R can be called inline by adding something like 'r 1+1' inside back ticks
+  
+- **packages**
+
+  - `tidyverse`: contains a lot of different essential packages such as tidyr, ggplot, dplyr,  and stringr
+  
+  - `knitr`: makes neat and tidy knitable tables
+  
+  - `ggpubr`: is useful for tidy ggplot images and adding statistics to figures. 
+
+
+Additional Resources:
+
+- [tidyverse](https://tidyverse.tidyverse.org/)
+
+- [R Markdown Cheatsheet](https://rstudio.github.io/cheatsheets/rmarkdown.pdf)
+
+- [ggplot](https://ggplot2-book.org/introduction)
+
+
+
+
+
+
+
+
