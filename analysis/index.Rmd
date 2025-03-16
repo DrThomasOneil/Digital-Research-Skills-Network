@@ -2,6 +2,7 @@
 output:
   workflowr::wflow_html:
     toc: false
+site: workflowr::wflow_site
 ---
 
 <!---

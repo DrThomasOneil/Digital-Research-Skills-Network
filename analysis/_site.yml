@@ -19,28 +19,28 @@ navbar:
         href: 202503_python.html        
   - text: Workshops
     menu: 
-      - text: "April: "
+      - text: "April: Flow Cytometry"
         href: 202504.html
-      - text: "May: "
+      - text: "May: Spatial Transcriptomics"
         href: 202505.html
-      - text: "June: "
+      - text: "June: Spatial Proteomics"
         href: 202506.html
-      - text: "July: "
-        href: 202507.html
-      - text: "August: "
-        href: 202508.html
-      - text: "September: "
-        href: 202509.html
-      - text: "October: "
-        href: 202510.html
-      - text: "November: "
-        href: 202511.html
-      - text: "December: "
-        href: 202512.html
-      - text: "February: "
-        href: 202602.html
-      - text: "March: "
-        href: 202603.html
+      # - text: "July: "
+      #   href: 202507.html
+      # - text: "August: "
+      #   href: 202508.html
+      # - text: "September: "
+      #   href: 202509.html
+      # - text: "October: "
+      #   href: 202510.html
+      # - text: "November: "
+      #   href: 202511.html
+      # - text: "December: "
+      #   href: 202512.html
+      # - text: "February: "
+      #   href: 202602.html
+      # - text: "March: "
+      #   href: 202603.html
   right:
   - text: Extra Resources
     href: 0_resources.html  
