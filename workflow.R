@@ -3,7 +3,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 wflow_status()
 
-wflow_build("analysis/0_contacts.Rmd")
+wflow_build(c("analysis/*.Rmd"))
 
 #
 gc()
