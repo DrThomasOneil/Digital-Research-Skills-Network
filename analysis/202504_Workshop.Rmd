@@ -1,0 +1,24 @@
+---
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+## Flow Cytometry in R: A Hands-On Introduction
+
+This beginner-friendly, hands-on workshop will guide users through a complete flow cytometry analysis workflow in R, from loading data to visualizing results. Through practical exercises, we’ll cover essential steps like generating histograms and scatterplots, extracting summary statistics, subsetting data, and performing dimension reduction and clustering—all while demonstrating the advantages of reproducible reports with RMarkdown. 
+
+Whether you're new to R or just curious about coding your analyses, this session will show you how accessible and powerful R can be for flow cytometry.
+
+**Your Demonstrators:**
+
+- Thomas O'Neil   
+- Nicole Fewings    
+- Yuchen Li (Online)
+
+**Author**: Yuchen Li
+
+
+
+
+

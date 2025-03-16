@@ -1,0 +1,41 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+## **Flow Cytometry Analysis**: Leveraging Software and R for Deeper Insights
+
+This DRSN series explores how both traditional software and R-based approaches can complement each other in flow cytometry analysis. Whether you rely on software, are curious about coding, or want to integrate both approaches, this series will help you expand your analytical toolkit.
+
+<wimr> 
+
+#### **Monday 14th April** (CASB Room [*TBD*] & Zoom)
+
+##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202504/202504_Seminar.html)
+
+We’ll first compare the strengths of GUI-based tools like FlowJo with the flexibility of coding.    
+**Speakers**: Suat Dervish, Nicole Fewings    
+(lunch from 12pm)
+
+##### [In-focus Workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202504/202504_InFocus.html)
+
+We’ll hold a discussion on key analytical considerations and available R packages. 
+
+**Speakers**: Givanna Putri, Elijah Willie
+
+#### **Monday 28h April** (WIMR Room C2.31 & Zoom)
+
+##### [Programming workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202504/202504_Workshop.html)
+
+The final hands-on session will introduce participants to performing flow cytometry analysis in R, providing a practical workflow for data visualization, summarization, and reproducibility. 
+
+**Demonstrators**: Thomas O’Neil, Nicole Fewings
+
+<wimr>
+
+## Sign up for these events:    
+
+<iframe width="640px" height="480px" src="https://forms.office.com/r/wL59cC8nhq?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+

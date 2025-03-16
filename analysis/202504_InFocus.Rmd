@@ -1,0 +1,50 @@
+---
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+## Flow Cytometry in R: Tools, Techniques, and Transitions
+
+This interactive session will dive into the analytical considerations for flow cytometry, covering key factors like batch effects, transformations, compensation, and QC. We’ll explore software and R-based packages, with presentations on FuseSOM and Spectre, providing practical insights for researchers looking to expand their flow cytometry analysis beyond traditional software.
+
+**Speakers**:   
+- Givanna Putri & Felix Marsh-Wakefield on Spectre    
+- Elijah Willie on FuseSOM
+
+<div style = "text-align: center">
+
+### Agenda{.tabset .tabset-fade}
+
+#### Data Considerations
+
+
+##### Batches   
+##### Transformation    
+##### Compensation    
+##### QC    
+
+#### Packages Available
+
+##### CytoNorm  
+
+##### FuseSOM   
+
+##### Spectre   
+
+##### ???
+
+#### Spectre
+
+##### Felix and Givanna to present on Spectre
+
+#### FuseSOM
+
+##### Elijah to present on FuseSOM
+
+</div>
+
+
+
+
+
