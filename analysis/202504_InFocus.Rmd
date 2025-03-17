@@ -12,9 +12,10 @@ This interactive session will dive into the analytical considerations for flow c
 - Givanna Putri & Felix Marsh-Wakefield on Spectre    
 - Elijah Willie on FuseSOM
 
-<div style = "text-align: center">
 
 ### Agenda{.tabset .tabset-fade}
+
+<div style = "text-align: center">
 
 #### Data Considerations
 

@@ -11,7 +11,7 @@ This DRSN series explores how both traditional software and R-based approaches c
 
 <wimr> 
 
-#### **Monday 14th April** (CASB Room [*TBD*] & Zoom)
+#### **Monday 15th April** (WIMR Seminar Room & Zoom)
 
 ##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202504_Seminar.html)
 
@@ -23,7 +23,7 @@ We’ll first compare the strengths of GUI-based tools like FlowJo with the flex
 
 We’ll hold a discussion on key analytical considerations and available R packages. 
 
-**Speakers**: Givanna Putri, Elijah Willie
+**Speakers**: Givanna Putri, FElix Marsh-Wakefield, Elijah Willie
 
 #### **Monday 28h April** (WIMR Room C2.31 & Zoom)
 
@@ -38,4 +38,4 @@ The final hands-on session will introduce participants to performing flow cytome
 ## Sign up for these events:    
 
 
-<iframe width="900px" height="900px" src="https://forms.office.com/r/wL59cC8nhq?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<iframe width="900px" height="900px" src="https://forms.office.com/r/FKdfCd1iW1?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
