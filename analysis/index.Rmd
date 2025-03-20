@@ -13,8 +13,8 @@ To do:
 <--->  
 
 <div style="text-align: left;">
-  <img src="assets/logo/logo.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
-  <div style="overflow: hidden; padding-top: 10%;">
+  <img src="assets/logo/DRSN_logo_smaller.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
+  <div style="overflow: hidden; padding-top: 8%;">
 
 ## **Digital Research Skills Network**    
 <br>
