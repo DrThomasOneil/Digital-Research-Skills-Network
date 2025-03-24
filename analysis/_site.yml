@@ -1,7 +1,7 @@
 name: analysis-user-group
 output_dir: ../docs
 navbar:
-  title: "<img src='assets/logo/logo.png' style='height:30px; vertical-align:middle; align-items:center; margin-right:10px;'>"
+  title: "<img src='assets/logo/DRSN_logo_smaller.png' style='height:30px; vertical-align:middle; align-items:center; margin-right:10px;'>"
   left:
   - text: Home
     href: index.html
