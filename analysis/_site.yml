@@ -61,3 +61,4 @@ output:
     css: adit/custom.css
     includes:
       after_body: adit/footer.html
+      in_header: adit/head.html
