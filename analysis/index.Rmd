@@ -1,8 +1,9 @@
 ---
-title: "DRSN"
 output:
   workflowr::wflow_html:
     toc: false
+    pagetitle: "DRSN"
+
 site: workflowr::wflow_site
 ---
 
