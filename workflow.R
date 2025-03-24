@@ -11,7 +11,7 @@ gc()
 gc()
 #
 
-wflow_publish(c("analysis/index.Rmd"))
+wflow_publish(c("analysis/*.Rmd"))
 
 wflow_status()
 wflow_view()
