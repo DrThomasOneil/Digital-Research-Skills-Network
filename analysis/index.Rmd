@@ -1,10 +1,10 @@
 ---
+title: '<span style = "display:none;">DRSN</span>'
 output:
   workflowr::wflow_html:
     toc: false
-    pagetitle: "DRSN"
-
 site: workflowr::wflow_site
+
 ---
 
 <!---
