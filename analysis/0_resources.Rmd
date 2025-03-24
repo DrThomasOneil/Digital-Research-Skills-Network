@@ -5,7 +5,7 @@ output:
     toc: no
 ---
 
-<dev class="hint-info">
+<dev class="hint-info"> 
 **I'll drop resources that I find that might be useful to others.**
 </dev>
 

@@ -27,7 +27,7 @@ This 10-chapter workshop series is designed to introduce users to R programming 
 [Start the Tutorial →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/index.html)
 
 <wimr>
-
+ 
 ## **Introduction: Shifting mindsets to programming**
 
 <div class="hint-goals">    

@@ -8,7 +8,7 @@ site: workflowr::wflow_site
 <!---
 To do:
 
-- add archive? 
+- add archive?  
 
 <--->  
 

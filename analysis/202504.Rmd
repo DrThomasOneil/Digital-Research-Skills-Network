@@ -9,7 +9,7 @@ output:
 
 This DRSN series explores how both traditional software and R-based approaches can complement each other in flow cytometry analysis. Whether you rely on software, are curious about coding, or want to integrate both approaches, this series will help you expand your analytical toolkit.
 
-<wimr> 
+<wimr>  
 
 #### **Monday 15th April** (WIMR Seminar Room & Zoom)
 
