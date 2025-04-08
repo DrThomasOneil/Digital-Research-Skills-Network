@@ -11,7 +11,7 @@ This DRSN series explores how both traditional software and R-based approaches c
 
 <wimr>  
 
-#### **Monday 15th April** (WIMR Seminar Room & Zoom)
+#### **Tuesday 15th April** (WIMR Seminar Room & Zoom)
 
 ##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202504_Seminar.html)
 
@@ -21,11 +21,11 @@ We’ll first compare the strengths of GUI-based tools like FlowJo with the flex
 
 ##### [In-focus Workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202504_InFocus.html)
 
-We’ll hold a discussion on key analytical considerations and available R packages. 
+We’ll hold a discussion on key analytic considerations and available R packages. 
 
-**Speakers**: Givanna Putri, FElix Marsh-Wakefield, Elijah Willie
+**Speakers**: Givanna Putri, Felix Marsh-Wakefield, Elijah Willie
 
-#### **Monday 28h April** (WIMR Room C2.31 & Zoom)
+#### **Monday 28th April** (WIMR Seminar Room & Zoom)
 
 ##### [Programming workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202504_Workshop.html)
 

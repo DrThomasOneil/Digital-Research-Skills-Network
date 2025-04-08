@@ -8,9 +8,9 @@ output:
  
 <div style="text-align: center">
 
-<read-time>**Monday 14th April, 11 am**</read-time>
+<read-time>**Tuesday 15th April, 11 am**</read-time>
 
-<read-time>CASB Room [*TBD*]</read-time>
+<read-time>WIMR Seminar Room</read-time>
 
 
 <read-time>[Zoom Link]()</read-time>
