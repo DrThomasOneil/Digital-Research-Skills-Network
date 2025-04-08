@@ -21,8 +21,8 @@ Make the workflowr outputs transparant and smaller!
 **********************/
 
 .btn-workflowr-report {
-  opacity: 0.2;
-  font-size: 0.4em;
+  opacity: 0;
+  font-size: 0em;
   padding: 2px 6px;
 }
 .btn-workflowr-fig {
