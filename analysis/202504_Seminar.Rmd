@@ -8,25 +8,23 @@ output:
  
 <div style="text-align: center">
 
-<read-time>**Tuesday 15th April, 11 am**</read-time>
+<read-time><span style="color:black;"><font size="3">**Tuesday 15th April, 11 am**</font></span></read-time>
 
-<read-time>WIMR Seminar Room</read-time>
-
+<read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
 
 <read-time>[Zoom Link]()</read-time>
 
-**Lunch Provided**
+<span style="color:#dd571c;"><font size="3">**Lunch Provided**</font></span>
 
 </div>
 
 </wimr>
 
-Flow cytometry analysis is often performed using intuitive, UI-based software like FlowJo, but as datasets grow in complexity, programming tools like R offer powerful alternatives. This seminar will contrast standard software workflows with programming-based approaches, highlighting where GUI-based tools excel and where scripting can unlock deeper insights. We’ll explore the strengths and limitations of both, covering practical examples, key decision points, and a case study where coding provided the flexibility needed to push analysis beyond software constraints.
+<span style="color:black;">Flow cytometry analysis is often performed using intuitive, UI-based software like FlowJo, but as datasets grow in complexity, programming tools like R offer powerful alternatives. This seminar will contrast standard software workflows with programming-based approaches, highlighting where GUI-based tools excel and where scripting can unlock deeper insights. We’ll explore the strengths and limitations of both, covering practical examples, key decision points, and a case study where coding provided the flexibility needed to push analysis beyond software constraints.
 
 **Speakers**:
 
 - Suat Dervish    
 - Nicole Fewings    
-- Yuchen Li   
 <br>
 
