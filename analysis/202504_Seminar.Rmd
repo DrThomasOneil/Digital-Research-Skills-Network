@@ -22,9 +22,7 @@ output:
 
 <span style="color:black;">Flow cytometry analysis is often performed using intuitive, UI-based software like FlowJo, but as datasets grow in complexity, programming tools like R offer powerful alternatives. This seminar will contrast standard software workflows with programming-based approaches, highlighting where GUI-based tools excel and where scripting can unlock deeper insights. We’ll explore the strengths and limitations of both, covering practical examples, key decision points, and a case study where coding provided the flexibility needed to push analysis beyond software constraints.
 
-**Speakers**:
-
-- Suat Dervish    
-- Nicole Fewings    
+<font size="2">**Speakers**: Suat Dervish, Nicole Fewings</font>
+   
 <br>
 

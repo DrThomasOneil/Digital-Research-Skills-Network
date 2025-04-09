@@ -13,7 +13,7 @@ This DRSN series explores how both traditional software and R-based approaches c
 
 #### **Tuesday 15th April** (WIMR Seminar Room & Zoom)
 
-##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202504_Seminar.html)
+##### [Seminar (11am)](C:/1_Yc/analysis-user-group/docs/202504_Seminar.html)
 
 We’ll first compare the strengths of GUI-based tools like FlowJo with the flexibility of coding.    
 **Speakers**: Suat Dervish, Nicole Fewings    

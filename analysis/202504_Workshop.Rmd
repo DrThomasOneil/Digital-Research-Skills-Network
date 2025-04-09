@@ -10,6 +10,19 @@ This beginner-friendly, hands-on workshop will guide users through a complete fl
 
 Whether you're new to R or just curious about coding your analyses, this session will show you how accessible and powerful R can be for flow cytometry.
 
+<div style="text-align: left">
+
+<read-time><span style="color:black;"><font size="3">**Time**: Monday 28th April, 11 am</font></span></read-time>
+
+<read-time><span style="color:black;"><font size="3">**In person**: WIMR Seminar Room</font></span></read-time>
+
+<read-time><span style="color:black;">**Online**:</span> [Zoom Link]()</read-time>
+
+</div>
+
+</wimr>
+
+
 **Your Demonstrators:**
 
 - Thomas O'Neil   
