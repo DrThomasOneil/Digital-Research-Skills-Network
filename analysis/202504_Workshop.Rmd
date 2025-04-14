@@ -12,11 +12,11 @@ Whether you're new to R or just curious about coding your analyses, this session
 
 <div style="text-align: left">
 
-<read-time><span style="color:black;"><font size="3">**Time**: Monday 28th April, 11 am</font></span></read-time>
+<read-time><span style="color:black;"><font size="3">**Time**: Monday 28th April, 1 pm</font></span></read-time>
 
 <read-time><span style="color:black;"><font size="3">**In person**: WIMR Seminar Room</font></span></read-time>
 
-<read-time><span style="color:black;">**Online**:</span> [Zoom Link]()</read-time>
+<read-time><span style="color:black;">**Online**:</span> [Zoom Link](https://uni-sydney.zoom.us/s/88109360455)</read-time>
 
 </div>
 

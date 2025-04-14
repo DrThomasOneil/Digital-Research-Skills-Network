@@ -14,7 +14,7 @@ This interactive session will dive into the analytical considerations for flow c
 
 <read-time><span style="color:black;"><font size="2">**In person**: WIMR Seminar Room</font></span></read-time>
 
-<read-time><span style="color:black;"><font size="2">**Online**:</font></span> [Zoom Link]()</read-time>
+<read-time><span style="color:black;"><font size="2">**Online**:</font></span> [Zoom Link](https://uni-sydney.zoom.us/s/88109360455)</read-time>
 
 </div>
  
