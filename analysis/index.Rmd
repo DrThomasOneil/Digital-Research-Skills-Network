@@ -44,13 +44,13 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 This site is organised into several sections to help you quickly find what you need:
 
-- [**Getting Started in R:**](https://drthomasoneil.github.io/analysis-user-group/0_start.html) A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
-- [**Announcements:**](https://drthomasoneil.github.io/analysis-user-group/0_announcements.html) Updates on upcoming workshops, deadlines, and important notices.
-- <strike>[**Workshops:**](https://drthomasoneil.github.io/analysis-user-group/0_workshops.html) Detailed instructions, scripts, and examples for each workshop session.</strike>
-- [**Extra Resources:**](https://drthomasoneil.github.io/analysis-user-group/0_resources.html) Links to helpful tutorials, data sets, and cheat sheets. 
-- [**Contacts:**](https://drthomasoneil.github.io/analysis-user-group/0_contacts.html) Acknowledge who contributed to these workshops! :) 
+- [**Getting Started in R:**](https://drthomasoneil.github.io/Digital-Research-Skills-Networkp/0_start.html) A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
+- [**Announcements:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_announcements.html) Updates on upcoming workshops, deadlines, and important notices.
+- <strike>[**Workshops:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_workshops.html) Detailed instructions, scripts, and examples for each workshop session.</strike>
+- [**Extra Resources:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_resources.html) Links to helpful tutorials, data sets, and cheat sheets. 
+- [**Contacts:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html) Acknowledge who contributed to these workshops! :) 
 
-We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/analysis-user-group/0_contacts.html).
+We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html).
 
 You'll also see graphics like this throughout that emphasis 
 

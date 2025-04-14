@@ -7,19 +7,19 @@ output:
 
 ## **Flow Cytometry Analysis**: Leveraging Software and R for Deeper Insights
 
-This DRSN series explores how both traditional software and R-based approaches can complement each other in flow cytometry analysis. Whether you rely on software, are curious about coding, or want to integrate both approaches, this series will help you expand your analytical toolkit.
+This DRSN series explores how both traditional software and R-based approaches can complement each other in flow cytometry analysis. Whether you rely on software, are curious about coding, or want to integrate both approaches, this series will help you expand your analysis toolkit.
 
 <wimr>  
 
 #### **Tuesday 15th April** (WIMR Seminar Room & Zoom)
 
-##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202504_Seminar.html)
+##### [Seminar (11am)](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202504_Seminar.html)
 
 We’ll first compare the strengths of GUI-based tools like FlowJo with the flexibility of coding.    
 **Speakers**: Suat Dervish, Nicole Fewings    
 (lunch from 12pm)
 
-##### [In-focus Workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202504_InFocus.html)
+##### [In-focus Workshop (1 – 3pm)](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202504_InFocus.html)
 
 We’ll hold a discussion on key analytic considerations and available R packages. 
 
@@ -27,7 +27,7 @@ We’ll hold a discussion on key analytic considerations and available R package
 
 #### **Monday 28th April** (WIMR Seminar Room & Zoom)
 
-##### [Programming workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202504_Workshop.html)
+##### [Programming workshop (1 – 3pm)](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202504_Workshop.html)
 
 The final hands-on session will introduce participants to performing flow cytometry analysis in R, providing a practical workflow for data visualization, summarization, and reproducibility. 
 

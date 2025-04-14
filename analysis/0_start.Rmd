@@ -24,7 +24,7 @@ This 10-chapter workshop series is designed to introduce users to R programming 
 
 <read-time><i>**Estimated time**: 1.5 hours</i></read-time>
 
-[Start the Tutorial →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/index.html)
+[Start the Tutorial →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/index.html)
 
 <wimr>
  
@@ -39,7 +39,7 @@ Introduce programming concepts and the mindset behind programmatic workflows.
 &nbsp;&nbsp;&#8226; Emphasize reproducibility and structured workflows.    
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/introduction.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/introduction.html)
 
 <wimr>
 
@@ -56,7 +56,7 @@ Set up R and RStudio, and get familiar with the interface.
 &nbsp;&nbsp;&#8226; Start your first project.   
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-1-getting-started-in-r-and-rstudio.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-1-getting-started-in-r-and-rstudio.html)
 
 <wimr>
 
@@ -71,7 +71,7 @@ Learn about data types and structures in R.
 &nbsp;&nbsp;&#8226; Importing data (RDS, Excel, CSV files).  
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-2-data-types-and-structures.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-2-data-types-and-structures.html)
 
 <wimr>
 
@@ -86,7 +86,7 @@ Understand programming logic for automating tasks.
 &nbsp;&nbsp;&#8226; Writing functions.    
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-3-basic-programming.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-3-basic-programming.html)
 
 <wimr>
 
@@ -101,7 +101,7 @@ Introduce `tidyverse` for filtering, mutating, summarizing and pivoting data.
 &nbsp;&nbsp;&#8226; Pivot longer and Pivot wider      
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-4-data-manipulation-with-tidyverse.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-4-data-manipulation-with-tidyverse.html)
 
 <wimr>
 
@@ -115,7 +115,7 @@ Create and customize visualizations using `ggplot2`.
 &nbsp;&nbsp;&#8226; Customise labels, themes, and colors.   
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-5-data-visualisation-with-ggplot2.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-5-data-visualisation-with-ggplot2.html)
 
 <wimr>
 
@@ -130,7 +130,7 @@ Learn additional visualisation techniques.
 &nbsp;&nbsp;&#8226; Savings plots   
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-6-data-visualisation-with-ggplot2_2.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-6-data-visualisation-with-ggplot2_2.html)
 
 <wimr>
 
@@ -144,7 +144,7 @@ Apply simple statistic to the synthetic data.
 &nbsp;&nbsp;&#8226; Correlation and regression.       
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-7-statistical-analysis.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-7-statistical-analysis.html)
 
 <wimr>
 
@@ -162,13 +162,13 @@ Build a dynamic and shareable report of your analysis.
 &nbsp;&nbsp;&#8226; Exporting to PDF and HTML.    
 </div>
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/chapter-8-reproducible-reports-with-rmarkdown.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/chapter-8-reproducible-reports-with-rmarkdown.html)
 
 <wimr>
 
 ### **Conclusions**
 
-[Go to Chapter →](https://drthomasoneil.github.io/analysis-user-group/r-tutorial/_book/conclusions.html)
+[Go to Chapter →](https://drthomasoneil.github.io/Digital-Research-Skills-Network/r-tutorial/_book/conclusions.html)
 
 
 <e>
