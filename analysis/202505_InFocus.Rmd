@@ -1,0 +1,36 @@
+---
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+## Spatial transcriptomics: what do you need to consider
+
+In this session, 10X Genomics will lead the discussion on the key analytical considerations of Visium and Xenium analysis, such as cell segmentation and panel design.
+
+<div style="text-align: left">
+
+<read-time><span style="color:black;"><font size="2">**Time**: Monday 5th May, 1-3 pm</font></span></read-time>
+
+<read-time><span style="color:black;"><font size="2">**In person**: WIMR Seminar Room</font></span></read-time>
+
+<read-time><span style="color:black;"><font size="2">**Online**:</font></span> [Zoom Link]()</read-time>
+
+</div>
+ 
+**Speakers**: 
+
+- 10X Genomics
+
+### Agenda{.tabset .tabset-fade}
+
+<div style = "text-align: center">
+
+<read-time><i>**Content Coming Soon**</i></read-time>
+
+</div>
+
+
+
+
+

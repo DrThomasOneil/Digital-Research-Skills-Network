@@ -3,7 +3,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 wflow_status()
 
-wflow_build(c("analysis/*index.Rmd"))
+wflow_build("analysis/202504_Workshop.Rmd")
 
 #
 gc()
@@ -11,7 +11,7 @@ gc()
 gc()
 #
 
-wflow_publish(c("analysis/*.Rmd"))
+wflow_publish("analysis/202504_Workshop.Rmd")
 
 wflow_status()
 wflow_view()

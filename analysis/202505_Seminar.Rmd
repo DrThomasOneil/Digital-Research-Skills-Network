@@ -1,0 +1,28 @@
+---
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+## An introduction to Spatial Transcriptomics at WIMR
+ <br>
+<div style="text-align: center">
+
+<read-time><span style="color:black;"><font size="3">**Monday 5th May, 11 am**</font></span></read-time>
+
+<read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
+
+<read-time>[Zoom Link]()</read-time>
+
+<span style="color:#dd571c;"><font size="3">**Lunch Provided**</font></span>
+
+</div>
+
+</wimr>
+
+<span style="color:black;">Dr. Joey Lai and Dr. Li Ma will discuss and showcase the power of the spatial transcriptomics technology at WIMR. An early adopter of Visium from the HIV and Mucosal Immunology group will present their single-cell and spatial data analysis in the study of Chron's disease.
+
+<font size="2">**Speakers**: Joey Lai, Li Ma, Kirstie Bertram</font>
+   
+<br>
+

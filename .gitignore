@@ -11,11 +11,9 @@ analysis/*_cache
 analysis/site_libs
 analysis/unfinished/*.Rmd
 docs/unfinished/*.Rmd
-docs/r-tutorial/on-hold/*.Rmd
-
+docs/r-tutorial/on-hold/*.Red
 workflow.R
 *.Rproj
 analysis/data/
-
 analysis-user-group.Rproj
 data/
