@@ -2,36 +2,840 @@
 output:
   workflowr::wflow_html:
     toc: no
+    code_folding: "hide"
 ---
- 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning=FALSE, error=F)
+```
+
 ## Flow Cytometry in R: A Hands-On Introduction
 
 This beginner-friendly, hands-on workshop will guide users through a complete flow cytometry analysis workflow in R, from loading data to visualizing results. Through practical exercises, we’ll cover essential steps like generating histograms and scatterplots, extracting summary statistics, subsetting data, and performing dimension reduction and clustering—all while demonstrating the advantages of reproducible reports with RMarkdown. 
 
 Whether you're new to R or just curious about coding your analyses, this session will show you how accessible and powerful R can be for flow cytometry.
 
-<div style="text-align: left">
-
-<read-time><span style="color:black;"><font size="3">**Time**: Monday 28th April, 1 pm</font></span></read-time>
-
-<read-time><span style="color:black;"><font size="3">**In person**: WIMR Seminar Room</font></span></read-time>
-
-<read-time><span style="color:black;">**Online**:</span> [Zoom Link](https://uni-sydney.zoom.us/s/88109360455)</read-time>
-
-</div>
-
-</wimr>
-
-
 **Your Demonstrators:**
 
 - Thomas O'Neil   
-- Nicole Fewings    
 - Yuchen Li (Online)
 
-**Author**: Yuchen Li
+**Author**: Yuchen Li, Thomas O'Neil
+
+[Zoom link](https://uni-sydney.zoom.us/s/88109360455) (recorded)
+
+# Introduction
+
+In this workshop, we aim to give an overview of what is possible for flow analysis in R. We will touch on two workflows:
+
+- data visualisation and data collection
+
+- dimension reduction and clustering
+
+We'll use a 25-colour flow cytometry dataset of innate lymphoid cells (ILC), natural killer cells (NK), and innate-like T cells in human intestinal tissues, after excluding dead cells, doublets, mast cells and basophils, hematopoietic stem cells, myeloid cells and granulocytes, and B cells. 
+
+The original data was published as is available in [OMIP-082](https://pubmed.ncbi.nlm.nih.gov/35018731/) 
+
+# Setup{.tabset .tabset-fade}
+
+We'll take you through steps from the beginning, installing packages and loading data. 
+
+## Preparation: packages and directories
+
+Packages are collections of functions. Many are not in-built in the base R but they do pretty cool things, enabling generating pretty plots, performing data wrangling in an efficient way, etc. R also has a large developer community, with many community-developed packages available on platforms like `Bioconductor` or `GitHub`.
+
+```{r, message=FALSE, warning=FALSE}
+# Install packages used in this workshop.
+
+#install.packages("tidyverse")
+#install.packages("ggridges")
+#install.packages("GGally")
+#install.packages("cowplot")
+#install.packages("data.table")
+#install.packages("BiocManager")
+
+#BiocManager::install("FuseSOM")
+#BiocManager::install("FlowSOM")
+
+#if(!require('remotes')) {install.packages('remotes')}
+#remotes::install_github(repo = "immunedynamics/spectre")
 
 
+# Load packages
+library(tidyverse)
+library(ggridges)
+library(cowplot)
+library(Spectre)
+library(FuseSOM)
+library(FlowSOM)
+library(GGally)
+library(umap)
+library(Rtsne)
+library(data.table)
+
+theme_set(theme_classic())
+```
+
+Create some folders for plots and data.
+
+```{r, message=FALSE, warning=FALSE, eval=F}
+dir.create("plots")
+dir.create("data")
+download.file("https://raw.githubusercontent.com/DrThomasOneil/Digital-Research-Skills-Network/refs/heads/main/docs/assets/downloads/example_flowdata_omip082_20k.csv", destfile = "data/example_flowdata_omip082_20k.csv")
+```
+
+<details><summary>Setting seed is crucial for reproducibility:</summary>
+
+It's a number of your choice, which pins down the "way" that how the random process will be performed when you re-run these codes. (Easier example: Say if you randomly take 10 numbers with a mean of 50, there will be tonnes of ways to generate the numbers. But a seed ensures that the report always returns the same set of numbers. It's the similar idea when you run other algorithms including randomness, e.g. clustering and generating a UMAP).
+
+```{r}
+set.seed(1337)
+```
+</details>
+
+## Load flow cytometry data
+
+The expression data is stored in a `.csv` file. We'll first load this in.
+
+```{r}
+# Read the .csv file in the working directory.
+ILC <- read.csv("data/example_flowdata_omip082_20k.csv")
+```
+
+Have a look at the broad features of this dataset. In this dataset, the channel names are stored as column names. Each row represents a cell, storing expression values in each channel. 
+
+```{r, eval=F}
+# Dimension: number of cells x number of channels.
+dim(ILC)
+
+# Check the column names.
+colnames(ILC)
+```
+
+The column names are wordy, with markers, fluorophores, and channels. We just need the marker names to proceed. The first column 'X' is just indexing the number of rows. It's not necessary either.<br>
+
+Remove the first column.
+
+```{r}
+# This keeps the 2-33 columns in the dataset, and store the change.
+ILC <- ILC[, -1]
+colnames(ILC)
+
+# Same with it, you can just enter the column indexes from 2-33.
+# ILC <-ILC[,c(2:33)]
+```
+
+Change the column names.
+
+```{r}
+# Substitute everything after the first '_' with an empty "" in the column names that have the pattern "_" and something.
+colnames(ILC) <- sub("_.*","",colnames(ILC)) #'_' is the exact character in the names, the '.' means 'any character', '*' means 'any of the preceding things'. 
+
+colnames(ILC)
+
+# Fix up the broken names FVS700 and CD14&CD19
+# This tells R to: find which of the column equals "FVS" among all columns in the data, then change it to FVS700.
+colnames(ILC)[colnames(ILC) == "FVS"] <- "FVS700"
+colnames(ILC)[colnames(ILC) == "CD14"] <- "CD14.CD19"
+
+# Have a look
+colnames(ILC)
+```
+
+## Time gate QC. 
+
+The data is already preprocessed in FlowJo. But if you are interested, you can view the Time gate, and filter the data based on this in R.
+
+```{r}
+ggplot(ILC, aes(x = Time, y = FSC.A))+
+  geom_bin_2d(bins = 200, show.legend = FALSE)+
+    scale_fill_gradientn(colours = c("blue", "green", "yellow", "red"))+
+  geom_vline(xintercept = 4600000)
+
+# Filter out the cells above the threshold.
+ILC <- ILC[ILC$Time < 4600000,]
+ggplot(ILC, aes(x = Time, y = FSC.A))+
+  geom_bin_2d(bins = 200, show.legend = FALSE)+
+    scale_fill_gradientn(colours = c("blue", "green", "yellow", "red"))
+```
+
+# Visualisations
+
+## Transformations
+
+Raw Flow Cytometry data looks bad!
+
+```{r}
+ILC %>% ggplot(aes(x=CD4, y=CD3))+        
+  geom_point()
+```
+
+So we transform the data to make it look better. In FlowJo, when you adjust the axes, you can see several transformations available. One is arcsinh (the inverse of hyperbolic sin, if you want to get mathy). Smaller values centre around zero, and larger values separate, giving the appearance that we're familiar with. 
+
+We are also able to adjust the level of transformation by dividing the values by some cofactor. 
+
+```{r, fig.height=10, fig.width=10}
+# decide on a cofactor - try changing it and seeing how the data changes
+cofactor = 500
+ILC_transf <- asinh(ILC[,7:31]/cofactor) #7:31 are the columns with markers.
+
+ILC_transf <- cbind(ILC_transf, ILC[,c(1:6,32)]) # Add the first 6 columns & time back in.
+
+ILC_transf %>% ggplot(aes(x=CD4, y=CD3))+
+  geom_bin_2d(bins = 200, show.legend=T)
+```
 
 
+```{r, fig.height=10, fig.width=10, warning=FALSE}
+# Initialize an empty list to store the plots
+plots <- list()
+# Define the x-axis marker for the plots
+xaxis = "CD39" # Choose an x-axis marker for comparison
 
+# Loop through each column in the dataset
+for(i in 1:ncol(ILC_transf)) {
+  # Get the marker name for the current column
+  Marker <- colnames(ILC_transf)[i]
+  
+  # Generate a 2D bin plot for the current marker against the chosen x-axis marker
+  p <- ILC_transf %>% 
+        ggplot(aes_string(x = xaxis, y = Marker)) +        
+        geom_bin_2d(bins = 200, show.legend = FALSE) + # Create a heatmap-style scatter plot
+        scale_fill_gradientn(colors = c("blue", "yellow", "red")) # Define the color gradient
+  
+  # Add the generated plot to the list
+  plots[[i]] <- p
+}
+
+# Combine all the plots into a grid layout and display them
+cowplot::plot_grid(plotlist = plots)
+rm(plots)
+```
+
+This code demonstrates how you would manually transform individual columns in the dataset using different cofactors for each marker. It creates a new dataset (`ILC_transf_indiv`) where specific columns are transformed using the `asinh` function with their respective cofactors. This allows for more granular control over transformations. 
+
+```{r, eval=F}
+ILC_transf_indiv <- ILC
+ILC_transf_indiv[, "CD3"] <- asinh(ILC[,"CD3"]/1000)
+ILC_transf_indiv[, "CD4"] <- asinh(ILC[,"CD4"]/500)
+# and so on...
+
+# Visualize it
+ILC_transf_indiv %>% ggplot(aes(x=CD3, y=CD4))+        
+        geom_bin_2d(bins = 200, show.legend=F) +
+        scale_fill_gradientn(colors = c("blue",  "yellow", "red"))
+
+rm(ILC_transf_indiv)
+```
+
+## Histograms
+
+We can visualize the marker expressions via histograms and density plots.
+
+```{r}
+# For example, this generates a histogram of CD3 expression.
+ILC_transf %>%
+  ggplot(aes(x = CD3))+
+  # Plot the histogram, and change the fill colour to lightblue, the line colour to black.
+  geom_histogram(bins = 35, fill = "lightblue", colour ="black")+
+  # Add labels
+  ylab("Frequency")
+
+# A density plot.
+ILC_transf %>%
+  ggplot(aes(x = CD3))+
+  geom_density(linewidth = 0.7, colour = "red4", aes(fill = "red"), alpha = 0.5,show.legend = FALSE)+
+  ylab("Density")
+
+```
+
+We can loop through the channels and create a density plot for all 25 markers.
+
+```{r, message = FALSE}
+# Initialise an empty list to store the plots
+plots<- list()
+
+# Loop through each column in the dataset
+for (i in 1:ncol(ILC_transf)){
+
+  # Get the marker name for the current column
+  Marker <- colnames(ILC_transf)[i]
+
+  # Generate the histogram for the current marker
+  p <- ILC_transf %>%
+  ggplot(aes(x = .data[[Marker]]))+
+    geom_density(linewidth = 0.7, colour = "red4", aes(fill = "red"), alpha = 0.5,show.legend = FALSE)+
+    labs(x=Marker,y="")+
+    theme(axis.text = element_text(size=1))
+
+  # Add the generated plot to the list
+  plots[[i]] <- p
+}
+
+plot_grid(plotlist = plots[1:25])
+rm(plots)
+```
+<br>
+
+## Scatter plot
+
+Like what we do in Flowjo, we can visualize 2 markers' expressions, We can generate scatterplots.
+
+```{r}
+ILC_transf %>%
+  ggplot(aes(x = CD4, y = CD3))+
+  geom_point(color="blue", alpha=0.1)
+
+# Generate a scatterplot with a density overlay.
+ILC_transf %>% ggplot(aes(x=CD4, y=CD3))+        
+  geom_bin_2d(bins = 200, show.legend = F)+
+  scale_fill_gradientn(colors = c("blue",  "yellow", "red"))
+
+```
+
+## Contour plot
+
+And a 2-marker countour plot. You can easily make it more stylish by adding layers in ggplot!
+
+```{r collapse=T}
+
+# A contour plot of CD3 and CD4 expression values.
+ILC_transf %>%
+  ggplot(aes(x = CD3, y = CD4))+
+  geom_density_2d(colour = "black", bins=50)+
+  xlab("CD3 BUV563")+
+  ylab("CD4 APC-Cy7")
+
+# A contour plot of CD3 and CD4 expression over a scatter plot.
+ILC_transf %>%
+  ggplot(aes(x = CD3, y = CD4))+        
+  geom_point(color = "grey", alpha=0.5)+
+  geom_density_2d(colour = "black", bins=50, alpha=0.5)+
+  xlab("CD3 BUV563")+
+  ylab("CD4 APC-Cy7")
+
+# A contour plot of CD3 and CD4 expression over a density plot.
+ILC_transf %>%
+  ggplot(aes(x = CD3, y = CD4))+        
+  geom_bin_2d(bins = 200)+
+  scale_fill_gradientn(colors = c("blue",  "yellow", "red"))+
+  geom_density_2d(colour = "black")+
+  xlab("CD3 BUV563")+
+  ylab("CD4 APC-Cy7")
+
+```
+
+# Subsetting data and summary statistics{.tabset .tabset-fade}
+
+While not as efficient as FlowJo, we can subset data after exporting. We wouldn't normally do this in R, but we'll show you how you could subset in R and for the purposes of visualisation. 
+
+## Subsetting
+```{r}
+# Plot a 2-marker plot of CD3 and CD4 expression values. 
+ILC_transf %>%
+  ggplot(aes(x = CD3, y = CD4))+        
+  geom_bin_2d(bins = 200)+
+  scale_fill_gradientn(colors = c("blue",  "yellow", "red"))+
+  xlab("CD3 BUV563")+
+  ylab("CD4 APC-Cy7")+
+  geom_vline(xintercept = 1.3)+ #choose the x intercept
+  geom_hline(yintercept = 0.6)  #choose the y intercept
+```
+
+Subset the dataset based on these thresholds.
+
+```{r}
+# This code creates a new column named 'subset' in the 'ILC_transf' dataset.
+# The 'subset' column categorises rows based on the values of 'CD3' and 'CD4' columns:
+# - "CD3+CD4+": if CD3 > 1.3 and CD4 > 0.6
+# - "CD3+CD4-": if CD3 > 1.3 and CD4 <= 0.6
+# - "CD3-CD4+": if CD3 <= 1.3 and CD4 > 0.6
+# - "CD3-CD4-": if CD3 <= 1.3 and CD4 <= 0.6
+# The 'mutate' function from the dplyr package is used to add this new column.
+
+ILC_transf <- ILC_transf %>% 
+  mutate(subset = case_when(
+    CD3 > 1.3 & CD4 > 0.6 ~ "CD3+CD4+",
+    CD3 > 1.3 & CD4 <= 0.6 ~ "CD3+CD4-",
+    CD3 <= 1.3 & CD4 > 0.6 ~ "CD3-CD4+",
+    TRUE ~ "CD3-CD4-"
+  ))
+```
+
+### Visualise the subsets in dot plots
+```{r}
+ILC_transf %>%
+  ggplot(aes(x = CD3, y = CD4, color=subset))+        
+  geom_point()+
+  xlab("CD3 BUV563")+
+  ylab("CD4 APC-Cy7")+geom_vline(xintercept = 1.3)+
+  geom_hline(yintercept = 0.6)
+
+# Look at different markers coloured by subset
+ILC_transf %>%
+  ggplot(aes(x = CD56, y = CD16, color=subset))+        
+  geom_point()
+
+# Split by subset
+ILC_transf %>%
+  ggplot(aes(x =CD56, y = CD16))+        
+  geom_bin_2d(bins = 200)+
+  scale_fill_gradientn(colors = c("blue",  "yellow", "red"))+
+  facet_wrap(~subset)
+
+ILC_transf %>%
+  ggplot(aes(x =FSC.A, y = SSC.A))+        
+  geom_bin_2d(bins = 200)+
+  scale_fill_gradientn(colors = c("blue",  "yellow", "red"))+
+  facet_wrap(~subset)
+```
+
+### Histograms
+
+```{r, warning=FALSE}
+ILC_transf %>%
+  ggplot(aes(x = CD56, color = subset, fill = subset)) +
+  geom_density(alpha = 0.2, linewidth = 1)+
+  xlim(quantile(ILC_transf$CD56, 0.001),quantile(ILC_transf$CD56, 0.999))
+
+#using ggridges
+ILC_transf %>%
+  ggplot(aes(x = CD56, y = subset, fill = subset)) +
+  geom_density_ridges(scale = 1.2, alpha = 0.6, colour = "black") +
+  theme_ridges() +
+  theme(legend.position = "none")+
+  labs(y="", x="", title = "CD56")+
+  xlim(quantile(ILC_transf$CD56, 0.001),quantile(ILC_transf$CD56, 0.999))
+```
+
+You could mass print these using a loop, as we did for the density plots above. You can also adjust the marker you output, as not all markers or combinations of markers are useful.
+
+## Summary statistics
+
+While subsetting is not as efficient as FlowJo, summarising data is! 
+
+We can first collect subset percentages and output them in a table, in text, and even in a plot. Then we can calculate summary statistics like MFI & gMFI.
+
+```{r}
+# total summary
+round(table(ILC_transf$subset)*100/nrow(ILC_transf),2) # % of each subset
+
+# individual marker
+ILC_transf %>% 
+  group_by(subset) %>% 
+  summarise(Percent = round(n()/nrow(ILC_transf)*100,2)) %>%
+  mutate(subset = factor(subset, levels = c("CD3+CD4+", "CD3+CD4-", "CD3-CD4+", "CD3-CD4-")))%>%
+  mutate(Subsets = "Subsets") %>%
+  ggplot(aes(x=Subsets,y = Percent, fill = subset)) +
+    geom_bar(stat = "identity", show.legend = FALSE) +
+    ylab("Percentage") +
+    xlab("") +
+    scale_fill_manual(values = c("CD3+CD4+" = "blue", "CD3+CD4-" = "red", "CD3-CD4+" = "green", "CD3-CD4-" = "yellow")) +
+    theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) +
+    theme(axis.text.y = element_text(size=10)) +
+    theme(legend.position = "none") +
+    theme(plot.title = element_text(hjust = 0.5, size=10)) +
+    ggtitle("Subsets of CD3+/-CD4+/- cells")
+```
+
+We can also calculate the percentage of subsets in line, meaning we don't have to change these lines of text based on different results or different data:
+- CD3+CD4+: `r round(sum(ILC_transf$subset == "CD3+CD4+")/nrow(ILC_transf)*100,2)`%
+
+- CD3+CD4-: `r round(sum(ILC_transf$subset == "CD3+CD4-")/nrow(ILC_transf)*100,2)`%
+
+- CD3-CD4+: `r round(sum(ILC_transf$subset == "CD3-CD4+")/nrow(ILC_transf)*100,2)`%
+
+- CD3-CD4-: `r round(sum(ILC_transf$subset == "CD3-CD4-")/nrow(ILC_transf)*100,2)`%
+
+<details>
+<summary>**You can also quickly calculate summary statistics like MFI, gMFI, medianFI**:</summary>
+
+**Arithmatic MFI**  
+
+```{r}
+ILC$subset  <- ILC_transf$subset # Add the subset column to the original data.
+
+ILC %>% 
+  group_by(subset) %>% 
+  summarise(across(7:31, mean, .names = "MFI_{col}"))
+
+```
+
+**Median FI**
+
+```{r}
+ILC %>% 
+  group_by(subset) %>% 
+  summarise(across(7:31, mean, .names = "MFI_{col}"))
+```
+
+**geometric MFI**
+
+The traditional formula written out would be like `ILC_transf %>% prod(CD56)^(1/nrow(CD56))`. However, as our data is *compensated*, there are meaningful negative values and 0s that we don't want to get rid of, which if you run on this data removes two subsets entirely. FlowJo calculates the *graph spaces* as gMFI to enable it to deal with negatives and 0s. Here in this case, our data is already asinh transformed to accomodate the -ve and 0s and bizzare expression values. It may be better to stick with the arithmatic mean instead of forcing the geometric mean.
+
+</details>
+
+<br>
+
+# nxn plots
+
+You can also create a loop to view the nxn plots.
+
+```{r, fig.width=20, fig.height=20, warning=FALSE}
+# Select only numeric marker columns
+marker_cols <- colnames(ILC_transf)[1:25] # adjust if needed
+
+# Make a customised function for plot streamline
+custom_bin_plot <- function(data, mapping, ...) {
+  ggplot(data = data, mapping = mapping) +
+    geom_bin_2d(bins = 50) +
+    scale_fill_gradientn(colours = c("blue", "yellow", "red")) +
+    theme_minimal()
+}
+
+# Generate plots
+p <- ggpairs(
+  ILC_transf,
+  columns = marker_cols,
+  lower = list(continuous = custom_bin_plot),
+  diag = list(continuous = wrap("densityDiag", alpha = 0.4)),
+  upper = list(continuous = wrap("cor", size = 3))
+)
+ggsave("plots/nxn.png",p, width=25, height=25,unit="in")
+
+rm(p,custom_bin_plot, marker_cols)
+```
+
+
+# Dimension reduction and clustering
+
+There are several ways to perform clustering (e.g. FlowSOM, FuseSOM) and dimension reduction (e.g. PCA, UMAP, tSNE). 
+
+In this section, we'll cover **clustering** and **dimension reduction** on our one sample. 
+
+## Clustering{.tabset .tabset-fade}
+
+Clustering groups our cells based on the input expressions we choose. 
+
+### FlowSOM
+[Read more](https://bioconductor.org/packages/release/bioc/html/FlowSOM.html)
+
+```{r, message = FALSE}
+
+# Perform clustering
+clusters <- FlowSOM::FlowSOM(
+  input=as.matrix(ILC_transf[,1:32]),
+  silent = FALSE,
+  colsToUse = c(1,4,6:14,16:25),
+  nClus = 15)
+
+# Annotate the cluster that the cell belongs to
+ILC_transf$flowSOM<- GetMetaclusters(clusters)
+FlowSOM::GetMetaclusterMFIs(clusters)
+
+# Plot CD4 expression values on clusters
+ILC_transf %>%
+  ggplot(aes(x = CD56, y = flowSOM, fill = flowSOM)) +
+  geom_density_ridges(scale = 1.2, alpha = 0.6, colour = "black") +
+  theme_ridges() +
+  theme(legend.position = "none")+
+  labs(y="", x="", title = "CD56")
+```
+
+### FuseSOM
+[Read more](https://bioconductor.org/packages/release/bioc/html/FlowSOM.html)
+
+```{r, message = FALSE}
+
+risomMarkers <- colnames(ILC_transf)[c(1,4,6:14,16:25)]
+clusters <- runFuseSOM(data = as.matrix(ILC_transf[,1:32]), markers = risomMarkers, 
+                        numClusters = 15)
+
+ILC_transf$fuseSOM<- as.numeric(unlist(lapply(str_split(clusters$clusters, "_"), function(x) x[[2]])))
+
+ILC_transf %>%
+  ggplot(aes(x = CD39, y = as.factor(fuseSOM), fill=as.factor(fuseSOM))) +
+  geom_density_ridges(scale = 1.2, alpha = 0.6, colour = "black") +
+  theme_ridges() +
+  theme(legend.position = "none")+
+  labs(y="", x="", title = "CD39")
+```
+
+## Dimension Reduction{.tabset .tabset-fade}
+
+We'll generate a PCA, a tSNE and a UMAP. I'll then run through all of this in the Spectre packge. 
+
+```{r message=F, warning=F, eval=F}
+
+pca <- prcomp(as.matrix(ILC_transf[,c(1,4,6:14,16:25)]), center = TRUE)
+
+ILC_transf <- ILC_transf %>% 
+  mutate(PC1 = pca$x[,1],
+         PC2 = pca$x[,2])
+
+# can take a while
+tsne <- Rtsne(as.matrix(ILC_transf[,c(1,4,6:14,16:25)]), dims = 2, perplexity = 30, verbose = TRUE)
+
+ILC_transf <- ILC_transf %>% 
+  mutate(tSNE1 = tsne$Y[,1],
+         tSNE2 = tsne$Y[,2])
+
+umap <- umap(ILC_transf[,c(1,4,6:14,16:25)])
+ILC_transf <- ILC_transf %>% 
+  mutate(UMAP1 = umap$layout[,1],
+         UMAP2 = umap$layout[,2])
+
+rm(pca,umap,tsne)
+```
+```{r, eval=F}
+saveRDS(ILC_transf,"data/clustered_data.rds")
+```
+
+### Visualisations
+
+```{r}
+ILC_transf <- readRDS("data/clustered_data.rds")
+ggplot(ILC_transf, aes(PC1,PC2, color= as.factor(flowSOM))) +
+  geom_point()
+
+ggplot(ILC_transf, aes(tSNE1,tSNE2, color= as.factor(flowSOM))) +
+  geom_point()
+
+ggplot(ILC_transf, aes(UMAP1,UMAP2, color= as.factor(flowSOM))) +
+  geom_point()+xlim(-7,10)
+
+# Colour overlayed by the expression of one marker.
+ggplot(ILC_transf, aes(UMAP1,UMAP2, color= CD3)) +
+  geom_point() + 
+  scale_color_viridis_c()+xlim(-7,10)
+
+ggplot(ILC_transf, aes(UMAP1,UMAP2, color= CD16)) +
+  geom_point() + 
+  scale_color_viridis_c()+xlim(-7,10)
+
+```
+
+### Spectre
+
+[Read more](https://immunedynamics.io/spectre/)
+
+```{r, message = F, warning=FALSE}
+# Spectre has easy plotting tools to visualize the results of clustering and dimension reduction.
+make.colour.plot(ILC_transf, 
+                 "tSNE1", "tSNE2", "subset",  
+                 add.label = TRUE,
+                 blank.axis = T,
+                 path = "plots")
+make.colour.plot(ILC_transf, 
+                 "tSNE1", "tSNE2", "flowSOM", 
+                 col.type = 'factor', 
+                 add.label = TRUE,
+                 blank.axis = T,
+                 path = "plots")
+```
+
+<details><summary>**Multi-plots:**</summary>
+
+```{r, message = F, warning=FALSE}
+make.multi.plot(ILC_transf, 
+                "tSNE1", "tSNE2", 
+                risomMarkers, 
+                blank.axis = T, 
+                colours = "viridis", 
+                path = "plots")
+```
+
+</details>
+
+And we can make the heatmap you're used to seeing. 
+
+```{r, message = F, warning=FALSE, error=F}
+exp <- do.aggregate(as.data.table(ILC_transf), use.cols = risomMarkers, by = c("flowSOM"))
+make.pheatmap(exp, file.name = "plots/Pheatmap_FlowSOM.png", sample.col="flowSOM", plot.cols=risomMarkers)
+```
+
+
+*Spectre has also embedded FlowSOM clustering and dimension reduction tools such as umap in easy codes, such as:<br>*
+
+-   `do.subsample()`
+-   `run.flowsom()`
+-   `run.umap()`
+
+# Additional Considerations{.tabset .tabset-fade}
+
+## QC
+
+When looking at the raw data, or in the middle of data processing, you may consider filtering some cell. In the 1-marker plots below, you can see that there are a few extreme values that are displayed and pushing the majority of values squeezed together. e.g. HLA-DR:
+
+```{r}
+ILC_transf %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", aes(fill = "red"), alpha = 0.5,show.legend = FALSE)+
+  ylab("Density")+
+
+# Visualise the values at the top 0.1% and bottom 0.1%.
+  geom_vline(xintercept = quantile(ILC_transf$HLA.DR, 0.999), colour = "blue", linewidth = 0.5)+
+  geom_vline(xintercept = quantile(ILC_transf$HLA.DR, 0.001), colour = "blue", linewidth = 0.5)+
+
+# We can label the threshold lines: annotate as a text, at the position of the top and bottom 0.01%, and slightly adjust the label position horizontally.
+  annotate("text", x = quantile(ILC_transf$HLA.DR, 0.999), y = 0.003, label = "Top and bottom 0.1%", hjust = -0.1) 
+```
+
+<details>
+<summary>View them for all channels.</summary>
+
+```{r, message=F}
+# Create the empty list
+plots_line <- list()
+
+# Create the loop to generate plots.
+for (i in 1:25){
+  
+  # Get the marker names
+  Marker <- colnames(ILC_transf)[i]
+  
+  # Generate the plots and put it into the list
+  p <- ILC_transf %>%
+  ggplot(aes(x = .data[[Marker]]))+ 
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3,show.legend = FALSE)+
+   xlab(Marker)+
+   ylab("Density")+
+  
+    # Add the newly written lines to visualise the outliers to this loop.
+    geom_vline(xintercept = quantile(ILC_transf[[i]], 0.999), colour = "blue", linewidth = 0.5)+
+    geom_vline(xintercept = quantile(ILC_transf[[i]], 0.001), colour  = "blue", linewidth = 0.5)
+    
+  # Put the plots into the list
+  plots_line[[length(plots_line)+1]] <- p
+}
+
+# Use a grid layout to view the plots
+library(ggpubr)
+ggpubr::ggarrange(plotlist = plots_line, ncol = 2, nrow = 4)
+```
+</details>
+
+<br>
+To look at this in a more statistical way, you can create a quick data summary of the minimum, maximum, mean, median and the interquartile range.
+
+```{r}
+summary(ILC_transf)
+```
+
+<br>
+
+Either being artificial or biological, these might interfere how the computer interprets your data in the downstream clustering and dimension reduction. Sometimes you may decide to investigate how these impact your dataset and where they arise from. But if there are plenty of cells, and the % outliers is super small, you might just want to filter them out.<br>
+
+**Filtering by %** <br>
+You might want to filter out the top and bottom 0.1% of cells . Note that this approach removes the cells that doesn't fit within the top and bottom 0.1% of ANY channel, and removes the cell from the entire dataset. So be cautious about the % so you aren't removing too many cells when they are added up ( we'll use 0.1% all the way for demonstration purposes). <br>
+
+```{r}
+# Create an empty list.
+outlier_flag <- list()
+
+# Loop through the columns with markers
+for (i in 1:25){
+  
+  # Find the cell values
+  value <- ILC_transf[[i]]
+  
+  # Get the marker names
+  Marker <- colnames(ILC_transf)[i]
+  
+  # Find the thresholds of outliers
+  upper <- quantile(value, 0.999, na.rm = TRUE)
+  lower <- quantile(value, 0.001, na.rm = TRUE)
+
+  # Flag the outliers as 1, else as 0. And record them into the list.
+  flag <- ifelse(value < lower | value > upper, 1, 0)
+  outlier_flag[[length(outlier_flag)+1]] <- flag
+}
+# Turn the flags into a data table object.
+outlier_flag <- as.data.table(outlier_flag)
+colnames(outlier_flag)<- colnames(ILC_transf)[c(7:31)]
+subset <- ILC_transf[rowSums(outlier_flag)==0,]
+  
+# Calculate the % of cell loss after filtering, then format it as being displayed in less digits, then paste a sentence together.
+    paste0("Cell loss: ",format((1-nrow(subset)/nrow(ILC_transf))*100, digits = 3), "%")
+```
+
+
+```{r}
+
+# View the pre- and post-filtered data side by side, putting them in a grid.
+cowplot::plot_grid(
+  ILC_transf %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3, show.legend = FALSE)+
+  ylab("Density"),
+
+subset %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3, show.legend = FALSE)+
+  ylab("Density"),
+
+ # number of column equals 1.
+ ncol = 1
+)
+
+```
+
+**Filtering by fixed thresholds** <br>
+You might want to filter out the data that is outside of certain values per channel. A commonly used standard in data cleaning is calculated based on interquartile ranges (IQR). The thresholds are any data points that are 1.5 times of IQR above the 3rd quartile, or 1.5 times of IQR below the 1st quartile. This will keep the majority of data points, however, it might also remove some true variance in the dataset at extreme ends.<br>
+
+```{r}
+
+# Take HLA-DR as an example
+
+# Calculate the interquartile range.
+   IQR <- IQR(ILC_transf$HLA.DR)
+   Q1 <- quantile(ILC_transf$HLA.DR, 0.25)
+   Q3 <- quantile(ILC_transf$HLA.DR, 0.75)
+   
+# Calculate the upper and lower thresholds
+   lowerfence <- Q1 - 1.5*IQR
+   upperfence <- Q3 + 1.5*IQR 
+ 
+# Only keep the cells which CD127 channel value within the thresholds.   
+filt <- ILC_transf[ILC_transf$HLA.DR > lowerfence & ILC_transf$HLA.DR < upperfence, ]
+
+cowplot::plot_grid(
+  ILC_transf %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3,show.legend = FALSE)+
+  ylab("Density"),
+filt %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3,show.legend = FALSE)+
+  ylab("Density"),
+
+ # number of column equals 1.
+ ncol = 1
+)
+
+rm(Q1,Q3,IQR)
+
+```
+
+Or, simply just choose an arbitrary threshold.
+
+```{r}
+
+# Only keep the cells which transformed HLA-DR expression value < 2.
+manual <- ILC_transf[ILC_transf$HLA.DR < 2, ]
+
+cowplot::plot_grid(
+  ILC_transf %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3,show.legend = FALSE)+
+  ylab("Density"),
+manual %>%
+  ggplot(aes(x = HLA.DR))+
+  geom_density(linewidth = 0.7, colour = "red", fill = "red", alpha = 0.3,show.legend = FALSE)+
+  ylab("Density"),
+
+ # number of column equals 1.
+ ncol = 1
+)
+
+```
