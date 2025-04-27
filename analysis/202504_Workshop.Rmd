@@ -36,6 +36,13 @@ We'll use a 25-colour flow cytometry dataset of innate lymphoid cells (ILC), nat
 
 The original data was published as is available in [OMIP-082](https://pubmed.ncbi.nlm.nih.gov/35018731/) 
 
+Before going further: 
+
+- Dont forget to provide any feedback by emailing us at `drsn@wimr.org.au` or filling out the [feedback form](https://forms.office.com/r/DXdTAQXJSU)
+
+- Vote on the next workshop! 
+<iframe width="640px" height="200px" src="https://forms.office.com/r/TtLWFWysiC?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
 # Setup{.tabset .tabset-fade}
 
 We'll take you through steps from the beginning, installing packages and loading data. 
@@ -82,6 +89,7 @@ Create some folders for plots and data.
 dir.create("plots")
 dir.create("data")
 download.file("https://raw.githubusercontent.com/DrThomasOneil/Digital-Research-Skills-Network/refs/heads/main/docs/assets/downloads/example_flowdata_omip082_20k.csv", destfile = "data/example_flowdata_omip082_20k.csv")
+# Add `method = "curl"` in the download.file() if you are a Windows user and this line didn't work for you.
 ```
 
 <details><summary>Setting seed is crucial for reproducibility:</summary>
@@ -92,6 +100,8 @@ It's a number of your choice, which pins down the "way" that how the random proc
 set.seed(1337)
 ```
 </details>
+
+--- 
 
 ## Load flow cytometry data
 
@@ -132,8 +142,11 @@ Change the column names.
 colnames(ILC) <- sub("_.*","",colnames(ILC)) #'_' is the exact character in the names, the '.' means 'any character', '*' means 'any of the preceding things'. 
 
 colnames(ILC)
+```
 
-# Fix up the broken names FVS700 and CD14&CD19
+Fix up the broken names FVS700 and CD14&CD19.
+
+```{r}
 # This tells R to: find which of the column equals "FVS" among all columns in the data, then change it to FVS700.
 colnames(ILC)[colnames(ILC) == "FVS"] <- "FVS700"
 colnames(ILC)[colnames(ILC) == "CD14"] <- "CD14.CD19"
@@ -141,6 +154,8 @@ colnames(ILC)[colnames(ILC) == "CD14"] <- "CD14.CD19"
 # Have a look
 colnames(ILC)
 ```
+
+---
 
 ## Time gate QC. 
 
@@ -159,7 +174,9 @@ ggplot(ILC, aes(x = Time, y = FSC.A))+
     scale_fill_gradientn(colours = c("blue", "green", "yellow", "red"))
 ```
 
-# Visualisations
+---
+
+# Visualisations{.tabset .tabset-fade}
 
 ## Transformations
 
@@ -185,6 +202,7 @@ ILC_transf %>% ggplot(aes(x=CD4, y=CD3))+
   geom_bin_2d(bins = 200, show.legend=T)
 ```
 
+You can view it for all markers together.
 
 ```{r, fig.height=10, fig.width=10, warning=FALSE}
 # Initialize an empty list to store the plots
@@ -325,6 +343,8 @@ ILC_transf %>%
 
 ```
 
+---
+
 # Subsetting data and summary statistics{.tabset .tabset-fade}
 
 While not as efficient as FlowJo, we can subset data after exporting. We wouldn't normally do this in R, but we'll show you how you could subset in R and for the purposes of visualisation. 
@@ -410,6 +430,8 @@ ILC_transf %>%
 
 You could mass print these using a loop, as we did for the density plots above. You can also adjust the marker you output, as not all markers or combinations of markers are useful.
 
+---
+
 ## Summary statistics
 
 While subsetting is not as efficient as FlowJo, summarising data is! 
@@ -439,6 +461,7 @@ ILC_transf %>%
 ```
 
 We can also calculate the percentage of subsets in line, meaning we don't have to change these lines of text based on different results or different data:
+
 - CD3+CD4+: `r round(sum(ILC_transf$subset == "CD3+CD4+")/nrow(ILC_transf)*100,2)`%
 
 - CD3+CD4-: `r round(sum(ILC_transf$subset == "CD3+CD4-")/nrow(ILC_transf)*100,2)`%
@@ -449,7 +472,7 @@ We can also calculate the percentage of subsets in line, meaning we don't have t
 
 <details>
 <summary>**You can also quickly calculate summary statistics like MFI, gMFI, medianFI**:</summary>
-
+<br>
 **Arithmatic MFI**  
 
 ```{r}
@@ -469,17 +492,17 @@ ILC %>%
   summarise(across(7:31, mean, .names = "MFI_{col}"))
 ```
 
-**geometric MFI**
+**Geometric MFI**
 
-The traditional formula written out would be like `ILC_transf %>% prod(CD56)^(1/nrow(CD56))`. However, as our data is *compensated*, there are meaningful negative values and 0s that we don't want to get rid of, which if you run on this data removes two subsets entirely. FlowJo calculates the *graph spaces* as gMFI to enable it to deal with negatives and 0s. Here in this case, our data is already asinh transformed to accomodate the -ve and 0s and bizzare expression values. It may be better to stick with the arithmatic mean instead of forcing the geometric mean.
+The traditional formula written out would be like `ILC_transf %>% prod(CD56)^(1/nrow(CD56))`. However, as our data is *compensated*, there are meaningful negative values and 0s that we don't want to get rid of, which if you run on this data removes two subsets entirely. FlowJo calculates the *graph spaces* as gMFI to enable it to deal with negatives and 0s. Here in this case, it may be better to stick with the arithmatic mean instead of forcing the geometric mean.
 
 </details>
 
-<br>
+---
 
 # nxn plots
 
-You can also create a loop to view the nxn plots.
+You can also create a loop to view the nxn plots, and save them to the folder of your choice.
 
 ```{r, fig.width=20, fig.height=20, warning=FALSE}
 # Select only numeric marker columns
@@ -506,6 +529,7 @@ ggsave("plots/nxn.png",p, width=25, height=25,unit="in")
 rm(p,custom_bin_plot, marker_cols)
 ```
 
+---
 
 # Dimension reduction and clustering
 
@@ -543,7 +567,7 @@ ILC_transf %>%
 ```
 
 ### FuseSOM
-[Read more](https://bioconductor.org/packages/release/bioc/html/FlowSOM.html)
+[Read more](https://bioconductor.org/packages/devel/bioc/vignettes/FuseSOM/inst/doc/Introduction.html)
 
 ```{r, message = FALSE}
 
@@ -614,13 +638,17 @@ ggplot(ILC_transf, aes(UMAP1,UMAP2, color= CD16)) +
   scale_color_viridis_c()+xlim(-7,10)
 
 ```
+<br>
+
+---
 
 ### Spectre
 
-[Read more](https://immunedynamics.io/spectre/)
+[Read more](https://immunedynamics.io/spectre/)<br>
+
+Spectre has easy plotting tools to visualize the results of clustering and dimension reduction.
 
 ```{r, message = F, warning=FALSE}
-# Spectre has easy plotting tools to visualize the results of clustering and dimension reduction.
 make.colour.plot(ILC_transf, 
                  "tSNE1", "tSNE2", "subset",  
                  add.label = TRUE,
@@ -647,7 +675,7 @@ make.multi.plot(ILC_transf,
 
 </details>
 
-And we can make the heatmap you're used to seeing. 
+And we can make the heatmap you're used to seeing and save them.  
 
 ```{r, message = F, warning=FALSE, error=F}
 exp <- do.aggregate(as.data.table(ILC_transf), use.cols = risomMarkers, by = c("flowSOM"))
@@ -660,10 +688,11 @@ make.pheatmap(exp, file.name = "plots/Pheatmap_FlowSOM.png", sample.col="flowSOM
 -   `do.subsample()`
 -   `run.flowsom()`
 -   `run.umap()`
+<br>
 
-# Additional Considerations{.tabset .tabset-fade}
+---
 
-## QC
+# Additional Considerations: QC{.tabset .tabset-fade}
 
 When looking at the raw data, or in the middle of data processing, you may consider filtering some cell. In the 1-marker plots below, you can see that there are a few extreme values that are displayed and pushing the majority of values squeezed together. e.g. HLA-DR:
 
@@ -678,7 +707,7 @@ ILC_transf %>%
   geom_vline(xintercept = quantile(ILC_transf$HLA.DR, 0.001), colour = "blue", linewidth = 0.5)+
 
 # We can label the threshold lines: annotate as a text, at the position of the top and bottom 0.01%, and slightly adjust the label position horizontally.
-  annotate("text", x = quantile(ILC_transf$HLA.DR, 0.999), y = 0.003, label = "Top and bottom 0.1%", hjust = -0.1) 
+  annotate("text", x = 2, y = 0.5, label = "Top and bottom 0.1%", hjust = -0.1) 
 ```
 
 <details>
@@ -726,7 +755,8 @@ summary(ILC_transf)
 
 Either being artificial or biological, these might interfere how the computer interprets your data in the downstream clustering and dimension reduction. Sometimes you may decide to investigate how these impact your dataset and where they arise from. But if there are plenty of cells, and the % outliers is super small, you might just want to filter them out.<br>
 
-**Filtering by %** <br>
+## Filtering by %
+
 You might want to filter out the top and bottom 0.1% of cells . Note that this approach removes the cells that doesn't fit within the top and bottom 0.1% of ANY channel, and removes the cell from the entire dataset. So be cautious about the % so you aren't removing too many cells when they are added up ( we'll use 0.1% all the way for demonstration purposes). <br>
 
 ```{r}
@@ -780,7 +810,8 @@ subset %>%
 
 ```
 
-**Filtering by fixed thresholds** <br>
+## Filtering by fixed thresholds
+
 You might want to filter out the data that is outside of certain values per channel. A commonly used standard in data cleaning is calculated based on interquartile ranges (IQR). The thresholds are any data points that are 1.5 times of IQR above the 3rd quartile, or 1.5 times of IQR below the 1st quartile. This will keep the majority of data points, however, it might also remove some true variance in the dataset at extreme ends.<br>
 
 ```{r}
@@ -796,7 +827,7 @@ You might want to filter out the data that is outside of certain values per chan
    lowerfence <- Q1 - 1.5*IQR
    upperfence <- Q3 + 1.5*IQR 
  
-# Only keep the cells which CD127 channel value within the thresholds.   
+# Only keep the cells which the HLA-DR value is within the thresholds.   
 filt <- ILC_transf[ILC_transf$HLA.DR > lowerfence & ILC_transf$HLA.DR < upperfence, ]
 
 cowplot::plot_grid(
