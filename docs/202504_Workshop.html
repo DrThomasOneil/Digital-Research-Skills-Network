@@ -467,7 +467,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-04-26
+<strong>Last updated:</strong> 2025-04-28
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -599,15 +599,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreee8a3722e8e15f677254f281365ef494fc582e958targetblanke8a3722a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree0925bfecf0f1c7c0cbd79cb7b6eaf269ebd1a093targetblank0925bfea">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/e8a3722e8e15f677254f281365ef494fc582e958" target="_blank">e8a3722</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/0925bfecf0f1c7c0cbd79cb7b6eaf269ebd1a093" target="_blank">0925bfe</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreee8a3722e8e15f677254f281365ef494fc582e958targetblanke8a3722a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree0925bfecf0f1c7c0cbd79cb7b6eaf269ebd1a093targetblank0925bfea"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -617,7 +617,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/e8a3722e8e15f677254f281365ef494fc582e958" target="_blank">e8a3722</a>.
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/0925bfecf0f1c7c0cbd79cb7b6eaf269ebd1a093" target="_blank">0925bfe</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -639,16 +639,8 @@ Ignored files:
     Ignored:    analysis/.Rhistory
     Ignored:    analysis/adit/.DS_Store
 
-Untracked files:
-    Untracked:  analysis/202505.Rmd
-    Untracked:  analysis/202505_InFocus.Rmd
-    Untracked:  analysis/202505_Seminar.Rmd
-    Untracked:  analysis/adit/head_index.html
-    Untracked:  plots/
-
 Unstaged changes:
-    Modified:   .gitignore
-    Modified:   workflow.R
+    Modified:   analysis/202504.Rmd
 
 </code></pre>
 <p>
@@ -694,6 +686,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/0925bfecf0f1c7c0cbd79cb7b6eaf269ebd1a093/analysis/202504_Workshop.Rmd" target="_blank">0925bfe</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-28
+</td>
+<td>
+wflow_publish("analysis/202504_Workshop.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/202504_Workshop.html" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1147,6 +1173,15 @@ basophils, hematopoietic stem cells, myeloid cells and granulocytes, and
 B cells.</p>
 <p>The original data was published as is available in <a
 href="https://pubmed.ncbi.nlm.nih.gov/35018731/">OMIP-082</a></p>
+<p>Before going further:</p>
+<ul>
+<li><p>Dont forget to provide any feedback by emailing us at
+<code>drsn@wimr.org.au</code> or filling out the <a
+href="https://forms.office.com/r/DXdTAQXJSU">feedback form</a></p></li>
+<li><p>Vote on the next workshop!
+<iframe width="640px" height="200px" src="https://forms.office.com/r/TtLWFWysiC?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+</iframe></p></li>
+</ul>
 </div>
 <div id="setup" class="section level1 tabset tabset-fade">
 <h1 class="tabset tabset-fade">Setup</h1>
@@ -1191,7 +1226,8 @@ platforms like <code>Bioconductor</code> or <code>GitHub</code>.</p>
 <p>Create some folders for plots and data.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;plots&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;data&quot;</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/Digital-Research-Skills-Network/refs/heads/main/docs/assets/downloads/example_flowdata_omip082_20k.csv&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;data/example_flowdata_omip082_20k.csv&quot;</span>)</span></code></pre></div>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/DrThomasOneil/Digital-Research-Skills-Network/refs/heads/main/docs/assets/downloads/example_flowdata_omip082_20k.csv&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;data/example_flowdata_omip082_20k.csv&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># Add `method = &quot;curl&quot;` in the download.file() if you are a Windows user and this line didn&#39;t work for you.</span></span></code></pre></div>
 <details>
 <summary>
 Setting seed is crucial for reproducibility:
@@ -1205,6 +1241,7 @@ when you run other algorithms including randomness, e.g. clustering and
 generating a UMAP).</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1337</span>)</span></code></pre></div>
 </details>
+<hr />
 </div>
 <div id="load-flow-cytometry-data" class="section level2">
 <h2>Load flow cytometry data</h2>
@@ -1255,19 +1292,20 @@ indexing the number of rows. It’s not necessary either.<br></p>
 [15] &quot;CD3&quot;     &quot;CD94&quot;    &quot;CD39&quot;    &quot;CD56&quot;    &quot;TCRVA72&quot; &quot;CKIT&quot;    &quot;CD14&quot;   
 [22] &quot;CD49D&quot;   &quot;CD244&quot;   &quot;CD161&quot;   &quot;TCRgt&quot;   &quot;CD69&quot;    &quot;CD25&quot;    &quot;ITAGB7&quot; 
 [29] &quot;CRTH2&quot;   &quot;NKp46&quot;   &quot;CD127&quot;   &quot;Time&quot;   </code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Fix up the broken names FVS700 and CD14&amp;CD19</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="co"># This tells R to: find which of the column equals &quot;FVS&quot; among all columns in the data, then change it to FVS700.</span></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">colnames</span>(ILC)[<span class="fu">colnames</span>(ILC) <span class="sc">==</span> <span class="st">&quot;FVS&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;FVS700&quot;</span></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="fu">colnames</span>(ILC)[<span class="fu">colnames</span>(ILC) <span class="sc">==</span> <span class="st">&quot;CD14&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;CD14.CD19&quot;</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co"># Have a look</span></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="fu">colnames</span>(ILC)</span></code></pre></div>
+<p>Fix up the broken names FVS700 and CD14&amp;CD19.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># This tells R to: find which of the column equals &quot;FVS&quot; among all columns in the data, then change it to FVS700.</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">colnames</span>(ILC)[<span class="fu">colnames</span>(ILC) <span class="sc">==</span> <span class="st">&quot;FVS&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;FVS700&quot;</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">colnames</span>(ILC)[<span class="fu">colnames</span>(ILC) <span class="sc">==</span> <span class="st">&quot;CD14&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;CD14.CD19&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co"># Have a look</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="fu">colnames</span>(ILC)</span></code></pre></div>
 <pre><code> [1] &quot;FSC.A&quot;     &quot;FSC.H&quot;     &quot;FSC.W&quot;     &quot;SSC.A&quot;     &quot;SSC.H&quot;     &quot;SSC.W&quot;    
  [7] &quot;NKp44&quot;     &quot;Lineage&quot;   &quot;CD45&quot;      &quot;CD103&quot;     &quot;FVS700&quot;    &quot;CD4&quot;      
 [13] &quot;HLA.DR&quot;    &quot;CD16&quot;      &quot;CD3&quot;       &quot;CD94&quot;      &quot;CD39&quot;      &quot;CD56&quot;     
 [19] &quot;TCRVA72&quot;   &quot;CKIT&quot;      &quot;CD14.CD19&quot; &quot;CD49D&quot;     &quot;CD244&quot;     &quot;CD161&quot;    
 [25] &quot;TCRgt&quot;     &quot;CD69&quot;      &quot;CD25&quot;      &quot;ITAGB7&quot;    &quot;CRTH2&quot;     &quot;NKp46&quot;    
 [31] &quot;CD127&quot;     &quot;Time&quot;     </code></pre>
+<hr />
 </div>
 <div id="time-gate-qc." class="section level2">
 <h2>Time gate QC.</h2>
@@ -1278,23 +1316,98 @@ this in R.</p>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>  <span class="fu">geom_bin_2d</span>(<span class="at">bins =</span> <span class="dv">200</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>    <span class="fu">scale_fill_gradientn</span>(<span class="at">colours =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;red&quot;</span>))<span class="sc">+</span></span>
 <span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">4600000</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-9-1">
+Past versions of unnamed-chunk-9-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-9-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-9-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># Filter out the cells above the threshold.</span></span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>ILC <span class="ot">&lt;-</span> ILC[ILC<span class="sc">$</span>Time <span class="sc">&lt;</span> <span class="dv">4600000</span>,]</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="fu">ggplot</span>(ILC, <span class="fu">aes</span>(<span class="at">x =</span> Time, <span class="at">y =</span> FSC.A))<span class="sc">+</span></span>
 <span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>  <span class="fu">geom_bin_2d</span>(<span class="at">bins =</span> <span class="dv">200</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>    <span class="fu">scale_fill_gradientn</span>(<span class="at">colours =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-8-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-9-2.png" width="672" style="display: block; margin: auto;" /></p>
+<hr />
 </div>
 </div>
-<div id="visualisations" class="section level1">
-<h1>Visualisations</h1>
+<div id="visualisations" class="section level1 tabset tabset-fade">
+<h1 class="tabset tabset-fade">Visualisations</h1>
 <div id="transformations" class="section level2">
 <h2>Transformations</h2>
 <p>Raw Flow Cytometry data looks bad!</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>ILC <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>CD4, <span class="at">y=</span>CD3))<span class="sc">+</span>        </span>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-10-1">
+Past versions of unnamed-chunk-10-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-10-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-10-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>So we transform the data to make it look better. In FlowJo, when you
 adjust the axes, you can see several transformations available. One is
 arcsinh (the inverse of hyperbolic sin, if you want to get mathy).
@@ -1310,7 +1423,45 @@ the values by some cofactor.</p>
 <span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a></span>
 <span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>CD4, <span class="at">y=</span>CD3))<span class="sc">+</span></span>
 <span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>  <span class="fu">geom_bin_2d</span>(<span class="at">bins =</span> <span class="dv">200</span>, <span class="at">show.legend=</span>T)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-10-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-11-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-11-1">
+Past versions of unnamed-chunk-11-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-11-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-11-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>You can view it for all markers together.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># Initialize an empty list to store the plots</span></span>
 <span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>plots <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="co"># Define the x-axis marker for the plots</span></span>
@@ -1333,7 +1484,7 @@ the values by some cofactor.</p>
 <span id="cb17-20"><a href="#cb17-20" tabindex="-1"></a></span>
 <span id="cb17-21"><a href="#cb17-21" tabindex="-1"></a><span class="co"># Combine all the plots into a grid layout and display them</span></span>
 <span id="cb17-22"><a href="#cb17-22" tabindex="-1"></a>cowplot<span class="sc">::</span><span class="fu">plot_grid</span>(<span class="at">plotlist =</span> plots)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-11-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-12-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">rm</span>(plots)</span></code></pre></div>
 <p>This code demonstrates how you would manually transform individual
 columns in the dataset using different cofactors for each marker. It
@@ -1364,13 +1515,50 @@ plots.</p>
 <span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">35</span>, <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="at">colour =</span><span class="st">&quot;black&quot;</span>)<span class="sc">+</span></span>
 <span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a>  <span class="co"># Add labels</span></span>
 <span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Frequency&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-14-1">
+Past versions of unnamed-chunk-14-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-14-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-14-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># A density plot.</span></span>
 <span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
 <span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> CD3))<span class="sc">+</span></span>
 <span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">linewidth =</span> <span class="fl">0.7</span>, <span class="at">colour =</span> <span class="st">&quot;red4&quot;</span>, <span class="fu">aes</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>), <span class="at">alpha =</span> <span class="fl">0.5</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
 <span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Density&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-13-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-14-2.png" width="672" style="display: block; margin: auto;" /></p>
 <p>We can loop through the channels and create a density plot for all 25
 markers.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># Initialise an empty list to store the plots</span></span>
@@ -1394,7 +1582,44 @@ markers.</p>
 <span id="cb22-19"><a href="#cb22-19" tabindex="-1"></a>}</span>
 <span id="cb22-20"><a href="#cb22-20" tabindex="-1"></a></span>
 <span id="cb22-21"><a href="#cb22-21" tabindex="-1"></a><span class="fu">plot_grid</span>(<span class="at">plotlist =</span> plots[<span class="dv">1</span><span class="sc">:</span><span class="dv">25</span>])</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-15-1">
+Past versions of unnamed-chunk-15-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-15-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-15-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">rm</span>(plots)</span></code></pre></div>
 <p><br></p>
 </div>
@@ -1405,12 +1630,86 @@ We can generate scatterplots.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> CD4, <span class="at">y =</span> CD3))<span class="sc">+</span></span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">alpha=</span><span class="fl">0.1</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-16-1">
+Past versions of unnamed-chunk-16-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-16-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-16-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># Generate a scatterplot with a density overlay.</span></span>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>CD4, <span class="at">y=</span>CD3))<span class="sc">+</span>        </span>
 <span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>  <span class="fu">geom_bin_2d</span>(<span class="at">bins =</span> <span class="dv">200</span>, <span class="at">show.legend =</span> F)<span class="sc">+</span></span>
 <span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">colors =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>,  <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-15-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-16-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-16-2">
+Past versions of unnamed-chunk-16-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-16-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-16-2.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="contour-plot" class="section level2">
 <h2>Contour plot</h2>
@@ -1423,7 +1722,44 @@ adding layers in ggplot!</p>
 <span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>  <span class="fu">geom_density_2d</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bins=</span><span class="dv">50</span>)<span class="sc">+</span></span>
 <span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;CD3 BUV563&quot;</span>)<span class="sc">+</span></span>
 <span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;CD4 APC-Cy7&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-17-1">
+Past versions of unnamed-chunk-17-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-17-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-17-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a></span>
 <span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="co"># A contour plot of CD3 and CD4 expression over a scatter plot.</span></span>
 <span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
@@ -1432,7 +1768,7 @@ adding layers in ggplot!</p>
 <span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>  <span class="fu">geom_density_2d</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bins=</span><span class="dv">50</span>, <span class="at">alpha=</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
 <span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;CD3 BUV563&quot;</span>)<span class="sc">+</span></span>
 <span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;CD4 APC-Cy7&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-16-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-17-2.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a></span>
 <span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="co"># A contour plot of CD3 and CD4 expression over a density plot.</span></span>
 <span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
@@ -1442,7 +1778,8 @@ adding layers in ggplot!</p>
 <span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a>  <span class="fu">geom_density_2d</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)<span class="sc">+</span></span>
 <span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;CD3 BUV563&quot;</span>)<span class="sc">+</span></span>
 <span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;CD4 APC-Cy7&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-16-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-17-3.png" width="672" style="display: block; margin: auto;" /></p>
+<hr />
 </div>
 </div>
 <div id="subsetting-data-and-summary-statistics"
@@ -1463,7 +1800,7 @@ subset in R and for the purposes of visualisation.</p>
 <span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;CD4 APC-Cy7&quot;</span>)<span class="sc">+</span></span>
 <span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">1.3</span>)<span class="sc">+</span> <span class="co">#choose the x intercept</span></span>
 <span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.6</span>)  <span class="co">#choose the y intercept</span></span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Subset the dataset based on these thresholds.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="co"># This code creates a new column named &#39;subset&#39; in the &#39;ILC_transf&#39; dataset.</span></span>
 <span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="co"># The &#39;subset&#39; column categorises rows based on the values of &#39;CD3&#39; and &#39;CD4&#39; columns:</span></span>
@@ -1488,25 +1825,99 @@ subset in R and for the purposes of visualisation.</p>
 <span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;CD3 BUV563&quot;</span>)<span class="sc">+</span></span>
 <span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;CD4 APC-Cy7&quot;</span>)<span class="sc">+</span><span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">1.3</span>)<span class="sc">+</span></span>
 <span id="cb31-6"><a href="#cb31-6" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.6</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-20-1">
+Past versions of unnamed-chunk-20-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-20-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-20-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># Look at different markers coloured by subset</span></span>
 <span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
 <span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> CD56, <span class="at">y =</span> CD16, <span class="at">color=</span>subset))<span class="sc">+</span>        </span>
 <span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-19-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-20-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-20-2">
+Past versions of unnamed-chunk-20-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-20-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-20-2.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="co"># Split by subset</span></span>
 <span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
 <span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span>CD56, <span class="at">y =</span> CD16))<span class="sc">+</span>        </span>
 <span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a>  <span class="fu">geom_bin_2d</span>(<span class="at">bins =</span> <span class="dv">200</span>)<span class="sc">+</span></span>
 <span id="cb33-5"><a href="#cb33-5" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">colors =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>,  <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;red&quot;</span>))<span class="sc">+</span></span>
 <span id="cb33-6"><a href="#cb33-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>subset)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-19-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-20-3.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
 <span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span>FSC.A, <span class="at">y =</span> SSC.A))<span class="sc">+</span>        </span>
 <span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a>  <span class="fu">geom_bin_2d</span>(<span class="at">bins =</span> <span class="dv">200</span>)<span class="sc">+</span></span>
 <span id="cb34-4"><a href="#cb34-4" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(<span class="at">colors =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>,  <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;red&quot;</span>))<span class="sc">+</span></span>
 <span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>subset)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-19-4.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-20-4.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="histograms-1" class="section level3">
 <h3>Histograms</h3>
@@ -1514,7 +1925,44 @@ subset in R and for the purposes of visualisation.</p>
 <span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> CD56, <span class="at">color =</span> subset, <span class="at">fill =</span> subset)) <span class="sc">+</span></span>
 <span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">linewidth =</span> <span class="dv">1</span>)<span class="sc">+</span></span>
 <span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">quantile</span>(ILC_transf<span class="sc">$</span>CD56, <span class="fl">0.001</span>),<span class="fu">quantile</span>(ILC_transf<span class="sc">$</span>CD56, <span class="fl">0.999</span>))</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-21-1">
+Past versions of unnamed-chunk-21-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-21-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-21-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="co">#using ggridges</span></span>
 <span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a>ILC_transf <span class="sc">%&gt;%</span></span>
 <span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> CD56, <span class="at">y =</span> subset, <span class="at">fill =</span> subset)) <span class="sc">+</span></span>
@@ -1523,10 +1971,11 @@ subset in R and for the purposes of visualisation.</p>
 <span id="cb36-6"><a href="#cb36-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)<span class="sc">+</span></span>
 <span id="cb36-7"><a href="#cb36-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="st">&quot;&quot;</span>, <span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;CD56&quot;</span>)<span class="sc">+</span></span>
 <span id="cb36-8"><a href="#cb36-8" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">quantile</span>(ILC_transf<span class="sc">$</span>CD56, <span class="fl">0.001</span>),<span class="fu">quantile</span>(ILC_transf<span class="sc">$</span>CD56, <span class="fl">0.999</span>))</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-20-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-21-2.png" width="672" style="display: block; margin: auto;" /></p>
 <p>You could mass print these using a loop, as we did for the density
 plots above. You can also adjust the marker you output, as not all
 markers or combinations of markers are useful.</p>
+<hr />
 </div>
 </div>
 <div id="summary-statistics" class="section level2">
@@ -1557,11 +2006,12 @@ CD3-CD4- CD3-CD4+ CD3+CD4- CD3+CD4+
 <span id="cb39-14"><a href="#cb39-14" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
 <span id="cb39-15"><a href="#cb39-15" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size=</span><span class="dv">10</span>)) <span class="sc">+</span></span>
 <span id="cb39-16"><a href="#cb39-16" tabindex="-1"></a>    <span class="fu">ggtitle</span>(<span class="st">&quot;Subsets of CD3+/-CD4+/- cells&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>We can also calculate the percentage of subsets in line, meaning we
 don’t have to change these lines of text based on different results or
-different data: - CD3+CD4+: 75.44%</p>
+different data:</p>
 <ul>
+<li><p>CD3+CD4+: 75.44%</p></li>
 <li><p>CD3+CD4-: 17.79%</p></li>
 <li><p>CD3-CD4+: 0.22%</p></li>
 <li><p>CD3-CD4-: 6.56%</p></li>
@@ -1571,7 +2021,7 @@ different data: - CD3+CD4+: 75.44%</p>
 <strong>You can also quickly calculate summary statistics like MFI,
 gMFI, medianFI</strong>:
 </summary>
-<p><strong>Arithmatic MFI</strong></p>
+<p><br> <strong>Arithmatic MFI</strong></p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>ILC<span class="sc">$</span>subset  <span class="ot">&lt;-</span> ILC_transf<span class="sc">$</span>subset <span class="co"># Add the subset column to the original data.</span></span>
 <span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a></span>
 <span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>ILC <span class="sc">%&gt;%</span> </span>
@@ -1605,23 +2055,23 @@ gMFI, medianFI</strong>:
 #   MFI_CD14.CD19 &lt;dbl&gt;, MFI_CD49D &lt;dbl&gt;, MFI_CD244 &lt;dbl&gt;, MFI_CD161 &lt;dbl&gt;,
 #   MFI_TCRgt &lt;dbl&gt;, MFI_CD69 &lt;dbl&gt;, MFI_CD25 &lt;dbl&gt;, MFI_ITAGB7 &lt;dbl&gt;,
 #   MFI_CRTH2 &lt;dbl&gt;, MFI_NKp46 &lt;dbl&gt;, MFI_CD127 &lt;dbl&gt;</code></pre>
-<p><strong>geometric MFI</strong></p>
+<p><strong>Geometric MFI</strong></p>
 <p>The traditional formula written out would be like
 <code>ILC_transf %&gt;% prod(CD56)^(1/nrow(CD56))</code>. However, as
 our data is <em>compensated</em>, there are meaningful negative values
 and 0s that we don’t want to get rid of, which if you run on this data
 removes two subsets entirely. FlowJo calculates the <em>graph
 spaces</em> as gMFI to enable it to deal with negatives and 0s. Here in
-this case, our data is already asinh transformed to accomodate the -ve
-and 0s and bizzare expression values. It may be better to stick with the
-arithmatic mean instead of forcing the geometric mean.</p>
+this case, it may be better to stick with the arithmatic mean instead of
+forcing the geometric mean.</p>
 </details>
-<p><br></p>
+<hr />
 </div>
 </div>
 <div id="nxn-plots" class="section level1">
 <h1>nxn plots</h1>
-<p>You can also create a loop to view the nxn plots.</p>
+<p>You can also create a loop to view the nxn plots, and save them to
+the folder of your choice.</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="co"># Select only numeric marker columns</span></span>
 <span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>marker_cols <span class="ot">&lt;-</span> <span class="fu">colnames</span>(ILC_transf)[<span class="dv">1</span><span class="sc">:</span><span class="dv">25</span>] <span class="co"># adjust if needed</span></span>
 <span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a></span>
@@ -1644,6 +2094,7 @@ arithmatic mean instead of forcing the geometric mean.</p>
 <span id="cb44-20"><a href="#cb44-20" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;plots/nxn.png&quot;</span>,p, <span class="at">width=</span><span class="dv">25</span>, <span class="at">height=</span><span class="dv">25</span>,<span class="at">unit=</span><span class="st">&quot;in&quot;</span>)</span>
 <span id="cb44-21"><a href="#cb44-21" tabindex="-1"></a></span>
 <span id="cb44-22"><a href="#cb44-22" tabindex="-1"></a><span class="fu">rm</span>(p,custom_bin_plot, marker_cols)</span></code></pre></div>
+<hr />
 </div>
 <div id="dimension-reduction-and-clustering" class="section level1">
 <h1>Dimension reduction and clustering</h1>
@@ -1757,12 +2208,49 @@ more</a></p>
 <span id="cb47-5"><a href="#cb47-5" tabindex="-1"></a>  <span class="fu">theme_ridges</span>() <span class="sc">+</span></span>
 <span id="cb47-6"><a href="#cb47-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)<span class="sc">+</span></span>
 <span id="cb47-7"><a href="#cb47-7" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="st">&quot;&quot;</span>, <span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;CD56&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-25-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-26-1">
+Past versions of unnamed-chunk-26-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-26-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-26-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="fusesom" class="section level3">
 <h3>FuseSOM</h3>
 <p><a
-href="https://bioconductor.org/packages/release/bioc/html/FlowSOM.html">Read
+href="https://bioconductor.org/packages/devel/bioc/vignettes/FuseSOM/inst/doc/Introduction.html">Read
 more</a></p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a>risomMarkers <span class="ot">&lt;-</span> <span class="fu">colnames</span>(ILC_transf)[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">6</span><span class="sc">:</span><span class="dv">14</span>,<span class="dv">16</span><span class="sc">:</span><span class="dv">25</span>)]</span>
 <span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a>clusters <span class="ot">&lt;-</span> <span class="fu">runFuseSOM</span>(<span class="at">data =</span> <span class="fu">as.matrix</span>(ILC_transf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">32</span>]), <span class="at">markers =</span> risomMarkers, </span>
@@ -1776,7 +2264,7 @@ more</a></p>
 <span id="cb48-10"><a href="#cb48-10" tabindex="-1"></a>  <span class="fu">theme_ridges</span>() <span class="sc">+</span></span>
 <span id="cb48-11"><a href="#cb48-11" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)<span class="sc">+</span></span>
 <span id="cb48-12"><a href="#cb48-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="st">&quot;&quot;</span>, <span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">title =</span> <span class="st">&quot;CD39&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="dimension-reduction" class="section level2 tabset tabset-fade">
@@ -1808,40 +2296,191 @@ this in the Spectre packge.</p>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a>ILC_transf <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/clustered_data.rds&quot;</span>)</span>
 <span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a><span class="fu">ggplot</span>(ILC_transf, <span class="fu">aes</span>(PC1,PC2, <span class="at">color=</span> <span class="fu">as.factor</span>(flowSOM))) <span class="sc">+</span></span>
 <span id="cb51-3"><a href="#cb51-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-29-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-30-1">
+Past versions of unnamed-chunk-30-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-30-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-30-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a><span class="fu">ggplot</span>(ILC_transf, <span class="fu">aes</span>(tSNE1,tSNE2, <span class="at">color=</span> <span class="fu">as.factor</span>(flowSOM))) <span class="sc">+</span></span>
 <span id="cb52-2"><a href="#cb52-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-29-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-30-2">
+Past versions of unnamed-chunk-30-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-30-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-30-2.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a><span class="fu">ggplot</span>(ILC_transf, <span class="fu">aes</span>(UMAP1,UMAP2, <span class="at">color=</span> <span class="fu">as.factor</span>(flowSOM))) <span class="sc">+</span></span>
 <span id="cb53-2"><a href="#cb53-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">7</span>,<span class="dv">10</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-29-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-3.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a><span class="co"># Colour overlayed by the expression of one marker.</span></span>
 <span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a><span class="fu">ggplot</span>(ILC_transf, <span class="fu">aes</span>(UMAP1,UMAP2, <span class="at">color=</span> CD3)) <span class="sc">+</span></span>
 <span id="cb54-3"><a href="#cb54-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb54-4"><a href="#cb54-4" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>()<span class="sc">+</span><span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">7</span>,<span class="dv">10</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-29-4.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-4.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a><span class="fu">ggplot</span>(ILC_transf, <span class="fu">aes</span>(UMAP1,UMAP2, <span class="at">color=</span> CD16)) <span class="sc">+</span></span>
 <span id="cb55-2"><a href="#cb55-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb55-3"><a href="#cb55-3" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>()<span class="sc">+</span><span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">7</span>,<span class="dv">10</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-29-5.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-5.png" width="672" style="display: block; margin: auto;" />
+<br></p>
+<hr />
 </div>
 <div id="spectre" class="section level3">
 <h3>Spectre</h3>
-<p><a href="https://immunedynamics.io/spectre/">Read more</a></p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="co"># Spectre has easy plotting tools to visualize the results of clustering and dimension reduction.</span></span>
-<span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a><span class="fu">make.colour.plot</span>(ILC_transf, </span>
-<span id="cb56-3"><a href="#cb56-3" tabindex="-1"></a>                 <span class="st">&quot;tSNE1&quot;</span>, <span class="st">&quot;tSNE2&quot;</span>, <span class="st">&quot;subset&quot;</span>,  </span>
-<span id="cb56-4"><a href="#cb56-4" tabindex="-1"></a>                 <span class="at">add.label =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb56-5"><a href="#cb56-5" tabindex="-1"></a>                 <span class="at">blank.axis =</span> T,</span>
-<span id="cb56-6"><a href="#cb56-6" tabindex="-1"></a>                 <span class="at">path =</span> <span class="st">&quot;plots&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><a href="https://immunedynamics.io/spectre/">Read more</a><br></p>
+<p>Spectre has easy plotting tools to visualize the results of
+clustering and dimension reduction.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="fu">make.colour.plot</span>(ILC_transf, </span>
+<span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>                 <span class="st">&quot;tSNE1&quot;</span>, <span class="st">&quot;tSNE2&quot;</span>, <span class="st">&quot;subset&quot;</span>,  </span>
+<span id="cb56-3"><a href="#cb56-3" tabindex="-1"></a>                 <span class="at">add.label =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb56-4"><a href="#cb56-4" tabindex="-1"></a>                 <span class="at">blank.axis =</span> T,</span>
+<span id="cb56-5"><a href="#cb56-5" tabindex="-1"></a>                 <span class="at">path =</span> <span class="st">&quot;plots&quot;</span>)</span></code></pre></div>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-31-1">
+Past versions of unnamed-chunk-31-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-31-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-31-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="fu">make.colour.plot</span>(ILC_transf, </span>
 <span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a>                 <span class="st">&quot;tSNE1&quot;</span>, <span class="st">&quot;tSNE2&quot;</span>, <span class="st">&quot;flowSOM&quot;</span>, </span>
 <span id="cb57-3"><a href="#cb57-3" tabindex="-1"></a>                 <span class="at">col.type =</span> <span class="st">&#39;factor&#39;</span>, </span>
 <span id="cb57-4"><a href="#cb57-4" tabindex="-1"></a>                 <span class="at">add.label =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb57-5"><a href="#cb57-5" tabindex="-1"></a>                 <span class="at">blank.axis =</span> T,</span>
 <span id="cb57-6"><a href="#cb57-6" tabindex="-1"></a>                 <span class="at">path =</span> <span class="st">&quot;plots&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-30-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-31-2">
+Past versions of unnamed-chunk-31-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-31-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-31-2.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <details>
 <summary>
 <strong>Multi-plots:</strong>
@@ -1852,9 +2491,9 @@ this in the Spectre packge.</p>
 <span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>                <span class="at">blank.axis =</span> T, </span>
 <span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a>                <span class="at">colours =</span> <span class="st">&quot;viridis&quot;</span>, </span>
 <span id="cb58-6"><a href="#cb58-6" tabindex="-1"></a>                <span class="at">path =</span> <span class="st">&quot;plots&quot;</span>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-4.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-5.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-6.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-7.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-8.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-9.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-10.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-11.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-12.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-13.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-14.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-15.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-16.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-17.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-18.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-19.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-20.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-21.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-31-22.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-4.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-5.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-6.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-7.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-8.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-9.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-10.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-11.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-12.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-13.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-14.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-15.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-16.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-17.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-18.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-19.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-20.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-21.png" width="672" style="display: block; margin: auto;" /><img src="figure/202504_Workshop.Rmd/unnamed-chunk-32-22.png" width="672" style="display: block; margin: auto;" /></p>
 </details>
-<p>And we can make the heatmap you’re used to seeing.</p>
+<p>And we can make the heatmap you’re used to seeing and save them.</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a>exp <span class="ot">&lt;-</span> <span class="fu">do.aggregate</span>(<span class="fu">as.data.table</span>(ILC_transf), <span class="at">use.cols =</span> risomMarkers, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;flowSOM&quot;</span>))</span>
 <span id="cb59-2"><a href="#cb59-2" tabindex="-1"></a><span class="fu">make.pheatmap</span>(exp, <span class="at">file.name =</span> <span class="st">&quot;plots/Pheatmap_FlowSOM.png&quot;</span>, <span class="at">sample.col=</span><span class="st">&quot;flowSOM&quot;</span>, <span class="at">plot.cols=</span>risomMarkers)</span></code></pre></div>
 <p><em>Spectre has also embedded FlowSOM clustering and dimension
@@ -1862,16 +2501,15 @@ reduction tools such as umap in easy codes, such as:<br></em></p>
 <ul>
 <li><code>do.subsample()</code></li>
 <li><code>run.flowsom()</code></li>
-<li><code>run.umap()</code></li>
+<li><code>run.umap()</code> <br></li>
 </ul>
+<hr />
 </div>
 </div>
 </div>
-<div id="additional-considerations"
+<div id="additional-considerations-qc"
 class="section level1 tabset tabset-fade">
-<h1 class="tabset tabset-fade">Additional Considerations</h1>
-<div id="qc" class="section level2">
-<h2>QC</h2>
+<h1 class="tabset tabset-fade">Additional Considerations: QC</h1>
 <p>When looking at the raw data, or in the middle of data processing,
 you may consider filtering some cell. In the 1-marker plots below, you
 can see that there are a few extreme values that are displayed and
@@ -1886,8 +2524,45 @@ pushing the majority of values squeezed together. e.g. HLA-DR:</p>
 <span id="cb60-8"><a href="#cb60-8" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(ILC_transf<span class="sc">$</span>HLA.DR, <span class="fl">0.001</span>), <span class="at">colour =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
 <span id="cb60-9"><a href="#cb60-9" tabindex="-1"></a></span>
 <span id="cb60-10"><a href="#cb60-10" tabindex="-1"></a><span class="co"># We can label the threshold lines: annotate as a text, at the position of the top and bottom 0.01%, and slightly adjust the label position horizontally.</span></span>
-<span id="cb60-11"><a href="#cb60-11" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fu">quantile</span>(ILC_transf<span class="sc">$</span>HLA.DR, <span class="fl">0.999</span>), <span class="at">y =</span> <span class="fl">0.003</span>, <span class="at">label =</span> <span class="st">&quot;Top and bottom 0.1%&quot;</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>) </span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto;" /></p>
+<span id="cb60-11"><a href="#cb60-11" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="fl">0.5</span>, <span class="at">label =</span> <span class="st">&quot;Top and bottom 0.1%&quot;</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>) </span></code></pre></div>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-34-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-34-1">
+Past versions of unnamed-chunk-34-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-34-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-34-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <details>
 <summary>
 View them for all channels.
@@ -1920,16 +2595,16 @@ View them for all channels.
 <span id="cb61-26"><a href="#cb61-26" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
 <span id="cb61-27"><a href="#cb61-27" tabindex="-1"></a>ggpubr<span class="sc">::</span><span class="fu">ggarrange</span>(<span class="at">plotlist =</span> plots_line, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">nrow =</span> <span class="dv">4</span>)</span></code></pre></div>
 <pre><code>$`1`</code></pre>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-34-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-35-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>
 $`2`</code></pre>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-34-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-35-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>
 $`3`</code></pre>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-34-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-35-3.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>
 $`4`</code></pre>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-34-4.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-35-4.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>
 attr(,&quot;class&quot;)
 [1] &quot;list&quot;      &quot;ggarrange&quot;</code></pre>
@@ -2033,12 +2708,14 @@ reduction. Sometimes you may decide to investigate how these impact your
 dataset and where they arise from. But if there are plenty of cells, and
 the % outliers is super small, you might just want to filter them
 out.<br></p>
-<p><strong>Filtering by %</strong> <br> You might want to filter out the
-top and bottom 0.1% of cells . Note that this approach removes the cells
-that doesn’t fit within the top and bottom 0.1% of ANY channel, and
-removes the cell from the entire dataset. So be cautious about the % so
-you aren’t removing too many cells when they are added up ( we’ll use
-0.1% all the way for demonstration purposes). <br></p>
+<div id="filtering-by" class="section level2">
+<h2>Filtering by %</h2>
+<p>You might want to filter out the top and bottom 0.1% of cells . Note
+that this approach removes the cells that doesn’t fit within the top and
+bottom 0.1% of ANY channel, and removes the cell from the entire
+dataset. So be cautious about the % so you aren’t removing too many
+cells when they are added up ( we’ll use 0.1% all the way for
+demonstration purposes). <br></p>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a><span class="co"># Create an empty list.</span></span>
 <span id="cb69-2"><a href="#cb69-2" tabindex="-1"></a>outlier_flag <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
 <span id="cb69-3"><a href="#cb69-3" tabindex="-1"></a></span>
@@ -2082,15 +2759,54 @@ you aren’t removing too many cells when they are added up ( we’ll use
 <span id="cb71-13"><a href="#cb71-13" tabindex="-1"></a> <span class="co"># number of column equals 1.</span></span>
 <span id="cb71-14"><a href="#cb71-14" tabindex="-1"></a> <span class="at">ncol =</span> <span class="dv">1</span></span>
 <span id="cb71-15"><a href="#cb71-15" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-37-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><strong>Filtering by fixed thresholds</strong> <br> You might want to
-filter out the data that is outside of certain values per channel. A
-commonly used standard in data cleaning is calculated based on
-interquartile ranges (IQR). The thresholds are any data points that are
-1.5 times of IQR above the 3rd quartile, or 1.5 times of IQR below the
-1st quartile. This will keep the majority of data points, however, it
-might also remove some true variance in the dataset at extreme
-ends.<br></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-38-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-38-1">
+Past versions of unnamed-chunk-38-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-38-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-38-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="filtering-by-fixed-thresholds" class="section level2">
+<h2>Filtering by fixed thresholds</h2>
+<p>You might want to filter out the data that is outside of certain
+values per channel. A commonly used standard in data cleaning is
+calculated based on interquartile ranges (IQR). The thresholds are any
+data points that are 1.5 times of IQR above the 3rd quartile, or 1.5
+times of IQR below the 1st quartile. This will keep the majority of data
+points, however, it might also remove some true variance in the dataset
+at extreme ends.<br></p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" tabindex="-1"></a><span class="co"># Take HLA-DR as an example</span></span>
 <span id="cb72-2"><a href="#cb72-2" tabindex="-1"></a></span>
 <span id="cb72-3"><a href="#cb72-3" tabindex="-1"></a><span class="co"># Calculate the interquartile range.</span></span>
@@ -2102,7 +2818,7 @@ ends.<br></p>
 <span id="cb72-9"><a href="#cb72-9" tabindex="-1"></a>   lowerfence <span class="ot">&lt;-</span> Q1 <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>IQR</span>
 <span id="cb72-10"><a href="#cb72-10" tabindex="-1"></a>   upperfence <span class="ot">&lt;-</span> Q3 <span class="sc">+</span> <span class="fl">1.5</span><span class="sc">*</span>IQR </span>
 <span id="cb72-11"><a href="#cb72-11" tabindex="-1"></a> </span>
-<span id="cb72-12"><a href="#cb72-12" tabindex="-1"></a><span class="co"># Only keep the cells which CD127 channel value within the thresholds.   </span></span>
+<span id="cb72-12"><a href="#cb72-12" tabindex="-1"></a><span class="co"># Only keep the cells which the HLA-DR value is within the thresholds.   </span></span>
 <span id="cb72-13"><a href="#cb72-13" tabindex="-1"></a>filt <span class="ot">&lt;-</span> ILC_transf[ILC_transf<span class="sc">$</span>HLA.DR <span class="sc">&gt;</span> lowerfence <span class="sc">&amp;</span> ILC_transf<span class="sc">$</span>HLA.DR <span class="sc">&lt;</span> upperfence, ]</span>
 <span id="cb72-14"><a href="#cb72-14" tabindex="-1"></a></span>
 <span id="cb72-15"><a href="#cb72-15" tabindex="-1"></a>cowplot<span class="sc">::</span><span class="fu">plot_grid</span>(</span>
@@ -2118,7 +2834,44 @@ ends.<br></p>
 <span id="cb72-25"><a href="#cb72-25" tabindex="-1"></a> <span class="co"># number of column equals 1.</span></span>
 <span id="cb72-26"><a href="#cb72-26" tabindex="-1"></a> <span class="at">ncol =</span> <span class="dv">1</span></span>
 <span id="cb72-27"><a href="#cb72-27" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-38-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-39-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-39-1">
+Past versions of unnamed-chunk-39-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-39-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ec75f7d93c686e48d4fce91a86dc1315ad706a10/docs/figure/202504_Workshop.Rmd/unnamed-chunk-39-1.png" target="_blank">ec75f7d</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-26
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a><span class="fu">rm</span>(Q1,Q3,IQR)</span></code></pre></div>
 <p>Or, simply just choose an arbitrary threshold.</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" tabindex="-1"></a><span class="co"># Only keep the cells which transformed HLA-DR expression value &lt; 2.</span></span>
@@ -2137,7 +2890,7 @@ ends.<br></p>
 <span id="cb74-14"><a href="#cb74-14" tabindex="-1"></a> <span class="co"># number of column equals 1.</span></span>
 <span id="cb74-15"><a href="#cb74-15" tabindex="-1"></a> <span class="at">ncol =</span> <span class="dv">1</span></span>
 <span id="cb74-16"><a href="#cb74-16" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-39-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/202504_Workshop.Rmd/unnamed-chunk-40-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -2244,7 +2997,7 @@ loaded via a namespace (and not attached):
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IG5vCiAgICBjb2RlX2ZvbGRpbmc6ICJoaWRlIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIG1lc3NhZ2UgPSBGLCB3YXJuaW5nPUZBTFNFLCBlcnJvcj1GKQpgYGAKCiMjIEZsb3cgQ3l0b21ldHJ5IGluIFI6IEEgSGFuZHMtT24gSW50cm9kdWN0aW9uCgpUaGlzIGJlZ2lubmVyLWZyaWVuZGx5LCBoYW5kcy1vbiB3b3Jrc2hvcCB3aWxsIGd1aWRlIHVzZXJzIHRocm91Z2ggYSBjb21wbGV0ZSBmbG93IGN5dG9tZXRyeSBhbmFseXNpcyB3b3JrZmxvdyBpbiBSLCBmcm9tIGxvYWRpbmcgZGF0YSB0byB2aXN1YWxpemluZyByZXN1bHRzLiBUaHJvdWdoIHByYWN0aWNhbCBleGVyY2lzZXMsIHdl4oCZbGwgY292ZXIgZXNzZW50aWFsIHN0ZXBzIGxpa2UgZ2VuZXJhdGluZyBoaXN0b2dyYW1zIGFuZCBzY2F0dGVycGxvdHMsIGV4dHJhY3Rpbmcgc3VtbWFyeSBzdGF0aXN0aWNzLCBzdWJzZXR0aW5nIGRhdGEsIGFuZCBwZXJmb3JtaW5nIGRpbWVuc2lvbiByZWR1Y3Rpb24gYW5kIGNsdXN0ZXJpbmfigJRhbGwgd2hpbGUgZGVtb25zdHJhdGluZyB0aGUgYWR2YW50YWdlcyBvZiByZXByb2R1Y2libGUgcmVwb3J0cyB3aXRoIFJNYXJrZG93bi4gCgpXaGV0aGVyIHlvdSdyZSBuZXcgdG8gUiBvciBqdXN0IGN1cmlvdXMgYWJvdXQgY29kaW5nIHlvdXIgYW5hbHlzZXMsIHRoaXMgc2Vzc2lvbiB3aWxsIHNob3cgeW91IGhvdyBhY2Nlc3NpYmxlIGFuZCBwb3dlcmZ1bCBSIGNhbiBiZSBmb3IgZmxvdyBjeXRvbWV0cnkuCgoqKllvdXIgRGVtb25zdHJhdG9yczoqKgoKLSBUaG9tYXMgTydOZWlsICAgCi0gWXVjaGVuIExpIChPbmxpbmUpCgoqKkF1dGhvcioqOiBZdWNoZW4gTGksIFRob21hcyBPJ05laWwKCltab29tIGxpbmtdKGh0dHBzOi8vdW5pLXN5ZG5leS56b29tLnVzL3MvODgxMDkzNjA0NTUpIChyZWNvcmRlZCkKCiMgSW50cm9kdWN0aW9uCgpJbiB0aGlzIHdvcmtzaG9wLCB3ZSBhaW0gdG8gZ2l2ZSBhbiBvdmVydmlldyBvZiB3aGF0IGlzIHBvc3NpYmxlIGZvciBmbG93IGFuYWx5c2lzIGluIFIuIFdlIHdpbGwgdG91Y2ggb24gdHdvIHdvcmtmbG93czoKCi0gZGF0YSB2aXN1YWxpc2F0aW9uIGFuZCBkYXRhIGNvbGxlY3Rpb24KCi0gZGltZW5zaW9uIHJlZHVjdGlvbiBhbmQgY2x1c3RlcmluZwoKV2UnbGwgdXNlIGEgMjUtY29sb3VyIGZsb3cgY3l0b21ldHJ5IGRhdGFzZXQgb2YgaW5uYXRlIGx5bXBob2lkIGNlbGxzIChJTEMpLCBuYXR1cmFsIGtpbGxlciBjZWxscyAoTkspLCBhbmQgaW5uYXRlLWxpa2UgVCBjZWxscyBpbiBodW1hbiBpbnRlc3RpbmFsIHRpc3N1ZXMsIGFmdGVyIGV4Y2x1ZGluZyBkZWFkIGNlbGxzLCBkb3VibGV0cywgbWFzdCBjZWxscyBhbmQgYmFzb3BoaWxzLCBoZW1hdG9wb2lldGljIHN0ZW0gY2VsbHMsIG15ZWxvaWQgY2VsbHMgYW5kIGdyYW51bG9jeXRlcywgYW5kIEIgY2VsbHMuIAoKVGhlIG9yaWdpbmFsIGRhdGEgd2FzIHB1Ymxpc2hlZCBhcyBpcyBhdmFpbGFibGUgaW4gW09NSVAtMDgyXShodHRwczovL3B1Ym1lZC5uY2JpLm5sbS5uaWguZ292LzM1MDE4NzMxLykgCgojIFNldHVwey50YWJzZXQgLnRhYnNldC1mYWRlfQoKV2UnbGwgdGFrZSB5b3UgdGhyb3VnaCBzdGVwcyBmcm9tIHRoZSBiZWdpbm5pbmcsIGluc3RhbGxpbmcgcGFja2FnZXMgYW5kIGxvYWRpbmcgZGF0YS4gCgojIyBQcmVwYXJhdGlvbjogcGFja2FnZXMgYW5kIGRpcmVjdG9yaWVzCgpQYWNrYWdlcyBhcmUgY29sbGVjdGlvbnMgb2YgZnVuY3Rpb25zLiBNYW55IGFyZSBub3QgaW4tYnVpbHQgaW4gdGhlIGJhc2UgUiBidXQgdGhleSBkbyBwcmV0dHkgY29vbCB0aGluZ3MsIGVuYWJsaW5nIGdlbmVyYXRpbmcgcHJldHR5IHBsb3RzLCBwZXJmb3JtaW5nIGRhdGEgd3JhbmdsaW5nIGluIGFuIGVmZmljaWVudCB3YXksIGV0Yy4gUiBhbHNvIGhhcyBhIGxhcmdlIGRldmVsb3BlciBjb21tdW5pdHksIHdpdGggbWFueSBjb21tdW5pdHktZGV2ZWxvcGVkIHBhY2thZ2VzIGF2YWlsYWJsZSBvbiBwbGF0Zm9ybXMgbGlrZSBgQmlvY29uZHVjdG9yYCBvciBgR2l0SHViYC4KCmBgYHtyLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQojIEluc3RhbGwgcGFja2FnZXMgdXNlZCBpbiB0aGlzIHdvcmtzaG9wLgoKI2luc3RhbGwucGFja2FnZXMoInRpZHl2ZXJzZSIpCiNpbnN0YWxsLnBhY2thZ2VzKCJnZ3JpZGdlcyIpCiNpbnN0YWxsLnBhY2thZ2VzKCJHR2FsbHkiKQojaW5zdGFsbC5wYWNrYWdlcygiY293cGxvdCIpCiNpbnN0YWxsLnBhY2thZ2VzKCJkYXRhLnRhYmxlIikKI2luc3RhbGwucGFja2FnZXMoIkJpb2NNYW5hZ2VyIikKCiNCaW9jTWFuYWdlcjo6aW5zdGFsbCgiRnVzZVNPTSIpCiNCaW9jTWFuYWdlcjo6aW5zdGFsbCgiRmxvd1NPTSIpCgojaWYoIXJlcXVpcmUoJ3JlbW90ZXMnKSkge2luc3RhbGwucGFja2FnZXMoJ3JlbW90ZXMnKX0KI3JlbW90ZXM6Omluc3RhbGxfZ2l0aHViKHJlcG8gPSAiaW1tdW5lZHluYW1pY3Mvc3BlY3RyZSIpCgoKIyBMb2FkIHBhY2thZ2VzCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGdncmlkZ2VzKQpsaWJyYXJ5KGNvd3Bsb3QpCmxpYnJhcnkoU3BlY3RyZSkKbGlicmFyeShGdXNlU09NKQpsaWJyYXJ5KEZsb3dTT00pCmxpYnJhcnkoR0dhbGx5KQpsaWJyYXJ5KHVtYXApCmxpYnJhcnkoUnRzbmUpCmxpYnJhcnkoZGF0YS50YWJsZSkKCnRoZW1lX3NldCh0aGVtZV9jbGFzc2ljKCkpCmBgYAoKQ3JlYXRlIHNvbWUgZm9sZGVycyBmb3IgcGxvdHMgYW5kIGRhdGEuCgpgYGB7ciwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZXZhbD1GfQpkaXIuY3JlYXRlKCJwbG90cyIpCmRpci5jcmVhdGUoImRhdGEiKQpkb3dubG9hZC5maWxlKCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vRHJUaG9tYXNPbmVpbC9EaWdpdGFsLVJlc2VhcmNoLVNraWxscy1OZXR3b3JrL3JlZnMvaGVhZHMvbWFpbi9kb2NzL2Fzc2V0cy9kb3dubG9hZHMvZXhhbXBsZV9mbG93ZGF0YV9vbWlwMDgyXzIway5jc3YiLCBkZXN0ZmlsZSA9ICJkYXRhL2V4YW1wbGVfZmxvd2RhdGFfb21pcDA4Ml8yMGsuY3N2IikKYGBgCgo8ZGV0YWlscz48c3VtbWFyeT5TZXR0aW5nIHNlZWQgaXMgY3J1Y2lhbCBmb3IgcmVwcm9kdWNpYmlsaXR5Ojwvc3VtbWFyeT4KCkl0J3MgYSBudW1iZXIgb2YgeW91ciBjaG9pY2UsIHdoaWNoIHBpbnMgZG93biB0aGUgIndheSIgdGhhdCBob3cgdGhlIHJhbmRvbSBwcm9jZXNzIHdpbGwgYmUgcGVyZm9ybWVkIHdoZW4geW91IHJlLXJ1biB0aGVzZSBjb2Rlcy4gKEVhc2llciBleGFtcGxlOiBTYXkgaWYgeW91IHJhbmRvbWx5IHRha2UgMTAgbnVtYmVycyB3aXRoIGEgbWVhbiBvZiA1MCwgdGhlcmUgd2lsbCBiZSB0b25uZXMgb2Ygd2F5cyB0byBnZW5lcmF0ZSB0aGUgbnVtYmVycy4gQnV0IGEgc2VlZCBlbnN1cmVzIHRoYXQgdGhlIHJlcG9ydCBhbHdheXMgcmV0dXJucyB0aGUgc2FtZSBzZXQgb2YgbnVtYmVycy4gSXQncyB0aGUgc2ltaWxhciBpZGVhIHdoZW4geW91IHJ1biBvdGhlciBhbGdvcml0aG1zIGluY2x1ZGluZyByYW5kb21uZXNzLCBlLmcuIGNsdXN0ZXJpbmcgYW5kIGdlbmVyYXRpbmcgYSBVTUFQKS4KCmBgYHtyfQpzZXQuc2VlZCgxMzM3KQpgYGAKPC9kZXRhaWxzPgoKIyMgTG9hZCBmbG93IGN5dG9tZXRyeSBkYXRhCgpUaGUgZXhwcmVzc2lvbiBkYXRhIGlzIHN0b3JlZCBpbiBhIGAuY3N2YCBmaWxlLiBXZSdsbCBmaXJzdCBsb2FkIHRoaXMgaW4uCgpgYGB7cn0KIyBSZWFkIHRoZSAuY3N2IGZpbGUgaW4gdGhlIHdvcmtpbmcgZGlyZWN0b3J5LgpJTEMgPC0gcmVhZC5jc3YoImRhdGEvZXhhbXBsZV9mbG93ZGF0YV9vbWlwMDgyXzIway5jc3YiKQpgYGAKCkhhdmUgYSBsb29rIGF0IHRoZSBicm9hZCBmZWF0dXJlcyBvZiB0aGlzIGRhdGFzZXQuIEluIHRoaXMgZGF0YXNldCwgdGhlIGNoYW5uZWwgbmFtZXMgYXJlIHN0b3JlZCBhcyBjb2x1bW4gbmFtZXMuIEVhY2ggcm93IHJlcHJlc2VudHMgYSBjZWxsLCBzdG9yaW5nIGV4cHJlc3Npb24gdmFsdWVzIGluIGVhY2ggY2hhbm5lbC4gCgpgYGB7ciwgZXZhbD1GfQojIERpbWVuc2lvbjogbnVtYmVyIG9mIGNlbGxzIHggbnVtYmVyIG9mIGNoYW5uZWxzLgpkaW0oSUxDKQoKIyBDaGVjayB0aGUgY29sdW1uIG5hbWVzLgpjb2xuYW1lcyhJTEMpCmBgYAoKVGhlIGNvbHVtbiBuYW1lcyBhcmUgd29yZHksIHdpdGggbWFya2VycywgZmx1b3JvcGhvcmVzLCBhbmQgY2hhbm5lbHMuIFdlIGp1c3QgbmVlZCB0aGUgbWFya2VyIG5hbWVzIHRvIHByb2NlZWQuIFRoZSBmaXJzdCBjb2x1bW4gJ1gnIGlzIGp1c3QgaW5kZXhpbmcgdGhlIG51bWJlciBvZiByb3dzLiBJdCdzIG5vdCBuZWNlc3NhcnkgZWl0aGVyLjxicj4KClJlbW92ZSB0aGUgZmlyc3QgY29sdW1uLgoKYGBge3J9CiMgVGhpcyBrZWVwcyB0aGUgMi0zMyBjb2x1bW5zIGluIHRoZSBkYXRhc2V0LCBhbmQgc3RvcmUgdGhlIGNoYW5nZS4KSUxDIDwtIElMQ1ssIC0xXQpjb2xuYW1lcyhJTEMpCgojIFNhbWUgd2l0aCBpdCwgeW91IGNhbiBqdXN0IGVudGVyIHRoZSBjb2x1bW4gaW5kZXhlcyBmcm9tIDItMzMuCiMgSUxDIDwtSUxDWyxjKDI6MzMpXQpgYGAKCkNoYW5nZSB0aGUgY29sdW1uIG5hbWVzLgoKYGBge3J9CiMgU3Vic3RpdHV0ZSBldmVyeXRoaW5nIGFmdGVyIHRoZSBmaXJzdCAnXycgd2l0aCBhbiBlbXB0eSAiIiBpbiB0aGUgY29sdW1uIG5hbWVzIHRoYXQgaGF2ZSB0aGUgcGF0dGVybiAiXyIgYW5kIHNvbWV0aGluZy4KY29sbmFtZXMoSUxDKSA8LSBzdWIoIl8uKiIsIiIsY29sbmFtZXMoSUxDKSkgIydfJyBpcyB0aGUgZXhhY3QgY2hhcmFjdGVyIGluIHRoZSBuYW1lcywgdGhlICcuJyBtZWFucyAnYW55IGNoYXJhY3RlcicsICcqJyBtZWFucyAnYW55IG9mIHRoZSBwcmVjZWRpbmcgdGhpbmdzJy4gCgpjb2xuYW1lcyhJTEMpCgojIEZpeCB1cCB0aGUgYnJva2VuIG5hbWVzIEZWUzcwMCBhbmQgQ0QxNCZDRDE5CiMgVGhpcyB0ZWxscyBSIHRvOiBmaW5kIHdoaWNoIG9mIHRoZSBjb2x1bW4gZXF1YWxzICJGVlMiIGFtb25nIGFsbCBjb2x1bW5zIGluIHRoZSBkYXRhLCB0aGVuIGNoYW5nZSBpdCB0byBGVlM3MDAuCmNvbG5hbWVzKElMQylbY29sbmFtZXMoSUxDKSA9PSAiRlZTIl0gPC0gIkZWUzcwMCIKY29sbmFtZXMoSUxDKVtjb2xuYW1lcyhJTEMpID09ICJDRDE0Il0gPC0gIkNEMTQuQ0QxOSIKCiMgSGF2ZSBhIGxvb2sKY29sbmFtZXMoSUxDKQpgYGAKCiMjIFRpbWUgZ2F0ZSBRQy4gCgpUaGUgZGF0YSBpcyBhbHJlYWR5IHByZXByb2Nlc3NlZCBpbiBGbG93Sm8uIEJ1dCBpZiB5b3UgYXJlIGludGVyZXN0ZWQsIHlvdSBjYW4gdmlldyB0aGUgVGltZSBnYXRlLCBhbmQgZmlsdGVyIHRoZSBkYXRhIGJhc2VkIG9uIHRoaXMgaW4gUi4KCmBgYHtyfQpnZ3Bsb3QoSUxDLCBhZXMoeCA9IFRpbWUsIHkgPSBGU0MuQSkpKwogIGdlb21fYmluXzJkKGJpbnMgPSAyMDAsIHNob3cubGVnZW5kID0gRkFMU0UpKwogICAgc2NhbGVfZmlsbF9ncmFkaWVudG4oY29sb3VycyA9IGMoImJsdWUiLCAiZ3JlZW4iLCAieWVsbG93IiwgInJlZCIpKSsKICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSA0NjAwMDAwKQoKIyBGaWx0ZXIgb3V0IHRoZSBjZWxscyBhYm92ZSB0aGUgdGhyZXNob2xkLgpJTEMgPC0gSUxDW0lMQyRUaW1lIDwgNDYwMDAwMCxdCmdncGxvdChJTEMsIGFlcyh4ID0gVGltZSwgeSA9IEZTQy5BKSkrCiAgZ2VvbV9iaW5fMmQoYmlucyA9IDIwMCwgc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvdXJzID0gYygiYmx1ZSIsICJncmVlbiIsICJ5ZWxsb3ciLCAicmVkIikpCmBgYAoKIyBWaXN1YWxpc2F0aW9ucwoKIyMgVHJhbnNmb3JtYXRpb25zCgpSYXcgRmxvdyBDeXRvbWV0cnkgZGF0YSBsb29rcyBiYWQhCgpgYGB7cn0KSUxDICU+JSBnZ3Bsb3QoYWVzKHg9Q0Q0LCB5PUNEMykpKyAgICAgICAgCiAgZ2VvbV9wb2ludCgpCmBgYAoKU28gd2UgdHJhbnNmb3JtIHRoZSBkYXRhIHRvIG1ha2UgaXQgbG9vayBiZXR0ZXIuIEluIEZsb3dKbywgd2hlbiB5b3UgYWRqdXN0IHRoZSBheGVzLCB5b3UgY2FuIHNlZSBzZXZlcmFsIHRyYW5zZm9ybWF0aW9ucyBhdmFpbGFibGUuIE9uZSBpcyBhcmNzaW5oICh0aGUgaW52ZXJzZSBvZiBoeXBlcmJvbGljIHNpbiwgaWYgeW91IHdhbnQgdG8gZ2V0IG1hdGh5KS4gU21hbGxlciB2YWx1ZXMgY2VudHJlIGFyb3VuZCB6ZXJvLCBhbmQgbGFyZ2VyIHZhbHVlcyBzZXBhcmF0ZSwgZ2l2aW5nIHRoZSBhcHBlYXJhbmNlIHRoYXQgd2UncmUgZmFtaWxpYXIgd2l0aC4gCgpXZSBhcmUgYWxzbyBhYmxlIHRvIGFkanVzdCB0aGUgbGV2ZWwgb2YgdHJhbnNmb3JtYXRpb24gYnkgZGl2aWRpbmcgdGhlIHZhbHVlcyBieSBzb21lIGNvZmFjdG9yLiAKCmBgYHtyLCBmaWcuaGVpZ2h0PTEwLCBmaWcud2lkdGg9MTB9CiMgZGVjaWRlIG9uIGEgY29mYWN0b3IgLSB0cnkgY2hhbmdpbmcgaXQgYW5kIHNlZWluZyBob3cgdGhlIGRhdGEgY2hhbmdlcwpjb2ZhY3RvciA9IDUwMApJTENfdHJhbnNmIDwtIGFzaW5oKElMQ1ssNzozMV0vY29mYWN0b3IpICM3OjMxIGFyZSB0aGUgY29sdW1ucyB3aXRoIG1hcmtlcnMuCgpJTENfdHJhbnNmIDwtIGNiaW5kKElMQ190cmFuc2YsIElMQ1ssYygxOjYsMzIpXSkgIyBBZGQgdGhlIGZpcnN0IDYgY29sdW1ucyAmIHRpbWUgYmFjayBpbi4KCklMQ190cmFuc2YgJT4lIGdncGxvdChhZXMoeD1DRDQsIHk9Q0QzKSkrCiAgZ2VvbV9iaW5fMmQoYmlucyA9IDIwMCwgc2hvdy5sZWdlbmQ9VCkKYGBgCgoKYGBge3IsIGZpZy5oZWlnaHQ9MTAsIGZpZy53aWR0aD0xMCwgd2FybmluZz1GQUxTRX0KIyBJbml0aWFsaXplIGFuIGVtcHR5IGxpc3QgdG8gc3RvcmUgdGhlIHBsb3RzCnBsb3RzIDwtIGxpc3QoKQojIERlZmluZSB0aGUgeC1heGlzIG1hcmtlciBmb3IgdGhlIHBsb3RzCnhheGlzID0gIkNEMzkiICMgQ2hvb3NlIGFuIHgtYXhpcyBtYXJrZXIgZm9yIGNvbXBhcmlzb24KCiMgTG9vcCB0aHJvdWdoIGVhY2ggY29sdW1uIGluIHRoZSBkYXRhc2V0CmZvcihpIGluIDE6bmNvbChJTENfdHJhbnNmKSkgewogICMgR2V0IHRoZSBtYXJrZXIgbmFtZSBmb3IgdGhlIGN1cnJlbnQgY29sdW1uCiAgTWFya2VyIDwtIGNvbG5hbWVzKElMQ190cmFuc2YpW2ldCiAgCiAgIyBHZW5lcmF0ZSBhIDJEIGJpbiBwbG90IGZvciB0aGUgY3VycmVudCBtYXJrZXIgYWdhaW5zdCB0aGUgY2hvc2VuIHgtYXhpcyBtYXJrZXIKICBwIDwtIElMQ190cmFuc2YgJT4lIAogICAgICAgIGdncGxvdChhZXNfc3RyaW5nKHggPSB4YXhpcywgeSA9IE1hcmtlcikpICsgICAgICAgIAogICAgICAgIGdlb21fYmluXzJkKGJpbnMgPSAyMDAsIHNob3cubGVnZW5kID0gRkFMU0UpICsgIyBDcmVhdGUgYSBoZWF0bWFwLXN0eWxlIHNjYXR0ZXIgcGxvdAogICAgICAgIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAieWVsbG93IiwgInJlZCIpKSAjIERlZmluZSB0aGUgY29sb3IgZ3JhZGllbnQKICAKICAjIEFkZCB0aGUgZ2VuZXJhdGVkIHBsb3QgdG8gdGhlIGxpc3QKICBwbG90c1tbaV1dIDwtIHAKfQoKIyBDb21iaW5lIGFsbCB0aGUgcGxvdHMgaW50byBhIGdyaWQgbGF5b3V0IGFuZCBkaXNwbGF5IHRoZW0KY293cGxvdDo6cGxvdF9ncmlkKHBsb3RsaXN0ID0gcGxvdHMpCnJtKHBsb3RzKQpgYGAKClRoaXMgY29kZSBkZW1vbnN0cmF0ZXMgaG93IHlvdSB3b3VsZCBtYW51YWxseSB0cmFuc2Zvcm0gaW5kaXZpZHVhbCBjb2x1bW5zIGluIHRoZSBkYXRhc2V0IHVzaW5nIGRpZmZlcmVudCBjb2ZhY3RvcnMgZm9yIGVhY2ggbWFya2VyLiBJdCBjcmVhdGVzIGEgbmV3IGRhdGFzZXQgKGBJTENfdHJhbnNmX2luZGl2YCkgd2hlcmUgc3BlY2lmaWMgY29sdW1ucyBhcmUgdHJhbnNmb3JtZWQgdXNpbmcgdGhlIGBhc2luaGAgZnVuY3Rpb24gd2l0aCB0aGVpciByZXNwZWN0aXZlIGNvZmFjdG9ycy4gVGhpcyBhbGxvd3MgZm9yIG1vcmUgZ3JhbnVsYXIgY29udHJvbCBvdmVyIHRyYW5zZm9ybWF0aW9ucy4gCgpgYGB7ciwgZXZhbD1GfQpJTENfdHJhbnNmX2luZGl2IDwtIElMQwpJTENfdHJhbnNmX2luZGl2WywgIkNEMyJdIDwtIGFzaW5oKElMQ1ssIkNEMyJdLzEwMDApCklMQ190cmFuc2ZfaW5kaXZbLCAiQ0Q0Il0gPC0gYXNpbmgoSUxDWywiQ0Q0Il0vNTAwKQojIGFuZCBzbyBvbi4uLgoKIyBWaXN1YWxpemUgaXQKSUxDX3RyYW5zZl9pbmRpdiAlPiUgZ2dwbG90KGFlcyh4PUNEMywgeT1DRDQpKSsgICAgICAgIAogICAgICAgIGdlb21fYmluXzJkKGJpbnMgPSAyMDAsIHNob3cubGVnZW5kPUYpICsKICAgICAgICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBjKCJibHVlIiwgICJ5ZWxsb3ciLCAicmVkIikpCgpybShJTENfdHJhbnNmX2luZGl2KQpgYGAKCiMjIEhpc3RvZ3JhbXMKCldlIGNhbiB2aXN1YWxpemUgdGhlIG1hcmtlciBleHByZXNzaW9ucyB2aWEgaGlzdG9ncmFtcyBhbmQgZGVuc2l0eSBwbG90cy4KCmBgYHtyfQojIEZvciBleGFtcGxlLCB0aGlzIGdlbmVyYXRlcyBhIGhpc3RvZ3JhbSBvZiBDRDMgZXhwcmVzc2lvbi4KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDMpKSsKICAjIFBsb3QgdGhlIGhpc3RvZ3JhbSwgYW5kIGNoYW5nZSB0aGUgZmlsbCBjb2xvdXIgdG8gbGlnaHRibHVlLCB0aGUgbGluZSBjb2xvdXIgdG8gYmxhY2suCiAgZ2VvbV9oaXN0b2dyYW0oYmlucyA9IDM1LCBmaWxsID0gImxpZ2h0Ymx1ZSIsIGNvbG91ciA9ImJsYWNrIikrCiAgIyBBZGQgbGFiZWxzCiAgeWxhYigiRnJlcXVlbmN5IikKCiMgQSBkZW5zaXR5IHBsb3QuCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0QzKSkrCiAgZ2VvbV9kZW5zaXR5KGxpbmV3aWR0aCA9IDAuNywgY29sb3VyID0gInJlZDQiLCBhZXMoZmlsbCA9ICJyZWQiKSwgYWxwaGEgPSAwLjUsc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgeWxhYigiRGVuc2l0eSIpCgpgYGAKCldlIGNhbiBsb29wIHRocm91Z2ggdGhlIGNoYW5uZWxzIGFuZCBjcmVhdGUgYSBkZW5zaXR5IHBsb3QgZm9yIGFsbCAyNSBtYXJrZXJzLgoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRX0KIyBJbml0aWFsaXNlIGFuIGVtcHR5IGxpc3QgdG8gc3RvcmUgdGhlIHBsb3RzCnBsb3RzPC0gbGlzdCgpCgojIExvb3AgdGhyb3VnaCBlYWNoIGNvbHVtbiBpbiB0aGUgZGF0YXNldApmb3IgKGkgaW4gMTpuY29sKElMQ190cmFuc2YpKXsKCiAgIyBHZXQgdGhlIG1hcmtlciBuYW1lIGZvciB0aGUgY3VycmVudCBjb2x1bW4KICBNYXJrZXIgPC0gY29sbmFtZXMoSUxDX3RyYW5zZilbaV0KCiAgIyBHZW5lcmF0ZSB0aGUgaGlzdG9ncmFtIGZvciB0aGUgY3VycmVudCBtYXJrZXIKICBwIDwtIElMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gLmRhdGFbW01hcmtlcl1dKSkrCiAgICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkNCIsIGFlcyhmaWxsID0gInJlZCIpLCBhbHBoYSA9IDAuNSxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICAgIGxhYnMoeD1NYXJrZXIseT0iIikrCiAgICB0aGVtZShheGlzLnRleHQgPSBlbGVtZW50X3RleHQoc2l6ZT0xKSkKCiAgIyBBZGQgdGhlIGdlbmVyYXRlZCBwbG90IHRvIHRoZSBsaXN0CiAgcGxvdHNbW2ldXSA8LSBwCn0KCnBsb3RfZ3JpZChwbG90bGlzdCA9IHBsb3RzWzE6MjVdKQpybShwbG90cykKYGBgCjxicj4KCiMjIFNjYXR0ZXIgcGxvdAoKTGlrZSB3aGF0IHdlIGRvIGluIEZsb3dqbywgd2UgY2FuIHZpc3VhbGl6ZSAyIG1hcmtlcnMnIGV4cHJlc3Npb25zLCBXZSBjYW4gZ2VuZXJhdGUgc2NhdHRlcnBsb3RzLgoKYGBge3J9CklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0Q0LCB5ID0gQ0QzKSkrCiAgZ2VvbV9wb2ludChjb2xvcj0iYmx1ZSIsIGFscGhhPTAuMSkKCiMgR2VuZXJhdGUgYSBzY2F0dGVycGxvdCB3aXRoIGEgZGVuc2l0eSBvdmVybGF5LgpJTENfdHJhbnNmICU+JSBnZ3Bsb3QoYWVzKHg9Q0Q0LCB5PUNEMykpKyAgICAgICAgCiAgZ2VvbV9iaW5fMmQoYmlucyA9IDIwMCwgc2hvdy5sZWdlbmQgPSBGKSsKICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBjKCJibHVlIiwgICJ5ZWxsb3ciLCAicmVkIikpCgpgYGAKCiMjIENvbnRvdXIgcGxvdAoKQW5kIGEgMi1tYXJrZXIgY291bnRvdXIgcGxvdC4gWW91IGNhbiBlYXNpbHkgbWFrZSBpdCBtb3JlIHN0eWxpc2ggYnkgYWRkaW5nIGxheWVycyBpbiBnZ3Bsb3QhCgpgYGB7ciBjb2xsYXBzZT1UfQoKIyBBIGNvbnRvdXIgcGxvdCBvZiBDRDMgYW5kIENENCBleHByZXNzaW9uIHZhbHVlcy4KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDMsIHkgPSBDRDQpKSsKICBnZW9tX2RlbnNpdHlfMmQoY29sb3VyID0gImJsYWNrIiwgYmlucz01MCkrCiAgeGxhYigiQ0QzIEJVVjU2MyIpKwogIHlsYWIoIkNENCBBUEMtQ3k3IikKCiMgQSBjb250b3VyIHBsb3Qgb2YgQ0QzIGFuZCBDRDQgZXhwcmVzc2lvbiBvdmVyIGEgc2NhdHRlciBwbG90LgpJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IENEMywgeSA9IENENCkpKyAgICAgICAgCiAgZ2VvbV9wb2ludChjb2xvciA9ICJncmV5IiwgYWxwaGE9MC41KSsKICBnZW9tX2RlbnNpdHlfMmQoY29sb3VyID0gImJsYWNrIiwgYmlucz01MCwgYWxwaGE9MC41KSsKICB4bGFiKCJDRDMgQlVWNTYzIikrCiAgeWxhYigiQ0Q0IEFQQy1DeTciKQoKIyBBIGNvbnRvdXIgcGxvdCBvZiBDRDMgYW5kIENENCBleHByZXNzaW9uIG92ZXIgYSBkZW5zaXR5IHBsb3QuCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0QzLCB5ID0gQ0Q0KSkrICAgICAgICAKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwKSsKICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBjKCJibHVlIiwgICJ5ZWxsb3ciLCAicmVkIikpKwogIGdlb21fZGVuc2l0eV8yZChjb2xvdXIgPSAiYmxhY2siKSsKICB4bGFiKCJDRDMgQlVWNTYzIikrCiAgeWxhYigiQ0Q0IEFQQy1DeTciKQoKYGBgCgojIFN1YnNldHRpbmcgZGF0YSBhbmQgc3VtbWFyeSBzdGF0aXN0aWNzey50YWJzZXQgLnRhYnNldC1mYWRlfQoKV2hpbGUgbm90IGFzIGVmZmljaWVudCBhcyBGbG93Sm8sIHdlIGNhbiBzdWJzZXQgZGF0YSBhZnRlciBleHBvcnRpbmcuIFdlIHdvdWxkbid0IG5vcm1hbGx5IGRvIHRoaXMgaW4gUiwgYnV0IHdlJ2xsIHNob3cgeW91IGhvdyB5b3UgY291bGQgc3Vic2V0IGluIFIgYW5kIGZvciB0aGUgcHVycG9zZXMgb2YgdmlzdWFsaXNhdGlvbi4gCgojIyBTdWJzZXR0aW5nCmBgYHtyfQojIFBsb3QgYSAyLW1hcmtlciBwbG90IG9mIENEMyBhbmQgQ0Q0IGV4cHJlc3Npb24gdmFsdWVzLiAKSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDMsIHkgPSBDRDQpKSsgICAgICAgIAogIGdlb21fYmluXzJkKGJpbnMgPSAyMDApKwogIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAgInllbGxvdyIsICJyZWQiKSkrCiAgeGxhYigiQ0QzIEJVVjU2MyIpKwogIHlsYWIoIkNENCBBUEMtQ3k3IikrCiAgZ2VvbV92bGluZSh4aW50ZXJjZXB0ID0gMS4zKSsgI2Nob29zZSB0aGUgeCBpbnRlcmNlcHQKICBnZW9tX2hsaW5lKHlpbnRlcmNlcHQgPSAwLjYpICAjY2hvb3NlIHRoZSB5IGludGVyY2VwdApgYGAKClN1YnNldCB0aGUgZGF0YXNldCBiYXNlZCBvbiB0aGVzZSB0aHJlc2hvbGRzLgoKYGBge3J9CiMgVGhpcyBjb2RlIGNyZWF0ZXMgYSBuZXcgY29sdW1uIG5hbWVkICdzdWJzZXQnIGluIHRoZSAnSUxDX3RyYW5zZicgZGF0YXNldC4KIyBUaGUgJ3N1YnNldCcgY29sdW1uIGNhdGVnb3Jpc2VzIHJvd3MgYmFzZWQgb24gdGhlIHZhbHVlcyBvZiAnQ0QzJyBhbmQgJ0NENCcgY29sdW1uczoKIyAtICJDRDMrQ0Q0KyI6IGlmIENEMyA+IDEuMyBhbmQgQ0Q0ID4gMC42CiMgLSAiQ0QzK0NENC0iOiBpZiBDRDMgPiAxLjMgYW5kIENENCA8PSAwLjYKIyAtICJDRDMtQ0Q0KyI6IGlmIENEMyA8PSAxLjMgYW5kIENENCA+IDAuNgojIC0gIkNEMy1DRDQtIjogaWYgQ0QzIDw9IDEuMyBhbmQgQ0Q0IDw9IDAuNgojIFRoZSAnbXV0YXRlJyBmdW5jdGlvbiBmcm9tIHRoZSBkcGx5ciBwYWNrYWdlIGlzIHVzZWQgdG8gYWRkIHRoaXMgbmV3IGNvbHVtbi4KCklMQ190cmFuc2YgPC0gSUxDX3RyYW5zZiAlPiUgCiAgbXV0YXRlKHN1YnNldCA9IGNhc2Vfd2hlbigKICAgIENEMyA+IDEuMyAmIENENCA+IDAuNiB+ICJDRDMrQ0Q0KyIsCiAgICBDRDMgPiAxLjMgJiBDRDQgPD0gMC42IH4gIkNEMytDRDQtIiwKICAgIENEMyA8PSAxLjMgJiBDRDQgPiAwLjYgfiAiQ0QzLUNENCsiLAogICAgVFJVRSB+ICJDRDMtQ0Q0LSIKICApKQpgYGAKCiMjIyBWaXN1YWxpc2UgdGhlIHN1YnNldHMgaW4gZG90IHBsb3RzCmBgYHtyfQpJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IENEMywgeSA9IENENCwgY29sb3I9c3Vic2V0KSkrICAgICAgICAKICBnZW9tX3BvaW50KCkrCiAgeGxhYigiQ0QzIEJVVjU2MyIpKwogIHlsYWIoIkNENCBBUEMtQ3k3IikrZ2VvbV92bGluZSh4aW50ZXJjZXB0ID0gMS4zKSsKICBnZW9tX2hsaW5lKHlpbnRlcmNlcHQgPSAwLjYpCgojIExvb2sgYXQgZGlmZmVyZW50IG1hcmtlcnMgY29sb3VyZWQgYnkgc3Vic2V0CklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0Q1NiwgeSA9IENEMTYsIGNvbG9yPXN1YnNldCkpKyAgICAgICAgCiAgZ2VvbV9wb2ludCgpCgojIFNwbGl0IGJ5IHN1YnNldApJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9Q0Q1NiwgeSA9IENEMTYpKSsgICAgICAgIAogIGdlb21fYmluXzJkKGJpbnMgPSAyMDApKwogIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAgInllbGxvdyIsICJyZWQiKSkrCiAgZmFjZXRfd3JhcCh+c3Vic2V0KQoKSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPUZTQy5BLCB5ID0gU1NDLkEpKSsgICAgICAgIAogIGdlb21fYmluXzJkKGJpbnMgPSAyMDApKwogIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAgInllbGxvdyIsICJyZWQiKSkrCiAgZmFjZXRfd3JhcCh+c3Vic2V0KQpgYGAKCiMjIyBIaXN0b2dyYW1zCgpgYGB7ciwgd2FybmluZz1GQUxTRX0KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDU2LCBjb2xvciA9IHN1YnNldCwgZmlsbCA9IHN1YnNldCkpICsKICBnZW9tX2RlbnNpdHkoYWxwaGEgPSAwLjIsIGxpbmV3aWR0aCA9IDEpKwogIHhsaW0ocXVhbnRpbGUoSUxDX3RyYW5zZiRDRDU2LCAwLjAwMSkscXVhbnRpbGUoSUxDX3RyYW5zZiRDRDU2LCAwLjk5OSkpCgojdXNpbmcgZ2dyaWRnZXMKSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDU2LCB5ID0gc3Vic2V0LCBmaWxsID0gc3Vic2V0KSkgKwogIGdlb21fZGVuc2l0eV9yaWRnZXMoc2NhbGUgPSAxLjIsIGFscGhhID0gMC42LCBjb2xvdXIgPSAiYmxhY2siKSArCiAgdGhlbWVfcmlkZ2VzKCkgKwogIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJub25lIikrCiAgbGFicyh5PSIiLCB4PSIiLCB0aXRsZSA9ICJDRDU2IikrCiAgeGxpbShxdWFudGlsZShJTENfdHJhbnNmJENENTYsIDAuMDAxKSxxdWFudGlsZShJTENfdHJhbnNmJENENTYsIDAuOTk5KSkKYGBgCgpZb3UgY291bGQgbWFzcyBwcmludCB0aGVzZSB1c2luZyBhIGxvb3AsIGFzIHdlIGRpZCBmb3IgdGhlIGRlbnNpdHkgcGxvdHMgYWJvdmUuIFlvdSBjYW4gYWxzbyBhZGp1c3QgdGhlIG1hcmtlciB5b3Ugb3V0cHV0LCBhcyBub3QgYWxsIG1hcmtlcnMgb3IgY29tYmluYXRpb25zIG9mIG1hcmtlcnMgYXJlIHVzZWZ1bC4KCiMjIFN1bW1hcnkgc3RhdGlzdGljcwoKV2hpbGUgc3Vic2V0dGluZyBpcyBub3QgYXMgZWZmaWNpZW50IGFzIEZsb3dKbywgc3VtbWFyaXNpbmcgZGF0YSBpcyEgCgpXZSBjYW4gZmlyc3QgY29sbGVjdCBzdWJzZXQgcGVyY2VudGFnZXMgYW5kIG91dHB1dCB0aGVtIGluIGEgdGFibGUsIGluIHRleHQsIGFuZCBldmVuIGluIGEgcGxvdC4gVGhlbiB3ZSBjYW4gY2FsY3VsYXRlIHN1bW1hcnkgc3RhdGlzdGljcyBsaWtlIE1GSSAmIGdNRkkuCgpgYGB7cn0KIyB0b3RhbCBzdW1tYXJ5CnJvdW5kKHRhYmxlKElMQ190cmFuc2Ykc3Vic2V0KSoxMDAvbnJvdyhJTENfdHJhbnNmKSwyKSAjICUgb2YgZWFjaCBzdWJzZXQKCiMgaW5kaXZpZHVhbCBtYXJrZXIKSUxDX3RyYW5zZiAlPiUgCiAgZ3JvdXBfYnkoc3Vic2V0KSAlPiUgCiAgc3VtbWFyaXNlKFBlcmNlbnQgPSByb3VuZChuKCkvbnJvdyhJTENfdHJhbnNmKSoxMDAsMikpICU+JQogIG11dGF0ZShzdWJzZXQgPSBmYWN0b3Ioc3Vic2V0LCBsZXZlbHMgPSBjKCJDRDMrQ0Q0KyIsICJDRDMrQ0Q0LSIsICJDRDMtQ0Q0KyIsICJDRDMtQ0Q0LSIpKSklPiUKICBtdXRhdGUoU3Vic2V0cyA9ICJTdWJzZXRzIikgJT4lCiAgZ2dwbG90KGFlcyh4PVN1YnNldHMseSA9IFBlcmNlbnQsIGZpbGwgPSBzdWJzZXQpKSArCiAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5Iiwgc2hvdy5sZWdlbmQgPSBGQUxTRSkgKwogICAgeWxhYigiUGVyY2VudGFnZSIpICsKICAgIHhsYWIoIiIpICsKICAgIHNjYWxlX2ZpbGxfbWFudWFsKHZhbHVlcyA9IGMoIkNEMytDRDQrIiA9ICJibHVlIiwgIkNEMytDRDQtIiA9ICJyZWQiLCAiQ0QzLUNENCsiID0gImdyZWVuIiwgIkNEMy1DRDQtIiA9ICJ5ZWxsb3ciKSkgKwogICAgdGhlbWUoYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKCksIGF4aXMudGlja3MueCA9IGVsZW1lbnRfYmxhbmsoKSkgKwogICAgdGhlbWUoYXhpcy50ZXh0LnkgPSBlbGVtZW50X3RleHQoc2l6ZT0xMCkpICsKICAgIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJub25lIikgKwogICAgdGhlbWUocGxvdC50aXRsZSA9IGVsZW1lbnRfdGV4dChoanVzdCA9IDAuNSwgc2l6ZT0xMCkpICsKICAgIGdndGl0bGUoIlN1YnNldHMgb2YgQ0QzKy8tQ0Q0Ky8tIGNlbGxzIikKYGBgCgpXZSBjYW4gYWxzbyBjYWxjdWxhdGUgdGhlIHBlcmNlbnRhZ2Ugb2Ygc3Vic2V0cyBpbiBsaW5lLCBtZWFuaW5nIHdlIGRvbid0IGhhdmUgdG8gY2hhbmdlIHRoZXNlIGxpbmVzIG9mIHRleHQgYmFzZWQgb24gZGlmZmVyZW50IHJlc3VsdHMgb3IgZGlmZmVyZW50IGRhdGE6Ci0gQ0QzK0NENCs6IGByIHJvdW5kKHN1bShJTENfdHJhbnNmJHN1YnNldCA9PSAiQ0QzK0NENCsiKS9ucm93KElMQ190cmFuc2YpKjEwMCwyKWAlCgotIENEMytDRDQtOiBgciByb3VuZChzdW0oSUxDX3RyYW5zZiRzdWJzZXQgPT0gIkNEMytDRDQtIikvbnJvdyhJTENfdHJhbnNmKSoxMDAsMilgJQoKLSBDRDMtQ0Q0KzogYHIgcm91bmQoc3VtKElMQ190cmFuc2Ykc3Vic2V0ID09ICJDRDMtQ0Q0KyIpL25yb3coSUxDX3RyYW5zZikqMTAwLDIpYCUKCi0gQ0QzLUNENC06IGByIHJvdW5kKHN1bShJTENfdHJhbnNmJHN1YnNldCA9PSAiQ0QzLUNENC0iKS9ucm93KElMQ190cmFuc2YpKjEwMCwyKWAlCgo8ZGV0YWlscz4KPHN1bW1hcnk+KipZb3UgY2FuIGFsc28gcXVpY2tseSBjYWxjdWxhdGUgc3VtbWFyeSBzdGF0aXN0aWNzIGxpa2UgTUZJLCBnTUZJLCBtZWRpYW5GSSoqOjwvc3VtbWFyeT4KCioqQXJpdGhtYXRpYyBNRkkqKiAgCgpgYGB7cn0KSUxDJHN1YnNldCAgPC0gSUxDX3RyYW5zZiRzdWJzZXQgIyBBZGQgdGhlIHN1YnNldCBjb2x1bW4gdG8gdGhlIG9yaWdpbmFsIGRhdGEuCgpJTEMgJT4lIAogIGdyb3VwX2J5KHN1YnNldCkgJT4lIAogIHN1bW1hcmlzZShhY3Jvc3MoNzozMSwgbWVhbiwgLm5hbWVzID0gIk1GSV97Y29sfSIpKQoKYGBgCgoqKk1lZGlhbiBGSSoqCgpgYGB7cn0KSUxDICU+JSAKICBncm91cF9ieShzdWJzZXQpICU+JSAKICBzdW1tYXJpc2UoYWNyb3NzKDc6MzEsIG1lYW4sIC5uYW1lcyA9ICJNRklfe2NvbH0iKSkKYGBgCgoqKmdlb21ldHJpYyBNRkkqKgoKVGhlIHRyYWRpdGlvbmFsIGZvcm11bGEgd3JpdHRlbiBvdXQgd291bGQgYmUgbGlrZSBgSUxDX3RyYW5zZiAlPiUgcHJvZChDRDU2KV4oMS9ucm93KENENTYpKWAuIEhvd2V2ZXIsIGFzIG91ciBkYXRhIGlzICpjb21wZW5zYXRlZCosIHRoZXJlIGFyZSBtZWFuaW5nZnVsIG5lZ2F0aXZlIHZhbHVlcyBhbmQgMHMgdGhhdCB3ZSBkb24ndCB3YW50IHRvIGdldCByaWQgb2YsIHdoaWNoIGlmIHlvdSBydW4gb24gdGhpcyBkYXRhIHJlbW92ZXMgdHdvIHN1YnNldHMgZW50aXJlbHkuIEZsb3dKbyBjYWxjdWxhdGVzIHRoZSAqZ3JhcGggc3BhY2VzKiBhcyBnTUZJIHRvIGVuYWJsZSBpdCB0byBkZWFsIHdpdGggbmVnYXRpdmVzIGFuZCAwcy4gSGVyZSBpbiB0aGlzIGNhc2UsIG91ciBkYXRhIGlzIGFscmVhZHkgYXNpbmggdHJhbnNmb3JtZWQgdG8gYWNjb21vZGF0ZSB0aGUgLXZlIGFuZCAwcyBhbmQgYml6emFyZSBleHByZXNzaW9uIHZhbHVlcy4gSXQgbWF5IGJlIGJldHRlciB0byBzdGljayB3aXRoIHRoZSBhcml0aG1hdGljIG1lYW4gaW5zdGVhZCBvZiBmb3JjaW5nIHRoZSBnZW9tZXRyaWMgbWVhbi4KCjwvZGV0YWlscz4KCjxicj4KCiMgbnhuIHBsb3RzCgpZb3UgY2FuIGFsc28gY3JlYXRlIGEgbG9vcCB0byB2aWV3IHRoZSBueG4gcGxvdHMuCgpgYGB7ciwgZmlnLndpZHRoPTIwLCBmaWcuaGVpZ2h0PTIwLCB3YXJuaW5nPUZBTFNFfQojIFNlbGVjdCBvbmx5IG51bWVyaWMgbWFya2VyIGNvbHVtbnMKbWFya2VyX2NvbHMgPC0gY29sbmFtZXMoSUxDX3RyYW5zZilbMToyNV0gIyBhZGp1c3QgaWYgbmVlZGVkCgojIE1ha2UgYSBjdXN0b21pc2VkIGZ1bmN0aW9uIGZvciBwbG90IHN0cmVhbWxpbmUKY3VzdG9tX2Jpbl9wbG90IDwtIGZ1bmN0aW9uKGRhdGEsIG1hcHBpbmcsIC4uLikgewogIGdncGxvdChkYXRhID0gZGF0YSwgbWFwcGluZyA9IG1hcHBpbmcpICsKICAgIGdlb21fYmluXzJkKGJpbnMgPSA1MCkgKwogICAgc2NhbGVfZmlsbF9ncmFkaWVudG4oY29sb3VycyA9IGMoImJsdWUiLCAieWVsbG93IiwgInJlZCIpKSArCiAgICB0aGVtZV9taW5pbWFsKCkKfQoKIyBHZW5lcmF0ZSBwbG90cwpwIDwtIGdncGFpcnMoCiAgSUxDX3RyYW5zZiwKICBjb2x1bW5zID0gbWFya2VyX2NvbHMsCiAgbG93ZXIgPSBsaXN0KGNvbnRpbnVvdXMgPSBjdXN0b21fYmluX3Bsb3QpLAogIGRpYWcgPSBsaXN0KGNvbnRpbnVvdXMgPSB3cmFwKCJkZW5zaXR5RGlhZyIsIGFscGhhID0gMC40KSksCiAgdXBwZXIgPSBsaXN0KGNvbnRpbnVvdXMgPSB3cmFwKCJjb3IiLCBzaXplID0gMykpCikKZ2dzYXZlKCJwbG90cy9ueG4ucG5nIixwLCB3aWR0aD0yNSwgaGVpZ2h0PTI1LHVuaXQ9ImluIikKCnJtKHAsY3VzdG9tX2Jpbl9wbG90LCBtYXJrZXJfY29scykKYGBgCgoKIyBEaW1lbnNpb24gcmVkdWN0aW9uIGFuZCBjbHVzdGVyaW5nCgpUaGVyZSBhcmUgc2V2ZXJhbCB3YXlzIHRvIHBlcmZvcm0gY2x1c3RlcmluZyAoZS5nLiBGbG93U09NLCBGdXNlU09NKSBhbmQgZGltZW5zaW9uIHJlZHVjdGlvbiAoZS5nLiBQQ0EsIFVNQVAsIHRTTkUpLiAKCkluIHRoaXMgc2VjdGlvbiwgd2UnbGwgY292ZXIgKipjbHVzdGVyaW5nKiogYW5kICoqZGltZW5zaW9uIHJlZHVjdGlvbioqIG9uIG91ciBvbmUgc2FtcGxlLiAKCiMjIENsdXN0ZXJpbmd7LnRhYnNldCAudGFic2V0LWZhZGV9CgpDbHVzdGVyaW5nIGdyb3VwcyBvdXIgY2VsbHMgYmFzZWQgb24gdGhlIGlucHV0IGV4cHJlc3Npb25zIHdlIGNob29zZS4gCgojIyMgRmxvd1NPTQpbUmVhZCBtb3JlXShodHRwczovL2Jpb2NvbmR1Y3Rvci5vcmcvcGFja2FnZXMvcmVsZWFzZS9iaW9jL2h0bWwvRmxvd1NPTS5odG1sKQoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRX0KCiMgUGVyZm9ybSBjbHVzdGVyaW5nCmNsdXN0ZXJzIDwtIEZsb3dTT006OkZsb3dTT00oCiAgaW5wdXQ9YXMubWF0cml4KElMQ190cmFuc2ZbLDE6MzJdKSwKICBzaWxlbnQgPSBGQUxTRSwKICBjb2xzVG9Vc2UgPSBjKDEsNCw2OjE0LDE2OjI1KSwKICBuQ2x1cyA9IDE1KQoKIyBBbm5vdGF0ZSB0aGUgY2x1c3RlciB0aGF0IHRoZSBjZWxsIGJlbG9uZ3MgdG8KSUxDX3RyYW5zZiRmbG93U09NPC0gR2V0TWV0YWNsdXN0ZXJzKGNsdXN0ZXJzKQpGbG93U09NOjpHZXRNZXRhY2x1c3Rlck1GSXMoY2x1c3RlcnMpCgojIFBsb3QgQ0Q0IGV4cHJlc3Npb24gdmFsdWVzIG9uIGNsdXN0ZXJzCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0Q1NiwgeSA9IGZsb3dTT00sIGZpbGwgPSBmbG93U09NKSkgKwogIGdlb21fZGVuc2l0eV9yaWRnZXMoc2NhbGUgPSAxLjIsIGFscGhhID0gMC42LCBjb2xvdXIgPSAiYmxhY2siKSArCiAgdGhlbWVfcmlkZ2VzKCkgKwogIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJub25lIikrCiAgbGFicyh5PSIiLCB4PSIiLCB0aXRsZSA9ICJDRDU2IikKYGBgCgojIyMgRnVzZVNPTQpbUmVhZCBtb3JlXShodHRwczovL2Jpb2NvbmR1Y3Rvci5vcmcvcGFja2FnZXMvcmVsZWFzZS9iaW9jL2h0bWwvRmxvd1NPTS5odG1sKQoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRX0KCnJpc29tTWFya2VycyA8LSBjb2xuYW1lcyhJTENfdHJhbnNmKVtjKDEsNCw2OjE0LDE2OjI1KV0KY2x1c3RlcnMgPC0gcnVuRnVzZVNPTShkYXRhID0gYXMubWF0cml4KElMQ190cmFuc2ZbLDE6MzJdKSwgbWFya2VycyA9IHJpc29tTWFya2VycywgCiAgICAgICAgICAgICAgICAgICAgICAgIG51bUNsdXN0ZXJzID0gMTUpCgpJTENfdHJhbnNmJGZ1c2VTT008LSBhcy5udW1lcmljKHVubGlzdChsYXBwbHkoc3RyX3NwbGl0KGNsdXN0ZXJzJGNsdXN0ZXJzLCAiXyIpLCBmdW5jdGlvbih4KSB4W1syXV0pKSkKCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0QzOSwgeSA9IGFzLmZhY3RvcihmdXNlU09NKSwgZmlsbD1hcy5mYWN0b3IoZnVzZVNPTSkpKSArCiAgZ2VvbV9kZW5zaXR5X3JpZGdlcyhzY2FsZSA9IDEuMiwgYWxwaGEgPSAwLjYsIGNvbG91ciA9ICJibGFjayIpICsKICB0aGVtZV9yaWRnZXMoKSArCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gIm5vbmUiKSsKICBsYWJzKHk9IiIsIHg9IiIsIHRpdGxlID0gIkNEMzkiKQpgYGAKCiMjIERpbWVuc2lvbiBSZWR1Y3Rpb257LnRhYnNldCAudGFic2V0LWZhZGV9CgpXZSdsbCBnZW5lcmF0ZSBhIFBDQSwgYSB0U05FIGFuZCBhIFVNQVAuIEknbGwgdGhlbiBydW4gdGhyb3VnaCBhbGwgb2YgdGhpcyBpbiB0aGUgU3BlY3RyZSBwYWNrZ2UuIAoKYGBge3IgbWVzc2FnZT1GLCB3YXJuaW5nPUYsIGV2YWw9Rn0KCnBjYSA8LSBwcmNvbXAoYXMubWF0cml4KElMQ190cmFuc2ZbLGMoMSw0LDY6MTQsMTY6MjUpXSksIGNlbnRlciA9IFRSVUUpCgpJTENfdHJhbnNmIDwtIElMQ190cmFuc2YgJT4lIAogIG11dGF0ZShQQzEgPSBwY2EkeFssMV0sCiAgICAgICAgIFBDMiA9IHBjYSR4WywyXSkKCiMgY2FuIHRha2UgYSB3aGlsZQp0c25lIDwtIFJ0c25lKGFzLm1hdHJpeChJTENfdHJhbnNmWyxjKDEsNCw2OjE0LDE2OjI1KV0pLCBkaW1zID0gMiwgcGVycGxleGl0eSA9IDMwLCB2ZXJib3NlID0gVFJVRSkKCklMQ190cmFuc2YgPC0gSUxDX3RyYW5zZiAlPiUgCiAgbXV0YXRlKHRTTkUxID0gdHNuZSRZWywxXSwKICAgICAgICAgdFNORTIgPSB0c25lJFlbLDJdKQoKdW1hcCA8LSB1bWFwKElMQ190cmFuc2ZbLGMoMSw0LDY6MTQsMTY6MjUpXSkKSUxDX3RyYW5zZiA8LSBJTENfdHJhbnNmICU+JSAKICBtdXRhdGUoVU1BUDEgPSB1bWFwJGxheW91dFssMV0sCiAgICAgICAgIFVNQVAyID0gdW1hcCRsYXlvdXRbLDJdKQoKcm0ocGNhLHVtYXAsdHNuZSkKYGBgCmBgYHtyLCBldmFsPUZ9CnNhdmVSRFMoSUxDX3RyYW5zZiwiZGF0YS9jbHVzdGVyZWRfZGF0YS5yZHMiKQpgYGAKCiMjIyBWaXN1YWxpc2F0aW9ucwoKYGBge3J9CklMQ190cmFuc2YgPC0gcmVhZFJEUygiZGF0YS9jbHVzdGVyZWRfZGF0YS5yZHMiKQpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKFBDMSxQQzIsIGNvbG9yPSBhcy5mYWN0b3IoZmxvd1NPTSkpKSArCiAgZ2VvbV9wb2ludCgpCgpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKHRTTkUxLHRTTkUyLCBjb2xvcj0gYXMuZmFjdG9yKGZsb3dTT00pKSkgKwogIGdlb21fcG9pbnQoKQoKZ2dwbG90KElMQ190cmFuc2YsIGFlcyhVTUFQMSxVTUFQMiwgY29sb3I9IGFzLmZhY3RvcihmbG93U09NKSkpICsKICBnZW9tX3BvaW50KCkreGxpbSgtNywxMCkKCiMgQ29sb3VyIG92ZXJsYXllZCBieSB0aGUgZXhwcmVzc2lvbiBvZiBvbmUgbWFya2VyLgpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKFVNQVAxLFVNQVAyLCBjb2xvcj0gQ0QzKSkgKwogIGdlb21fcG9pbnQoKSArIAogIHNjYWxlX2NvbG9yX3ZpcmlkaXNfYygpK3hsaW0oLTcsMTApCgpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKFVNQVAxLFVNQVAyLCBjb2xvcj0gQ0QxNikpICsKICBnZW9tX3BvaW50KCkgKyAKICBzY2FsZV9jb2xvcl92aXJpZGlzX2MoKSt4bGltKC03LDEwKQoKYGBgCgojIyMgU3BlY3RyZQoKW1JlYWQgbW9yZV0oaHR0cHM6Ly9pbW11bmVkeW5hbWljcy5pby9zcGVjdHJlLykKCmBgYHtyLCBtZXNzYWdlID0gRiwgd2FybmluZz1GQUxTRX0KIyBTcGVjdHJlIGhhcyBlYXN5IHBsb3R0aW5nIHRvb2xzIHRvIHZpc3VhbGl6ZSB0aGUgcmVzdWx0cyBvZiBjbHVzdGVyaW5nIGFuZCBkaW1lbnNpb24gcmVkdWN0aW9uLgptYWtlLmNvbG91ci5wbG90KElMQ190cmFuc2YsIAogICAgICAgICAgICAgICAgICJ0U05FMSIsICJ0U05FMiIsICJzdWJzZXQiLCAgCiAgICAgICAgICAgICAgICAgYWRkLmxhYmVsID0gVFJVRSwKICAgICAgICAgICAgICAgICBibGFuay5heGlzID0gVCwKICAgICAgICAgICAgICAgICBwYXRoID0gInBsb3RzIikKbWFrZS5jb2xvdXIucGxvdChJTENfdHJhbnNmLCAKICAgICAgICAgICAgICAgICAidFNORTEiLCAidFNORTIiLCAiZmxvd1NPTSIsIAogICAgICAgICAgICAgICAgIGNvbC50eXBlID0gJ2ZhY3RvcicsIAogICAgICAgICAgICAgICAgIGFkZC5sYWJlbCA9IFRSVUUsCiAgICAgICAgICAgICAgICAgYmxhbmsuYXhpcyA9IFQsCiAgICAgICAgICAgICAgICAgcGF0aCA9ICJwbG90cyIpCmBgYAoKPGRldGFpbHM+PHN1bW1hcnk+KipNdWx0aS1wbG90czoqKjwvc3VtbWFyeT4KCmBgYHtyLCBtZXNzYWdlID0gRiwgd2FybmluZz1GQUxTRX0KbWFrZS5tdWx0aS5wbG90KElMQ190cmFuc2YsIAogICAgICAgICAgICAgICAgInRTTkUxIiwgInRTTkUyIiwgCiAgICAgICAgICAgICAgICByaXNvbU1hcmtlcnMsIAogICAgICAgICAgICAgICAgYmxhbmsuYXhpcyA9IFQsIAogICAgICAgICAgICAgICAgY29sb3VycyA9ICJ2aXJpZGlzIiwgCiAgICAgICAgICAgICAgICBwYXRoID0gInBsb3RzIikKYGBgCgo8L2RldGFpbHM+CgpBbmQgd2UgY2FuIG1ha2UgdGhlIGhlYXRtYXAgeW91J3JlIHVzZWQgdG8gc2VlaW5nLiAKCmBgYHtyLCBtZXNzYWdlID0gRiwgd2FybmluZz1GQUxTRSwgZXJyb3I9Rn0KZXhwIDwtIGRvLmFnZ3JlZ2F0ZShhcy5kYXRhLnRhYmxlKElMQ190cmFuc2YpLCB1c2UuY29scyA9IHJpc29tTWFya2VycywgYnkgPSBjKCJmbG93U09NIikpCm1ha2UucGhlYXRtYXAoZXhwLCBmaWxlLm5hbWUgPSAicGxvdHMvUGhlYXRtYXBfRmxvd1NPTS5wbmciLCBzYW1wbGUuY29sPSJmbG93U09NIiwgcGxvdC5jb2xzPXJpc29tTWFya2VycykKYGBgCgoKKlNwZWN0cmUgaGFzIGFsc28gZW1iZWRkZWQgRmxvd1NPTSBjbHVzdGVyaW5nIGFuZCBkaW1lbnNpb24gcmVkdWN0aW9uIHRvb2xzIHN1Y2ggYXMgdW1hcCBpbiBlYXN5IGNvZGVzLCBzdWNoIGFzOjxicj4qCgotICAgYGRvLnN1YnNhbXBsZSgpYAotICAgYHJ1bi5mbG93c29tKClgCi0gICBgcnVuLnVtYXAoKWAKCiMgQWRkaXRpb25hbCBDb25zaWRlcmF0aW9uc3sudGFic2V0IC50YWJzZXQtZmFkZX0KCiMjIFFDCgpXaGVuIGxvb2tpbmcgYXQgdGhlIHJhdyBkYXRhLCBvciBpbiB0aGUgbWlkZGxlIG9mIGRhdGEgcHJvY2Vzc2luZywgeW91IG1heSBjb25zaWRlciBmaWx0ZXJpbmcgc29tZSBjZWxsLiBJbiB0aGUgMS1tYXJrZXIgcGxvdHMgYmVsb3csIHlvdSBjYW4gc2VlIHRoYXQgdGhlcmUgYXJlIGEgZmV3IGV4dHJlbWUgdmFsdWVzIHRoYXQgYXJlIGRpc3BsYXllZCBhbmQgcHVzaGluZyB0aGUgbWFqb3JpdHkgb2YgdmFsdWVzIHNxdWVlemVkIHRvZ2V0aGVyLiBlLmcuIEhMQS1EUjoKCmBgYHtyfQpJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IEhMQS5EUikpKwogIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQiLCBhZXMoZmlsbCA9ICJyZWQiKSwgYWxwaGEgPSAwLjUsc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgeWxhYigiRGVuc2l0eSIpKwoKIyBWaXN1YWxpc2UgdGhlIHZhbHVlcyBhdCB0aGUgdG9wIDAuMSUgYW5kIGJvdHRvbSAwLjElLgogIGdlb21fdmxpbmUoeGludGVyY2VwdCA9IHF1YW50aWxlKElMQ190cmFuc2YkSExBLkRSLCAwLjk5OSksIGNvbG91ciA9ICJibHVlIiwgbGluZXdpZHRoID0gMC41KSsKICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSBxdWFudGlsZShJTENfdHJhbnNmJEhMQS5EUiwgMC4wMDEpLCBjb2xvdXIgPSAiYmx1ZSIsIGxpbmV3aWR0aCA9IDAuNSkrCgojIFdlIGNhbiBsYWJlbCB0aGUgdGhyZXNob2xkIGxpbmVzOiBhbm5vdGF0ZSBhcyBhIHRleHQsIGF0IHRoZSBwb3NpdGlvbiBvZiB0aGUgdG9wIGFuZCBib3R0b20gMC4wMSUsIGFuZCBzbGlnaHRseSBhZGp1c3QgdGhlIGxhYmVsIHBvc2l0aW9uIGhvcml6b250YWxseS4KICBhbm5vdGF0ZSgidGV4dCIsIHggPSBxdWFudGlsZShJTENfdHJhbnNmJEhMQS5EUiwgMC45OTkpLCB5ID0gMC4wMDMsIGxhYmVsID0gIlRvcCBhbmQgYm90dG9tIDAuMSUiLCBoanVzdCA9IC0wLjEpIApgYGAKCjxkZXRhaWxzPgo8c3VtbWFyeT5WaWV3IHRoZW0gZm9yIGFsbCBjaGFubmVscy48L3N1bW1hcnk+CgpgYGB7ciwgbWVzc2FnZT1GfQojIENyZWF0ZSB0aGUgZW1wdHkgbGlzdApwbG90c19saW5lIDwtIGxpc3QoKQoKIyBDcmVhdGUgdGhlIGxvb3AgdG8gZ2VuZXJhdGUgcGxvdHMuCmZvciAoaSBpbiAxOjI1KXsKICAKICAjIEdldCB0aGUgbWFya2VyIG5hbWVzCiAgTWFya2VyIDwtIGNvbG5hbWVzKElMQ190cmFuc2YpW2ldCiAgCiAgIyBHZW5lcmF0ZSB0aGUgcGxvdHMgYW5kIHB1dCBpdCBpbnRvIHRoZSBsaXN0CiAgcCA8LSBJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IC5kYXRhW1tNYXJrZXJdXSkpKyAKICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkIiwgZmlsbCA9ICJyZWQiLCBhbHBoYSA9IDAuMyxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICAgeGxhYihNYXJrZXIpKwogICB5bGFiKCJEZW5zaXR5IikrCiAgCiAgICAjIEFkZCB0aGUgbmV3bHkgd3JpdHRlbiBsaW5lcyB0byB2aXN1YWxpc2UgdGhlIG91dGxpZXJzIHRvIHRoaXMgbG9vcC4KICAgIGdlb21fdmxpbmUoeGludGVyY2VwdCA9IHF1YW50aWxlKElMQ190cmFuc2ZbW2ldXSwgMC45OTkpLCBjb2xvdXIgPSAiYmx1ZSIsIGxpbmV3aWR0aCA9IDAuNSkrCiAgICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSBxdWFudGlsZShJTENfdHJhbnNmW1tpXV0sIDAuMDAxKSwgY29sb3VyICA9ICJibHVlIiwgbGluZXdpZHRoID0gMC41KQogICAgCiAgIyBQdXQgdGhlIHBsb3RzIGludG8gdGhlIGxpc3QKICBwbG90c19saW5lW1tsZW5ndGgocGxvdHNfbGluZSkrMV1dIDwtIHAKfQoKIyBVc2UgYSBncmlkIGxheW91dCB0byB2aWV3IHRoZSBwbG90cwpsaWJyYXJ5KGdncHVicikKZ2dwdWJyOjpnZ2FycmFuZ2UocGxvdGxpc3QgPSBwbG90c19saW5lLCBuY29sID0gMiwgbnJvdyA9IDQpCmBgYAo8L2RldGFpbHM+Cgo8YnI+ClRvIGxvb2sgYXQgdGhpcyBpbiBhIG1vcmUgc3RhdGlzdGljYWwgd2F5LCB5b3UgY2FuIGNyZWF0ZSBhIHF1aWNrIGRhdGEgc3VtbWFyeSBvZiB0aGUgbWluaW11bSwgbWF4aW11bSwgbWVhbiwgbWVkaWFuIGFuZCB0aGUgaW50ZXJxdWFydGlsZSByYW5nZS4KCmBgYHtyfQpzdW1tYXJ5KElMQ190cmFuc2YpCmBgYAoKPGJyPgoKRWl0aGVyIGJlaW5nIGFydGlmaWNpYWwgb3IgYmlvbG9naWNhbCwgdGhlc2UgbWlnaHQgaW50ZXJmZXJlIGhvdyB0aGUgY29tcHV0ZXIgaW50ZXJwcmV0cyB5b3VyIGRhdGEgaW4gdGhlIGRvd25zdHJlYW0gY2x1c3RlcmluZyBhbmQgZGltZW5zaW9uIHJlZHVjdGlvbi4gU29tZXRpbWVzIHlvdSBtYXkgZGVjaWRlIHRvIGludmVzdGlnYXRlIGhvdyB0aGVzZSBpbXBhY3QgeW91ciBkYXRhc2V0IGFuZCB3aGVyZSB0aGV5IGFyaXNlIGZyb20uIEJ1dCBpZiB0aGVyZSBhcmUgcGxlbnR5IG9mIGNlbGxzLCBhbmQgdGhlICUgb3V0bGllcnMgaXMgc3VwZXIgc21hbGwsIHlvdSBtaWdodCBqdXN0IHdhbnQgdG8gZmlsdGVyIHRoZW0gb3V0Ljxicj4KCioqRmlsdGVyaW5nIGJ5ICUqKiA8YnI+CllvdSBtaWdodCB3YW50IHRvIGZpbHRlciBvdXQgdGhlIHRvcCBhbmQgYm90dG9tIDAuMSUgb2YgY2VsbHMgLiBOb3RlIHRoYXQgdGhpcyBhcHByb2FjaCByZW1vdmVzIHRoZSBjZWxscyB0aGF0IGRvZXNuJ3QgZml0IHdpdGhpbiB0aGUgdG9wIGFuZCBib3R0b20gMC4xJSBvZiBBTlkgY2hhbm5lbCwgYW5kIHJlbW92ZXMgdGhlIGNlbGwgZnJvbSB0aGUgZW50aXJlIGRhdGFzZXQuIFNvIGJlIGNhdXRpb3VzIGFib3V0IHRoZSAlIHNvIHlvdSBhcmVuJ3QgcmVtb3ZpbmcgdG9vIG1hbnkgY2VsbHMgd2hlbiB0aGV5IGFyZSBhZGRlZCB1cCAoIHdlJ2xsIHVzZSAwLjElIGFsbCB0aGUgd2F5IGZvciBkZW1vbnN0cmF0aW9uIHB1cnBvc2VzKS4gPGJyPgoKYGBge3J9CiMgQ3JlYXRlIGFuIGVtcHR5IGxpc3QuCm91dGxpZXJfZmxhZyA8LSBsaXN0KCkKCiMgTG9vcCB0aHJvdWdoIHRoZSBjb2x1bW5zIHdpdGggbWFya2Vycwpmb3IgKGkgaW4gMToyNSl7CiAgCiAgIyBGaW5kIHRoZSBjZWxsIHZhbHVlcwogIHZhbHVlIDwtIElMQ190cmFuc2ZbW2ldXQogIAogICMgR2V0IHRoZSBtYXJrZXIgbmFtZXMKICBNYXJrZXIgPC0gY29sbmFtZXMoSUxDX3RyYW5zZilbaV0KICAKICAjIEZpbmQgdGhlIHRocmVzaG9sZHMgb2Ygb3V0bGllcnMKICB1cHBlciA8LSBxdWFudGlsZSh2YWx1ZSwgMC45OTksIG5hLnJtID0gVFJVRSkKICBsb3dlciA8LSBxdWFudGlsZSh2YWx1ZSwgMC4wMDEsIG5hLnJtID0gVFJVRSkKCiAgIyBGbGFnIHRoZSBvdXRsaWVycyBhcyAxLCBlbHNlIGFzIDAuIEFuZCByZWNvcmQgdGhlbSBpbnRvIHRoZSBsaXN0LgogIGZsYWcgPC0gaWZlbHNlKHZhbHVlIDwgbG93ZXIgfCB2YWx1ZSA+IHVwcGVyLCAxLCAwKQogIG91dGxpZXJfZmxhZ1tbbGVuZ3RoKG91dGxpZXJfZmxhZykrMV1dIDwtIGZsYWcKfQojIFR1cm4gdGhlIGZsYWdzIGludG8gYSBkYXRhIHRhYmxlIG9iamVjdC4Kb3V0bGllcl9mbGFnIDwtIGFzLmRhdGEudGFibGUob3V0bGllcl9mbGFnKQpjb2xuYW1lcyhvdXRsaWVyX2ZsYWcpPC0gY29sbmFtZXMoSUxDX3RyYW5zZilbYyg3OjMxKV0Kc3Vic2V0IDwtIElMQ190cmFuc2Zbcm93U3VtcyhvdXRsaWVyX2ZsYWcpPT0wLF0KICAKIyBDYWxjdWxhdGUgdGhlICUgb2YgY2VsbCBsb3NzIGFmdGVyIGZpbHRlcmluZywgdGhlbiBmb3JtYXQgaXQgYXMgYmVpbmcgZGlzcGxheWVkIGluIGxlc3MgZGlnaXRzLCB0aGVuIHBhc3RlIGEgc2VudGVuY2UgdG9nZXRoZXIuCiAgICBwYXN0ZTAoIkNlbGwgbG9zczogIixmb3JtYXQoKDEtbnJvdyhzdWJzZXQpL25yb3coSUxDX3RyYW5zZikpKjEwMCwgZGlnaXRzID0gMyksICIlIikKYGBgCgoKYGBge3J9CgojIFZpZXcgdGhlIHByZS0gYW5kIHBvc3QtZmlsdGVyZWQgZGF0YSBzaWRlIGJ5IHNpZGUsIHB1dHRpbmcgdGhlbSBpbiBhIGdyaWQuCmNvd3Bsb3Q6OnBsb3RfZ3JpZCgKICBJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IEhMQS5EUikpKwogIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQiLCBmaWxsID0gInJlZCIsIGFscGhhID0gMC4zLCBzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICB5bGFiKCJEZW5zaXR5IiksCgpzdWJzZXQgJT4lCiAgZ2dwbG90KGFlcyh4ID0gSExBLkRSKSkrCiAgZ2VvbV9kZW5zaXR5KGxpbmV3aWR0aCA9IDAuNywgY29sb3VyID0gInJlZCIsIGZpbGwgPSAicmVkIiwgYWxwaGEgPSAwLjMsIHNob3cubGVnZW5kID0gRkFMU0UpKwogIHlsYWIoIkRlbnNpdHkiKSwKCiAjIG51bWJlciBvZiBjb2x1bW4gZXF1YWxzIDEuCiBuY29sID0gMQopCgpgYGAKCioqRmlsdGVyaW5nIGJ5IGZpeGVkIHRocmVzaG9sZHMqKiA8YnI+CllvdSBtaWdodCB3YW50IHRvIGZpbHRlciBvdXQgdGhlIGRhdGEgdGhhdCBpcyBvdXRzaWRlIG9mIGNlcnRhaW4gdmFsdWVzIHBlciBjaGFubmVsLiBBIGNvbW1vbmx5IHVzZWQgc3RhbmRhcmQgaW4gZGF0YSBjbGVhbmluZyBpcyBjYWxjdWxhdGVkIGJhc2VkIG9uIGludGVycXVhcnRpbGUgcmFuZ2VzIChJUVIpLiBUaGUgdGhyZXNob2xkcyBhcmUgYW55IGRhdGEgcG9pbnRzIHRoYXQgYXJlIDEuNSB0aW1lcyBvZiBJUVIgYWJvdmUgdGhlIDNyZCBxdWFydGlsZSwgb3IgMS41IHRpbWVzIG9mIElRUiBiZWxvdyB0aGUgMXN0IHF1YXJ0aWxlLiBUaGlzIHdpbGwga2VlcCB0aGUgbWFqb3JpdHkgb2YgZGF0YSBwb2ludHMsIGhvd2V2ZXIsIGl0IG1pZ2h0IGFsc28gcmVtb3ZlIHNvbWUgdHJ1ZSB2YXJpYW5jZSBpbiB0aGUgZGF0YXNldCBhdCBleHRyZW1lIGVuZHMuPGJyPgoKYGBge3J9CgojIFRha2UgSExBLURSIGFzIGFuIGV4YW1wbGUKCiMgQ2FsY3VsYXRlIHRoZSBpbnRlcnF1YXJ0aWxlIHJhbmdlLgogICBJUVIgPC0gSVFSKElMQ190cmFuc2YkSExBLkRSKQogICBRMSA8LSBxdWFudGlsZShJTENfdHJhbnNmJEhMQS5EUiwgMC4yNSkKICAgUTMgPC0gcXVhbnRpbGUoSUxDX3RyYW5zZiRITEEuRFIsIDAuNzUpCiAgIAojIENhbGN1bGF0ZSB0aGUgdXBwZXIgYW5kIGxvd2VyIHRocmVzaG9sZHMKICAgbG93ZXJmZW5jZSA8LSBRMSAtIDEuNSpJUVIKICAgdXBwZXJmZW5jZSA8LSBRMyArIDEuNSpJUVIgCiAKIyBPbmx5IGtlZXAgdGhlIGNlbGxzIHdoaWNoIENEMTI3IGNoYW5uZWwgdmFsdWUgd2l0aGluIHRoZSB0aHJlc2hvbGRzLiAgIApmaWx0IDwtIElMQ190cmFuc2ZbSUxDX3RyYW5zZiRITEEuRFIgPiBsb3dlcmZlbmNlICYgSUxDX3RyYW5zZiRITEEuRFIgPCB1cHBlcmZlbmNlLCBdCgpjb3dwbG90OjpwbG90X2dyaWQoCiAgSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBITEEuRFIpKSsKICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkIiwgZmlsbCA9ICJyZWQiLCBhbHBoYSA9IDAuMyxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICB5bGFiKCJEZW5zaXR5IiksCmZpbHQgJT4lCiAgZ2dwbG90KGFlcyh4ID0gSExBLkRSKSkrCiAgZ2VvbV9kZW5zaXR5KGxpbmV3aWR0aCA9IDAuNywgY29sb3VyID0gInJlZCIsIGZpbGwgPSAicmVkIiwgYWxwaGEgPSAwLjMsc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgeWxhYigiRGVuc2l0eSIpLAoKICMgbnVtYmVyIG9mIGNvbHVtbiBlcXVhbHMgMS4KIG5jb2wgPSAxCikKCnJtKFExLFEzLElRUikKCmBgYAoKT3IsIHNpbXBseSBqdXN0IGNob29zZSBhbiBhcmJpdHJhcnkgdGhyZXNob2xkLgoKYGBge3J9CgojIE9ubHkga2VlcCB0aGUgY2VsbHMgd2hpY2ggdHJhbnNmb3JtZWQgSExBLURSIGV4cHJlc3Npb24gdmFsdWUgPCAyLgptYW51YWwgPC0gSUxDX3RyYW5zZltJTENfdHJhbnNmJEhMQS5EUiA8IDIsIF0KCmNvd3Bsb3Q6OnBsb3RfZ3JpZCgKICBJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IEhMQS5EUikpKwogIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQiLCBmaWxsID0gInJlZCIsIGFscGhhID0gMC4zLHNob3cubGVnZW5kID0gRkFMU0UpKwogIHlsYWIoIkRlbnNpdHkiKSwKbWFudWFsICU+JQogIGdncGxvdChhZXMoeCA9IEhMQS5EUikpKwogIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQiLCBmaWxsID0gInJlZCIsIGFscGhhID0gMC4zLHNob3cubGVnZW5kID0gRkFMU0UpKwogIHlsYWIoIkRlbnNpdHkiKSwKCiAjIG51bWJlciBvZiBjb2x1bW4gZXF1YWxzIDEuCiBuY29sID0gMQopCgpgYGAK</div>
+<div id="rmd-source-code">LS0tCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IG5vCiAgICBjb2RlX2ZvbGRpbmc6ICJoaWRlIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIG1lc3NhZ2UgPSBGLCB3YXJuaW5nPUZBTFNFLCBlcnJvcj1GKQpgYGAKCiMjIEZsb3cgQ3l0b21ldHJ5IGluIFI6IEEgSGFuZHMtT24gSW50cm9kdWN0aW9uCgpUaGlzIGJlZ2lubmVyLWZyaWVuZGx5LCBoYW5kcy1vbiB3b3Jrc2hvcCB3aWxsIGd1aWRlIHVzZXJzIHRocm91Z2ggYSBjb21wbGV0ZSBmbG93IGN5dG9tZXRyeSBhbmFseXNpcyB3b3JrZmxvdyBpbiBSLCBmcm9tIGxvYWRpbmcgZGF0YSB0byB2aXN1YWxpemluZyByZXN1bHRzLiBUaHJvdWdoIHByYWN0aWNhbCBleGVyY2lzZXMsIHdl4oCZbGwgY292ZXIgZXNzZW50aWFsIHN0ZXBzIGxpa2UgZ2VuZXJhdGluZyBoaXN0b2dyYW1zIGFuZCBzY2F0dGVycGxvdHMsIGV4dHJhY3Rpbmcgc3VtbWFyeSBzdGF0aXN0aWNzLCBzdWJzZXR0aW5nIGRhdGEsIGFuZCBwZXJmb3JtaW5nIGRpbWVuc2lvbiByZWR1Y3Rpb24gYW5kIGNsdXN0ZXJpbmfigJRhbGwgd2hpbGUgZGVtb25zdHJhdGluZyB0aGUgYWR2YW50YWdlcyBvZiByZXByb2R1Y2libGUgcmVwb3J0cyB3aXRoIFJNYXJrZG93bi4gCgpXaGV0aGVyIHlvdSdyZSBuZXcgdG8gUiBvciBqdXN0IGN1cmlvdXMgYWJvdXQgY29kaW5nIHlvdXIgYW5hbHlzZXMsIHRoaXMgc2Vzc2lvbiB3aWxsIHNob3cgeW91IGhvdyBhY2Nlc3NpYmxlIGFuZCBwb3dlcmZ1bCBSIGNhbiBiZSBmb3IgZmxvdyBjeXRvbWV0cnkuCgoqKllvdXIgRGVtb25zdHJhdG9yczoqKgoKLSBUaG9tYXMgTydOZWlsICAgCi0gWXVjaGVuIExpIChPbmxpbmUpCgoqKkF1dGhvcioqOiBZdWNoZW4gTGksIFRob21hcyBPJ05laWwKCltab29tIGxpbmtdKGh0dHBzOi8vdW5pLXN5ZG5leS56b29tLnVzL3MvODgxMDkzNjA0NTUpIChyZWNvcmRlZCkKCiMgSW50cm9kdWN0aW9uCgpJbiB0aGlzIHdvcmtzaG9wLCB3ZSBhaW0gdG8gZ2l2ZSBhbiBvdmVydmlldyBvZiB3aGF0IGlzIHBvc3NpYmxlIGZvciBmbG93IGFuYWx5c2lzIGluIFIuIFdlIHdpbGwgdG91Y2ggb24gdHdvIHdvcmtmbG93czoKCi0gZGF0YSB2aXN1YWxpc2F0aW9uIGFuZCBkYXRhIGNvbGxlY3Rpb24KCi0gZGltZW5zaW9uIHJlZHVjdGlvbiBhbmQgY2x1c3RlcmluZwoKV2UnbGwgdXNlIGEgMjUtY29sb3VyIGZsb3cgY3l0b21ldHJ5IGRhdGFzZXQgb2YgaW5uYXRlIGx5bXBob2lkIGNlbGxzIChJTEMpLCBuYXR1cmFsIGtpbGxlciBjZWxscyAoTkspLCBhbmQgaW5uYXRlLWxpa2UgVCBjZWxscyBpbiBodW1hbiBpbnRlc3RpbmFsIHRpc3N1ZXMsIGFmdGVyIGV4Y2x1ZGluZyBkZWFkIGNlbGxzLCBkb3VibGV0cywgbWFzdCBjZWxscyBhbmQgYmFzb3BoaWxzLCBoZW1hdG9wb2lldGljIHN0ZW0gY2VsbHMsIG15ZWxvaWQgY2VsbHMgYW5kIGdyYW51bG9jeXRlcywgYW5kIEIgY2VsbHMuIAoKVGhlIG9yaWdpbmFsIGRhdGEgd2FzIHB1Ymxpc2hlZCBhcyBpcyBhdmFpbGFibGUgaW4gW09NSVAtMDgyXShodHRwczovL3B1Ym1lZC5uY2JpLm5sbS5uaWguZ292LzM1MDE4NzMxLykgCgpCZWZvcmUgZ29pbmcgZnVydGhlcjogCgotIERvbnQgZm9yZ2V0IHRvIHByb3ZpZGUgYW55IGZlZWRiYWNrIGJ5IGVtYWlsaW5nIHVzIGF0IGBkcnNuQHdpbXIub3JnLmF1YCBvciBmaWxsaW5nIG91dCB0aGUgW2ZlZWRiYWNrIGZvcm1dKGh0dHBzOi8vZm9ybXMub2ZmaWNlLmNvbS9yL0RYZFRBUVhKU1UpCgotIFZvdGUgb24gdGhlIG5leHQgd29ya3Nob3AhIAo8aWZyYW1lIHdpZHRoPSI2NDBweCIgaGVpZ2h0PSIyMDBweCIgc3JjPSJodHRwczovL2Zvcm1zLm9mZmljZS5jb20vci9UdExXRld5c2lDP2VtYmVkPXRydWUiIGZyYW1lYm9yZGVyPSIwIiBtYXJnaW53aWR0aD0iMCIgbWFyZ2luaGVpZ2h0PSIwIiBzdHlsZT0iYm9yZGVyOiBub25lOyBtYXgtd2lkdGg6MTAwJTsgbWF4LWhlaWdodDoxMDB2aCIgYWxsb3dmdWxsc2NyZWVuIHdlYmtpdGFsbG93ZnVsbHNjcmVlbiBtb3phbGxvd2Z1bGxzY3JlZW4gbXNhbGxvd2Z1bGxzY3JlZW4+IDwvaWZyYW1lPgoKIyBTZXR1cHsudGFic2V0IC50YWJzZXQtZmFkZX0KCldlJ2xsIHRha2UgeW91IHRocm91Z2ggc3RlcHMgZnJvbSB0aGUgYmVnaW5uaW5nLCBpbnN0YWxsaW5nIHBhY2thZ2VzIGFuZCBsb2FkaW5nIGRhdGEuIAoKIyMgUHJlcGFyYXRpb246IHBhY2thZ2VzIGFuZCBkaXJlY3RvcmllcwoKUGFja2FnZXMgYXJlIGNvbGxlY3Rpb25zIG9mIGZ1bmN0aW9ucy4gTWFueSBhcmUgbm90IGluLWJ1aWx0IGluIHRoZSBiYXNlIFIgYnV0IHRoZXkgZG8gcHJldHR5IGNvb2wgdGhpbmdzLCBlbmFibGluZyBnZW5lcmF0aW5nIHByZXR0eSBwbG90cywgcGVyZm9ybWluZyBkYXRhIHdyYW5nbGluZyBpbiBhbiBlZmZpY2llbnQgd2F5LCBldGMuIFIgYWxzbyBoYXMgYSBsYXJnZSBkZXZlbG9wZXIgY29tbXVuaXR5LCB3aXRoIG1hbnkgY29tbXVuaXR5LWRldmVsb3BlZCBwYWNrYWdlcyBhdmFpbGFibGUgb24gcGxhdGZvcm1zIGxpa2UgYEJpb2NvbmR1Y3RvcmAgb3IgYEdpdEh1YmAuCgpgYGB7ciwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRX0KIyBJbnN0YWxsIHBhY2thZ2VzIHVzZWQgaW4gdGhpcyB3b3Jrc2hvcC4KCiNpbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQojaW5zdGFsbC5wYWNrYWdlcygiZ2dyaWRnZXMiKQojaW5zdGFsbC5wYWNrYWdlcygiR0dhbGx5IikKI2luc3RhbGwucGFja2FnZXMoImNvd3Bsb3QiKQojaW5zdGFsbC5wYWNrYWdlcygiZGF0YS50YWJsZSIpCiNpbnN0YWxsLnBhY2thZ2VzKCJCaW9jTWFuYWdlciIpCgojQmlvY01hbmFnZXI6Omluc3RhbGwoIkZ1c2VTT00iKQojQmlvY01hbmFnZXI6Omluc3RhbGwoIkZsb3dTT00iKQoKI2lmKCFyZXF1aXJlKCdyZW1vdGVzJykpIHtpbnN0YWxsLnBhY2thZ2VzKCdyZW1vdGVzJyl9CiNyZW1vdGVzOjppbnN0YWxsX2dpdGh1YihyZXBvID0gImltbXVuZWR5bmFtaWNzL3NwZWN0cmUiKQoKCiMgTG9hZCBwYWNrYWdlcwpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShnZ3JpZGdlcykKbGlicmFyeShjb3dwbG90KQpsaWJyYXJ5KFNwZWN0cmUpCmxpYnJhcnkoRnVzZVNPTSkKbGlicmFyeShGbG93U09NKQpsaWJyYXJ5KEdHYWxseSkKbGlicmFyeSh1bWFwKQpsaWJyYXJ5KFJ0c25lKQpsaWJyYXJ5KGRhdGEudGFibGUpCgp0aGVtZV9zZXQodGhlbWVfY2xhc3NpYygpKQpgYGAKCkNyZWF0ZSBzb21lIGZvbGRlcnMgZm9yIHBsb3RzIGFuZCBkYXRhLgoKYGBge3IsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGV2YWw9Rn0KZGlyLmNyZWF0ZSgicGxvdHMiKQpkaXIuY3JlYXRlKCJkYXRhIikKZG93bmxvYWQuZmlsZSgiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RyVGhvbWFzT25laWwvRGlnaXRhbC1SZXNlYXJjaC1Ta2lsbHMtTmV0d29yay9yZWZzL2hlYWRzL21haW4vZG9jcy9hc3NldHMvZG93bmxvYWRzL2V4YW1wbGVfZmxvd2RhdGFfb21pcDA4Ml8yMGsuY3N2IiwgZGVzdGZpbGUgPSAiZGF0YS9leGFtcGxlX2Zsb3dkYXRhX29taXAwODJfMjBrLmNzdiIpCiMgQWRkIGBtZXRob2QgPSAiY3VybCJgIGluIHRoZSBkb3dubG9hZC5maWxlKCkgaWYgeW91IGFyZSBhIFdpbmRvd3MgdXNlciBhbmQgdGhpcyBsaW5lIGRpZG4ndCB3b3JrIGZvciB5b3UuCmBgYAoKPGRldGFpbHM+PHN1bW1hcnk+U2V0dGluZyBzZWVkIGlzIGNydWNpYWwgZm9yIHJlcHJvZHVjaWJpbGl0eTo8L3N1bW1hcnk+CgpJdCdzIGEgbnVtYmVyIG9mIHlvdXIgY2hvaWNlLCB3aGljaCBwaW5zIGRvd24gdGhlICJ3YXkiIHRoYXQgaG93IHRoZSByYW5kb20gcHJvY2VzcyB3aWxsIGJlIHBlcmZvcm1lZCB3aGVuIHlvdSByZS1ydW4gdGhlc2UgY29kZXMuIChFYXNpZXIgZXhhbXBsZTogU2F5IGlmIHlvdSByYW5kb21seSB0YWtlIDEwIG51bWJlcnMgd2l0aCBhIG1lYW4gb2YgNTAsIHRoZXJlIHdpbGwgYmUgdG9ubmVzIG9mIHdheXMgdG8gZ2VuZXJhdGUgdGhlIG51bWJlcnMuIEJ1dCBhIHNlZWQgZW5zdXJlcyB0aGF0IHRoZSByZXBvcnQgYWx3YXlzIHJldHVybnMgdGhlIHNhbWUgc2V0IG9mIG51bWJlcnMuIEl0J3MgdGhlIHNpbWlsYXIgaWRlYSB3aGVuIHlvdSBydW4gb3RoZXIgYWxnb3JpdGhtcyBpbmNsdWRpbmcgcmFuZG9tbmVzcywgZS5nLiBjbHVzdGVyaW5nIGFuZCBnZW5lcmF0aW5nIGEgVU1BUCkuCgpgYGB7cn0Kc2V0LnNlZWQoMTMzNykKYGBgCjwvZGV0YWlscz4KCi0tLSAKCiMjIExvYWQgZmxvdyBjeXRvbWV0cnkgZGF0YQoKVGhlIGV4cHJlc3Npb24gZGF0YSBpcyBzdG9yZWQgaW4gYSBgLmNzdmAgZmlsZS4gV2UnbGwgZmlyc3QgbG9hZCB0aGlzIGluLgoKYGBge3J9CiMgUmVhZCB0aGUgLmNzdiBmaWxlIGluIHRoZSB3b3JraW5nIGRpcmVjdG9yeS4KSUxDIDwtIHJlYWQuY3N2KCJkYXRhL2V4YW1wbGVfZmxvd2RhdGFfb21pcDA4Ml8yMGsuY3N2IikKYGBgCgpIYXZlIGEgbG9vayBhdCB0aGUgYnJvYWQgZmVhdHVyZXMgb2YgdGhpcyBkYXRhc2V0LiBJbiB0aGlzIGRhdGFzZXQsIHRoZSBjaGFubmVsIG5hbWVzIGFyZSBzdG9yZWQgYXMgY29sdW1uIG5hbWVzLiBFYWNoIHJvdyByZXByZXNlbnRzIGEgY2VsbCwgc3RvcmluZyBleHByZXNzaW9uIHZhbHVlcyBpbiBlYWNoIGNoYW5uZWwuIAoKYGBge3IsIGV2YWw9Rn0KIyBEaW1lbnNpb246IG51bWJlciBvZiBjZWxscyB4IG51bWJlciBvZiBjaGFubmVscy4KZGltKElMQykKCiMgQ2hlY2sgdGhlIGNvbHVtbiBuYW1lcy4KY29sbmFtZXMoSUxDKQpgYGAKClRoZSBjb2x1bW4gbmFtZXMgYXJlIHdvcmR5LCB3aXRoIG1hcmtlcnMsIGZsdW9yb3Bob3JlcywgYW5kIGNoYW5uZWxzLiBXZSBqdXN0IG5lZWQgdGhlIG1hcmtlciBuYW1lcyB0byBwcm9jZWVkLiBUaGUgZmlyc3QgY29sdW1uICdYJyBpcyBqdXN0IGluZGV4aW5nIHRoZSBudW1iZXIgb2Ygcm93cy4gSXQncyBub3QgbmVjZXNzYXJ5IGVpdGhlci48YnI+CgpSZW1vdmUgdGhlIGZpcnN0IGNvbHVtbi4KCmBgYHtyfQojIFRoaXMga2VlcHMgdGhlIDItMzMgY29sdW1ucyBpbiB0aGUgZGF0YXNldCwgYW5kIHN0b3JlIHRoZSBjaGFuZ2UuCklMQyA8LSBJTENbLCAtMV0KY29sbmFtZXMoSUxDKQoKIyBTYW1lIHdpdGggaXQsIHlvdSBjYW4ganVzdCBlbnRlciB0aGUgY29sdW1uIGluZGV4ZXMgZnJvbSAyLTMzLgojIElMQyA8LUlMQ1ssYygyOjMzKV0KYGBgCgpDaGFuZ2UgdGhlIGNvbHVtbiBuYW1lcy4KCmBgYHtyfQojIFN1YnN0aXR1dGUgZXZlcnl0aGluZyBhZnRlciB0aGUgZmlyc3QgJ18nIHdpdGggYW4gZW1wdHkgIiIgaW4gdGhlIGNvbHVtbiBuYW1lcyB0aGF0IGhhdmUgdGhlIHBhdHRlcm4gIl8iIGFuZCBzb21ldGhpbmcuCmNvbG5hbWVzKElMQykgPC0gc3ViKCJfLioiLCIiLGNvbG5hbWVzKElMQykpICMnXycgaXMgdGhlIGV4YWN0IGNoYXJhY3RlciBpbiB0aGUgbmFtZXMsIHRoZSAnLicgbWVhbnMgJ2FueSBjaGFyYWN0ZXInLCAnKicgbWVhbnMgJ2FueSBvZiB0aGUgcHJlY2VkaW5nIHRoaW5ncycuIAoKY29sbmFtZXMoSUxDKQpgYGAKCkZpeCB1cCB0aGUgYnJva2VuIG5hbWVzIEZWUzcwMCBhbmQgQ0QxNCZDRDE5LgoKYGBge3J9CiMgVGhpcyB0ZWxscyBSIHRvOiBmaW5kIHdoaWNoIG9mIHRoZSBjb2x1bW4gZXF1YWxzICJGVlMiIGFtb25nIGFsbCBjb2x1bW5zIGluIHRoZSBkYXRhLCB0aGVuIGNoYW5nZSBpdCB0byBGVlM3MDAuCmNvbG5hbWVzKElMQylbY29sbmFtZXMoSUxDKSA9PSAiRlZTIl0gPC0gIkZWUzcwMCIKY29sbmFtZXMoSUxDKVtjb2xuYW1lcyhJTEMpID09ICJDRDE0Il0gPC0gIkNEMTQuQ0QxOSIKCiMgSGF2ZSBhIGxvb2sKY29sbmFtZXMoSUxDKQpgYGAKCi0tLQoKIyMgVGltZSBnYXRlIFFDLiAKClRoZSBkYXRhIGlzIGFscmVhZHkgcHJlcHJvY2Vzc2VkIGluIEZsb3dKby4gQnV0IGlmIHlvdSBhcmUgaW50ZXJlc3RlZCwgeW91IGNhbiB2aWV3IHRoZSBUaW1lIGdhdGUsIGFuZCBmaWx0ZXIgdGhlIGRhdGEgYmFzZWQgb24gdGhpcyBpbiBSLgoKYGBge3J9CmdncGxvdChJTEMsIGFlcyh4ID0gVGltZSwgeSA9IEZTQy5BKSkrCiAgZ2VvbV9iaW5fMmQoYmlucyA9IDIwMCwgc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvdXJzID0gYygiYmx1ZSIsICJncmVlbiIsICJ5ZWxsb3ciLCAicmVkIikpKwogIGdlb21fdmxpbmUoeGludGVyY2VwdCA9IDQ2MDAwMDApCgojIEZpbHRlciBvdXQgdGhlIGNlbGxzIGFib3ZlIHRoZSB0aHJlc2hvbGQuCklMQyA8LSBJTENbSUxDJFRpbWUgPCA0NjAwMDAwLF0KZ2dwbG90KElMQywgYWVzKHggPSBUaW1lLCB5ID0gRlNDLkEpKSsKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwLCBzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICAgIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG91cnMgPSBjKCJibHVlIiwgImdyZWVuIiwgInllbGxvdyIsICJyZWQiKSkKYGBgCgotLS0KCiMgVmlzdWFsaXNhdGlvbnN7LnRhYnNldCAudGFic2V0LWZhZGV9CgojIyBUcmFuc2Zvcm1hdGlvbnMKClJhdyBGbG93IEN5dG9tZXRyeSBkYXRhIGxvb2tzIGJhZCEKCmBgYHtyfQpJTEMgJT4lIGdncGxvdChhZXMoeD1DRDQsIHk9Q0QzKSkrICAgICAgICAKICBnZW9tX3BvaW50KCkKYGBgCgpTbyB3ZSB0cmFuc2Zvcm0gdGhlIGRhdGEgdG8gbWFrZSBpdCBsb29rIGJldHRlci4gSW4gRmxvd0pvLCB3aGVuIHlvdSBhZGp1c3QgdGhlIGF4ZXMsIHlvdSBjYW4gc2VlIHNldmVyYWwgdHJhbnNmb3JtYXRpb25zIGF2YWlsYWJsZS4gT25lIGlzIGFyY3NpbmggKHRoZSBpbnZlcnNlIG9mIGh5cGVyYm9saWMgc2luLCBpZiB5b3Ugd2FudCB0byBnZXQgbWF0aHkpLiBTbWFsbGVyIHZhbHVlcyBjZW50cmUgYXJvdW5kIHplcm8sIGFuZCBsYXJnZXIgdmFsdWVzIHNlcGFyYXRlLCBnaXZpbmcgdGhlIGFwcGVhcmFuY2UgdGhhdCB3ZSdyZSBmYW1pbGlhciB3aXRoLiAKCldlIGFyZSBhbHNvIGFibGUgdG8gYWRqdXN0IHRoZSBsZXZlbCBvZiB0cmFuc2Zvcm1hdGlvbiBieSBkaXZpZGluZyB0aGUgdmFsdWVzIGJ5IHNvbWUgY29mYWN0b3IuIAoKYGBge3IsIGZpZy5oZWlnaHQ9MTAsIGZpZy53aWR0aD0xMH0KIyBkZWNpZGUgb24gYSBjb2ZhY3RvciAtIHRyeSBjaGFuZ2luZyBpdCBhbmQgc2VlaW5nIGhvdyB0aGUgZGF0YSBjaGFuZ2VzCmNvZmFjdG9yID0gNTAwCklMQ190cmFuc2YgPC0gYXNpbmgoSUxDWyw3OjMxXS9jb2ZhY3RvcikgIzc6MzEgYXJlIHRoZSBjb2x1bW5zIHdpdGggbWFya2Vycy4KCklMQ190cmFuc2YgPC0gY2JpbmQoSUxDX3RyYW5zZiwgSUxDWyxjKDE6NiwzMildKSAjIEFkZCB0aGUgZmlyc3QgNiBjb2x1bW5zICYgdGltZSBiYWNrIGluLgoKSUxDX3RyYW5zZiAlPiUgZ2dwbG90KGFlcyh4PUNENCwgeT1DRDMpKSsKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwLCBzaG93LmxlZ2VuZD1UKQpgYGAKCllvdSBjYW4gdmlldyBpdCBmb3IgYWxsIG1hcmtlcnMgdG9nZXRoZXIuCgpgYGB7ciwgZmlnLmhlaWdodD0xMCwgZmlnLndpZHRoPTEwLCB3YXJuaW5nPUZBTFNFfQojIEluaXRpYWxpemUgYW4gZW1wdHkgbGlzdCB0byBzdG9yZSB0aGUgcGxvdHMKcGxvdHMgPC0gbGlzdCgpCiMgRGVmaW5lIHRoZSB4LWF4aXMgbWFya2VyIGZvciB0aGUgcGxvdHMKeGF4aXMgPSAiQ0QzOSIgIyBDaG9vc2UgYW4geC1heGlzIG1hcmtlciBmb3IgY29tcGFyaXNvbgoKIyBMb29wIHRocm91Z2ggZWFjaCBjb2x1bW4gaW4gdGhlIGRhdGFzZXQKZm9yKGkgaW4gMTpuY29sKElMQ190cmFuc2YpKSB7CiAgIyBHZXQgdGhlIG1hcmtlciBuYW1lIGZvciB0aGUgY3VycmVudCBjb2x1bW4KICBNYXJrZXIgPC0gY29sbmFtZXMoSUxDX3RyYW5zZilbaV0KICAKICAjIEdlbmVyYXRlIGEgMkQgYmluIHBsb3QgZm9yIHRoZSBjdXJyZW50IG1hcmtlciBhZ2FpbnN0IHRoZSBjaG9zZW4geC1heGlzIG1hcmtlcgogIHAgPC0gSUxDX3RyYW5zZiAlPiUgCiAgICAgICAgZ2dwbG90KGFlc19zdHJpbmcoeCA9IHhheGlzLCB5ID0gTWFya2VyKSkgKyAgICAgICAgCiAgICAgICAgZ2VvbV9iaW5fMmQoYmlucyA9IDIwMCwgc2hvdy5sZWdlbmQgPSBGQUxTRSkgKyAjIENyZWF0ZSBhIGhlYXRtYXAtc3R5bGUgc2NhdHRlciBwbG90CiAgICAgICAgc2NhbGVfZmlsbF9ncmFkaWVudG4oY29sb3JzID0gYygiYmx1ZSIsICJ5ZWxsb3ciLCAicmVkIikpICMgRGVmaW5lIHRoZSBjb2xvciBncmFkaWVudAogIAogICMgQWRkIHRoZSBnZW5lcmF0ZWQgcGxvdCB0byB0aGUgbGlzdAogIHBsb3RzW1tpXV0gPC0gcAp9CgojIENvbWJpbmUgYWxsIHRoZSBwbG90cyBpbnRvIGEgZ3JpZCBsYXlvdXQgYW5kIGRpc3BsYXkgdGhlbQpjb3dwbG90OjpwbG90X2dyaWQocGxvdGxpc3QgPSBwbG90cykKcm0ocGxvdHMpCmBgYAoKVGhpcyBjb2RlIGRlbW9uc3RyYXRlcyBob3cgeW91IHdvdWxkIG1hbnVhbGx5IHRyYW5zZm9ybSBpbmRpdmlkdWFsIGNvbHVtbnMgaW4gdGhlIGRhdGFzZXQgdXNpbmcgZGlmZmVyZW50IGNvZmFjdG9ycyBmb3IgZWFjaCBtYXJrZXIuIEl0IGNyZWF0ZXMgYSBuZXcgZGF0YXNldCAoYElMQ190cmFuc2ZfaW5kaXZgKSB3aGVyZSBzcGVjaWZpYyBjb2x1bW5zIGFyZSB0cmFuc2Zvcm1lZCB1c2luZyB0aGUgYGFzaW5oYCBmdW5jdGlvbiB3aXRoIHRoZWlyIHJlc3BlY3RpdmUgY29mYWN0b3JzLiBUaGlzIGFsbG93cyBmb3IgbW9yZSBncmFudWxhciBjb250cm9sIG92ZXIgdHJhbnNmb3JtYXRpb25zLiAKCmBgYHtyLCBldmFsPUZ9CklMQ190cmFuc2ZfaW5kaXYgPC0gSUxDCklMQ190cmFuc2ZfaW5kaXZbLCAiQ0QzIl0gPC0gYXNpbmgoSUxDWywiQ0QzIl0vMTAwMCkKSUxDX3RyYW5zZl9pbmRpdlssICJDRDQiXSA8LSBhc2luaChJTENbLCJDRDQiXS81MDApCiMgYW5kIHNvIG9uLi4uCgojIFZpc3VhbGl6ZSBpdApJTENfdHJhbnNmX2luZGl2ICU+JSBnZ3Bsb3QoYWVzKHg9Q0QzLCB5PUNENCkpKyAgICAgICAgCiAgICAgICAgZ2VvbV9iaW5fMmQoYmlucyA9IDIwMCwgc2hvdy5sZWdlbmQ9RikgKwogICAgICAgIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAgInllbGxvdyIsICJyZWQiKSkKCnJtKElMQ190cmFuc2ZfaW5kaXYpCmBgYAoKIyMgSGlzdG9ncmFtcwoKV2UgY2FuIHZpc3VhbGl6ZSB0aGUgbWFya2VyIGV4cHJlc3Npb25zIHZpYSBoaXN0b2dyYW1zIGFuZCBkZW5zaXR5IHBsb3RzLgoKYGBge3J9CiMgRm9yIGV4YW1wbGUsIHRoaXMgZ2VuZXJhdGVzIGEgaGlzdG9ncmFtIG9mIENEMyBleHByZXNzaW9uLgpJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IENEMykpKwogICMgUGxvdCB0aGUgaGlzdG9ncmFtLCBhbmQgY2hhbmdlIHRoZSBmaWxsIGNvbG91ciB0byBsaWdodGJsdWUsIHRoZSBsaW5lIGNvbG91ciB0byBibGFjay4KICBnZW9tX2hpc3RvZ3JhbShiaW5zID0gMzUsIGZpbGwgPSAibGlnaHRibHVlIiwgY29sb3VyID0iYmxhY2siKSsKICAjIEFkZCBsYWJlbHMKICB5bGFiKCJGcmVxdWVuY3kiKQoKIyBBIGRlbnNpdHkgcGxvdC4KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDMpKSsKICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkNCIsIGFlcyhmaWxsID0gInJlZCIpLCBhbHBoYSA9IDAuNSxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICB5bGFiKCJEZW5zaXR5IikKCmBgYAoKV2UgY2FuIGxvb3AgdGhyb3VnaCB0aGUgY2hhbm5lbHMgYW5kIGNyZWF0ZSBhIGRlbnNpdHkgcGxvdCBmb3IgYWxsIDI1IG1hcmtlcnMuCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFfQojIEluaXRpYWxpc2UgYW4gZW1wdHkgbGlzdCB0byBzdG9yZSB0aGUgcGxvdHMKcGxvdHM8LSBsaXN0KCkKCiMgTG9vcCB0aHJvdWdoIGVhY2ggY29sdW1uIGluIHRoZSBkYXRhc2V0CmZvciAoaSBpbiAxOm5jb2woSUxDX3RyYW5zZikpewoKICAjIEdldCB0aGUgbWFya2VyIG5hbWUgZm9yIHRoZSBjdXJyZW50IGNvbHVtbgogIE1hcmtlciA8LSBjb2xuYW1lcyhJTENfdHJhbnNmKVtpXQoKICAjIEdlbmVyYXRlIHRoZSBoaXN0b2dyYW0gZm9yIHRoZSBjdXJyZW50IG1hcmtlcgogIHAgPC0gSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSAuZGF0YVtbTWFya2VyXV0pKSsKICAgIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQ0IiwgYWVzKGZpbGwgPSAicmVkIiksIGFscGhhID0gMC41LHNob3cubGVnZW5kID0gRkFMU0UpKwogICAgbGFicyh4PU1hcmtlcix5PSIiKSsKICAgIHRoZW1lKGF4aXMudGV4dCA9IGVsZW1lbnRfdGV4dChzaXplPTEpKQoKICAjIEFkZCB0aGUgZ2VuZXJhdGVkIHBsb3QgdG8gdGhlIGxpc3QKICBwbG90c1tbaV1dIDwtIHAKfQoKcGxvdF9ncmlkKHBsb3RsaXN0ID0gcGxvdHNbMToyNV0pCnJtKHBsb3RzKQpgYGAKPGJyPgoKIyMgU2NhdHRlciBwbG90CgpMaWtlIHdoYXQgd2UgZG8gaW4gRmxvd2pvLCB3ZSBjYW4gdmlzdWFsaXplIDIgbWFya2VycycgZXhwcmVzc2lvbnMsIFdlIGNhbiBnZW5lcmF0ZSBzY2F0dGVycGxvdHMuCgpgYGB7cn0KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDQsIHkgPSBDRDMpKSsKICBnZW9tX3BvaW50KGNvbG9yPSJibHVlIiwgYWxwaGE9MC4xKQoKIyBHZW5lcmF0ZSBhIHNjYXR0ZXJwbG90IHdpdGggYSBkZW5zaXR5IG92ZXJsYXkuCklMQ190cmFuc2YgJT4lIGdncGxvdChhZXMoeD1DRDQsIHk9Q0QzKSkrICAgICAgICAKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwLCBzaG93LmxlZ2VuZCA9IEYpKwogIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAgInllbGxvdyIsICJyZWQiKSkKCmBgYAoKIyMgQ29udG91ciBwbG90CgpBbmQgYSAyLW1hcmtlciBjb3VudG91ciBwbG90LiBZb3UgY2FuIGVhc2lseSBtYWtlIGl0IG1vcmUgc3R5bGlzaCBieSBhZGRpbmcgbGF5ZXJzIGluIGdncGxvdCEKCmBgYHtyIGNvbGxhcHNlPVR9CgojIEEgY29udG91ciBwbG90IG9mIENEMyBhbmQgQ0Q0IGV4cHJlc3Npb24gdmFsdWVzLgpJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IENEMywgeSA9IENENCkpKwogIGdlb21fZGVuc2l0eV8yZChjb2xvdXIgPSAiYmxhY2siLCBiaW5zPTUwKSsKICB4bGFiKCJDRDMgQlVWNTYzIikrCiAgeWxhYigiQ0Q0IEFQQy1DeTciKQoKIyBBIGNvbnRvdXIgcGxvdCBvZiBDRDMgYW5kIENENCBleHByZXNzaW9uIG92ZXIgYSBzY2F0dGVyIHBsb3QuCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0QzLCB5ID0gQ0Q0KSkrICAgICAgICAKICBnZW9tX3BvaW50KGNvbG9yID0gImdyZXkiLCBhbHBoYT0wLjUpKwogIGdlb21fZGVuc2l0eV8yZChjb2xvdXIgPSAiYmxhY2siLCBiaW5zPTUwLCBhbHBoYT0wLjUpKwogIHhsYWIoIkNEMyBCVVY1NjMiKSsKICB5bGFiKCJDRDQgQVBDLUN5NyIpCgojIEEgY29udG91ciBwbG90IG9mIENEMyBhbmQgQ0Q0IGV4cHJlc3Npb24gb3ZlciBhIGRlbnNpdHkgcGxvdC4KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDMsIHkgPSBDRDQpKSsgICAgICAgIAogIGdlb21fYmluXzJkKGJpbnMgPSAyMDApKwogIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG9ycyA9IGMoImJsdWUiLCAgInllbGxvdyIsICJyZWQiKSkrCiAgZ2VvbV9kZW5zaXR5XzJkKGNvbG91ciA9ICJibGFjayIpKwogIHhsYWIoIkNEMyBCVVY1NjMiKSsKICB5bGFiKCJDRDQgQVBDLUN5NyIpCgpgYGAKCi0tLQoKIyBTdWJzZXR0aW5nIGRhdGEgYW5kIHN1bW1hcnkgc3RhdGlzdGljc3sudGFic2V0IC50YWJzZXQtZmFkZX0KCldoaWxlIG5vdCBhcyBlZmZpY2llbnQgYXMgRmxvd0pvLCB3ZSBjYW4gc3Vic2V0IGRhdGEgYWZ0ZXIgZXhwb3J0aW5nLiBXZSB3b3VsZG4ndCBub3JtYWxseSBkbyB0aGlzIGluIFIsIGJ1dCB3ZSdsbCBzaG93IHlvdSBob3cgeW91IGNvdWxkIHN1YnNldCBpbiBSIGFuZCBmb3IgdGhlIHB1cnBvc2VzIG9mIHZpc3VhbGlzYXRpb24uIAoKIyMgU3Vic2V0dGluZwpgYGB7cn0KIyBQbG90IGEgMi1tYXJrZXIgcGxvdCBvZiBDRDMgYW5kIENENCBleHByZXNzaW9uIHZhbHVlcy4gCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0QzLCB5ID0gQ0Q0KSkrICAgICAgICAKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwKSsKICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBjKCJibHVlIiwgICJ5ZWxsb3ciLCAicmVkIikpKwogIHhsYWIoIkNEMyBCVVY1NjMiKSsKICB5bGFiKCJDRDQgQVBDLUN5NyIpKwogIGdlb21fdmxpbmUoeGludGVyY2VwdCA9IDEuMykrICNjaG9vc2UgdGhlIHggaW50ZXJjZXB0CiAgZ2VvbV9obGluZSh5aW50ZXJjZXB0ID0gMC42KSAgI2Nob29zZSB0aGUgeSBpbnRlcmNlcHQKYGBgCgpTdWJzZXQgdGhlIGRhdGFzZXQgYmFzZWQgb24gdGhlc2UgdGhyZXNob2xkcy4KCmBgYHtyfQojIFRoaXMgY29kZSBjcmVhdGVzIGEgbmV3IGNvbHVtbiBuYW1lZCAnc3Vic2V0JyBpbiB0aGUgJ0lMQ190cmFuc2YnIGRhdGFzZXQuCiMgVGhlICdzdWJzZXQnIGNvbHVtbiBjYXRlZ29yaXNlcyByb3dzIGJhc2VkIG9uIHRoZSB2YWx1ZXMgb2YgJ0NEMycgYW5kICdDRDQnIGNvbHVtbnM6CiMgLSAiQ0QzK0NENCsiOiBpZiBDRDMgPiAxLjMgYW5kIENENCA+IDAuNgojIC0gIkNEMytDRDQtIjogaWYgQ0QzID4gMS4zIGFuZCBDRDQgPD0gMC42CiMgLSAiQ0QzLUNENCsiOiBpZiBDRDMgPD0gMS4zIGFuZCBDRDQgPiAwLjYKIyAtICJDRDMtQ0Q0LSI6IGlmIENEMyA8PSAxLjMgYW5kIENENCA8PSAwLjYKIyBUaGUgJ211dGF0ZScgZnVuY3Rpb24gZnJvbSB0aGUgZHBseXIgcGFja2FnZSBpcyB1c2VkIHRvIGFkZCB0aGlzIG5ldyBjb2x1bW4uCgpJTENfdHJhbnNmIDwtIElMQ190cmFuc2YgJT4lIAogIG11dGF0ZShzdWJzZXQgPSBjYXNlX3doZW4oCiAgICBDRDMgPiAxLjMgJiBDRDQgPiAwLjYgfiAiQ0QzK0NENCsiLAogICAgQ0QzID4gMS4zICYgQ0Q0IDw9IDAuNiB+ICJDRDMrQ0Q0LSIsCiAgICBDRDMgPD0gMS4zICYgQ0Q0ID4gMC42IH4gIkNEMy1DRDQrIiwKICAgIFRSVUUgfiAiQ0QzLUNENC0iCiAgKSkKYGBgCgojIyMgVmlzdWFsaXNlIHRoZSBzdWJzZXRzIGluIGRvdCBwbG90cwpgYGB7cn0KSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDMsIHkgPSBDRDQsIGNvbG9yPXN1YnNldCkpKyAgICAgICAgCiAgZ2VvbV9wb2ludCgpKwogIHhsYWIoIkNEMyBCVVY1NjMiKSsKICB5bGFiKCJDRDQgQVBDLUN5NyIpK2dlb21fdmxpbmUoeGludGVyY2VwdCA9IDEuMykrCiAgZ2VvbV9obGluZSh5aW50ZXJjZXB0ID0gMC42KQoKIyBMb29rIGF0IGRpZmZlcmVudCBtYXJrZXJzIGNvbG91cmVkIGJ5IHN1YnNldApJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IENENTYsIHkgPSBDRDE2LCBjb2xvcj1zdWJzZXQpKSsgICAgICAgIAogIGdlb21fcG9pbnQoKQoKIyBTcGxpdCBieSBzdWJzZXQKSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPUNENTYsIHkgPSBDRDE2KSkrICAgICAgICAKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwKSsKICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBjKCJibHVlIiwgICJ5ZWxsb3ciLCAicmVkIikpKwogIGZhY2V0X3dyYXAofnN1YnNldCkKCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID1GU0MuQSwgeSA9IFNTQy5BKSkrICAgICAgICAKICBnZW9tX2Jpbl8yZChiaW5zID0gMjAwKSsKICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBjKCJibHVlIiwgICJ5ZWxsb3ciLCAicmVkIikpKwogIGZhY2V0X3dyYXAofnN1YnNldCkKYGBgCgojIyMgSGlzdG9ncmFtcwoKYGBge3IsIHdhcm5pbmc9RkFMU0V9CklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0Q1NiwgY29sb3IgPSBzdWJzZXQsIGZpbGwgPSBzdWJzZXQpKSArCiAgZ2VvbV9kZW5zaXR5KGFscGhhID0gMC4yLCBsaW5ld2lkdGggPSAxKSsKICB4bGltKHF1YW50aWxlKElMQ190cmFuc2YkQ0Q1NiwgMC4wMDEpLHF1YW50aWxlKElMQ190cmFuc2YkQ0Q1NiwgMC45OTkpKQoKI3VzaW5nIGdncmlkZ2VzCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0Q1NiwgeSA9IHN1YnNldCwgZmlsbCA9IHN1YnNldCkpICsKICBnZW9tX2RlbnNpdHlfcmlkZ2VzKHNjYWxlID0gMS4yLCBhbHBoYSA9IDAuNiwgY29sb3VyID0gImJsYWNrIikgKwogIHRoZW1lX3JpZGdlcygpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAibm9uZSIpKwogIGxhYnMoeT0iIiwgeD0iIiwgdGl0bGUgPSAiQ0Q1NiIpKwogIHhsaW0ocXVhbnRpbGUoSUxDX3RyYW5zZiRDRDU2LCAwLjAwMSkscXVhbnRpbGUoSUxDX3RyYW5zZiRDRDU2LCAwLjk5OSkpCmBgYAoKWW91IGNvdWxkIG1hc3MgcHJpbnQgdGhlc2UgdXNpbmcgYSBsb29wLCBhcyB3ZSBkaWQgZm9yIHRoZSBkZW5zaXR5IHBsb3RzIGFib3ZlLiBZb3UgY2FuIGFsc28gYWRqdXN0IHRoZSBtYXJrZXIgeW91IG91dHB1dCwgYXMgbm90IGFsbCBtYXJrZXJzIG9yIGNvbWJpbmF0aW9ucyBvZiBtYXJrZXJzIGFyZSB1c2VmdWwuCgotLS0KCiMjIFN1bW1hcnkgc3RhdGlzdGljcwoKV2hpbGUgc3Vic2V0dGluZyBpcyBub3QgYXMgZWZmaWNpZW50IGFzIEZsb3dKbywgc3VtbWFyaXNpbmcgZGF0YSBpcyEgCgpXZSBjYW4gZmlyc3QgY29sbGVjdCBzdWJzZXQgcGVyY2VudGFnZXMgYW5kIG91dHB1dCB0aGVtIGluIGEgdGFibGUsIGluIHRleHQsIGFuZCBldmVuIGluIGEgcGxvdC4gVGhlbiB3ZSBjYW4gY2FsY3VsYXRlIHN1bW1hcnkgc3RhdGlzdGljcyBsaWtlIE1GSSAmIGdNRkkuCgpgYGB7cn0KIyB0b3RhbCBzdW1tYXJ5CnJvdW5kKHRhYmxlKElMQ190cmFuc2Ykc3Vic2V0KSoxMDAvbnJvdyhJTENfdHJhbnNmKSwyKSAjICUgb2YgZWFjaCBzdWJzZXQKCiMgaW5kaXZpZHVhbCBtYXJrZXIKSUxDX3RyYW5zZiAlPiUgCiAgZ3JvdXBfYnkoc3Vic2V0KSAlPiUgCiAgc3VtbWFyaXNlKFBlcmNlbnQgPSByb3VuZChuKCkvbnJvdyhJTENfdHJhbnNmKSoxMDAsMikpICU+JQogIG11dGF0ZShzdWJzZXQgPSBmYWN0b3Ioc3Vic2V0LCBsZXZlbHMgPSBjKCJDRDMrQ0Q0KyIsICJDRDMrQ0Q0LSIsICJDRDMtQ0Q0KyIsICJDRDMtQ0Q0LSIpKSklPiUKICBtdXRhdGUoU3Vic2V0cyA9ICJTdWJzZXRzIikgJT4lCiAgZ2dwbG90KGFlcyh4PVN1YnNldHMseSA9IFBlcmNlbnQsIGZpbGwgPSBzdWJzZXQpKSArCiAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5Iiwgc2hvdy5sZWdlbmQgPSBGQUxTRSkgKwogICAgeWxhYigiUGVyY2VudGFnZSIpICsKICAgIHhsYWIoIiIpICsKICAgIHNjYWxlX2ZpbGxfbWFudWFsKHZhbHVlcyA9IGMoIkNEMytDRDQrIiA9ICJibHVlIiwgIkNEMytDRDQtIiA9ICJyZWQiLCAiQ0QzLUNENCsiID0gImdyZWVuIiwgIkNEMy1DRDQtIiA9ICJ5ZWxsb3ciKSkgKwogICAgdGhlbWUoYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKCksIGF4aXMudGlja3MueCA9IGVsZW1lbnRfYmxhbmsoKSkgKwogICAgdGhlbWUoYXhpcy50ZXh0LnkgPSBlbGVtZW50X3RleHQoc2l6ZT0xMCkpICsKICAgIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJub25lIikgKwogICAgdGhlbWUocGxvdC50aXRsZSA9IGVsZW1lbnRfdGV4dChoanVzdCA9IDAuNSwgc2l6ZT0xMCkpICsKICAgIGdndGl0bGUoIlN1YnNldHMgb2YgQ0QzKy8tQ0Q0Ky8tIGNlbGxzIikKYGBgCgpXZSBjYW4gYWxzbyBjYWxjdWxhdGUgdGhlIHBlcmNlbnRhZ2Ugb2Ygc3Vic2V0cyBpbiBsaW5lLCBtZWFuaW5nIHdlIGRvbid0IGhhdmUgdG8gY2hhbmdlIHRoZXNlIGxpbmVzIG9mIHRleHQgYmFzZWQgb24gZGlmZmVyZW50IHJlc3VsdHMgb3IgZGlmZmVyZW50IGRhdGE6CgotIENEMytDRDQrOiBgciByb3VuZChzdW0oSUxDX3RyYW5zZiRzdWJzZXQgPT0gIkNEMytDRDQrIikvbnJvdyhJTENfdHJhbnNmKSoxMDAsMilgJQoKLSBDRDMrQ0Q0LTogYHIgcm91bmQoc3VtKElMQ190cmFuc2Ykc3Vic2V0ID09ICJDRDMrQ0Q0LSIpL25yb3coSUxDX3RyYW5zZikqMTAwLDIpYCUKCi0gQ0QzLUNENCs6IGByIHJvdW5kKHN1bShJTENfdHJhbnNmJHN1YnNldCA9PSAiQ0QzLUNENCsiKS9ucm93KElMQ190cmFuc2YpKjEwMCwyKWAlCgotIENEMy1DRDQtOiBgciByb3VuZChzdW0oSUxDX3RyYW5zZiRzdWJzZXQgPT0gIkNEMy1DRDQtIikvbnJvdyhJTENfdHJhbnNmKSoxMDAsMilgJQoKPGRldGFpbHM+CjxzdW1tYXJ5PioqWW91IGNhbiBhbHNvIHF1aWNrbHkgY2FsY3VsYXRlIHN1bW1hcnkgc3RhdGlzdGljcyBsaWtlIE1GSSwgZ01GSSwgbWVkaWFuRkkqKjo8L3N1bW1hcnk+Cjxicj4KKipBcml0aG1hdGljIE1GSSoqICAKCmBgYHtyfQpJTEMkc3Vic2V0ICA8LSBJTENfdHJhbnNmJHN1YnNldCAjIEFkZCB0aGUgc3Vic2V0IGNvbHVtbiB0byB0aGUgb3JpZ2luYWwgZGF0YS4KCklMQyAlPiUgCiAgZ3JvdXBfYnkoc3Vic2V0KSAlPiUgCiAgc3VtbWFyaXNlKGFjcm9zcyg3OjMxLCBtZWFuLCAubmFtZXMgPSAiTUZJX3tjb2x9IikpCgpgYGAKCioqTWVkaWFuIEZJKioKCmBgYHtyfQpJTEMgJT4lIAogIGdyb3VwX2J5KHN1YnNldCkgJT4lIAogIHN1bW1hcmlzZShhY3Jvc3MoNzozMSwgbWVhbiwgLm5hbWVzID0gIk1GSV97Y29sfSIpKQpgYGAKCioqR2VvbWV0cmljIE1GSSoqCgpUaGUgdHJhZGl0aW9uYWwgZm9ybXVsYSB3cml0dGVuIG91dCB3b3VsZCBiZSBsaWtlIGBJTENfdHJhbnNmICU+JSBwcm9kKENENTYpXigxL25yb3coQ0Q1NikpYC4gSG93ZXZlciwgYXMgb3VyIGRhdGEgaXMgKmNvbXBlbnNhdGVkKiwgdGhlcmUgYXJlIG1lYW5pbmdmdWwgbmVnYXRpdmUgdmFsdWVzIGFuZCAwcyB0aGF0IHdlIGRvbid0IHdhbnQgdG8gZ2V0IHJpZCBvZiwgd2hpY2ggaWYgeW91IHJ1biBvbiB0aGlzIGRhdGEgcmVtb3ZlcyB0d28gc3Vic2V0cyBlbnRpcmVseS4gRmxvd0pvIGNhbGN1bGF0ZXMgdGhlICpncmFwaCBzcGFjZXMqIGFzIGdNRkkgdG8gZW5hYmxlIGl0IHRvIGRlYWwgd2l0aCBuZWdhdGl2ZXMgYW5kIDBzLiBIZXJlIGluIHRoaXMgY2FzZSwgaXQgbWF5IGJlIGJldHRlciB0byBzdGljayB3aXRoIHRoZSBhcml0aG1hdGljIG1lYW4gaW5zdGVhZCBvZiBmb3JjaW5nIHRoZSBnZW9tZXRyaWMgbWVhbi4KCjwvZGV0YWlscz4KCi0tLQoKIyBueG4gcGxvdHMKCllvdSBjYW4gYWxzbyBjcmVhdGUgYSBsb29wIHRvIHZpZXcgdGhlIG54biBwbG90cywgYW5kIHNhdmUgdGhlbSB0byB0aGUgZm9sZGVyIG9mIHlvdXIgY2hvaWNlLgoKYGBge3IsIGZpZy53aWR0aD0yMCwgZmlnLmhlaWdodD0yMCwgd2FybmluZz1GQUxTRX0KIyBTZWxlY3Qgb25seSBudW1lcmljIG1hcmtlciBjb2x1bW5zCm1hcmtlcl9jb2xzIDwtIGNvbG5hbWVzKElMQ190cmFuc2YpWzE6MjVdICMgYWRqdXN0IGlmIG5lZWRlZAoKIyBNYWtlIGEgY3VzdG9taXNlZCBmdW5jdGlvbiBmb3IgcGxvdCBzdHJlYW1saW5lCmN1c3RvbV9iaW5fcGxvdCA8LSBmdW5jdGlvbihkYXRhLCBtYXBwaW5nLCAuLi4pIHsKICBnZ3Bsb3QoZGF0YSA9IGRhdGEsIG1hcHBpbmcgPSBtYXBwaW5nKSArCiAgICBnZW9tX2Jpbl8yZChiaW5zID0gNTApICsKICAgIHNjYWxlX2ZpbGxfZ3JhZGllbnRuKGNvbG91cnMgPSBjKCJibHVlIiwgInllbGxvdyIsICJyZWQiKSkgKwogICAgdGhlbWVfbWluaW1hbCgpCn0KCiMgR2VuZXJhdGUgcGxvdHMKcCA8LSBnZ3BhaXJzKAogIElMQ190cmFuc2YsCiAgY29sdW1ucyA9IG1hcmtlcl9jb2xzLAogIGxvd2VyID0gbGlzdChjb250aW51b3VzID0gY3VzdG9tX2Jpbl9wbG90KSwKICBkaWFnID0gbGlzdChjb250aW51b3VzID0gd3JhcCgiZGVuc2l0eURpYWciLCBhbHBoYSA9IDAuNCkpLAogIHVwcGVyID0gbGlzdChjb250aW51b3VzID0gd3JhcCgiY29yIiwgc2l6ZSA9IDMpKQopCmdnc2F2ZSgicGxvdHMvbnhuLnBuZyIscCwgd2lkdGg9MjUsIGhlaWdodD0yNSx1bml0PSJpbiIpCgpybShwLGN1c3RvbV9iaW5fcGxvdCwgbWFya2VyX2NvbHMpCmBgYAoKLS0tCgojIERpbWVuc2lvbiByZWR1Y3Rpb24gYW5kIGNsdXN0ZXJpbmcKClRoZXJlIGFyZSBzZXZlcmFsIHdheXMgdG8gcGVyZm9ybSBjbHVzdGVyaW5nIChlLmcuIEZsb3dTT00sIEZ1c2VTT00pIGFuZCBkaW1lbnNpb24gcmVkdWN0aW9uIChlLmcuIFBDQSwgVU1BUCwgdFNORSkuIAoKSW4gdGhpcyBzZWN0aW9uLCB3ZSdsbCBjb3ZlciAqKmNsdXN0ZXJpbmcqKiBhbmQgKipkaW1lbnNpb24gcmVkdWN0aW9uKiogb24gb3VyIG9uZSBzYW1wbGUuIAoKIyMgQ2x1c3RlcmluZ3sudGFic2V0IC50YWJzZXQtZmFkZX0KCkNsdXN0ZXJpbmcgZ3JvdXBzIG91ciBjZWxscyBiYXNlZCBvbiB0aGUgaW5wdXQgZXhwcmVzc2lvbnMgd2UgY2hvb3NlLiAKCiMjIyBGbG93U09NCltSZWFkIG1vcmVdKGh0dHBzOi8vYmlvY29uZHVjdG9yLm9yZy9wYWNrYWdlcy9yZWxlYXNlL2Jpb2MvaHRtbC9GbG93U09NLmh0bWwpCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFfQoKIyBQZXJmb3JtIGNsdXN0ZXJpbmcKY2x1c3RlcnMgPC0gRmxvd1NPTTo6Rmxvd1NPTSgKICBpbnB1dD1hcy5tYXRyaXgoSUxDX3RyYW5zZlssMTozMl0pLAogIHNpbGVudCA9IEZBTFNFLAogIGNvbHNUb1VzZSA9IGMoMSw0LDY6MTQsMTY6MjUpLAogIG5DbHVzID0gMTUpCgojIEFubm90YXRlIHRoZSBjbHVzdGVyIHRoYXQgdGhlIGNlbGwgYmVsb25ncyB0bwpJTENfdHJhbnNmJGZsb3dTT008LSBHZXRNZXRhY2x1c3RlcnMoY2x1c3RlcnMpCkZsb3dTT006OkdldE1ldGFjbHVzdGVyTUZJcyhjbHVzdGVycykKCiMgUGxvdCBDRDQgZXhwcmVzc2lvbiB2YWx1ZXMgb24gY2x1c3RlcnMKSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBDRDU2LCB5ID0gZmxvd1NPTSwgZmlsbCA9IGZsb3dTT00pKSArCiAgZ2VvbV9kZW5zaXR5X3JpZGdlcyhzY2FsZSA9IDEuMiwgYWxwaGEgPSAwLjYsIGNvbG91ciA9ICJibGFjayIpICsKICB0aGVtZV9yaWRnZXMoKSArCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gIm5vbmUiKSsKICBsYWJzKHk9IiIsIHg9IiIsIHRpdGxlID0gIkNENTYiKQpgYGAKCiMjIyBGdXNlU09NCltSZWFkIG1vcmVdKGh0dHBzOi8vYmlvY29uZHVjdG9yLm9yZy9wYWNrYWdlcy9kZXZlbC9iaW9jL3ZpZ25ldHRlcy9GdXNlU09NL2luc3QvZG9jL0ludHJvZHVjdGlvbi5odG1sKQoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRX0KCnJpc29tTWFya2VycyA8LSBjb2xuYW1lcyhJTENfdHJhbnNmKVtjKDEsNCw2OjE0LDE2OjI1KV0KY2x1c3RlcnMgPC0gcnVuRnVzZVNPTShkYXRhID0gYXMubWF0cml4KElMQ190cmFuc2ZbLDE6MzJdKSwgbWFya2VycyA9IHJpc29tTWFya2VycywgCiAgICAgICAgICAgICAgICAgICAgICAgIG51bUNsdXN0ZXJzID0gMTUpCgpJTENfdHJhbnNmJGZ1c2VTT008LSBhcy5udW1lcmljKHVubGlzdChsYXBwbHkoc3RyX3NwbGl0KGNsdXN0ZXJzJGNsdXN0ZXJzLCAiXyIpLCBmdW5jdGlvbih4KSB4W1syXV0pKSkKCklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gQ0QzOSwgeSA9IGFzLmZhY3RvcihmdXNlU09NKSwgZmlsbD1hcy5mYWN0b3IoZnVzZVNPTSkpKSArCiAgZ2VvbV9kZW5zaXR5X3JpZGdlcyhzY2FsZSA9IDEuMiwgYWxwaGEgPSAwLjYsIGNvbG91ciA9ICJibGFjayIpICsKICB0aGVtZV9yaWRnZXMoKSArCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gIm5vbmUiKSsKICBsYWJzKHk9IiIsIHg9IiIsIHRpdGxlID0gIkNEMzkiKQpgYGAKCiMjIERpbWVuc2lvbiBSZWR1Y3Rpb257LnRhYnNldCAudGFic2V0LWZhZGV9CgpXZSdsbCBnZW5lcmF0ZSBhIFBDQSwgYSB0U05FIGFuZCBhIFVNQVAuIEknbGwgdGhlbiBydW4gdGhyb3VnaCBhbGwgb2YgdGhpcyBpbiB0aGUgU3BlY3RyZSBwYWNrZ2UuIAoKYGBge3IgbWVzc2FnZT1GLCB3YXJuaW5nPUYsIGV2YWw9Rn0KCnBjYSA8LSBwcmNvbXAoYXMubWF0cml4KElMQ190cmFuc2ZbLGMoMSw0LDY6MTQsMTY6MjUpXSksIGNlbnRlciA9IFRSVUUpCgpJTENfdHJhbnNmIDwtIElMQ190cmFuc2YgJT4lIAogIG11dGF0ZShQQzEgPSBwY2EkeFssMV0sCiAgICAgICAgIFBDMiA9IHBjYSR4WywyXSkKCiMgY2FuIHRha2UgYSB3aGlsZQp0c25lIDwtIFJ0c25lKGFzLm1hdHJpeChJTENfdHJhbnNmWyxjKDEsNCw2OjE0LDE2OjI1KV0pLCBkaW1zID0gMiwgcGVycGxleGl0eSA9IDMwLCB2ZXJib3NlID0gVFJVRSkKCklMQ190cmFuc2YgPC0gSUxDX3RyYW5zZiAlPiUgCiAgbXV0YXRlKHRTTkUxID0gdHNuZSRZWywxXSwKICAgICAgICAgdFNORTIgPSB0c25lJFlbLDJdKQoKdW1hcCA8LSB1bWFwKElMQ190cmFuc2ZbLGMoMSw0LDY6MTQsMTY6MjUpXSkKSUxDX3RyYW5zZiA8LSBJTENfdHJhbnNmICU+JSAKICBtdXRhdGUoVU1BUDEgPSB1bWFwJGxheW91dFssMV0sCiAgICAgICAgIFVNQVAyID0gdW1hcCRsYXlvdXRbLDJdKQoKcm0ocGNhLHVtYXAsdHNuZSkKYGBgCmBgYHtyLCBldmFsPUZ9CnNhdmVSRFMoSUxDX3RyYW5zZiwiZGF0YS9jbHVzdGVyZWRfZGF0YS5yZHMiKQpgYGAKCiMjIyBWaXN1YWxpc2F0aW9ucwoKYGBge3J9CklMQ190cmFuc2YgPC0gcmVhZFJEUygiZGF0YS9jbHVzdGVyZWRfZGF0YS5yZHMiKQpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKFBDMSxQQzIsIGNvbG9yPSBhcy5mYWN0b3IoZmxvd1NPTSkpKSArCiAgZ2VvbV9wb2ludCgpCgpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKHRTTkUxLHRTTkUyLCBjb2xvcj0gYXMuZmFjdG9yKGZsb3dTT00pKSkgKwogIGdlb21fcG9pbnQoKQoKZ2dwbG90KElMQ190cmFuc2YsIGFlcyhVTUFQMSxVTUFQMiwgY29sb3I9IGFzLmZhY3RvcihmbG93U09NKSkpICsKICBnZW9tX3BvaW50KCkreGxpbSgtNywxMCkKCiMgQ29sb3VyIG92ZXJsYXllZCBieSB0aGUgZXhwcmVzc2lvbiBvZiBvbmUgbWFya2VyLgpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKFVNQVAxLFVNQVAyLCBjb2xvcj0gQ0QzKSkgKwogIGdlb21fcG9pbnQoKSArIAogIHNjYWxlX2NvbG9yX3ZpcmlkaXNfYygpK3hsaW0oLTcsMTApCgpnZ3Bsb3QoSUxDX3RyYW5zZiwgYWVzKFVNQVAxLFVNQVAyLCBjb2xvcj0gQ0QxNikpICsKICBnZW9tX3BvaW50KCkgKyAKICBzY2FsZV9jb2xvcl92aXJpZGlzX2MoKSt4bGltKC03LDEwKQoKYGBgCjxicj4KCi0tLQoKIyMjIFNwZWN0cmUKCltSZWFkIG1vcmVdKGh0dHBzOi8vaW1tdW5lZHluYW1pY3MuaW8vc3BlY3RyZS8pPGJyPgoKU3BlY3RyZSBoYXMgZWFzeSBwbG90dGluZyB0b29scyB0byB2aXN1YWxpemUgdGhlIHJlc3VsdHMgb2YgY2x1c3RlcmluZyBhbmQgZGltZW5zaW9uIHJlZHVjdGlvbi4KCmBgYHtyLCBtZXNzYWdlID0gRiwgd2FybmluZz1GQUxTRX0KbWFrZS5jb2xvdXIucGxvdChJTENfdHJhbnNmLCAKICAgICAgICAgICAgICAgICAidFNORTEiLCAidFNORTIiLCAic3Vic2V0IiwgIAogICAgICAgICAgICAgICAgIGFkZC5sYWJlbCA9IFRSVUUsCiAgICAgICAgICAgICAgICAgYmxhbmsuYXhpcyA9IFQsCiAgICAgICAgICAgICAgICAgcGF0aCA9ICJwbG90cyIpCm1ha2UuY29sb3VyLnBsb3QoSUxDX3RyYW5zZiwgCiAgICAgICAgICAgICAgICAgInRTTkUxIiwgInRTTkUyIiwgImZsb3dTT00iLCAKICAgICAgICAgICAgICAgICBjb2wudHlwZSA9ICdmYWN0b3InLCAKICAgICAgICAgICAgICAgICBhZGQubGFiZWwgPSBUUlVFLAogICAgICAgICAgICAgICAgIGJsYW5rLmF4aXMgPSBULAogICAgICAgICAgICAgICAgIHBhdGggPSAicGxvdHMiKQpgYGAKCjxkZXRhaWxzPjxzdW1tYXJ5PioqTXVsdGktcGxvdHM6Kio8L3N1bW1hcnk+CgpgYGB7ciwgbWVzc2FnZSA9IEYsIHdhcm5pbmc9RkFMU0V9Cm1ha2UubXVsdGkucGxvdChJTENfdHJhbnNmLCAKICAgICAgICAgICAgICAgICJ0U05FMSIsICJ0U05FMiIsIAogICAgICAgICAgICAgICAgcmlzb21NYXJrZXJzLCAKICAgICAgICAgICAgICAgIGJsYW5rLmF4aXMgPSBULCAKICAgICAgICAgICAgICAgIGNvbG91cnMgPSAidmlyaWRpcyIsIAogICAgICAgICAgICAgICAgcGF0aCA9ICJwbG90cyIpCmBgYAoKPC9kZXRhaWxzPgoKQW5kIHdlIGNhbiBtYWtlIHRoZSBoZWF0bWFwIHlvdSdyZSB1c2VkIHRvIHNlZWluZyBhbmQgc2F2ZSB0aGVtLiAgCgpgYGB7ciwgbWVzc2FnZSA9IEYsIHdhcm5pbmc9RkFMU0UsIGVycm9yPUZ9CmV4cCA8LSBkby5hZ2dyZWdhdGUoYXMuZGF0YS50YWJsZShJTENfdHJhbnNmKSwgdXNlLmNvbHMgPSByaXNvbU1hcmtlcnMsIGJ5ID0gYygiZmxvd1NPTSIpKQptYWtlLnBoZWF0bWFwKGV4cCwgZmlsZS5uYW1lID0gInBsb3RzL1BoZWF0bWFwX0Zsb3dTT00ucG5nIiwgc2FtcGxlLmNvbD0iZmxvd1NPTSIsIHBsb3QuY29scz1yaXNvbU1hcmtlcnMpCmBgYAoKCipTcGVjdHJlIGhhcyBhbHNvIGVtYmVkZGVkIEZsb3dTT00gY2x1c3RlcmluZyBhbmQgZGltZW5zaW9uIHJlZHVjdGlvbiB0b29scyBzdWNoIGFzIHVtYXAgaW4gZWFzeSBjb2Rlcywgc3VjaCBhczo8YnI+KgoKLSAgIGBkby5zdWJzYW1wbGUoKWAKLSAgIGBydW4uZmxvd3NvbSgpYAotICAgYHJ1bi51bWFwKClgCjxicj4KCi0tLQoKIyBBZGRpdGlvbmFsIENvbnNpZGVyYXRpb25zOiBRQ3sudGFic2V0IC50YWJzZXQtZmFkZX0KCldoZW4gbG9va2luZyBhdCB0aGUgcmF3IGRhdGEsIG9yIGluIHRoZSBtaWRkbGUgb2YgZGF0YSBwcm9jZXNzaW5nLCB5b3UgbWF5IGNvbnNpZGVyIGZpbHRlcmluZyBzb21lIGNlbGwuIEluIHRoZSAxLW1hcmtlciBwbG90cyBiZWxvdywgeW91IGNhbiBzZWUgdGhhdCB0aGVyZSBhcmUgYSBmZXcgZXh0cmVtZSB2YWx1ZXMgdGhhdCBhcmUgZGlzcGxheWVkIGFuZCBwdXNoaW5nIHRoZSBtYWpvcml0eSBvZiB2YWx1ZXMgc3F1ZWV6ZWQgdG9nZXRoZXIuIGUuZy4gSExBLURSOgoKYGBge3J9CklMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gSExBLkRSKSkrCiAgZ2VvbV9kZW5zaXR5KGxpbmV3aWR0aCA9IDAuNywgY29sb3VyID0gInJlZCIsIGFlcyhmaWxsID0gInJlZCIpLCBhbHBoYSA9IDAuNSxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICB5bGFiKCJEZW5zaXR5IikrCgojIFZpc3VhbGlzZSB0aGUgdmFsdWVzIGF0IHRoZSB0b3AgMC4xJSBhbmQgYm90dG9tIDAuMSUuCiAgZ2VvbV92bGluZSh4aW50ZXJjZXB0ID0gcXVhbnRpbGUoSUxDX3RyYW5zZiRITEEuRFIsIDAuOTk5KSwgY29sb3VyID0gImJsdWUiLCBsaW5ld2lkdGggPSAwLjUpKwogIGdlb21fdmxpbmUoeGludGVyY2VwdCA9IHF1YW50aWxlKElMQ190cmFuc2YkSExBLkRSLCAwLjAwMSksIGNvbG91ciA9ICJibHVlIiwgbGluZXdpZHRoID0gMC41KSsKCiMgV2UgY2FuIGxhYmVsIHRoZSB0aHJlc2hvbGQgbGluZXM6IGFubm90YXRlIGFzIGEgdGV4dCwgYXQgdGhlIHBvc2l0aW9uIG9mIHRoZSB0b3AgYW5kIGJvdHRvbSAwLjAxJSwgYW5kIHNsaWdodGx5IGFkanVzdCB0aGUgbGFiZWwgcG9zaXRpb24gaG9yaXpvbnRhbGx5LgogIGFubm90YXRlKCJ0ZXh0IiwgeCA9IDIsIHkgPSAwLjUsIGxhYmVsID0gIlRvcCBhbmQgYm90dG9tIDAuMSUiLCBoanVzdCA9IC0wLjEpIApgYGAKCjxkZXRhaWxzPgo8c3VtbWFyeT5WaWV3IHRoZW0gZm9yIGFsbCBjaGFubmVscy48L3N1bW1hcnk+CgpgYGB7ciwgbWVzc2FnZT1GfQojIENyZWF0ZSB0aGUgZW1wdHkgbGlzdApwbG90c19saW5lIDwtIGxpc3QoKQoKIyBDcmVhdGUgdGhlIGxvb3AgdG8gZ2VuZXJhdGUgcGxvdHMuCmZvciAoaSBpbiAxOjI1KXsKICAKICAjIEdldCB0aGUgbWFya2VyIG5hbWVzCiAgTWFya2VyIDwtIGNvbG5hbWVzKElMQ190cmFuc2YpW2ldCiAgCiAgIyBHZW5lcmF0ZSB0aGUgcGxvdHMgYW5kIHB1dCBpdCBpbnRvIHRoZSBsaXN0CiAgcCA8LSBJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IC5kYXRhW1tNYXJrZXJdXSkpKyAKICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkIiwgZmlsbCA9ICJyZWQiLCBhbHBoYSA9IDAuMyxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICAgeGxhYihNYXJrZXIpKwogICB5bGFiKCJEZW5zaXR5IikrCiAgCiAgICAjIEFkZCB0aGUgbmV3bHkgd3JpdHRlbiBsaW5lcyB0byB2aXN1YWxpc2UgdGhlIG91dGxpZXJzIHRvIHRoaXMgbG9vcC4KICAgIGdlb21fdmxpbmUoeGludGVyY2VwdCA9IHF1YW50aWxlKElMQ190cmFuc2ZbW2ldXSwgMC45OTkpLCBjb2xvdXIgPSAiYmx1ZSIsIGxpbmV3aWR0aCA9IDAuNSkrCiAgICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSBxdWFudGlsZShJTENfdHJhbnNmW1tpXV0sIDAuMDAxKSwgY29sb3VyICA9ICJibHVlIiwgbGluZXdpZHRoID0gMC41KQogICAgCiAgIyBQdXQgdGhlIHBsb3RzIGludG8gdGhlIGxpc3QKICBwbG90c19saW5lW1tsZW5ndGgocGxvdHNfbGluZSkrMV1dIDwtIHAKfQoKIyBVc2UgYSBncmlkIGxheW91dCB0byB2aWV3IHRoZSBwbG90cwpsaWJyYXJ5KGdncHVicikKZ2dwdWJyOjpnZ2FycmFuZ2UocGxvdGxpc3QgPSBwbG90c19saW5lLCBuY29sID0gMiwgbnJvdyA9IDQpCmBgYAo8L2RldGFpbHM+Cgo8YnI+ClRvIGxvb2sgYXQgdGhpcyBpbiBhIG1vcmUgc3RhdGlzdGljYWwgd2F5LCB5b3UgY2FuIGNyZWF0ZSBhIHF1aWNrIGRhdGEgc3VtbWFyeSBvZiB0aGUgbWluaW11bSwgbWF4aW11bSwgbWVhbiwgbWVkaWFuIGFuZCB0aGUgaW50ZXJxdWFydGlsZSByYW5nZS4KCmBgYHtyfQpzdW1tYXJ5KElMQ190cmFuc2YpCmBgYAoKPGJyPgoKRWl0aGVyIGJlaW5nIGFydGlmaWNpYWwgb3IgYmlvbG9naWNhbCwgdGhlc2UgbWlnaHQgaW50ZXJmZXJlIGhvdyB0aGUgY29tcHV0ZXIgaW50ZXJwcmV0cyB5b3VyIGRhdGEgaW4gdGhlIGRvd25zdHJlYW0gY2x1c3RlcmluZyBhbmQgZGltZW5zaW9uIHJlZHVjdGlvbi4gU29tZXRpbWVzIHlvdSBtYXkgZGVjaWRlIHRvIGludmVzdGlnYXRlIGhvdyB0aGVzZSBpbXBhY3QgeW91ciBkYXRhc2V0IGFuZCB3aGVyZSB0aGV5IGFyaXNlIGZyb20uIEJ1dCBpZiB0aGVyZSBhcmUgcGxlbnR5IG9mIGNlbGxzLCBhbmQgdGhlICUgb3V0bGllcnMgaXMgc3VwZXIgc21hbGwsIHlvdSBtaWdodCBqdXN0IHdhbnQgdG8gZmlsdGVyIHRoZW0gb3V0Ljxicj4KCiMjIEZpbHRlcmluZyBieSAlCgpZb3UgbWlnaHQgd2FudCB0byBmaWx0ZXIgb3V0IHRoZSB0b3AgYW5kIGJvdHRvbSAwLjElIG9mIGNlbGxzIC4gTm90ZSB0aGF0IHRoaXMgYXBwcm9hY2ggcmVtb3ZlcyB0aGUgY2VsbHMgdGhhdCBkb2Vzbid0IGZpdCB3aXRoaW4gdGhlIHRvcCBhbmQgYm90dG9tIDAuMSUgb2YgQU5ZIGNoYW5uZWwsIGFuZCByZW1vdmVzIHRoZSBjZWxsIGZyb20gdGhlIGVudGlyZSBkYXRhc2V0LiBTbyBiZSBjYXV0aW91cyBhYm91dCB0aGUgJSBzbyB5b3UgYXJlbid0IHJlbW92aW5nIHRvbyBtYW55IGNlbGxzIHdoZW4gdGhleSBhcmUgYWRkZWQgdXAgKCB3ZSdsbCB1c2UgMC4xJSBhbGwgdGhlIHdheSBmb3IgZGVtb25zdHJhdGlvbiBwdXJwb3NlcykuIDxicj4KCmBgYHtyfQojIENyZWF0ZSBhbiBlbXB0eSBsaXN0LgpvdXRsaWVyX2ZsYWcgPC0gbGlzdCgpCgojIExvb3AgdGhyb3VnaCB0aGUgY29sdW1ucyB3aXRoIG1hcmtlcnMKZm9yIChpIGluIDE6MjUpewogIAogICMgRmluZCB0aGUgY2VsbCB2YWx1ZXMKICB2YWx1ZSA8LSBJTENfdHJhbnNmW1tpXV0KICAKICAjIEdldCB0aGUgbWFya2VyIG5hbWVzCiAgTWFya2VyIDwtIGNvbG5hbWVzKElMQ190cmFuc2YpW2ldCiAgCiAgIyBGaW5kIHRoZSB0aHJlc2hvbGRzIG9mIG91dGxpZXJzCiAgdXBwZXIgPC0gcXVhbnRpbGUodmFsdWUsIDAuOTk5LCBuYS5ybSA9IFRSVUUpCiAgbG93ZXIgPC0gcXVhbnRpbGUodmFsdWUsIDAuMDAxLCBuYS5ybSA9IFRSVUUpCgogICMgRmxhZyB0aGUgb3V0bGllcnMgYXMgMSwgZWxzZSBhcyAwLiBBbmQgcmVjb3JkIHRoZW0gaW50byB0aGUgbGlzdC4KICBmbGFnIDwtIGlmZWxzZSh2YWx1ZSA8IGxvd2VyIHwgdmFsdWUgPiB1cHBlciwgMSwgMCkKICBvdXRsaWVyX2ZsYWdbW2xlbmd0aChvdXRsaWVyX2ZsYWcpKzFdXSA8LSBmbGFnCn0KIyBUdXJuIHRoZSBmbGFncyBpbnRvIGEgZGF0YSB0YWJsZSBvYmplY3QuCm91dGxpZXJfZmxhZyA8LSBhcy5kYXRhLnRhYmxlKG91dGxpZXJfZmxhZykKY29sbmFtZXMob3V0bGllcl9mbGFnKTwtIGNvbG5hbWVzKElMQ190cmFuc2YpW2MoNzozMSldCnN1YnNldCA8LSBJTENfdHJhbnNmW3Jvd1N1bXMob3V0bGllcl9mbGFnKT09MCxdCiAgCiMgQ2FsY3VsYXRlIHRoZSAlIG9mIGNlbGwgbG9zcyBhZnRlciBmaWx0ZXJpbmcsIHRoZW4gZm9ybWF0IGl0IGFzIGJlaW5nIGRpc3BsYXllZCBpbiBsZXNzIGRpZ2l0cywgdGhlbiBwYXN0ZSBhIHNlbnRlbmNlIHRvZ2V0aGVyLgogICAgcGFzdGUwKCJDZWxsIGxvc3M6ICIsZm9ybWF0KCgxLW5yb3coc3Vic2V0KS9ucm93KElMQ190cmFuc2YpKSoxMDAsIGRpZ2l0cyA9IDMpLCAiJSIpCmBgYAoKCmBgYHtyfQoKIyBWaWV3IHRoZSBwcmUtIGFuZCBwb3N0LWZpbHRlcmVkIGRhdGEgc2lkZSBieSBzaWRlLCBwdXR0aW5nIHRoZW0gaW4gYSBncmlkLgpjb3dwbG90OjpwbG90X2dyaWQoCiAgSUxDX3RyYW5zZiAlPiUKICBnZ3Bsb3QoYWVzKHggPSBITEEuRFIpKSsKICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkIiwgZmlsbCA9ICJyZWQiLCBhbHBoYSA9IDAuMywgc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgeWxhYigiRGVuc2l0eSIpLAoKc3Vic2V0ICU+JQogIGdncGxvdChhZXMoeCA9IEhMQS5EUikpKwogIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQiLCBmaWxsID0gInJlZCIsIGFscGhhID0gMC4zLCBzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICB5bGFiKCJEZW5zaXR5IiksCgogIyBudW1iZXIgb2YgY29sdW1uIGVxdWFscyAxLgogbmNvbCA9IDEKKQoKYGBgCgojIyBGaWx0ZXJpbmcgYnkgZml4ZWQgdGhyZXNob2xkcwoKWW91IG1pZ2h0IHdhbnQgdG8gZmlsdGVyIG91dCB0aGUgZGF0YSB0aGF0IGlzIG91dHNpZGUgb2YgY2VydGFpbiB2YWx1ZXMgcGVyIGNoYW5uZWwuIEEgY29tbW9ubHkgdXNlZCBzdGFuZGFyZCBpbiBkYXRhIGNsZWFuaW5nIGlzIGNhbGN1bGF0ZWQgYmFzZWQgb24gaW50ZXJxdWFydGlsZSByYW5nZXMgKElRUikuIFRoZSB0aHJlc2hvbGRzIGFyZSBhbnkgZGF0YSBwb2ludHMgdGhhdCBhcmUgMS41IHRpbWVzIG9mIElRUiBhYm92ZSB0aGUgM3JkIHF1YXJ0aWxlLCBvciAxLjUgdGltZXMgb2YgSVFSIGJlbG93IHRoZSAxc3QgcXVhcnRpbGUuIFRoaXMgd2lsbCBrZWVwIHRoZSBtYWpvcml0eSBvZiBkYXRhIHBvaW50cywgaG93ZXZlciwgaXQgbWlnaHQgYWxzbyByZW1vdmUgc29tZSB0cnVlIHZhcmlhbmNlIGluIHRoZSBkYXRhc2V0IGF0IGV4dHJlbWUgZW5kcy48YnI+CgpgYGB7cn0KCiMgVGFrZSBITEEtRFIgYXMgYW4gZXhhbXBsZQoKIyBDYWxjdWxhdGUgdGhlIGludGVycXVhcnRpbGUgcmFuZ2UuCiAgIElRUiA8LSBJUVIoSUxDX3RyYW5zZiRITEEuRFIpCiAgIFExIDwtIHF1YW50aWxlKElMQ190cmFuc2YkSExBLkRSLCAwLjI1KQogICBRMyA8LSBxdWFudGlsZShJTENfdHJhbnNmJEhMQS5EUiwgMC43NSkKICAgCiMgQ2FsY3VsYXRlIHRoZSB1cHBlciBhbmQgbG93ZXIgdGhyZXNob2xkcwogICBsb3dlcmZlbmNlIDwtIFExIC0gMS41KklRUgogICB1cHBlcmZlbmNlIDwtIFEzICsgMS41KklRUiAKIAojIE9ubHkga2VlcCB0aGUgY2VsbHMgd2hpY2ggdGhlIEhMQS1EUiB2YWx1ZSBpcyB3aXRoaW4gdGhlIHRocmVzaG9sZHMuICAgCmZpbHQgPC0gSUxDX3RyYW5zZltJTENfdHJhbnNmJEhMQS5EUiA+IGxvd2VyZmVuY2UgJiBJTENfdHJhbnNmJEhMQS5EUiA8IHVwcGVyZmVuY2UsIF0KCmNvd3Bsb3Q6OnBsb3RfZ3JpZCgKICBJTENfdHJhbnNmICU+JQogIGdncGxvdChhZXMoeCA9IEhMQS5EUikpKwogIGdlb21fZGVuc2l0eShsaW5ld2lkdGggPSAwLjcsIGNvbG91ciA9ICJyZWQiLCBmaWxsID0gInJlZCIsIGFscGhhID0gMC4zLHNob3cubGVnZW5kID0gRkFMU0UpKwogIHlsYWIoIkRlbnNpdHkiKSwKZmlsdCAlPiUKICBnZ3Bsb3QoYWVzKHggPSBITEEuRFIpKSsKICBnZW9tX2RlbnNpdHkobGluZXdpZHRoID0gMC43LCBjb2xvdXIgPSAicmVkIiwgZmlsbCA9ICJyZWQiLCBhbHBoYSA9IDAuMyxzaG93LmxlZ2VuZCA9IEZBTFNFKSsKICB5bGFiKCJEZW5zaXR5IiksCgogIyBudW1iZXIgb2YgY29sdW1uIGVxdWFscyAxLgogbmNvbCA9IDEKKQoKcm0oUTEsUTMsSVFSKQoKYGBgCgpPciwgc2ltcGx5IGp1c3QgY2hvb3NlIGFuIGFyYml0cmFyeSB0aHJlc2hvbGQuCgpgYGB7cn0KCiMgT25seSBrZWVwIHRoZSBjZWxscyB3aGljaCB0cmFuc2Zvcm1lZCBITEEtRFIgZXhwcmVzc2lvbiB2YWx1ZSA8IDIuCm1hbnVhbCA8LSBJTENfdHJhbnNmW0lMQ190cmFuc2YkSExBLkRSIDwgMiwgXQoKY293cGxvdDo6cGxvdF9ncmlkKAogIElMQ190cmFuc2YgJT4lCiAgZ2dwbG90KGFlcyh4ID0gSExBLkRSKSkrCiAgZ2VvbV9kZW5zaXR5KGxpbmV3aWR0aCA9IDAuNywgY29sb3VyID0gInJlZCIsIGZpbGwgPSAicmVkIiwgYWxwaGEgPSAwLjMsc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgeWxhYigiRGVuc2l0eSIpLAptYW51YWwgJT4lCiAgZ2dwbG90KGFlcyh4ID0gSExBLkRSKSkrCiAgZ2VvbV9kZW5zaXR5KGxpbmV3aWR0aCA9IDAuNywgY29sb3VyID0gInJlZCIsIGZpbGwgPSAicmVkIiwgYWxwaGEgPSAwLjMsc2hvdy5sZWdlbmQgPSBGQUxTRSkrCiAgeWxhYigiRGVuc2l0eSIpLAoKICMgbnVtYmVyIG9mIGNvbHVtbiBlcXVhbHMgMS4KIG5jb2wgPSAxCikKCmBgYAo=</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
