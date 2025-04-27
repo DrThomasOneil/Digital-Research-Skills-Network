@@ -11,14 +11,14 @@ knitr::opts_chunk$set(echo = TRUE, message = F, warning=FALSE, error=F)
 
 ## Flow Cytometry in R: A Hands-On Introduction
 
-This beginner-friendly, hands-on workshop will guide users through a complete flow cytometry analysis workflow in R, from loading data to visualizing results. Through practical exercises, we’ll cover essential steps like generating histograms and scatterplots, extracting summary statistics, subsetting data, and performing dimension reduction and clustering—all while demonstrating the advantages of reproducible reports with RMarkdown. 
+This beginner-friendly, hands-on workshop will guide users through a complete flow cytometry analysis workflow in R, from loading data to visualizing results. Through practical exercises, we’ll cover essential steps like generating histograms and scatterplots, extracting summary statistics, subsetting data, and performing dimension reduction and clustering—all while demonstrating the advantages of reproducible reports with RMarkdown.
 
 Whether you're new to R or just curious about coding your analyses, this session will show you how accessible and powerful R can be for flow cytometry.
 
 **Your Demonstrators:**
 
-- Thomas O'Neil   
-- Yuchen Li (Online)
+-   Thomas O'Neil\
+-   Yuchen Li (Online)
 
 **Author**: Yuchen Li, Thomas O'Neil
 
@@ -28,25 +28,33 @@ Whether you're new to R or just curious about coding your analyses, this session
 
 In this workshop, we aim to give an overview of what is possible for flow analysis in R. We will touch on two workflows:
 
-- data visualisation and data collection
+-   data visualisation and data collection
 
-- dimension reduction and clustering
+-   dimension reduction and clustering
 
-We'll use a 25-colour flow cytometry dataset of innate lymphoid cells (ILC), natural killer cells (NK), and innate-like T cells in human intestinal tissues, after excluding dead cells, doublets, mast cells and basophils, hematopoietic stem cells, myeloid cells and granulocytes, and B cells. 
+We'll use a 25-colour flow cytometry dataset of innate lymphoid cells (ILC), natural killer cells (NK), and innate-like T cells in human intestinal tissues, after excluding dead cells, doublets, mast cells and basophils, hematopoietic stem cells, myeloid cells and granulocytes, and B cells.
 
-The original data was published as is available in [OMIP-082](https://pubmed.ncbi.nlm.nih.gov/35018731/) 
+The original data was published as is available in [OMIP-082](https://pubmed.ncbi.nlm.nih.gov/35018731/)
 
-Before going further: 
+<details>
 
-- Dont forget to provide any feedback by emailing us at `drsn@wimr.org.au` or filling out the [feedback form](https://forms.office.com/r/DXdTAQXJSU)
+<summary>**Before going further**:</summary>
 
-- Vote on the next workshop! 
+-   Dont forget to provide any feedback by emailing us at `drsn@wimr.org.au` or filling out the [feedback form](https://forms.office.com/r/DXdTAQXJSU)
 
-<iframe width="640px" height="200px" src="https://forms.office.com/r/TtLWFWysiC?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+-   Vote on the next workshop!
 
-# Setup{.tabset .tabset-fade}
+<iframe width="640px" height="200px" src="https://forms.office.com/r/TtLWFWysiC?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
 
-We'll take you through steps from the beginning, installing packages and loading data. 
+</iframe>
+
+</details>
+
+<wimr>
+
+# Setup {.tabset .tabset-fade}
+
+We'll take you through steps from the beginning, installing packages and loading data.
 
 ## Preparation: packages and directories
 
@@ -93,16 +101,19 @@ download.file("https://raw.githubusercontent.com/DrThomasOneil/Digital-Research-
 # Add `method = "curl"` in the download.file() if you are a Windows user and this line didn't work for you.
 ```
 
-<details><summary>Setting seed is crucial for reproducibility:</summary>
+<details>
+
+<summary>Setting seed is crucial for reproducibility:</summary>
 
 It's a number of your choice, which pins down the "way" that how the random process will be performed when you re-run these codes. (Easier example: Say if you randomly take 10 numbers with a mean of 50, there will be tonnes of ways to generate the numbers. But a seed ensures that the report always returns the same set of numbers. It's the similar idea when you run other algorithms including randomness, e.g. clustering and generating a UMAP).
 
 ```{r}
 set.seed(1337)
 ```
+
 </details>
 
---- 
+<wimr>
 
 ## Load flow cytometry data
 
@@ -113,7 +124,7 @@ The expression data is stored in a `.csv` file. We'll first load this in.
 ILC <- read.csv("data/example_flowdata_omip082_20k.csv")
 ```
 
-Have a look at the broad features of this dataset. In this dataset, the channel names are stored as column names. Each row represents a cell, storing expression values in each channel. 
+Have a look at the broad features of this dataset. In this dataset, the channel names are stored as column names. Each row represents a cell, storing expression values in each channel.
 
 ```{r, eval=F}
 # Dimension: number of cells x number of channels.
@@ -156,9 +167,9 @@ colnames(ILC)[colnames(ILC) == "CD14"] <- "CD14.CD19"
 colnames(ILC)
 ```
 
----
+<wimr>
 
-## Time gate QC. 
+## Time gate QC.
 
 The data is already preprocessed in FlowJo. But if you are interested, you can view the Time gate, and filter the data based on this in R.
 
@@ -175,9 +186,9 @@ ggplot(ILC, aes(x = Time, y = FSC.A))+
     scale_fill_gradientn(colours = c("blue", "green", "yellow", "red"))
 ```
 
----
+<wimr>
 
-# Visualisations{.tabset .tabset-fade}
+# Visualisations {.tabset .tabset-fade}
 
 ## Transformations
 
@@ -188,9 +199,9 @@ ILC %>% ggplot(aes(x=CD4, y=CD3))+
   geom_point()
 ```
 
-So we transform the data to make it look better. In FlowJo, when you adjust the axes, you can see several transformations available. One is arcsinh (the inverse of hyperbolic sin, if you want to get mathy). Smaller values centre around zero, and larger values separate, giving the appearance that we're familiar with. 
+So we transform the data to make it look better. In FlowJo, when you adjust the axes, you can see several transformations available. One is arcsinh (the inverse of hyperbolic sin, if you want to get mathy). Smaller values centre around zero, and larger values separate, giving the appearance that we're familiar with.
 
-We are also able to adjust the level of transformation by dividing the values by some cofactor. 
+We are also able to adjust the level of transformation by dividing the values by some cofactor.
 
 ```{r, fig.height=10, fig.width=10}
 # decide on a cofactor - try changing it and seeing how the data changes
@@ -231,7 +242,7 @@ cowplot::plot_grid(plotlist = plots)
 rm(plots)
 ```
 
-This code demonstrates how you would manually transform individual columns in the dataset using different cofactors for each marker. It creates a new dataset (`ILC_transf_indiv`) where specific columns are transformed using the `asinh` function with their respective cofactors. This allows for more granular control over transformations. 
+This code demonstrates how you would manually transform individual columns in the dataset using different cofactors for each marker. It creates a new dataset (`ILC_transf_indiv`) where specific columns are transformed using the `asinh` function with their respective cofactors. This allows for more granular control over transformations.
 
 ```{r, eval=F}
 ILC_transf_indiv <- ILC
@@ -246,6 +257,8 @@ ILC_transf_indiv %>% ggplot(aes(x=CD3, y=CD4))+
 
 rm(ILC_transf_indiv)
 ```
+
+<wimr>
 
 ## Histograms
 
@@ -294,7 +307,8 @@ for (i in 1:ncol(ILC_transf)){
 plot_grid(plotlist = plots[1:25])
 rm(plots)
 ```
-<br>
+
+<wimr>
 
 ## Scatter plot
 
@@ -311,6 +325,8 @@ ILC_transf %>% ggplot(aes(x=CD4, y=CD3))+
   scale_fill_gradientn(colors = c("blue",  "yellow", "red"))
 
 ```
+
+<wimr>
 
 ## Contour plot
 
@@ -344,13 +360,14 @@ ILC_transf %>%
 
 ```
 
----
+<wimr>
 
-# Subsetting data and summary statistics{.tabset .tabset-fade}
+# Subsetting data and summary statistics {.tabset .tabset-fade}
 
-While not as efficient as FlowJo, we can subset data after exporting. We wouldn't normally do this in R, but we'll show you how you could subset in R and for the purposes of visualisation. 
+While not as efficient as FlowJo, we can subset data after exporting. We wouldn't normally do this in R, but we'll show you how you could subset in R and for the purposes of visualisation.
 
 ## Subsetting
+
 ```{r}
 # Plot a 2-marker plot of CD3 and CD4 expression values. 
 ILC_transf %>%
@@ -383,7 +400,10 @@ ILC_transf <- ILC_transf %>%
   ))
 ```
 
+<wimr>
+
 ### Visualise the subsets in dot plots
+
 ```{r}
 ILC_transf %>%
   ggplot(aes(x = CD3, y = CD4, color=subset))+        
@@ -411,6 +431,8 @@ ILC_transf %>%
   facet_wrap(~subset)
 ```
 
+<wimr>
+
 ### Histograms
 
 ```{r, warning=FALSE}
@@ -431,11 +453,11 @@ ILC_transf %>%
 
 You could mass print these using a loop, as we did for the density plots above. You can also adjust the marker you output, as not all markers or combinations of markers are useful.
 
----
+<wimr>
 
 ## Summary statistics
 
-While subsetting is not as efficient as FlowJo, summarising data is! 
+While subsetting is not as efficient as FlowJo, summarising data is!
 
 We can first collect subset percentages and output them in a table, in text, and even in a plot. Then we can calculate summary statistics like MFI & gMFI.
 
@@ -463,20 +485,21 @@ ILC_transf %>%
 
 We can also calculate the percentage of subsets in line, meaning we don't have to change these lines of text based on different results or different data:
 
-- CD3+CD4+: `r round(sum(ILC_transf$subset == "CD3+CD4+")/nrow(ILC_transf)*100,2)`%
+-   CD3+CD4+: `r round(sum(ILC_transf$subset == "CD3+CD4+")/nrow(ILC_transf)*100,2)`%
 
-- CD3+CD4-: `r round(sum(ILC_transf$subset == "CD3+CD4-")/nrow(ILC_transf)*100,2)`%
+-   CD3+CD4-: `r round(sum(ILC_transf$subset == "CD3+CD4-")/nrow(ILC_transf)*100,2)`%
 
-- CD3-CD4+: `r round(sum(ILC_transf$subset == "CD3-CD4+")/nrow(ILC_transf)*100,2)`%
+-   CD3-CD4+: `r round(sum(ILC_transf$subset == "CD3-CD4+")/nrow(ILC_transf)*100,2)`%
 
-- CD3-CD4-: `r round(sum(ILC_transf$subset == "CD3-CD4-")/nrow(ILC_transf)*100,2)`%
+-   CD3-CD4-: `r round(sum(ILC_transf$subset == "CD3-CD4-")/nrow(ILC_transf)*100,2)`%
 
 <details>
-<summary>**You can also quickly calculate summary statistics like MFI, gMFI, medianFI**:</summary>
-<br>
-**Arithmatic MFI**  
 
-```{r}
+<summary>**You can also quickly calculate summary statistics like MFI, gMFI, medianFI**:</summary>
+
+<br> **Arithmatic MFI**
+
+```{r collapse=T}
 ILC$subset  <- ILC_transf$subset # Add the subset column to the original data.
 
 ILC %>% 
@@ -487,19 +510,19 @@ ILC %>%
 
 **Median FI**
 
-```{r}
+```{r collapse=T}
 ILC %>% 
   group_by(subset) %>% 
-  summarise(across(7:31, mean, .names = "MFI_{col}"))
+  summarise(across(7:31, median, .names = "MFI_{col}"))
 ```
 
 **Geometric MFI**
 
-The traditional formula written out would be like `ILC_transf %>% prod(CD56)^(1/nrow(CD56))`. However, as our data is *compensated*, there are meaningful negative values and 0s that we don't want to get rid of, which if you run on this data removes two subsets entirely. FlowJo calculates the *graph spaces* as gMFI to enable it to deal with negatives and 0s. Here in this case, it may be better to stick with the arithmatic mean instead of forcing the geometric mean.
+The traditional formula written out would be like `ILC_transf %>% prod(CD56)^(1/nrow(CD56))`. However, as our data is *compensated*, there are meaningful negative values and 0s that we don't want to get rid of, which if you run on this data removes two subsets entirely. FlowJo calculates the *graph spaces* as gMFI to enable it to deal with negatives and 0s. Here in this case, it may be better to stick with the arithmetic mean instead of forcing the geometric mean.
 
 </details>
 
----
+<wimr>
 
 # nxn plots
 
@@ -530,23 +553,23 @@ ggsave("plots/nxn.png",p, width=25, height=25,unit="in")
 rm(p,custom_bin_plot, marker_cols)
 ```
 
----
+<wimr>
 
 # Dimension reduction and clustering
 
-There are several ways to perform clustering (e.g. FlowSOM, FuseSOM) and dimension reduction (e.g. PCA, UMAP, tSNE). 
+There are several ways to perform clustering (e.g. FlowSOM, FuseSOM) and dimension reduction (e.g. PCA, UMAP, tSNE).
 
-In this section, we'll cover **clustering** and **dimension reduction** on our one sample. 
+In this section, we'll cover **clustering** and **dimension reduction** on our one sample.
 
-## Clustering{.tabset .tabset-fade}
+## Clustering {.tabset .tabset-fade}
 
-Clustering groups our cells based on the input expressions we choose. 
+Clustering groups our cells based on the input expressions we choose.
 
 ### FlowSOM
+
 [Read more](https://bioconductor.org/packages/release/bioc/html/FlowSOM.html)
 
 ```{r, message = FALSE}
-
 # Perform clustering
 clusters <- FlowSOM::FlowSOM(
   input=as.matrix(ILC_transf[,1:32]),
@@ -556,7 +579,7 @@ clusters <- FlowSOM::FlowSOM(
 
 # Annotate the cluster that the cell belongs to
 ILC_transf$flowSOM<- GetMetaclusters(clusters)
-FlowSOM::GetMetaclusterMFIs(clusters)
+#FlowSOM::GetMetaclusterMFIs(clusters)
 
 # Plot CD4 expression values on clusters
 ILC_transf %>%
@@ -567,30 +590,36 @@ ILC_transf %>%
   labs(y="", x="", title = "CD56")
 ```
 
+<wimr>
+
 ### FuseSOM
+
 [Read more](https://bioconductor.org/packages/devel/bioc/vignettes/FuseSOM/inst/doc/Introduction.html)
 
 ```{r, message = FALSE}
 
 risomMarkers <- colnames(ILC_transf)[c(1,4,6:14,16:25)]
-clusters <- runFuseSOM(data = as.matrix(ILC_transf[,1:32]), markers = risomMarkers, 
-                        numClusters = 15)
+clusters <- runFuseSOM(data = as.matrix(ILC_transf[,1:32]), 
+                       markers = risomMarkers, 
+                       numClusters = 15)
 
 ILC_transf$fuseSOM<- as.numeric(unlist(lapply(str_split(clusters$clusters, "_"), function(x) x[[2]])))
 
 ILC_transf %>%
-  ggplot(aes(x = CD39, y = as.factor(fuseSOM), fill=as.factor(fuseSOM))) +
+  ggplot(aes(x = CD56, y = as.factor(fuseSOM), fill=as.factor(fuseSOM))) +
   geom_density_ridges(scale = 1.2, alpha = 0.6, colour = "black") +
   theme_ridges() +
   theme(legend.position = "none")+
-  labs(y="", x="", title = "CD39")
+  labs(y="", x="", title = "CD56")
 ```
 
-## Dimension Reduction{.tabset .tabset-fade}
+<wimr>
 
-We'll generate a PCA, a tSNE and a UMAP. I'll then run through all of this in the Spectre packge. 
+## Dimension Reduction {.tabset .tabset-fade}
 
-```{r message=F, warning=F, eval=F}
+We'll generate a PCA, a tSNE and a UMAP. I'll then run through all of this in the Spectre packge.
+
+```{r message=F, warning=F, eval=T}
 
 pca <- prcomp(as.matrix(ILC_transf[,c(1,4,6:14,16:25)]), center = TRUE)
 
@@ -612,14 +641,20 @@ ILC_transf <- ILC_transf %>%
 
 rm(pca,umap,tsne)
 ```
+
 ```{r, eval=F}
 saveRDS(ILC_transf,"data/clustered_data.rds")
 ```
 
+<wimr>
+
 ### Visualisations
 
-```{r}
+```{r eval=F}
 ILC_transf <- readRDS("data/clustered_data.rds")
+```
+
+```{r}
 ggplot(ILC_transf, aes(PC1,PC2, color= as.factor(flowSOM))) +
   geom_point()
 
@@ -627,21 +662,21 @@ ggplot(ILC_transf, aes(tSNE1,tSNE2, color= as.factor(flowSOM))) +
   geom_point()
 
 ggplot(ILC_transf, aes(UMAP1,UMAP2, color= as.factor(flowSOM))) +
-  geom_point()+xlim(-7,10)
+  geom_point()
 
 # Colour overlayed by the expression of one marker.
-ggplot(ILC_transf, aes(UMAP1,UMAP2, color= CD3)) +
+ggplot(ILC_transf, aes(tSNE1,tSNE2, color= CD3)) +
   geom_point() + 
-  scale_color_viridis_c()+xlim(-7,10)
-
-ggplot(ILC_transf, aes(UMAP1,UMAP2, color= CD16)) +
+  scale_color_viridis_c()
+ggplot(ILC_transf, aes(tSNE1,tSNE2, color= CD4)) +
   geom_point() + 
-  scale_color_viridis_c()+xlim(-7,10)
-
+  scale_color_viridis_c()
+ggplot(ILC_transf, aes(tSNE1,tSNE2, color= CD16)) +
+  geom_point() + 
+  scale_color_viridis_c()
 ```
-<br>
 
----
+<wimr>
 
 ### Spectre
 
@@ -655,6 +690,7 @@ make.colour.plot(ILC_transf,
                  add.label = TRUE,
                  blank.axis = T,
                  path = "plots")
+
 make.colour.plot(ILC_transf, 
                  "tSNE1", "tSNE2", "flowSOM", 
                  col.type = 'factor', 
@@ -663,7 +699,9 @@ make.colour.plot(ILC_transf,
                  path = "plots")
 ```
 
-<details><summary>**Multi-plots:**</summary>
+<details>
+
+<summary>**Multi-plots:**</summary>
 
 ```{r, message = F, warning=FALSE}
 make.multi.plot(ILC_transf, 
@@ -676,24 +714,22 @@ make.multi.plot(ILC_transf,
 
 </details>
 
-And we can make the heatmap you're used to seeing and save them.  
+And we can make the heatmap you're used to seeing and save them.
 
 ```{r, message = F, warning=FALSE, error=F}
 exp <- do.aggregate(as.data.table(ILC_transf), use.cols = risomMarkers, by = c("flowSOM"))
 make.pheatmap(exp, file.name = "plots/Pheatmap_FlowSOM.png", sample.col="flowSOM", plot.cols=risomMarkers)
 ```
 
-
-*Spectre has also embedded FlowSOM clustering and dimension reduction tools such as umap in easy codes, such as:<br>*
+*Spectre has also embedded FlowSOM clustering and dimension reduction tools such as umap in easy codes, such as:*<br>
 
 -   `do.subsample()`
 -   `run.flowsom()`
--   `run.umap()`
-<br>
+-   `run.umap()` <br>
 
----
+<wimr>
 
-# Additional Considerations: QC{.tabset .tabset-fade}
+# Additional Considerations: QC {.tabset .tabset-fade}
 
 When looking at the raw data, or in the middle of data processing, you may consider filtering some cell. In the 1-marker plots below, you can see that there are a few extreme values that are displayed and pushing the majority of values squeezed together. e.g. HLA-DR:
 
@@ -712,6 +748,7 @@ ILC_transf %>%
 ```
 
 <details>
+
 <summary>View them for all channels.</summary>
 
 ```{r, message=F}
@@ -743,22 +780,32 @@ for (i in 1:25){
 library(ggpubr)
 ggpubr::ggarrange(plotlist = plots_line, ncol = 2, nrow = 4)
 ```
+
 </details>
 
 <br>
+
 To look at this in a more statistical way, you can create a quick data summary of the minimum, maximum, mean, median and the interquartile range.
+
+<details>
+
+<summary>**Expand**</summary>
 
 ```{r}
 summary(ILC_transf)
 ```
 
-<br>
+</details>
 
 Either being artificial or biological, these might interfere how the computer interprets your data in the downstream clustering and dimension reduction. Sometimes you may decide to investigate how these impact your dataset and where they arise from. But if there are plenty of cells, and the % outliers is super small, you might just want to filter them out.<br>
 
 ## Filtering by %
 
 You might want to filter out the top and bottom 0.1% of cells . Note that this approach removes the cells that doesn't fit within the top and bottom 0.1% of ANY channel, and removes the cell from the entire dataset. So be cautious about the % so you aren't removing too many cells when they are added up ( we'll use 0.1% all the way for demonstration purposes). <br>
+
+<details>
+
+<summary>**Expand**</summary>
 
 ```{r}
 # Create an empty list.
@@ -790,7 +837,6 @@ subset <- ILC_transf[rowSums(outlier_flag)==0,]
     paste0("Cell loss: ",format((1-nrow(subset)/nrow(ILC_transf))*100, digits = 3), "%")
 ```
 
-
 ```{r}
 
 # View the pre- and post-filtered data side by side, putting them in a grid.
@@ -811,9 +857,17 @@ subset %>%
 
 ```
 
+</details>
+
+<wimr>
+
 ## Filtering by fixed thresholds
 
 You might want to filter out the data that is outside of certain values per channel. A commonly used standard in data cleaning is calculated based on interquartile ranges (IQR). The thresholds are any data points that are 1.5 times of IQR above the 3rd quartile, or 1.5 times of IQR below the 1st quartile. This will keep the majority of data points, however, it might also remove some true variance in the dataset at extreme ends.<br>
+
+<details>
+
+<summary>**Expand**</summary>
 
 ```{r}
 
@@ -871,3 +925,11 @@ manual %>%
 )
 
 ```
+
+</details>
+
+# Vote on the next workshop!
+
+<iframe width="640px" height="200px" src="https://forms.office.com/r/TtLWFWysiC?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+
+</iframe>
