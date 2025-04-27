@@ -31,7 +31,7 @@ We’ll hold a discussion on key analytic considerations and available R package
 
 The final hands-on session will introduce participants to performing flow cytometry analysis in R, providing a practical workflow for data visualization, summarization, and reproducibility. 
 
-**Demonstrators**: Thomas O’Neil, Nicole Fewings
+**Demonstrators**: Thomas O’Neil
 
 <wimr>
 
