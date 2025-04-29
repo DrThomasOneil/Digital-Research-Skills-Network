@@ -5,8 +5,70 @@ output:
     toc: no
 --- 
 
-# Schedule
+<div style = "text-align: center">
 
-<read-time>Coming Soon</read-time>
+# <strong>*Upcoming Events*</strong>
 
- 
+</div>
+
+<hr>
+
+<!---May<--->
+<div>
+<details style="text-align: left">
+<summary><span style="font-size:2em">**May:** Spatial Transcriptomics</span></summary>
+
+<div style = "text-align: center">
+
+<span style="font-size:2em">*PrecisionGo Presents...*</span>
+
+#### [**Getting started with Spatial Transcriptomics at WIMR**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202505.html)
+
+DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore the options at WIMR for Spatial Transcriptomics, and the key considerations when analyzing Visum and Xenium data. Join us for the informative **Seminar** session for how you can get started and what to expect from Spatial Transcriptomics. Stick around for the **In-focus discussion** where we'll be joined by *Geoffrey McDermott* (**10X Genomics**) to discuss Xenium and Visium data preparations (e.g. panel design, cell segmentation) and data analysis. Lastly, join *Thomas O'Neil* at the **Analysis Workshop** to learn how you can download public Visium data, processs it and start creating visualisations yourself, immediately elevating your thesis, manuscript or grant application. 
+
+</div>
+
+</details>
+</div>
+
+<hr style='width:50%'>
+
+<!---June<--->
+
+<details style="text-align: left"><summary><span style="font-size:2em">**June**: Spatial Proteomics</span></summary>
+
+<div style = "text-align: center">
+
+#### [**Getting started with Spatial Proteomics Analysis at WIMR**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202506.html)
+
+<read-time>Details coming soon!</read-time>
+
+</div>
+
+</details>
+
+<hr style='width:50%'>
+
+<!---July<--->
+
+<details style="text-align: left"><summary><span style="font-size:2em">**July:** <i>TBD</i></span></summary>
+
+<div style = "text-align: center">
+
+#### [](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
+
+<read-time>Details coming soon!</read-time>
+
+</div>
+</details>
+
+<hr style='width:50%'>
+
+<div style = "text-align: center">
+
+# <strong>*Vote on upcoming content*</strong>
+
+<iframe width="100%" height="480px" src="https://forms.office.com/r/TtLWFWysiC?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+
+</div>

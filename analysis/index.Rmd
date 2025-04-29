@@ -24,70 +24,32 @@ To do:
 </div> 
 <br>
  
-## Welcome
+<div style = "text-align: center">
 
-Welcome to the Workshop site for the Digital Research Skills Network! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
+## Welcome!
 
-Here, you'll find:
-
-- Workshop schedules and announcements.
-- Step-by-step instructions for workshop activities.
-- Additional resources that might be of interest. 
+Welcome to the Workshop site for the **Digital Research Skills Network**! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
  
 Workshop material will aim to use publicly available data or mock created data. Therefore, you will not need to rely on uploaded data from the demonstrators/creators. Instead, a pre-workshop set-ups will include instructions for where to download and prep relevant data. 
 
-<hint-text style="text-size:1.2em">*Bookmark this site for quick access to scripts and updates as workshops progress.*</hint-text>
+<hint-text style="text-size:1.2em; color:black"><i>**Bookmark this site for quick access to scripts and updates as workshops progress.**</i></hint-text>
 
-<wimr> 
+<span style="display:inline-block; width:80%;"><wimr></span>
 
-## Using this site
+#### <u>*Upcoming Events*</u>
 
-This site is organised into several sections to help you quickly find what you need:
+<span style="font-size:2em">*PrecisionGo Presents...*</span>
 
-- [**Getting Started in R:**](https://drthomasoneil.github.io/Digital-Research-Skills-Networkp/0_start.html) A beginner-friendly guide to help you set up R and RStudio, along with key concepts and tips for coding.
-- [**Announcements:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_announcements.html) Updates on upcoming workshops, deadlines, and important notices.
-- <strike>[**Workshops:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_workshops.html) Detailed instructions, scripts, and examples for each workshop session.</strike>
-- [**Extra Resources:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_resources.html) Links to helpful tutorials, data sets, and cheat sheets. 
-- [**Contacts:**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html) Acknowledge who contributed to these workshops! :) 
+## [**Getting started with Spatial Transcriptomics at WIMR**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202505.html)
+
+DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore the options at WIMR for Spatial Transcriptomics, and the key considerations when analyzing Visum and Xenium data. Join us for the informative **Seminar** session for how you can get started and what to expect from Spatial Transcriptomics. Stick around for the **In-focus discussion** where we'll be joined by *Geoffrey McDermott* (**10X Genomics**) to discuss Xenium and Visium data preparations (e.g. panel design, cell segmentation) and data analysis. Lastly, join *Thomas O'Neil* at the **Analysis Workshop** to learn how you can download public Visium data, processs it and start creating visualisations yourself, immediately elevating your thesis, manuscript or grant application. 
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
 
 We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html).
 
-You'll also see graphics like this throughout that emphasis 
-
-<div class="hint-info">
-**Important information**
 </div>
-<div class="hint-success">
-**Success**
-</div>
-<div class="hint-warning">
-**Warnings**
-</div>
-<div class="hint-danger">
-**Dangers**
-</div>
-<div class="hint-goals">
-**Goals to achieve in a session or workshop**
-</div>
-<div class="hint-practice">
-**Practice before moving on**
-</div>
-<div class="hint-terminology">
-**Important Terminology**
-</div>
-
-<wimr>
-
-## Special Thanks
-
-There are a lot of extra people to thank for contributing, motivating and helping build this digital community and repository:
-
-- Oscar Dong
-- Yuchen Li
-- Elizabeth Dunn
-- Erin Coll
-- Heeva Baharlou
-- Farhan Ameen 🌟
 
 This site was made with **WorkflowR** by [Blischak JD, et al.  2019](https://doi.org/10.12688/f1000research.20843.1)
 

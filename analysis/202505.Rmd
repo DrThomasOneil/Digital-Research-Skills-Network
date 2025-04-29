@@ -4,40 +4,40 @@ output:
   workflowr::wflow_html:
     toc: no
 ---
+<div style = "text-align: center">
 
-## **Spatial Transcriptomics**: What's available and what's the way
+<span style="font-size:2em">*PrecisionGo Presents...*</span>
 
-DRSN will be collaborating with PrecisionGo and 10X Genomics to explore the options in WIMR to perform spatial transcriptomics, and the key considerations when analyzing the data from common modalities such as Visum and Xenium. It'll be a taste of how you can use spatial transcriptomic data to answer your own research questions, and how to tackle the analytical challenges.
+## **Getting started with Spatial Transcriptomics at WIMR**
 
-<wimr>  
+DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore the options at WIMR for Spatial Transcriptomics, and the key considerations when analyzing Visum and Xenium data. Join us for the informative **Seminar** session for how you can get started and what to expect from Spatial Transcriptomics. Stick around for the **In-focus discussion** where we'll be joined by *Geoffrey McDermott* (**10X Genomics**) to discuss Xenium and Visium data preparations (e.g. panel design, cell segmentation) and data analysis. Lastly, join *Thomas O'Neil* at the **Analysis Workshop** to learn how you can download public Visium data, processs it and start creating visualisations yourself, immediately elevating your thesis, manuscript or grant application. 
+
+<span style="display:inline-block; width:80%;"><wimr></span>
 
 #### **Monday 5th May** (WIMR Seminar Room & Zoom)
 
-##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202505_Seminar.html)
-
-Discuss the power of spatial transcriptomic technoogy available at WIMR. Then we'll hear from the researcher who adopts the method to study Chron's disease.
-
+##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202505_Seminar.html) 
 **Speakers**: Joey Lai, Li Ma, Kirstie Bertram    
-(lunch from 12pm)
+<read-time>*(lunch from 12pm)*</read-time>
 
 ##### [In-focus Workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202505_InFocus.html)
+**Speakers**: Geoffrey McDermott (10X Genomics)
 
-With the help of 10X Genomics we will discuss the key analytical considerations of Visum and Xenium data analysis.
-
-**Speakers**: 10X Genomics
+<span style="display:inline-block; width:80%;"><hr></span>
 
 #### **Monday 19th May** (WIMR Seminar Room & Zoom)
 
 ##### [Programming workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202505_Workshop.html)
 
-We will demonstrate the process of finding public Visium data, exploring the structure of the data, and generating quick and easy figures that can instantly elevate your paper and grant.
+**Demonstrators**: Thomas O'Neil    
+<read-time>*(lunch from 12pm)*</read-time>
 
+<span style="display:inline-block; width:80%;"><wimr></span>
 
-**Demonstrators**: Thomas O'Neil
+## **Sign up for these events:**    
 
-<wimr>
-
-## Sign up for these events:    
-
+<hr>
 
 <iframe width="900px" height="900px" src="https://forms.office.com/r/KPrgfidGfJ?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+</div>

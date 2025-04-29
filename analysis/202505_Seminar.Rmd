@@ -12,7 +12,7 @@ output:
 
 <read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
 
-<read-time>[Zoom Link]()</read-time>
+<read-time>[Zoom Link](https://uni-sydney.zoom.us/j/88508688184)</read-time>
 
 <span style="color:#dd571c;"><font size="3">**Lunch Provided**</font></span>
 

@@ -24,5 +24,10 @@ output:
 
 <font size="2">**Speakers**: Suat Dervish, Nicole Fewings</font>
    
-<br>
+<hr>
 
+<div style="text-align: center">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cd21LuWmQj4?si=_h_OShvsa5vLOtTG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>

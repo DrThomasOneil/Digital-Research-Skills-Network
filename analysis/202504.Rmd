@@ -33,9 +33,12 @@ The final hands-on session will introduce participants to performing flow cytome
 
 **Demonstrators**: Thomas O’Neil
 
-<wimr>
+<hr>
 
-## Sign up for these events:    
+<div style="text-align: center">
 
+#### Recordings
 
-<iframe width="900px" height="900px" src="https://forms.office.com/r/FKdfCd1iW1?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+[Seminar](https://youtu.be/Cd21LuWmQj4) | [Discussion](https://youtu.be/TOVgBF-mVBY) | [Workshop](https://youtu.be/5ebo-upNBhQ) 
+
+</div>

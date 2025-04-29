@@ -20,7 +20,7 @@ output:
 To provide feedback, fill out this [**feedback survey**](https://forms.office.com/r/DXdTAQXJSU) or contact the [**Communications Coordinators** `r "\U2709\UFE0F"`](mailto:nicole.fewings@sydney.edu.au;elizabeth.dunn@sydney.edu.au?cc=thomas.oneil@sydney.edu.au;harry.robertson@sydney.edu.au&subject=Feedback%20Email&body=Dear%20Communications%20Coordinators%2C%0A%0A*feel%20free%20to%20use%20prepopulated%20forms%20below*%0A%0A===template===%0A%0AI%20am%20writing%20this%20email%20to%20suggest%20a%20Speaker%0A%0A===template===%0A%0AI%20am%20writing%20this%20email%20to%20provide%20%5Bpositive/negative%5D%20feedback%20about%20the%20%5Bmonth/theme%5D%20%5Bseminar/workshop/in-focus/event%5D%0A...%0A%0A===%0A%0AI%20am%20writing%20this%20email%20to%20provide%20the%20following%20feedback%20about%20%5Bmonth/theme%5D%20%5Bseminar/workshop/in-focus/event%5D%3A%0A-%0A%0A===%0A%0AKind%20regards%2C) directly.<br>You may also suggest **Invited Speakers**, and **Request Content** or **Events** via [**this form**](https://forms.office.com/r/TtLWFWysiC)
 
 #### **Join the Committee**    
-[**Contact Us** `r "\U2709\UFE0F"`](mailto:harry.robertson@sydney.edu.au?cc=thomas.oneil@sydney.edu.au;nicole.fewings@sydney.edu.au;elizabeth.dunn@sydney.edu.au&subject=Committee%20Membership%20Inquiry&body=Dear%20Secretary%2C%0A%0A*feel%20free%20to%20use%20prepopulated%20forms%20below*%0A%0A===%0A%0AI%20am%20writing%20to%20inquire%20about%20a%20position%20on%20the%20Committee.%20What%20positions%20are%20available%20and%20what%20are%20their%20responsibilities%3F%0A%0A===%0A%0AI%20am%20writing%20to%20inquire%20about%20the%20%5Bposition%5D%20on%20the%20Committee.%20Could%20you%20provide%20information%20on%20the%20roles%20and%20responsibilities%20of%20the%20position%2C%20or%20could%20we%20schedule%20a%20time%20to%20meet%20and%20discuss%20the%20potential%20for%20me%20to%20join%20the%20team%3F%0A%0A===%0A%0AI%20am%20writing%20to%20nominate%20%5Bmyself/another%20person%5D%20for%20%5Ba%20position%5D%20on%20the%20committee.%0A%0A===%0A%0AKind%20regards%2C) to hear of current or upcoming availability on the Committee
+[**Contact Us** `r "\U2709\UFE0F"`](mailto:harry.robertson@sydney.edu.au?cc=thomas.oneil@sydney.edu.au;nicole.fewings@sydney.edu.au;elizabeth.dunn@sydney.edu.au&subject=Committee%20Membership%20Inquiry&body=Dear%20Secretary%2C%0A%0A*feel%20free%20to%20use%20prepopulated%20forms%20below*%0A%0A===%0A%0AI%20am%20writing%20to%20inquire%20about%20a%20position%20on%20the%20Committee.%20What%20positions%20are%20available%20and%20what%20are%20their%20responsibilities%3F%0A%0A===%0A%0AI%20am%20writing%20to%20inquire%20about%20the%20%5Bposition%5D%20on%20the%20Committee.%20Could%20you%20provide%20information%20on%20the%20roles%20and%20responsibilities%20of%20the%20position%2C%20or%20could%20we%20schedule%20a%20time%20to%20meet%20and%20discuss%20the%20potential%20for%20me%20to%20join%20the%20team%3F%0A%0A===%0A%0AI%20am%20writing%20to%20nominate%20%5Bmyself/another%20person%5D%20for%20%5Ba%20position%5D%20on%20the%20committee.%0A%0A===%0A%0AKind%20regards%2C) to find out about current or upcoming availability on the Committee. 
 
 #### **Volunteer**   
 [**Contact Us** `r "\U2709\UFE0F"`](mailto:nicole.fewings@sydney.edu.au;elizabeth.dunn@sydney.edu.au;yuchen.li@sydney.edu.au;sifan.zhang@sydney.edu.au?cc=thomas.oneil@sydney.edu.au&subject=Volunteering%20Inquiry&body=Dear%20Committee%20Members%2C%0A%0A*feel%20free%20to%20use%20prepopulated%20forms%20below*%0A%0A===%0A%0AI%27m%20inquiring%20about%20the%20opportunity%20to%20volunteer%20for%20the%20Network.%20I%20am%20able%20to%3A%0A-%20%5BHelp%20write%20new%20content%5D%0A-%20%5BHelp%20review%20content%5D%0A-%20%5BHelp%20during%20workshops%5D%0A-%20%5BAssist%20in%20other%20ways%5D%0A%0A===%0A%0AKind%20regards%2C) to find out how you could contribute to the Committee via roles such as  
@@ -29,92 +29,10 @@ writing or reviewing content, or assisting in the running of an event.
 <br>
 
 
-
-<span style="display:inline-block; width:80%;"><wimr></span>
-
-# *Digital Research Skills Network<br>Committee Members*<br>
-
-<br>
-
-```{r contacts-table, results='asis', echo=FALSE, message=F,warning=F,error=F}
-library(dplyr)
-library(readr)
-
-# Read CSV
-contacts <- suppressMessages(read_csv("docs/adit/contacts.csv"))
-
-n_cols <- 3
-n_rows <- ceiling(nrow(contacts) / n_cols)  # Enough rows for everyone
-
-# This function builds the HTML for one "card"
-make_cell <- function(idx, role, image_url, name, position, bio) {
-  # We'll use a unique ID for the collapsible div (e.g. "collapse1", "collapse2", etc.)
-  collapse_id <- paste0("collapse", idx)
-  
-  paste0(
-    '<div style="text-align:center;">',
-      '<span style="font-size: 20px;"><b>', role, '</b></span><br>',
-      '<img src="', image_url, '" style="width: 1.5in; margin: 5px 0;"><br>',
-      # A clickable link that toggles the collapse
-      '<span style="font-size: 16px;"><a data-toggle="collapse" href="#', collapse_id, 
-         '" role="button" aria-expanded="false" aria-controls="', collapse_id, '">',
-        name,
-      '</a></span><br>',
-      '<span style="font-size: 14px; color: #444;">', position, '</span>',
-      
-      # The hidden content. Bootstrap will show/hide this
-      '<div class="collapse" id="', collapse_id, '">',
-        '<div style="padding: 10px; text-align:justify">',
-          bio,
-        '</div>',
-      '</div>',
-    '</div>'
-  )
-}
-
-html_output <- '<table style="width:100%; border-collapse: collapse;">'
-idx <- 1
-for (r in seq_len(n_rows)) {
-  html_output <- paste0(html_output, "<tr>\n")
-  
-  for (c in seq_len(n_cols)) {
-    if (idx <= nrow(contacts)) {
-      cell_html <- make_cell(
-        idx        = idx,
-        role       = contacts$role[idx],
-        image_url  = contacts$image_url[idx],
-        name       = contacts$name[idx],
-        position   = contacts$position[idx],
-        bio        = contacts$bio[idx]
-      )
-      
-      html_output <- paste0(
-        html_output,
-        '<td style="vertical-align:top; padding: 10px;">',
-         cell_html,
-        '</td>\n'
-      )
-      idx <- idx + 1
-    } else {
-      html_output <- paste0(html_output, "<td></td>\n")
-    }
-  }
-  html_output <- paste0(html_output, "</tr>\n")
-}
-html_output <- paste0(html_output, "</table>")
-
-cat(html_output)
-
-```
-
-</div>
-
 <span style="display:inline-block; width:80%;"><wimr></span>
  
-# Join the mailing lists
+# <strong>*Join the mailing list*</strong>
 
-<iframe width="900px" height="400px" src="https://forms.office.com/r/d8J7p67QqB?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<iframe width="900px" height="400px" src="https://forms.office.com/r/VRRaTj0bAB?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 <br>
-
-

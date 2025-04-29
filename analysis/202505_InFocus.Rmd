@@ -4,31 +4,36 @@ output:
     toc: no
 ---
 
-## Spatial transcriptomics: what do you need to consider
+<div style="text-align: center">
 
-In this session, 10X Genomics will lead the discussion on the key analytical considerations of Visium and Xenium analysis, such as cell segmentation and panel design.
+## **Spatial Transcriptomics:** <br><br>Experimental Considerations and Analysis by 10X Genomics<br><br>
 
-<div style="text-align: left">
+In this session, 10X Genomics will lead the discussion on the key analytical considerations of Visium and Xenium analysis, such as cell segmentation and panel design.<hr>
 
-<read-time><span style="color:black;"><font size="2">**Time**: Monday 5th May, 1-3 pm</font></span></read-time>
+<read-time><span style="color:black;"><font size="3">**Monday 5th May, 1 pm**</font></span></read-time>
 
-<read-time><span style="color:black;"><font size="2">**In person**: WIMR Seminar Room</font></span></read-time>
+<read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
 
-<read-time><span style="color:black;"><font size="2">**Online**:</font></span> [Zoom Link]()</read-time>
+<read-time>[Zoom Link](https://uni-sydney.zoom.us/j/88508688184)</read-time>
 
-</div>
- 
-**Speakers**: 
-
-- 10X Genomics
-
-### Agenda{.tabset .tabset-fade}
-
-<div style = "text-align: center">
-
-<read-time><i>**Content Coming Soon**</i></read-time>
+<span style="font-size:1.3em">**Speakers**: Geoffrey McDermott (10X Genomics)</span>
 
 </div>
+
+
+<details ><summary><font size=3>**Agenda:**</font></summary>
+<div style="text-align: left;">
+
+<hr>
+
+- **1-1:45**: Xenium (Panel design, Cell Segmentation, Data Analysis Options and new products/proteomics)   
+- **1:45-2:15**: *Afternoon tea*        
+- **2:15-2:45**: Visium HD (Data analysis options, new products - nuclei/cell segmentation + Visium HD 3')    
+- **2:45-3:30**: Loupe and Xenium Explorer & Question Time    
+</div>
+
+</details>
+<hr>
 
 
 

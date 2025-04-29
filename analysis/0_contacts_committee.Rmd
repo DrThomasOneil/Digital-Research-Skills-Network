@@ -1,0 +1,88 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+--- 
+
+<div style="text-align: center">
+<br>
+
+
+# *Digital Research Skills Network<br>Committee Members*<br>
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+```{r contacts-table, results='asis', echo=FALSE, message=F,warning=F,error=F}
+library(dplyr)
+library(readr)
+
+# Read CSV
+contacts <- suppressMessages(read_csv("docs/adit/contacts.csv"))
+
+n_cols <- 3
+n_rows <- ceiling(nrow(contacts) / n_cols)  # Enough rows for everyone
+
+# This function builds the HTML for one "card"
+make_cell <- function(idx, role, image_url, name, position, bio) {
+  # We'll use a unique ID for the collapsible div (e.g. "collapse1", "collapse2", etc.)
+  collapse_id <- paste0("collapse", idx)
+  
+  paste0(
+    '<div style="text-align:center;">',
+      '<span style="font-size: 20px;"><b>', role, '</b></span><br>',
+      '<img src="', image_url, '" style="width: 1.5in; margin: 5px 0;"><br>',
+      # A clickable link that toggles the collapse
+      '<span style="font-size: 16px;"><a data-toggle="collapse" href="#', collapse_id, 
+         '" role="button" aria-expanded="false" aria-controls="', collapse_id, '">',
+        name,
+      '</a></span><br>',
+      '<span style="font-size: 14px; color: #444;">', position, '</span>',
+      
+      # The hidden content. Bootstrap will show/hide this
+      '<div class="collapse" id="', collapse_id, '">',
+        '<div style="padding: 10px; text-align:justify">',
+          bio,
+        '</div>',
+      '</div>',
+    '</div>'
+  )
+}
+
+html_output <- '<table style="width:100%; border-collapse: collapse;">'
+idx <- 1
+for (r in seq_len(n_rows)) {
+  html_output <- paste0(html_output, "<tr>\n")
+  
+  for (c in seq_len(n_cols)) {
+    if (idx <= nrow(contacts)) {
+      cell_html <- make_cell(
+        idx        = idx,
+        role       = contacts$role[idx],
+        image_url  = contacts$image_url[idx],
+        name       = contacts$name[idx],
+        position   = contacts$position[idx],
+        bio        = contacts$bio[idx]
+      )
+      
+      html_output <- paste0(
+        html_output,
+        '<td style="vertical-align:top; padding: 10px;">',
+         cell_html,
+        '</td>\n'
+      )
+      idx <- idx + 1
+    } else {
+      html_output <- paste0(html_output, "<td></td>\n")
+    }
+  }
+  html_output <- paste0(html_output, "</tr>\n")
+}
+html_output <- paste0(html_output, "</table>")
+
+cat(html_output)
+
+```
+
+</div>
+
