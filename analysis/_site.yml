@@ -24,8 +24,14 @@ navbar:
       - text: "June: Spatial Proteomics"
         href: 202506.html
   right:
-  - text: Contacts
-    href: 0_contacts.html
+  - text: Contact Us!
+    menu:
+      - text: Contact Us! 
+        href: 0_contacts.html
+      - text: The Committee 
+        href: 0_contacts_committee.html
+      - text: Feedback Form 
+        href: 0_contacts_feedback.html
   - text: Archive
     href: 0_archive.html  
   - text: Extra Resources
