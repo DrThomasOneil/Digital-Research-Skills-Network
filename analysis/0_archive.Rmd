@@ -5,7 +5,76 @@ output:
     toc: no
 --- 
 
-# Archive
+<div style="text-align:center">
 
-<read-time>Coming Soon</read-time>
+# Current content available!
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(shiny)
+library(reactable)
+library(htmltools)
+```
+
+
+```{r, warning = F, message=FALSE}
+content <- read.csv("docs/adit/0_content management.csv")
+htmltools::browsable(
+  table <- reactable(content,
+                     defaultColDef = colDef(
+                       align = "left",
+                       headerStyle = list(background = "#ffcf72")
+                     ),
+                     # Define columns
+                     columns = list(
+                       Topic = colDef(name = "Topic", width = 220,
+                                      filterable = TRUE), # Make it sticky when scrolling
+                       Date = colDef(name = "Date", width = 80),
+                       Activity = colDef(name = "Activity", width = 80,
+                                         filterable = TRUE),
+                       Theme = colDef(name = "Theme", width = 100,
+                                      filterable = TRUE),
+                       Tag = colDef(name = "Tag", width = 220,
+                                    filterable = TRUE),
+                       Link = colDef(name = "Link",
+                                     html =TRUE,
+                                     # In a cell setting, initiate an R render function
+                                     cell = function(value){
+                                       # generates a link to a webpage by adding an 'a' html tag,
+                                       tags$a(href = value, target = "_blank", class = "page-link", 
+                                              ifelse(is.na(value)|| value == ""||is.null(value), "Coming soon", "View page"))
+                                     },
+                                     width = 100),
+                       Recording = colDef(name = "Recording",
+                                          html = TRUE,
+                                          cell = function(v){
+                                            tags$a(href = v, target = "_blank", class = "video-link", "View video")
+                                          },
+                                          width = 100)
+                     ),
+                     # Define other table characteristics
+                     bordered = TRUE,
+                     highlight = TRUE,
+                     compact = TRUE,
+                     # Default sorting by schedules
+                     defaultSorted = list(Date = "asc"),
+                     # Make the table searchable
+                     searchable = TRUE,
+                     # Show 8 rows max a time
+                     defaultPageSize = 20,
+                     # group the content together by themes
+                     groupBy = "Topic",
+                     paginateSubRows = TRUE,
+                     theme = reactableTheme(
+                       searchInputStyle = list(width = "30%")
+                     )
+  )
+)
+htmlwidgets::saveWidget(table, "./docs/0_archive.html", selfcontained = TRUE)
+```
+
+**Archive curator**: Yuchen Li<br>
+
+**[Contact Me `r "\U2709\UFE0F"`](mailto: yuli0321@uni.sydney.edu.au)** for updating the page, errors, missing resources, etc. ;)
  
+ </div>
