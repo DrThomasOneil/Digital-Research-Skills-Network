@@ -16,11 +16,11 @@ DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore 
 
 #### **Monday 5th May** (WIMR Seminar Room & Zoom)
 
-##### [Seminar (11am)](https://drthomasoneil.github.io/analysis-user-group/202505_Seminar.html) 
+##### [Seminar (11am)](https://www.digitalresearchskills.network/202505_Seminar.html) 
 **Speakers**: Joey Lai, Li Ma, Kirstie Bertram    
 <read-time>*(lunch from 12pm)*</read-time>
 
-##### [In-focus Workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202505_InFocus.html)
+##### [In-focus Workshop (1 – 3pm)](https://www.digitalresearchskills.network/202505_InFocus.html)
 **Speakers**: Geoffrey McDermott (10X Genomics)
 
 <span style="display:inline-block; width:80%;"><hr></span>
