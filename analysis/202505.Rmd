@@ -27,12 +27,18 @@ DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore 
 
 #### **Monday 19th May** (WIMR Seminar Room & Zoom)
 
-##### [Programming workshop (1 – 3pm)](https://drthomasoneil.github.io/analysis-user-group/202505_Workshop.html)
+##### [Programming workshop (1 – 3pm)](https://www.digitalresearchskills.network/202505_Workshop.html)
 
 **Demonstrators**: Thomas O'Neil    
 <read-time>*(lunch from 12pm)*</read-time>
 
 <span style="display:inline-block; width:80%;"><wimr></span>
+
+# Promo! 
+
+WIMR and 10X are offering <span style="color:red; font-size:2em">**<i>MASSIVE<i>**</span> discounts!
+
+<img src="assets/downloads/10X_Promo.png" alt="10X Promo" style="width: 100%;">
 
 ## **Sign up for these events:**    
 
