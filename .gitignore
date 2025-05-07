@@ -17,3 +17,6 @@ workflow.R
 analysis/data/
 analysis-user-group.Rproj
 data/
+plots/
+raw/
+Docs/0_archive_files
