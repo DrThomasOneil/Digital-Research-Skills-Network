@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Author" />
 
 
-<title>202505_Workshop.knit.md</title>
+<title>Introduction to Visium Analysis</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -57,6 +58,112 @@ div.section {
 
 
 
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 <style type="text/css">
@@ -280,7 +387,7 @@ $(document).ready(function () {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Workshops
+    Events
      
     <span class="caret"></span>
   </a>
@@ -292,7 +399,25 @@ $(document).ready(function () {
       <a href="202505.html">May: Spatial Transcriptomics</a>
     </li>
     <li>
-      <a href="202506.html">June: Spatial Proteomics</a>
+      <a href="202506.html">June: Bring Your Own Data</a>
+    </li>
+    <li>
+      <a href="202507.html">July: TBA</a>
+    </li>
+    <li>
+      <a href="202508.html">August: TBA</a>
+    </li>
+    <li>
+      <a href="202509.html">September: TBA</a>
+    </li>
+    <li>
+      <a href="2025010.html">October: TBA</a>
+    </li>
+    <li>
+      <a href="2025011.html">November: TBA</a>
+    </li>
+    <li>
+      <a href="2025012.html">December: TBA</a>
     </li>
   </ul>
 </li>
@@ -339,12 +464,18 @@ $(document).ready(function () {
 <div class="btn-group pull-right float-right">
 <button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
 <ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
 <li><a id="rmd-download-source" href="#">Download Rmd</a></li>
 </ul>
 </div>
 
 
 
+<h1 class="title toc-ignore">Introduction to Visium Analysis</h1>
+<h4 class="author">Author</h4>
+<h4 class="date">2025-02</h4>
 
 </div>
 
@@ -373,11 +504,11 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-04-30
+<strong>Last updated:</strong> 2025-05-07
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 0
 </p>
@@ -421,15 +552,99 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreeff8a3a1a21ab06b224533c7a6bce37960d5c7c2atargetblankff8a3a1a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1337code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(1337)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed1337code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(1337)</code> was run prior to running the
+code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreeff95f8fe1f24a1144fb4d0c7581e92ee527f4643targetblankff95f8fa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/ff8a3a1a21ab06b224533c7a6bce37960d5c7c2a" target="_blank">ff8a3a1</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/ff95f8fe1f24a1144fb4d0c7581e92ee527f4643" target="_blank">ff95f8f</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreeff8a3a1a21ab06b224533c7a6bce37960d5c7c2atargetblankff8a3a1a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreeff95f8fe1f24a1144fb4d0c7581e92ee527f4643targetblankff95f8fa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -439,7 +654,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/ff8a3a1a21ab06b224533c7a6bce37960d5c7c2a" target="_blank">ff8a3a1</a>.
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/ff95f8fe1f24a1144fb4d0c7581e92ee527f4643" target="_blank">ff95f8f</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -460,11 +675,12 @@ Ignored files:
     Ignored:    analysis/.RData
     Ignored:    analysis/.Rhistory
     Ignored:    analysis/adit/.DS_Store
-
-Untracked files:
-    Untracked:  analysis/202504_Workshop.Rmd
+    Ignored:    plots/
+    Ignored:    raw/
 
 Unstaged changes:
+    Modified:   .gitignore
+    Modified:   analysis/_site.yml
     Deleted:    analysis/x202504_Workshop.Rmd
     Modified:   workflow.R
 
@@ -514,6 +730,40 @@ Message
 <tbody>
 <tr>
 <td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/ff95f8fe1f24a1144fb4d0c7581e92ee527f4643/analysis/202505_Workshop.Rmd" target="_blank">ff95f8f</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-05-07
+</td>
+<td>
+wflow_publish(files)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/16a96138fdcae45a20a992a3dfe2e0ba9bbbc20e/docs/202505_Workshop.html" target="_blank">16a9613</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-04-30
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 html
 </td>
 <td>
@@ -554,15 +804,160 @@ wflow_publish(files)
 </div>
 </div>
 <div style="text-align: center">
-<p><read-time><span style="font-size: 2em"><i><strong>Content Coming
-Soon</strong></i></span></read-time></p>
-<p><read-time><span style="font-size: 1.3em"><i><strong>Be
-aware!</strong></i></span><br> It is difficult to debug over zoom.
-<br>If you want the best feedback and experience, make sure you attend
-the workshop in person!</read-time></p>
+<p><read-time><span style="font-size: 1.3em">Please try to follow the
+instructions below <strong>prior</strong> to attending the
+workshop.<br><br><i><strong>Be aware!</strong></i></span><br> It is
+difficult to debug over zoom. <br>If you want the best feedback and
+experience, make sure you attend the workshop in person!</read-time></p>
+<p>You can download the script on the top right or from <a
+href="https://github.com/DrThomasOneil/digital-research-skills-network/blob/master/analysis/202504.Rmd">this
+link</a>.</p>
+</div>
+<p><wimr></p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+</div>
+<div id="setup" class="section level1 tabset tabset-fade">
+<h1 class="tabset tabset-fade">Setup</h1>
+<ul>
+<li><p>Create folders</p></li>
+<li><p>Install Packages</p></li>
+<li><p>Download Data</p></li>
+</ul>
+<div id="create-folders" class="section level2">
+<h2>Create Folders</h2>
+<pre class="text"><code>├── YourFolder
+│     └── raw (where we can deposit raw downloaded data)
+│     └── data (where we can process data and store it)
+│     └── plots (where we can store plots)</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;raw&quot;</span>)){<span class="fu">dir.create</span>(<span class="st">&quot;raw&quot;</span>)}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;data&quot;</span>)){<span class="fu">dir.create</span>(<span class="st">&quot;data&quot;</span>)}</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;plots&quot;</span>)){<span class="fu">dir.create</span>(<span class="st">&quot;plots&quot;</span>)}</span></code></pre></div>
+</div>
+<div id="install-packages" class="section level2">
+<h2>Install Packages</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;Seurat&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
+<p>We have a function that will let you check the setup</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;https://github.com/DrThomasOneil/Digital-Research-Skills-Network/raw/refs/heads/main/docs/adit/checksetup.R&quot;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">checkSetup</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="at">cran_packages =</span> <span class="fu">c</span>(<span class="st">&quot;Seurat&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>), </span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="at">bioc_packages=</span><span class="fu">c</span>() </span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>
+--------------------------------------
+
+***Installing General Packages***
+
+Seurat is loaded!
+tidyverse is loaded!
+
+--------------------------------------
+ 
+ All packages are loaded!
+
+ Happy Coding! :)</code></pre>
+</div>
+<div id="download-data" class="section level2">
+<h2>Download data</h2>
+<p>We will download the data directly from the <a
+href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a>. We’ll use <a
+href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290350">this</a>
+dataset, which was <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11646855/">published in
+2024</a>. Additionally, this group have published <a
+href="https://github.com/vildeka/Spatial_DMPA?tab=readme-ov-file">all of
+their methods and scripts for analysis</a>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Go to the GEO page and right click on the http link under download. It should look like this</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>data_file <span class="ot">&lt;-</span> <span class="st">&quot;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co"># download the data</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span>data_file, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co"># repeat for metadata</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&#39;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&amp;file=GSE290350%5Fmetadata%2Ecsv%2Egz&#39;</span>, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co"># and the supposed processed Seurat data</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_seuratObj_spatial_dist.RDS&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&amp;file=GSE290350%5FseuratObj%5Fspatial%5Fdist%2ERDS&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_seuratObj_spatial_dist.RDS&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span></code></pre></div>
+</div>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Australia/Sydney
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] lubridate_1.9.4    forcats_1.0.0      stringr_1.5.1      dplyr_1.1.4       
+ [5] purrr_1.0.4        readr_2.1.5        tidyr_1.3.1        tibble_3.2.1      
+ [9] ggplot2_3.5.1      tidyverse_2.0.0    Seurat_5.2.1       SeuratObject_5.0.2
+[13] sp_2.2-0           cli_3.6.4          workflowr_1.7.1   
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3     rstudioapi_0.17.1      jsonlite_1.9.1        
+  [4] magrittr_2.0.3         spatstat.utils_3.1-3   farver_2.1.2          
+  [7] rmarkdown_2.29         fs_1.6.5               vctrs_0.6.5           
+ [10] ROCR_1.0-11            spatstat.explore_3.3-4 htmltools_0.5.8.1     
+ [13] sass_0.4.9             sctransform_0.4.1      parallelly_1.42.0     
+ [16] KernSmooth_2.23-26     bslib_0.9.0            htmlwidgets_1.6.4     
+ [19] ica_1.0-3              plyr_1.8.9             plotly_4.10.4         
+ [22] zoo_1.8-13             cachem_1.1.0           whisker_0.4.1         
+ [25] igraph_2.1.4           mime_0.13              lifecycle_1.0.4       
+ [28] pkgconfig_2.0.3        Matrix_1.7-3           R6_2.6.1              
+ [31] fastmap_1.2.0          fitdistrplus_1.2-2     future_1.34.0         
+ [34] shiny_1.10.0           digest_0.6.37          colorspace_2.1-1      
+ [37] patchwork_1.3.0        ps_1.9.0               rprojroot_2.0.4       
+ [40] tensor_1.5             RSpectra_0.16-2        irlba_2.3.5.1         
+ [43] progressr_0.15.1       timechange_0.3.0       spatstat.sparse_3.1-0 
+ [46] httr_1.4.7             polyclip_1.10-7        abind_1.4-8           
+ [49] compiler_4.4.0         withr_3.0.2            fastDummies_1.7.5     
+ [52] MASS_7.3-65            tools_4.4.0            lmtest_0.9-40         
+ [55] httpuv_1.6.15          future.apply_1.11.3    goftest_1.2-3         
+ [58] glue_1.8.0             callr_3.7.6            nlme_3.1-167          
+ [61] promises_1.3.2         grid_4.4.0             Rtsne_0.17            
+ [64] getPass_0.2-4          cluster_2.1.8.1        reshape2_1.4.4        
+ [67] generics_0.1.3         gtable_0.3.6           spatstat.data_3.1-6   
+ [70] tzdb_0.5.0             hms_1.1.3              data.table_1.17.0     
+ [73] spatstat.geom_3.3-6    RcppAnnoy_0.0.22       ggrepel_0.9.6         
+ [76] RANN_2.6.2             pillar_1.10.1          spam_2.11-1           
+ [79] RcppHNSW_0.6.0         later_1.4.1            splines_4.4.0         
+ [82] lattice_0.22-6         survival_3.8-3         deldir_2.0-4          
+ [85] tidyselect_1.2.1       miniUI_0.1.1.1         pbapply_1.7-2         
+ [88] knitr_1.50             git2r_0.35.0           gridExtra_2.3         
+ [91] scattermore_1.2        xfun_0.51              matrixStats_1.5.0     
+ [94] stringi_1.8.4          lazyeval_0.2.2         yaml_2.3.10           
+ [97] evaluate_1.0.3         codetools_0.2-20       uwot_0.2.3            
+[100] xtable_1.8-4           reticulate_1.41.0.1    munsell_0.5.1         
+[103] processx_3.8.6         jquerylib_0.1.4        Rcpp_1.0.14           
+[106] globals_0.16.3         spatstat.random_3.3-2  png_0.1-8             
+[109] spatstat.univar_3.1-2  parallel_4.4.0         dotCall64_1.2         
+[112] listenv_0.9.1          viridisLite_0.4.2      scales_1.3.0          
+[115] ggridges_0.5.6         rlang_1.1.6            cowplot_1.1.3         </code></pre>
+</div>
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IG5vCi0tLQogCjxkaXYgc3R5bGUgPSAidGV4dC1hbGlnbjogY2VudGVyIj4KCjxyZWFkLXRpbWU+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMmVtIj48aT4qKkNvbnRlbnQgQ29taW5nIFNvb24qKjwvaT48L3NwYW4+PC9yZWFkLXRpbWU+CgogCjxyZWFkLXRpbWU+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMS4zZW0iPjxpPioqQmUgYXdhcmUhKio8L2k+PC9zcGFuPjxicj4gSXQgaXMgZGlmZmljdWx0IHRvIGRlYnVnIG92ZXIgem9vbS4gPGJyPklmIHlvdSB3YW50IHRoZSBiZXN0IGZlZWRiYWNrIGFuZCBleHBlcmllbmNlLCBtYWtlIHN1cmUgeW91IGF0dGVuZCB0aGUgd29ya3Nob3AgaW4gcGVyc29uITwvcmVhZC10aW1lPgoKPC9kaXY+CgoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIFZpc2l1bSBBbmFseXNpcyIKYXV0aG9yOiAiQXV0aG9yIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IGZhbHNlCiAgICBjb2RlX2ZvbGRpbmc6ICJoaWRlIgotLS0KIApgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVycm9yPUZBTFNFKQpgYGAKCjxkaXYgc3R5bGUgPSAidGV4dC1hbGlnbjogY2VudGVyIj4KCjxyZWFkLXRpbWU+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMS4zZW0iPlBsZWFzZSB0cnkgdG8gZm9sbG93IHRoZSBpbnN0cnVjdGlvbnMgYmVsb3cgKipwcmlvcioqIHRvIGF0dGVuZGluZyB0aGUgd29ya3Nob3AuPGJyPjxicj48aT4qKkJlIGF3YXJlISoqPC9pPjwvc3Bhbj48YnI+IEl0IGlzIGRpZmZpY3VsdCB0byBkZWJ1ZyBvdmVyIHpvb20uIDxicj5JZiB5b3Ugd2FudCB0aGUgYmVzdCBmZWVkYmFjayBhbmQgZXhwZXJpZW5jZSwgbWFrZSBzdXJlIHlvdSBhdHRlbmQgdGhlIHdvcmtzaG9wIGluIHBlcnNvbiE8L3JlYWQtdGltZT4KCllvdSBjYW4gZG93bmxvYWQgdGhlIHNjcmlwdCBvbiB0aGUgdG9wIHJpZ2h0IG9yIGZyb20gW3RoaXMgbGlua10oaHR0cHM6Ly9naXRodWIuY29tL0RyVGhvbWFzT25laWwvZGlnaXRhbC1yZXNlYXJjaC1za2lsbHMtbmV0d29yay9ibG9iL21hc3Rlci9hbmFseXNpcy8yMDI1MDQuUm1kKS4KIAo8L2Rpdj48d2ltcj4KCgojIEludHJvZHVjdGlvbgoKIyBTZXR1cHsudGFic2V0IC50YWJzZXQtZmFkZX0KCi0gQ3JlYXRlIGZvbGRlcnMKCi0gSW5zdGFsbCBQYWNrYWdlcwoKLSBEb3dubG9hZCBEYXRhCgojIyBDcmVhdGUgRm9sZGVycwoKYGBgdGV4dArilJzilIDilIAgWW91ckZvbGRlcgrilIIgICAgIOKUlOKUgOKUgCByYXcgKHdoZXJlIHdlIGNhbiBkZXBvc2l0IHJhdyBkb3dubG9hZGVkIGRhdGEpCuKUgiAgICAg4pSU4pSA4pSAIGRhdGEgKHdoZXJlIHdlIGNhbiBwcm9jZXNzIGRhdGEgYW5kIHN0b3JlIGl0KQrilIIgICAgIOKUlOKUgOKUgCBwbG90cyAod2hlcmUgd2UgY2FuIHN0b3JlIHBsb3RzKQpgYGAKCmBgYHtyIGV2YWw9VH0KaWYoIWRpci5leGlzdHMoInJhdyIpKXtkaXIuY3JlYXRlKCJyYXciKX0KaWYoIWRpci5leGlzdHMoImRhdGEiKSl7ZGlyLmNyZWF0ZSgiZGF0YSIpfQppZighZGlyLmV4aXN0cygicGxvdHMiKSl7ZGlyLmNyZWF0ZSgicGxvdHMiKX0KYGBgCgojIyBJbnN0YWxsIFBhY2thZ2VzCgpgYGB7ciwgZXZhbD1GfQppbnN0YWxsLnBhY2thZ2VzKCJTZXVyYXQiKQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQpgYGAKCldlIGhhdmUgYSBmdW5jdGlvbiB0aGF0IHdpbGwgbGV0IHlvdSBjaGVjayB0aGUgc2V0dXAKYGBge3J9CnNvdXJjZSgiaHR0cHM6Ly9naXRodWIuY29tL0RyVGhvbWFzT25laWwvRGlnaXRhbC1SZXNlYXJjaC1Ta2lsbHMtTmV0d29yay9yYXcvcmVmcy9oZWFkcy9tYWluL2RvY3MvYWRpdC9jaGVja3NldHVwLlIiKQpjaGVja1NldHVwKAogIGNyYW5fcGFja2FnZXMgPSBjKCJTZXVyYXQiLCAidGlkeXZlcnNlIiksIAogIGJpb2NfcGFja2FnZXM9YygpIAopCmBgYAoKCiMjIERvd25sb2FkIGRhdGEKCldlIHdpbGwgZG93bmxvYWQgdGhlIGRhdGEgZGlyZWN0bHkgZnJvbSB0aGUgW0dFT10oaHR0cHM6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9nZW8vKS4gV2UnbGwgdXNlIFt0aGlzXShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby9xdWVyeS9hY2MuY2dpP2FjYz1HU0UyOTAzNTApIGRhdGFzZXQsIHdoaWNoIHdhcyBbcHVibGlzaGVkIGluIDIwMjRdKGh0dHBzOi8vcG1jLm5jYmkubmxtLm5paC5nb3YvYXJ0aWNsZXMvUE1DMTE2NDY4NTUvKS4gQWRkaXRpb25hbGx5LCB0aGlzIGdyb3VwIGhhdmUgcHVibGlzaGVkIFthbGwgb2YgdGhlaXIgbWV0aG9kcyBhbmQgc2NyaXB0cyBmb3IgYW5hbHlzaXNdKGh0dHBzOi8vZ2l0aHViLmNvbS92aWxkZWthL1NwYXRpYWxfRE1QQT90YWI9cmVhZG1lLW92LWZpbGUpLgoKYGBge3IsIGV2YWw9Rn0KIyBHbyB0byB0aGUgR0VPIHBhZ2UgYW5kIHJpZ2h0IGNsaWNrIG9uIHRoZSBodHRwIGxpbmsgdW5kZXIgZG93bmxvYWQuIEl0IHNob3VsZCBsb29rIGxpa2UgdGhpcwoKZGF0YV9maWxlIDwtICJodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby9kb3dubG9hZC8/YWNjPUdTRTI5MDM1MCZmb3JtYXQ9ZmlsZSIKCiMgZG93bmxvYWQgdGhlIGRhdGEKaWYoIWZpbGUuZXhpc3RzKCJyYXcvR1NFMjkwMzUwX1JBVy50YXIiKSl7ZG93bmxvYWQuZmlsZSh1cmw9ZGF0YV9maWxlLCBkZXN0ZmlsZSA9ICJyYXcvR1NFMjkwMzUwX1JBVy50YXIiLCBtZXRob2Q9J2N1cmwnKX0KCiMgcmVwZWF0IGZvciBtZXRhZGF0YQppZighZmlsZS5leGlzdHMoInJhdy9HU0UyOTAzNTBfbWV0YWRhdGEuY3N2Lmd6Iikpe2Rvd25sb2FkLmZpbGUodXJsPSdodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby9kb3dubG9hZC8/YWNjPUdTRTI5MDM1MCZmb3JtYXQ9ZmlsZSZmaWxlPUdTRTI5MDM1MCU1Rm1ldGFkYXRhJTJFY3N2JTJFZ3onLCBkZXN0ZmlsZSA9ICJyYXcvR1NFMjkwMzUwX21ldGFkYXRhLmNzdi5neiIsIG1ldGhvZD0nY3VybCcpfQoKIyBhbmQgdGhlIHN1cHBvc2VkIHByb2Nlc3NlZCBTZXVyYXQgZGF0YQppZighZmlsZS5leGlzdHMoInJhdy9HU0UyOTAzNTBfc2V1cmF0T2JqX3NwYXRpYWxfZGlzdC5SRFMiKSl7ZG93bmxvYWQuZmlsZSh1cmw9Imh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvZ2VvL2Rvd25sb2FkLz9hY2M9R1NFMjkwMzUwJmZvcm1hdD1maWxlJmZpbGU9R1NFMjkwMzUwJTVGc2V1cmF0T2JqJTVGc3BhdGlhbCU1RmRpc3QlMkVSRFMiLCBkZXN0ZmlsZSA9ICJyYXcvR1NFMjkwMzUwX3NldXJhdE9ial9zcGF0aWFsX2Rpc3QuUkRTIiwgbWV0aG9kPSdjdXJsJyl9CgoKYGBgCgoKCjwvZGl2PgoKCgoK</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
@@ -630,6 +1025,7 @@ $(document).ready(function () {
 <script>
 $(document).ready(function () {
   window.initializeSourceEmbed("202505_Workshop.Rmd");
+  window.initializeCodeFolding("hide" === "show");
 });
 </script>
 
