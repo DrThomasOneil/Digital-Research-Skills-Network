@@ -1,0 +1,41 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+<div style = "text-align: center">
+
+<span style="font-size:2em">*Bring your own data!*</span>
+
+#### <i>**Tired of example data that never quite fits your needs? You're in luck!**</i>
+
+This month, we’re hosting a **Bring Your Own Data** session - a hands-on, self-guided workshop designed to help you get started with analysing your own dataset.
+
+Each session will begin with a brief presentation showcasing the core tools and workflows we typically use in R. After a short break, you’ll have the chance to apply those tools to your own data. Our team will be available throughout to guide, troubleshoot, and help you move forward with your analysis - no matter the dataset or research question.
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+#### **Monday 2nd June** (WIMR Seminar Room & Zoom)
+
+##### [Data Wrangling in R (11:30am - 2pm)](https://www.digitalresearchskills.network/202506_tidyverse.html) 
+**Demonstrators**: Thomas O'Neil    
+<read-time>*(lunch from 12pm)*</read-time>
+
+<span style="display:inline-block; width:80%;"><hr></span>
+
+#### **Monday 16th June** (WIMR Seminar Room & Zoom)
+
+##### [Statistics in R (11:30am - 2pm)](https://www.digitalresearchskills.network/202506_stats.html)
+
+**Demonstrators**: Harry Robertson  
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+## **Sign up for these events:**    
+
+<hr>
+
+<iframe width="900px" height="900px" src="https://forms.cloud.microsoft/r/cYz7UP91aR?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+</div>

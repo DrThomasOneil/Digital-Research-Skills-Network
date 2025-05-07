@@ -35,13 +35,17 @@ DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore 
 
 <!---June<--->
 
-<details style="text-align: left"><summary><span style="font-size:2em">**June**: Spatial Proteomics</span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**June**: Bring your down data!</span></summary>
 
 <div style = "text-align: center">
 
-#### [**Getting started with Spatial Proteomics Analysis at WIMR**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202506.html)
+#### [**Bring your own data! Data wrangling and statistics in R**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202506.html)
 
-<read-time>Details coming soon!</read-time>
+<i>**Tired of example data that never quite fits your needs? You're in luck!**</i>
+
+This month, we’re hosting a **Bring Your Own Data** session - a hands-on, self-guided workshop designed to help you get started with analysing your own dataset.
+
+Each session will begin with a brief presentation showcasing the core tools and workflows we typically use in R. After a short break, you’ll have the chance to apply those tools to your own data. Our team will be available throughout to guide, troubleshoot, and help you move forward with your analysis - no matter the dataset or research question.
 
 </div>
 

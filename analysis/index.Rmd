@@ -36,7 +36,7 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-# Promo! 
+# <i>**Promo!**</i>
 
 WIMR and 10X are offering <span style="color:red; font-size:2em">**<i>MASSIVE<i>**</span> discounts!
 

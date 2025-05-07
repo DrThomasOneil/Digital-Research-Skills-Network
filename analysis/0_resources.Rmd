@@ -6,12 +6,70 @@ output:
 ---
 
 <dev class="hint-info"> 
-**I'll drop resources that I find that might be useful to others.**
+**We'll drop resources that we find that might be useful to others.**
 </dev>
 
 ### Computational Genomics with R
 
 [Computational Genomics with R](https://compgenomr.github.io/book/) is an exceptionally comprehensive resource for biomedical bioinformatics. It covers a broad range of topics—statistics, machine learning, sequencing data processing, and more—while providing both code examples and clear explanations. Although it may not be the most accessible starting point for wet-lab researchers, it serves as an invaluable reference for deeper explorations of bioinformatic analyses.
+
+### 10X Analysis Resources
+
+10X Genomics are a unique company, in that they provide *a lot* of supporting materials. In the drop down below, we have listed a series of resources that 10X have provided, including how-to videos and tutorials. 
+
+<details><summary>**Drop-down**</summary><div>
+
+#### Xenium In situ
+
+**Downloads and documentation**
+
+- [Xenium Analysis Overview](https://url.au.m.mimecastprotect.com/s/6sJtCxngwOfxRyK3wsvh1fyrb4Q?domain=10xgenomics.com)
+
+- [Xenium Onboard Analysis](https://url.au.m.mimecastprotect.com/s/r781CyojxQTL2gERkcQiGfxIELc?domain=10xgenomics.com), [Xenium Ranger](https://url.au.m.mimecastprotect.com/s/-Q0BCzvkyVC4w3vA9CKsZf9uTIp?domain=10xgenomics.com)
+
+- [Xenium Explorer](https://url.au.m.mimecastprotect.com/s/sR4kCANpgjCElgMz2CQtkfGuQlh?domain=10xgenomics.com)
+
+**Webinars and workshops**
+
+- [Demystifying single-cell and spatial sequencing data analysis: The path to making biological discoveries routine](https://url.au.m.mimecastprotect.com/s/5wH1CBNqjlC8R13OBs1uGf2ey9o?domain=10xgenomics.com)
+
+- [Xenium: Spatial analysis of lung cancers reveals heterogeneity in tumor micro-environments](https://url.au.m.mimecastprotect.com/s/CDqhCD1vlpT3J1Qk0fRCmfjIady?domain=10xgenomics.com)
+
+- [Xenium to unravel tumor-immune microenvironment during leptomeningeal metastasis](https://url.au.m.mimecastprotect.com/s/6FQgCE8wmrtp0mKNMIxF1f7zXFa?domain=10xgenomics.com)
+
+- [Xenium 5k Webinar - Multimodal spatial reconstruction of autoimmune diseases with 5,000-gene assays](https://url.au.m.mimecastprotect.com/s/RPX_CGv0oyCAOmoQGSrHRfBIQxh?domain=10xgenomics.com)
+
+#### Visium HD
+
+**Downloads and documentation**
+
+- [Visium Analysis Overview](https://url.au.m.mimecastprotect.com/s/YUJxCJyBrGfKARPD5HKIKfyfobF?domain=10xgenomics.com)
+
+- [Space Ranger](https://url.au.m.mimecastprotect.com/s/iBFjCK1DvKT4Ml0GmCkSmf5pGaW?domain=10xgenomics.com)
+
+- **Cloud Analysis**
+
+  - [Cloud Analysis Overview](https://url.au.m.mimecastprotect.com/s/HTLXCL7EwMfQwA5Z4SYT0fyxgJU?domain=10xgenomics.com)
+
+  - [Cloud Analysis Support Documentation](https://url.au.m.mimecastprotect.com/s/DWZGCMwGxOtzkgGAWIqUWf8WgX6?domain=10xgenomics.com)
+
+  - [Walkthrough Tutorial (with small demo dataset)](https://url.au.m.mimecastprotect.com/s/U48sCNLJyQUjPA1GXU3cZfy8AKs?domain=10xgenomics.com) 
+
+- [Loupe Browser](https://url.au.m.mimecastprotect.com/s/JQWhCOMKzVTvZJoy4C9f4fGs-yK?domain=10xgenomics.com)
+
+  - [Tutorials](https://url.au.m.mimecastprotect.com/s/CVQjCP7LAXf3NOqkMfJhpfxEvSL?domain=10xgenomics.com)
+
+**Webinars and workshops**
+
+- [Discover spatial insights with intuitive analysis tools for Visium HD data](https://url.au.m.mimecastprotect.com/s/J7KCCQnMBZfol8myrClixfGQGY0?domain=10xgenomics.com)
+
+- [Data-driven discovery with Visium Spatial Gene Expression for FFPE](https://url.au.m.mimecastprotect.com/s/fm_pCROND2u50J8zBHVsqf1E6ge?domain=10xgenomics.com)
+
+- [Spatial transcriptomics data analysis in Python](https://url.au.m.mimecastprotect.com/s/09RpCVARKgCgk71R9fotRfEswDr?domain=github.com)
+
+- [Visium HD Bioinformatics bootcamp: Hands-on Visium HD data visualization](https://url.au.m.mimecastprotect.com/s/MeygCWLVXkUDX2vWGuMuVfo96mx?domain=10xgenomics.com)
+
+</div></details>
 
 ### Stretchly
 

@@ -1,0 +1,45 @@
+---
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+
+<div style="text-align: center">
+
+## **Bring your own data!** <br><br>Statistics in R<br><br>
+
+Following the previous workshop, we will go into more details about how to apply statistics to your data.
+
+<read-time><span style="color:black;"><font size="3">**Monday 2nd June, 11:30 am**</font></span></read-time>
+
+<read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
+
+<read-time>[Zoom Link](https://uni-sydney.zoom.us/j/88508688184)</read-time>
+
+<span style="font-size:1.3em">**Speakers**: Harry Robertson</span>
+
+</div>
+
+<details ><summary><font size=3>**Agenda:**</font></summary>
+<div style="text-align: left;">
+
+<hr>
+
+- **11:30**: Introduction and demonstration of the tools
+- **12:00-12:30**: *Lunch*       
+- **12:30 - 2:00**: Self-guided analysis
+
+</div>
+
+</details>
+<hr>
+<div style="text-align: center">
+
+<span style="font-size:1.3em; color: red;text-align: center">*Have you forgotten to sign up?<br>[Click here!](https://forms.cloud.microsoft/r/cYz7UP91aR)*</span>
+
+</div>
+
+# Introduction
+
+<br><read-time><font size = "5">*Content coming soon*</font></read-time>
+

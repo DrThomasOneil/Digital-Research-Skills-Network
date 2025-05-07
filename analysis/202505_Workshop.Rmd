@@ -1,15 +1,90 @@
 ---
+title: "Introduction to Visium Analysis"
+author: "Author"
+date: "2025-02" 
 output:
   workflowr::wflow_html:
-    toc: no
+    toc: false
+    code_folding: "hide"
 ---
  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning=FALSE, error=FALSE)
+```
+
 <div style = "text-align: center">
 
-<read-time><span style="font-size: 2em"><i>**Content Coming Soon**</i></span></read-time>
+<read-time><span style="font-size: 1.3em">Please try to follow the instructions below **prior** to attending the workshop.<br><br><i>**Be aware!**</i></span><br> It is difficult to debug over zoom. <br>If you want the best feedback and experience, make sure you attend the workshop in person!</read-time>
 
+You can download the script on the top right or from [this link](https://github.com/DrThomasOneil/digital-research-skills-network/blob/master/analysis/202504.Rmd).
  
-<read-time><span style="font-size: 1.3em"><i>**Be aware!**</i></span><br> It is difficult to debug over zoom. <br>If you want the best feedback and experience, make sure you attend the workshop in person!</read-time>
+</div><wimr>
+
+
+# Introduction
+
+# Setup{.tabset .tabset-fade}
+
+- Create folders
+
+- Install Packages
+
+- Download Data
+
+## Create Folders
+
+```text
+├── YourFolder
+│     └── raw (where we can deposit raw downloaded data)
+│     └── data (where we can process data and store it)
+│     └── plots (where we can store plots)
+```
+
+```{r eval=T}
+if(!dir.exists("raw")){dir.create("raw")}
+if(!dir.exists("data")){dir.create("data")}
+if(!dir.exists("plots")){dir.create("plots")}
+```
+
+## Install Packages
+
+```{r, eval=F}
+install.packages("Seurat")
+install.packages("tidyverse")
+```
+
+We have a function that will let you check the setup
+```{r}
+source("https://github.com/DrThomasOneil/Digital-Research-Skills-Network/raw/refs/heads/main/docs/adit/checksetup.R")
+checkSetup(
+  cran_packages = c("Seurat", "tidyverse"), 
+  bioc_packages=c() 
+)
+```
+
+
+## Download data
+
+We will download the data directly from the [GEO](https://www.ncbi.nlm.nih.gov/geo/). We'll use [this](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290350) dataset, which was [published in 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11646855/). Additionally, this group have published [all of their methods and scripts for analysis](https://github.com/vildeka/Spatial_DMPA?tab=readme-ov-file).
+
+```{r, eval=F}
+# Go to the GEO page and right click on the http link under download. It should look like this
+
+data_file <- "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&format=file"
+
+# download the data
+if(!file.exists("raw/GSE290350_RAW.tar")){download.file(url=data_file, destfile = "raw/GSE290350_RAW.tar", method='curl')}
+
+# repeat for metadata
+if(!file.exists("raw/GSE290350_metadata.csv.gz")){download.file(url='https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&format=file&file=GSE290350%5Fmetadata%2Ecsv%2Egz', destfile = "raw/GSE290350_metadata.csv.gz", method='curl')}
+
+# and the supposed processed Seurat data
+if(!file.exists("raw/GSE290350_seuratObj_spatial_dist.RDS")){download.file(url="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&format=file&file=GSE290350%5FseuratObj%5Fspatial%5Fdist%2ERDS", destfile = "raw/GSE290350_seuratObj_spatial_dist.RDS", method='curl')}
+
+
+```
+
+
 
 </div>
 
