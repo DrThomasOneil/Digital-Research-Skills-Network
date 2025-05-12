@@ -6,10 +6,12 @@ output:
   workflowr::wflow_html:
     toc: false
     code_folding: "hide"
+editor_options: 
+  chunk_output_type: console
 ---
  
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning=FALSE, error=FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning=FALSE, error=FALSE, collapse=T)
 ```
 
 <div style = "text-align: center">
@@ -46,22 +48,31 @@ if(!dir.exists("data")){dir.create("data")}
 if(!dir.exists("plots")){dir.create("plots")}
 ```
 
+<wimr>
+
 ## Install Packages
 
 ```{r, eval=F}
 install.packages("Seurat")
 install.packages("tidyverse")
+install.packages("cowplot")
+
+BiocManager::install("GEOquery")
 ```
 
 We have a function that will let you check the setup
 ```{r}
 source("https://github.com/DrThomasOneil/Digital-Research-Skills-Network/raw/refs/heads/main/docs/adit/checksetup.R")
+
 checkSetup(
-  cran_packages = c("Seurat", "tidyverse"), 
-  bioc_packages=c() 
+  cran_packages = c("Seurat", "tidyverse", "cowplot"), 
+  bioc_packages=c("GEOquery") 
 )
+
+set.seed(1337)
 ```
 
+<wimr>
 
 ## Download data
 
@@ -84,9 +95,449 @@ if(!file.exists("raw/GSE290350_seuratObj_spatial_dist.RDS")){download.file(url="
 
 ```
 
+<wimr>
 
+## Unzip and untar the raw data
+
+```{r, eval=F}
+untar("raw/GSE290350_RAW.tar", exdir = "../raw/GSE290350_RAW")
+```
+
+```{r, eval=F}
+samples <- list.files("raw/GSE290350_RAW", pattern = "\\.tar\\.gz$", full.names = TRUE)
+
+for (i in seq_along(samples)) {
+  tar_path <- sub("\\.gz$", "", samples[i])
+
+  # Unzip the .tar.gz file
+  GEOquery::gunzip(samples[i], destname = tar_path, overwrite = TRUE)
+
+  output_dir <- file.path("raw/GSE290350_RAW", sub("\\.tar$", "", basename(tar_path)))
+  dir.create(output_dir, showWarnings = FALSE)
+
+  # Extract tar to output directory
+  untar(tar_path, exdir = output_dir)
+}
+```
+
+<wimr>
+
+# Pre-processing{.tabset .tabset-fade}
+
+Here we'll load in the data. Fortunately, this data is quite neatly organised. When present, we can load the `.h5` object. Please see the `Archive` page of the [website](https://digitalresearchskills.network/0_archive.html) to find vignettes on downloading and installing GEO-sourced objects that are not as well-organised!
+
+We will:
+
+- Load the data
+
+- Add the meta data
+
+- Check the QC, filter and process the data
+
+<div>
+
+## Load in the data 
+
+We'll load in the supplied metadata, and then we can load 10X data quite easily using the Load10X_Spatial function, which requires a certain format. We can load in the filtered matrix, which is filtered based on whether the initial processing detected that that spot aligned with tissue. Alternatively, you can load the raw object, and filter as you wish. 
+
+```{r}
+meta <- read.csv("raw/GSE290350_metadata.csv.gz")
+```
+
+```{r}
+data <- Load10X_Spatial(
+  data.dir="raw/GSE290350_RAW/GSM8811056_P004/P004",
+  filename = "filtered_feature_bc_matrix.h5",
+  filter.matrix = F
+)
+```
+
+<wimr>
+
+## Add meta data
+
+The metadata provided is not found in the object itself. So we will run a small piece of code that lets you add metadata to a Seurat object. 
+
+```{r}
+data$ID <- "P004"
+data <- AddMetaData(data,
+                    data@meta.data %>% 
+                      right_join(meta[meta$ID=="P004", ], by="ID"))
+```
+
+
+## QC{.tabset .tabset-fade}
+
+There are several ways to QC transcriptomic data. First, you should check and scrutinise the [original manuscript](https://github.com/vildeka/Spatial_DMPA?tab=readme-ov-file).
+
+We will assess: 
+
+- number of genes per spot
+
+- number of unique genes per spot
+
+- mitochondrial, haemoglobin, and ribosomal percentage.
+
+We'll also filter the genes themselves, to remove noisy/pointless genes. 
+
+- genes that are not present in more than x number of spots
+
+- high expressing spots.
+
+### Genes per spot & Unique genes per spot
+
+This is a typical `single-cell RNA` analysis metric. It should be carefully considered how this data is interpretted and filtered, as this is **not** single cell. Spots can have double the average or half the average based on the density of cells. Indeed, this is a consideration for normalisation, but this consideration is for another workshop. 
+
+<i>**As there is <span style="color:red">no</span> gold standard**</i>, we will demonstrate how you visualise the QC metrics and then filter. 
+
+```{r}
+p1=FeatureScatter(data, "nCount_Spatial", "nFeature_Spatial")+NoLegend()
+# number of genes
+p2=SpatialFeaturePlot(data, "nCount_Spatial", 
+                   crop=F,
+                   pt.size=2,
+                   alpha=c(.2,1))+
+  NoLegend()
+# number of unique features
+p3=SpatialFeaturePlot(data, "nFeature_Spatial", 
+                   crop=F,
+                   pt.size=2,
+                   alpha=c(.2,1))+
+  NoLegend()
+plot_grid(p1,plot_grid(p2,p3, nrow=2))
+```
+
+The minimum number of Features per spot (`r `min(data$nFeature_Spatial)`) and minimum number of Counts per spot (`r min(data$nCount_Spatial)`) are greater than the paper's cut off (presuming they did not use the filtered matrix). However, for the purposes of demonstrating how this is done:
+
+```{r}
+data <- subset(data, 
+               subset = nCount_Spatial > 100 & nFeature_Spatial >100)
+```
+
+### Module Scoring
+
+In this paper, they remove cells that are >15% Mt genes & > 10% Hb reads. 
+
+```{r}
+data <- PercentageFeatureSet(data, "^MT-", col.name = "percent_mito")
+data <- PercentageFeatureSet(data, "^HB[^(P)]", col.name = "percent_hb")
+data <- PercentageFeatureSet(data, "^RP[SL]", col.name = "percent_ribo")
+```
+
+```{r}
+feature <-  c("nCount_Spatial", "nFeature_Spatial","percent_mito","percent_hb", "percent_ribo")
+sapply(data@meta.data[feature], summary) %>% 
+  as_tibble(rownames = "stat") %>% 
+  knitr::kable(digits = 1)
+```
+
+
+```{r}
+p1=SpatialFeaturePlot(data, "percent_mito", 
+                   crop=F,
+                   pt.size=2,
+                   alpha=c(.2,1))+
+  NoLegend()+ggtitle("Mito")
+p2=SpatialFeaturePlot(data, "percent_hb", 
+                   crop=F,
+                   pt.size=2,
+                   alpha=c(.2,1))+
+  NoLegend()+ggtitle("Hb-genes")
+p3=SpatialFeaturePlot(data, "percent_ribo", 
+                   crop=F,
+                   pt.size=2,
+                   alpha=c(.2,1))+
+  NoLegend()+ggtitle("Ribo")
+plot_grid(p1,p2,p3)
+```
+
+Filter:
+
+```{r}
+data <- subset(data, subset = percent_mito<15 & percent_hb <10)
+sapply(data@meta.data[feature], summary) %>% 
+  as_tibble(rownames = "stat") %>% 
+  knitr::kable(digits = 1)
+```
+
+### Filter genes
+
+We'll first remove certain genes. MALAT1 is highly expressed in long non-coding RNA and is pretty ubiquitous. So we dont want to filter and subsequently cluster according to the expression of this gene. Similarly, Hb genes are highly expressed in rbc, which may represent contamination. We can remove these too. 
+
+```{r}
+keep_genes <- rownames(data)[!rownames(data) %in% c(grep("MALAT1", rownames(data), value=T), grep("^HB[^(P)]", rownames(data), value=T))]
+data <- subset(data, features = keep_genes)
+```
+
+Low genes can create noise and take up unnecessary space in the object. Lets remove genes according to the original manuscript, whereby a gene not found in > 2 spots is removed. You can adjust this as you wish. 
+
+```{r}
+table(rowSums(data@assays$Spatial@layers$counts>=1)>=2)
+keep_genes <- rowSums(data@assays$Spatial@layers$counts >= 1) >= 2
+#before filtering
+dim(data)
+data <- subset(data, features = rownames(data)[keep_genes])
+# after filtering
+dim(data)
+```
 
 </div>
+
+<hr>
+
+We recommend taking some time to carefully consider your QC strategy. <i>**There is no universal gold standard</i>**. One common approach is to start with lenient QC, proceed with processing, and during clustering and annotation, remain aware of the relaxed filtering. If unexpected results arise, you can revisit and refine your QC. Personally, I prefer to be permissive at first, while tagging potential outliers for future consideration. For example, we initially filtered out genes not present in at least 2 spots, but I may also label genes present in fewer than 5 spots as “toQC” for later review—particularly when assessing differential expression results. Similarly, we applied a 15% mitochondrial threshold but did not filter based on ribosomal content. At a later stage, we could tighten the mitochondrial threshold to 10% and include a filter for high ribosomal spots. If unusual clusters appear, we can then assess how many of those cells would have been excluded under stricter QC.
+
+
+# Data Processing{.tabset .tabset-fade}
+
+Seurat is an efficient package with simple functions for standard processing. 
+
+- `NormalizeData`: The default is to log-normalize *(Feature counts for each cell are divided by the total counts for that cell and multiplied by the scale.factor. This is then natural-log transformed using log1p)*. Spatial data may be better normalised with Area/cell count considered. As we don't have cell counts per spot here, we'll stick to the standard approach and that taken by the authors 
+
+- `FindVariableFeatures`: The standard approach is 2000 top variable genes + 'vst' selection method. *(First, fits a line to the relationship of log(variance) and log(mean) using local polynomial regression (loess). Then standardizes the feature values using the observed mean and expected variance (given by the fitted line). Feature variance is then calculated on the standardized values after clipping to a maximum)*. Standard is 2000 genes
+
+- `ScaleData`: here, we scale just the variable genes to save space. If you find yourself unable to visualise your gene of interest in subsequent visualisations, it was not in this top variable list. In that case, you can scale all data. 
+
+- `RunPCA` & `RunUMAP`: Visualisation tools. There are a few things to consider in the UMAP function, but most important is the `dims` argument. We'll cover this below. 
+
+<div>
+
+## Normalisation
+
+Again, normalisation is quite simple. 
+
+```{r}
+data <- NormalizeData(data, 
+                      normalization.method = "LogNormalize",
+                      verbose=F)
+```
+
+## Variable Features
+
+We'll find the top variable features.
+
+```{r}
+data <- FindVariableFeatures(data, 
+                             method = 'vst', 
+                             nfeatures = 2000, 
+                             verbose=F)
+```
+
+We can output/visualise them in several ways. 
+
+```{r}
+VariableFeatures(data) %>% head(50)
+
+LabelPoints(plot = VariableFeaturePlot(data), 
+            points = head(VariableFeatures(data), 50), repel = TRUE)
+```
+
+## Scale Data
+
+Scaling the data is also easy!
+
+```{r}
+data <- ScaleData(data, 
+                  features = VariableFeatures(data), #if you want to scale all features, change this to rownames(data)
+        verbose=F)
+```
+
+## PCA & UMAP
+
+Also very easy with Seurat. We'll determine the number of PCs to use for the UMAP using ElbowPlot
+
+```{r}
+data <- RunPCA(data,
+               npcs = 50,
+               verbose=F)
+
+ElbowPlot(data)
+```
+
+The elbow plot drops off drastically and plateaus at ~6, meaning the variation just becomes noisy around PC6-onwards. So we'll just use the first 6. 
+
+```{r}
+data <- RunUMAP(data, 
+                dims=1:6, 
+                verbose=F)
+```
+
+</div><hr>
+
+# Visualisation{.tabset .tabset-fade}
+
+There are several visualisations we can do:
+
+**Graph**:
+
+- UMAP visualisation
+
+- Cluster based expressions
+
+**Spatial**:
+
+- Genes overlaid on the tissue
+
+- Module scores overlaid on the tissue
+
+## UMAP{.tabset .tabset-fade}
+
+### UMAP Visualisation
+
+We'll first cluster the data.
+
+```{r}
+
+data <- data %>% 
+  FindNeighbors(dims = 1:6, verbose=F) %>%
+  FindClusters(resolution=1, verbose=F)
+
+```
+
+And now we can create a UMAP. 
+
+```{r}
+p1=UMAPPlot(data,
+            label=T, label.box=T)+
+  NoLegend()+
+  NoAxes()+
+  ggtitle("11 Clusters")
+```
+
+<details><summary>**Open to view more Plotting options**</summary>
+
+Here are some additional arguments that change the default visualisations. Chop and change to see how they work:
+
+```{r}
+UMAPPlot(data, 
+         pt.size=2, 
+         label=T, 
+         label.size=10,
+         label.box=T,
+         label.color="white",
+         repel=T)+
+  NoLegend()+
+  NoAxes()+
+  scale_color_manual(values= c("blue4", 'blue2', 'lightblue', 'green2', 'green4','brown', 'orange', 'red', 'red3', 'red4', 'black'))+
+  scale_fill_manual(values= c("blue4", 'blue2', 'lightblue', 'green2', 'green4','brown', 'orange', 'red', 'red3', 'red4', 'black'))
+```
+
+</details>
+
+### Featureplots
+
+We can view the gene expression on the UMAP itself. 
+
+```{r}
+p2=FeaturePlot(data, 
+            "CD3E",
+            order=T,
+            pt.size=2, 
+            cols = c("yellow2", 'blue3'))+NoAxes()+NoLegend()
+p3=FeaturePlot(data, 
+            "F13A1",
+            order=T,
+            pt.size=2, 
+            cols = c("yellow2", 'blue3'))+NoAxes()+NoLegend()
+p4=FeaturePlot(data, 
+            "COL1A1",
+            order=T,
+            pt.size=2, 
+            cols = c("yellow2", 'blue3'))+NoAxes()+NoLegend()
+p5=FeaturePlot(data, 
+            "KRT5",
+            order=T,
+            pt.size=2,
+            min.cutoff = 3,
+            cols = c("yellow2", 'blue3'))+NoAxes()+NoLegend()
+plot_grid(p1, plot_grid(p2,p3,p4,p5, ncol=2))
+```
+
+### DE and DotPlots
+
+And we can simply assess the clusters themselves using differential analysis and expression graphs. 
+
+```{r}
+
+
+markers <- FindAllMarkers(data, 
+                          logfc.threshold = 0.1,#default - increasing speeds it up, but may miss weaker signals.
+                          min.pct = 0.01, #default - can be increased to ensure that the minimum expression of genes are considered. 
+                          min.diff.pct = -Inf, # you can adjust this too. IF you want there to be at least a 10% difference in percentage of spots expressing the gene, you'd change this to 0.1. Can ensure that its not only the level of expression, but that you're capturing highly expressed genes
+                          verbose=F #change this to true if you want to track the speed at which DE is being calculated. It is off here to save it outputting into the document 
+                          ) 
+top10 <- markers %>% 
+  group_by(cluster) %>% 
+  top_n(wt=avg_log2FC, n=10)
+```
+
+<details><summary>Heatmap</summary>
+
+```{r}
+DoHeatmap(AggregateExpression(ScaleData(data, rownames(data), verbose=F), return.seurat = T, verbose=F),
+          features = top10$gene, 
+          draw.lines = F)
+```
+
+<hr>
+
+</details>
+
+<details><summary>DotPlot</summary>
+
+```{r}
+DotPlot(data, 
+        features = c("CD3E", "CLEC10A", "CD207", "KRT5", "COL1A1"), 
+        cols=c("grey", "red"))
+```
+
+</details>
+
+<details><summary>Violin</summary>
+
+```{r}
+VlnPlot(data, 
+        features = c("CD3E", "CLEC10A", "CD207", "KRT5", "COL1A1"))
+VlnPlot(data, 
+        features = c("CD3E", "CLEC10A", "CD207", "KRT5", "COL1A1"), stack=T)
+```
+
+</details>
+
+## Spatial{.tabset .tabset-fade}
+
+We can do a few things here. 
+
+### Clusters overlaid spatially
+
+```{r}
+SpatialDimPlot(data, pt.size=3)
+ImageDimPlot(data, size=3)
+```
+
+### Expressions overlaid spatially
+
+```{r}
+SpatialFeaturePlot(data, 
+                   features="CD3E",
+                   pt.size=3)
+
+SpatialFeaturePlot(data, 
+                   features="CD3E",
+                   pt.size=3)+
+  scale_fill_viridis_b()
+
+ImageFeaturePlot(data, 
+                   features="CD3E",
+                   size=3)
+```
+
+
+
+
+
+
+
 
 
 
