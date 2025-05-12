@@ -504,7 +504,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-05-07
+<strong>Last updated:</strong> 2025-05-12
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -636,15 +636,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreeff95f8fe1f24a1144fb4d0c7581e92ee527f4643targetblankff95f8fa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreef349cafbbc6959115d7f63fea1f23c977a2907e4targetblankf349cafa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/ff95f8fe1f24a1144fb4d0c7581e92ee527f4643" target="_blank">ff95f8f</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/f349cafbbc6959115d7f63fea1f23c977a2907e4" target="_blank">f349caf</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreeff95f8fe1f24a1144fb4d0c7581e92ee527f4643targetblankff95f8fa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreef349cafbbc6959115d7f63fea1f23c977a2907e4targetblankf349cafa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -654,7 +654,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/ff95f8fe1f24a1144fb4d0c7581e92ee527f4643" target="_blank">ff95f8f</a>.
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/f349cafbbc6959115d7f63fea1f23c977a2907e4" target="_blank">f349caf</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -679,9 +679,9 @@ Ignored files:
     Ignored:    raw/
 
 Unstaged changes:
-    Modified:   .gitignore
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/x202504_Workshop.Rmd
+    Modified:   analysis/202505.Rmd
+    Modified:   analysis/202505_InFocus.Rmd
+    Modified:   analysis/202505_Seminar.Rmd
     Modified:   workflow.R
 
 </code></pre>
@@ -728,6 +728,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/f349cafbbc6959115d7f63fea1f23c977a2907e4/analysis/202505_Workshop.Rmd" target="_blank">f349caf</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-05-12
+</td>
+<td>
+wflow_publish("analysis/202505_Workshop.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/cff79238bf16b8671c9c52ee5e87aa7cf2504018/docs/202505_Workshop.html" target="_blank">cff7923</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-05-07
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -833,30 +867,40 @@ link</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;raw&quot;</span>)){<span class="fu">dir.create</span>(<span class="st">&quot;raw&quot;</span>)}</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;data&quot;</span>)){<span class="fu">dir.create</span>(<span class="st">&quot;data&quot;</span>)}</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">&quot;plots&quot;</span>)){<span class="fu">dir.create</span>(<span class="st">&quot;plots&quot;</span>)}</span></code></pre></div>
+<p><wimr></p>
 </div>
 <div id="install-packages" class="section level2">
 <h2>Install Packages</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;Seurat&quot;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowplot&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;GEOquery&quot;</span>)</span></code></pre></div>
 <p>We have a function that will let you check the setup</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;https://github.com/DrThomasOneil/Digital-Research-Skills-Network/raw/refs/heads/main/docs/adit/checksetup.R&quot;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">checkSetup</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="at">cran_packages =</span> <span class="fu">c</span>(<span class="st">&quot;Seurat&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>), </span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="at">bioc_packages=</span><span class="fu">c</span>() </span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>
---------------------------------------
-
-***Installing General Packages***
-
-Seurat is loaded!
-tidyverse is loaded!
-
---------------------------------------
- 
- All packages are loaded!
-
- Happy Coding! :)</code></pre>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">checkSetup</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="at">cran_packages =</span> <span class="fu">c</span>(<span class="st">&quot;Seurat&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;cowplot&quot;</span>), </span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  <span class="at">bioc_packages=</span><span class="fu">c</span>(<span class="st">&quot;GEOquery&quot;</span>) </span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="sc">--------------------------------------</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="er">***</span>Installing General Packages<span class="sc">**</span><span class="er">*</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>Seurat is loaded<span class="sc">!</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>tidyverse is loaded<span class="sc">!</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>cowplot is loaded<span class="sc">!</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>GEOquery is loaded<span class="sc">!</span></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="sc">--------------------------------------</span></span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a> </span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a> All packages are loaded<span class="sc">!</span></span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a> Happy Coding<span class="sc">!</span> <span class="er">:)</span></span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1337</span>)</span></code></pre></div>
+<p><wimr></p>
 </div>
 <div id="download-data" class="section level2">
 <h2>Download data</h2>
@@ -868,19 +912,589 @@ href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11646855/">published in
 2024</a>. Additionally, this group have published <a
 href="https://github.com/vildeka/Spatial_DMPA?tab=readme-ov-file">all of
 their methods and scripts for analysis</a>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Go to the GEO page and right click on the http link under download. It should look like this</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>data_file <span class="ot">&lt;-</span> <span class="st">&quot;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&quot;</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co"># download the data</span></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span>data_file, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co"># repeat for metadata</span></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&#39;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&amp;file=GSE290350%5Fmetadata%2Ecsv%2Egz&#39;</span>, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co"># and the supposed processed Seurat data</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_seuratObj_spatial_dist.RDS&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&amp;file=GSE290350%5FseuratObj%5Fspatial%5Fdist%2ERDS&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_seuratObj_spatial_dist.RDS&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Go to the GEO page and right click on the http link under download. It should look like this</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>data_file <span class="ot">&lt;-</span> <span class="st">&quot;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&quot;</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="co"># download the data</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span>data_file, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="co"># repeat for metadata</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&#39;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&amp;file=GSE290350%5Fmetadata%2Ecsv%2Egz&#39;</span>, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="co"># and the supposed processed Seurat data</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">&quot;raw/GSE290350_seuratObj_spatial_dist.RDS&quot;</span>)){<span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE290350&amp;format=file&amp;file=GSE290350%5FseuratObj%5Fspatial%5Fdist%2ERDS&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;raw/GSE290350_seuratObj_spatial_dist.RDS&quot;</span>, <span class="at">method=</span><span class="st">&#39;curl&#39;</span>)}</span></code></pre></div>
+<p><wimr></p>
 </div>
+<div id="unzip-and-untar-the-raw-data" class="section level2">
+<h2>Unzip and untar the raw data</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">untar</span>(<span class="st">&quot;raw/GSE290350_RAW.tar&quot;</span>, <span class="at">exdir =</span> <span class="st">&quot;../raw/GSE290350_RAW&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>samples <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="st">&quot;raw/GSE290350_RAW&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.tar</span><span class="sc">\\</span><span class="st">.gz$&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(samples)) {</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  tar_path <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">.gz$&quot;</span>, <span class="st">&quot;&quot;</span>, samples[i])</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="co"># Unzip the .tar.gz file</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  GEOquery<span class="sc">::</span><span class="fu">gunzip</span>(samples[i], <span class="at">destname =</span> tar_path, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  output_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;raw/GSE290350_RAW&quot;</span>, <span class="fu">sub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">.tar$&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">basename</span>(tar_path)))</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="fu">dir.create</span>(output_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="co"># Extract tar to output directory</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  <span class="fu">untar</span>(tar_path, <span class="at">exdir =</span> output_dir)</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>}</span></code></pre></div>
+<p><wimr></p>
+</div>
+</div>
+<div id="pre-processing" class="section level1 tabset tabset-fade">
+<h1 class="tabset tabset-fade">Pre-processing</h1>
+<p>Here we’ll load in the data. Fortunately, this data is quite neatly
+organised. When present, we can load the <code>.h5</code> object. Please
+see the <code>Archive</code> page of the <a
+href="https://digitalresearchskills.network/0_archive.html">website</a>
+to find vignettes on downloading and installing GEO-sourced objects that
+are not as well-organised!</p>
+<p>We will:</p>
+<ul>
+<li><p>Load the data</p></li>
+<li><p>Add the meta data</p></li>
+<li><p>Check the QC, filter and process the data</p></li>
+</ul>
+<div>
+<div id="load-in-the-data" class="section level2">
+<h2>Load in the data</h2>
+<p>We’ll load in the supplied metadata, and then we can load 10X data
+quite easily using the Load10X_Spatial function, which requires a
+certain format. We can load in the filtered matrix, which is filtered
+based on whether the initial processing detected that that spot aligned
+with tissue. Alternatively, you can load the raw object, and filter as
+you wish.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;raw/GSE290350_metadata.csv.gz&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">Load10X_Spatial</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="at">data.dir=</span><span class="st">&quot;raw/GSE290350_RAW/GSM8811056_P004/P004&quot;</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>  <span class="at">filename =</span> <span class="st">&quot;filtered_feature_bc_matrix.h5&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>  <span class="at">filter.matrix =</span> F</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>)</span></code></pre></div>
+<p><wimr></p>
+</div>
+<div id="add-meta-data" class="section level2">
+<h2>Add meta data</h2>
+<p>The metadata provided is not found in the object itself. So we will
+run a small piece of code that lets you add metadata to a Seurat
+object.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>data<span class="sc">$</span>ID <span class="ot">&lt;-</span> <span class="st">&quot;P004&quot;</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">AddMetaData</span>(data,</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>                    data<span class="sc">@</span>meta.data <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>                      <span class="fu">right_join</span>(meta[meta<span class="sc">$</span>ID<span class="sc">==</span><span class="st">&quot;P004&quot;</span>, ], <span class="at">by=</span><span class="st">&quot;ID&quot;</span>))</span></code></pre></div>
+</div>
+<div id="qc" class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade">QC</h2>
+<p>There are several ways to QC transcriptomic data. First, you should
+check and scrutinise the <a
+href="https://github.com/vildeka/Spatial_DMPA?tab=readme-ov-file">original
+manuscript</a>.</p>
+<p>We will assess:</p>
+<ul>
+<li><p>number of genes per spot</p></li>
+<li><p>number of unique genes per spot</p></li>
+<li><p>mitochondrial, haemoglobin, and ribosomal percentage.</p></li>
+</ul>
+<p>We’ll also filter the genes themselves, to remove noisy/pointless
+genes.</p>
+<ul>
+<li><p>genes that are not present in more than x number of
+spots</p></li>
+<li><p>high expressing spots.</p></li>
+</ul>
+<div id="genes-per-spot-unique-genes-per-spot" class="section level3">
+<h3>Genes per spot &amp; Unique genes per spot</h3>
+<p>This is a typical <code>single-cell RNA</code> analysis metric. It
+should be carefully considered how this data is interpretted and
+filtered, as this is <strong>not</strong> single cell. Spots can have
+double the average or half the average based on the density of cells.
+Indeed, this is a consideration for normalisation, but this
+consideration is for another workshop.</p>
+<p><i><strong>As there is <span style="color:red">no</span> gold
+standard</strong></i>, we will demonstrate how you visualise the QC
+metrics and then filter.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>p1<span class="ot">=</span><span class="fu">FeatureScatter</span>(data, <span class="st">&quot;nCount_Spatial&quot;</span>, <span class="st">&quot;nFeature_Spatial&quot;</span>)<span class="sc">+</span><span class="fu">NoLegend</span>()</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="co"># number of genes</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>p2<span class="ot">=</span><span class="fu">SpatialFeaturePlot</span>(data, <span class="st">&quot;nCount_Spatial&quot;</span>, </span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>                   <span class="at">crop=</span>F,</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">2</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>                   <span class="at">alpha=</span><span class="fu">c</span>(.<span class="dv">2</span>,<span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>  <span class="fu">NoLegend</span>()</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="co"># number of unique features</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>p3<span class="ot">=</span><span class="fu">SpatialFeaturePlot</span>(data, <span class="st">&quot;nFeature_Spatial&quot;</span>, </span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>                   <span class="at">crop=</span>F,</span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">2</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>                   <span class="at">alpha=</span><span class="fu">c</span>(.<span class="dv">2</span>,<span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>  <span class="fu">NoLegend</span>()</span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a><span class="fu">plot_grid</span>(p1,<span class="fu">plot_grid</span>(p2,p3, <span class="at">nrow=</span><span class="dv">2</span>))</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The minimum number of Features per spot
+(<code>r</code>min(data$nFeature_Spatial)`) and minimum number of Counts
+per spot (151) are greater than the paper’s cut off (presuming they did
+not use the filtered matrix). However, for the purposes of demonstrating
+how this is done:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, </span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>               <span class="at">subset =</span> nCount_Spatial <span class="sc">&gt;</span> <span class="dv">100</span> <span class="sc">&amp;</span> nFeature_Spatial <span class="sc">&gt;</span><span class="dv">100</span>)</span></code></pre></div>
+</div>
+<div id="module-scoring" class="section level3">
+<h3>Module Scoring</h3>
+<p>In this paper, they remove cells that are &gt;15% Mt genes &amp; &gt;
+10% Hb reads.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(data, <span class="st">&quot;^MT-&quot;</span>, <span class="at">col.name =</span> <span class="st">&quot;percent_mito&quot;</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(data, <span class="st">&quot;^HB[^(P)]&quot;</span>, <span class="at">col.name =</span> <span class="st">&quot;percent_hb&quot;</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(data, <span class="st">&quot;^RP[SL]&quot;</span>, <span class="at">col.name =</span> <span class="st">&quot;percent_ribo&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>feature <span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="st">&quot;nCount_Spatial&quot;</span>, <span class="st">&quot;nFeature_Spatial&quot;</span>,<span class="st">&quot;percent_mito&quot;</span>,<span class="st">&quot;percent_hb&quot;</span>, <span class="st">&quot;percent_ribo&quot;</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">sapply</span>(data<span class="sc">@</span>meta.data[feature], summary) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">&quot;stat&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">1</span>)</span></code></pre></div>
+<table style="width:100%;">
+<colgroup>
+<col width="10%" />
+<col width="19%" />
+<col width="22%" />
+<col width="16%" />
+<col width="14%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">stat</th>
+<th align="right">nCount_Spatial</th>
+<th align="right">nFeature_Spatial</th>
+<th align="right">percent_mito</th>
+<th align="right">percent_hb</th>
+<th align="right">percent_ribo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Min.</td>
+<td align="right">151.0</td>
+<td align="right">107.0</td>
+<td align="right">1.9</td>
+<td align="right">0.0</td>
+<td align="right">2.3</td>
+</tr>
+<tr class="even">
+<td align="left">1st Qu.</td>
+<td align="right">1068.2</td>
+<td align="right">680.0</td>
+<td align="right">5.4</td>
+<td align="right">0.0</td>
+<td align="right">8.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">2644.5</td>
+<td align="right">1363.0</td>
+<td align="right">6.5</td>
+<td align="right">0.0</td>
+<td align="right">9.6</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">6114.8</td>
+<td align="right">1934.1</td>
+<td align="right">6.7</td>
+<td align="right">0.1</td>
+<td align="right">9.9</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Qu.</td>
+<td align="right">6933.2</td>
+<td align="right">2584.2</td>
+<td align="right">7.8</td>
+<td align="right">0.1</td>
+<td align="right">11.8</td>
+</tr>
+<tr class="even">
+<td align="left">Max.</td>
+<td align="right">70736.0</td>
+<td align="right">9935.0</td>
+<td align="right">14.6</td>
+<td align="right">12.1</td>
+<td align="right">20.9</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>p1<span class="ot">=</span><span class="fu">SpatialFeaturePlot</span>(data, <span class="st">&quot;percent_mito&quot;</span>, </span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>                   <span class="at">crop=</span>F,</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">2</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>                   <span class="at">alpha=</span><span class="fu">c</span>(.<span class="dv">2</span>,<span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>  <span class="fu">NoLegend</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Mito&quot;</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>p2<span class="ot">=</span><span class="fu">SpatialFeaturePlot</span>(data, <span class="st">&quot;percent_hb&quot;</span>, </span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>                   <span class="at">crop=</span>F,</span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">2</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>                   <span class="at">alpha=</span><span class="fu">c</span>(.<span class="dv">2</span>,<span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a>  <span class="fu">NoLegend</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Hb-genes&quot;</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a>p3<span class="ot">=</span><span class="fu">SpatialFeaturePlot</span>(data, <span class="st">&quot;percent_ribo&quot;</span>, </span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a>                   <span class="at">crop=</span>F,</span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">2</span>,</span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a>                   <span class="at">alpha=</span><span class="fu">c</span>(.<span class="dv">2</span>,<span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a>  <span class="fu">NoLegend</span>()<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">&quot;Ribo&quot;</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a><span class="fu">plot_grid</span>(p1,p2,p3)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Filter:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">subset =</span> percent_mito<span class="sc">&lt;</span><span class="dv">15</span> <span class="sc">&amp;</span> percent_hb <span class="sc">&lt;</span><span class="dv">10</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">sapply</span>(data<span class="sc">@</span>meta.data[feature], summary) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">&quot;stat&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">1</span>)</span></code></pre></div>
+<table style="width:100%;">
+<colgroup>
+<col width="10%" />
+<col width="19%" />
+<col width="22%" />
+<col width="16%" />
+<col width="14%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">stat</th>
+<th align="right">nCount_Spatial</th>
+<th align="right">nFeature_Spatial</th>
+<th align="right">percent_mito</th>
+<th align="right">percent_hb</th>
+<th align="right">percent_ribo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Min.</td>
+<td align="right">151.0</td>
+<td align="right">107.0</td>
+<td align="right">1.9</td>
+<td align="right">0.0</td>
+<td align="right">2.3</td>
+</tr>
+<tr class="even">
+<td align="left">1st Qu.</td>
+<td align="right">1067.5</td>
+<td align="right">681.0</td>
+<td align="right">5.4</td>
+<td align="right">0.0</td>
+<td align="right">8.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">2654.0</td>
+<td align="right">1363.0</td>
+<td align="right">6.5</td>
+<td align="right">0.0</td>
+<td align="right">9.6</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">6118.8</td>
+<td align="right">1935.1</td>
+<td align="right">6.7</td>
+<td align="right">0.1</td>
+<td align="right">9.9</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Qu.</td>
+<td align="right">6952.5</td>
+<td align="right">2585.5</td>
+<td align="right">7.8</td>
+<td align="right">0.1</td>
+<td align="right">11.8</td>
+</tr>
+<tr class="even">
+<td align="left">Max.</td>
+<td align="right">70736.0</td>
+<td align="right">9935.0</td>
+<td align="right">14.6</td>
+<td align="right">4.7</td>
+<td align="right">20.9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="filter-genes" class="section level3">
+<h3>Filter genes</h3>
+<p>We’ll first remove certain genes. MALAT1 is highly expressed in long
+non-coding RNA and is pretty ubiquitous. So we dont want to filter and
+subsequently cluster according to the expression of this gene.
+Similarly, Hb genes are highly expressed in rbc, which may represent
+contamination. We can remove these too.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>keep_genes <span class="ot">&lt;-</span> <span class="fu">rownames</span>(data)[<span class="sc">!</span><span class="fu">rownames</span>(data) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="fu">grep</span>(<span class="st">&quot;MALAT1&quot;</span>, <span class="fu">rownames</span>(data), <span class="at">value=</span>T), <span class="fu">grep</span>(<span class="st">&quot;^HB[^(P)]&quot;</span>, <span class="fu">rownames</span>(data), <span class="at">value=</span>T))]</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">features =</span> keep_genes)</span></code></pre></div>
+<p>Low genes can create noise and take up unnecessary space in the
+object. Lets remove genes according to the original manuscript, whereby
+a gene not found in &gt; 2 spots is removed. You can adjust this as you
+wish.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">rowSums</span>(data<span class="sc">@</span>assays<span class="sc">$</span>Spatial<span class="sc">@</span>layers<span class="sc">$</span>counts<span class="sc">&gt;=</span><span class="dv">1</span>)<span class="sc">&gt;=</span><span class="dv">2</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="cn">FALSE</span>  <span class="cn">TRUE</span> </span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="dv">17971</span> <span class="dv">18617</span> </span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>keep_genes <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(data<span class="sc">@</span>assays<span class="sc">$</span>Spatial<span class="sc">@</span>layers<span class="sc">$</span>counts <span class="sc">&gt;=</span> <span class="dv">1</span>) <span class="sc">&gt;=</span> <span class="dv">2</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co">#before filtering</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="fu">dim</span>(data)</span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">36588</span>  <span class="dv">1255</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">features =</span> <span class="fu">rownames</span>(data)[keep_genes])</span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="co"># after filtering</span></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="fu">dim</span>(data)</span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">18617</span>  <span class="dv">1255</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>We recommend taking some time to carefully consider your QC strategy.
+<i><strong>There is no universal gold standard</i></strong>. One common
+approach is to start with lenient QC, proceed with processing, and
+during clustering and annotation, remain aware of the relaxed filtering.
+If unexpected results arise, you can revisit and refine your QC.
+Personally, I prefer to be permissive at first, while tagging potential
+outliers for future consideration. For example, we initially filtered
+out genes not present in at least 2 spots, but I may also label genes
+present in fewer than 5 spots as “toQC” for later review—particularly
+when assessing differential expression results. Similarly, we applied a
+15% mitochondrial threshold but did not filter based on ribosomal
+content. At a later stage, we could tighten the mitochondrial threshold
+to 10% and include a filter for high ribosomal spots. If unusual
+clusters appear, we can then assess how many of those cells would have
+been excluded under stricter QC.</p>
+</div>
+<div id="data-processing" class="section level1 tabset tabset-fade">
+<h1 class="tabset tabset-fade">Data Processing</h1>
+<p>Seurat is an efficient package with simple functions for standard
+processing.</p>
+<ul>
+<li><p><code>NormalizeData</code>: The default is to log-normalize
+<em>(Feature counts for each cell are divided by the total counts for
+that cell and multiplied by the scale.factor. This is then natural-log
+transformed using log1p)</em>. Spatial data may be better normalised
+with Area/cell count considered. As we don’t have cell counts per spot
+here, we’ll stick to the standard approach and that taken by the
+authors</p></li>
+<li><p><code>FindVariableFeatures</code>: The standard approach is 2000
+top variable genes + ‘vst’ selection method. <em>(First, fits a line to
+the relationship of log(variance) and log(mean) using local polynomial
+regression (loess). Then standardizes the feature values using the
+observed mean and expected variance (given by the fitted line). Feature
+variance is then calculated on the standardized values after clipping to
+a maximum)</em>. Standard is 2000 genes</p></li>
+<li><p><code>ScaleData</code>: here, we scale just the variable genes to
+save space. If you find yourself unable to visualise your gene of
+interest in subsequent visualisations, it was not in this top variable
+list. In that case, you can scale all data.</p></li>
+<li><p><code>RunPCA</code> &amp; <code>RunUMAP</code>: Visualisation
+tools. There are a few things to consider in the UMAP function, but most
+important is the <code>dims</code> argument. We’ll cover this
+below.</p></li>
+</ul>
+<div>
+<div id="normalisation" class="section level2">
+<h2>Normalisation</h2>
+<p>Again, normalisation is quite simple.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(data, </span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>                      <span class="at">normalization.method =</span> <span class="st">&quot;LogNormalize&quot;</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>                      <span class="at">verbose=</span>F)</span></code></pre></div>
+</div>
+<div id="variable-features" class="section level2">
+<h2>Variable Features</h2>
+<p>We’ll find the top variable features.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(data, </span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>                             <span class="at">method =</span> <span class="st">&#39;vst&#39;</span>, </span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>                             <span class="at">nfeatures =</span> <span class="dv">2000</span>, </span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a>                             <span class="at">verbose=</span>F)</span></code></pre></div>
+<p>We can output/visualise them in several ways.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">VariableFeatures</span>(data) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">50</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;PI3&quot;</span>        <span class="st">&quot;SPRR1A&quot;</span>     <span class="st">&quot;IGLC3&quot;</span>      <span class="st">&quot;FLG&quot;</span>        <span class="st">&quot;IGHA2&quot;</span>     </span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a> [<span class="dv">6</span>] <span class="st">&quot;IGLC2&quot;</span>      <span class="st">&quot;IGHA1&quot;</span>      <span class="st">&quot;JCHAIN&quot;</span>     <span class="st">&quot;IGHG1&quot;</span>      <span class="st">&quot;AC019349.1&quot;</span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>[<span class="dv">11</span>] <span class="st">&quot;IGKC&quot;</span>       <span class="st">&quot;IGLC1&quot;</span>      <span class="st">&quot;IGHG4&quot;</span>      <span class="st">&quot;KRT10&quot;</span>      <span class="st">&quot;IGHM&quot;</span>      </span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;MUSTN1&quot;</span>     <span class="st">&quot;CRISP3&quot;</span>     <span class="st">&quot;CEACAM5&quot;</span>    <span class="st">&quot;SPINK7&quot;</span>     <span class="st">&quot;SERPINB4&quot;</span>  </span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>[<span class="dv">21</span>] <span class="st">&quot;KRTDAP&quot;</span>     <span class="st">&quot;SERPINB3&quot;</span>   <span class="st">&quot;PI15&quot;</span>       <span class="st">&quot;RPTN&quot;</span>       <span class="st">&quot;SPRR2B&quot;</span>    </span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>[<span class="dv">26</span>] <span class="st">&quot;KLK6&quot;</span>       <span class="st">&quot;MGST1&quot;</span>      <span class="st">&quot;KRT6B&quot;</span>      <span class="st">&quot;SLURP1&quot;</span>     <span class="st">&quot;ERO1A&quot;</span>     </span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;CCL14&quot;</span>      <span class="st">&quot;KRT1&quot;</span>       <span class="st">&quot;SPRR2E&quot;</span>     <span class="st">&quot;RNASE7&quot;</span>     <span class="st">&quot;TOP2A&quot;</span>     </span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a>[<span class="dv">36</span>] <span class="st">&quot;CRCT1&quot;</span>      <span class="st">&quot;MT1X&quot;</span>       <span class="st">&quot;RRM2&quot;</span>       <span class="st">&quot;S100A7&quot;</span>     <span class="st">&quot;DUOXA2&quot;</span>    </span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a>[<span class="dv">41</span>] <span class="st">&quot;STMN1&quot;</span>      <span class="st">&quot;LCE3D&quot;</span>      <span class="st">&quot;PCNA&quot;</span>       <span class="st">&quot;FAM25A&quot;</span>     <span class="st">&quot;IGHG3&quot;</span>     </span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a>[<span class="dv">46</span>] <span class="st">&quot;C15orf48&quot;</span>   <span class="st">&quot;OLFM4&quot;</span>      <span class="st">&quot;PTTG1&quot;</span>      <span class="st">&quot;YOD1&quot;</span>       <span class="st">&quot;CEACAM7&quot;</span>   </span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a><span class="fu">LabelPoints</span>(<span class="at">plot =</span> <span class="fu">VariableFeaturePlot</span>(data), </span>
+<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a>            <span class="at">points =</span> <span class="fu">head</span>(<span class="fu">VariableFeatures</span>(data), <span class="dv">50</span>), <span class="at">repel =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="scale-data" class="section level2">
+<h2>Scale Data</h2>
+<p>Scaling the data is also easy!</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(data, </span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>                  <span class="at">features =</span> <span class="fu">VariableFeatures</span>(data), <span class="co">#if you want to scale all features, change this to rownames(data)</span></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>        <span class="at">verbose=</span>F)</span></code></pre></div>
+</div>
+<div id="pca-umap" class="section level2">
+<h2>PCA &amp; UMAP</h2>
+<p>Also very easy with Seurat. We’ll determine the number of PCs to use
+for the UMAP using ElbowPlot</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">RunPCA</span>(data,</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>               <span class="at">npcs =</span> <span class="dv">50</span>,</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>               <span class="at">verbose=</span>F)</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a><span class="fu">ElbowPlot</span>(data)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The elbow plot drops off drastically and plateaus at ~6, meaning the
+variation just becomes noisy around PC6-onwards. So we’ll just use the
+first 6.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">RunUMAP</span>(data, </span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>                <span class="at">dims=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, </span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>                <span class="at">verbose=</span>F)</span></code></pre></div>
+</div>
+</div>
+<hr>
+</div>
+<div id="visualisation" class="section level1 tabset tabset-fade">
+<h1 class="tabset tabset-fade">Visualisation</h1>
+<p>There are several visualisations we can do:</p>
+<p><strong>Graph</strong>:</p>
+<ul>
+<li><p>UMAP visualisation</p></li>
+<li><p>Cluster based expressions</p></li>
+</ul>
+<p><strong>Spatial</strong>:</p>
+<ul>
+<li><p>Genes overlaid on the tissue</p></li>
+<li><p>Module scores overlaid on the tissue</p></li>
+</ul>
+<div id="umap" class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade">UMAP</h2>
+<div id="umap-visualisation" class="section level3">
+<h3>UMAP Visualisation</h3>
+<p>We’ll first cluster the data.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>  <span class="fu">FindNeighbors</span>(<span class="at">dims =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">verbose=</span>F) <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>  <span class="fu">FindClusters</span>(<span class="at">resolution=</span><span class="dv">1</span>, <span class="at">verbose=</span>F)</span></code></pre></div>
+<p>And now we can create a UMAP.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>p1<span class="ot">=</span><span class="fu">UMAPPlot</span>(data,</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>            <span class="at">label=</span>T, <span class="at">label.box=</span>T)<span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>  <span class="fu">NoLegend</span>()<span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a>  <span class="fu">NoAxes</span>()<span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;11 Clusters&quot;</span>)</span></code></pre></div>
+<details>
+<summary>
+<strong>Open to view more Plotting options</strong>
+</summary>
+<p>Here are some additional arguments that change the default
+visualisations. Chop and change to see how they work:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">UMAPPlot</span>(data, </span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>         <span class="at">pt.size=</span><span class="dv">2</span>, </span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>         <span class="at">label=</span>T, </span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a>         <span class="at">label.size=</span><span class="dv">10</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>         <span class="at">label.box=</span>T,</span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>         <span class="at">label.color=</span><span class="st">&quot;white&quot;</span>,</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>         <span class="at">repel=</span>T)<span class="sc">+</span></span>
+<span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>  <span class="fu">NoLegend</span>()<span class="sc">+</span></span>
+<span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a>  <span class="fu">NoAxes</span>()<span class="sc">+</span></span>
+<span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span> <span class="fu">c</span>(<span class="st">&quot;blue4&quot;</span>, <span class="st">&#39;blue2&#39;</span>, <span class="st">&#39;lightblue&#39;</span>, <span class="st">&#39;green2&#39;</span>, <span class="st">&#39;green4&#39;</span>,<span class="st">&#39;brown&#39;</span>, <span class="st">&#39;orange&#39;</span>, <span class="st">&#39;red&#39;</span>, <span class="st">&#39;red3&#39;</span>, <span class="st">&#39;red4&#39;</span>, <span class="st">&#39;black&#39;</span>))<span class="sc">+</span></span>
+<span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span> <span class="fu">c</span>(<span class="st">&quot;blue4&quot;</span>, <span class="st">&#39;blue2&#39;</span>, <span class="st">&#39;lightblue&#39;</span>, <span class="st">&#39;green2&#39;</span>, <span class="st">&#39;green4&#39;</span>,<span class="st">&#39;brown&#39;</span>, <span class="st">&#39;orange&#39;</span>, <span class="st">&#39;red&#39;</span>, <span class="st">&#39;red3&#39;</span>, <span class="st">&#39;red4&#39;</span>, <span class="st">&#39;black&#39;</span>))</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
+</details>
+</div>
+<div id="featureplots" class="section level3">
+<h3>Featureplots</h3>
+<p>We can view the gene expression on the UMAP itself.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>p2<span class="ot">=</span><span class="fu">FeaturePlot</span>(data, </span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>            <span class="st">&quot;CD3E&quot;</span>,</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>            <span class="at">order=</span>T,</span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a>            <span class="at">pt.size=</span><span class="dv">2</span>, </span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;yellow2&quot;</span>, <span class="st">&#39;blue3&#39;</span>))<span class="sc">+</span><span class="fu">NoAxes</span>()<span class="sc">+</span><span class="fu">NoLegend</span>()</span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a>p3<span class="ot">=</span><span class="fu">FeaturePlot</span>(data, </span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a>            <span class="st">&quot;F13A1&quot;</span>,</span>
+<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a>            <span class="at">order=</span>T,</span>
+<span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a>            <span class="at">pt.size=</span><span class="dv">2</span>, </span>
+<span id="cb28-10"><a href="#cb28-10" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;yellow2&quot;</span>, <span class="st">&#39;blue3&#39;</span>))<span class="sc">+</span><span class="fu">NoAxes</span>()<span class="sc">+</span><span class="fu">NoLegend</span>()</span>
+<span id="cb28-11"><a href="#cb28-11" tabindex="-1"></a>p4<span class="ot">=</span><span class="fu">FeaturePlot</span>(data, </span>
+<span id="cb28-12"><a href="#cb28-12" tabindex="-1"></a>            <span class="st">&quot;COL1A1&quot;</span>,</span>
+<span id="cb28-13"><a href="#cb28-13" tabindex="-1"></a>            <span class="at">order=</span>T,</span>
+<span id="cb28-14"><a href="#cb28-14" tabindex="-1"></a>            <span class="at">pt.size=</span><span class="dv">2</span>, </span>
+<span id="cb28-15"><a href="#cb28-15" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;yellow2&quot;</span>, <span class="st">&#39;blue3&#39;</span>))<span class="sc">+</span><span class="fu">NoAxes</span>()<span class="sc">+</span><span class="fu">NoLegend</span>()</span>
+<span id="cb28-16"><a href="#cb28-16" tabindex="-1"></a>p5<span class="ot">=</span><span class="fu">FeaturePlot</span>(data, </span>
+<span id="cb28-17"><a href="#cb28-17" tabindex="-1"></a>            <span class="st">&quot;KRT5&quot;</span>,</span>
+<span id="cb28-18"><a href="#cb28-18" tabindex="-1"></a>            <span class="at">order=</span>T,</span>
+<span id="cb28-19"><a href="#cb28-19" tabindex="-1"></a>            <span class="at">pt.size=</span><span class="dv">2</span>,</span>
+<span id="cb28-20"><a href="#cb28-20" tabindex="-1"></a>            <span class="at">min.cutoff =</span> <span class="dv">3</span>,</span>
+<span id="cb28-21"><a href="#cb28-21" tabindex="-1"></a>            <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;yellow2&quot;</span>, <span class="st">&#39;blue3&#39;</span>))<span class="sc">+</span><span class="fu">NoAxes</span>()<span class="sc">+</span><span class="fu">NoLegend</span>()</span>
+<span id="cb28-22"><a href="#cb28-22" tabindex="-1"></a><span class="fu">plot_grid</span>(p1, <span class="fu">plot_grid</span>(p2,p3,p4,p5, <span class="at">ncol=</span><span class="dv">2</span>))</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="de-and-dotplots" class="section level3">
+<h3>DE and DotPlots</h3>
+<p>And we can simply assess the clusters themselves using differential
+analysis and expression graphs.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a>markers <span class="ot">&lt;-</span> <span class="fu">FindAllMarkers</span>(data, </span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a>                          <span class="at">logfc.threshold =</span> <span class="fl">0.1</span>,<span class="co">#default - increasing speeds it up, but may miss weaker signals.</span></span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a>                          <span class="at">min.pct =</span> <span class="fl">0.01</span>, <span class="co">#default - can be increased to ensure that the minimum expression of genes are considered. </span></span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a>                          <span class="at">min.diff.pct =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="co"># you can adjust this too. IF you want there to be at least a 10% difference in percentage of spots expressing the gene, you&#39;d change this to 0.1. Can ensure that its not only the level of expression, but that you&#39;re capturing highly expressed genes</span></span>
+<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a>                          <span class="at">verbose=</span>F <span class="co">#change this to true if you want to track the speed at which DE is being calculated. It is off here to save it outputting into the document </span></span>
+<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a>                          ) </span>
+<span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a>top10 <span class="ot">&lt;-</span> markers <span class="sc">%&gt;%</span> </span>
+<span id="cb29-10"><a href="#cb29-10" tabindex="-1"></a>  <span class="fu">group_by</span>(cluster) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-11"><a href="#cb29-11" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="at">wt=</span>avg_log2FC, <span class="at">n=</span><span class="dv">10</span>)</span></code></pre></div>
+<details>
+<summary>
+Heatmap
+</summary>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="fu">DoHeatmap</span>(<span class="fu">AggregateExpression</span>(<span class="fu">ScaleData</span>(data, <span class="fu">rownames</span>(data), <span class="at">verbose=</span>F), <span class="at">return.seurat =</span> T, <span class="at">verbose=</span>F),</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>          <span class="at">features =</span> top10<span class="sc">$</span>gene, </span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a>          <span class="at">draw.lines =</span> F)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-29-1.png" width="672" style="display: block; margin: auto;" /></p>
+<hr>
+</details>
+<details>
+<summary>
+DotPlot
+</summary>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="fu">DotPlot</span>(data, </span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>        <span class="at">features =</span> <span class="fu">c</span>(<span class="st">&quot;CD3E&quot;</span>, <span class="st">&quot;CLEC10A&quot;</span>, <span class="st">&quot;CD207&quot;</span>, <span class="st">&quot;KRT5&quot;</span>, <span class="st">&quot;COL1A1&quot;</span>), </span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a>        <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;grey&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-30-1.png" width="672" style="display: block; margin: auto;" /></p>
+</details>
+<details>
+<summary>
+Violin
+</summary>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="fu">VlnPlot</span>(data, </span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a>        <span class="at">features =</span> <span class="fu">c</span>(<span class="st">&quot;CD3E&quot;</span>, <span class="st">&quot;CLEC10A&quot;</span>, <span class="st">&quot;CD207&quot;</span>, <span class="st">&quot;KRT5&quot;</span>, <span class="st">&quot;COL1A1&quot;</span>))</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-31-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">VlnPlot</span>(data, </span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>        <span class="at">features =</span> <span class="fu">c</span>(<span class="st">&quot;CD3E&quot;</span>, <span class="st">&quot;CLEC10A&quot;</span>, <span class="st">&quot;CD207&quot;</span>, <span class="st">&quot;KRT5&quot;</span>, <span class="st">&quot;COL1A1&quot;</span>), <span class="at">stack=</span>T)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-31-2.png" width="672" style="display: block; margin: auto;" /></p>
+</details>
+</div>
+</div>
+<div id="spatial" class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade">Spatial</h2>
+<p>We can do a few things here.</p>
+<div id="clusters-overlaid-spatially" class="section level3">
+<h3>Clusters overlaid spatially</h3>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="fu">SpatialDimPlot</span>(data, <span class="at">pt.size=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="fu">ImageDimPlot</span>(data, <span class="at">size=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-32-2.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="expressions-overlaid-spatially" class="section level3">
+<h3>Expressions overlaid spatially</h3>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="fu">SpatialFeaturePlot</span>(data, </span>
+<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a>                   <span class="at">features=</span><span class="st">&quot;CD3E&quot;</span>,</span>
+<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a></span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a><span class="fu">SpatialFeaturePlot</span>(data, </span>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a>                   <span class="at">features=</span><span class="st">&quot;CD3E&quot;</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a>                   <span class="at">pt.size=</span><span class="dv">3</span>)<span class="sc">+</span></span>
+<span id="cb37-5"><a href="#cb37-5" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_b</span>()</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-33-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a></span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a><span class="fu">ImageFeaturePlot</span>(data, </span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a>                   <span class="at">features=</span><span class="st">&quot;CD3E&quot;</span>,</span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1"></a>                   <span class="at">size=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><img src="figure/202505_Workshop.Rmd/unnamed-chunk-33-3.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -889,75 +1503,83 @@ Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
-<pre><code>R version 4.4.0 (2024-04-24)
-Platform: aarch64-apple-darwin20
-Running under: macOS Sonoma 14.3
-
-Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
-
-locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-
-time zone: Australia/Sydney
-tzcode source: internal
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
- [1] lubridate_1.9.4    forcats_1.0.0      stringr_1.5.1      dplyr_1.1.4       
- [5] purrr_1.0.4        readr_2.1.5        tidyr_1.3.1        tibble_3.2.1      
- [9] ggplot2_3.5.1      tidyverse_2.0.0    Seurat_5.2.1       SeuratObject_5.0.2
-[13] sp_2.2-0           cli_3.6.4          workflowr_1.7.1   
-
-loaded via a namespace (and not attached):
-  [1] RColorBrewer_1.1-3     rstudioapi_0.17.1      jsonlite_1.9.1        
-  [4] magrittr_2.0.3         spatstat.utils_3.1-3   farver_2.1.2          
-  [7] rmarkdown_2.29         fs_1.6.5               vctrs_0.6.5           
- [10] ROCR_1.0-11            spatstat.explore_3.3-4 htmltools_0.5.8.1     
- [13] sass_0.4.9             sctransform_0.4.1      parallelly_1.42.0     
- [16] KernSmooth_2.23-26     bslib_0.9.0            htmlwidgets_1.6.4     
- [19] ica_1.0-3              plyr_1.8.9             plotly_4.10.4         
- [22] zoo_1.8-13             cachem_1.1.0           whisker_0.4.1         
- [25] igraph_2.1.4           mime_0.13              lifecycle_1.0.4       
- [28] pkgconfig_2.0.3        Matrix_1.7-3           R6_2.6.1              
- [31] fastmap_1.2.0          fitdistrplus_1.2-2     future_1.34.0         
- [34] shiny_1.10.0           digest_0.6.37          colorspace_2.1-1      
- [37] patchwork_1.3.0        ps_1.9.0               rprojroot_2.0.4       
- [40] tensor_1.5             RSpectra_0.16-2        irlba_2.3.5.1         
- [43] progressr_0.15.1       timechange_0.3.0       spatstat.sparse_3.1-0 
- [46] httr_1.4.7             polyclip_1.10-7        abind_1.4-8           
- [49] compiler_4.4.0         withr_3.0.2            fastDummies_1.7.5     
- [52] MASS_7.3-65            tools_4.4.0            lmtest_0.9-40         
- [55] httpuv_1.6.15          future.apply_1.11.3    goftest_1.2-3         
- [58] glue_1.8.0             callr_3.7.6            nlme_3.1-167          
- [61] promises_1.3.2         grid_4.4.0             Rtsne_0.17            
- [64] getPass_0.2-4          cluster_2.1.8.1        reshape2_1.4.4        
- [67] generics_0.1.3         gtable_0.3.6           spatstat.data_3.1-6   
- [70] tzdb_0.5.0             hms_1.1.3              data.table_1.17.0     
- [73] spatstat.geom_3.3-6    RcppAnnoy_0.0.22       ggrepel_0.9.6         
- [76] RANN_2.6.2             pillar_1.10.1          spam_2.11-1           
- [79] RcppHNSW_0.6.0         later_1.4.1            splines_4.4.0         
- [82] lattice_0.22-6         survival_3.8-3         deldir_2.0-4          
- [85] tidyselect_1.2.1       miniUI_0.1.1.1         pbapply_1.7-2         
- [88] knitr_1.50             git2r_0.35.0           gridExtra_2.3         
- [91] scattermore_1.2        xfun_0.51              matrixStats_1.5.0     
- [94] stringi_1.8.4          lazyeval_0.2.2         yaml_2.3.10           
- [97] evaluate_1.0.3         codetools_0.2-20       uwot_0.2.3            
-[100] xtable_1.8-4           reticulate_1.41.0.1    munsell_0.5.1         
-[103] processx_3.8.6         jquerylib_0.1.4        Rcpp_1.0.14           
-[106] globals_0.16.3         spatstat.random_3.3-2  png_0.1-8             
-[109] spatstat.univar_3.1-2  parallel_4.4.0         dotCall64_1.2         
-[112] listenv_0.9.1          viridisLite_0.4.2      scales_1.3.0          
-[115] ggridges_0.5.6         rlang_1.1.6            cowplot_1.1.3         </code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.0</span> (<span class="dv">2024-04-24</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a>Platform<span class="sc">:</span> aarch64<span class="sc">-</span>apple<span class="sc">-</span>darwin20</span>
+<span id="cb39-4"><a href="#cb39-4" tabindex="-1"></a>Running under<span class="sc">:</span> macOS Sonoma <span class="fl">14.3</span></span>
+<span id="cb39-5"><a href="#cb39-5" tabindex="-1"></a></span>
+<span id="cb39-6"><a href="#cb39-6" tabindex="-1"></a>Matrix products<span class="sc">:</span> default</span>
+<span id="cb39-7"><a href="#cb39-7" tabindex="-1"></a>BLAS<span class="sc">:</span>   <span class="er">/</span>Library<span class="sc">/</span>Frameworks<span class="sc">/</span>R.framework<span class="sc">/</span>Versions<span class="sc">/</span><span class="fl">4.4</span><span class="sc">-</span>arm64<span class="sc">/</span>Resources<span class="sc">/</span>lib<span class="sc">/</span>libRblas.<span class="fl">0.</span>dylib </span>
+<span id="cb39-8"><a href="#cb39-8" tabindex="-1"></a>LAPACK<span class="sc">:</span> <span class="er">/</span>Library<span class="sc">/</span>Frameworks<span class="sc">/</span>R.framework<span class="sc">/</span>Versions<span class="sc">/</span><span class="fl">4.4</span><span class="sc">-</span>arm64<span class="sc">/</span>Resources<span class="sc">/</span>lib<span class="sc">/</span>libRlapack.dylib;  LAPACK version <span class="dv">3</span>.<span class="fl">12.0</span></span>
+<span id="cb39-9"><a href="#cb39-9" tabindex="-1"></a></span>
+<span id="cb39-10"><a href="#cb39-10" tabindex="-1"></a>locale<span class="sc">:</span></span>
+<span id="cb39-11"><a href="#cb39-11" tabindex="-1"></a>[<span class="dv">1</span>] en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>C<span class="sc">/</span>en_US.UTF<span class="dv">-8</span><span class="sc">/</span>en_US.UTF<span class="dv">-8</span></span>
+<span id="cb39-12"><a href="#cb39-12" tabindex="-1"></a></span>
+<span id="cb39-13"><a href="#cb39-13" tabindex="-1"></a>time zone<span class="sc">:</span> Australia<span class="sc">/</span>Sydney</span>
+<span id="cb39-14"><a href="#cb39-14" tabindex="-1"></a>tzcode source<span class="sc">:</span> internal</span>
+<span id="cb39-15"><a href="#cb39-15" tabindex="-1"></a></span>
+<span id="cb39-16"><a href="#cb39-16" tabindex="-1"></a>attached base packages<span class="sc">:</span></span>
+<span id="cb39-17"><a href="#cb39-17" tabindex="-1"></a>[<span class="dv">1</span>] stats     graphics  grDevices utils     datasets  methods   base     </span>
+<span id="cb39-18"><a href="#cb39-18" tabindex="-1"></a></span>
+<span id="cb39-19"><a href="#cb39-19" tabindex="-1"></a>other attached packages<span class="sc">:</span></span>
+<span id="cb39-20"><a href="#cb39-20" tabindex="-1"></a> [<span class="dv">1</span>] GEOquery_2.<span class="fl">72.0</span>     Biobase_2.<span class="fl">64.0</span>      BiocGenerics_0.<span class="fl">50.0</span></span>
+<span id="cb39-21"><a href="#cb39-21" tabindex="-1"></a> [<span class="dv">4</span>] cowplot_1.<span class="fl">1.3</span>       lubridate_1.<span class="fl">9.4</span>     forcats_1.<span class="fl">0.0</span>      </span>
+<span id="cb39-22"><a href="#cb39-22" tabindex="-1"></a> [<span class="dv">7</span>] stringr_1.<span class="fl">5.1</span>       dplyr_1.<span class="fl">1.4</span>         purrr_1.<span class="fl">0.4</span>        </span>
+<span id="cb39-23"><a href="#cb39-23" tabindex="-1"></a>[<span class="dv">10</span>] readr_2.<span class="fl">1.5</span>         tidyr_1.<span class="fl">3.1</span>         tibble_3.<span class="fl">2.1</span>       </span>
+<span id="cb39-24"><a href="#cb39-24" tabindex="-1"></a>[<span class="dv">13</span>] ggplot2_3.<span class="fl">5.1</span>       tidyverse_2.<span class="fl">0.0</span>     Seurat_5.<span class="fl">2.1</span>       </span>
+<span id="cb39-25"><a href="#cb39-25" tabindex="-1"></a>[<span class="dv">16</span>] SeuratObject_5.<span class="fl">0.2</span>  sp_2<span class="fl">.2</span><span class="dv">-0</span>            cli_3.<span class="fl">6.4</span>          </span>
+<span id="cb39-26"><a href="#cb39-26" tabindex="-1"></a>[<span class="dv">19</span>] workflowr_1.<span class="fl">7.1</span>    </span>
+<span id="cb39-27"><a href="#cb39-27" tabindex="-1"></a></span>
+<span id="cb39-28"><a href="#cb39-28" tabindex="-1"></a>loaded via a <span class="fu">namespace</span> (and not attached)<span class="sc">:</span></span>
+<span id="cb39-29"><a href="#cb39-29" tabindex="-1"></a>  [<span class="dv">1</span>] RColorBrewer_1<span class="fl">.1</span><span class="dv">-3</span>     rstudioapi_0.<span class="fl">17.1</span>      jsonlite_1.<span class="fl">9.1</span>        </span>
+<span id="cb39-30"><a href="#cb39-30" tabindex="-1"></a>  [<span class="dv">4</span>] magrittr_2.<span class="fl">0.3</span>         ggbeeswarm_0.<span class="fl">7.2</span>       spatstat.utils_3<span class="fl">.1</span><span class="dv">-3</span>  </span>
+<span id="cb39-31"><a href="#cb39-31" tabindex="-1"></a>  [<span class="dv">7</span>] farver_2.<span class="fl">1.2</span>           rmarkdown_2<span class="fl">.29</span>         fs_1.<span class="fl">6.5</span>              </span>
+<span id="cb39-32"><a href="#cb39-32" tabindex="-1"></a> [<span class="dv">10</span>] vctrs_0.<span class="fl">6.5</span>            ROCR_1<span class="fl">.0</span><span class="dv">-11</span>            spatstat.explore_3<span class="fl">.3</span><span class="dv">-4</span></span>
+<span id="cb39-33"><a href="#cb39-33" tabindex="-1"></a> [<span class="dv">13</span>] htmltools_0.<span class="dv">5</span>.<span class="fl">8.1</span>      sass_0.<span class="fl">4.9</span>             sctransform_0.<span class="fl">4.1</span>     </span>
+<span id="cb39-34"><a href="#cb39-34" tabindex="-1"></a> [<span class="dv">16</span>] parallelly_1.<span class="fl">42.0</span>      KernSmooth_2<span class="fl">.23</span><span class="dv">-26</span>     bslib_0.<span class="fl">9.0</span>           </span>
+<span id="cb39-35"><a href="#cb39-35" tabindex="-1"></a> [<span class="dv">19</span>] htmlwidgets_1.<span class="fl">6.4</span>      ica_1<span class="fl">.0</span><span class="dv">-3</span>              plyr_1.<span class="fl">8.9</span>            </span>
+<span id="cb39-36"><a href="#cb39-36" tabindex="-1"></a> [<span class="dv">22</span>] plotly_4.<span class="fl">10.4</span>          zoo_1<span class="fl">.8</span><span class="dv">-13</span>             cachem_1.<span class="fl">1.0</span>          </span>
+<span id="cb39-37"><a href="#cb39-37" tabindex="-1"></a> [<span class="dv">25</span>] whisker_0.<span class="fl">4.1</span>          igraph_2.<span class="fl">1.4</span>           mime_0<span class="fl">.13</span>             </span>
+<span id="cb39-38"><a href="#cb39-38" tabindex="-1"></a> [<span class="dv">28</span>] lifecycle_1.<span class="fl">0.4</span>        pkgconfig_2.<span class="fl">0.3</span>        Matrix_1<span class="fl">.7</span><span class="dv">-3</span>          </span>
+<span id="cb39-39"><a href="#cb39-39" tabindex="-1"></a> [<span class="dv">31</span>] R6_2.<span class="fl">6.1</span>               fastmap_1.<span class="fl">2.0</span>          fitdistrplus_1<span class="fl">.2</span><span class="dv">-2</span>    </span>
+<span id="cb39-40"><a href="#cb39-40" tabindex="-1"></a> [<span class="dv">34</span>] future_1.<span class="fl">34.0</span>          shiny_1.<span class="fl">10.0</span>           digest_0.<span class="fl">6.37</span>         </span>
+<span id="cb39-41"><a href="#cb39-41" tabindex="-1"></a> [<span class="dv">37</span>] colorspace_2<span class="fl">.1</span><span class="dv">-1</span>       patchwork_1.<span class="fl">3.0</span>        ps_1.<span class="fl">9.0</span>              </span>
+<span id="cb39-42"><a href="#cb39-42" tabindex="-1"></a> [<span class="dv">40</span>] rprojroot_2.<span class="fl">0.4</span>        tensor_1<span class="fl">.5</span>             RSpectra_0<span class="fl">.16</span><span class="dv">-2</span>       </span>
+<span id="cb39-43"><a href="#cb39-43" tabindex="-1"></a> [<span class="dv">43</span>] irlba_2.<span class="dv">3</span>.<span class="fl">5.1</span>          labeling_0.<span class="fl">4.3</span>         progressr_0.<span class="fl">15.1</span>      </span>
+<span id="cb39-44"><a href="#cb39-44" tabindex="-1"></a> [<span class="dv">46</span>] timechange_0.<span class="fl">3.0</span>       spatstat.sparse_3<span class="fl">.1</span><span class="dv">-0</span>  httr_1.<span class="fl">4.7</span>            </span>
+<span id="cb39-45"><a href="#cb39-45" tabindex="-1"></a> [<span class="dv">49</span>] polyclip_1<span class="fl">.10</span><span class="dv">-7</span>        abind_1<span class="fl">.4</span><span class="dv">-8</span>            compiler_4.<span class="fl">4.0</span>        </span>
+<span id="cb39-46"><a href="#cb39-46" tabindex="-1"></a> [<span class="dv">52</span>] bit64_4.<span class="fl">6.0</span><span class="dv">-1</span>          withr_3.<span class="fl">0.2</span>            fastDummies_1.<span class="fl">7.5</span>     </span>
+<span id="cb39-47"><a href="#cb39-47" tabindex="-1"></a> [<span class="dv">55</span>] MASS_7<span class="fl">.3</span><span class="dv">-65</span>            tools_4.<span class="fl">4.0</span>            vipor_0.<span class="fl">4.7</span>           </span>
+<span id="cb39-48"><a href="#cb39-48" tabindex="-1"></a> [<span class="dv">58</span>] lmtest_0<span class="fl">.9</span><span class="dv">-40</span>          beeswarm_0.<span class="fl">4.0</span>         httpuv_1.<span class="fl">6.15</span>         </span>
+<span id="cb39-49"><a href="#cb39-49" tabindex="-1"></a> [<span class="dv">61</span>] future.apply_1.<span class="fl">11.3</span>    goftest_1<span class="fl">.2</span><span class="dv">-3</span>          glue_1.<span class="fl">8.0</span>            </span>
+<span id="cb39-50"><a href="#cb39-50" tabindex="-1"></a> [<span class="dv">64</span>] callr_3.<span class="fl">7.6</span>            nlme_3<span class="fl">.1</span><span class="dv">-167</span>           promises_1.<span class="fl">3.2</span>        </span>
+<span id="cb39-51"><a href="#cb39-51" tabindex="-1"></a> [<span class="dv">67</span>] grid_4.<span class="fl">4.0</span>             Rtsne_0<span class="fl">.17</span>             getPass_0<span class="fl">.2</span><span class="dv">-4</span>         </span>
+<span id="cb39-52"><a href="#cb39-52" tabindex="-1"></a> [<span class="dv">70</span>] cluster_2.<span class="dv">1</span>.<span class="fl">8.1</span>        reshape2_1.<span class="fl">4.4</span>         generics_0.<span class="fl">1.3</span>        </span>
+<span id="cb39-53"><a href="#cb39-53" tabindex="-1"></a> [<span class="dv">73</span>] hdf5r_1.<span class="fl">3.12</span>           gtable_0.<span class="fl">3.6</span>           spatstat.data_3<span class="fl">.1</span><span class="dv">-6</span>   </span>
+<span id="cb39-54"><a href="#cb39-54" tabindex="-1"></a> [<span class="dv">76</span>] tzdb_0.<span class="fl">5.0</span>             hms_1.<span class="fl">1.3</span>              data.table_1.<span class="fl">17.0</span>     </span>
+<span id="cb39-55"><a href="#cb39-55" tabindex="-1"></a> [<span class="dv">79</span>] xml2_1.<span class="fl">3.8</span>             spatstat.geom_3<span class="fl">.3</span><span class="dv">-6</span>    RcppAnnoy_0.<span class="fl">0.22</span>      </span>
+<span id="cb39-56"><a href="#cb39-56" tabindex="-1"></a> [<span class="dv">82</span>] ggrepel_0.<span class="fl">9.6</span>          RANN_2.<span class="fl">6.2</span>             pillar_1.<span class="fl">10.1</span>         </span>
+<span id="cb39-57"><a href="#cb39-57" tabindex="-1"></a> [<span class="dv">85</span>] limma_3.<span class="fl">60.6</span>           spam_2<span class="fl">.11</span><span class="dv">-1</span>            RcppHNSW_0.<span class="fl">6.0</span>        </span>
+<span id="cb39-58"><a href="#cb39-58" tabindex="-1"></a> [<span class="dv">88</span>] later_1.<span class="fl">4.1</span>            splines_4.<span class="fl">4.0</span>          lattice_0<span class="fl">.22</span><span class="dv">-6</span>        </span>
+<span id="cb39-59"><a href="#cb39-59" tabindex="-1"></a> [<span class="dv">91</span>] bit_4.<span class="fl">6.0</span>              survival_3<span class="fl">.8</span><span class="dv">-3</span>         deldir_2<span class="fl">.0</span><span class="dv">-4</span>          </span>
+<span id="cb39-60"><a href="#cb39-60" tabindex="-1"></a> [<span class="dv">94</span>] tidyselect_1.<span class="fl">2.1</span>       miniUI_0.<span class="dv">1</span>.<span class="fl">1.1</span>         pbapply_1<span class="fl">.7</span><span class="dv">-2</span>         </span>
+<span id="cb39-61"><a href="#cb39-61" tabindex="-1"></a> [<span class="dv">97</span>] knitr_1<span class="fl">.50</span>             git2r_0.<span class="fl">35.0</span>           gridExtra_2<span class="fl">.3</span>         </span>
+<span id="cb39-62"><a href="#cb39-62" tabindex="-1"></a>[<span class="dv">100</span>] scattermore_1<span class="fl">.2</span>        xfun_0<span class="fl">.51</span>              statmod_1.<span class="fl">5.0</span>         </span>
+<span id="cb39-63"><a href="#cb39-63" tabindex="-1"></a>[<span class="dv">103</span>] matrixStats_1.<span class="fl">5.0</span>      stringi_1.<span class="fl">8.4</span>          lazyeval_0.<span class="fl">2.2</span>        </span>
+<span id="cb39-64"><a href="#cb39-64" tabindex="-1"></a>[<span class="dv">106</span>] yaml_2.<span class="fl">3.10</span>            evaluate_1.<span class="fl">0.3</span>         codetools_0<span class="fl">.2</span><span class="dv">-20</span>      </span>
+<span id="cb39-65"><a href="#cb39-65" tabindex="-1"></a>[<span class="dv">109</span>] uwot_0.<span class="fl">2.3</span>             xtable_1<span class="fl">.8</span><span class="dv">-4</span>           reticulate_1.<span class="dv">41</span>.<span class="fl">0.1</span>   </span>
+<span id="cb39-66"><a href="#cb39-66" tabindex="-1"></a>[<span class="dv">112</span>] munsell_0.<span class="fl">5.1</span>          processx_3.<span class="fl">8.6</span>         jquerylib_0.<span class="fl">1.4</span>       </span>
+<span id="cb39-67"><a href="#cb39-67" tabindex="-1"></a>[<span class="dv">115</span>] Rcpp_1.<span class="fl">0.14</span>            globals_0.<span class="fl">16.3</span>         spatstat.random_3<span class="fl">.3</span><span class="dv">-2</span> </span>
+<span id="cb39-68"><a href="#cb39-68" tabindex="-1"></a>[<span class="dv">118</span>] png_0<span class="fl">.1</span><span class="dv">-8</span>              ggrastr_1.<span class="fl">0.2</span>          spatstat.univar_3<span class="fl">.1</span><span class="dv">-2</span> </span>
+<span id="cb39-69"><a href="#cb39-69" tabindex="-1"></a>[<span class="dv">121</span>] parallel_4.<span class="fl">4.0</span>         presto_1.<span class="fl">0.0</span>           dotCall64_1<span class="fl">.2</span>         </span>
+<span id="cb39-70"><a href="#cb39-70" tabindex="-1"></a>[<span class="dv">124</span>] listenv_0.<span class="fl">9.1</span>          viridisLite_0.<span class="fl">4.2</span>      scales_1.<span class="fl">3.0</span>          </span>
+<span id="cb39-71"><a href="#cb39-71" tabindex="-1"></a>[<span class="dv">127</span>] ggridges_0.<span class="fl">5.6</span>         rlang_1.<span class="fl">1.6</span>           </span></code></pre></div>
 </div>
 </div>
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIFZpc2l1bSBBbmFseXNpcyIKYXV0aG9yOiAiQXV0aG9yIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IGZhbHNlCiAgICBjb2RlX2ZvbGRpbmc6ICJoaWRlIgotLS0KIApgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVycm9yPUZBTFNFKQpgYGAKCjxkaXYgc3R5bGUgPSAidGV4dC1hbGlnbjogY2VudGVyIj4KCjxyZWFkLXRpbWU+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMS4zZW0iPlBsZWFzZSB0cnkgdG8gZm9sbG93IHRoZSBpbnN0cnVjdGlvbnMgYmVsb3cgKipwcmlvcioqIHRvIGF0dGVuZGluZyB0aGUgd29ya3Nob3AuPGJyPjxicj48aT4qKkJlIGF3YXJlISoqPC9pPjwvc3Bhbj48YnI+IEl0IGlzIGRpZmZpY3VsdCB0byBkZWJ1ZyBvdmVyIHpvb20uIDxicj5JZiB5b3Ugd2FudCB0aGUgYmVzdCBmZWVkYmFjayBhbmQgZXhwZXJpZW5jZSwgbWFrZSBzdXJlIHlvdSBhdHRlbmQgdGhlIHdvcmtzaG9wIGluIHBlcnNvbiE8L3JlYWQtdGltZT4KCllvdSBjYW4gZG93bmxvYWQgdGhlIHNjcmlwdCBvbiB0aGUgdG9wIHJpZ2h0IG9yIGZyb20gW3RoaXMgbGlua10oaHR0cHM6Ly9naXRodWIuY29tL0RyVGhvbWFzT25laWwvZGlnaXRhbC1yZXNlYXJjaC1za2lsbHMtbmV0d29yay9ibG9iL21hc3Rlci9hbmFseXNpcy8yMDI1MDQuUm1kKS4KIAo8L2Rpdj48d2ltcj4KCgojIEludHJvZHVjdGlvbgoKIyBTZXR1cHsudGFic2V0IC50YWJzZXQtZmFkZX0KCi0gQ3JlYXRlIGZvbGRlcnMKCi0gSW5zdGFsbCBQYWNrYWdlcwoKLSBEb3dubG9hZCBEYXRhCgojIyBDcmVhdGUgRm9sZGVycwoKYGBgdGV4dArilJzilIDilIAgWW91ckZvbGRlcgrilIIgICAgIOKUlOKUgOKUgCByYXcgKHdoZXJlIHdlIGNhbiBkZXBvc2l0IHJhdyBkb3dubG9hZGVkIGRhdGEpCuKUgiAgICAg4pSU4pSA4pSAIGRhdGEgKHdoZXJlIHdlIGNhbiBwcm9jZXNzIGRhdGEgYW5kIHN0b3JlIGl0KQrilIIgICAgIOKUlOKUgOKUgCBwbG90cyAod2hlcmUgd2UgY2FuIHN0b3JlIHBsb3RzKQpgYGAKCmBgYHtyIGV2YWw9VH0KaWYoIWRpci5leGlzdHMoInJhdyIpKXtkaXIuY3JlYXRlKCJyYXciKX0KaWYoIWRpci5leGlzdHMoImRhdGEiKSl7ZGlyLmNyZWF0ZSgiZGF0YSIpfQppZighZGlyLmV4aXN0cygicGxvdHMiKSl7ZGlyLmNyZWF0ZSgicGxvdHMiKX0KYGBgCgojIyBJbnN0YWxsIFBhY2thZ2VzCgpgYGB7ciwgZXZhbD1GfQppbnN0YWxsLnBhY2thZ2VzKCJTZXVyYXQiKQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQpgYGAKCldlIGhhdmUgYSBmdW5jdGlvbiB0aGF0IHdpbGwgbGV0IHlvdSBjaGVjayB0aGUgc2V0dXAKYGBge3J9CnNvdXJjZSgiaHR0cHM6Ly9naXRodWIuY29tL0RyVGhvbWFzT25laWwvRGlnaXRhbC1SZXNlYXJjaC1Ta2lsbHMtTmV0d29yay9yYXcvcmVmcy9oZWFkcy9tYWluL2RvY3MvYWRpdC9jaGVja3NldHVwLlIiKQpjaGVja1NldHVwKAogIGNyYW5fcGFja2FnZXMgPSBjKCJTZXVyYXQiLCAidGlkeXZlcnNlIiksIAogIGJpb2NfcGFja2FnZXM9YygpIAopCmBgYAoKCiMjIERvd25sb2FkIGRhdGEKCldlIHdpbGwgZG93bmxvYWQgdGhlIGRhdGEgZGlyZWN0bHkgZnJvbSB0aGUgW0dFT10oaHR0cHM6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9nZW8vKS4gV2UnbGwgdXNlIFt0aGlzXShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby9xdWVyeS9hY2MuY2dpP2FjYz1HU0UyOTAzNTApIGRhdGFzZXQsIHdoaWNoIHdhcyBbcHVibGlzaGVkIGluIDIwMjRdKGh0dHBzOi8vcG1jLm5jYmkubmxtLm5paC5nb3YvYXJ0aWNsZXMvUE1DMTE2NDY4NTUvKS4gQWRkaXRpb25hbGx5LCB0aGlzIGdyb3VwIGhhdmUgcHVibGlzaGVkIFthbGwgb2YgdGhlaXIgbWV0aG9kcyBhbmQgc2NyaXB0cyBmb3IgYW5hbHlzaXNdKGh0dHBzOi8vZ2l0aHViLmNvbS92aWxkZWthL1NwYXRpYWxfRE1QQT90YWI9cmVhZG1lLW92LWZpbGUpLgoKYGBge3IsIGV2YWw9Rn0KIyBHbyB0byB0aGUgR0VPIHBhZ2UgYW5kIHJpZ2h0IGNsaWNrIG9uIHRoZSBodHRwIGxpbmsgdW5kZXIgZG93bmxvYWQuIEl0IHNob3VsZCBsb29rIGxpa2UgdGhpcwoKZGF0YV9maWxlIDwtICJodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby9kb3dubG9hZC8/YWNjPUdTRTI5MDM1MCZmb3JtYXQ9ZmlsZSIKCiMgZG93bmxvYWQgdGhlIGRhdGEKaWYoIWZpbGUuZXhpc3RzKCJyYXcvR1NFMjkwMzUwX1JBVy50YXIiKSl7ZG93bmxvYWQuZmlsZSh1cmw9ZGF0YV9maWxlLCBkZXN0ZmlsZSA9ICJyYXcvR1NFMjkwMzUwX1JBVy50YXIiLCBtZXRob2Q9J2N1cmwnKX0KCiMgcmVwZWF0IGZvciBtZXRhZGF0YQppZighZmlsZS5leGlzdHMoInJhdy9HU0UyOTAzNTBfbWV0YWRhdGEuY3N2Lmd6Iikpe2Rvd25sb2FkLmZpbGUodXJsPSdodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby9kb3dubG9hZC8/YWNjPUdTRTI5MDM1MCZmb3JtYXQ9ZmlsZSZmaWxlPUdTRTI5MDM1MCU1Rm1ldGFkYXRhJTJFY3N2JTJFZ3onLCBkZXN0ZmlsZSA9ICJyYXcvR1NFMjkwMzUwX21ldGFkYXRhLmNzdi5neiIsIG1ldGhvZD0nY3VybCcpfQoKIyBhbmQgdGhlIHN1cHBvc2VkIHByb2Nlc3NlZCBTZXVyYXQgZGF0YQppZighZmlsZS5leGlzdHMoInJhdy9HU0UyOTAzNTBfc2V1cmF0T2JqX3NwYXRpYWxfZGlzdC5SRFMiKSl7ZG93bmxvYWQuZmlsZSh1cmw9Imh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvZ2VvL2Rvd25sb2FkLz9hY2M9R1NFMjkwMzUwJmZvcm1hdD1maWxlJmZpbGU9R1NFMjkwMzUwJTVGc2V1cmF0T2JqJTVGc3BhdGlhbCU1RmRpc3QlMkVSRFMiLCBkZXN0ZmlsZSA9ICJyYXcvR1NFMjkwMzUwX3NldXJhdE9ial9zcGF0aWFsX2Rpc3QuUkRTIiwgbWV0aG9kPSdjdXJsJyl9CgoKYGBgCgoKCjwvZGl2PgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIFZpc2l1bSBBbmFseXNpcyIKYXV0aG9yOiAiQXV0aG9yIgpkYXRlOiAiMjAyNS0wMiIgCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IGZhbHNlCiAgICBjb2RlX2ZvbGRpbmc6ICJoaWRlIgplZGl0b3Jfb3B0aW9uczogCiAgY2h1bmtfb3V0cHV0X3R5cGU6IGNvbnNvbGUKLS0tCiAKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwgbWVzc2FnZSA9IEZBTFNFLCB3YXJuaW5nPUZBTFNFLCBlcnJvcj1GQUxTRSwgY29sbGFwc2U9VCkKYGBgCgo8ZGl2IHN0eWxlID0gInRleHQtYWxpZ246IGNlbnRlciI+Cgo8cmVhZC10aW1lPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDEuM2VtIj5QbGVhc2UgdHJ5IHRvIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGJlbG93ICoqcHJpb3IqKiB0byBhdHRlbmRpbmcgdGhlIHdvcmtzaG9wLjxicj48YnI+PGk+KipCZSBhd2FyZSEqKjwvaT48L3NwYW4+PGJyPiBJdCBpcyBkaWZmaWN1bHQgdG8gZGVidWcgb3ZlciB6b29tLiA8YnI+SWYgeW91IHdhbnQgdGhlIGJlc3QgZmVlZGJhY2sgYW5kIGV4cGVyaWVuY2UsIG1ha2Ugc3VyZSB5b3UgYXR0ZW5kIHRoZSB3b3Jrc2hvcCBpbiBwZXJzb24hPC9yZWFkLXRpbWU+CgpZb3UgY2FuIGRvd25sb2FkIHRoZSBzY3JpcHQgb24gdGhlIHRvcCByaWdodCBvciBmcm9tIFt0aGlzIGxpbmtdKGh0dHBzOi8vZ2l0aHViLmNvbS9EclRob21hc09uZWlsL2RpZ2l0YWwtcmVzZWFyY2gtc2tpbGxzLW5ldHdvcmsvYmxvYi9tYXN0ZXIvYW5hbHlzaXMvMjAyNTA0LlJtZCkuCiAKPC9kaXY+PHdpbXI+CgoKIyBJbnRyb2R1Y3Rpb24KCiMgU2V0dXB7LnRhYnNldCAudGFic2V0LWZhZGV9CgotIENyZWF0ZSBmb2xkZXJzCgotIEluc3RhbGwgUGFja2FnZXMKCi0gRG93bmxvYWQgRGF0YQoKIyMgQ3JlYXRlIEZvbGRlcnMKCmBgYHRleHQK4pSc4pSA4pSAIFlvdXJGb2xkZXIK4pSCICAgICDilJTilIDilIAgcmF3ICh3aGVyZSB3ZSBjYW4gZGVwb3NpdCByYXcgZG93bmxvYWRlZCBkYXRhKQrilIIgICAgIOKUlOKUgOKUgCBkYXRhICh3aGVyZSB3ZSBjYW4gcHJvY2VzcyBkYXRhIGFuZCBzdG9yZSBpdCkK4pSCICAgICDilJTilIDilIAgcGxvdHMgKHdoZXJlIHdlIGNhbiBzdG9yZSBwbG90cykKYGBgCgpgYGB7ciBldmFsPVR9CmlmKCFkaXIuZXhpc3RzKCJyYXciKSl7ZGlyLmNyZWF0ZSgicmF3Iil9CmlmKCFkaXIuZXhpc3RzKCJkYXRhIikpe2Rpci5jcmVhdGUoImRhdGEiKX0KaWYoIWRpci5leGlzdHMoInBsb3RzIikpe2Rpci5jcmVhdGUoInBsb3RzIil9CmBgYAoKPHdpbXI+CgojIyBJbnN0YWxsIFBhY2thZ2VzCgpgYGB7ciwgZXZhbD1GfQppbnN0YWxsLnBhY2thZ2VzKCJTZXVyYXQiKQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQppbnN0YWxsLnBhY2thZ2VzKCJjb3dwbG90IikKCkJpb2NNYW5hZ2VyOjppbnN0YWxsKCJHRU9xdWVyeSIpCmBgYAoKV2UgaGF2ZSBhIGZ1bmN0aW9uIHRoYXQgd2lsbCBsZXQgeW91IGNoZWNrIHRoZSBzZXR1cApgYGB7cn0Kc291cmNlKCJodHRwczovL2dpdGh1Yi5jb20vRHJUaG9tYXNPbmVpbC9EaWdpdGFsLVJlc2VhcmNoLVNraWxscy1OZXR3b3JrL3Jhdy9yZWZzL2hlYWRzL21haW4vZG9jcy9hZGl0L2NoZWNrc2V0dXAuUiIpCgpjaGVja1NldHVwKAogIGNyYW5fcGFja2FnZXMgPSBjKCJTZXVyYXQiLCAidGlkeXZlcnNlIiwgImNvd3Bsb3QiKSwgCiAgYmlvY19wYWNrYWdlcz1jKCJHRU9xdWVyeSIpIAopCgpzZXQuc2VlZCgxMzM3KQpgYGAKCjx3aW1yPgoKIyMgRG93bmxvYWQgZGF0YQoKV2Ugd2lsbCBkb3dubG9hZCB0aGUgZGF0YSBkaXJlY3RseSBmcm9tIHRoZSBbR0VPXShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L2dlby8pLiBXZSdsbCB1c2UgW3RoaXNdKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvZ2VvL3F1ZXJ5L2FjYy5jZ2k/YWNjPUdTRTI5MDM1MCkgZGF0YXNldCwgd2hpY2ggd2FzIFtwdWJsaXNoZWQgaW4gMjAyNF0oaHR0cHM6Ly9wbWMubmNiaS5ubG0ubmloLmdvdi9hcnRpY2xlcy9QTUMxMTY0Njg1NS8pLiBBZGRpdGlvbmFsbHksIHRoaXMgZ3JvdXAgaGF2ZSBwdWJsaXNoZWQgW2FsbCBvZiB0aGVpciBtZXRob2RzIGFuZCBzY3JpcHRzIGZvciBhbmFseXNpc10oaHR0cHM6Ly9naXRodWIuY29tL3ZpbGRla2EvU3BhdGlhbF9ETVBBP3RhYj1yZWFkbWUtb3YtZmlsZSkuCgpgYGB7ciwgZXZhbD1GfQojIEdvIHRvIHRoZSBHRU8gcGFnZSBhbmQgcmlnaHQgY2xpY2sgb24gdGhlIGh0dHAgbGluayB1bmRlciBkb3dubG9hZC4gSXQgc2hvdWxkIGxvb2sgbGlrZSB0aGlzCgpkYXRhX2ZpbGUgPC0gImh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvZ2VvL2Rvd25sb2FkLz9hY2M9R1NFMjkwMzUwJmZvcm1hdD1maWxlIgoKIyBkb3dubG9hZCB0aGUgZGF0YQppZighZmlsZS5leGlzdHMoInJhdy9HU0UyOTAzNTBfUkFXLnRhciIpKXtkb3dubG9hZC5maWxlKHVybD1kYXRhX2ZpbGUsIGRlc3RmaWxlID0gInJhdy9HU0UyOTAzNTBfUkFXLnRhciIsIG1ldGhvZD0nY3VybCcpfQoKIyByZXBlYXQgZm9yIG1ldGFkYXRhCmlmKCFmaWxlLmV4aXN0cygicmF3L0dTRTI5MDM1MF9tZXRhZGF0YS5jc3YuZ3oiKSl7ZG93bmxvYWQuZmlsZSh1cmw9J2h0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvZ2VvL2Rvd25sb2FkLz9hY2M9R1NFMjkwMzUwJmZvcm1hdD1maWxlJmZpbGU9R1NFMjkwMzUwJTVGbWV0YWRhdGElMkVjc3YlMkVneicsIGRlc3RmaWxlID0gInJhdy9HU0UyOTAzNTBfbWV0YWRhdGEuY3N2Lmd6IiwgbWV0aG9kPSdjdXJsJyl9CgojIGFuZCB0aGUgc3VwcG9zZWQgcHJvY2Vzc2VkIFNldXJhdCBkYXRhCmlmKCFmaWxlLmV4aXN0cygicmF3L0dTRTI5MDM1MF9zZXVyYXRPYmpfc3BhdGlhbF9kaXN0LlJEUyIpKXtkb3dubG9hZC5maWxlKHVybD0iaHR0cHM6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9nZW8vZG93bmxvYWQvP2FjYz1HU0UyOTAzNTAmZm9ybWF0PWZpbGUmZmlsZT1HU0UyOTAzNTAlNUZzZXVyYXRPYmolNUZzcGF0aWFsJTVGZGlzdCUyRVJEUyIsIGRlc3RmaWxlID0gInJhdy9HU0UyOTAzNTBfc2V1cmF0T2JqX3NwYXRpYWxfZGlzdC5SRFMiLCBtZXRob2Q9J2N1cmwnKX0KCgpgYGAKCjx3aW1yPgoKIyMgVW56aXAgYW5kIHVudGFyIHRoZSByYXcgZGF0YQoKYGBge3IsIGV2YWw9Rn0KdW50YXIoInJhdy9HU0UyOTAzNTBfUkFXLnRhciIsIGV4ZGlyID0gIi4uL3Jhdy9HU0UyOTAzNTBfUkFXIikKYGBgCgpgYGB7ciwgZXZhbD1GfQpzYW1wbGVzIDwtIGxpc3QuZmlsZXMoInJhdy9HU0UyOTAzNTBfUkFXIiwgcGF0dGVybiA9ICJcXC50YXJcXC5neiQiLCBmdWxsLm5hbWVzID0gVFJVRSkKCmZvciAoaSBpbiBzZXFfYWxvbmcoc2FtcGxlcykpIHsKICB0YXJfcGF0aCA8LSBzdWIoIlxcLmd6JCIsICIiLCBzYW1wbGVzW2ldKQoKICAjIFVuemlwIHRoZSAudGFyLmd6IGZpbGUKICBHRU9xdWVyeTo6Z3VuemlwKHNhbXBsZXNbaV0sIGRlc3RuYW1lID0gdGFyX3BhdGgsIG92ZXJ3cml0ZSA9IFRSVUUpCgogIG91dHB1dF9kaXIgPC0gZmlsZS5wYXRoKCJyYXcvR1NFMjkwMzUwX1JBVyIsIHN1YigiXFwudGFyJCIsICIiLCBiYXNlbmFtZSh0YXJfcGF0aCkpKQogIGRpci5jcmVhdGUob3V0cHV0X2Rpciwgc2hvd1dhcm5pbmdzID0gRkFMU0UpCgogICMgRXh0cmFjdCB0YXIgdG8gb3V0cHV0IGRpcmVjdG9yeQogIHVudGFyKHRhcl9wYXRoLCBleGRpciA9IG91dHB1dF9kaXIpCn0KYGBgCgo8d2ltcj4KCiMgUHJlLXByb2Nlc3Npbmd7LnRhYnNldCAudGFic2V0LWZhZGV9CgpIZXJlIHdlJ2xsIGxvYWQgaW4gdGhlIGRhdGEuIEZvcnR1bmF0ZWx5LCB0aGlzIGRhdGEgaXMgcXVpdGUgbmVhdGx5IG9yZ2FuaXNlZC4gV2hlbiBwcmVzZW50LCB3ZSBjYW4gbG9hZCB0aGUgYC5oNWAgb2JqZWN0LiBQbGVhc2Ugc2VlIHRoZSBgQXJjaGl2ZWAgcGFnZSBvZiB0aGUgW3dlYnNpdGVdKGh0dHBzOi8vZGlnaXRhbHJlc2VhcmNoc2tpbGxzLm5ldHdvcmsvMF9hcmNoaXZlLmh0bWwpIHRvIGZpbmQgdmlnbmV0dGVzIG9uIGRvd25sb2FkaW5nIGFuZCBpbnN0YWxsaW5nIEdFTy1zb3VyY2VkIG9iamVjdHMgdGhhdCBhcmUgbm90IGFzIHdlbGwtb3JnYW5pc2VkIQoKV2Ugd2lsbDoKCi0gTG9hZCB0aGUgZGF0YQoKLSBBZGQgdGhlIG1ldGEgZGF0YQoKLSBDaGVjayB0aGUgUUMsIGZpbHRlciBhbmQgcHJvY2VzcyB0aGUgZGF0YQoKPGRpdj4KCiMjIExvYWQgaW4gdGhlIGRhdGEgCgpXZSdsbCBsb2FkIGluIHRoZSBzdXBwbGllZCBtZXRhZGF0YSwgYW5kIHRoZW4gd2UgY2FuIGxvYWQgMTBYIGRhdGEgcXVpdGUgZWFzaWx5IHVzaW5nIHRoZSBMb2FkMTBYX1NwYXRpYWwgZnVuY3Rpb24sIHdoaWNoIHJlcXVpcmVzIGEgY2VydGFpbiBmb3JtYXQuIFdlIGNhbiBsb2FkIGluIHRoZSBmaWx0ZXJlZCBtYXRyaXgsIHdoaWNoIGlzIGZpbHRlcmVkIGJhc2VkIG9uIHdoZXRoZXIgdGhlIGluaXRpYWwgcHJvY2Vzc2luZyBkZXRlY3RlZCB0aGF0IHRoYXQgc3BvdCBhbGlnbmVkIHdpdGggdGlzc3VlLiBBbHRlcm5hdGl2ZWx5LCB5b3UgY2FuIGxvYWQgdGhlIHJhdyBvYmplY3QsIGFuZCBmaWx0ZXIgYXMgeW91IHdpc2guIAoKYGBge3J9Cm1ldGEgPC0gcmVhZC5jc3YoInJhdy9HU0UyOTAzNTBfbWV0YWRhdGEuY3N2Lmd6IikKYGBgCgpgYGB7cn0KZGF0YSA8LSBMb2FkMTBYX1NwYXRpYWwoCiAgZGF0YS5kaXI9InJhdy9HU0UyOTAzNTBfUkFXL0dTTTg4MTEwNTZfUDAwNC9QMDA0IiwKICBmaWxlbmFtZSA9ICJmaWx0ZXJlZF9mZWF0dXJlX2JjX21hdHJpeC5oNSIsCiAgZmlsdGVyLm1hdHJpeCA9IEYKKQpgYGAKCjx3aW1yPgoKIyMgQWRkIG1ldGEgZGF0YQoKVGhlIG1ldGFkYXRhIHByb3ZpZGVkIGlzIG5vdCBmb3VuZCBpbiB0aGUgb2JqZWN0IGl0c2VsZi4gU28gd2Ugd2lsbCBydW4gYSBzbWFsbCBwaWVjZSBvZiBjb2RlIHRoYXQgbGV0cyB5b3UgYWRkIG1ldGFkYXRhIHRvIGEgU2V1cmF0IG9iamVjdC4gCgpgYGB7cn0KZGF0YSRJRCA8LSAiUDAwNCIKZGF0YSA8LSBBZGRNZXRhRGF0YShkYXRhLAogICAgICAgICAgICAgICAgICAgIGRhdGFAbWV0YS5kYXRhICU+JSAKICAgICAgICAgICAgICAgICAgICAgIHJpZ2h0X2pvaW4obWV0YVttZXRhJElEPT0iUDAwNCIsIF0sIGJ5PSJJRCIpKQpgYGAKCgojIyBRQ3sudGFic2V0IC50YWJzZXQtZmFkZX0KClRoZXJlIGFyZSBzZXZlcmFsIHdheXMgdG8gUUMgdHJhbnNjcmlwdG9taWMgZGF0YS4gRmlyc3QsIHlvdSBzaG91bGQgY2hlY2sgYW5kIHNjcnV0aW5pc2UgdGhlIFtvcmlnaW5hbCBtYW51c2NyaXB0XShodHRwczovL2dpdGh1Yi5jb20vdmlsZGVrYS9TcGF0aWFsX0RNUEE/dGFiPXJlYWRtZS1vdi1maWxlKS4KCldlIHdpbGwgYXNzZXNzOiAKCi0gbnVtYmVyIG9mIGdlbmVzIHBlciBzcG90CgotIG51bWJlciBvZiB1bmlxdWUgZ2VuZXMgcGVyIHNwb3QKCi0gbWl0b2Nob25kcmlhbCwgaGFlbW9nbG9iaW4sIGFuZCByaWJvc29tYWwgcGVyY2VudGFnZS4KCldlJ2xsIGFsc28gZmlsdGVyIHRoZSBnZW5lcyB0aGVtc2VsdmVzLCB0byByZW1vdmUgbm9pc3kvcG9pbnRsZXNzIGdlbmVzLiAKCi0gZ2VuZXMgdGhhdCBhcmUgbm90IHByZXNlbnQgaW4gbW9yZSB0aGFuIHggbnVtYmVyIG9mIHNwb3RzCgotIGhpZ2ggZXhwcmVzc2luZyBzcG90cy4KCiMjIyBHZW5lcyBwZXIgc3BvdCAmIFVuaXF1ZSBnZW5lcyBwZXIgc3BvdAoKVGhpcyBpcyBhIHR5cGljYWwgYHNpbmdsZS1jZWxsIFJOQWAgYW5hbHlzaXMgbWV0cmljLiBJdCBzaG91bGQgYmUgY2FyZWZ1bGx5IGNvbnNpZGVyZWQgaG93IHRoaXMgZGF0YSBpcyBpbnRlcnByZXR0ZWQgYW5kIGZpbHRlcmVkLCBhcyB0aGlzIGlzICoqbm90Kiogc2luZ2xlIGNlbGwuIFNwb3RzIGNhbiBoYXZlIGRvdWJsZSB0aGUgYXZlcmFnZSBvciBoYWxmIHRoZSBhdmVyYWdlIGJhc2VkIG9uIHRoZSBkZW5zaXR5IG9mIGNlbGxzLiBJbmRlZWQsIHRoaXMgaXMgYSBjb25zaWRlcmF0aW9uIGZvciBub3JtYWxpc2F0aW9uLCBidXQgdGhpcyBjb25zaWRlcmF0aW9uIGlzIGZvciBhbm90aGVyIHdvcmtzaG9wLiAKCjxpPioqQXMgdGhlcmUgaXMgPHNwYW4gc3R5bGU9ImNvbG9yOnJlZCI+bm88L3NwYW4+IGdvbGQgc3RhbmRhcmQqKjwvaT4sIHdlIHdpbGwgZGVtb25zdHJhdGUgaG93IHlvdSB2aXN1YWxpc2UgdGhlIFFDIG1ldHJpY3MgYW5kIHRoZW4gZmlsdGVyLiAKCmBgYHtyfQpwMT1GZWF0dXJlU2NhdHRlcihkYXRhLCAibkNvdW50X1NwYXRpYWwiLCAibkZlYXR1cmVfU3BhdGlhbCIpK05vTGVnZW5kKCkKIyBudW1iZXIgb2YgZ2VuZXMKcDI9U3BhdGlhbEZlYXR1cmVQbG90KGRhdGEsICJuQ291bnRfU3BhdGlhbCIsIAogICAgICAgICAgICAgICAgICAgY3JvcD1GLAogICAgICAgICAgICAgICAgICAgcHQuc2l6ZT0yLAogICAgICAgICAgICAgICAgICAgYWxwaGE9YyguMiwxKSkrCiAgTm9MZWdlbmQoKQojIG51bWJlciBvZiB1bmlxdWUgZmVhdHVyZXMKcDM9U3BhdGlhbEZlYXR1cmVQbG90KGRhdGEsICJuRmVhdHVyZV9TcGF0aWFsIiwgCiAgICAgICAgICAgICAgICAgICBjcm9wPUYsCiAgICAgICAgICAgICAgICAgICBwdC5zaXplPTIsCiAgICAgICAgICAgICAgICAgICBhbHBoYT1jKC4yLDEpKSsKICBOb0xlZ2VuZCgpCnBsb3RfZ3JpZChwMSxwbG90X2dyaWQocDIscDMsIG5yb3c9MikpCmBgYAoKVGhlIG1pbmltdW0gbnVtYmVyIG9mIEZlYXR1cmVzIHBlciBzcG90IChgciBgbWluKGRhdGEkbkZlYXR1cmVfU3BhdGlhbClgKSBhbmQgbWluaW11bSBudW1iZXIgb2YgQ291bnRzIHBlciBzcG90IChgciBtaW4oZGF0YSRuQ291bnRfU3BhdGlhbClgKSBhcmUgZ3JlYXRlciB0aGFuIHRoZSBwYXBlcidzIGN1dCBvZmYgKHByZXN1bWluZyB0aGV5IGRpZCBub3QgdXNlIHRoZSBmaWx0ZXJlZCBtYXRyaXgpLiBIb3dldmVyLCBmb3IgdGhlIHB1cnBvc2VzIG9mIGRlbW9uc3RyYXRpbmcgaG93IHRoaXMgaXMgZG9uZToKCmBgYHtyfQpkYXRhIDwtIHN1YnNldChkYXRhLCAKICAgICAgICAgICAgICAgc3Vic2V0ID0gbkNvdW50X1NwYXRpYWwgPiAxMDAgJiBuRmVhdHVyZV9TcGF0aWFsID4xMDApCmBgYAoKIyMjIE1vZHVsZSBTY29yaW5nCgpJbiB0aGlzIHBhcGVyLCB0aGV5IHJlbW92ZSBjZWxscyB0aGF0IGFyZSA+MTUlIE10IGdlbmVzICYgPiAxMCUgSGIgcmVhZHMuIAoKYGBge3J9CmRhdGEgPC0gUGVyY2VudGFnZUZlYXR1cmVTZXQoZGF0YSwgIl5NVC0iLCBjb2wubmFtZSA9ICJwZXJjZW50X21pdG8iKQpkYXRhIDwtIFBlcmNlbnRhZ2VGZWF0dXJlU2V0KGRhdGEsICJeSEJbXihQKV0iLCBjb2wubmFtZSA9ICJwZXJjZW50X2hiIikKZGF0YSA8LSBQZXJjZW50YWdlRmVhdHVyZVNldChkYXRhLCAiXlJQW1NMXSIsIGNvbC5uYW1lID0gInBlcmNlbnRfcmlibyIpCmBgYAoKYGBge3J9CmZlYXR1cmUgPC0gIGMoIm5Db3VudF9TcGF0aWFsIiwgIm5GZWF0dXJlX1NwYXRpYWwiLCJwZXJjZW50X21pdG8iLCJwZXJjZW50X2hiIiwgInBlcmNlbnRfcmlibyIpCnNhcHBseShkYXRhQG1ldGEuZGF0YVtmZWF0dXJlXSwgc3VtbWFyeSkgJT4lIAogIGFzX3RpYmJsZShyb3duYW1lcyA9ICJzdGF0IikgJT4lIAogIGtuaXRyOjprYWJsZShkaWdpdHMgPSAxKQpgYGAKCgpgYGB7cn0KcDE9U3BhdGlhbEZlYXR1cmVQbG90KGRhdGEsICJwZXJjZW50X21pdG8iLCAKICAgICAgICAgICAgICAgICAgIGNyb3A9RiwKICAgICAgICAgICAgICAgICAgIHB0LnNpemU9MiwKICAgICAgICAgICAgICAgICAgIGFscGhhPWMoLjIsMSkpKwogIE5vTGVnZW5kKCkrZ2d0aXRsZSgiTWl0byIpCnAyPVNwYXRpYWxGZWF0dXJlUGxvdChkYXRhLCAicGVyY2VudF9oYiIsIAogICAgICAgICAgICAgICAgICAgY3JvcD1GLAogICAgICAgICAgICAgICAgICAgcHQuc2l6ZT0yLAogICAgICAgICAgICAgICAgICAgYWxwaGE9YyguMiwxKSkrCiAgTm9MZWdlbmQoKStnZ3RpdGxlKCJIYi1nZW5lcyIpCnAzPVNwYXRpYWxGZWF0dXJlUGxvdChkYXRhLCAicGVyY2VudF9yaWJvIiwgCiAgICAgICAgICAgICAgICAgICBjcm9wPUYsCiAgICAgICAgICAgICAgICAgICBwdC5zaXplPTIsCiAgICAgICAgICAgICAgICAgICBhbHBoYT1jKC4yLDEpKSsKICBOb0xlZ2VuZCgpK2dndGl0bGUoIlJpYm8iKQpwbG90X2dyaWQocDEscDIscDMpCmBgYAoKRmlsdGVyOgoKYGBge3J9CmRhdGEgPC0gc3Vic2V0KGRhdGEsIHN1YnNldCA9IHBlcmNlbnRfbWl0bzwxNSAmIHBlcmNlbnRfaGIgPDEwKQpzYXBwbHkoZGF0YUBtZXRhLmRhdGFbZmVhdHVyZV0sIHN1bW1hcnkpICU+JSAKICBhc190aWJibGUocm93bmFtZXMgPSAic3RhdCIpICU+JSAKICBrbml0cjo6a2FibGUoZGlnaXRzID0gMSkKYGBgCgojIyMgRmlsdGVyIGdlbmVzCgpXZSdsbCBmaXJzdCByZW1vdmUgY2VydGFpbiBnZW5lcy4gTUFMQVQxIGlzIGhpZ2hseSBleHByZXNzZWQgaW4gbG9uZyBub24tY29kaW5nIFJOQSBhbmQgaXMgcHJldHR5IHViaXF1aXRvdXMuIFNvIHdlIGRvbnQgd2FudCB0byBmaWx0ZXIgYW5kIHN1YnNlcXVlbnRseSBjbHVzdGVyIGFjY29yZGluZyB0byB0aGUgZXhwcmVzc2lvbiBvZiB0aGlzIGdlbmUuIFNpbWlsYXJseSwgSGIgZ2VuZXMgYXJlIGhpZ2hseSBleHByZXNzZWQgaW4gcmJjLCB3aGljaCBtYXkgcmVwcmVzZW50IGNvbnRhbWluYXRpb24uIFdlIGNhbiByZW1vdmUgdGhlc2UgdG9vLiAKCmBgYHtyfQprZWVwX2dlbmVzIDwtIHJvd25hbWVzKGRhdGEpWyFyb3duYW1lcyhkYXRhKSAlaW4lIGMoZ3JlcCgiTUFMQVQxIiwgcm93bmFtZXMoZGF0YSksIHZhbHVlPVQpLCBncmVwKCJeSEJbXihQKV0iLCByb3duYW1lcyhkYXRhKSwgdmFsdWU9VCkpXQpkYXRhIDwtIHN1YnNldChkYXRhLCBmZWF0dXJlcyA9IGtlZXBfZ2VuZXMpCmBgYAoKTG93IGdlbmVzIGNhbiBjcmVhdGUgbm9pc2UgYW5kIHRha2UgdXAgdW5uZWNlc3Nhcnkgc3BhY2UgaW4gdGhlIG9iamVjdC4gTGV0cyByZW1vdmUgZ2VuZXMgYWNjb3JkaW5nIHRvIHRoZSBvcmlnaW5hbCBtYW51c2NyaXB0LCB3aGVyZWJ5IGEgZ2VuZSBub3QgZm91bmQgaW4gPiAyIHNwb3RzIGlzIHJlbW92ZWQuIFlvdSBjYW4gYWRqdXN0IHRoaXMgYXMgeW91IHdpc2guIAoKYGBge3J9CnRhYmxlKHJvd1N1bXMoZGF0YUBhc3NheXMkU3BhdGlhbEBsYXllcnMkY291bnRzPj0xKT49MikKa2VlcF9nZW5lcyA8LSByb3dTdW1zKGRhdGFAYXNzYXlzJFNwYXRpYWxAbGF5ZXJzJGNvdW50cyA+PSAxKSA+PSAyCiNiZWZvcmUgZmlsdGVyaW5nCmRpbShkYXRhKQpkYXRhIDwtIHN1YnNldChkYXRhLCBmZWF0dXJlcyA9IHJvd25hbWVzKGRhdGEpW2tlZXBfZ2VuZXNdKQojIGFmdGVyIGZpbHRlcmluZwpkaW0oZGF0YSkKYGBgCgo8L2Rpdj4KCjxocj4KCldlIHJlY29tbWVuZCB0YWtpbmcgc29tZSB0aW1lIHRvIGNhcmVmdWxseSBjb25zaWRlciB5b3VyIFFDIHN0cmF0ZWd5LiA8aT4qKlRoZXJlIGlzIG5vIHVuaXZlcnNhbCBnb2xkIHN0YW5kYXJkPC9pPioqLiBPbmUgY29tbW9uIGFwcHJvYWNoIGlzIHRvIHN0YXJ0IHdpdGggbGVuaWVudCBRQywgcHJvY2VlZCB3aXRoIHByb2Nlc3NpbmcsIGFuZCBkdXJpbmcgY2x1c3RlcmluZyBhbmQgYW5ub3RhdGlvbiwgcmVtYWluIGF3YXJlIG9mIHRoZSByZWxheGVkIGZpbHRlcmluZy4gSWYgdW5leHBlY3RlZCByZXN1bHRzIGFyaXNlLCB5b3UgY2FuIHJldmlzaXQgYW5kIHJlZmluZSB5b3VyIFFDLiBQZXJzb25hbGx5LCBJIHByZWZlciB0byBiZSBwZXJtaXNzaXZlIGF0IGZpcnN0LCB3aGlsZSB0YWdnaW5nIHBvdGVudGlhbCBvdXRsaWVycyBmb3IgZnV0dXJlIGNvbnNpZGVyYXRpb24uIEZvciBleGFtcGxlLCB3ZSBpbml0aWFsbHkgZmlsdGVyZWQgb3V0IGdlbmVzIG5vdCBwcmVzZW50IGluIGF0IGxlYXN0IDIgc3BvdHMsIGJ1dCBJIG1heSBhbHNvIGxhYmVsIGdlbmVzIHByZXNlbnQgaW4gZmV3ZXIgdGhhbiA1IHNwb3RzIGFzIOKAnHRvUUPigJ0gZm9yIGxhdGVyIHJldmlld+KAlHBhcnRpY3VsYXJseSB3aGVuIGFzc2Vzc2luZyBkaWZmZXJlbnRpYWwgZXhwcmVzc2lvbiByZXN1bHRzLiBTaW1pbGFybHksIHdlIGFwcGxpZWQgYSAxNSUgbWl0b2Nob25kcmlhbCB0aHJlc2hvbGQgYnV0IGRpZCBub3QgZmlsdGVyIGJhc2VkIG9uIHJpYm9zb21hbCBjb250ZW50LiBBdCBhIGxhdGVyIHN0YWdlLCB3ZSBjb3VsZCB0aWdodGVuIHRoZSBtaXRvY2hvbmRyaWFsIHRocmVzaG9sZCB0byAxMCUgYW5kIGluY2x1ZGUgYSBmaWx0ZXIgZm9yIGhpZ2ggcmlib3NvbWFsIHNwb3RzLiBJZiB1bnVzdWFsIGNsdXN0ZXJzIGFwcGVhciwgd2UgY2FuIHRoZW4gYXNzZXNzIGhvdyBtYW55IG9mIHRob3NlIGNlbGxzIHdvdWxkIGhhdmUgYmVlbiBleGNsdWRlZCB1bmRlciBzdHJpY3RlciBRQy4KCgojIERhdGEgUHJvY2Vzc2luZ3sudGFic2V0IC50YWJzZXQtZmFkZX0KClNldXJhdCBpcyBhbiBlZmZpY2llbnQgcGFja2FnZSB3aXRoIHNpbXBsZSBmdW5jdGlvbnMgZm9yIHN0YW5kYXJkIHByb2Nlc3NpbmcuIAoKLSBgTm9ybWFsaXplRGF0YWA6IFRoZSBkZWZhdWx0IGlzIHRvIGxvZy1ub3JtYWxpemUgKihGZWF0dXJlIGNvdW50cyBmb3IgZWFjaCBjZWxsIGFyZSBkaXZpZGVkIGJ5IHRoZSB0b3RhbCBjb3VudHMgZm9yIHRoYXQgY2VsbCBhbmQgbXVsdGlwbGllZCBieSB0aGUgc2NhbGUuZmFjdG9yLiBUaGlzIGlzIHRoZW4gbmF0dXJhbC1sb2cgdHJhbnNmb3JtZWQgdXNpbmcgbG9nMXApKi4gU3BhdGlhbCBkYXRhIG1heSBiZSBiZXR0ZXIgbm9ybWFsaXNlZCB3aXRoIEFyZWEvY2VsbCBjb3VudCBjb25zaWRlcmVkLiBBcyB3ZSBkb24ndCBoYXZlIGNlbGwgY291bnRzIHBlciBzcG90IGhlcmUsIHdlJ2xsIHN0aWNrIHRvIHRoZSBzdGFuZGFyZCBhcHByb2FjaCBhbmQgdGhhdCB0YWtlbiBieSB0aGUgYXV0aG9ycyAKCi0gYEZpbmRWYXJpYWJsZUZlYXR1cmVzYDogVGhlIHN0YW5kYXJkIGFwcHJvYWNoIGlzIDIwMDAgdG9wIHZhcmlhYmxlIGdlbmVzICsgJ3ZzdCcgc2VsZWN0aW9uIG1ldGhvZC4gKihGaXJzdCwgZml0cyBhIGxpbmUgdG8gdGhlIHJlbGF0aW9uc2hpcCBvZiBsb2codmFyaWFuY2UpIGFuZCBsb2cobWVhbikgdXNpbmcgbG9jYWwgcG9seW5vbWlhbCByZWdyZXNzaW9uIChsb2VzcykuIFRoZW4gc3RhbmRhcmRpemVzIHRoZSBmZWF0dXJlIHZhbHVlcyB1c2luZyB0aGUgb2JzZXJ2ZWQgbWVhbiBhbmQgZXhwZWN0ZWQgdmFyaWFuY2UgKGdpdmVuIGJ5IHRoZSBmaXR0ZWQgbGluZSkuIEZlYXR1cmUgdmFyaWFuY2UgaXMgdGhlbiBjYWxjdWxhdGVkIG9uIHRoZSBzdGFuZGFyZGl6ZWQgdmFsdWVzIGFmdGVyIGNsaXBwaW5nIHRvIGEgbWF4aW11bSkqLiBTdGFuZGFyZCBpcyAyMDAwIGdlbmVzCgotIGBTY2FsZURhdGFgOiBoZXJlLCB3ZSBzY2FsZSBqdXN0IHRoZSB2YXJpYWJsZSBnZW5lcyB0byBzYXZlIHNwYWNlLiBJZiB5b3UgZmluZCB5b3Vyc2VsZiB1bmFibGUgdG8gdmlzdWFsaXNlIHlvdXIgZ2VuZSBvZiBpbnRlcmVzdCBpbiBzdWJzZXF1ZW50IHZpc3VhbGlzYXRpb25zLCBpdCB3YXMgbm90IGluIHRoaXMgdG9wIHZhcmlhYmxlIGxpc3QuIEluIHRoYXQgY2FzZSwgeW91IGNhbiBzY2FsZSBhbGwgZGF0YS4gCgotIGBSdW5QQ0FgICYgYFJ1blVNQVBgOiBWaXN1YWxpc2F0aW9uIHRvb2xzLiBUaGVyZSBhcmUgYSBmZXcgdGhpbmdzIHRvIGNvbnNpZGVyIGluIHRoZSBVTUFQIGZ1bmN0aW9uLCBidXQgbW9zdCBpbXBvcnRhbnQgaXMgdGhlIGBkaW1zYCBhcmd1bWVudC4gV2UnbGwgY292ZXIgdGhpcyBiZWxvdy4gCgo8ZGl2PgoKIyMgTm9ybWFsaXNhdGlvbgoKQWdhaW4sIG5vcm1hbGlzYXRpb24gaXMgcXVpdGUgc2ltcGxlLiAKCmBgYHtyfQpkYXRhIDwtIE5vcm1hbGl6ZURhdGEoZGF0YSwgCiAgICAgICAgICAgICAgICAgICAgICBub3JtYWxpemF0aW9uLm1ldGhvZCA9ICJMb2dOb3JtYWxpemUiLAogICAgICAgICAgICAgICAgICAgICAgdmVyYm9zZT1GKQpgYGAKCiMjIFZhcmlhYmxlIEZlYXR1cmVzCgpXZSdsbCBmaW5kIHRoZSB0b3AgdmFyaWFibGUgZmVhdHVyZXMuCgpgYGB7cn0KZGF0YSA8LSBGaW5kVmFyaWFibGVGZWF0dXJlcyhkYXRhLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtZXRob2QgPSAndnN0JywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmZlYXR1cmVzID0gMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmVyYm9zZT1GKQpgYGAKCldlIGNhbiBvdXRwdXQvdmlzdWFsaXNlIHRoZW0gaW4gc2V2ZXJhbCB3YXlzLiAKCmBgYHtyfQpWYXJpYWJsZUZlYXR1cmVzKGRhdGEpICU+JSBoZWFkKDUwKQoKTGFiZWxQb2ludHMocGxvdCA9IFZhcmlhYmxlRmVhdHVyZVBsb3QoZGF0YSksIAogICAgICAgICAgICBwb2ludHMgPSBoZWFkKFZhcmlhYmxlRmVhdHVyZXMoZGF0YSksIDUwKSwgcmVwZWwgPSBUUlVFKQpgYGAKCiMjIFNjYWxlIERhdGEKClNjYWxpbmcgdGhlIGRhdGEgaXMgYWxzbyBlYXN5IQoKYGBge3J9CmRhdGEgPC0gU2NhbGVEYXRhKGRhdGEsIAogICAgICAgICAgICAgICAgICBmZWF0dXJlcyA9IFZhcmlhYmxlRmVhdHVyZXMoZGF0YSksICNpZiB5b3Ugd2FudCB0byBzY2FsZSBhbGwgZmVhdHVyZXMsIGNoYW5nZSB0aGlzIHRvIHJvd25hbWVzKGRhdGEpCiAgICAgICAgdmVyYm9zZT1GKQpgYGAKCiMjIFBDQSAmIFVNQVAKCkFsc28gdmVyeSBlYXN5IHdpdGggU2V1cmF0LiBXZSdsbCBkZXRlcm1pbmUgdGhlIG51bWJlciBvZiBQQ3MgdG8gdXNlIGZvciB0aGUgVU1BUCB1c2luZyBFbGJvd1Bsb3QKCmBgYHtyfQpkYXRhIDwtIFJ1blBDQShkYXRhLAogICAgICAgICAgICAgICBucGNzID0gNTAsCiAgICAgICAgICAgICAgIHZlcmJvc2U9RikKCkVsYm93UGxvdChkYXRhKQpgYGAKClRoZSBlbGJvdyBwbG90IGRyb3BzIG9mZiBkcmFzdGljYWxseSBhbmQgcGxhdGVhdXMgYXQgfjYsIG1lYW5pbmcgdGhlIHZhcmlhdGlvbiBqdXN0IGJlY29tZXMgbm9pc3kgYXJvdW5kIFBDNi1vbndhcmRzLiBTbyB3ZSdsbCBqdXN0IHVzZSB0aGUgZmlyc3QgNi4gCgpgYGB7cn0KZGF0YSA8LSBSdW5VTUFQKGRhdGEsIAogICAgICAgICAgICAgICAgZGltcz0xOjYsIAogICAgICAgICAgICAgICAgdmVyYm9zZT1GKQpgYGAKCjwvZGl2Pjxocj4KCiMgVmlzdWFsaXNhdGlvbnsudGFic2V0IC50YWJzZXQtZmFkZX0KClRoZXJlIGFyZSBzZXZlcmFsIHZpc3VhbGlzYXRpb25zIHdlIGNhbiBkbzoKCioqR3JhcGgqKjoKCi0gVU1BUCB2aXN1YWxpc2F0aW9uCgotIENsdXN0ZXIgYmFzZWQgZXhwcmVzc2lvbnMKCioqU3BhdGlhbCoqOgoKLSBHZW5lcyBvdmVybGFpZCBvbiB0aGUgdGlzc3VlCgotIE1vZHVsZSBzY29yZXMgb3ZlcmxhaWQgb24gdGhlIHRpc3N1ZQoKIyMgVU1BUHsudGFic2V0IC50YWJzZXQtZmFkZX0KCiMjIyBVTUFQIFZpc3VhbGlzYXRpb24KCldlJ2xsIGZpcnN0IGNsdXN0ZXIgdGhlIGRhdGEuCgpgYGB7cn0KCmRhdGEgPC0gZGF0YSAlPiUgCiAgRmluZE5laWdoYm9ycyhkaW1zID0gMTo2LCB2ZXJib3NlPUYpICU+JQogIEZpbmRDbHVzdGVycyhyZXNvbHV0aW9uPTEsIHZlcmJvc2U9RikKCmBgYAoKQW5kIG5vdyB3ZSBjYW4gY3JlYXRlIGEgVU1BUC4gCgpgYGB7cn0KcDE9VU1BUFBsb3QoZGF0YSwKICAgICAgICAgICAgbGFiZWw9VCwgbGFiZWwuYm94PVQpKwogIE5vTGVnZW5kKCkrCiAgTm9BeGVzKCkrCiAgZ2d0aXRsZSgiMTEgQ2x1c3RlcnMiKQpgYGAKCjxkZXRhaWxzPjxzdW1tYXJ5PioqT3BlbiB0byB2aWV3IG1vcmUgUGxvdHRpbmcgb3B0aW9ucyoqPC9zdW1tYXJ5PgoKSGVyZSBhcmUgc29tZSBhZGRpdGlvbmFsIGFyZ3VtZW50cyB0aGF0IGNoYW5nZSB0aGUgZGVmYXVsdCB2aXN1YWxpc2F0aW9ucy4gQ2hvcCBhbmQgY2hhbmdlIHRvIHNlZSBob3cgdGhleSB3b3JrOgoKYGBge3J9ClVNQVBQbG90KGRhdGEsIAogICAgICAgICBwdC5zaXplPTIsIAogICAgICAgICBsYWJlbD1ULCAKICAgICAgICAgbGFiZWwuc2l6ZT0xMCwKICAgICAgICAgbGFiZWwuYm94PVQsCiAgICAgICAgIGxhYmVsLmNvbG9yPSJ3aGl0ZSIsCiAgICAgICAgIHJlcGVsPVQpKwogIE5vTGVnZW5kKCkrCiAgTm9BeGVzKCkrCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcz0gYygiYmx1ZTQiLCAnYmx1ZTInLCAnbGlnaHRibHVlJywgJ2dyZWVuMicsICdncmVlbjQnLCdicm93bicsICdvcmFuZ2UnLCAncmVkJywgJ3JlZDMnLCAncmVkNCcsICdibGFjaycpKSsKICBzY2FsZV9maWxsX21hbnVhbCh2YWx1ZXM9IGMoImJsdWU0IiwgJ2JsdWUyJywgJ2xpZ2h0Ymx1ZScsICdncmVlbjInLCAnZ3JlZW40JywnYnJvd24nLCAnb3JhbmdlJywgJ3JlZCcsICdyZWQzJywgJ3JlZDQnLCAnYmxhY2snKSkKYGBgCgo8L2RldGFpbHM+CgojIyMgRmVhdHVyZXBsb3RzCgpXZSBjYW4gdmlldyB0aGUgZ2VuZSBleHByZXNzaW9uIG9uIHRoZSBVTUFQIGl0c2VsZi4gCgpgYGB7cn0KcDI9RmVhdHVyZVBsb3QoZGF0YSwgCiAgICAgICAgICAgICJDRDNFIiwKICAgICAgICAgICAgb3JkZXI9VCwKICAgICAgICAgICAgcHQuc2l6ZT0yLCAKICAgICAgICAgICAgY29scyA9IGMoInllbGxvdzIiLCAnYmx1ZTMnKSkrTm9BeGVzKCkrTm9MZWdlbmQoKQpwMz1GZWF0dXJlUGxvdChkYXRhLCAKICAgICAgICAgICAgIkYxM0ExIiwKICAgICAgICAgICAgb3JkZXI9VCwKICAgICAgICAgICAgcHQuc2l6ZT0yLCAKICAgICAgICAgICAgY29scyA9IGMoInllbGxvdzIiLCAnYmx1ZTMnKSkrTm9BeGVzKCkrTm9MZWdlbmQoKQpwND1GZWF0dXJlUGxvdChkYXRhLCAKICAgICAgICAgICAgIkNPTDFBMSIsCiAgICAgICAgICAgIG9yZGVyPVQsCiAgICAgICAgICAgIHB0LnNpemU9MiwgCiAgICAgICAgICAgIGNvbHMgPSBjKCJ5ZWxsb3cyIiwgJ2JsdWUzJykpK05vQXhlcygpK05vTGVnZW5kKCkKcDU9RmVhdHVyZVBsb3QoZGF0YSwgCiAgICAgICAgICAgICJLUlQ1IiwKICAgICAgICAgICAgb3JkZXI9VCwKICAgICAgICAgICAgcHQuc2l6ZT0yLAogICAgICAgICAgICBtaW4uY3V0b2ZmID0gMywKICAgICAgICAgICAgY29scyA9IGMoInllbGxvdzIiLCAnYmx1ZTMnKSkrTm9BeGVzKCkrTm9MZWdlbmQoKQpwbG90X2dyaWQocDEsIHBsb3RfZ3JpZChwMixwMyxwNCxwNSwgbmNvbD0yKSkKYGBgCgojIyMgREUgYW5kIERvdFBsb3RzCgpBbmQgd2UgY2FuIHNpbXBseSBhc3Nlc3MgdGhlIGNsdXN0ZXJzIHRoZW1zZWx2ZXMgdXNpbmcgZGlmZmVyZW50aWFsIGFuYWx5c2lzIGFuZCBleHByZXNzaW9uIGdyYXBocy4gCgpgYGB7cn0KCgptYXJrZXJzIDwtIEZpbmRBbGxNYXJrZXJzKGRhdGEsIAogICAgICAgICAgICAgICAgICAgICAgICAgIGxvZ2ZjLnRocmVzaG9sZCA9IDAuMSwjZGVmYXVsdCAtIGluY3JlYXNpbmcgc3BlZWRzIGl0IHVwLCBidXQgbWF5IG1pc3Mgd2Vha2VyIHNpZ25hbHMuCiAgICAgICAgICAgICAgICAgICAgICAgICAgbWluLnBjdCA9IDAuMDEsICNkZWZhdWx0IC0gY2FuIGJlIGluY3JlYXNlZCB0byBlbnN1cmUgdGhhdCB0aGUgbWluaW11bSBleHByZXNzaW9uIG9mIGdlbmVzIGFyZSBjb25zaWRlcmVkLiAKICAgICAgICAgICAgICAgICAgICAgICAgICBtaW4uZGlmZi5wY3QgPSAtSW5mLCAjIHlvdSBjYW4gYWRqdXN0IHRoaXMgdG9vLiBJRiB5b3Ugd2FudCB0aGVyZSB0byBiZSBhdCBsZWFzdCBhIDEwJSBkaWZmZXJlbmNlIGluIHBlcmNlbnRhZ2Ugb2Ygc3BvdHMgZXhwcmVzc2luZyB0aGUgZ2VuZSwgeW91J2QgY2hhbmdlIHRoaXMgdG8gMC4xLiBDYW4gZW5zdXJlIHRoYXQgaXRzIG5vdCBvbmx5IHRoZSBsZXZlbCBvZiBleHByZXNzaW9uLCBidXQgdGhhdCB5b3UncmUgY2FwdHVyaW5nIGhpZ2hseSBleHByZXNzZWQgZ2VuZXMKICAgICAgICAgICAgICAgICAgICAgICAgICB2ZXJib3NlPUYgI2NoYW5nZSB0aGlzIHRvIHRydWUgaWYgeW91IHdhbnQgdG8gdHJhY2sgdGhlIHNwZWVkIGF0IHdoaWNoIERFIGlzIGJlaW5nIGNhbGN1bGF0ZWQuIEl0IGlzIG9mZiBoZXJlIHRvIHNhdmUgaXQgb3V0cHV0dGluZyBpbnRvIHRoZSBkb2N1bWVudCAKICAgICAgICAgICAgICAgICAgICAgICAgICApIAp0b3AxMCA8LSBtYXJrZXJzICU+JSAKICBncm91cF9ieShjbHVzdGVyKSAlPiUgCiAgdG9wX24od3Q9YXZnX2xvZzJGQywgbj0xMCkKYGBgCgo8ZGV0YWlscz48c3VtbWFyeT5IZWF0bWFwPC9zdW1tYXJ5PgoKYGBge3J9CkRvSGVhdG1hcChBZ2dyZWdhdGVFeHByZXNzaW9uKFNjYWxlRGF0YShkYXRhLCByb3duYW1lcyhkYXRhKSwgdmVyYm9zZT1GKSwgcmV0dXJuLnNldXJhdCA9IFQsIHZlcmJvc2U9RiksCiAgICAgICAgICBmZWF0dXJlcyA9IHRvcDEwJGdlbmUsIAogICAgICAgICAgZHJhdy5saW5lcyA9IEYpCmBgYAoKPGhyPgoKPC9kZXRhaWxzPgoKPGRldGFpbHM+PHN1bW1hcnk+RG90UGxvdDwvc3VtbWFyeT4KCmBgYHtyfQpEb3RQbG90KGRhdGEsIAogICAgICAgIGZlYXR1cmVzID0gYygiQ0QzRSIsICJDTEVDMTBBIiwgIkNEMjA3IiwgIktSVDUiLCAiQ09MMUExIiksIAogICAgICAgIGNvbHM9YygiZ3JleSIsICJyZWQiKSkKYGBgCgo8L2RldGFpbHM+Cgo8ZGV0YWlscz48c3VtbWFyeT5WaW9saW48L3N1bW1hcnk+CgpgYGB7cn0KVmxuUGxvdChkYXRhLCAKICAgICAgICBmZWF0dXJlcyA9IGMoIkNEM0UiLCAiQ0xFQzEwQSIsICJDRDIwNyIsICJLUlQ1IiwgIkNPTDFBMSIpKQpWbG5QbG90KGRhdGEsIAogICAgICAgIGZlYXR1cmVzID0gYygiQ0QzRSIsICJDTEVDMTBBIiwgIkNEMjA3IiwgIktSVDUiLCAiQ09MMUExIiksIHN0YWNrPVQpCmBgYAoKPC9kZXRhaWxzPgoKIyMgU3BhdGlhbHsudGFic2V0IC50YWJzZXQtZmFkZX0KCldlIGNhbiBkbyBhIGZldyB0aGluZ3MgaGVyZS4gCgojIyMgQ2x1c3RlcnMgb3ZlcmxhaWQgc3BhdGlhbGx5CgpgYGB7cn0KU3BhdGlhbERpbVBsb3QoZGF0YSwgcHQuc2l6ZT0zKQpJbWFnZURpbVBsb3QoZGF0YSwgc2l6ZT0zKQpgYGAKCiMjIyBFeHByZXNzaW9ucyBvdmVybGFpZCBzcGF0aWFsbHkKCmBgYHtyfQpTcGF0aWFsRmVhdHVyZVBsb3QoZGF0YSwgCiAgICAgICAgICAgICAgICAgICBmZWF0dXJlcz0iQ0QzRSIsCiAgICAgICAgICAgICAgICAgICBwdC5zaXplPTMpCgpTcGF0aWFsRmVhdHVyZVBsb3QoZGF0YSwgCiAgICAgICAgICAgICAgICAgICBmZWF0dXJlcz0iQ0QzRSIsCiAgICAgICAgICAgICAgICAgICBwdC5zaXplPTMpKwogIHNjYWxlX2ZpbGxfdmlyaWRpc19iKCkKCkltYWdlRmVhdHVyZVBsb3QoZGF0YSwgCiAgICAgICAgICAgICAgICAgICBmZWF0dXJlcz0iQ0QzRSIsCiAgICAgICAgICAgICAgICAgICBzaXplPTMpCmBgYAoKCgoKCgoKCgoKCg==</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
