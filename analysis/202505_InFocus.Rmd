@@ -35,6 +35,8 @@ In this session, 10X Genomics will lead the discussion on the key analytical con
 </details>
 <hr>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8rvPjXmO4aA?si=Av7ye6YncR-P5D2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 
