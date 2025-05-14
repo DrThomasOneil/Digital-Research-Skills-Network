@@ -11,7 +11,7 @@
 
 
 
-<title>0_contacts_committee.knit</title>
+<title>0_bugs.knit</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -32,6 +32,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel="icon" type="image/png" href="assets/logo/DRSN_logo_smaller_filt.png">
@@ -57,103 +65,6 @@ div.section {
 
 
 
-<style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
-</style>
-<style type="text/css" data-origin="pandoc">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; } /* Alert */
-code span.an { color: #008000; } /* Annotation */
-code span.at { } /* Attribute */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #0000ff; } /* ControlFlow */
-code span.ch { color: #008080; } /* Char */
-code span.cn { } /* Constant */
-code span.co { color: #008000; } /* Comment */
-code span.cv { color: #008000; } /* CommentVar */
-code span.do { color: #008000; } /* Documentation */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.im { } /* Import */
-code span.in { color: #008000; } /* Information */
-code span.kw { color: #0000ff; } /* Keyword */
-code span.op { } /* Operator */
-code span.ot { color: #ff4000; } /* Other */
-code span.pp { color: #ff4000; } /* Preprocessor */
-code span.sc { color: #008080; } /* SpecialChar */
-code span.ss { color: #008080; } /* SpecialString */
-code span.st { color: #008080; } /* String */
-code span.va { } /* Variable */
-code span.vs { color: #008080; } /* VerbatimString */
-code span.wa { color: #008000; font-weight: bold; } /* Warning */
-
-</style>
-<script>
-// apply pandoc div.sourceCode style to pre.sourceCode instead
-(function() {
-  var sheets = document.styleSheets;
-  for (var i = 0; i < sheets.length; i++) {
-    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
-    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    var j = 0;
-    while (j < rules.length) {
-      var rule = rules[j];
-      // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
-        j++;
-        continue;
-      }
-      var style = rule.style.cssText;
-      // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') {
-        j++;
-        continue;
-      }
-      // replace div.sourceCode by a pre.sourceCode rule
-      sheets[i].deleteRule(j);
-      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
-    }
-  }
-})();
-</script>
 
 
 <style type="text/css">
@@ -689,11 +600,10 @@ have uncommitted changes.
 
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/0_contacts_committee.Rmd</code>)
-and HTML (<code>docs/0_contacts_committee.html</code>) files. If you’ve
-configured a remote Git repository (see <code>?wflow_git_remote</code>),
-click on the hyperlinks in the table below to view the files as they
-were in that past version.
+made to the R Markdown (<code>analysis/0_bugs.Rmd</code>) and HTML
+(<code>docs/0_bugs.html</code>) files. If you’ve configured a remote Git
+repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
+in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -719,67 +629,16 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/cff79238bf16b8671c9c52ee5e87aa7cf2504018/docs/0_contacts_committee.html" target="_blank">cff7923</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-05-07
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/16a96138fdcae45a20a992a3dfe2e0ba9bbbc20e/docs/0_contacts_committee.html" target="_blank">16a9613</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-04-30
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/862d6b6d567bdbd4bbceec6c50cd780dbdb57b29/docs/0_contacts_committee.html" target="_blank">862d6b6</a>
-</td>
-<td>
-DrThomasOneil
-</td>
-<td>
-2025-04-29
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/b68287f08cfd472eb7e732d5a1bf6e0391b9ab7d/analysis/0_contacts_committee.Rmd" target="_blank">b68287f</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/a5f07d7822f08faa5b253b7d7d406e3189768ce1/analysis/0_bugs.Rmd" target="_blank">a5f07d7</a>
 </td>
 <td>
 DrThomasOneil
 </td>
 <td>
-2025-04-29
+2025-05-14
 </td>
 <td>
 wflow_publish(files)
@@ -792,264 +651,25 @@ wflow_publish(files)
 </div>
 </div>
 </div>
-<div style="text-align: center">
-<p><br></p>
-<div id="digital-research-skills-network-committee-members"
-class="section level1">
-<h1><em>Digital Research Skills Network<br>Committee
-Members</em><br></h1>
-<p><span style="display:inline-block; width:80%;"><wimr></span></p>
-<table style="width:100%; border-collapse: collapse;">
-<tr>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Committee
-Chair</b></span><br><img src="assets/headshot/TO.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">Thomas
-O’Neil</a></span><br><span
-style="font-size: 14px; color: #444;">PostDoc</span>
-<div id="collapse1" class="collapse">
-<div style="padding: 10px; text-align:justify">
-<a href="mailto:thomas.oneil@sydney.edu.au"
-class="email">thomas.oneil@sydney.edu.au</a><br>I have been with the
-Mucosal Immunity lab at WIMR since my honours year in 2018. I completed
-my <a href="https://ses.library.usyd.edu.au/handle/2123/31626">PhD</a>
-in 2023. Initially, my studies involved characterising anogenital T
-cells by flow cytometry, but having learned analytic programming during
-COVID, I now study all aspects of human tissue immunology via
-high-parameter proteomic and transcriptomic bioinformatic approaches.
+<div id="find-a-solution-to-your-bugs" class="section level1"
+style="text-align:center">
+<h1>Find a solution to your bugs!</h1>
+<p><strong>Curator</strong>: Yuchen Li<br></p>
+<p><strong><a href="mailto:%20yuli0321@uni.sydney.edu.au">Contact Me
+✉️</a></strong> if you can’t find your bug! ;) Include a screenshot,
+and/or copy of the script and error</p>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-8992f1308fd197f7d263" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8992f1308fd197f7d263">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Topic":["Introductory series","Introductory series","Introductory series","Flow analysis in R","Flow analysis in R","Flow analysis in R","Getting started in Spatial transcriptomics","Getting started in Spatial transcriptomics","Getting started in Spatial transcriptomics"],"Date":["Feb-25","Feb-25","Mar-25","Apr-25","Apr-25","Apr-25","May-25","May-25","May-25"],"Activity":["Workshop","Workshop","Workshop","Seminar","in-focus","Workshop","Seminar","in-focus","Workshop"],"Theme":["Introduction","Introduction","Introduction","Flow","Flow","Flow","Spatial data","Spatial data","Spatial data"],"Tag":["R, tidyverse, plotting","R, tidyverse, data manipulation","R, tidyverse, Rmarkdown","Proteomic, Software, Programming","Proteomic, Packages, Spectre, FuseSOM, FlowSOM","Proteomic, Visualisation, ","Transcriptomic","Transcriptomic","Transcriptomic"],"Link":["https://www.digitalresearchskills.network/202502_tidyverse1.html","https://www.digitalresearchskills.network/202502_tidyverse2.html","https://www.digitalresearchskills.network/202503_tidyverse3.html","https://www.digitalresearchskills.network/202504_Seminar.html","https://www.digitalresearchskills.network/202504_InFocus.html","https://www.digitalresearchskills.network/202504_Workshop.html","https://www.digitalresearchskills.network/202505_Seminar.html","https://www.digitalresearchskills.network/202505_InFocus.html","https://www.digitalresearchskills.network/202505_Workshop.html"],"Recording":["https://wimr.sharepoint.com/sites/drsn/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdrsn%2FShared%20Documents%2FRecording%2F2025%20Recordings%2F2025%2D02%2D10%20Introduction%20to%20Data%20Vis%20and%20Discussion&viewid=a7ded634%2Df50e%2D4115%2Db1d6%2Da707b82933b8","https://wimr.sharepoint.com/sites/drsn/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdrsn%2FShared%20Documents%2FRecording%2F2025%20Recordings%2F2025%2D02%2D24%20Tidyverse%202%20Data%20Manipulation&viewid=a7ded634%2Df50e%2D4115%2Db1d6%2Da707b82933b8","https://wimr.sharepoint.com/sites/drsn/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdrsn%2FShared%20Documents%2FRecording%2F2025%20Recordings%2F2025%2D03%2D03%20Tidyverse%203%20Using%20RMarkdown&viewid=a7ded634%2Df50e%2D4115%2Db1d6%2Da707b82933b8","https://youtu.be/Cd21LuWmQj4","https://youtu.be/TOVgBF-mVBY","https://youtu.be/5ebo-upNBhQ","","",""]},"columns":[{"id":"Topic","name":"Topic","type":"character","align":"left","headerStyle":{"background":"#ffcf72"},"filterable":true,"width":220},{"id":"Date","name":"Date","type":"character","align":"left","headerStyle":{"background":"#ffcf72"}},{"id":"Activity","name":"Activity","type":"character","align":"left","headerStyle":{"background":"#ffcf72"}},{"id":"Theme","name":"Theme","type":"character","align":"left","headerStyle":{"background":"#ffcf72"},"filterable":true,"width":100},{"id":"Tag","name":"Tag","type":"character","align":"left","headerStyle":{"background":"#ffcf72"},"filterable":true,"width":220},{"id":"Link","name":"Link","type":"character","align":"left","headerStyle":{"background":"#ffcf72"},"cell":[{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202502_tidyverse1.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202502_tidyverse2.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202503_tidyverse3.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202504_Seminar.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202504_InFocus.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202504_Workshop.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202505_Seminar.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202505_InFocus.html","target":"_blank","className":"page-link"},"children":["View page"]},{"name":"a","attribs":{"href":"https://www.digitalresearchskills.network/202505_Workshop.html","target":"_blank","className":"page-link"},"children":["View page"]}],"html":true,"width":100},{"id":"Recording","name":"Recording","type":"character","align":"left","headerStyle":{"background":"#ffcf72"},"cell":[{"name":"a","attribs":{"href":"https://wimr.sharepoint.com/sites/drsn/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdrsn%2FShared%20Documents%2FRecording%2F2025%20Recordings%2F2025%2D02%2D10%20Introduction%20to%20Data%20Vis%20and%20Discussion&viewid=a7ded634%2Df50e%2D4115%2Db1d6%2Da707b82933b8","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"https://wimr.sharepoint.com/sites/drsn/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdrsn%2FShared%20Documents%2FRecording%2F2025%20Recordings%2F2025%2D02%2D24%20Tidyverse%202%20Data%20Manipulation&viewid=a7ded634%2Df50e%2D4115%2Db1d6%2Da707b82933b8","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"https://wimr.sharepoint.com/sites/drsn/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fdrsn%2FShared%20Documents%2FRecording%2F2025%20Recordings%2F2025%2D03%2D03%20Tidyverse%203%20Using%20RMarkdown&viewid=a7ded634%2Df50e%2D4115%2Db1d6%2Da707b82933b8","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"https://youtu.be/Cd21LuWmQj4","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"https://youtu.be/TOVgBF-mVBY","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"https://youtu.be/5ebo-upNBhQ","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"","target":"_blank","className":"video-link"},"children":["View video"]},{"name":"a","attribs":{"href":"","target":"_blank","className":"video-link"},"children":["View video"]}],"html":true,"width":100}],"groupBy":["Topic"],"searchable":true,"defaultSorted":[{"id":"Date","desc":false}],"defaultPageSize":20,"paginateSubRows":true,"highlight":true,"bordered":true,"compact":true,"theme":{"searchInputStyle":{"width":"30%"}},"dataKey":"57a4cfc657101dde9027282d81477023"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span
-style="font-size: 20px;"><b>Secretary</b></span><br><img src="assets/headshot/HR.jpeg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">Harry
-Robertson</a></span><br><span style="font-size: 14px; color: #444;">PhD
-Candidate</span>
-<div id="collapse2" class="collapse">
-<div style="padding: 10px; text-align:justify">
-<a href="mailto:harry.robertson@sydney.edu.au"
-class="email">harry.robertson@sydney.edu.au</a><br>I am a research
-student and aspiring bioinformatician at WIMR who was recently awarded a
-Fulbright Future Scholarship (Postgraduate) hosted by Harvard
-University. my reent focus has been on identifying biomarkers for organ
-transplant health using advanced imaging techniques. My approach
-leverages machine learning to analyse imaging data, aiming to develop a
-universally available, non-invasive diagnostic tool for transplant
-recipients.
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Communications
-Lead</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">Nicole
-Fewings</a></span><br><span
-style="font-size: 14px; color: #444;">PostDoc</span>
-<div id="collapse3" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Communications
-Deputy</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse4" role="button" aria-expanded="false" aria-controls="collapse4">Elizabeth
-Dunn</a></span><br><span style="font-size: 14px; color: #444;">PhD
-Candidate</span>
-<div id="collapse4" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Events
-Coordinator</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse5" role="button" aria-expanded="false" aria-controls="collapse5">Sifan
-Zhang</a></span><br><span style="font-size: 14px; color: #444;">PhD
-Candidate</span>
-<div id="collapse5" class="collapse">
-<div style="padding: 10px; text-align:justify">
-<a href="mailto:sifan.zhang@sydney.edu.au"
-class="email">sifan.zhang@sydney.edu.au</a><br>I am currently a PhD
-candidate in vaccine adjuvant group in WIMR. I have previous experience
-in scRNA sequencing and high-parameter flow cytometry, and I am
-investigating adjuvant modes of action using spatial transcriptomics
-(Xenium).
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Content
-Coordinator</b></span><br><img src="assets/headshot/YL.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse6" role="button" aria-expanded="false" aria-controls="collapse6">Yuchen
-Li</a></span><br><span style="font-size: 14px; color: #444;">PhD
-Candidate</span>
-<div id="collapse6" class="collapse">
-<div style="padding: 10px; text-align:justify">
-<a href="mailto:yuli0321@uni.sydney.edu.au"
-class="email">yuli0321@uni.sydney.edu.au</a><br>I am a PhD candidate at
-WIMR. Following on from Honours, my research focus is characterising
-human anogenital tissue CD4 T cells and their susceptibility to HIV. I
-aim to determine the initial establishment of HIV latency within
-anogenital tissues using both wet-lab experimental models and
-verification, and machine learning-aid computational analysis.
-</div>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Level 2
-Representative</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse7" role="button" aria-expanded="false" aria-controls="collapse7">Suat
-Dervish</a></span><br><span style="font-size: 14px; color: #444;">Core
-Facilities</span>
-<div id="collapse7" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Level 3
-Representative</b></span><br><img src="assets/headshot/NA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse8" role="button" aria-expanded="false" aria-controls="collapse8">Vacant</a></span><br><span
-style="font-size: 14px; color: #444;">Vacant</span>
-<div id="collapse8" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Level 4
-Representative</b></span><br><img src="assets/headshot/NA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse9" role="button" aria-expanded="false" aria-controls="collapse9">Vacant</a></span><br><span
-style="font-size: 14px; color: #444;">Vacant</span>
-<div id="collapse9" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Level 5
-Representative</b></span><br><img src="assets/headshot/JL.png" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse10" role="button" aria-expanded="false" aria-controls="collapse10">Jennifer
-Li</a></span><br><span style="font-size: 14px; color: #444;">Group
-Leader</span>
-<div id="collapse10" class="collapse">
-<div style="padding: 10px; text-align:justify">
-<a href="mailto:jennifer.li@wimr.org.au"
-class="email">jennifer.li@wimr.org.au</a><br>I am a Nephrologist and
-Transplant Physician at Westmead hospital and researcher in the
-Transplant Genomics Group at WIMR.
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Level 6
-Representative</b></span><br><img src="assets/headshot/NA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse11" role="button" aria-expanded="false" aria-controls="collapse11">Artur
-Shvetcov</a></span><br><span
-style="font-size: 14px; color: #444;">Senior Bioinformatician</span>
-<div id="collapse11" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>Level 7
-Representative</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse12" role="button" aria-expanded="false" aria-controls="collapse12">Ellis
-Patrick</a></span><br><span style="font-size: 14px; color: #444;">Group
-Leader</span>
-<div id="collapse12" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>External
-Representative</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse13" role="button" aria-expanded="false" aria-controls="collapse13">Erin
-Coll</a></span><br><span style="font-size: 14px; color: #444;">PhD
-Candidate</span>
-<div id="collapse13" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>External
-Representative</b></span><br><img src="assets/headshot/TBA.jpg" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse14" role="button" aria-expanded="false" aria-controls="collapse14">Shreya
-Rajesh Rao</a></span><br><span style="font-size: 14px; color: #444;">PhD
-Candidate</span>
-<div id="collapse14" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-<td style="vertical-align:top; padding: 10px;">
-<div style="text-align:center;">
-<span style="font-size: 20px;"><b>External
-Representative</b></span><br><img src="assets/headshot/GP.png" style="width: 1.5in; margin: 5px 0;"><br><span
-style="font-size: 16px;"><a data-toggle="collapse" href="#collapse15" role="button" aria-expanded="false" aria-controls="collapse15">Givanna
-Putri</a></span><br><span
-style="font-size: 14px; color: #444;">PostDoc</span>
-<div id="collapse15" class="collapse">
-<div style="padding: 10px; text-align:justify">
-Bio
-</div>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
+<div id="if-your-machine-is-onboarded-with-wimr" class="section level4">
+<h4>If your machine is onboarded with WIMR…</h4>
+<p>You will face several restrictive issues during your analysis. You
+are required to submit requests for admin permissions to install new
+packages sometimes, and new software. If you have extensive issues with
+this, please make a complaint to the DRSN through Chair <strong><a
+href="mailto:%20thomas.oneil@sydney.edu.au">Thomas O’Neil</a></strong>
+who will represent you, and advise you on how to proceed with
+analysis.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1058,7 +678,6 @@ Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
 <pre><code>R version 4.4.0 (2024-04-24)
 Platform: aarch64-apple-darwin20
 Running under: macOS Sonoma 14.3
@@ -1077,25 +696,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] readr_2.1.5     dplyr_1.1.4     workflowr_1.7.1
+[1] htmltools_0.5.8.1 reactable_0.4.4   shiny_1.10.0      workflowr_1.7.1  
 
 loaded via a namespace (and not attached):
- [1] bit_4.6.0         jsonlite_1.9.1    crayon_1.5.3      compiler_4.4.0   
- [5] promises_1.3.2    tidyselect_1.2.1  Rcpp_1.0.14       stringr_1.5.1    
- [9] git2r_0.35.0      parallel_4.4.0    callr_3.7.6       later_1.4.1      
-[13] jquerylib_0.1.4   yaml_2.3.10       fastmap_1.2.0     R6_2.6.1         
-[17] generics_0.1.3    knitr_1.50        tibble_3.2.1      rprojroot_2.0.4  
-[21] tzdb_0.5.0        bslib_0.9.0       pillar_1.10.1     rlang_1.1.6      
-[25] cachem_1.1.0      stringi_1.8.4     httpuv_1.6.15     xfun_0.51        
-[29] getPass_0.2-4     fs_1.6.5          sass_0.4.9        bit64_4.6.0-1    
-[33] cli_3.6.4         magrittr_2.0.3    ps_1.9.0          digest_0.6.37    
-[37] processx_3.8.6    vroom_1.6.5       rstudioapi_0.17.1 hms_1.1.3        
-[41] lifecycle_1.0.4   vctrs_0.6.5       evaluate_1.0.3    glue_1.8.0       
-[45] whisker_0.4.1     rmarkdown_2.29    httr_1.4.7        tools_4.4.0      
-[49] pkgconfig_2.0.3   htmltools_0.5.8.1</code></pre>
+ [1] jsonlite_1.9.1    compiler_4.4.0    promises_1.3.2    Rcpp_1.0.14      
+ [5] stringr_1.5.1     git2r_0.35.0      callr_3.7.6       later_1.4.1      
+ [9] jquerylib_0.1.4   yaml_2.3.10       fastmap_1.2.0     mime_0.13        
+[13] R6_2.6.1          knitr_1.50        htmlwidgets_1.6.4 tibble_3.2.1     
+[17] rprojroot_2.0.4   bslib_0.9.0       pillar_1.10.1     rlang_1.1.6      
+[21] cachem_1.1.0      stringi_1.8.4     reactR_0.6.1      httpuv_1.6.15    
+[25] xfun_0.51         getPass_0.2-4     fs_1.6.5          sass_0.4.9       
+[29] cli_3.6.4         magrittr_2.0.3    crosstalk_1.2.1   ps_1.9.0         
+[33] digest_0.6.37     processx_3.8.6    rstudioapi_0.17.1 xtable_1.8-4     
+[37] lifecycle_1.0.4   vctrs_0.6.5       evaluate_1.0.3    glue_1.8.0       
+[41] whisker_0.4.1     rmarkdown_2.29    httr_1.4.7        tools_4.4.0      
+[45] pkgconfig_2.0.3  </code></pre>
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwotLS0gCgo8ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXIiPgo8YnI+CgoKIyAqRGlnaXRhbCBSZXNlYXJjaCBTa2lsbHMgTmV0d29yazxicj5Db21taXR0ZWUgTWVtYmVycyo8YnI+Cgo8c3BhbiBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7IHdpZHRoOjgwJTsiPjx3aW1yPjwvc3Bhbj4KCmBgYHtyIGNvbnRhY3RzLXRhYmxlLCByZXN1bHRzPSdhc2lzJywgZWNobz1GQUxTRSwgbWVzc2FnZT1GLHdhcm5pbmc9RixlcnJvcj1GfQpsaWJyYXJ5KGRwbHlyKQpsaWJyYXJ5KHJlYWRyKQoKIyBSZWFkIENTVgpjb250YWN0cyA8LSBzdXBwcmVzc01lc3NhZ2VzKHJlYWRfY3N2KCJkb2NzL2FkaXQvY29udGFjdHMuY3N2IikpCgpuX2NvbHMgPC0gMwpuX3Jvd3MgPC0gY2VpbGluZyhucm93KGNvbnRhY3RzKSAvIG5fY29scykgICMgRW5vdWdoIHJvd3MgZm9yIGV2ZXJ5b25lCgojIFRoaXMgZnVuY3Rpb24gYnVpbGRzIHRoZSBIVE1MIGZvciBvbmUgImNhcmQiCm1ha2VfY2VsbCA8LSBmdW5jdGlvbihpZHgsIHJvbGUsIGltYWdlX3VybCwgbmFtZSwgcG9zaXRpb24sIGJpbykgewogICMgV2UnbGwgdXNlIGEgdW5pcXVlIElEIGZvciB0aGUgY29sbGFwc2libGUgZGl2IChlLmcuICJjb2xsYXBzZTEiLCAiY29sbGFwc2UyIiwgZXRjLikKICBjb2xsYXBzZV9pZCA8LSBwYXN0ZTAoImNvbGxhcHNlIiwgaWR4KQogIAogIHBhc3RlMCgKICAgICc8ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOmNlbnRlcjsiPicsCiAgICAgICc8c3BhbiBzdHlsZT0iZm9udC1zaXplOiAyMHB4OyI+PGI+Jywgcm9sZSwgJzwvYj48L3NwYW4+PGJyPicsCiAgICAgICc8aW1nIHNyYz0iJywgaW1hZ2VfdXJsLCAnIiBzdHlsZT0id2lkdGg6IDEuNWluOyBtYXJnaW46IDVweCAwOyI+PGJyPicsCiAgICAgICMgQSBjbGlja2FibGUgbGluayB0aGF0IHRvZ2dsZXMgdGhlIGNvbGxhcHNlCiAgICAgICc8c3BhbiBzdHlsZT0iZm9udC1zaXplOiAxNnB4OyI+PGEgZGF0YS10b2dnbGU9ImNvbGxhcHNlIiBocmVmPSIjJywgY29sbGFwc2VfaWQsIAogICAgICAgICAnIiByb2xlPSJidXR0b24iIGFyaWEtZXhwYW5kZWQ9ImZhbHNlIiBhcmlhLWNvbnRyb2xzPSInLCBjb2xsYXBzZV9pZCwgJyI+JywKICAgICAgICBuYW1lLAogICAgICAnPC9hPjwvc3Bhbj48YnI+JywKICAgICAgJzxzcGFuIHN0eWxlPSJmb250LXNpemU6IDE0cHg7IGNvbG9yOiAjNDQ0OyI+JywgcG9zaXRpb24sICc8L3NwYW4+JywKICAgICAgCiAgICAgICMgVGhlIGhpZGRlbiBjb250ZW50LiBCb290c3RyYXAgd2lsbCBzaG93L2hpZGUgdGhpcwogICAgICAnPGRpdiBjbGFzcz0iY29sbGFwc2UiIGlkPSInLCBjb2xsYXBzZV9pZCwgJyI+JywKICAgICAgICAnPGRpdiBzdHlsZT0icGFkZGluZzogMTBweDsgdGV4dC1hbGlnbjpqdXN0aWZ5Ij4nLAogICAgICAgICAgYmlvLAogICAgICAgICc8L2Rpdj4nLAogICAgICAnPC9kaXY+JywKICAgICc8L2Rpdj4nCiAgKQp9CgpodG1sX291dHB1dCA8LSAnPHRhYmxlIHN0eWxlPSJ3aWR0aDoxMDAlOyBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlOyI+JwppZHggPC0gMQpmb3IgKHIgaW4gc2VxX2xlbihuX3Jvd3MpKSB7CiAgaHRtbF9vdXRwdXQgPC0gcGFzdGUwKGh0bWxfb3V0cHV0LCAiPHRyPlxuIikKICAKICBmb3IgKGMgaW4gc2VxX2xlbihuX2NvbHMpKSB7CiAgICBpZiAoaWR4IDw9IG5yb3coY29udGFjdHMpKSB7CiAgICAgIGNlbGxfaHRtbCA8LSBtYWtlX2NlbGwoCiAgICAgICAgaWR4ICAgICAgICA9IGlkeCwKICAgICAgICByb2xlICAgICAgID0gY29udGFjdHMkcm9sZVtpZHhdLAogICAgICAgIGltYWdlX3VybCAgPSBjb250YWN0cyRpbWFnZV91cmxbaWR4XSwKICAgICAgICBuYW1lICAgICAgID0gY29udGFjdHMkbmFtZVtpZHhdLAogICAgICAgIHBvc2l0aW9uICAgPSBjb250YWN0cyRwb3NpdGlvbltpZHhdLAogICAgICAgIGJpbyAgICAgICAgPSBjb250YWN0cyRiaW9baWR4XQogICAgICApCiAgICAgIAogICAgICBodG1sX291dHB1dCA8LSBwYXN0ZTAoCiAgICAgICAgaHRtbF9vdXRwdXQsCiAgICAgICAgJzx0ZCBzdHlsZT0idmVydGljYWwtYWxpZ246dG9wOyBwYWRkaW5nOiAxMHB4OyI+JywKICAgICAgICAgY2VsbF9odG1sLAogICAgICAgICc8L3RkPlxuJwogICAgICApCiAgICAgIGlkeCA8LSBpZHggKyAxCiAgICB9IGVsc2UgewogICAgICBodG1sX291dHB1dCA8LSBwYXN0ZTAoaHRtbF9vdXRwdXQsICI8dGQ+PC90ZD5cbiIpCiAgICB9CiAgfQogIGh0bWxfb3V0cHV0IDwtIHBhc3RlMChodG1sX291dHB1dCwgIjwvdHI+XG4iKQp9Cmh0bWxfb3V0cHV0IDwtIHBhc3RlMChodG1sX291dHB1dCwgIjwvdGFibGU+IikKCmNhdChodG1sX291dHB1dCkKCmBgYAoKPC9kaXY+Cgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwotLS0gCgo8ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOmNlbnRlciI+CgojIEZpbmQgYSBzb2x1dGlvbiB0byB5b3VyIGJ1Z3MhCgoqKkN1cmF0b3IqKjogWXVjaGVuIExpPGJyPgoKKipbQ29udGFjdCBNZSBgciAiXFUyNzA5XFVGRTBGImBdKG1haWx0bzogeXVsaTAzMjFAdW5pLnN5ZG5leS5lZHUuYXUpKiogaWYgeW91IGNhbid0IGZpbmQgeW91ciBidWchIDspIEluY2x1ZGUgYSBzY3JlZW5zaG90LCBhbmQvb3IgY29weSBvZiB0aGUgc2NyaXB0IGFuZCBlcnJvcgoKIApgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBGQUxTRSkKbGlicmFyeShzaGlueSkKbGlicmFyeShyZWFjdGFibGUpCmxpYnJhcnkoaHRtbHRvb2xzKQpgYGAKCgpgYGB7ciwgd2FybmluZyA9IEYsIG1lc3NhZ2U9RkFMU0V9CmNvbnRlbnQgPC0gcmVhZC5jc3YoImRvY3MvYWRpdC8wX2NvbnRlbnQgbWFuYWdlbWVudC5jc3YiKQpodG1sdG9vbHM6OmJyb3dzYWJsZSgKICB0YWJsZSA8LSByZWFjdGFibGUoY29udGVudCwKICAgICAgICAgICAgICAgICAgICAgZGVmYXVsdENvbERlZiA9IGNvbERlZigKICAgICAgICAgICAgICAgICAgICAgICBhbGlnbiA9ICJsZWZ0IiwKICAgICAgICAgICAgICAgICAgICAgICBoZWFkZXJTdHlsZSA9IGxpc3QoYmFja2dyb3VuZCA9ICIjZmZjZjcyIikKICAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICAgIyBEZWZpbmUgY29sdW1ucwogICAgICAgICAgICAgICAgICAgICBjb2x1bW5zID0gbGlzdCgKICAgICAgICAgICAgICAgICAgICAgICBUb3BpYyA9IGNvbERlZihuYW1lID0gIlRvcGljIiwgd2lkdGggPSAyMjAsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsdGVyYWJsZSA9IFRSVUUpLCAjIE1ha2UgaXQgc3RpY2t5IHdoZW4gc2Nyb2xsaW5nCiAgICAgICAgICAgICAgICAgICAgICAgUGxhdGZvcm0gPSBjb2xEZWYobmFtZSA9ICJQbGF0Zm9ybSIsIHdpZHRoID0gODAsICMgZS5nLiBSL3B5dGhvbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbHRlcmFibGUgPSBUUlVFKSwKICAgICAgICAgICAgICAgICAgICAgICBUaGVtZSA9IGNvbERlZihuYW1lID0gIlRoZW1lIiwgd2lkdGggPSAxMDAsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsdGVyYWJsZSA9IFRSVUUpLAogICAgICAgICAgICAgICAgICAgICAgIFRhZyA9IGNvbERlZihuYW1lID0gIlRhZyIsIHdpZHRoID0gMjIwLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWx0ZXJhYmxlID0gVFJVRSksCiAgICAgICAgICAgICAgICAgICAgICAgTGluayA9IGNvbERlZihuYW1lID0gIkxpbmsiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaHRtbCA9VFJVRSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgSW4gYSBjZWxsIHNldHRpbmcsIGluaXRpYXRlIGFuIFIgcmVuZGVyIGZ1bmN0aW9uCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjZWxsID0gZnVuY3Rpb24odmFsdWUpewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGdlbmVyYXRlcyBhIGxpbmsgdG8gYSB3ZWJwYWdlIGJ5IGFkZGluZyBhbiAnYScgaHRtbCB0YWcsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRhZ3MkYShocmVmID0gdmFsdWUsIHRhcmdldCA9ICJfYmxhbmsiLCBjbGFzcyA9ICJwYWdlLWxpbmsiLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmZWxzZShpcy5uYSh2YWx1ZSl8fCB2YWx1ZSA9PSAiInx8aXMubnVsbCh2YWx1ZSksICJDb21pbmcgc29vbiIsICJWaWV3IHBhZ2UiKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aCA9IDEwMCksCiAgICAgICAgICAgICAgICAgICAgICAgUmVjb3JkaW5nID0gY29sRGVmKG5hbWUgPSAiUmVjb3JkaW5nIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaHRtbCA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNlbGwgPSBmdW5jdGlvbih2KXsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0YWdzJGEoaHJlZiA9IHYsIHRhcmdldCA9ICJfYmxhbmsiLCBjbGFzcyA9ICJ2aWRlby1saW5rIiwgIlZpZXcgdmlkZW8iKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aCA9IDEwMCkKICAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICAgIyBEZWZpbmUgb3RoZXIgdGFibGUgY2hhcmFjdGVyaXN0aWNzCiAgICAgICAgICAgICAgICAgICAgIGJvcmRlcmVkID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgaGlnaGxpZ2h0ID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgY29tcGFjdCA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICMgRGVmYXVsdCBzb3J0aW5nIGJ5IHNjaGVkdWxlcwogICAgICAgICAgICAgICAgICAgICBkZWZhdWx0U29ydGVkID0gbGlzdChEYXRlID0gImFzYyIpLAogICAgICAgICAgICAgICAgICAgICAjIE1ha2UgdGhlIHRhYmxlIHNlYXJjaGFibGUKICAgICAgICAgICAgICAgICAgICAgc2VhcmNoYWJsZSA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICMgU2hvdyA4IHJvd3MgbWF4IGEgdGltZQogICAgICAgICAgICAgICAgICAgICBkZWZhdWx0UGFnZVNpemUgPSAyMCwKICAgICAgICAgICAgICAgICAgICAgIyBncm91cCB0aGUgY29udGVudCB0b2dldGhlciBieSB0aGVtZXMKICAgICAgICAgICAgICAgICAgICAgZ3JvdXBCeSA9ICJUb3BpYyIsCiAgICAgICAgICAgICAgICAgICAgIHBhZ2luYXRlU3ViUm93cyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgIHRoZW1lID0gcmVhY3RhYmxlVGhlbWUoCiAgICAgICAgICAgICAgICAgICAgICAgc2VhcmNoSW5wdXRTdHlsZSA9IGxpc3Qod2lkdGggPSAiMzAlIikKICAgICAgICAgICAgICAgICAgICAgKQogICkKKQpodG1sd2lkZ2V0czo6c2F2ZVdpZGdldCh0YWJsZSwgIi4vZG9jcy8wX2FyY2hpdmUuaHRtbCIsIHNlbGZjb250YWluZWQgPSBUUlVFKQpgYGAKCiA8L2Rpdj4KCiMjIyMgSWYgeW91ciBtYWNoaW5lIGlzIG9uYm9hcmRlZCB3aXRoIFdJTVIuLi4KCllvdSB3aWxsIGZhY2Ugc2V2ZXJhbCByZXN0cmljdGl2ZSBpc3N1ZXMgZHVyaW5nIHlvdXIgYW5hbHlzaXMuIFlvdSBhcmUgcmVxdWlyZWQgdG8gc3VibWl0IHJlcXVlc3RzIGZvciBhZG1pbiBwZXJtaXNzaW9ucyB0byBpbnN0YWxsIG5ldyBwYWNrYWdlcyBzb21ldGltZXMsIGFuZCBuZXcgc29mdHdhcmUuIElmIHlvdSBoYXZlIGV4dGVuc2l2ZSBpc3N1ZXMgd2l0aCB0aGlzLCBwbGVhc2UgbWFrZSBhIGNvbXBsYWludCB0byB0aGUgRFJTTiB0aHJvdWdoIENoYWlyICoqW1Rob21hcyBPJ05laWxdKG1haWx0bzogdGhvbWFzLm9uZWlsQHN5ZG5leS5lZHUuYXUpKiogd2hvIHdpbGwgcmVwcmVzZW50IHlvdSwgYW5kIGFkdmlzZSB5b3Ugb24gaG93IHRvIHByb2NlZWQgd2l0aCBhbmFseXNpcy4gCg==</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
@@ -1162,7 +781,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("0_contacts_committee.Rmd");
+  window.initializeSourceEmbed("0_bugs.Rmd");
 });
 </script>
 
