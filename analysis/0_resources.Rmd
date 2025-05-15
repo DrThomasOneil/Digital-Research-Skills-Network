@@ -85,11 +85,15 @@ output:
 
 You should have access to LinkedIn Learning through your University email. Otherwise, WIMR staff can apply for a license through WIMR. 
 
+### Sydney Informatics Hub 
 
-<!---
-To add:
+Sydney Informatics Hub offers [training workshops](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/workshops-and-training/training-calendar.html) regularly on research data management, statistical methods, and high-performance computing. These are more general methods that not only apply to biomedical research, but may provide inspiration or good fundamental knowledge on the analytical methods we use.
 
-- rstudio.github.io/learnr
-- https://ggplot2-book.org/introduction
+### Interactive R learning UI
 
-<--->
+[learnr](rstudio.github.io/learnr) is a package that you can install which provides a nice little UI if you want to practice basicR skills and prefer some interactivity.
+
+### ggplot2 book
+
+[ggplot2:Elegant Graphics for Data Analysis](https://ggplot2-book.org/introduction) is a nice, comprehensive handbook for graphing using ggplot2. It covers the basic layout, different graph types, customizing elements such as colours, group overlays, annotations, etc. 
+

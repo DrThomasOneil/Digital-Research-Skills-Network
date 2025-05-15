@@ -23,12 +23,13 @@ htmltools::browsable(
   table <- reactable(content,
                      defaultColDef = colDef(
                        align = "left",
-                       headerStyle = list(background = "#ffcf72")
+                       headerStyle = list(background = "#ffcf72", fontWeight = "bold")
                      ),
                      # Define columns
                      columns = list(
                        Topic = colDef(name = "Topic", width = 220,
-                                      filterable = TRUE), # Make it sticky when scrolling
+                                      filterable = TRUE,
+                                      footer = paste0("Total records:", nrow(content))), # Add footer for the number of records
                        Date = colDef(name = "Date", width = 80),
                        Activity = colDef(name = "Activity", width = 80,
                                          filterable = TRUE),
@@ -60,7 +61,7 @@ htmltools::browsable(
                      defaultSorted = list(Date = "asc"),
                      # Make the table searchable
                      searchable = TRUE,
-                     # Show 8 rows max a time
+                     # Show 20 rows max a time
                      defaultPageSize = 20,
                      # group the content together by themes
                      groupBy = "Topic",
@@ -75,6 +76,6 @@ htmlwidgets::saveWidget(table, "./docs/0_archive.html", selfcontained = TRUE)
 
 **Archive curator**: Yuchen Li<br>
 
-**[Contact Me `r "\U2709\UFE0F"`](mailto: yuli0321@uni.sydney.edu.au)** for updating the page, errors, missing resources, etc. ;)
+**[Contact Me `r "\U2709\UFE0F"`](mailto: yuchen.li@sydney.edu.au)** for updating the page, errors, missing resources, etc. ;)
  
  </div>

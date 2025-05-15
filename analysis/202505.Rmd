@@ -30,7 +30,7 @@ DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore 
 ##### [Programming workshop (1 – 3pm)](https://www.digitalresearchskills.network/202505_Workshop.html)
 
 **Demonstrators**: Thomas O'Neil    
-<read-time>*(lunch from 12pm)*</read-time>
+<read-time>*(lunch from 1pm)*</read-time>
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 

@@ -11,8 +11,9 @@ output:
 
 **Curator**: Yuchen Li<br>
 
-**[Contact Me `r "\U2709\UFE0F"`](mailto: yuli0321@uni.sydney.edu.au)** if you can't find your bug! ;) Include a screenshot, and/or copy of the script and error
+**[Contact Me `r "\U2709\UFE0F"`](mailto: yuchen.li@sydney.edu.au)** if you can't find your bug! ;) Include a screenshot, and/or copy of the script and error
 
+<read-time><i>**Coming Soon!**</i></read-time>
  
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -22,40 +23,29 @@ library(htmltools)
 ```
 
 
-```{r, warning = F, message=FALSE}
-content <- read.csv("docs/adit/0_content management.csv")
+```{r, warning = F, message=FALSE, eval=F, include=F}
+bugs <- read.csv("docs/adit/bugs.csv")
+bugs$Date <- as.character(bugs$Date)
 htmltools::browsable(
-  table <- reactable(content,
+  table <- reactable(bugs,
                      defaultColDef = colDef(
                        align = "left",
-                       headerStyle = list(background = "#ffcf72")
+                       headerStyle = list(background = "#ffcf72", fontWeight = "bold")
                      ),
                      # Define columns
                      columns = list(
-                       Topic = colDef(name = "Topic", width = 220,
-                                      filterable = TRUE), # Make it sticky when scrolling
+                       
+                       Date = colDef(name = "Date", width = 80),
+                       
                        Platform = colDef(name = "Platform", width = 80, # e.g. R/python
                                          filterable = TRUE),
-                       Theme = colDef(name = "Theme", width = 100,
-                                      filterable = TRUE),
-                       Tag = colDef(name = "Tag", width = 220,
-                                    filterable = TRUE),
-                       Link = colDef(name = "Link",
-                                     html =TRUE,
-                                     # In a cell setting, initiate an R render function
-                                     cell = function(value){
-                                       # generates a link to a webpage by adding an 'a' html tag,
-                                       tags$a(href = value, target = "_blank", class = "page-link", 
-                                              ifelse(is.na(value)|| value == ""||is.null(value), "Coming soon", "View page"))
-                                     },
-                                     width = 100),
-                       Recording = colDef(name = "Recording",
-                                          html = TRUE,
-                                          cell = function(v){
-                                            tags$a(href = v, target = "_blank", class = "video-link", "View video")
-                                          },
-                                          width = 100)
+                       Context = colDef(name = "Context", width = 200),
+                       
+                       Error.message = colDef(name = "Error message", width = 300),
+                       
+                       Solution = colDef(name = "Solution", width = 300)
                      ),
+                     
                      # Define other table characteristics
                      bordered = TRUE,
                      highlight = TRUE,
@@ -64,21 +54,22 @@ htmltools::browsable(
                      defaultSorted = list(Date = "asc"),
                      # Make the table searchable
                      searchable = TRUE,
-                     # Show 8 rows max a time
+                     # Show 20 rows max a time
                      defaultPageSize = 20,
-                     # group the content together by themes
-                     groupBy = "Topic",
                      paginateSubRows = TRUE,
                      theme = reactableTheme(
                        searchInputStyle = list(width = "30%")
                      )
   )
 )
-htmlwidgets::saveWidget(table, "./docs/0_archive.html", selfcontained = TRUE)
+htmlwidgets::saveWidget(table, "./docs/0_bugs.html", selfcontained = TRUE)
 ```
 
  </div>
 
 #### If your machine is onboarded with WIMR...
 
+And you're experiencing issues with R, RStudio or python, please reach out to **[Thomas O'Neil](mailto: thomas.oneil@sydney.edu.au)** for help navigating these issues.
+<!---
 You will face several restrictive issues during your analysis. You are required to submit requests for admin permissions to install new packages sometimes, and new software. If you have extensive issues with this, please make a complaint to the DRSN through Chair **[Thomas O'Neil](mailto: thomas.oneil@sydney.edu.au)** who will represent you, and advise you on how to proceed with analysis. 
+<--->
