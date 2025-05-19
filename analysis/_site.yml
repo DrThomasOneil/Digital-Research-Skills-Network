@@ -46,6 +46,8 @@ navbar:
         href: 0_contacts_feedback.html
   - text: Archive
     href: 0_archive.html  
+  - text: Bugs and errors!
+    href: 0_bugs.html  
   - text: Extra Resources
     href: 0_resources.html  
   - icon: fab fa-github

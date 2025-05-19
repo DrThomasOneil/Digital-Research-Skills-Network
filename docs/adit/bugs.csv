@@ -1,0 +1,2 @@
+﻿Platform,Context,Error message,Solution
+R,Installing packages,Error in install.packages : ERROR: failed to lock directory ‘C:\Users\user.account\AppData\Local\R\win-library\4.4’ for modifying Try removing ‘C:\Users\user.account\AppData\Local\R\win-library\4.4/00LOCK’,"Remove a temporary folder '00LOCK'in the Rstudio Appdata manually. It was supposed to be a temp folder that blocks other processes from messing up the package installation. And it should have been removed by R automatically, but sometimes it might not. It used to happen on windows sometimes."
