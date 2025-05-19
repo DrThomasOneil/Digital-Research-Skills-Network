@@ -13,8 +13,6 @@ output:
 
 **[Contact Me `r "\U2709\UFE0F"`](mailto: yuchen.li@sydney.edu.au)** if you can't find your bug! ;) Include a screenshot, and/or copy of the script and error
 
-<read-time><i>**Coming Soon!**</i></read-time>
- 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(shiny)
@@ -23,9 +21,8 @@ library(htmltools)
 ```
 
 
-```{r, warning = F, message=FALSE, eval=F, include=F}
-bugs <- read.csv("docs/adit/bugs.csv")
-bugs$Date <- as.character(bugs$Date)
+```{r, warning = F, message=FALSE, eval=T, include=T}
+bugs <- read.csv("./docs/adit/bugs.csv")
 htmltools::browsable(
   table <- reactable(bugs,
                      defaultColDef = colDef(
@@ -34,8 +31,6 @@ htmltools::browsable(
                      ),
                      # Define columns
                      columns = list(
-                       
-                       Date = colDef(name = "Date", width = 80),
                        
                        Platform = colDef(name = "Platform", width = 80, # e.g. R/python
                                          filterable = TRUE),
@@ -51,7 +46,6 @@ htmltools::browsable(
                      highlight = TRUE,
                      compact = TRUE,
                      # Default sorting by schedules
-                     defaultSorted = list(Date = "asc"),
                      # Make the table searchable
                      searchable = TRUE,
                      # Show 20 rows max a time
@@ -67,7 +61,7 @@ htmlwidgets::saveWidget(table, "./docs/0_bugs.html", selfcontained = TRUE)
 
  </div>
 
-#### If your machine is onboarded with WIMR...
+#### *If your machine is onboarded with WIMR...*
 
 And you're experiencing issues with R, RStudio or python, please reach out to **[Thomas O'Neil](mailto: thomas.oneil@sydney.edu.au)** for help navigating these issues.
 <!---

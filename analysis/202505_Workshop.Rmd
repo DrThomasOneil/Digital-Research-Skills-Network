@@ -57,7 +57,6 @@ install.packages("tidyverse")
 install.packages("cowplot")
 install.packages("hdf5r")
 
-BiocManager::install("GEOquery", force = TRUE)
 ```
 
 We have a function that will let you check the setup
@@ -65,9 +64,9 @@ We have a function that will let you check the setup
 source("https://github.com/DrThomasOneil/Digital-Research-Skills-Network/raw/refs/heads/main/docs/adit/checksetup.R")
 
 checkSetup(
-  cran_packages = c("Seurat", "tidyverse", "cowplot","hdf5r"), 
-  bioc_packages=c("GEOquery") 
-)
+  cran_packages = c("Seurat", "tidyverse", "cowplot","hdf5r"),
+  bioc_packages = c()
+  )
 
 set.seed(1337)
 ```
@@ -109,7 +108,7 @@ for (i in seq_along(samples)) {
   tar_path <- sub("\\.gz$", "", samples[i])
 
   # Unzip the .tar.gz file
-  GEOquery::gunzip(samples[i], destname = tar_path, overwrite = TRUE)
+  R.utils::gunzip(samples[i], destname = tar_path, overwrite = TRUE)
 
   output_dir <- file.path("raw/GSE290350_RAW", sub("\\.tar$", "", basename(tar_path)))
   dir.create(output_dir, showWarnings = FALSE)
