@@ -10,7 +10,7 @@ output:
 
 Following the previous workshop, we will go into more details about how to apply statistics to your data.
 
-<read-time><span style="color:black;"><font size="3">**Monday 2nd June, 11:30 am**</font></span></read-time>
+<read-time><span style="color:black;"><font size="3">**Monday 16th June, 1pm - 3pm**</font></span></read-time>
 
 <read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
 
@@ -25,9 +25,9 @@ Following the previous workshop, we will go into more details about how to apply
 
 <hr>
 
-- **11:30**: Introduction and demonstration of the tools
-- **12:00-12:30**: *Lunch*       
-- **12:30 - 2:00**: Self-guided analysis
+- **1:00 - 1:30**: Introduction (with Zoom)
+
+- **1:30 - 3:00**: Coding club: Analysis session with experienced programmers available to help! 
 
 </div>
 

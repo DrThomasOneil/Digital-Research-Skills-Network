@@ -18,15 +18,15 @@ Each session will begin with a brief presentation showcasing the core tools and 
 
 #### **Monday 2nd June** (WIMR Seminar Room & Zoom)
 
-##### [Data Wrangling in R (11:30am - 2pm)](https://www.digitalresearchskills.network/202506_tidyverse.html) 
+##### [Data Wrangling in R (1pm - 3pm)](https://www.digitalresearchskills.network/202506_tidyverse.html) 
 **Demonstrators**: Thomas O'Neil    
-<read-time>*(lunch from 12pm)*</read-time>
+<!---><read-time>*(lunch from 12pm)*</read-time> <--->
 
 <span style="display:inline-block; width:80%;"><hr></span>
 
 #### **Monday 16th June** (WIMR Seminar Room & Zoom)
 
-##### [Statistics in R (11:30am - 2pm)](https://www.digitalresearchskills.network/202506_stats.html)
+##### [Statistics in R (1pm - 3pm)](https://www.digitalresearchskills.network/202506_stats.html)
 
 **Demonstrators**: Harry Robertson  
 

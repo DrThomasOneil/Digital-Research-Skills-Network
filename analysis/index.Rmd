@@ -36,28 +36,33 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
+
+
+#### <u>*Upcoming Events*</u>
+
+<span style="font-size:2em">*PrecisionGo Presents...*</span>
+
+## [**Bring Your Own Data!**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202506.html)
+
+#### <i>**Tired of example data that never quite fits your needs? You're in luck!**</i>
+
+This month, we’re hosting a **Bring Your Own Data** session - a hands-on, self-guided workshop designed to help you get started with analysing your own dataset.
+
+Each session will begin with a brief presentation showcasing the core tools and workflows we typically use in R. After a short break, you’ll have the chance to apply those tools to your own data. Our team will be available throughout to guide, troubleshoot, and help you move forward with your analysis - no matter the dataset or research question.
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
 # <i>**Promo!**</i>
 
 WIMR and 10X are offering <span style="color:red; font-size:2em">**<i>MASSIVE<i>**</span> discounts!
 
 <img src="assets/downloads/10X_Promo.png" alt="10X Promo" style="width: 10in;">
 
-#### <u>*Upcoming Events*</u>
-
-<span style="font-size:2em">*PrecisionGo Presents...*</span>
-
-## [**Getting started with Spatial Transcriptomics at WIMR**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202505.html)
-
-DRSN will be collaborating with **PrecisionGo** and **10X Genomics** to explore the options at WIMR for Spatial Transcriptomics, and the key considerations when analyzing Visum and Xenium data. Join us for the informative **Seminar** session for how you can get started and what to expect from Spatial Transcriptomics. Stick around for the **In-focus discussion** where we'll be joined by *Geoffrey McDermott* (**10X Genomics**) to discuss Xenium and Visium data preparations (e.g. panel design, cell segmentation) and data analysis. Lastly, join *Thomas O'Neil* at the **Analysis Workshop** to learn how you can download public Visium data, processs it and start creating visualisations yourself, immediately elevating your thesis, manuscript or grant application. 
-
-<span style="display:inline-block; width:80%;"><wimr></span>
-
-
 We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html).
 
 </div>
-
-This site was made with **WorkflowR** by [Blischak JD, et al.  2019](https://doi.org/10.12688/f1000research.20843.1)
+<br><br>
+<span style="color:lightgrey">This site was made with **WorkflowR** by [Blischak JD, et al.  2019](https://doi.org/10.12688/f1000research.20843.1)</span>
 
 
 

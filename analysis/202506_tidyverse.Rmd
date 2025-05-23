@@ -10,7 +10,7 @@ output:
 
 Learn how to import and wrangle your excel spreadsheets in R for visualisations and subsequent statistics. 
 
-<read-time><span style="color:black;"><font size="3">**Monday 2nd June, 11:30 am**</font></span></read-time>
+<read-time><span style="color:black;"><font size="3">**Monday 2nd June, 1 pm am**</font></span></read-time>
 
 <read-time><span style="color:black;"><font size="3">WIMR Seminar Room</font></span></read-time>
 
@@ -25,9 +25,9 @@ Learn how to import and wrangle your excel spreadsheets in R for visualisations 
 
 <hr>
 
-- **11:30**: Introduction and demonstration of the tools
-- **12:00-12:30**: *Lunch*       
-- **12:30 - 2:00**: Self-guided analysis
+- **1:00 - 1:30**: Introduction
+
+- **1:30 - 3:00**: Coding club: Analysis session with experienced programmers available to help! 
 
 </div>
 
@@ -39,9 +39,9 @@ Learn how to import and wrangle your excel spreadsheets in R for visualisations 
 
 </div>
 
-# Introduction
+# Content
 
-<br><read-time><font size = "5">*Content coming soon*</font></read-time>
+See [this workshop](https://www.digitalresearchskills.network/202502_tidyverse1.html) for *plotting* and [this workshop](https://www.digitalresearchskills.network/202502_tidyverse2.html) for *data manipulation*.
 
 
 
