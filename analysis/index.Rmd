@@ -40,8 +40,6 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 #### <u>*Upcoming Events*</u>
 
-<span style="font-size:2em">*PrecisionGo Presents...*</span>
-
 ## [**Bring Your Own Data!**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202506.html)
 
 #### <i>**Tired of example data that never quite fits your needs? You're in luck!**</i>
