@@ -1,0 +1,40 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+<div style = "text-align: center">
+
+<span style="font-size:2em">**From Acquisition to Analysis:**</span>   
+<span style="font-size:1.5em">*Practical Tips for Imaging Data*</span>
+
+Join us for a practical seminar exploring how to optimise your imaging workflow from the point of acquisition through to quantitative analysis. This session is tailored for researchers working with VS200 whole-slide imaging and QuPath-based workflows.
+
+**Dr Hong Yu** will begin by covering essential tips and tricks for acquiring and processing images using VS200 systems. She will focus on preparing high-quality data for downstream analysis and highlight common pitfalls and quality issues to avoid. **Elizabeth Dunn** will lead a live tutorial on how to work with images in QuPath. This hands-on session will walk through both qualitative and quantitative workflows
+
+This seminar is ideal for anyone working with whole-slide images and looking to improve their data quality, analysis skills, or integration between VS200 and QuPath workflows.
+
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+#### **Wednesday 9th July** (WIMR Seminar Room & Zoom)
+
+##### **Tips and tricks for acquiring and processing images (11am - 12pm)**
+**Speaker**: Dr Hong Yu   
+
+##### **Working with images in QuPath (12pm - 1pm)**
+
+**Demonstrators**: Elizabeth Dunn
+
+<span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+## **Sign up for this event:**    
+
+<hr>
+
+<iframe width="900px" height="900px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=AFCtdIcPUE6g1Se8RjT3kBBWxyuLaxFFt2OqBFx553tUMDdIVUU1VjFJQUpLMExTODBQNDNTN0U1TS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+</div>

@@ -40,21 +40,21 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 #### <u>*Upcoming Events*</u>
 
-## [**Bring Your Own Data!**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202506.html)
+## [<i>**From Acquisition to Analysis:**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
 
-#### <i>**Tired of example data that never quite fits your needs? You're in luck!**</i>
+<i>**Practical Tips for Imaging Data**</i>
 
-This month, we’re hosting a **Bring Your Own Data** session - a hands-on, self-guided workshop designed to help you get started with analysing your own dataset.
+Join us for a practical seminar exploring how to optimise your imaging workflow from the point of acquisition through to quantitative analysis. This session is tailored for researchers working with whole-slide imaging and QuPath-based workflows.
 
-Each session will begin with a brief presentation showcasing the core tools and workflows we typically use in R. After a short break, you’ll have the chance to apply those tools to your own data. Our team will be available throughout to guide, troubleshoot, and help you move forward with your analysis - no matter the dataset or research question.
+**Dr Hong Yu** will begin by covering essential tips and tricks for acquiring and processing images. She will focus on preparing high-quality data for downstream analysis and highlight common pitfalls and quality issues to avoid. **Elizabeth Dunn** will lead a live tutorial on how to work with images in QuPath. This hands-on session will walk through both qualitative and quantitative workflows.
 
-<span style="display:inline-block; width:80%;"><wimr></span>
+This seminar is ideal for anyone working with whole-slide images and looking to improve their data quality, analysis skills, or integration between VS200 and QuPath workflows.
 
-# <i>**Promo!**</i>
+</div>
 
-WIMR and 10X are offering <span style="color:red; font-size:2em">**<i>MASSIVE<i>**</span> discounts!
+<div style = "text-align: center">
 
-<img src="assets/downloads/10X_Promo.png" alt="10X Promo" style="width: 10in;">
+<span style="display:inline-block; width:30%; height:10%"><hr></span>
 
 We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html).
 

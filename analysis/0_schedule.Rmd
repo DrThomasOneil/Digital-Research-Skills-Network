@@ -55,15 +55,20 @@ Each session will begin with a brief presentation showcasing the core tools and 
 
 <!---July<--->
 
-<details style="text-align: left"><summary><span style="font-size:2em">**July:** <i>TBD</i></span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**July**: From Acquisition to Analysis:  </span></summary>
 
 <div style = "text-align: center">
 
-#### [](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
+#### [**Practical Tips for Imaging Data**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
 
-<read-time>Details coming soon!</read-time>
+Join us for a practical seminar exploring how to optimise your imaging workflow from the point of acquisition through to quantitative analysis. This session is tailored for researchers working with VS200 whole-slide imaging and QuPath-based workflows.
+
+**Dr Hong Yu** will begin by covering essential tips and tricks for acquiring and processing images using VS200 systems. She will focus on preparing high-quality data for downstream analysis and highlight common pitfalls and quality issues to avoid. **Elizabeth Dunn** will lead a live tutorial on how to work with images in QuPath. This hands-on session will walk through both qualitative and quantitative workflows
+
+This seminar is ideal for anyone working with whole-slide images and looking to improve their data quality, analysis skills, or integration between VS200 and QuPath workflows.
 
 </div>
+
 </details>
 
 <hr style='width:50%'>

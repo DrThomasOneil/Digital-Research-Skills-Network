@@ -20,7 +20,6 @@ Each session will begin with a brief presentation showcasing the core tools and 
 
 ##### [Data Wrangling in R (1pm - 3pm)](https://www.digitalresearchskills.network/202506_tidyverse.html) 
 **Demonstrators**: Thomas O'Neil    
-<!---><read-time>*(lunch from 12pm)*</read-time> <--->
 
 <span style="display:inline-block; width:80%;"><hr></span>
 
