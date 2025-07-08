@@ -15,6 +15,7 @@ Join us for a practical seminar exploring how to optimise your imaging workflow 
 
 This seminar is ideal for anyone working with whole-slide images and looking to improve their data quality, analysis skills, or integration between VS200 and QuPath workflows.
 
+[Zoom link](https://uni-sydney.zoom.us/j/84164373602)
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
@@ -28,6 +29,13 @@ This seminar is ideal for anyone working with whole-slide images and looking to 
 **Demonstrators**: Elizabeth Dunn
 
 <span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
+
+<details><summary><span style = "color:red;font-size:1.5em">**Workshop Notes:**</span></summary>
+
+<embed src="assets/downloads/20250702 Qupath tutorial notes.pdf" width="100%" height="600px" type="application/pdf">
+
+</details>
+
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
