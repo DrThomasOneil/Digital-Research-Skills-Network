@@ -7,14 +7,7 @@ navbar:
     href: index.html
   - text: Schedule
     href: 0_schedule.html
-  - text: Introduction Series
-    menu: 
-      - text: "Tidyverse 1: Intro to Plotting"
-        href: 202502_tidyverse1.html
-      - text: "Tidyverse 2: Intro to Manipulation"
-        href: 202502_tidyverse2.html
-      - text: "Tidyverse 3: Creating a Reproducible Report"
-        href: 202503_tidyverse3.html       
+   
   - text: Events
     menu: 
       - text: "April: Flow Cytometry"
@@ -23,7 +16,7 @@ navbar:
         href: 202505.html
       - text: "June: Bring Your Own Data"
         href: 202506.html
-      - text: "July: TBA"
+      - text: "July: From Image Acquisition to Analysis"
         href: 202507.html
       - text: "August: TBA"
         href: 202508.html
@@ -36,6 +29,14 @@ navbar:
       - text: "December: TBA"
         href: 2025012.html
   right:
+  - text: Introduction Series
+    menu: 
+      - text: "Tidyverse 1: Intro to Plotting"
+        href: 202502_tidyverse1.html
+      - text: "Tidyverse 2: Intro to Manipulation"
+        href: 202502_tidyverse2.html
+      - text: "Tidyverse 3: Creating a Reproducible Report"
+        href: 202503_tidyverse3.html    
   - text: Contact Us!
     menu:
       - text: Contact Us! 
