@@ -39,10 +39,4 @@ This seminar is ideal for anyone working with whole-slide images and looking to 
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-## **Sign up for this event:**    
-
-<hr>
-
-<iframe width="900px" height="900px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=AFCtdIcPUE6g1Se8RjT3kBBWxyuLaxFFt2OqBFx553tUMDdIVUU1VjFJQUpLMExTODBQNDNTN0U1TS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9FQvnxaMlew?si=A8fhZ633ffmpaP1e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
