@@ -36,19 +36,21 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
+### <u>*Upcoming Events*</u>
 
+## **20th August**
 
-#### <u>*Upcoming Events*</u>
+## [<i>**Invited Speaker - Professor Jean Yang**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
 
-## [<i>**From Acquisition to Analysis:**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
+<i>**Details TBC**</i>
 
-<i>**Practical Tips for Imaging Data**</i>
+***
 
-Join us for a practical seminar exploring how to optimise your imaging workflow from the point of acquisition through to quantitative analysis. This session is tailored for researchers working with whole-slide imaging and QuPath-based workflows.
+## **10th September**
 
-**Dr Hong Yu** will begin by covering essential tips and tricks for acquiring and processing images. She will focus on preparing high-quality data for downstream analysis and highlight common pitfalls and quality issues to avoid. **Elizabeth Dunn** will lead a live tutorial on how to work with images in QuPath. This hands-on session will walk through both qualitative and quantitative workflows.
+## [<i>**Invited Speaker - Dr Kylie James**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202507.html)
 
-This seminar is ideal for anyone working with whole-slide images and looking to improve their data quality, analysis skills, or integration between VS200 and QuPath workflows.
+<i>**Details TBC**</i>
 
 </div>
 
@@ -56,7 +58,7 @@ This seminar is ideal for anyone working with whole-slide images and looking to 
 
 <span style="display:inline-block; width:30%; height:10%"><hr></span>
 
-We are also always looking for feedback. Please reach out to [myself](thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html).
+We are also always looking for feedback. Please reach out to [myself](mailto:thomas.oneil@sydney.edu.au) or [others](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts.html).
 
 </div>
 <br><br>
