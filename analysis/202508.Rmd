@@ -1,0 +1,43 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+<div style = "text-align: center">
+
+<span style="font-size:2em">**TBA**</span>   
+<span style="font-size:1.5em">*TBA*</span>
+
+*Content coming soon*
+
+[Zoom link](https://uni-sydney.zoom.us/j/84164373602)
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+#### **Wednesday 13th August** (TBA)
+
+##### **Data Insight Forum (1pm - 3pm)**
+Connect directly as a community of analysts, present your work and get feedback from others. The general structure will be round-table updates and 5-minute presentations on real-world data analysis questions.
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+#### **Wednesday 20th August** (WIMR Seminar Room & Zoom)
+
+##### **TBA (11am - 12pm)**
+**Invited Speaker**: Prof Jean Yang   
+
+##### **TBA (12pm - 1pm)**
+*TBA*  
+
+<span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+#### **Wednesday 27th August** (WIMR C2.31 meeting room)
+
+##### **Coding club (1pm - 3pm)**
+Bring your codes data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+

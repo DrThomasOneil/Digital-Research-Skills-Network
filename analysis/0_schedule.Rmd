@@ -16,13 +16,15 @@ output:
 
 <!---August<--->
 
-<details style="text-align: left"><summary><span style="font-size:2em">**August**: Invited Speaker - Professor Jean Yang</span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**August**: Bring your own data workshop!</span></summary>
 
 <div style = "text-align: center">
 
-#### [**Title: TBA**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
+#### [**Downloading public transcriptomics data!**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
 
-*Details TBA*
+Join **Thomas O'Neil** for a short tutorial on how to find, download and get started processing publicly available transcriptomics data.
+
+If you have a dataset or paper you've been looking at, bring it along and we can help you download and process for immediate results!
 
 </div>
 
