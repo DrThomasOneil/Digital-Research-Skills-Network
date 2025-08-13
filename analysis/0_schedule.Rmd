@@ -13,18 +13,15 @@ output:
 
 <hr>
 
-
 <!---August<--->
 
-<details style="text-align: left"><summary><span style="font-size:2em">**August**: Bring your own data workshop!</span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**August**: Spotlight on PhD!</span></summary>
 
 <div style = "text-align: center">
 
-#### [**Downloading public transcriptomics data!**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
+#### [**Spotlight on PhD! (11am - 12pm)**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
 
-Join **Thomas O'Neil** for a short tutorial on how to find, download and get started processing publicly available transcriptomics data.
-
-If you have a dataset or paper you've been looking at, bring it along and we can help you download and process for immediate results!
+Join **Elizabeth Dunn** and **Harry Robertson** while they present their PhD research! 
 
 </div>
 

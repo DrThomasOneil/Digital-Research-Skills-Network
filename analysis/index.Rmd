@@ -40,10 +40,9 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 ## **20th August**
 
-## [<i>**Downloading public transcriptomics data!**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
+## [<i>**Spotlight on PhD! (11am - 12pm)**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
 
-Join **Thomas O'Neil** for a short tutorial on how to find, download and get started processing publicly available transcriptomics data.
-
+Join **Elizabeth Dunn** and **Harry Robertson** while they present their PhD research! 
 ***
 
 ## **10th September**
