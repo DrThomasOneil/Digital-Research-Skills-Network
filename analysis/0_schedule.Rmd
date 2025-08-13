@@ -11,6 +11,7 @@ output:
 
 </div>
 
+
 <hr>
 
 <!---August<--->
@@ -42,6 +43,39 @@ Join **Elizabeth Dunn** and **Harry Robertson** while they present their PhD res
 </div>
 
 </details>
+
+<hr style='width:50%'>
+
+```{r,warning = F, message=FALSE, echo=FALSE}
+library(reactable)
+schedule <- read.csv("docs/adit/0_schedule.csv")
+tbl <- reactable(
+  schedule, 
+          defaultColDef = colDef(
+            align = "left",
+            headerStyle = list(background = "#FFDBBB")
+          ),
+  
+  # Define columns
+  columns = list(
+    Date = colDef("Date", width = 100),
+    Event = colDef("Event", width = 150, filterable = TRUE),
+    Speaker = colDef("Speaker", width = 150),
+    Time = colDef("Time", width = 100),
+    Place = colDef("Place")
+  ),
+  
+  # Other table features
+  searchable = TRUE,
+  highlight = TRUE,
+  bordered = TRUE,
+  theme = reactableTheme(
+    searchInputStyle = list(width = "20%"),
+    borderColor = "#813401"
+  )
+)
+tbl
+```
 
 <hr style='width:50%'>
 
