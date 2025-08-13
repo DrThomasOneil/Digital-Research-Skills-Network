@@ -6,38 +6,27 @@ output:
 ---
 <div style = "text-align: center">
 
-<span style="font-size:2em">**TBA**</span>   
-<span style="font-size:1.5em">*TBA*</span>
+#### **Wednesday 13th August** (WIMR C2.31)
 
-*Content coming soon*
+##### **Coding Club (1pm - 3pm)**
+Bring your codes data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
 
-[Zoom link](https://uni-sydney.zoom.us/j/84164373602)
+<span style="display:inline-block; width:80%;"><hr></span>
 
-<span style="display:inline-block; width:80%;"><wimr></span>
+#### **Wednesday 20th August** (WIMR Seminar Room & Zoom)
 
-#### **Wednesday 13th August** (TBA)
+##### **Bring your own data! (12pm - 2pm)**
+
+Join **Thomas O'Neil** for a short tutorial on how to find, download and get started processing publicly available transcriptomics data.
+
+If you have a dataset or paper you've been looking at, bring it along and we can help you download and process for immediate results!
+
+
+<span style="display:inline-block; width:80%;"><hr></span>
+
+#### **Wednesday 27th August** (CASB - C24-10.05.5307 1 - 2pm)
 
 ##### **Data Insight Forum (1pm - 3pm)**
 Connect directly as a community of analysts, present your work and get feedback from others. The general structure will be round-table updates and 5-minute presentations on real-world data analysis questions.
 
-<span style="display:inline-block; width:80%;"><wimr></span>
-
-#### **Wednesday 20th August** (WIMR Seminar Room & Zoom)
-
-##### **TBA (11am - 12pm)**
-**Invited Speaker**: Prof Jean Yang   
-
-##### **TBA (12pm - 1pm)**
-*TBA*  
-
-<span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
-
-<span style="display:inline-block; width:80%;"><wimr></span>
-
-#### **Wednesday 27th August** (WIMR C2.31 meeting room)
-
-##### **Coding club (1pm - 3pm)**
-Bring your codes data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
-
-<span style="display:inline-block; width:80%;"><wimr></span>
-
+<br>

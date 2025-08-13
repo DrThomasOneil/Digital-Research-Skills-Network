@@ -337,7 +337,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -348,8 +348,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -362,9 +362,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong>
@@ -388,33 +388,36 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreef7d60d2c5021827a26f5346aec7e35df77e53a29targetblankf7d60d2a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree05dd2b2a57656acfc4628b77f7dd4a6ae37a0a38targetblank05dd2b2a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/f7d60d2c5021827a26f5346aec7e35df77e53a29" target="_blank">f7d60d2</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/05dd2b2a57656acfc4628b77f7dd4a6ae37a0a38" target="_blank">05dd2b2</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktreef7d60d2c5021827a26f5346aec7e35df77e53a29targetblankf7d60d2a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree05dd2b2a57656acfc4628b77f7dd4a6ae37a0a38targetblank05dd2b2a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -424,7 +427,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/f7d60d2c5021827a26f5346aec7e35df77e53a29" target="_blank">f7d60d2</a>.
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/05dd2b2a57656acfc4628b77f7dd4a6ae37a0a38" target="_blank">05dd2b2</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -450,6 +453,7 @@ Ignored files:
     Ignored:    todo.R
 
 Unstaged changes:
+    Modified:   analysis/202508.Rmd
     Modified:   analysis/_site.yml
     Modified:   workflow.R
 
@@ -498,6 +502,23 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/05dd2b2a57656acfc4628b77f7dd4a6ae37a0a38/docs/202508.html" target="_blank">05dd2b2</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-08-12
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
@@ -522,52 +543,49 @@ wflow_publish(files)
 </div>
 <div style = "text-align: center">
 
-<p><span style="font-size:2em"><strong>TBA</strong></span><br />
-<span style="font-size:1.5em"><em>TBA</em></span></p>
-<p><em>Content coming soon</em></p>
-<p><a href="https://uni-sydney.zoom.us/j/84164373602">Zoom link</a></p>
-<p><span style="display:inline-block; width:80%;"><wimr></span></p>
-<div id="wednesday-13th-august-tba" class="section level4">
-<h4><strong>Wednesday 13th August</strong> (TBA)</h4>
-<div id="data-insight-forum-1pm---3pm" class="section level5">
-<h5><strong>Data Insight Forum (1pm - 3pm)</strong></h5>
-<p>Connect directly as a community of analysts, present your work and
-get feedback from others. The general structure will be round-table
-updates and 5-minute presentations on real-world data analysis
-questions.</p>
-<p><span style="display:inline-block; width:80%;"><wimr></span></p>
+<div id="wednesday-13th-august-wimr-c2.31" class="section level4">
+<h4><strong>Wednesday 13th August</strong> (WIMR C2.31)</h4>
+<div id="coding-club-1pm---3pm" class="section level5">
+<h5><strong>Coding Club (1pm - 3pm)</strong></h5>
+<p>Bring your codes data, and questions. Enjoy the time and space for
+networking, collaboration, helping each other, or focusing on
+coding/analysis/statistics.</p>
+<span style="display:inline-block; width:80%;">
+<hr>
+<p></span></p>
 </div>
 </div>
 <div id="wednesday-20th-august-wimr-seminar-room-zoom"
 class="section level4">
 <h4><strong>Wednesday 20th August</strong> (WIMR Seminar Room &amp;
 Zoom)</h4>
-<div id="tba-11am---12pm" class="section level5">
-<h5><strong>TBA (11am - 12pm)</strong></h5>
-<p><strong>Invited Speaker</strong>: Prof Jean Yang</p>
+<div id="bring-your-own-data-12pm---2pm" class="section level5">
+<h5><strong>Bring your own data! (12pm - 2pm)</strong></h5>
+<p>Join <strong>Thomas O’Neil</strong> for a short tutorial on how to
+find, download and get started processing publicly available
+transcriptomics data.</p>
+<p>If you have a dataset or paper you’ve been looking at, bring it along
+and we can help you download and process for immediate results!</p>
+<span style="display:inline-block; width:80%;">
+<hr>
+<p></span></p>
 </div>
-<div id="tba-12pm---1pm" class="section level5">
-<h5><strong>TBA (12pm - 1pm)</strong></h5>
-<p><em>TBA</em></p>
-<p><span style="color:red;font-size:2em"><i><strong>Lunch from
-12pm!</strong></i></span></p>
-<p><span style="display:inline-block; width:80%;"><wimr></span></p>
 </div>
-</div>
-<div id="wednesday-27th-august-wimr-c2.31-meeting-room"
+<div id="wednesday-27th-august-casb---c24-10.05.5307-1---2pm"
 class="section level4">
-<h4><strong>Wednesday 27th August</strong> (WIMR C2.31 meeting
-room)</h4>
-<div id="coding-club-1pm---3pm" class="section level5">
-<h5><strong>Coding club (1pm - 3pm)</strong></h5>
-<p>Bring your codes data, and questions. Enjoy the time and space for
-networking, collaboration, helping each other, or focusing on
-coding/analysis/statistics.</p>
-<p><span style="display:inline-block; width:80%;"><wimr></span></p>
+<h4><strong>Wednesday 27th August</strong> (CASB - C24-10.05.5307 1 -
+2pm)</h4>
+<div id="data-insight-forum-1pm---3pm" class="section level5">
+<h5><strong>Data Insight Forum (1pm - 3pm)</strong></h5>
+<p>Connect directly as a community of analysts, present your work and
+get feedback from others. The general structure will be round-table
+updates and 5-minute presentations on real-world data analysis
+questions.</p>
+<p><br></p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIiINCm91dHB1dDoNCiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOg0KICAgIHRvYzogbm8NCi0tLQ0KPGRpdiBzdHlsZSA9ICJ0ZXh0LWFsaWduOiBjZW50ZXIiPg0KDQo8c3BhbiBzdHlsZT0iZm9udC1zaXplOjJlbSI+KipUQkEqKjwvc3Bhbj4gICANCjxzcGFuIHN0eWxlPSJmb250LXNpemU6MS41ZW0iPipUQkEqPC9zcGFuPg0KDQoqQ29udGVudCBjb21pbmcgc29vbioNCg0KW1pvb20gbGlua10oaHR0cHM6Ly91bmktc3lkbmV5Lnpvb20udXMvai84NDE2NDM3MzYwMikNCg0KPHNwYW4gc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrOyB3aWR0aDo4MCU7Ij48d2ltcj48L3NwYW4+DQoNCiMjIyMgKipXZWRuZXNkYXkgMTN0aCBBdWd1c3QqKiAoVEJBKQ0KDQojIyMjIyAqKkRhdGEgSW5zaWdodCBGb3J1bSAoMXBtIC0gM3BtKSoqDQpDb25uZWN0IGRpcmVjdGx5IGFzIGEgY29tbXVuaXR5IG9mIGFuYWx5c3RzLCBwcmVzZW50IHlvdXIgd29yayBhbmQgZ2V0IGZlZWRiYWNrIGZyb20gb3RoZXJzLiBUaGUgZ2VuZXJhbCBzdHJ1Y3R1cmUgd2lsbCBiZSByb3VuZC10YWJsZSB1cGRhdGVzIGFuZCA1LW1pbnV0ZSBwcmVzZW50YXRpb25zIG9uIHJlYWwtd29ybGQgZGF0YSBhbmFseXNpcyBxdWVzdGlvbnMuDQoNCjxzcGFuIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jazsgd2lkdGg6ODAlOyI+PHdpbXI+PC9zcGFuPg0KDQojIyMjICoqV2VkbmVzZGF5IDIwdGggQXVndXN0KiogKFdJTVIgU2VtaW5hciBSb29tICYgWm9vbSkNCg0KIyMjIyMgKipUQkEgKDExYW0gLSAxMnBtKSoqDQoqKkludml0ZWQgU3BlYWtlcioqOiBQcm9mIEplYW4gWWFuZyAgIA0KDQojIyMjIyAqKlRCQSAoMTJwbSAtIDFwbSkqKg0KKlRCQSogIA0KDQo8c3BhbiBzdHlsZSA9ICJjb2xvcjpyZWQ7Zm9udC1zaXplOjJlbSI+PGk+KipMdW5jaCBmcm9tIDEycG0hKio8L2k+PC9zcGFuPg0KDQo8c3BhbiBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7IHdpZHRoOjgwJTsiPjx3aW1yPjwvc3Bhbj4NCg0KIyMjIyAqKldlZG5lc2RheSAyN3RoIEF1Z3VzdCoqIChXSU1SIEMyLjMxIG1lZXRpbmcgcm9vbSkNCg0KIyMjIyMgKipDb2RpbmcgY2x1YiAoMXBtIC0gM3BtKSoqDQpCcmluZyB5b3VyIGNvZGVzIGRhdGEsIGFuZCBxdWVzdGlvbnMuIEVuam95IHRoZSB0aW1lIGFuZCBzcGFjZSBmb3IgbmV0d29ya2luZywgY29sbGFib3JhdGlvbiwgaGVscGluZyBlYWNoIG90aGVyLCBvciBmb2N1c2luZyBvbiBjb2RpbmcvYW5hbHlzaXMvc3RhdGlzdGljcy4NCg0KPHNwYW4gc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrOyB3aWR0aDo4MCU7Ij48d2ltcj48L3NwYW4+DQoNCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwotLS0KPGRpdiBzdHlsZSA9ICJ0ZXh0LWFsaWduOiBjZW50ZXIiPgoKIyMjIyAqKldlZG5lc2RheSAxM3RoIEF1Z3VzdCoqIChXSU1SIEMyLjMxKQoKIyMjIyMgKipDb2RpbmcgQ2x1YiAoMXBtIC0gM3BtKSoqCkJyaW5nIHlvdXIgY29kZXMgZGF0YSwgYW5kIHF1ZXN0aW9ucy4gRW5qb3kgdGhlIHRpbWUgYW5kIHNwYWNlIGZvciBuZXR3b3JraW5nLCBjb2xsYWJvcmF0aW9uLCBoZWxwaW5nIGVhY2ggb3RoZXIsIG9yIGZvY3VzaW5nIG9uIGNvZGluZy9hbmFseXNpcy9zdGF0aXN0aWNzLgoKPHNwYW4gc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrOyB3aWR0aDo4MCU7Ij48aHI+PC9zcGFuPgoKIyMjIyAqKldlZG5lc2RheSAyMHRoIEF1Z3VzdCoqIChXSU1SIFNlbWluYXIgUm9vbSAmIFpvb20pCgojIyMjIyAqKkJyaW5nIHlvdXIgb3duIGRhdGEhICgxMnBtIC0gMnBtKSoqCgpKb2luICoqVGhvbWFzIE8nTmVpbCoqIGZvciBhIHNob3J0IHR1dG9yaWFsIG9uIGhvdyB0byBmaW5kLCBkb3dubG9hZCBhbmQgZ2V0IHN0YXJ0ZWQgcHJvY2Vzc2luZyBwdWJsaWNseSBhdmFpbGFibGUgdHJhbnNjcmlwdG9taWNzIGRhdGEuCgpJZiB5b3UgaGF2ZSBhIGRhdGFzZXQgb3IgcGFwZXIgeW91J3ZlIGJlZW4gbG9va2luZyBhdCwgYnJpbmcgaXQgYWxvbmcgYW5kIHdlIGNhbiBoZWxwIHlvdSBkb3dubG9hZCBhbmQgcHJvY2VzcyBmb3IgaW1tZWRpYXRlIHJlc3VsdHMhCgoKPHNwYW4gc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrOyB3aWR0aDo4MCU7Ij48aHI+PC9zcGFuPgoKIyMjIyAqKldlZG5lc2RheSAyN3RoIEF1Z3VzdCoqIChDQVNCIC0gQzI0LTEwLjA1LjUzMDcgMSAtIDJwbSkKCiMjIyMjICoqRGF0YSBJbnNpZ2h0IEZvcnVtICgxcG0gLSAzcG0pKioKQ29ubmVjdCBkaXJlY3RseSBhcyBhIGNvbW11bml0eSBvZiBhbmFseXN0cywgcHJlc2VudCB5b3VyIHdvcmsgYW5kIGdldCBmZWVkYmFjayBmcm9tIG90aGVycy4gVGhlIGdlbmVyYWwgc3RydWN0dXJlIHdpbGwgYmUgcm91bmQtdGFibGUgdXBkYXRlcyBhbmQgNS1taW51dGUgcHJlc2VudGF0aW9ucyBvbiByZWFsLXdvcmxkIGRhdGEgYW5hbHlzaXMgcXVlc3Rpb25zLgoKPGJyPgo=</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
