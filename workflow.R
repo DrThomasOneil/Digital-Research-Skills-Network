@@ -7,7 +7,7 @@ files <- list.files("analysis", pattern = "\\.Rmd$", full.names = TRUE)
 files <- files[!grepl("^x", basename(files))]
 }
 wflow_build(files)
-wflow_publish(files)
+wflow_publish("analysis/0_contacts_committee.Rmd" )
 
 wflow_status()
 wflow_view()
