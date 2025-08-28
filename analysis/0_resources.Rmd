@@ -9,6 +9,14 @@ output:
 **We'll drop resources that we find that might be useful to others.**
 </dev>
 
+### Coding and Single cell crash course
+
+From a single cell and spatial analysis course by Cold Spring Harbour Laboratory, these resources are great for both total beginners to coding and analysis to those starting to analyse their own data.
+
+This is the [Basics of Linux/Shell and R](https://github.com/wflynny/cshl-bioinf-crash-course/wiki) where you how to navigate through your Terminal and the start of your R journey.
+
+[Processing scRNA and Visium HD](https://github.com/navinlabcode/CSHL_workshops/wiki) can be daunting but this breaks down all the steps you need to clean, cluster, and visualise your data, as well as the theory behind it.
+ 
 ### Computational Genomics with R
 
 [Computational Genomics with R](https://compgenomr.github.io/book/) is an exceptionally comprehensive resource for biomedical bioinformatics. It covers a broad range of topics—statistics, machine learning, sequencing data processing, and more—while providing both code examples and clear explanations. Although it may not be the most accessible starting point for wet-lab researchers, it serves as an invaluable reference for deeper explorations of bioinformatic analyses.
