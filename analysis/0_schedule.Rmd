@@ -14,31 +14,15 @@ output:
 
 <hr>
 
-<!---August<--->
 
-<details style="text-align: left"><summary><span style="font-size:2em">**August**: Spotlight on PhD!</span></summary>
-
-<div style = "text-align: center">
-
-#### [**Spotlight on PhD! (11am - 12pm)**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202508.html)
-
-Join **Elizabeth Dunn** and **Harry Robertson** while they present their PhD research! 
-
-</div>
-
-</details>
-
-<hr style='width:50%'>
-
-<!---July<--->
-
-<details style="text-align: left"><summary><span style="font-size:2em">**September**: Invited Speaker - Dr Kylie James  </span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**September: Invited Speaker - Dr Kylie James and Dr Jacqueline Tearle** </span></summary>
 
 <div style = "text-align: center">
 
-#### [**Title: TBA**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202509.html)
+#### [**Monthly page**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202509.html)
 
-*Details TBA*
+*Seminar: TBA*
+*Workshop: Single cell analysis in Python using ScanPy*
 
 </div>
 
@@ -48,7 +32,10 @@ Join **Elizabeth Dunn** and **Harry Robertson** while they present their PhD res
 
 ```{r,warning = F, message=FALSE, echo=FALSE}
 library(reactable)
+
 schedule <- read.csv("docs/adit/0_schedule.csv")
+
+htmltools::browsable(
 tbl <- reactable(
   schedule, 
           defaultColDef = colDef(
@@ -74,7 +61,9 @@ tbl <- reactable(
     borderColor = "#813401"
   )
 )
-tbl
+)
+
+htmlwidgets::saveWidget(tbl, "./docs/0_schedule.html", selfcontained = TRUE)
 ```
 
 <hr style='width:50%'>

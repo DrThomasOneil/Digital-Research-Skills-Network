@@ -6,44 +6,62 @@ output:
 ---
 <div style = "text-align: center">
 
-<span style="font-size:2em">**TBA**</span>   
-<span style="font-size:1.5em">*TBA*</span>
-
-*Content coming soon*
+<span style="font-size:2em; color: #DC582A;">**September events**</span>   
 
 [Zoom link](https://uni-sydney.zoom.us/j/84164373602)
 
-<span style="display:inline-block; width:80%;"><wimr></span>
+<hr>
 
-#### **Wednesday 3rd September** (TBA)
+#### **Wednesday 3rd September** (WIMR C2.31 & Zoom)
 
 ##### **Coding club (1pm - 3pm)**
-Bring your codes data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
+Bring your codes, data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics. We would also cover the Python set-up for the workshop this month.
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
 #### **Wednesday 10th September** (WIMR Seminar Room & Zoom)
 
-##### **TBA (11am - 12pm)**
-**Invited Speaker**: Prof Kylie James   
+##### **Getting to the bottom of intestinal disease through genomics (11am - 12pm)**
+**Invited Speaker**: Prof Kylie James   \ 
 
-##### **TBA (12pm - 1pm)**
-*TBA*  
+Dr Kylie James is Head of the Gut Immunogenomics Laboratory at
+Garvan Institute of Medical Research. Her research focuses on
+how environmental factors shape gut immune cell and microbial
+landscapes in health and diseases such as inflammatory bowel
+disease and colorectal cancer. To achieve this goal, Kylie applies
+single-cell transcriptomics and computational approaches to
+reconstruct cellular microenvironments, developmental
+hierarchies and interactions.
+
+##### **Single-cell analysis in python (12pm - 1pm)**
+**Invited speaker**: Dr Jacqueline Tearle\ 
+
+Dr Jacqueline Tearle is a Postdoc in Kylie’s lab.
+During her PhD, Jac developed a novel single-cell
+isolation technique and applied it to study changes
+in gene expression during melanoma tumour escape
+and invasion. She has since led the characterisation
+of a rare inflammatory bowel disease subtype using
+single-cell RNA sequencing, 16S microbial amplicon
+sequencing, and spatial transcriptomics, and now
+uses these multi-omic techniques to investigate
+early-onset colorectal cancer.
+
 
 <span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-#### **Wednesday 17th September** (TBA)
+#### **Wednesday 17th September** (WIMR C2.31)
 
 ##### **Coding club (1pm - 3pm)**
-Bring your codes data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
+Bring your codes, data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-#### **Wednesday 24th September** (TBA)
+#### **Wednesday 24th September** (WIMR C2.31)
 
 ##### **Data Insight Forum (1pm - 3pm)**
 Connect directly as a community of analysts, present your work and get feedback from others. The general structure will be round-table updates and 5-minute presentations on real-world data analysis questions.
 
-<span style="display:inline-block; width:80%;"><wimr></span>
+
