@@ -12,13 +12,6 @@ output:
 
 <hr>
 
-#### **Wednesday 3rd September** (WIMR C2.31 & Zoom)
-
-##### **Coding club (1pm - 3pm)**
-Bring your codes, data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics. We would also cover the Python set-up for the workshop this month.
-
-<span style="display:inline-block; width:80%;"><wimr></span>
-
 #### **Wednesday 10th September** (WIMR Seminar Room & Zoom)
 
 ##### **Getting to the bottom of intestinal disease through genomics (11am - 12pm)**
@@ -52,16 +45,9 @@ early-onset colorectal cancer.
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-#### **Wednesday 17th September** (WIMR C2.31)
 
-##### **Coding club (1pm - 3pm)**
-Bring your codes, data, and questions. Enjoy the time and space for networking, collaboration, helping each other, or focusing on coding/analysis/statistics.
+<span style = "color:red;font-size:1.5em">**Sign up below:**</span>
 
-<span style="display:inline-block; width:80%;"><wimr></span>
-
-#### **Wednesday 24th September** (WIMR C2.31)
-
-##### **Data Insight Forum (1pm - 3pm)**
-Connect directly as a community of analysts, present your work and get feedback from others. The general structure will be round-table updates and 5-minute presentations on real-world data analysis questions.
+<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/r/eArRrddFcA?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 
