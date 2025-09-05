@@ -10,7 +10,7 @@ site: workflowr::wflow_site
 <!---
 To do:
 
-- add archive?  
+- 
 
 <--->  
 
@@ -49,6 +49,8 @@ Workshop material will aim to use publicly available data or mock created data. 
 </div>
 
 <div style = "text-align: center">
+
+Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).
 
 <span style="display:inline-block; width:30%; height:10%"><hr></span>
 

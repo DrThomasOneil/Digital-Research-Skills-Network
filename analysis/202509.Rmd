@@ -6,7 +6,7 @@ output:
 ---
 <div style = "text-align: center">
 
-<span style="font-size:2em; color: #DC582A;">**September events**</span>   
+<span style="font-size:2em; color: #DC582A;">**Getting to the bottom of intestinal diseases through genomics**</span>   
 
 [Zoom link](https://uni-sydney.zoom.us/j/84164373602)
 
@@ -49,5 +49,7 @@ early-onset colorectal cancer.
 <span style = "color:red;font-size:1.5em">**Sign up below:**</span>
 
 <iframe width="640px" height="480px" src="https://forms.cloud.microsoft/r/eArRrddFcA?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+
 
 
