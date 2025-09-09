@@ -1,0 +1,36 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+<div style = "text-align: center">
+
+<span style="font-size:2em; color: #DC582A;"><i>**The future of spatial omics**</i></span>   
+
+[Zoom link](https://uni-sydney.zoom.us/j/84164373602)
+
+<hr>
+
+#### **Wednesday 8th October** (WIMR Seminar Room & Zoom)
+
+##### **The future of spatial omics (11am - 12pm)**   
+**Invited Speaker**: Prof Jean Yang   \ 
+
+<!--- Biography --->
+
+##### **Demonstration of GHIST (1pm - 3pm)**
+**Invited speaker**: Harry Robertson\ 
+
+<!--- Biography --->
+
+<span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+
+<span style = "color:red;font-size:1.5em">**Sign up below:**</span>
+
+<iframe width="640px" height="480px" src="https://forms.office.com/r/zen0PrpxkD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+
+

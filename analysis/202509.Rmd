@@ -15,30 +15,14 @@ output:
 #### **Wednesday 10th September** (WIMR Seminar Room & Zoom)
 
 ##### **Getting to the bottom of intestinal disease through genomics (11am - 12pm)**
-**Invited Speaker**: Prof Kylie James   \ 
+**Invited Speaker**: Dr Kylie James   \ 
 
-Dr Kylie James is Head of the Gut Immunogenomics Laboratory at
-Garvan Institute of Medical Research. Her research focuses on
-how environmental factors shape gut immune cell and microbial
-landscapes in health and diseases such as inflammatory bowel
-disease and colorectal cancer. To achieve this goal, Kylie applies
-single-cell transcriptomics and computational approaches to
-reconstruct cellular microenvironments, developmental
-hierarchies and interactions.
+Dr Kylie James is Head of the Gut Immunogenomics Laboratory at Garvan Institute of Medical Research. Her research focuses on how environmental factors shape gut immune cell and microbial landscapes in health and diseases such as inflammatory bowel disease and colorectal cancer. To achieve this goal, Kylie applies single-cell transcriptomics and computational approaches to reconstruct cellular microenvironments, developmental hierarchies and interactions.
 
-##### **Single-cell analysis in python (12pm - 1pm)**
+##### **Single-cell analysis in python (1pm - 3pm)**
 **Invited speaker**: Dr Jacqueline Tearle\ 
 
-Dr Jacqueline Tearle is a Postdoc in Kylie’s lab.
-During her PhD, Jac developed a novel single-cell
-isolation technique and applied it to study changes
-in gene expression during melanoma tumour escape
-and invasion. She has since led the characterisation
-of a rare inflammatory bowel disease subtype using
-single-cell RNA sequencing, 16S microbial amplicon
-sequencing, and spatial transcriptomics, and now
-uses these multi-omic techniques to investigate
-early-onset colorectal cancer.
+Dr Jacqueline Tearle is a Postdoc in Kylie’s lab. During her PhD, Jac developed a novel single-cell isolation technique and applied it to study changes in gene expression during melanoma tumour escape and invasion. She has since led the characterisation of a rare inflammatory bowel disease subtype using single-cell RNA sequencing, 16S microbial amplicon sequencing, and spatial transcriptomics, and now uses these multi-omic techniques to investigate early-onset colorectal cancer.
 
 
 <span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
