@@ -18,7 +18,7 @@ output:
 
 <div style = "text-align: center">
 
-#### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/2025.html)
+#### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202510.html)
 
 Spatial gene expression at single-cell resolution from histology using deep learning with [GHIST](https://www.biorxiv.org/content/10.1101/2024.07.02.601790v1)
 
