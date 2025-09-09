@@ -38,13 +38,13 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 ### <u>*Upcoming Events*</u>
 
-## **10th September**
+## **8th October**
 
-## [<i>**Invited Speaker - Dr Kylie James**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202509.html)
+## [<i>**Invited Speaker - Professor Jean Yang**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202510.html)
 
-<i>**Getting to the bottom of intestinal disease through genomics**</i>
+<i>**The future of spatial omics**</i>
 
-
+Spatial gene expression at single-cell resolution from histology using deep learning with [GHIST](https://www.biorxiv.org/content/10.1101/2024.07.02.601790v1)
 
 </div>
 

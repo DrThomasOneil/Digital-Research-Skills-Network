@@ -14,15 +14,14 @@ output:
 
 <hr>
 
-
-<details style="text-align: left"><summary><span style="font-size:2em">**September: Invited Speaker - Dr Kylie James and Dr Jacqueline Tearle** </span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**8th October - Professor Jean Yang & Harry Robertson** </span></summary>
 
 <div style = "text-align: center">
 
-#### [**Monthly page**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202509.html)
+#### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/2025.html)
 
-*Seminar: TBA*
-*Workshop: Single cell analysis in Python using ScanPy*
+Spatial gene expression at single-cell resolution from histology using deep learning with [GHIST](https://www.biorxiv.org/content/10.1101/2024.07.02.601790v1)
+
 
 </div>
 
