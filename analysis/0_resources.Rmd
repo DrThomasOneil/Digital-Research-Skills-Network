@@ -9,19 +9,27 @@ output:
 **We'll drop resources that we find that might be useful to others.**
 </dev>
 
-### Coding and Single cell crash course
+### **Coding and Single cell crash course**
 
 From a single cell and spatial analysis course by Cold Spring Harbour Laboratory, these resources are great for both total beginners to coding and analysis to those starting to analyse their own data.
 
 This is the [Basics of Linux/Shell and R](https://github.com/wflynny/cshl-bioinf-crash-course/wiki) where you how to navigate through your Terminal and the start of your R journey.
 
 [Processing scRNA and Visium HD](https://github.com/navinlabcode/CSHL_workshops/wiki) can be daunting but this breaks down all the steps you need to clean, cluster, and visualise your data, as well as the theory behind it.
- 
-### Computational Genomics with R
 
-[Computational Genomics with R](https://compgenomr.github.io/book/) is an exceptionally comprehensive resource for biomedical bioinformatics. It covers a broad range of topics—statistics, machine learning, sequencing data processing, and more—while providing both code examples and clear explanations. Although it may not be the most accessible starting point for wet-lab researchers, it serves as an invaluable reference for deeper explorations of bioinformatic analyses.
+### [Sydney Precision Data Science Centre](https://spds.sydney.edu.au/)
 
-### 10X Analysis Resources
+The purpose of the Sydney Precision Data Science Centre is to engage in high quality and transformational multidisciplinary research and to provide a research hub to all interdisciplinary researchers in data-intensive science.
+
+We generate innovative, fit-for-purpose applied analytical methodologies that are critical to knowledge discovery through the deep integration of various quantitative disciplines and research paradigms.
+
+[Sign up to the network](https://forms.office.com/Pages/ResponsePage.aspx?id=fuOzgnGBXUixCzja5-0UqKzquYaZyyFCkjnYBl2Di4dUNjhYRldCSTFCVEZUN0VJQ0c4TDlESkJCRS4u) to receive emails on upcoming webinars and events. 
+
+### [Computational Genomics with R](https://compgenomr.github.io/book/)
+
+Computational Genomics with R is an exceptionally comprehensive resource for biomedical bioinformatics. It covers a broad range of topics—statistics, machine learning, sequencing data processing, and more—while providing both code examples and clear explanations. Although it may not be the most accessible starting point for wet-lab researchers, it serves as an invaluable reference for deeper explorations of bioinformatic analyses.
+
+### **10X Analysis Resources**
 
 10X Genomics are a unique company, in that they provide *a lot* of supporting materials. In the drop down below, we have listed a series of resources that 10X have provided, including how-to videos and tutorials. 
 
@@ -79,17 +87,17 @@ This is the [Basics of Linux/Shell and R](https://github.com/wflynny/cshl-bioinf
 
 </div></details>
 
-### Stretchly
+### [Stretchly](https://hovancik.net/stretchly/)
 
-[Stretchly](https://hovancik.net/stretchly/) is an open-source app designed to encourage healthy work habits by prompting regular short (30-second) and long (20-minute) breaks. I’ve found it invaluable for maintaining focus and preventing burnout. It’s highly customizable, allowing you to tailor prompts to your needs.
+**Stretchly** is an open-source app designed to encourage healthy work habits by prompting regular short (30-second) and long (20-minute) breaks. I’ve found it invaluable for maintaining focus and preventing burnout. It’s highly customizable, allowing you to tailor prompts to your needs.
 
-### roadmap.sh
+### [roadmap.sh](https://roadmap.sh)
 
-[roadmap.sh](https://roadmap.sh) provides structured learning pathways for various tech-related skills, from Data Science to DevOps. The Data Science and AI roadmap outlines essential topics such as mathematics, statistics, and coding, along with curated free and paid learning resources. These roadmaps are community-driven and frequently updated, making them a great guide for self-paced learning.
+**roadmap.sh** provides structured learning pathways for various tech-related skills, from Data Science to DevOps. The Data Science and AI roadmap outlines essential topics such as mathematics, statistics, and coding, along with curated free and paid learning resources. These roadmaps are community-driven and frequently updated, making them a great guide for self-paced learning.
 
-### LinkedIn Learning
+### [LinkedIn Learning](https://www.linkedin.com/learning/)
 
-[LinkedIn Learning](https://www.linkedin.com/learning/) offers a vast library of online courses covering data analysis, programming (including R and Python), statistics, research skills, and professional development. There is a short [R for Data Science](https://www.linkedin.com/learning-login/share?account=2196204&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fr-for-data-science-analysis-and-visualization%3Ftrk%3Dshare_ent_url%26shareId%3DgVEBrY1NSqeJQqBaQvzOLQ%253D%253D) course that is quite nice. 
+**LinkedIn Learning** offers a vast library of online courses covering data analysis, programming (including R and Python), statistics, research skills, and professional development. There is a short [R for Data Science](https://www.linkedin.com/learning-login/share?account=2196204&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fr-for-data-science-analysis-and-visualization%3Ftrk%3Dshare_ent_url%26shareId%3DgVEBrY1NSqeJQqBaQvzOLQ%253D%253D) course that is quite nice. 
 
 You should have access to LinkedIn Learning through your University email. Otherwise, WIMR staff can apply for a license through WIMR. 
 
