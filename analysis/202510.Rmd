@@ -28,9 +28,6 @@ output:
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3g_fmfQa_kk?si=P3_KyKJoXzEU_XXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<span style = "color:red;font-size:1.5em">**Sign up below:**</span>
-
-<iframe width="640px" height="480px" src="https://forms.office.com/r/zen0PrpxkD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9H8ehTBO3Fo?si=i8eBnT8Ghjtx1sy7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

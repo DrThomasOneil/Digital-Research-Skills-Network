@@ -25,15 +25,13 @@ Dr Kylie James is Head of the Gut Immunogenomics Laboratory at Garvan Institute 
 Dr Jacqueline Tearle is a Postdoc in Kylie’s lab. During her PhD, Jac developed a novel single-cell isolation technique and applied it to study changes in gene expression during melanoma tumour escape and invasion. She has since led the characterisation of a rare inflammatory bowel disease subtype using single-cell RNA sequencing, 16S microbial amplicon sequencing, and spatial transcriptomics, and now uses these multi-omic techniques to investigate early-onset colorectal cancer.
 
 
-<span style = "color:red;font-size:2em"><i>**Lunch from 12pm!**</i></span>
-
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-
-<span style = "color:red;font-size:1.5em">**Sign up below:**</span>
-
-<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/r/eArRrddFcA?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HhpSDf8ghos?si=TGLERyP7OlREZu5x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9kkgSjv_S80?si=S3tS01jLkoNWdlZd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!---> To insert instructions for the workshop <--->
 
 
