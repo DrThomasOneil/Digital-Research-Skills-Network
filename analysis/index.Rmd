@@ -38,13 +38,11 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 ### <u>*Upcoming Events*</u>
 
-## **8th October**
+## **19th November**
 
-## [<i>**Invited Speaker - Professor Jean Yang**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202510.html)
+## [<i>**Invited Speaker - Professor Fabio Luciani**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
 
-<i>**The future of spatial omics**</i>
-
-Spatial gene expression at single-cell resolution from histology using deep learning with [GHIST](https://www.biorxiv.org/content/10.1101/2024.07.02.601790v1)
+<i>**TBD**</i>
 
 </div>
 
