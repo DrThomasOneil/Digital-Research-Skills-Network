@@ -14,13 +14,12 @@ output:
 
 <hr>
 
-<details style="text-align: left"><summary><span style="font-size:2em">**8th October - Professor Jean Yang & Harry Robertson** </span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**19th November - Professor Fabio Luciani** </span></summary>
 
 <div style = "text-align: center">
 
-#### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202510.html)
+#### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
 
-Spatial gene expression at single-cell resolution from histology using deep learning with [GHIST](https://www.biorxiv.org/content/10.1101/2024.07.02.601790v1)
 
 
 </div>
