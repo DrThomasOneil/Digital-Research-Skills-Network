@@ -6,9 +6,18 @@ output:
 ---
 <div style = "text-align: center">
 
-<span style="font-size:2em; color: #DC582A;"><i>**TBC**</i></span>   
+<span style="font-size:2em; color: #DC582A;"><i>**T Cells on the Edge: Malignant Evolution and Structural Determinants of Immunity**</i></span>   
+
+T cells stand at the edge between protective immunity and pathology. Their capacity to expand, mutate, and recognise antigens makes them powerful defenders, but also potential drivers of disease. In this talk, we present two perspectives on that edge: how T cells evolve toward malignancy, and how their structural logic constrains antigen recognition. 
+
+First, in refractory coeliac disease (RCD), a severe complication of celiac disease,characterized by high risk of developing enteropathy-associated T cell lymphoma, we used single-cell DNA/RNA/protein multi-omics to map clonal evolution. We uncovered oncogenic mutations in T cells from most RCD1 patients and even some active coeliac cases, overturning the view of RCD1 as solely inflammatory. These mutated clones spanned CD4⁺, CD8⁺, and double-negative subsets enriched for JAK/STAT and DDX3X variants, with some showing early transition toward sCD3⁻CD103⁺ cells typical of RCD2. In RCD2, we found extensive intra-clonal diversity, with multiple driver mutations and ongoing TCR rearrangements—signatures of progression toward enteropathy-associated T cell lymphoma. 
+
+Second, we applied an AlphaFold3-based pipeline to predict TCR–pHLA complex structures from repertoires recognising viral peptides with known binding affinities. Predicted complexes revealed conserved docking geometries and contact interfaces across TCRs recognising the same peptide, despite sequence diversity, suggesting structural convergence underpins shared functional behaviour. These analyses demonstrate how AI-driven structural modelling can extend insights beyond available crystal structures, revealing common principles of TCR–pHLA recognition and linking structural constraints with binding affinity. 
+
+Together, these studies reveal T cells on the edge of health and disease—where somatic evolution can drive malignancy, yet structural constraints preserve recognition rules—pointing to new opportunities for diagnostics, immunotherapy, and precision medicine. \ 
 
 [Zoom link](https://uni-sydney.zoom.us/j/84164373602)
+
 
 <hr>
 
@@ -17,10 +26,14 @@ output:
 ##### **TBC (11am - 12pm)**   
 **Invited Speaker**: Prof Fabio Luciani   \ 
 
+Professor Fabio Luciani is a leading expert in systems immunology and single-cell genomics at the School of Biomedical Sciences, UNSW Sydney, and a Visiting Fellow at Weill Cornell Medicine (NYC). With over 19 years of research experience, he has pioneered the use of single-cell technologies to study rare, antigen-specific immune cells in autoimmunity, infection, and cancer. He has authored more than 160 publications (H-index: 47, ~8,000 citations), secured over $35M in national and international funding, and delivered over 50 invited talks globally. His work bridges cutting-edge genomics with translational immunology, driving innovations in precision immune therapies. \ 
+
 <!--- Biography --->
 
 ##### **TBC (1pm - 3pm)**
-**Invited speaker**: TBC\ 
+**Invited speaker**: Martina Bonomi\ 
+
+Martina Bonomi is a PhD student at UNSW Sydney in the Systems Immunology lab led by Professor Fabio Luciani. Her research combines multi-omics and artificial intelligence to explore how T cell receptors (TCRs) recognise antigens at the structural level. She develops AI-based pipelines to model TCR–pHLA interactions and identify the molecular principles that shape binding and specificity. By integrating immunology, structural biology, and machine learning, her work aims to reveal how TCR structure governs immune recognition and to inform the design of next-generation precision immunotherapies. 
 
 <!--- Biography --->
 

@@ -16,6 +16,8 @@ output:
 
 <details style="text-align: left"><summary><span style="font-size:2em">**19th November - Professor Fabio Luciani** </span></summary>
 
+<embed src="assets/flyers/202511_Landscape Flyer.png" width="100%" height="600px" type="application/pdf">
+
 <div style = "text-align: center">
 
 #### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
@@ -35,12 +37,12 @@ schedule <- read.csv("docs/adit/0_schedule.csv")
 
 htmltools::browsable(
 tbl <- reactable(
-  schedule, 
+  schedule,
           defaultColDef = colDef(
             align = "left",
             headerStyle = list(background = "#FFDBBB")
           ),
-  
+
   # Define columns
   columns = list(
     Date = colDef("Date", width = 100),
@@ -49,7 +51,7 @@ tbl <- reactable(
     Time = colDef("Time", width = 100),
     Place = colDef("Place")
   ),
-  
+
   # Other table features
   searchable = TRUE,
   highlight = TRUE,

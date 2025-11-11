@@ -40,15 +40,19 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 ## **19th November**
 
-## [<i>**Invited Speaker - Professor Fabio Luciani**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
+## [<i>**Invited Speaker - Professor Fabio Luciani & Martina Bonomi**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
 
-<i>**TBD**</i>
+### <i>**T cells on the edge**</i>
+
+#### Malignant Evolution and Structural Determinants of Immunity
+
+More info and registration [<strong>**here**</strong>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
 
 </div>
 
 <div style = "text-align: center">
 
-Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).
+<span style = "color: grey"> Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).</span>
 
 <span style="display:inline-block; width:30%; height:10%"><hr></span>
 
