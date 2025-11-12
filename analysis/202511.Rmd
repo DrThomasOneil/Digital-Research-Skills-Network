@@ -21,16 +21,14 @@ Together, these studies reveal T cells on the edge of health and disease—where
 
 <hr>
 
-#### **Wednesday 19th November** (WIMR Seminar Room & Zoom)
+#### **Wednesday 19th November**, 11am - 12pm (WIMR Seminar Room & Zoom)
 
-##### **TBC (11am - 12pm)**   
 **Invited Speaker**: Prof Fabio Luciani   \ 
 
 Professor Fabio Luciani is a leading expert in systems immunology and single-cell genomics at the School of Biomedical Sciences, UNSW Sydney, and a Visiting Fellow at Weill Cornell Medicine (NYC). With over 19 years of research experience, he has pioneered the use of single-cell technologies to study rare, antigen-specific immune cells in autoimmunity, infection, and cancer. He has authored more than 160 publications (H-index: 47, ~8,000 citations), secured over $35M in national and international funding, and delivered over 50 invited talks globally. His work bridges cutting-edge genomics with translational immunology, driving innovations in precision immune therapies. \ 
 
 <!--- Biography --->
 
-##### **TBC (1pm - 3pm)**
 **Invited speaker**: Martina Bonomi\ 
 
 Martina Bonomi is a PhD student at UNSW Sydney in the Systems Immunology lab led by Professor Fabio Luciani. Her research combines multi-omics and artificial intelligence to explore how T cell receptors (TCRs) recognise antigens at the structural level. She develops AI-based pipelines to model TCR–pHLA interactions and identify the molecular principles that shape binding and specificity. By integrating immunology, structural biology, and machine learning, her work aims to reveal how TCR structure governs immune recognition and to inform the design of next-generation precision immunotherapies. 
