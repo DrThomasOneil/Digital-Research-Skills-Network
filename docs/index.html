@@ -57,6 +57,104 @@ div.section {
 
 
 
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 <style type="text/css">
@@ -360,11 +458,11 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-11-12
+<strong>Last updated:</strong> 2025-12-03
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 0
 </p>
@@ -408,15 +506,99 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree1ee762bef18a302b652403d098ad2f3203300ec1targetblank1ee762ba">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1337code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(1337)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed1337code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(1337)</code> was run prior to running the
+code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree9b963270613861126cd11af7437056a4d22cf12atargetblank9b96327a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/1ee762bef18a302b652403d098ad2f3203300ec1" target="_blank">1ee762b</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/9b963270613861126cd11af7437056a4d22cf12a" target="_blank">9b96327</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree1ee762bef18a302b652403d098ad2f3203300ec1targetblank1ee762ba"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree9b963270613861126cd11af7437056a4d22cf12atargetblank9b96327a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -426,7 +608,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/1ee762bef18a302b652403d098ad2f3203300ec1" target="_blank">1ee762b</a>.
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/9b963270613861126cd11af7437056a4d22cf12a" target="_blank">9b96327</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -518,6 +700,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/9b963270613861126cd11af7437056a4d22cf12a/analysis/index.Rmd" target="_blank">9b96327</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-12-03
+</td>
+<td>
+wflow_publish(c("analysis/0_schedule.Rmd", "analysis/index.Rmd"))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/19fca6063591f14d4bbfcf9bbca74a0d4c7bda40/docs/index.html" target="_blank">19fca60</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2025-11-12
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -2311,28 +2527,20 @@ progress.</strong></i></hint-text></p>
 <h3><u><em>Upcoming Events</em></u></h3>
 </div>
 </div>
-<div id="th-november" class="section level2">
-<h2><strong>19th November</strong></h2>
+<div id="th-december" class="section level2">
+<h2><strong>10th December</strong></h2>
 </div>
-<div id="invited-speaker---professor-fabio-luciani-martina-bonomi"
-class="section level2">
-<h2><a
-href="https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html"><i><strong>Invited
-Speaker - Professor Fabio Luciani &amp; Martina
-Bonomi</strong></i></a></h2>
-<div id="t-cells-on-the-edge" class="section level3">
-<h3><i><strong>T cells on the edge</strong></i></h3>
-<div id="malignant-evolution-and-structural-determinants-of-immunity"
-class="section level4">
-<h4>Malignant Evolution and Structural Determinants of Immunity</h4>
-<p>More info and registration <a
-href="https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html"><strong><strong>here</strong></strong></a></p>
-</div>
+<div id="coders-xmas" class="section level2">
+<h2>Coder’s Xmas 🎅🍦</h2>
+<div id="a-final-coding-club-of-the-year" class="section level3">
+<h3><i><strong>A final coding club of the year</strong> </i></h3>
 </div>
 </div>
 </div>
 <div style="text-align: center">
-<p><span style="color: grey"> Please refer to the <a
+<p><span style = "color: grey"></p>
+<p>We are currently planning the new year for you! </p>
+<p>Please refer to the <a
 href="https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html">schedule
 page</a> for all other recurrent events (Coding Club, Data Insight
 Forum).</span></p>
@@ -2347,6 +2555,49 @@ href="https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_contacts
 <strong>WorkflowR</strong> by <a
 href="https://doi.org/10.12688/f1000research.20843.1">Blischak JD, et
 al. 2019</a></span></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.5.1 (2025-06-13)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Australia/Sydney
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] emo_0.0.0.9000  workflowr_1.7.2
+
+loaded via a namespace (and not attached):
+ [1] jsonlite_2.0.0    crayon_1.5.3      compiler_4.5.1    promises_1.5.0   
+ [5] Rcpp_1.1.0        stringr_1.6.0     git2r_0.36.2      assertthat_0.2.1 
+ [9] callr_3.7.6       later_1.4.4       jquerylib_0.1.4   yaml_2.3.10      
+[13] fastmap_1.2.0     R6_2.6.1          generics_0.1.4    knitr_1.50       
+[17] tibble_3.3.0      rprojroot_2.1.1   lubridate_1.9.4   bslib_0.9.0      
+[21] pillar_1.11.1     rlang_1.1.6       cachem_1.1.0      stringi_1.8.7    
+[25] httpuv_1.6.16     xfun_0.54         getPass_0.2-4     fs_1.6.6         
+[29] sass_0.4.10       otel_0.2.0        timechange_0.3.0  cli_3.6.5        
+[33] magrittr_2.0.4    ps_1.9.1          digest_0.6.37     processx_3.8.6   
+[37] rstudioapi_0.17.1 lifecycle_1.0.4   vctrs_0.6.5       evaluate_1.0.5   
+[41] glue_1.8.0        whisker_0.4.1     purrr_1.2.0       rmarkdown_2.30   
+[45] httr_1.4.7        tools_4.5.1       pkgconfig_2.0.3   htmltools_0.5.8.1</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2356,7 +2607,7 @@ al. 2019</a></span></p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAnPHNwYW4gc3R5bGUgPSAiZGlzcGxheTpub25lOyI+RFJTTjwvc3Bhbj4nCm91dHB1dDoKICB3b3JrZmxvd3I6OndmbG93X2h0bWw6CiAgICB0b2M6IGZhbHNlCnNpdGU6IHdvcmtmbG93cjo6d2Zsb3dfc2l0ZQoKLS0tCgo8IS0tLQpUbyBkbzoKCi0gCgo8LS0tPiAgCgo8ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOiBsZWZ0OyI+CiAgPGltZyBzcmM9ImFzc2V0cy9sb2dvL0RSU05fbG9nb19zbWFsbGVyLnBuZyIgYWx0PSJJbWFnZSIgc3R5bGU9IndpZHRoOiAyaW47IGZsb2F0OiBsZWZ0OyBtYXJnaW4tcmlnaHQ6IDEwcHg7Ij4KICA8ZGl2IHN0eWxlPSJvdmVyZmxvdzogaGlkZGVuOyBwYWRkaW5nLXRvcDogOCU7Ij4KCiMjICoqRGlnaXRhbCBSZXNlYXJjaCBTa2lsbHMgTmV0d29yayoqICAgIAo8YnI+Cjxocj4KPC9kaXY+IAo8YnI+CiAKPGRpdiBzdHlsZSA9ICJ0ZXh0LWFsaWduOiBjZW50ZXIiPgoKIyMgV2VsY29tZSEKCldlbGNvbWUgdG8gdGhlIFdvcmtzaG9wIHNpdGUgZm9yIHRoZSAqKkRpZ2l0YWwgUmVzZWFyY2ggU2tpbGxzIE5ldHdvcmsqKiEgV2hldGhlciB5b3UncmUganVzdCBzdGFydGluZyBvdXQgd2l0aCBSIG9yIGxvb2tpbmcgdG8gc3RyZW5ndGhlbiB5b3VyIHNraWxscywgdGhpcyBzaXRlIGlzIGRlc2lnbmVkIHRvIGZvc3RlciBhIGRpZ2l0YWwgY29tbXVuaXR5IGNlbnRlcmVkIGFyb3VuZCBiaW9tZWRpY2FsIHJlc2VhcmNoIHByb2dyYW1tYXRpYyBhbmFseXNpcy4gCiAKV29ya3Nob3AgbWF0ZXJpYWwgd2lsbCBhaW0gdG8gdXNlIHB1YmxpY2x5IGF2YWlsYWJsZSBkYXRhIG9yIG1vY2sgY3JlYXRlZCBkYXRhLiBUaGVyZWZvcmUsIHlvdSB3aWxsIG5vdCBuZWVkIHRvIHJlbHkgb24gdXBsb2FkZWQgZGF0YSBmcm9tIHRoZSBkZW1vbnN0cmF0b3JzL2NyZWF0b3JzLiBJbnN0ZWFkLCBhIHByZS13b3Jrc2hvcCBzZXQtdXBzIHdpbGwgaW5jbHVkZSBpbnN0cnVjdGlvbnMgZm9yIHdoZXJlIHRvIGRvd25sb2FkIGFuZCBwcmVwIHJlbGV2YW50IGRhdGEuIAoKPGhpbnQtdGV4dCBzdHlsZT0idGV4dC1zaXplOjEuMmVtOyBjb2xvcjpibGFjayI+PGk+KipCb29rbWFyayB0aGlzIHNpdGUgZm9yIHF1aWNrIGFjY2VzcyB0byBzY3JpcHRzIGFuZCB1cGRhdGVzIGFzIHdvcmtzaG9wcyBwcm9ncmVzcy4qKjwvaT48L2hpbnQtdGV4dD4KCjxzcGFuIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jazsgd2lkdGg6ODAlOyI+PHdpbXI+PC9zcGFuPgoKIyMjIDx1PipVcGNvbWluZyBFdmVudHMqPC91PgoKIyMgKioxOXRoIE5vdmVtYmVyKioKCiMjIFs8aT4qKkludml0ZWQgU3BlYWtlciAtIFByb2Zlc3NvciBGYWJpbyBMdWNpYW5pICYgTWFydGluYSBCb25vbWkqKjwvaT5dKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vRGlnaXRhbC1SZXNlYXJjaC1Ta2lsbHMtTmV0d29yay8yMDI1MTEuaHRtbCkKCiMjIyA8aT4qKlQgY2VsbHMgb24gdGhlIGVkZ2UqKjwvaT4KCiMjIyMgTWFsaWduYW50IEV2b2x1dGlvbiBhbmQgU3RydWN0dXJhbCBEZXRlcm1pbmFudHMgb2YgSW1tdW5pdHkKCk1vcmUgaW5mbyBhbmQgcmVnaXN0cmF0aW9uIFs8c3Ryb25nPioqaGVyZSoqPC9zdHJvbmc+XShodHRwczovL2RydGhvbWFzb25laWwuZ2l0aHViLmlvL0RpZ2l0YWwtUmVzZWFyY2gtU2tpbGxzLU5ldHdvcmsvMjAyNTExLmh0bWwpCgo8L2Rpdj4KCjxkaXYgc3R5bGUgPSAidGV4dC1hbGlnbjogY2VudGVyIj4KCjxzcGFuIHN0eWxlID0gImNvbG9yOiBncmV5Ij4gUGxlYXNlIHJlZmVyIHRvIHRoZSBbc2NoZWR1bGUgcGFnZV0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9EaWdpdGFsLVJlc2VhcmNoLVNraWxscy1OZXR3b3JrLzBfc2NoZWR1bGUuaHRtbCkgZm9yIGFsbCBvdGhlciByZWN1cnJlbnQgZXZlbnRzIChDb2RpbmcgQ2x1YiwgRGF0YSBJbnNpZ2h0IEZvcnVtKS48L3NwYW4+Cgo8c3BhbiBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7IHdpZHRoOjMwJTsgaGVpZ2h0OjEwJSI+PGhyPjwvc3Bhbj4KCldlIGFyZSBhbHNvIGFsd2F5cyBsb29raW5nIGZvciBmZWVkYmFjay4gUGxlYXNlIHJlYWNoIG91dCB0byBbbXlzZWxmXShtYWlsdG86dGhvbWFzLm9uZWlsQHN5ZG5leS5lZHUuYXUpIG9yIFtvdGhlcnNdKGh0dHBzOi8vZHJ0aG9tYXNvbmVpbC5naXRodWIuaW8vRGlnaXRhbC1SZXNlYXJjaC1Ta2lsbHMtTmV0d29yay8wX2NvbnRhY3RzLmh0bWwpLgoKPC9kaXY+Cjxicj48YnI+CjxzcGFuIHN0eWxlPSJjb2xvcjpsaWdodGdyZXkiPlRoaXMgc2l0ZSB3YXMgbWFkZSB3aXRoICoqV29ya2Zsb3dSKiogYnkgW0JsaXNjaGFrIEpELCBldCBhbC4gIDIwMTldKGh0dHBzOi8vZG9pLm9yZy8xMC4xMjY4OC9mMTAwMHJlc2VhcmNoLjIwODQzLjEpPC9zcGFuPgoKCgoKCgoK</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogJzxzcGFuIHN0eWxlID0gImRpc3BsYXk6bm9uZTsiPkRSU048L3NwYW4+Jw0Kb3V0cHV0Og0KICB3b3JrZmxvd3I6OndmbG93X2h0bWw6DQogICAgdG9jOiBmYWxzZQ0Kc2l0ZTogd29ya2Zsb3dyOjp3Zmxvd19zaXRlDQoNCi0tLQ0KDQo8IS0tLQ0KVG8gZG86DQoNCi0gDQoNCjwtLS0+ICANCg0KPGRpdiBzdHlsZT0idGV4dC1hbGlnbjogbGVmdDsiPg0KICA8aW1nIHNyYz0iYXNzZXRzL2xvZ28vRFJTTl9sb2dvX3NtYWxsZXIucG5nIiBhbHQ9IkltYWdlIiBzdHlsZT0id2lkdGg6IDJpbjsgZmxvYXQ6IGxlZnQ7IG1hcmdpbi1yaWdodDogMTBweDsiPg0KICA8ZGl2IHN0eWxlPSJvdmVyZmxvdzogaGlkZGVuOyBwYWRkaW5nLXRvcDogOCU7Ij4NCg0KIyMgKipEaWdpdGFsIFJlc2VhcmNoIFNraWxscyBOZXR3b3JrKiogICAgDQo8YnI+DQo8aHI+DQo8L2Rpdj4gDQo8YnI+DQogDQo8ZGl2IHN0eWxlID0gInRleHQtYWxpZ246IGNlbnRlciI+DQoNCiMjIFdlbGNvbWUhDQoNCldlbGNvbWUgdG8gdGhlIFdvcmtzaG9wIHNpdGUgZm9yIHRoZSAqKkRpZ2l0YWwgUmVzZWFyY2ggU2tpbGxzIE5ldHdvcmsqKiEgV2hldGhlciB5b3UncmUganVzdCBzdGFydGluZyBvdXQgd2l0aCBSIG9yIGxvb2tpbmcgdG8gc3RyZW5ndGhlbiB5b3VyIHNraWxscywgdGhpcyBzaXRlIGlzIGRlc2lnbmVkIHRvIGZvc3RlciBhIGRpZ2l0YWwgY29tbXVuaXR5IGNlbnRlcmVkIGFyb3VuZCBiaW9tZWRpY2FsIHJlc2VhcmNoIHByb2dyYW1tYXRpYyBhbmFseXNpcy4gDQogDQpXb3Jrc2hvcCBtYXRlcmlhbCB3aWxsIGFpbSB0byB1c2UgcHVibGljbHkgYXZhaWxhYmxlIGRhdGEgb3IgbW9jayBjcmVhdGVkIGRhdGEuIFRoZXJlZm9yZSwgeW91IHdpbGwgbm90IG5lZWQgdG8gcmVseSBvbiB1cGxvYWRlZCBkYXRhIGZyb20gdGhlIGRlbW9uc3RyYXRvcnMvY3JlYXRvcnMuIEluc3RlYWQsIGEgcHJlLXdvcmtzaG9wIHNldC11cHMgd2lsbCBpbmNsdWRlIGluc3RydWN0aW9ucyBmb3Igd2hlcmUgdG8gZG93bmxvYWQgYW5kIHByZXAgcmVsZXZhbnQgZGF0YS4gDQoNCjxoaW50LXRleHQgc3R5bGU9InRleHQtc2l6ZToxLjJlbTsgY29sb3I6YmxhY2siPjxpPioqQm9va21hcmsgdGhpcyBzaXRlIGZvciBxdWljayBhY2Nlc3MgdG8gc2NyaXB0cyBhbmQgdXBkYXRlcyBhcyB3b3Jrc2hvcHMgcHJvZ3Jlc3MuKio8L2k+PC9oaW50LXRleHQ+DQoNCjxzcGFuIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jazsgd2lkdGg6ODAlOyI+PHdpbXI+PC9zcGFuPg0KDQojIyMgPHU+KlVwY29taW5nIEV2ZW50cyo8L3U+DQoNCiMjICoqMTB0aCBEZWNlbWJlcioqDQoNCmBgYHtyLCBpbmNsdWRlPUZBTFNFfQ0KbGlicmFyeSgiZW1vIikNCnNldC5zZWVkKDIyMikNCmBgYA0KDQoNCiMjIENvZGVyJ3MgWG1hcyBgciBlbW86OmppKCJjaHJpc3RtYXMiKWBgciBlbW86OmppKCJkZXNzZXJ0IilgDQoNCiMjIyA8aT4qKkEgZmluYWwgY29kaW5nIGNsdWIgb2YgdGhlIHllYXIqKiA8L2k+DQoNCjwvZGl2Pg0KDQo8ZGl2IHN0eWxlID0gInRleHQtYWxpZ246IGNlbnRlciI+DQoNCjxzcGFuIHN0eWxlID0gImNvbG9yOiBncmV5Ij4gDQoNCldlIGFyZSBjdXJyZW50bHkgcGxhbm5pbmcgdGhlIG5ldyB5ZWFyIGZvciB5b3UhXCANCg0KUGxlYXNlIHJlZmVyIHRvIHRoZSBbc2NoZWR1bGUgcGFnZV0oaHR0cHM6Ly9kcnRob21hc29uZWlsLmdpdGh1Yi5pby9EaWdpdGFsLVJlc2VhcmNoLVNraWxscy1OZXR3b3JrLzBfc2NoZWR1bGUuaHRtbCkgZm9yIGFsbCBvdGhlciByZWN1cnJlbnQgZXZlbnRzIChDb2RpbmcgQ2x1YiwgRGF0YSBJbnNpZ2h0IEZvcnVtKS48L3NwYW4+DQoNCjxzcGFuIHN0eWxlPSJkaXNwbGF5OmlubGluZS1ibG9jazsgd2lkdGg6MzAlOyBoZWlnaHQ6MTAlIj48aHI+PC9zcGFuPg0KDQpXZSBhcmUgYWxzbyBhbHdheXMgbG9va2luZyBmb3IgZmVlZGJhY2suIFBsZWFzZSByZWFjaCBvdXQgdG8gW215c2VsZl0obWFpbHRvOnRob21hcy5vbmVpbEBzeWRuZXkuZWR1LmF1KSBvciBbb3RoZXJzXShodHRwczovL2RydGhvbWFzb25laWwuZ2l0aHViLmlvL0RpZ2l0YWwtUmVzZWFyY2gtU2tpbGxzLU5ldHdvcmsvMF9jb250YWN0cy5odG1sKS4NCg0KPC9kaXY+DQo8YnI+PGJyPg0KPHNwYW4gc3R5bGU9ImNvbG9yOmxpZ2h0Z3JleSI+VGhpcyBzaXRlIHdhcyBtYWRlIHdpdGggKipXb3JrZmxvd1IqKiBieSBbQmxpc2NoYWsgSkQsIGV0IGFsLiAgMjAxOV0oaHR0cHM6Ly9kb2kub3JnLzEwLjEyNjg4L2YxMDAwcmVzZWFyY2guMjA4NDMuMSk8L3NwYW4+DQoNCg0KDQoNCg0KDQoNCg==</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
