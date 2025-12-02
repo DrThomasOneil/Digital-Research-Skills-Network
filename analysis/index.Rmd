@@ -38,21 +38,27 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 ### <u>*Upcoming Events*</u>
 
-## **19th November**
+## **10th December**
 
-## [<i>**Invited Speaker - Professor Fabio Luciani & Martina Bonomi**</i>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
+```{r, include=FALSE}
+library("emo")
+set.seed(222)
+```
 
-### <i>**T cells on the edge**</i>
 
-#### Malignant Evolution and Structural Determinants of Immunity
+## Coder's Xmas `r emo::ji("christmas")``r emo::ji("dessert")`
 
-More info and registration [<strong>**here**</strong>](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
+### <i>**A final coding club of the year** </i>
 
 </div>
 
 <div style = "text-align: center">
 
-<span style = "color: grey"> Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).</span>
+<span style = "color: grey"> 
+
+We are currently planning the new year for you!\ 
+
+Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).</span>
 
 <span style="display:inline-block; width:30%; height:10%"><hr></span>
 

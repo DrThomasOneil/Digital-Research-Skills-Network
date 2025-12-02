@@ -14,15 +14,21 @@ output:
 
 <hr>
 
-<details style="text-align: left"><summary><span style="font-size:2em">**19th November - Professor Fabio Luciani** </span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**Enjoy the end of the year!** </span></summary>
 
-<embed src="assets/flyers/202511_Landscape Flyer.png" width="100%" height="600px" type="application/pdf">
 
 <div style = "text-align: center">
 
-#### [**See more details**](https://drthomasoneil.github.io/Digital-Research-Skills-Network/202511.html)
+```{r, include=FALSE}
+library(emo)
+set.seed(344)
+```
 
+#### **A final Christmasty coding club of the year**  `r emo::ji('christmas')`
 
+##### **Join us in-person or on zoom 10th December for 'codestmas!'** `r emo::ji("dessert")`
+
+Enjoy snacks and vibe coding!
 
 </div>
 
