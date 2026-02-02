@@ -1,0 +1,52 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+    
+--- 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const params = new URLSearchParams(window.location.search);
+  
+  const mode = params.get("mode");
+
+  document.querySelectorAll(".analysissection").forEach(el => {
+  
+    el.style.display = "none";
+  
+  });
+
+  if (mode) {
+  
+    const target = document.getElementById(mode);
+  
+    if (target) {
+  
+      target.style.display = "block";
+  
+    }
+  
+  }
+  
+});
+
+</script>
+
+<div id="flow" class="analysissection">
+
+## Flow cytometry analysis
+
+Flow-specific text, figures, tables. From test
+
+</div>
+
+<div id="imaging" class="analysissection">
+
+## Imaging analysis
+
+Imaging-specific content.From test2
+
+</div>
