@@ -406,15 +406,15 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree88d349df78aa15292b3491f70e27a98b7da225bbtargetblank88d349da">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree65b61696a5cf6d266095d94828da4e0abaa06ca8targetblank65b6169a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/88d349df78aa15292b3491f70e27a98b7da225bb" target="_blank">88d349d</a>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/65b61696a5cf6d266095d94828da4e0abaa06ca8" target="_blank">65b6169</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree88d349df78aa15292b3491f70e27a98b7da225bbtargetblank88d349da"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDrThomasOneilDigitalResearchSkillsNetworktree65b61696a5cf6d266095d94828da4e0abaa06ca8targetblank65b6169a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -424,7 +424,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/88d349df78aa15292b3491f70e27a98b7da225bb" target="_blank">88d349d</a>.
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/tree/65b61696a5cf6d266095d94828da4e0abaa06ca8" target="_blank">65b6169</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -516,6 +516,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DrThomasOneil/Digital-Research-Skills-Network/blob/65b61696a5cf6d266095d94828da4e0abaa06ca8/analysis/0_test.Rmd" target="_blank">65b6169</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+wflow_publish(c("analysis/0_test.Rmd"))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DrThomasOneil/Digital-Research-Skills-Network/4c0a0a2c30d7fdcce2aea074695c4099e438ebd6/docs/0_test.html" target="_blank">4c0a0a2</a>
+</td>
+<td>
+DrThomasOneil
+</td>
+<td>
+2026-02-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -627,20 +661,31 @@ wflow_publish(c("analysis/0_test.Rmd", "analysis/index.Rmd"))
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-const params = new URLSearchParams(window.location.search);
-const mode = params.get("mode");
 
-document.querySelectorAll(".analysis-section").forEach(el => {
-el.style.display = "none";
+  const params = new URLSearchParams(window.location.search);
+  
+  const mode = params.get("mode");
+
+  document.querySelectorAll(".analysis-section").forEach(el => {
+  
+    el.style.display = "none";
+  
+  });
+
+  if (mode) {
+  
+    const target = document.getElementById(mode);
+  
+    if (target) {
+  
+      target.style.display = "block";
+  
+    }
+  
+  }
+  
 });
 
-if (mode) {
-const target = document.getElementById(mode);
-if (target) {
-target.style.display = "block";
-}
-}
-});
 </script>
 <div id="flow" class="analysissection">
 <div id="flow-cytometry-analysis" class="section level2">
@@ -660,7 +705,7 @@ target.style.display = "block";
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwogICAgCi0tLSAKCjxzY3JpcHQ+CmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCAoKSA9PiB7CmNvbnN0IHBhcmFtcyA9IG5ldyBVUkxTZWFyY2hQYXJhbXMod2luZG93LmxvY2F0aW9uLnNlYXJjaCk7CmNvbnN0IG1vZGUgPSBwYXJhbXMuZ2V0KCJtb2RlIik7Cgpkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCIuYW5hbHlzaXMtc2VjdGlvbiIpLmZvckVhY2goZWwgPT4gewplbC5zdHlsZS5kaXNwbGF5ID0gIm5vbmUiOwp9KTsKCmlmIChtb2RlKSB7CmNvbnN0IHRhcmdldCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKG1vZGUpOwppZiAodGFyZ2V0KSB7CnRhcmdldC5zdHlsZS5kaXNwbGF5ID0gImJsb2NrIjsKfQp9Cn0pOwo8L3NjcmlwdD4KCjxkaXYgaWQ9ImZsb3ciIGNsYXNzPSJhbmFseXNpc3NlY3Rpb24iPgoKIyMgRmxvdyBjeXRvbWV0cnkgYW5hbHlzaXMKCkZsb3ctc3BlY2lmaWMgdGV4dCwgZmlndXJlcywgdGFibGVzLiBGcm9tIHRlc3QKCjwvZGl2PgoKPGRpdiBpZD0iaW1hZ2luZyIgY2xhc3M9ImFuYWx5c2lzc2VjdGlvbiI+CgojIyBJbWFnaW5nIGFuYWx5c2lzCgpJbWFnaW5nLXNwZWNpZmljIGNvbnRlbnQuRnJvbSB0ZXN0MgoKPC9kaXY+</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiIgpvdXRwdXQ6CiAgd29ya2Zsb3dyOjp3Zmxvd19odG1sOgogICAgdG9jOiBubwogICAgCi0tLSAKCjxzY3JpcHQ+CmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIkRPTUNvbnRlbnRMb2FkZWQiLCAoKSA9PiB7CgogIGNvbnN0IHBhcmFtcyA9IG5ldyBVUkxTZWFyY2hQYXJhbXMod2luZG93LmxvY2F0aW9uLnNlYXJjaCk7CiAgCiAgY29uc3QgbW9kZSA9IHBhcmFtcy5nZXQoIm1vZGUiKTsKCiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiLmFuYWx5c2lzLXNlY3Rpb24iKS5mb3JFYWNoKGVsID0+IHsKICAKICAgIGVsLnN0eWxlLmRpc3BsYXkgPSAibm9uZSI7CiAgCiAgfSk7CgogIGlmIChtb2RlKSB7CiAgCiAgICBjb25zdCB0YXJnZXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChtb2RlKTsKICAKICAgIGlmICh0YXJnZXQpIHsKICAKICAgICAgdGFyZ2V0LnN0eWxlLmRpc3BsYXkgPSAiYmxvY2siOwogIAogICAgfQogIAogIH0KICAKfSk7Cgo8L3NjcmlwdD4KCjxkaXYgaWQ9ImZsb3ciIGNsYXNzPSJhbmFseXNpc3NlY3Rpb24iPgoKIyMgRmxvdyBjeXRvbWV0cnkgYW5hbHlzaXMKCkZsb3ctc3BlY2lmaWMgdGV4dCwgZmlndXJlcywgdGFibGVzLiBGcm9tIHRlc3QKCjwvZGl2PgoKPGRpdiBpZD0iaW1hZ2luZyIgY2xhc3M9ImFuYWx5c2lzc2VjdGlvbiI+CgojIyBJbWFnaW5nIGFuYWx5c2lzCgpJbWFnaW5nLXNwZWNpZmljIGNvbnRlbnQuRnJvbSB0ZXN0MgoKPC9kaXY+</div>
 <div class="custom-footer">
   <div class="footer-left" style="width: 30%; display: flex; justify-content: center; align-items: center;">
     <a href="https://wimr.org.au/" target="_blank">
