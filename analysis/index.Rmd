@@ -69,10 +69,3 @@ We are also always looking for feedback. Please reach out to [myself](mailto:tho
 <span style="color:lightgrey">This site was made with **WorkflowR** by [Blischak JD, et al.  2019](https://doi.org/10.12688/f1000research.20843.1)</span>
 
 
-
-
-- [test](digitalresearchskills.network/test.html?mode=flow)
-
-- [test2](digitalresearchskills.network/test.html?mode=imaging)
-
-
