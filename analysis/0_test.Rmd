@@ -8,20 +8,31 @@ output:
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-const params = new URLSearchParams(window.location.search);
-const mode = params.get("mode");
 
-document.querySelectorAll(".analysis-section").forEach(el => {
-el.style.display = "none";
+  const params = new URLSearchParams(window.location.search);
+  
+  const mode = params.get("mode");
+
+  document.querySelectorAll(".analysis-section").forEach(el => {
+  
+    el.style.display = "none";
+  
+  });
+
+  if (mode) {
+  
+    const target = document.getElementById(mode);
+  
+    if (target) {
+  
+      target.style.display = "block";
+  
+    }
+  
+  }
+  
 });
 
-if (mode) {
-const target = document.getElementById(mode);
-if (target) {
-target.style.display = "block";
-}
-}
-});
 </script>
 
 <div id="flow" class="analysissection">
