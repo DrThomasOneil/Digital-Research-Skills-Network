@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const mode = params.get("mode");
 
-  document.querySelectorAll(".analysis-section").forEach(el => {
+  document.querySelectorAll(".analysissection").forEach(el => {
   
     el.style.display = "none";
   
