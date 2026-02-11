@@ -14,21 +14,29 @@ output:
 
 <hr>
 
-<details style="text-align: left"><summary><span style="font-size:2em">**Enjoy the end of the year!** </span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**Using Qupath: A multiplex imaging toolkit workshop** </span></summary>
 
 
 <div style = "text-align: center">
 
-```{r, include=FALSE}
-library(emo)
-set.seed(344)
-```
+#### **Using Qupath: A multiplex imaging toolkit workshop**
 
-#### **A final Christmasty coding club of the year**  `r emo::ji('christmas')`
+##### **By Elizabeth Dunn**
 
-##### **Join us in-person or on zoom 10th December for 'codestmas!'** `r emo::ji("dessert")`
+###### Time: 1-3p., Wednesday, 25th of February.
+###### Location: WIMR L2 seminar room
 
-Enjoy snacks and vibe coding!
+QuPath is a user-friendly companion to ImageJ, with greater flexibility for high-parameter and complex imaging workflows. In this hands-on workshop, Elizabeth will walk you through the QuPath interface, introduce a cell-segmentation plugin, and demonstrate spot counting for applications such as RNAscope.\ 
+
+By the end of the session, you’ll be able to:
+
+- Import and organise images
+
+- Perform cell segmentation
+
+- Run spot counting
+
+- Export results to CSV for downstream analysis in R or GraphPad Prism
 
 </div>
 
@@ -39,11 +47,12 @@ Enjoy snacks and vibe coding!
 ```{r,warning = F, message=FALSE, echo=FALSE}
 library(reactable)
 
-schedule <- read.csv("docs/adit/0_schedule.csv")
+schedule <- read.csv("./docs/adit/DRSN_Events_2026.csv")
+schedule_subset <- schedule[-1, c("Date","Event", "Speaker", "Event.time")]
 
 htmltools::browsable(
 tbl <- reactable(
-  schedule,
+  schedule_subset,
           defaultColDef = colDef(
             align = "left",
             headerStyle = list(background = "#FFDBBB")
@@ -52,10 +61,9 @@ tbl <- reactable(
   # Define columns
   columns = list(
     Date = colDef("Date", width = 100),
-    Event = colDef("Event", width = 150, filterable = TRUE),
+    Time = colDef("Event.time", width = 100),
     Speaker = colDef("Speaker", width = 150),
-    Time = colDef("Time", width = 100),
-    Place = colDef("Place")
+    Event = colDef("Event", width = 300, filterable = TRUE)
   ),
 
   # Other table features

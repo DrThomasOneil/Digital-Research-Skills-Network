@@ -4,7 +4,8 @@ output:
   workflowr::wflow_html:
     toc: false
 site: workflowr::wflow_site
-
+params:
+  month: "february"
 ---
 
 <!---
@@ -38,17 +39,11 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 ### <u>*Upcoming Events*</u>
 
-## **10th December**
+## **25th of February**
 
-```{r, include=FALSE}
-library("emo")
-set.seed(222)
-```
+## Using Qupath
 
-
-## Coder's Xmas `r emo::ji("christmas")``r emo::ji("dessert")`
-
-### <i>**A final coding club of the year** </i>
+### <i>**A multiplex imaging toolkit workshop** </i>
 
 </div>
 
@@ -56,7 +51,9 @@ set.seed(222)
 
 <span style = "color: grey"> 
 
-We are currently planning the new year for you!\ 
+Elizabeth Dunn\ 
+
+QuPath is a user-friendly companion to ImageJ, with greater flexibility for high-parameter and complex imaging workflows. In this hands-on workshop, Elizabeth will walk you through the QuPath interface, introduce a cell-segmentation plugin, and demonstrate spot counting for applications such as RNAscope.\ 
 
 Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).</span>
 
