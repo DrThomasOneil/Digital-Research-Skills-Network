@@ -23,20 +23,20 @@ output:
 
 ##### **By Elizabeth Dunn**
 
-###### Time: 1-3p., Wednesday, 25th of February.
-###### Location: WIMR L2 seminar room
+###### **Time**: 1-3pm., Wednesday, 25th of February.
+###### **Location**: WIMR L2 seminar room
 
 QuPath is a user-friendly companion to ImageJ, with greater flexibility for high-parameter and complex imaging workflows. In this hands-on workshop, Elizabeth will walk you through the QuPath interface, introduce a cell-segmentation plugin, and demonstrate spot counting for applications such as RNAscope.\ 
 
-By the end of the session, you’ll be able to:
+**By the end of the session, you’ll be able to:**
 
-- Import and organise images
+Import and organise images\ 
 
-- Perform cell segmentation
+Perform cell segmentation\ 
 
-- Run spot counting
+Run spot counting\ 
 
-- Export results to CSV for downstream analysis in R or GraphPad Prism
+Export results to CSV for downstream analysis in R or GraphPad Prism\ 
 
 </div>
 
