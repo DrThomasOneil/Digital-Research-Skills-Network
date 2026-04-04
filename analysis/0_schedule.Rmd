@@ -14,12 +14,10 @@ output:
 
 <hr>
 
-<details style="text-align: left"><summary><span style="font-size:2em">**Using Qupath: A multiplex imaging toolkit workshop** </span></summary>
+<details style="text-align: left"><summary><span style="font-size:2em">**April seminar/workshop** </span></summary>
 
 
 <div style = "text-align: center">
-
-#### **April seminar/workshop**
 
 ##### **Speaker TBA**
 
