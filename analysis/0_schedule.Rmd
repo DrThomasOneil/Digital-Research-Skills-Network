@@ -5,31 +5,6 @@ output:
     toc: no
 --- 
 
-<div style = "text-align: center">
-
-# <strong>*Upcoming Events*</strong>
-
-</div>
-
-
-<hr>
-
-<details style="text-align: left"><summary><span style="font-size:2em">**April seminar/workshop** </span></summary>
-
-
-<div style = "text-align: center">
-
-##### **Speaker TBA**
-
-###### **Time**: TBA
-###### **Location**: WIMR L2 seminar room
-
-More details coming!\ 
-
-</div>
-
-</details>
-
 <hr style='width:50%'>
 
 ```{r,warning = F, message=FALSE, echo=FALSE}
