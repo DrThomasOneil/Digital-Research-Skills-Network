@@ -8,13 +8,6 @@ params:
   month: "february"
 ---
 
-<!---
-To do:
-
-- 
-
-<--->  
-
 <div style="text-align: left;">
   <img src="assets/logo/DRSN_logo_smaller.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
   <div style="overflow: hidden; padding-top: 8%;">
@@ -29,21 +22,17 @@ To do:
 
 ## Welcome!
 
-Welcome to the Workshop site for the **Digital Research Skills Network**! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
- 
-Workshop material will aim to use publicly available data or mock created data. Therefore, you will not need to rely on uploaded data from the demonstrators/creators. Instead, a pre-workshop set-ups will include instructions for where to download and prep relevant data. 
+Welcome to **Digital Research Skills Network**! Whether you're just starting out with R or looking to strengthen your skills, this site is designed to foster a digital community centered around biomedical research programmatic analysis. 
 
-<hint-text style="text-size:1.2em; color:black"><i>**Bookmark this site for quick access to scripts and updates as workshops progress.**</i></hint-text>
+<hint-text style="text-size:1.2em; color:black"><i>**Bookmark this site for quick access to upcoming events, past event recordings and resources.**</i></hint-text>
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
 ### <u>*Upcoming Events*</u>
 
-## **Time to be re-scheduled**
+## **May 13th**
 
-## AI in Research
-
-### <i>**Discussion and Town Hall** </i>
+## Introduction to access and analysis using HPC
 
 </div>
 
@@ -51,15 +40,9 @@ Workshop material will aim to use publicly available data or mock created data. 
 
 <span style = "color: grey"> 
 
-Harry Robertson and attendees\ 
+Details TBC.
 
-We invite you to join an institute-wide discussion on the use of artificial intelligence in research, as we begin developing an internal policy to guide its responsible and effective use within our research community.\ 
-
-The session will begin with a short presentation from Harry Robertson on the current landscape of generative AI, including emerging opportunities, limitations and local govts position on the topic. This will be followed by a town hall-style discussion with guided prompts to explore how different groups are currently using AI, where they see value or risks, and what should be considered in the development of this new policy.\ 
-
-We welcome input from researchers, professional staff, students, and others with an interest in how AI is shaping research practice. Your perspective will help inform a policy that is practical, thoughtful, and relevant across a range of disciplines and roles. The calendar invitation and the [Zoom link](https://uni-sydney.zoom.us/j/81323795715) for the town hall has been sent through emails.\ 
-
-Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all other recurrent events (Coding Club, Data Insight Forum).</span>
+Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all potential upcoming events.</span>
 
 <span style="display:inline-block; width:30%; height:10%"><hr></span>
 
