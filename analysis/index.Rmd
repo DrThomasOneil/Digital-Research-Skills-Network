@@ -8,22 +8,6 @@ params:
   month: "february"
 ---
 
-```{r include=F}
-collapsible <- function(lead="Text goes here", content = "Content to be hidden"){
-  cat(
-  sprintf('
-<div class="collapsible" onclick="this.classList.toggle(\'active\'); var content = this.nextElementSibling; content.style.display = content.style.display === \'block\' ? \'none\' : \'block\';">
-<span>%s</span>
-<span class="arrow">▼</span>
-</div>
-
-<div class="content">
-<p>%s</p>
-</div>
-  ', lead, content)
-)
-}
-```
 
 <div style="text-align: left;">
   <img src="assets/logo/DRSN_logo_smaller.png" alt="Image" style="width: 2in; float: left; margin-right: 10px;">
@@ -46,27 +30,25 @@ Welcome to **Digital Research Skills Network**! Whether you're just starting out
 
 ## **May 13th**
 
-</div>
 
-```{r results='asis', echo=FALSE}
-collapsible("**AI in Research Town Hall (11 - 12 pm)**", 
-            "The session will begin with a short presentation from Harry Robertson on the current landscape of generative AI, including emerging opportunities, limitations and local govts position on the topic. This will be followed by a town hall-style discussion with guided prompts to explore how different groups are currently using AI, where they see value or risks, and what should be considered in the development of this new policy. \t \n**Zoom ID**: [82210822641](https://uni-sydney.zoom.us/j/82210822641)")
-```
+### **AI in Research Town Hall (11 - 12 pm)**
+
+The session will begin with a short presentation from Harry Robertson on the current landscape of generative AI, including emerging opportunities, limitations and local govts position on the topic. This will be followed by a town hall-style discussion with guided prompts to explore how different groups are currently using AI, where they see value or risks, and what should be considered in the development of this new policy. 
+
+**Zoom ID**: [82210822641](https://uni-sydney.zoom.us/j/82210822641)
+
 <hr>
-```{r results='asis', echo=FALSE}
-collapsible("**Interfacing with the NCI HPC for imaging analysis (1 - 3 pm)**", 
-            "Join us on 13th May for a demonstration on accessing and navigating a HPC interface.\t 
-            **Sifan Zhang** and **Alexandra Carey Hoppe** will present: \t
-- **Cellpose image segmentation** \t
-- **Interacting with imaging software like QuPath**\t\n\n
 
-This guide has been developed to support researchers in setting up their computational workflows on NCI’s Gadi HPC. \t \n **Zoom ID**: [84164373602](https://uni-sydney.zoom.us/j/84164373602) 
+### **Interfacing with the NCI HPC for imaging analysis** (1 - 3 pm)
+
+Join us on 13th May for a demonstration on accessing and navigating a HPC interface. **Sifan Zhang** will demonstrate *Cellpose image segmentation* and **Alexandra Carey Hoppe** will demonstrate *Interacting with imaging software like QuPath*. This guide has been developed to support researchers in setting up their computational workflows on NCI’s Gadi HPC. 
+
+**Zoom ID**: [84164373602](https://uni-sydney.zoom.us/j/84164373602) 
+
 <hr>
-")
-```
 
 
-<div style = "text-align: center">
+
 <br>
 
 Please refer to the [schedule page](https://drthomasoneil.github.io/Digital-Research-Skills-Network/0_schedule.html) for all potential upcoming events.</span>
