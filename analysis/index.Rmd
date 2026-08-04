@@ -28,8 +28,9 @@ Welcome to **Digital Research Skills Network**! Whether you're just starting out
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-
-![](assets/flyers/Aug12_SpectralFlow.png){ type=application/png style="width:100%;"}
+<a href="https://digitalresearchskills.network/202608.html" type="application/png" target="_blank">
+    <img src="assets/flyers/Aug12_SpectralFlow.png" style="width:100%;height:auto;">
+</a>
 
 **Zoom ID**: [84164373602](https://uni-sydney.zoom.us/j/84164373602) 
 
