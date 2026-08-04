@@ -1,0 +1,102 @@
+---
+title: ""
+output:
+  workflowr::wflow_html:
+    toc: no
+---
+<div style = "text-align: center">
+
+<span style="font-size:2em; color: #DC582A;"><i>**Spectral Unmixing in R**</i></span>   
+
+#### **August 12th**
+
+*On your own device, for <strong>FREE!</strong>*
+
+Spectral cytometry data and spectral unmixing can be daunting to look at first,  
+but it is simply linear algebra. Yuchen promises you it is not as hard as you might  
+think, and that you can absolutely do it on your own.  
+
+**Lecture** (11am - 11:30am); **Workshop** (12pm - 2pm)
+
+<span style = "color:red; font-size:1.7em"><i>**Lunch from 11:30!**</i></span>
+
+**Register [here](https://forms.cloud.microsoft/r/HtM8qDXQhi) or below, for catering purposes!**
+
+[Zoom link](https://uni-sydney.zoom.us/j/84164373602)
+
+<hr></div>
+
+# {.tabset .tabset-fade}
+
+<div>
+
+## Event Details {.tabset .tabset-fade}
+
+### **Lecture**: 11am - 11:30pm (WIMR Seminar Room & Zoom)
+
+**What to expect in the lecture:**
+
+- Learn about spectral flow data structure and the principle of unmixing
+
+### **Workshop**: 12pm - 2pm (WIMR Seminar Room & Zoom)
+
+**What to expect in the workshop:**
+ 
+- Set up your R environment for spectral flow.  
+- Perform spectral unmixing in R.  
+- Inspect and gate unmixed data in R.  
+- Extract summary statistics from gated data.  
+
+## Setup for workshop {.tabset .tabset-fade}
+
+### Requirements
+
+An `R` version of at least 4.5.x and `Rstudio.`
+
+`Rtools` 4.5 or 4.6 depending on the R version.
+
+Necessary R packages: `biocManager`, `flowCore`, `flowSpectrum`, `ggcyto`, `matrixStats`, `data.table`.
+
+---
+
+### Install instructions
+
+To download `biocManager`:
+
+```{r eval=F}
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(version = "3.23") #or change the version if you use earlier R versions.
+```
+
+`biocManager` is required to download flowCore and ggcyto and their dependencies.
+
+```{r eval=F}
+BiocManager::install(c("ggcyto","flowCore"))
+```
+
+
+To download `flowSpectrum` through GitHub:
+
+```{r eval=F}
+devtools::install_github('hally166/flowSpectrum')
+```
+
+
+If required, `matrixStats` and `data.table` can be downloaded using the standard CRAN install argument `install.packages("package name")`
+
+---
+
+### Download the Data
+
+The repository and example data that we will use can be accessed through this [link](https://filesender.aarnet.edu.au/?s=download&token=96c074a6-275a-4f44-b946-d749b4fb0336). We will work through the **Workshop.zip**. The backup is also downloadable which contains unmixed data in case the users struggle on the day. 
+
+---
+
+#
+
+<span style="display:inline-block; width:80%;"><wimr></span>
+
+<span style = "color:red;font-size:1.5em">**Sign up below:**</span>
+
+<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/r/HtM8qDXQhi?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>

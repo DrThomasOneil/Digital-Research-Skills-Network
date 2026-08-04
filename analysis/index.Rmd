@@ -28,20 +28,8 @@ Welcome to **Digital Research Skills Network**! Whether you're just starting out
 
 <span style="display:inline-block; width:80%;"><wimr></span>
 
-## **May 13th**
 
-
-### **AI in Research Town Hall (11 - 12 pm)**
-
-The session will begin with a short presentation from Harry Robertson on the current landscape of generative AI, including emerging opportunities, limitations and local govts position on the topic. This will be followed by a town hall-style discussion with guided prompts to explore how different groups are currently using AI, where they see value or risks, and what should be considered in the development of this new policy. 
-
-**Zoom ID**: [82210822641](https://uni-sydney.zoom.us/j/82210822641)
-
-<hr>
-
-### **Interfacing with the NCI HPC for imaging analysis** (1 - 3 pm)
-
-Join us on 13th May for a demonstration on accessing and navigating a HPC interface. **Sifan Zhang** will demonstrate *Cellpose image segmentation* and **Alexandra Carey Hoppe** will demonstrate *Interacting with imaging software like QuPath*. This guide has been developed to support researchers in setting up their computational workflows on NCI’s Gadi HPC. 
+![](assets/flyers/Aug12_SpectralFlow.png){ type=application/png style="width:100%;"}
 
 **Zoom ID**: [84164373602](https://uni-sydney.zoom.us/j/84164373602) 
 

@@ -5,6 +5,9 @@ output:
     toc: no
 --- 
 
+
+<span style="font-size:1.6em">***Coding Club*** first Wednesday of every month (1pm - 2pm; C2.31). </span>
+
 <hr style='width:50%'>
 
 ```{r,warning = F, message=FALSE, echo=FALSE}
