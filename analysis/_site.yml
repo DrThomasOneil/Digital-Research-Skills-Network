@@ -25,7 +25,7 @@ navbar:
         href: 0_contacts_committee.html
       - text: Feedback Form 
         href: 0_contacts_feedback.html
-  - text: Archive
+  - text: Past recordings
     href: 0_archive.html  
   - text: Bugs and errors!
     href: 0_bugs.html  

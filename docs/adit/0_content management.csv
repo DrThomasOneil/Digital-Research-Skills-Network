@@ -1,15 +1,21 @@
-﻿Topic,Date,Activity,Theme,Tag,Link,Recording
-Introductory series,Feb-25,Workshop,Introduction to Data Viz,"R, tidyverse, plotting",https://www.digitalresearchskills.network/202502_tidyverse1.html,https://youtu.be/M2hqE_KgZas
-Introductory series,Feb-25,Workshop,Introduction to Tidyverse,"R, tidyverse, data manipulation",https://www.digitalresearchskills.network/202502_tidyverse2.html,https://youtu.be/I8WEDsDEX4A
-Introductory series,Mar-25,Workshop,Introduction to Rmarkdown,"R, tidyverse, Rmarkdown",https://www.digitalresearchskills.network/202503_tidyverse3.html,https://youtu.be/WQvKkoI4xqw
-Introductory series,Mar-25,Workshop,Introduction,python,https://www.digitalresearchskills.network/index.html,https://youtu.be/1GzDcZSX8Is
-Flow analysis in R,Apr-25,Seminar,Flow,"Proteomic, Software, Programming",https://www.digitalresearchskills.network/202504_Seminar.html,https://youtu.be/Cd21LuWmQj4
-Flow analysis in R,Apr-25,in-focus,Flow,"Proteomic, Packages, Spectre, FuseSOM, FlowSOM",https://www.digitalresearchskills.network/202504_InFocus.html,https://youtu.be/TOVgBF-mVBY
-Flow analysis in R,Apr-25,Workshop,Flow,"Proteomic, Visualisation, ",https://www.digitalresearchskills.network/202504_Workshop.html,https://youtu.be/5ebo-upNBhQ
-Getting started in Spatial transcriptomics,May-25,Seminar,Spatial data,"Transcriptomic, Applications in research",https://www.digitalresearchskills.network/202505_Seminar.html,https://youtu.be/cuHf01RIDu8
-Getting started in Spatial transcriptomics,May-25,in-focus,Spatial data,"Transcriptomic, Visium, Xenium, GUI analysis tools",https://www.digitalresearchskills.network/202505_InFocus.html,https://youtu.be/8rvPjXmO4aA
-Getting started in Spatial transcriptomics,May-25,Workshop,Spatial data,"Transcriptomic,  Data import, QC, Visualisation",https://www.digitalresearchskills.network/202505_Workshop.html,https://www.youtube.com/watch?v=HIduZD3SmQc&list=PLAWzFuTX13jecMqNAEYmHFXCtbHsQmHwy&index=3
-Bring your own data,Jun-25,Workshop,Coding club,"R, Statistics, Mixed Effect",https://www.digitalresearchskills.network/202506_stats.html,https://youtu.be/28PTTgjfy8M
-Imaging Analysis,Jul-25,Seminar,Imaging,"Imaging,Qupath,Fiji,ImageJ",https://www.digitalresearchskills.network/202507.html,https://www.youtube.com/watch?v=9FQvnxaMlew
-Imaging Analysis,Jul-25,Workshop,Imaging,"Imaging,Qupath,Fiji,ImageJ",https://www.digitalresearchskills.network/202507.html,https://www.digitalresearchskills.network/202507.html
-Python basics and set-up,Sept-25,Coding club,Coding club,"Python, workshop preparation",,
+﻿Topic,Date,Activity,Title,Link,Recording
+Introductory series,Feb-25,Workshop,Introduction to Data Viz,https://www.digitalresearchskills.network/202502_tidyverse1.html,https://youtu.be/M2hqE_KgZas
+Introductory series,Feb-25,Workshop,Introduction to Tidyverse,https://www.digitalresearchskills.network/202502_tidyverse2.html,https://youtu.be/I8WEDsDEX4A
+Introductory series,Mar-25,Workshop,Introduction to Rmarkdown,https://www.digitalresearchskills.network/202503_tidyverse3.html,https://youtu.be/WQvKkoI4xqw
+Introductory series,Mar-25,Workshop,Introduction to Python,https://www.digitalresearchskills.network/index.html,https://youtu.be/1GzDcZSX8Is
+Flow analysis in R,Apr-25,Seminar,Flow Cytometry Analysis: Leveraging Software and R for Deeper Insights,https://www.digitalresearchskills.network/202504_Seminar.html,https://youtu.be/Cd21LuWmQj4
+Flow analysis in R,Apr-25,in-focus,Key analytic considerations and available R packages,https://www.digitalresearchskills.network/202504_InFocus.html,https://youtu.be/TOVgBF-mVBY
+Flow analysis in R,Apr-25,Workshop,Introdution to flow analysis in R,https://www.digitalresearchskills.network/202504_Workshop.html,https://youtu.be/5ebo-upNBhQ
+Flow analysis in R,Aug-26,Seminar,The principle of spectral unmixing,,https://youtu.be/1ac_kmrnQhs?si=3Vt8dA3_OZ1TRZAB
+Flow analysis in R,Aug-26,Workshop,Spectral unmixing and flow analysis in R,,https://youtu.be/VtlO7FZRo-w?si=OR2wayBkbo8MRWux
+Getting started in Spatial transcriptomics,May-25,Seminar,Spatial Transcriptomics: What's available and what's the way,https://www.digitalresearchskills.network/202505_Seminar.html,https://youtu.be/cuHf01RIDu8
+Getting started in Spatial transcriptomics,May-25,in-focus,Visium and Xenium data analysis with 10x Genomics,https://www.digitalresearchskills.network/202505_InFocus.html,https://youtu.be/8rvPjXmO4aA
+Getting started in Spatial transcriptomics,May-25,Workshop,Introduction to Visium data analysis in R,https://www.digitalresearchskills.network/202505_Workshop.html,https://www.youtube.com/watch?v=HIduZD3SmQc&list=PLAWzFuTX13jecMqNAEYmHFXCtbHsQmHwy&index=3
+Bring your own data,Jun-25,Workshop,Coding club,https://www.digitalresearchskills.network/202506_stats.html,https://youtu.be/28PTTgjfy8M
+Imaging Analysis,Jul-25,Seminar,From Acquisition to Analysis: Practical Tips for Imaging Data,https://www.digitalresearchskills.network/202507.html,https://www.youtube.com/watch?v=9FQvnxaMlew
+Imaging Analysis,Jul-25,Workshop,Working with images in QuPath,https://www.digitalresearchskills.network/202507.html,https://www.digitalresearchskills.network/202507.html
+Imaging Analysis,Mar-26,Workshop,Using QuPath: A Multiplex Imaging Toolkit,,https://youtu.be/E-dtPfAFnEA?si=djPZuA7ocbUNY2OW
+Coding club snippets,Jun-25,Coding club,Mixed Effect Models,https://digitalresearchskills.network/202506_stats.html,https://youtu.be/28PTTgjfy8M?si=QOCeXOUrCHAddl47
+Coding club snippets,Sept-25,Coding club,Set-up for single-cell analysis in python,,https://www.youtube.com/embed/1ZRD6aVOvFw?si=kCYaKshBdyshTTp1
+High-performance computing and AI,May-26,Workshop,Using Gadi NCI,,https://youtu.be/gXruKS3H2h0
+High-performance computing and AI,Jul-26,Workshop,AI in data analysis and research,,https://youtu.be/tPUmdUpkFOo
